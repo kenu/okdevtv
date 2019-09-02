@@ -47,14 +47,18 @@
   * http://resume.github.io/
 * 쉽게 살 수 있을까:GITHUB & GIT & Code Review
   * http://hl1itj.tistory.com/118
+* Pull Request
+  * https://okdevtv.com/mib/git/pr
 
 ## for Windows error
 * too long path error
+
 ```
 git config core.longpaths true
 ```
 
 * Invalid argument such as `:`
+
 ```
 error: unable to create file lib/:q: Invalid argument
 ```
