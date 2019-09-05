@@ -17,7 +17,7 @@ touch build.gradle
 
 ## gradle tasks
 ```
-gradle tasks
+gradle tasks --all
 ```
 
 ```
@@ -59,10 +59,13 @@ BUILD SUCCESSFUL in 4s
 
 ## gradle wrapper
 * for those who don't have installed gradle
+
 ```
 gradle wrapper
 ```
+
 * output
+
 ```
 .
 ├── build.gradle
@@ -76,6 +79,7 @@ gradle wrapper
 
 ## Simple task
 * build.gradle
+
 ```
 task copy(type: Copy) {
     from 'src'
@@ -84,11 +88,13 @@ task copy(type: Copy) {
 ```
 
 * check tasks
+
 ```
 ./gradlew tasks --all
 ```
 
 * run task
+
 ```
 ./gradlew copy
 ```
@@ -109,8 +115,18 @@ task zip(type: Zip) {
 ```
 
 * check tasks
+
 ```
 ./gradlew tasks --all
+```
+
+## custom repository
+```
+repositories {
+    maven {
+      url 'http://repo.mycompany.com/maven2'
+    }
+}
 ```
 
 ## ref
