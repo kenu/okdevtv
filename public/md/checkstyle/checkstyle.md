@@ -7,6 +7,6 @@ java -jar \Users\HOME\dev\checkstyle\checkstyle-8.24-all.jar -c ./google_checks.
 
 ## related
 
-* PMD
-* Findbugs
+* [PMD](/mib/pmd)
+* [Findbugs](/mib/findbugs)
 
