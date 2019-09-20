@@ -69,7 +69,7 @@ CREATE DATABASE okdevdb WITH OWNER okuser;
 * Connection Info
 
 ```
-Host : 13.209.5.248
+Host : 103.209.500.248
 DB name : okdevdb
 username : okuser
 password : $okuserPasswd
