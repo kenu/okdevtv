@@ -6,6 +6,7 @@
 
 ## method 지정
 * GET, POST, PUT, DELETE
+
 ```
 curl -XGET https://okdevtv.com
 curl -XGET https://okdevtv.com\?param=value
