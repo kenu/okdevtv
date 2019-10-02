@@ -1,5 +1,7 @@
 sudo yum install nginx -y
 sudo service nginx start
+sudo amazon-linux-extras install nginx1.12
+sudo systemctl start nginx
 curl -i http://localhost
 sudo chmod 644 /var/log/nginx
 sudo chown -R ec2-user:ec2-user /usr/share/nginx/html
