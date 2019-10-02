@@ -16,13 +16,21 @@ tar xfz elasticsearch-7.4.0-linux-x86_64.tar.gz
 ln -s elasticsearch-7.4.0 elasticsearch
 cd elasticsearch
 bin/elasticsearch -d
+
 cd ~/local
 wget https://artifacts.elastic.co/downloads/kibana/kibana-7.4.0-linux-x86_64.tar.gz
 tar xfz kibana-7.4.0-linux-x86_64.tar.gz
 ln -s kibana-7.4.0-linux-x86_64 kibana
 cd kibana
+nohup bin/kibana &
+
 cd ~/local
 wget https://artifacts.elastic.co/downloads/logstash/logstash-7.4.0.tar.gz
 tar xfz logstash-7.4.0.tar.gz
 ln -s logstash-7.4.0 logstash
 cd logstash
+mkdir logconf && cd logconf
+wget https://okdevtv.com/md/elk/okky.conf
+cd -
+nohup bin/logstash -f logconf/okky.conf &
+
