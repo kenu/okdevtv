@@ -35,7 +35,7 @@ function setBody(data, path) {
 <script src="https://browser.sentry-cdn.com/5.6.3/bundle.min.js" integrity="sha384-/Cqa/8kaWn7emdqIBLk3AkFMAHBk0LObErtMhO+hr52CntkaurEnihPmqYj3uJho" crossorigin="anonymous"></script>
 <script>
 Sentry.init({ dsn: 'https://dae63085eaed40edad257594e2aa8d36@sentry.io/1769825' });
-c</script>
+</script>
 </head><body><!-- Header --><div id="wrap"><header id="header"><!-- Logo --><h1 id="logo_heading"><a href="/">
 <img src="/images/logo.png" alt="okdevtv logo" id="logo">OKdevTV</a></h1>
 </header>${ html }</div><script>
