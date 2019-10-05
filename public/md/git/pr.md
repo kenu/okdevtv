@@ -14,3 +14,9 @@
 * new PullRequest 생성
 * base repository: `원본프로젝트` base: `master` ← head repository: `fork프로젝트` compare:`develop` 생성
 
+## Peer Review
+* 변경된 파일의 내용을 볼 수 있으며, 해당 PR에 대한 승인/거절이 가능
+* PR 생성할 때 리뷰어 지정 가능
+
+## ref
+* https://help.github.com/en/articles/about-pull-requests
