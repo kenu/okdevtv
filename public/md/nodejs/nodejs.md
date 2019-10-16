@@ -73,12 +73,14 @@ that run across distributed devices.
 from: https://www.dropbox.com/s/o9g4m7tug3yt1xx/jsconf2009-nodejs.pdf?dl=0
 
 * blocking code
+
 ```
 var result = db.query("select * from T");
 // use result
 ```
 
 * non-blocking code
+
 ```
 db.query("select * from T",
   function(result) {
@@ -265,6 +267,7 @@ app.listen(3000, function () {
   * HANDLER is the function executed when the route is matched.
 
 * get
+
 ```
 app.get('/', function (req, res) {
     res.send('Hello World!')
@@ -275,6 +278,7 @@ app.get('/', function (req, res) {
 
 
 * post
+
 ```
 app.post('/', function (req, res) {
     res.send('Got a POST request')
@@ -283,20 +287,22 @@ app.post('/', function (req, res) {
   * `curl -XPOST 'localhost:3000'`
 
 * put
+
 ```
 app.put('/user', function (req, res) {
     res.send('Got a PUT request at /user')
 })
 ```
-  * `curl -XPUT 'localhost:3000'`
+  * `curl -XPUT 'localhost:3000/user'`
 
 * delete
+
 ```
 app.delete('/user', function (req, res) {
     res.send('Got a DELETE request at /user')
 })
 ```
-  * `curl -XDELETE 'localhost:3000'`
+  * `curl -XDELETE 'localhost:3000/user'`
 
 ## Routing
 * http://expressjs.com/en/guide/routing.html
@@ -308,6 +314,7 @@ unlock, report, mkactivity, checkout, merge, m-search,
 notify, subscribe, unsubscribe, patch, search, connect.
 
 * all
+
 ```
 app.all('/secret', function (req, res, next) {
   console.log('Accessing the secret section ...')
@@ -396,11 +403,13 @@ if (cluster.isMaster) {
 
 ### node.js debug
 * https://nodejs.org/api/debugger.html
+
 ```
 node debug myscript.js
 ```
 
 * myscript.js
+
 ```
 x = 5;
 setTimeout(() => {
@@ -469,8 +478,6 @@ switched to db uptime
 $ git clone git://github.com/fzaninotto/uptime.git
 $ cd uptime
 $ npm install
-
-
 ```
 
 * PM2
