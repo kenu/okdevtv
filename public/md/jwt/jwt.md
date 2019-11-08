@@ -13,6 +13,7 @@
   * type of the token
   * hashing algorithm
   * Base64Url encoded
+
 ```
 {
   "alg": "HS256",
@@ -35,6 +36,7 @@
 ```
 
 * Signature
+
 ```
 HMACSHA256(
   base64UrlEncode(header) + "." +
@@ -44,6 +46,7 @@ HMACSHA256(
 
 ## How jwt works
 * HTTP Header
+
 ```
 Authorization: Bearer <token>
 ```
