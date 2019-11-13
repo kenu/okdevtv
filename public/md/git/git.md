@@ -38,6 +38,9 @@
 ## Git Bash
 * https://okdevtv.com/mib/git-bash
 
+## Git Conflict 해법
+* [충돌 난 경우 해법](/mib/git/conflict)
+
 ## ref
 * easy git
   * http://bit.ly/okeasygit
