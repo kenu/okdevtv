@@ -66,6 +66,7 @@
 
 ## Related
 * [Flexbox](/mib/css/flexbox)
+* [SASS](/mib/css/sass)
 
 ##  참고
 * The History of CSS
