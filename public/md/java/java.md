@@ -8,6 +8,7 @@
 ## Install
 * https://github.com/ojdkbuild/ojdkbuild
 * CentOS
+
 ```
 yum list | grep jdk
 sudo yum remove java-1.7.0-openjdk.x86_64 -y
@@ -24,6 +25,7 @@ sudo apt-get install openjdk-8-jdk -y
 ```
 
 * Ubuntu oracle-jdk
+
 ```
 sudo add-apt-repository ppa:webupd8team/java
 sudo apt-get update
@@ -32,6 +34,7 @@ sudo apt-get install oracle-java8-set-default
 ```
 
 * mac
+
 ```
 export JAVA_HOME="$(/usr/libexec/java_home -v 1.8)"
 ```
@@ -50,21 +53,21 @@ export JAVA_HOME="$(/usr/libexec/java_home -v 1.8)"
 * 예약어(reserved word)
 
 ## Other topic
-* [inheritance](https://okdevtv.com/mib/java/inheritance)
-* [interface](https://okdevtv.com/mib/java/interface)
-* [generic](https://okdevtv.com/mib/java/generic)
-* [autoboxing](https://okdevtv.com/mib/java/autoboxing)
-* [annotation](https://okdevtv.com/mib/java/annotation)
-* [lambda](https://okdevtv.com/mib/java/lambda)
-* [future](https://okdevtv.com/mib/java/future)
-* [jdbc](https://okdevtv.com/mib/java/jdbc)
-* [junit](https://okdevtv.com/mib/java/junit)
-* [tomcat](https://okdevtv.com/mib/java/tomcat)
-* [war](https://okdevtv.com/mib/java/war)
-* [deploy](https://okdevtv.com/mib/java/deploy)
-* [ant](https://okdevtv.com/mib/java/ant)
-* [maven](https://okdevtv.com/mib/java/maven)
-* [gradle](https://okdevtv.com/mib/java/gradle)
+* [inheritance](/mib/java/inheritance)
+* [interface](/mib/java/interface)
+* [generic](/mib/java/generic)
+* [autoboxing](/mib/java/autoboxing)
+* [annotation](/mib/java/annotation)
+* [lambda](/mib/java/lambda)
+* [future](/mib/java/future)
+* [jdbc](/mib/java/jdbc)
+* [junit](/mib/java/junit)
+* [tomcat](/mib/java/tomcat)
+* [war](/mib/java/war)
+* [deploy](/mib/java/deploy)
+* [maven](/mib/java/maven)
+* [gradle](/mib/java/gradle)
+* [ant](/mib/java/ant)
 
 ## 참고
 * 2시간만에 자바를 쉽게 배우고 싶어요.

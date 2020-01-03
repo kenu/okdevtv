@@ -2,6 +2,7 @@
 * A generic type is a generic class or interface that is parameterized over types.
 
 * Generic example
+
 ```java
 /**
  * Generic version of the Box class.
@@ -17,6 +18,7 @@ public class Box<T> {
 ```
 
 * type parameter names
+
 ```
 E - Element (used extensively by the Java Collections Framework)
 K - Key
@@ -27,6 +29,7 @@ S,U,V etc. - 2nd, 3rd, 4th types
 ```
 
 * Multiple Type Parameters
+
 ```java
 public interface Pair<K, V> {
     public K getKey();
