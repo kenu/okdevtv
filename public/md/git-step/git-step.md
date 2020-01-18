@@ -26,9 +26,13 @@
   * `git remote`
 
 ### git 중급
-* 브랜치 다루기
+* 브랜치 만들기
   * `git checkout -b dev`
-  * `git branch dev && git checkout dev`
+  * TODO git switch
+* 브랜치 목록
+  * `git branch -va`
+* 브랜치 바꾸기
+  * `git checkout dev`
 * 원격 브랜치 가져오기
   * `git pull origin`
   * `git checkout -b dev origin/dev`
@@ -63,20 +67,18 @@
 
 
 ### 참고문헌
-* http://git.mikeward.org/
-  * 2011, Git 전반에 관한 친절한 가이드
+* 2011, Git 전반에 관한 친절한 가이드
   * Safari 주의 맥 리부팅
-* https://help.github.com/
-  * GitHub의 Git가이드
-* http://dogfeet.github.io/
-  * Pro Git 번역그룹 블로그
+  * http://git.mikeward.org/
+* GitHub의 Git가이드
+  * https://help.github.com/
+* Pro Git 번역그룹 블로그
+  * http://dogfeet.github.io/
   * 복 받으실 분들
-* http://www.okjsp.net/seq/231381
-  * One page git
-* http://learnbranch.urigit.com/
-  * git branch 배우기
-* http://www.ericsink.com/vcbe/html/directed_acyclic_graphs.html
-  * DAGs 선형으로 표현
-* http://www.youtube.com/watch?v=4XpnKHJAok8
-  * Tech Talk: Linus Torvalds on git
+* git branch 배우기
+  * http://learnbranch.urigit.com/
+* DAGs 선형으로 표현
+  * http://www.ericsink.com/vcbe/html/directed_acyclic_graphs.html
+* Tech Talk: Linus Torvalds on git
+  * http://www.youtube.com/watch?v=4XpnKHJAok8
   * 업로드된 날짜: 2007. 5. 14.
