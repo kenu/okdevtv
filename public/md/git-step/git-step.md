@@ -73,8 +73,6 @@
   * 복 받으실 분들
 * http://www.okjsp.net/seq/231381
   * One page git
-* http://learnbranch.urigit.com/
-  * git branch 배우기
 * http://www.ericsink.com/vcbe/html/directed_acyclic_graphs.html
   * DAGs 선형으로 표현
 * http://www.youtube.com/watch?v=4XpnKHJAok8
