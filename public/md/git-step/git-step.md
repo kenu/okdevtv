@@ -75,8 +75,6 @@
 * Pro Git 번역그룹 블로그
   * http://dogfeet.github.io/
   * 복 받으실 분들
-* git branch 배우기
-  * http://learnbranch.urigit.com/
 * DAGs 선형으로 표현
   * http://www.ericsink.com/vcbe/html/directed_acyclic_graphs.html
 * Tech Talk: Linus Torvalds on git
