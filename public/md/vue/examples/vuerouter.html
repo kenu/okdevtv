@@ -1,0 +1,41 @@
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+
+<div id="app">
+  <h1>Hello App!</h1>
+  <p>
+    <!-- 구체적인 속성은 `to` prop을 이용합니다. -->
+    <!-- 기본적으로 `<router-link>`는 `<a>` 태그로 렌더링됩니다.-->
+    <router-link to="/foo">Go to Foo</router-link>
+    <router-link to="/bar">Go to Bar</router-link>
+  </p>
+  <!-- 라우트 아울렛 -->
+  <router-view></router-view>
+</div>
+
+<script>
+  // 1. Define route components.
+  const Foo = { template: "<div>foo</div>" };
+  const Bar = { template: "<div>bar</div>" };
+
+  // 2. Define some routes
+  const routes = [
+    { path: "/foo", component: Foo },
+    { path: "/bar", component: Bar }
+  ];
+
+  // 3. Create the router instance and pass the `routes` option
+  const router = new VueRouter({
+    routes
+  });
+
+  const app = new Vue({
+    router
+  }).$mount("#app");
+</script>
+
+<style>
+  .router-link-active {
+    color: red;
+  }
+</style>

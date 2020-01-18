@@ -119,9 +119,9 @@ var app6 = new Vue({
 ```html
 <div id="app-7">
     <ol>
-        <!-- 
+        <!--
             이제 각 todo-item 에 todo 객체를 제공합니다.
-            화면에 나오므로, 각 항목의 컨텐츠는 동적으로 바뀔 수 있습니다. 
+            화면에 나오므로, 각 항목의 컨텐츠는 동적으로 바뀔 수 있습니다.
             또한 각 구성 요소에 "키"를 제공해야 합니다 (나중에 설명 됨).
             -->
         <todo-item v-for="item in groceryList" v-bind:todo="item" v-bind:key="item.id">
@@ -158,6 +158,8 @@ var app7 = new Vue({
 </element>
 ```
 
+## ref
+* [Vue Router]('/mib/vue/router')
 
 ## example
 * 01: https://okdevtv.com/md/vue/examples/vue01.html
