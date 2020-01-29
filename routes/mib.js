@@ -31,6 +31,7 @@ function setBody(data, path) {
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <meta property="og:title" content="${ path[3] }" />
 <meta property="og:url" content="https://okdevtv.com${ path.join('/') }" />
+<link rel="stylesheet" href="/style-md.css">
 <script src="https://browser.sentry-cdn.com/5.6.3/bundle.min.js" integrity="sha384-/Cqa/8kaWn7emdqIBLk3AkFMAHBk0LObErtMhO+hr52CntkaurEnihPmqYj3uJho" crossorigin="anonymous"></script>
 <script>
 Sentry.init({ dsn: 'https://dae63085eaed40edad257594e2aa8d36@sentry.io/1769825' });
