@@ -36,6 +36,12 @@ vi ~/Library/KeyBindings/DefaultkeyBinding.dict
 
   * restart application
 
+## Xcode command
+```
+xcode-select --install
+```
+
+
 ## 맥 node.js 설치법
 * http://nodejs.org
 * download and install
@@ -49,6 +55,9 @@ vi ~/Library/KeyBindings/DefaultkeyBinding.dict
 * 참고 https://macnews.tistory.com/3408
 * Option + R boot, terminal
 * `csrutil disable --without debug`
+
+## ref
+* [mac php](/mib/mac/php)
 
 ## 관련 영상
 * 새로운 맥 개발환경 시작하기 (18분)
