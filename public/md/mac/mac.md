@@ -39,6 +39,10 @@ vi ~/Library/KeyBindings/DefaultkeyBinding.dict
 ## Xcode command
 ```
 xcode-select --install
+
+# reinstall
+sudo rm -rf $(xcode-select -print-path)
+xcode-select --install
 ```
 
 
