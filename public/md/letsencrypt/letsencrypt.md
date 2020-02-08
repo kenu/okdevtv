@@ -16,9 +16,7 @@
 ## 필요사항
 * 도메인 (예 okdevtest.net)
 * 서버 (예 digitalocean.com 임대)
-  * http://80port.com 도메인 서비스 추천
   * CentOS 7.1(python 2.7 built-in)로 예제 실행
-  * python 2.6은 안됨(?)
 
 ## nginx 설치
 * [nginx 설치](//okdevtv.com/mib/nginx)
@@ -54,11 +52,15 @@ openssl dhparam -out dhparams.pem 2048
 cert.pem  chain.pem  fullchain.pem  privkey.pem
 ```
 
+## 90일 기한 자동 연장
+```
+echo "0 0,12 * * * root python -c 'import random; import time; time.sleep(random.random() * 3600)' && certbot renew" | sudo tee -a /etc/crontab > /dev/null
+```
 
 ## nginx 설정
 ```
 vi /etc/nginx/nginx.conf
-#또는
+# 또는
 vi /etc/nginx/conf.d/default.conf
 ```
 
