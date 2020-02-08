@@ -1,20 +1,19 @@
 module.exports = {
-  'env': {
-    'browser': true,
-    'commonjs': true,
-    'es6': true,
-    'node': true,
+  env: {
+    browser: true,
+    commonjs: true,
+    es6: true,
+    node: true
   },
-  'extends': [
-    'google',
-  ],
-  'globals': {
-    'Atomics': 'readonly',
-    'SharedArrayBuffer': 'readonly',
+  extends: ['google'],
+  globals: {
+    Atomics: 'readonly',
+    SharedArrayBuffer: 'readonly'
   },
-  'parserOptions': {
-    'ecmaVersion': 2018,
+  parserOptions: {
+    ecmaVersion: 2018
   },
-  'rules': {
-  },
+  rules: {
+    quotes: ['error', 'double']
+  }
 };

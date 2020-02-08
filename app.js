@@ -17,13 +17,14 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 // uncomment after placing your favicon in /public
-app.use(favicon(path.join(__dirname, 'public',
-    'favicon/apple-icon-180x180.png')));
+app.use(
+  favicon(path.join(__dirname, 'public', 'favicon/apple-icon-180x180.png'))
+);
 app.use(logger('combined'));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(frameguard({action: 'sameorigin'}));
+app.use(frameguard({ action: 'sameorigin' }));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(passport.initialize());
 app.use(passport.session());
@@ -39,43 +40,51 @@ try {
   });
 
   // Use the FacebookStrategy within Passport.
-  passport.use(new FacebookStrategy({
-    clientID: config.facebook_api_key,
-    clientSecret: config.facebook_api_secret,
-    callbackURL: config.callback_url,
-  },
-  function(accessToken, refreshToken, profile, done) {
-    process.nextTick(function() {
-      // Check whether the User exists or not using profile.id
-      if (config.use_database) {
-        // if sets to true
-        pool.query('SELECT * from user_info where user_id=' + profile.id,
-            (err, rows) => {
-              if (err) throw err;
-              if (rows && rows.length === 0) {
-                console.log('There is no such user, adding now');
-                pool.query(
-                    'INSERT into user_info(user_id,user_name) VALUES(\'' +
-                  profile.id + '\',\'' + profile.username + '\')');
-              } else {
-                console.log('User already exists in database');
+  passport.use(
+    new FacebookStrategy(
+      {
+        clientID: config.facebook_api_key,
+        clientSecret: config.facebook_api_secret,
+        callbackURL: config.callback_url
+      },
+      function(accessToken, refreshToken, profile, done) {
+        process.nextTick(function() {
+          // Check whether the User exists or not using profile.id
+          if (config.use_database) {
+            // if sets to true
+            pool.query(
+              'SELECT * from user_info where user_id=' + profile.id,
+              (err, rows) => {
+                if (err) throw err;
+                if (rows && rows.length === 0) {
+                  console.log('There is no such user, adding now');
+                  pool.query(
+                    "INSERT into user_info(user_id,user_name) VALUES('" +
+                      profile.id +
+                      "','" +
+                      profile.username +
+                      "')"
+                  );
+                } else {
+                  console.log('User already exists in database');
+                }
               }
-            });
+            );
+          }
+          return done(null, profile);
+        });
       }
-      return done(null, profile);
-    });
-  }
-  ));
+    )
+  );
 } catch (e) {
-  console.log(e);
+  console.error(e.message);
 }
-
 
 const sess = {
   secret: 'okdevtv cat',
   resave: true,
   saveUninitialized: true,
-  cookie: {},
+  cookie: {}
 };
 if (app.get('env') === 'production') {
   app.set('trust proxy', 1); // trust first proxy
@@ -106,7 +115,7 @@ if (app.get('env') === 'development') {
     res.status(err.status || 500);
     res.render('error', {
       message: err.message,
-      error: err,
+      error: err
     });
   });
 }
@@ -117,9 +126,8 @@ app.use(function(err, req, res) {
   res.status(err.status || 500);
   res.render('error', {
     message: err.message,
-    error: {},
+    error: {}
   });
 });
-
 
 module.exports = app;
