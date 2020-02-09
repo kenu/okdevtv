@@ -24,38 +24,12 @@ router.all('*', function (req, res) {
 });
 
 function setBody(data, path) {
-    var folder = '/md/' + path[2] + '/';
-    var html = data.replace(/img src="images/g, 'img src="' + folder + 'images');
-    var htmlTag = `<!DOCTYPE html>
-<html lang="ko"><head><title>${ path[3] }</title>
-<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<meta property="og:title" content="${ path[3] }" />
-<meta property="og:url" content="https://okdevtv.com${ path.join('/') }" />
-<link rel="stylesheet" href="/style-md.css">
-<script src="https://browser.sentry-cdn.com/5.6.3/bundle.min.js" integrity="sha384-/Cqa/8kaWn7emdqIBLk3AkFMAHBk0LObErtMhO+hr52CntkaurEnihPmqYj3uJho" crossorigin="anonymous"></script>
-<script>
-Sentry.init({ dsn: 'https://dae63085eaed40edad257594e2aa8d36@sentry.io/1769825' });
-</script>
-</head><body><!-- Header --><div id="wrap"><header id="header"><!-- Logo --><h1 id="logo_heading"><a href="/">
-<img src="/images/logo.png" alt="okdevtv logo" id="logo">OKdevTV</a></h1>
-</header>${ html }</div><script>
-(function (i, s, o, g, r, a, m) {
-i['GoogleAnalyticsObject'] = r;
-i[r] = i[r] || function () {
-(i[r].q = i[r].q || []).push(arguments)
-}, i[r].l = 1 * new Date();
-a = s.createElement(o), m = s.getElementsByTagName(o)[0];
-a.async = 1; a.src = g;
-m.parentNode.insertBefore(a, m)
-})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-ga('create', 'UA-49100336-1', 'auto');
-ga('send', 'pageview');</script>
-<script>(function (w,i,d,g,e,t,s) {w[d] = w[d]||[];t= i.createElement(g);
-t.async=1;t.src=e;s=i.getElementsByTagName(g)[0];s.parentNode.insertBefore(t, s);
-})(window, document, '_gscq','script','//widgets.getsitecontrol.com/57011/script.js');
-</script>
-<div id="whatelse"><a href="/md/list.html">What Else?</a></div>
-</body></html>`;
+    const folder = '/md/' + path[2] + '/';
+    const html = data.replace(/img src="images/g, 'img src="' + folder + 'images');
+    const template = fs.readFileSync(__dirname + '/template-mib.html').toString();
+    const htmlTag = template.replace(/__path3/g, path[3])
+        .replace(/__uri/g, path.join('/'))
+        .replace(/__html/, html);
     return htmlTag;
 }
 module.exports = router;
