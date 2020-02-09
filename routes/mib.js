@@ -27,9 +27,9 @@ function setBody(data, path) {
     const folder = '/md/' + path[2] + '/';
     const html = data.replace(/img src="images/g, 'img src="' + folder + 'images');
     const template = fs.readFileSync(__dirname + '/template-mib.html').toString();
-    const htmlTag = template.replace(/__path3/g, path[3])
-        .replace(/__uri/g, path.join('/'))
-        .replace(/__html/, html);
+    const htmlTag = template.replace(/__path3__/g, path[3])
+        .replace(/__uri__/g, path.join('/'))
+        .replace(/__html__/, html);
     return htmlTag;
 }
 module.exports = router;
