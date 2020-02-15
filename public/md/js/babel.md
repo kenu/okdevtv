@@ -54,3 +54,28 @@ module.exports = { presets };
 ./node_modules/.bin/babel src --out-dir lib
 ```
 
+## babel-jest
+
+* jest command
+  * `npm i -g jest`
+
+* package.json
+  * `npm i -D @babel/cli @babel/core @babel/preset-env babel-jest`
+
+```
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.4",
+    "@babel/preset-env": "^7.8.4",
+    "babel-jest": "^25.1.0"
+  }
+```
+
+* babel.config.js
+
+```
+module.exports = {
+    "presets": ["@babel/preset-env"]
+}
+```
+
