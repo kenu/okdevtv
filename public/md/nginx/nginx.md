@@ -5,6 +5,7 @@
   * <img src="images/nginx-apache-memory.png" alt="nginx-apache-memory">
   * from: https://blog.webfaction.com/2008/12/a-little-holiday-present-10000-reqssec-with-nginx-2/
 * 설정이 간편함
+* [영상: Nginx 정말 가벼운 웹서버](https://youtu.be/u-leHy-l2a8)
 
 ## nginx 설치
 * aws EC2 기준
