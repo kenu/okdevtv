@@ -70,6 +70,8 @@ export JAVA_HOME="$(/usr/libexec/java_home -v 1.8)"
 * [ant](/mib/java/ant)
 
 ## 참고
+* 2시간만에 자바 시작
+  * http://www.slideshare.net/kenu/java-in-2-hours
 * 2시간만에 자바를 쉽게 배우고 싶어요.
   * http://www.slideshare.net/kenu/java-start01-in-2hours
 * kenu's java
