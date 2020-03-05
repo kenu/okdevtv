@@ -72,6 +72,7 @@ export JAVA_HOME="$(/usr/libexec/java_home -v 1.8)"
 ## 참고
 * 2시간만에 자바 시작
   * http://www.slideshare.net/kenu/java-in-2-hours
+  * http://bit.ly/okjava2020
 * 2시간만에 자바를 쉽게 배우고 싶어요.
   * http://www.slideshare.net/kenu/java-start01-in-2hours
 * kenu's java
