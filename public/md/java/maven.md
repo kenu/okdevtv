@@ -9,6 +9,7 @@
 
 ## install
 * mac
+
 ```
 brew install maven
 ```
@@ -25,6 +26,7 @@ brew install maven
 ## POM
 * Project Object Model
 * 메이븐은 pom.xml 기반으로 실행
+
 ```xml
 <project xmlns="http://maven.apache.org/POM/4.0.0"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -49,6 +51,7 @@ brew install maven
 ```
 
 * Quick Start
+
 ```
 mvn archetype:generate -DgroupId=com.okdevtv.java -DartifactId=okdevtv -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
 ```
@@ -65,13 +68,17 @@ mvn archetype:generate -DgroupId=com.okdevtv.java -DartifactId=okdevtv -Darchety
 * validate
 * compile
 * test
-* package
+* **package**
 * integration-test
 * verify
+* **install**
 * deploy
 
+## 기타
 * clean
 * site
+* `mvn tomcat:run`
+* `mvn spring-boot:run`
 
 ## 메이븐 저장소
 * 로컬, 원격 저장소로 구분
