@@ -50,7 +50,7 @@ public class HelloWorld {
 }
 ```
 
-* Beans.xml
+* MainApp.java
 
 ```java
 package okdevtvspring;
@@ -67,7 +67,7 @@ public class MainApp {
 }
 ```
 
-* MainApp.java
+* Beans.xml
 
 ```xml
 <?xml version = "1.0" encoding = "UTF-8"?>
@@ -82,6 +82,34 @@ public class MainApp {
 	</bean>
 
 </beans>
+```
+* pom.xml
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.okdevtv</groupId>
+	<artifactId>mvc</artifactId>
+	<name>okspring</name>
+	<packaging>war</packaging>
+	<version>1.0.0-BUILD-SNAPSHOT</version>
+	<properties>
+		<java-version>1.6</java-version>
+		<org.springframework-version>3.1.1.RELEASE</org.springframework-version>
+		<org.aspectj-version>1.6.10</org.aspectj-version>
+		<org.slf4j-version>1.6.6</org.slf4j-version>
+	</properties>
+	<dependencies>
+		<!-- Spring -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>${org.springframework-version}</version>
+		</dependency>
+	</dependencies>
+</project>
 ```
 
 ## Bean scope
@@ -127,6 +155,7 @@ public class ExampleBean implements DisposableBean {
 
 * Spring Guides
   * http://spring.io/guides
+  * [가이드 목록](https://okky.kr/article/619099)
 
 * 스프링 프레임워크 레퍼런스 번역
   * http://blog.outsider.ne.kr/tag/스프링%20프레임워크
