@@ -160,6 +160,7 @@ var app7 = new Vue({
 
 ## ref
 * [Vue Router]('/mib/vue/router')
+* [Vue GA]('/mib/vue/mkt')
 
 ## example
 * 01: https://okdevtv.com/md/vue/examples/vue01.html
