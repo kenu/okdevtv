@@ -22,7 +22,7 @@ sudo vi /etc/yum.repos.d/MariaDB.repo
 ```
 [mariadb]
 name = MariaDB
-baseurl = http://yum.mariadb.org/10.2/centos6-amd64
+baseurl = http://yum.mariadb.org/10.4/centos7-amd64
 gpgkey=https://yum.mariadb.org/RPM-GPG-KEY-MariaDB
 gpgcheck=1
 ```
@@ -34,7 +34,7 @@ sudo yum install MariaDB-server
 ```
 
 ```
-sudo service mysql start
+sudo systemctl start mariadb
 sudo mysql_secure_installation
 ```
 
@@ -51,8 +51,6 @@ mysql -uroot -p
 GRANT ALL PRIVILEGES ON yona.* TO yona@localhost
 IDENTIFIED BY 'yonadan' WITH GRANT OPTION;
 
-set global innodb_file_format = BARRACUDA;
-set global innodb_large_prefix = ON;
 create database yona DEFAULT CHARACTER SET utf8mb4 DEFAULT COLLATE utf8mb4_bin;
 ```
 
@@ -92,7 +90,7 @@ default-character-set=utf8mb4
 
 ```
 mkdir local && cd local
-# MariaDB 10.2 required
+# MariaDB 10.4 required
 wget https://github.com/yona-projects/yona/releases/download/v1.12.0/yona-v1.12.0-bin.zip
 
 unzip yona-v1.12.0-bin.zip

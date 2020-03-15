@@ -73,35 +73,51 @@ void monitorTemperature() throws
 * Annotation types are a form of _interface_
 
 ```java
-@interface ClassPreamble {
-   String author();
-   String date();
-   int currentRevision() default 1;
-   String lastModified() default "N/A";
-   String lastModifiedBy() default "N/A";
-   // Note use of array
-   String[] reviewers();
+package okdevtv;
+
+@Retention(RetentionPolicy.RUNTIME)
+@Target(ElementType.METHOD)
+public @interface Name {
+
+    public String myName();
+
 }
 ```
 
 ```java
-@ClassPreamble (
-   author = "John Doe",
-   date = "3/17/2002",
-   currentRevision = 6,
-   lastModified = "4/12/2004",
-   lastModifiedBy = "Jane Doe",
-   // Note array notation
-   reviewers = {"Alice", "Bob", "Cindy"}
-)
-public class Generation3List extends Generation2List {
+package okdevtv.java;
 
-// class code goes here
+import okdevtv.Name;
 
+public class Z {
+
+    @Name(myName = "Kenu")
+    public void something() {
+
+    }
+}
+```
+
+```java
+package okdevtv.java;
+
+import spring.Name;
+
+public class NameTest {
+	public static void main(String[] args) throws NoSuchMethodException, SecurityException {
+		final Method method = Z.class.getMethod("something");
+		if (method.isAnnotationPresent(Name.class)) {
+		    final Annotation annotation = method.getAnnotation(Name.class);
+		    final Name name = (Name) annotation;
+		    System.out.println(name.myName()); // Prints George
+		}
+	}
 }
 ```
 
 ## ref
+* https://stackoverflow.com/questions/26381672/how-to-pass-value-to-a-custom-annotation
+* [스프링 부트 어노테이션 목록](https://okky.kr/article/638071)
 * http://docs.oracle.com/javase/1.5.0/docs/guide/language/annotations.html
 * https://docs.oracle.com/javase/tutorial/java/annotations/basics.html
 * https://www.mkyong.com/java/java-custom-annotations-example/

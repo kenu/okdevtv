@@ -7,11 +7,11 @@
   * `vi /etc/yum.repos.d/MariaDB.repo`
 
 ```
-# MariaDB 10.0 CentOS repository list - created 2015-06-10 04:26 UTC
+# MariaDB 10.4 CentOS repository list
 # http://mariadb.org/mariadb/repositories/
 [mariadb]
 name = MariaDB
-baseurl = http://yum.mariadb.org/10.2/centos7-amd64
+baseurl = http://yum.mariadb.org/10.4/centos7-amd64
 gpgkey=https://yum.mariadb.org/RPM-GPG-KEY-MariaDB
 gpgcheck=1
 ```
