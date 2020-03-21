@@ -63,10 +63,10 @@ chmod 400 devenv-key.pem
 ### EC2 instance 생성
 
 ```
-#ami-4d1fd123 이미지 목록에서 확인
-aws ec2 describe-images --owners self amazon --filter "Name=root-device-type,Values=ebs" | grep ami-4d1fd123
-#EC2 t2.micro 인스턴스 생성
-aws ec2 run-instances --image-id ami-4d1fd123 --security-group-ids okdevtv-sg --count 1 --instance-type t2.micro --key-name devenv-key --query 'Instances[0].InstanceId'
+#ami-0db78afd3d150fc18 이미지 목록에서 확인
+aws ec2 describe-images --owners self amazon --filter "Name=root-device-type,Values=ebs" | grep ami-0db78afd3d150fc18
+#EC2 t3a.micro 인스턴스 생성
+aws ec2 run-instances --image-id ami-0db78afd3d150fc18 --security-group-ids okdevtv-sg --count 1 --instance-type t3a.micro --key-name devenv-key --query 'Instances[0].InstanceId'
 ```
 
 ## 참고:
