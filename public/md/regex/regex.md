@@ -48,6 +48,20 @@ RegExp.$1; // "John"
 RegExp.$2; // "Smith"
 ```
 
+## Tools
+* VSCode
+
+```
+\sid="(\w*)"
+ class="$1"
+```
+
+* grep
+
+```
+grep -E ""
+```
+
 ## ref
 * https://regex101.com
 * https://www.w3schools.com/js/js_regexp.asp
