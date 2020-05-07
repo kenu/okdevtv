@@ -31,11 +31,11 @@ app.use(passport.session());
 
 try {
   // Passport session setup.
-  passport.serializeUser(function(user, done) {
+  passport.serializeUser(function (user, done) {
     done(null, user);
   });
 
-  passport.deserializeUser(function(obj, done) {
+  passport.deserializeUser(function (obj, done) {
     done(null, obj);
   });
 
@@ -47,8 +47,8 @@ try {
         clientSecret: config.facebook_api_secret,
         callbackURL: config.callback_url
       },
-      function(accessToken, refreshToken, profile, done) {
-        process.nextTick(function() {
+      function (accessToken, refreshToken, profile, done) {
+        process.nextTick(function () {
           // Check whether the User exists or not using profile.id
           if (config.use_database) {
             // if sets to true
@@ -60,10 +60,10 @@ try {
                   console.log('There is no such user, adding now');
                   pool.query(
                     "INSERT into user_info(user_id,user_name) VALUES('" +
-                      profile.id +
-                      "','" +
-                      profile.username +
-                      "')"
+                    profile.id +
+                    "','" +
+                    profile.username +
+                    "')"
                   );
                 } else {
                   console.log('User already exists in database');
@@ -100,7 +100,7 @@ app.use('/login', require('./routes/login'));
 app.use('/mib*', require('./routes/mib'));
 
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
+app.use(function (req, res, next) {
   const err = new Error('Not Found');
   err.status = 404;
   next(err);
@@ -111,7 +111,7 @@ app.use(function(req, res, next) {
 // development error handler
 // will print stacktrace
 if (app.get('env') === 'development') {
-  app.use(function(err, req, res) {
+  app.use(function (err, req, res) {
     res.status(err.status || 500);
     res.render('error', {
       message: err.message,
@@ -122,7 +122,7 @@ if (app.get('env') === 'development') {
 
 // production error handler
 // no stacktraces leaked to user
-app.use(function(err, req, res) {
+app.use(function (err, req, res) {
   res.status(err.status || 500);
   res.render('error', {
     message: err.message,

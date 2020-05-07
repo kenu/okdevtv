@@ -24,6 +24,12 @@ EOF
 "files.autoGuessEncoding": true
 ```
 
+## Plugins
+* Popular: `sort @installs`
+* GitLens
+* Prettier
+* GitGraph
+
 ## ref
 * https://code.visualstudio.com/docs/setup/mac
 * https://code.visualstudio.com/docs/getstarted/tips-and-tricks
