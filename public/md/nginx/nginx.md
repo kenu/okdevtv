@@ -36,6 +36,12 @@ echo "<h1>Hello World</h1>" > /usr/share/nginx/html/hello.html
 
 ## 자동 시작
 ```
+# centos 7
+systemctl enable nginx.service
+```
+
+```
+# centos 6
 sudo chkconfig nginx on
 ```
 
