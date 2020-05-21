@@ -68,6 +68,8 @@ $_SERVER['DOCUMENT_ROOT']
 
 
 ## ref
+* nginx-php
+  * [/mib/php/nginx-php](/mib/php/nginx-php)
 * 윈도우(Windows) nginx와 php 연동하기
   * http://homaki.tistory.com/
 * nginx for Windows
