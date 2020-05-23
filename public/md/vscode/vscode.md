@@ -29,6 +29,7 @@ EOF
 * GitLens
 * Prettier
 * GitGraph
+* L13 Diff
 
 ## ref
 * https://code.visualstudio.com/docs/setup/mac
