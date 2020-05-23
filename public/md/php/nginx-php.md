@@ -96,6 +96,12 @@ phpinfo();'
 > /usr/share/nginx/html/info.php
 ```
 
+```
+sudo yum install mariadb-server
+sudo systemctl start mariadb
+sudo mysql_secure_installation
+```
+
 ## ref:
 * https://www.digitalocean.com/community/tutorials/how-to-install-linux-nginx-mysql-php-lemp-stack-on-centos-7
 * https://www.lesstif.com/lpt/amazon-linux-ami-php-7-3-77955353.html
