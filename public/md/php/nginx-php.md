@@ -100,6 +100,10 @@ phpinfo();'
 sudo yum install mariadb-server
 sudo systemctl start mariadb
 sudo mysql_secure_installation
+sudo vi /etc/my.cnf.d/server.cnf
+```
+
+```
 ```
 
 ```
@@ -110,6 +114,21 @@ mysql -u root -p
 create database wpdb;
 GRANT ALL PRIVILEGES ON wpdb.* TO wpuser@localhost IDENTIFIED BY 'wppass' WITH GRANT OPTION;
 ```
+
+## WordPress
+
+```
+cd /usr/share/nginx/html
+wget https://wordpress.org/latest.tar.gz
+tar xvfz latest.tar.gz -C ..
+mv wordpress/* .
+cp wp-config-sample.php wp-config.php
+curl https://api.wordpress.org/secret-key/1.1/salt/ -o salt.txt
+vi wp-config.php
+# edit db info and salt keys
+```
+
+
 
 ## ref:
 * https://www.digitalocean.com/community/tutorials/how-to-install-linux-nginx-mysql-php-lemp-stack-on-centos-7
