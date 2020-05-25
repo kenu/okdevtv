@@ -102,6 +102,15 @@ sudo systemctl start mariadb
 sudo mysql_secure_installation
 ```
 
+```
+mysql -u root -p
+```
+
+```
+create database wpdb;
+GRANT ALL PRIVILEGES ON wpdb.* TO wpuser@localhost IDENTIFIED BY 'wppass' WITH GRANT OPTION;
+```
+
 ## ref:
 * https://www.digitalocean.com/community/tutorials/how-to-install-linux-nginx-mysql-php-lemp-stack-on-centos-7
 * https://www.lesstif.com/lpt/amazon-linux-ami-php-7-3-77955353.html
