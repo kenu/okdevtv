@@ -87,6 +87,7 @@
 ```
 
 ## related
+* [Array](/mib/js/array)
 * [Promise](/mib/js/promise)
 
 
