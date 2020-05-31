@@ -15,7 +15,7 @@ bin/startup.sh
   * ROOT
 
 ## SSL
-* http://tomcat.apache.org/tomcat-8.5-doc/ssl-howto.html
+* http://tomcat.apache.org/tomcat-9.0-doc/ssl-howto.html
 ```
 keytool -genkey -alias tomcat -keyalg RSA -keystore ~/.ssh/okdevtv.keystore
 ```
