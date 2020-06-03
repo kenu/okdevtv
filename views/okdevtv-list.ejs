@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+    <ul>
+      <% items.forEach(item => { %>
+      <li>
+        <%= item.topic %> <a href="<%= item.movie %>" target="_blank">movie</a>
+        <a href="<%= item.slide %>" target="_blank">slide</a>
+      </li>
+      <% }); %>
+    </ul>
+  </body>
+</html>
