@@ -3,16 +3,25 @@
 * 서블릿 컨테이너 표준 구현 서버
 * JAVA_HOME 환경 변수 필요
 
-## run
+## Run
 ```
 bin/startup.sh
+bin\startup.bat
 ```
 
-## folder
+## Folder
 * conf
   * server.xml
 * webapps
-  * ROOT
+  * ROOT.war
+* Maven folder structure vs. WebContent
+
+## Eclipse(STS) Tomcat Tip
+* Server Options
+  * Check `Serve modules without publishing`
+  * `application.getRealPath("/")`
+* External Web Browser
+* Disable all validations
 
 ## SSL
 * http://tomcat.apache.org/tomcat-9.0-doc/ssl-howto.html
