@@ -3,14 +3,32 @@
   <head>
     <title><%= title %></title>
     <link rel="stylesheet" href="/stylesheets/style.css" />
+    <style>
+      .cgrey {
+        color: lightgray;
+      }
+      .cblack {
+        color: black;
+      }
+    </style>
   </head>
   <body>
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
     <ul>
-      <% items.forEach(item => { %>
+      <%
+      let lastOne = '';
+      let css = '';
+      items.forEach(item => {
+        if (lastOne !== item.date) {
+          css = 'cblack';
+          lastOne = item.date;
+        } else {
+          css = 'cgrey';
+        }
+      %>
       <li>
-        <%= item.topic %> <a href="<%= item.movie %>" target="_blank">movie</a>
+        <span class="<%= css %>">[<%= item.date %>]</span> <%= item.topic %> <a href="<%= item.movie %>" target="_blank">movie</a>
         <a href="<%= item.slide %>" target="_blank">slide</a>
       </li>
       <% }); %>
