@@ -21,15 +21,14 @@
       let css = '';
       items.forEach(item => {
         if (lastOne !== item.date) {
-          css = 'cblack';
-          lastOne = item.date;
+          css = 'cblack'; lastOne = item.date;
         } else {
           css = 'cgrey';
-        }
-      %>
+      } %>
       <li>
-        <span class="<%= css %>">[<%= item.date %>]</span> <%= item.topic %> <a href="<%= item.movie %>" target="_blank">movie</a>
-        <a href="<%= item.slide %>" target="_blank">slide</a>
+        <span class="<%= css %>">[<%= item.date %>]</span> <%= item.topic %>
+        <a href="<%= item.movie %>" target="_blank" rel="noreferrer">movie</a>
+        <a href="<%= item.slide %>" target="_blank"rel="noreferrer">slide</a>
       </li>
       <% }); %>
     </ul>
