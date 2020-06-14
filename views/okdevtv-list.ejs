@@ -11,11 +11,36 @@
         color: black;
       }
     </style>
+    <script>
+      let repo = '';
+      function search(evt) {
+        const keyword = evt.currentTarget.value.toLowerCase();
+        if (!repo) {
+          repo = document.querySelectorAll('li');
+        }
+        let allData = repo;
+        const filtered = [...allData].filter(function (e) {
+          const text = e.innerText.toLowerCase();
+          return text.includes(keyword);
+        });
+        let htmlFiltered = '';
+        filtered.forEach(function(e) {
+          htmlFiltered += e.outerHTML;
+        });
+        document.getElementById('list').innerHTML = htmlFiltered;
+      }
+
+      window.onload = function () {
+        const el = document.getElementById('keyword');
+        el.addEventListener('keyup', search);
+      };
+    </script>
   </head>
   <body>
     <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-    <ul>
+    <p>Welcome to <a href="https://youtube.com/kenuheo"><%= title %></a></p>
+    <input type="text" id="keyword" placeholder="search keyword">
+    <ul id="list">
       <%
       let lastOne = '';
       let css = '';
@@ -28,7 +53,7 @@
       <li>
         <span class="<%= css %>">[<%= item.date %>]</span> <%= item.topic %>
         <a href="<%= item.movie %>" target="_blank" rel="noreferrer">movie</a>
-        <a href="<%= item.slide %>" target="_blank"rel="noreferrer">slide</a>
+        <a href="<%= item.slide %>" target="_blank" rel="noreferrer">slide</a>
       </li>
       <% }); %>
     </ul>
