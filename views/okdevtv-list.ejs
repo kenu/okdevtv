@@ -44,6 +44,9 @@
       <%
       let lastOne = '';
       let css = '';
+      if (!items) {
+        return;
+      }
       items.forEach(item => {
         if (lastOne !== item.date) {
           css = 'cblack'; lastOne = item.date;
