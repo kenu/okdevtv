@@ -10,7 +10,11 @@ router.get('/', function (req, res) {
 
 let repo = '';
 let lastTime = Date.now();
-async function getItems() {
+async function getItems(req) {
+  const refresh = req.query.q;
+  if (refresh && refresh === process.env.REFRESH_TOKEN) {
+    repo = '';
+  }
   const diff = Date.now() - lastTime;
   if (repo && diff < 24 * 60 * 60 * 1000) {
     return repo;
@@ -27,7 +31,7 @@ async function getItems() {
 }
 
 router.get('/okdevtv-list', async function (req, res) {
-  const items = await getItems();
+  const items = await getItems(req);
 
   res.render('okdevtv-list', { title: 'OKdevTV List', items: items });
 });
