@@ -36,3 +36,8 @@ router.get('/okdevtv-list', async function (req, res) {
   res.render('okdevtv-list', { title: 'OKdevTV List', items: items });
 });
 module.exports = router;
+
+router.get('/f/:url', function (req, res) {
+  const url = req.params.url;
+  res.redirect(url);
+});

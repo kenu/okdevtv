@@ -31,7 +31,7 @@
   </head>
   <body>
     <h1><%= title %></h1>
-    <p>Welcome to <a href="https://youtube.com/kenuheo"><%= title %></a></p>
+    <p>Welcome to <a href="/f/https://youtube.com/kenuheo"><%= title %></a></p>
     <input type="text" id="keyword" placeholder="search keyword" autocomplete="off">
     <ul id="list">
       <%
@@ -48,8 +48,8 @@
       } %>
       <li>
         <span class="<%= css %>">[<%= item.date %>]</span> <%= item.topic %>
-        <a href="<%= item.movie %>" target="_blank" rel="noreferrer">movie</a>
-        <a href="<%= item.slide %>" target="_blank" rel="noreferrer">slide</a>
+        <a href="/f/<%= encodeURIComponent(item.movie) %>" target="_blank" rel="noreferrer">movie</a>
+        <a href="/f/<%= encodeURIComponent(item.slide) %>" target="_blank" rel="noreferrer">slide</a>
       </li>
       <% }); %>
     </ul>
