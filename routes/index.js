@@ -33,7 +33,7 @@ async function getItems(req) {
 router.get('/okdevtv-list', async function (req, res) {
   const items = await getItems(req);
 
-  res.render('okdevtv-list', { title: 'OKdevTV List', items: items });
+  res.render('okdevtv-list', { title: '<a href="/">OKdevTV List</a>', desc: 'OKdevTV', items: items });
 });
 module.exports = router;
 
