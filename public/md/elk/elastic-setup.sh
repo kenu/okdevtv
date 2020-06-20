@@ -33,6 +33,7 @@ ln -s logstash-7.7.0 logstash
 cd logstash
 mkdir logconf && cd logconf
 wget https://okdevtv.com/md/elk/okky.conf
+./bin/logstash-plugin install logstash-input-beats
 cd -
 nohup bin/logstash -f logconf/okky.conf &
 
