@@ -1,9 +1,9 @@
-# ELK
+# ELK (Elastic Stack)
 * Elasticsearch + Logstash + Kibana
 * Elasticsearch는 Apache의 Lucene을 바탕으로 개발한 실시간 분산 검색 엔진이며,
 * Logstash는 각종 로그를 가져와 JSON형태로 만들어 Elasticsearch로 전송하고,
 * Kibana는 Elasticsearch에 저장된 Data를 사용자에게 Chart 형태로 보여주는 시각화 솔루션이다.
-![ELK Architecture](images/elastic-stack.png)
+* ![ELK Architecture](images/elastic-stack.png)
 * http://elastic.co 사이트 오픈소스 제품
 
 
@@ -647,5 +647,5 @@ pm2 start bin/cli
 * ELK Kibana 사용법
   * https://www.dropbox.com/s/xjwyta14b5nw7j8/Kibana-basic.pdf?dl=0
 
-* okky.conf
-  * https://okdevtv.com/md/elk/okky.conf
+* okdevtv.conf
+  * https://okdevtv.com/md/elk/okdevtv.conf

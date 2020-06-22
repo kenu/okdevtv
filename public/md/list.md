@@ -88,7 +88,7 @@
 ./elk/kibana.md
 ./elk/logsamples.md
 ./elk/metricbeat.md
-./elk/okky.conf
+./elk/okdevtv.conf
 ./elk/timelion.md
 ./elk/upgrade.md
 ./emmet/emmet.html
