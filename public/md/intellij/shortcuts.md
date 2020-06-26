@@ -4,7 +4,7 @@
 |---|---|---|---|--|
 |자동 완성, 인텔리센스 |Ctrl + Space | | Ctrl + Space | Alt + Right |
 |SmartType code completion | Ctrl + Shift + Space | | - | |
-|Reformat, Code Tidy | Ctrl + Alt + L | | Ctrl + Shift + F | |
+|Reformat, Code Tidy | Ctrl + Alt + L | Ctrl + Shift + F | Ctrl + Shift + F | |
 |Quick Fix | Alt + Enter | |Ctrl + 1 |  |
 |Navigate &#124; Declaration (Open Declaration)|Ctrl + B | |F3 |  |
 |Go to file(Open Resource) | Ctrl + Shift + N | Ctrl + P |Ctrl + Shift + R|  |
