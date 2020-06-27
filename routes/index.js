@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const sheetdb = require('../lib/sheetdb');
+const okdevtv = require('../services/okdevtv-list');
 
 /* GET home page. */
 router.get('/', function (req, res) {
@@ -8,30 +8,8 @@ router.get('/', function (req, res) {
   res.render('index', { user: req.session.user });
 });
 
-let repo = '';
-let lastTime = Date.now();
-async function getItems(req) {
-  const refresh = req.query.q;
-  if (refresh && refresh === process.env.REFRESH_TOKEN) {
-    repo = '';
-  }
-  const diff = Date.now() - lastTime;
-  if (repo && diff < 24 * 60 * 60 * 1000) {
-    return repo;
-  }
-  const info = { sheetId: process.env.SHEET_ID, index: 1 };
-  const sheet = await sheetdb.getSheet(info);
-  const rows = await sheet.getRows();
-  const items = rows.map((row) => {
-    return row;
-  });
-  repo = items;
-  lastTime = Date.now();
-  return items;
-}
-
 router.get('/okdevtv-list', async function (req, res) {
-  const items = await getItems(req);
+  const items = await okdevtv.getItems(req);
 
   res.render('okdevtv-list', { title: '<a href="/">OKdevTV List</a>', desc: 'OKdevTV', items: items });
 });
