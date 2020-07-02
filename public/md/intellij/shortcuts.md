@@ -1,4 +1,4 @@
-# 단축키 비교표<br>IntelliJ, Eclipse, Visual Studio
+# 단축키 비교표<br>IntelliJ, VSCode, Eclipse, Visual Studio
 
 |**기능** |**IntelliJ**| **VSCode** |**Eclipse** | **VS** |
 |---|---|---|---|--|
