@@ -50,6 +50,6 @@
 * IntelliJ IDEA ReferenceCard pdf
   * https://www.jetbrains.com/idea/docs/IntelliJIDEA_ReferenceCard.pdf
 * IntelliJ on Youtube
-  * [JetBrainsTV](https//www.youtube.com/channel/UC4ogdcPcIAOOMJktgBMhQnQ)
+  * [JetBrainsTV](https://www.youtube.com/channel/UC4ogdcPcIAOOMJktgBMhQnQ)
 * Visual Studio 단축키
   * https://www.facebook.com/gyuwon.yi/posts/939785252731365
