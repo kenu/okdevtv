@@ -50,3 +50,34 @@ npm config set strict-ssl true
 * ref
   * https://stackoverflow.com/a/21385322/510222
 
+## SCRIPT1046: strict 모드에서는 속성을 여러 번 정의할 수 없습니다.
+
+* log
+
+```
+SCRIPT1046: strict 모드에서는 속성을 여러 번 정의할 수 없습니다.
+app.js (661,1)
+
+                    domProps: {
+                      checked:
+                        mvp.dYn === "Y" ? "checked" : "",
+                      value: index,
+                      checked: _vm._q(_vm.checkedIdx, index)
+                    },
+```
+
+* solv
+
+```
+# before
+<input type="radio" name="list"
+:checked="mvp.dYn === 'Y' ? 'checked' : ''"
+:value="index"
+v-model="checkedIdx">
+
+# after
+<input type="radio" name="list"
+:checked="mvp.dYn === 'Y' ? 'checked' : ''"
+:value="index">
+```
+  * `v-model`과 `:checked`는 동시에 사용할 수 없음
