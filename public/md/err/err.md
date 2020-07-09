@@ -81,3 +81,33 @@ v-model="checkedIdx">
 :value="index">
 ```
   * `v-model`과 `:checked`는 동시에 사용할 수 없음
+
+## SCRIPT1003: ':'가 필요합니다.
+
+* log
+
+```
+SCRIPT1003: ':'가 필요합니다.
+chunk-vendors.js (506,1)
+
+/***/ "./node_modules/vue-clamp/Clamp.js":
+/*!*****************************************!*\
+  !*** ./node_modules/vue-clamp/Clamp.js ***!
+  \*****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var resize_detector__WEBPACK_IMPORTED_MODULE_0__ =
+```
+
+* solv
+
+```
+# vue.config.js
+
+module.exports = {
+  transpileDependencies: [
+    'vue-clamp',
+  ],
+```
