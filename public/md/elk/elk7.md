@@ -22,7 +22,7 @@
 * 리눅스 서버 CentOS 또는 Ubuntu
 * Java 1.8 이상
 
-## 통합설치
+## 간단 통합설치
 
 * elasticsearch + kibana + logstash with openjdk1.8 + nginx
 * for AWS t2.medium : minimum 4G RAM
@@ -30,11 +30,18 @@
 ```bash
 curl -L https://okdevtv.com/md/elk/elastic-setup.sh | sh
 ```
+* nginx reverse proxy 설정은 아래 참고
 
 ### filebeat.yml.sample
 ```bash
 wget https://okdevtv.com/md/elk/filebeat.yml.sample
 ```
+
+### kibana sample
+* https://yona.okdevtv.com/study/okdevtv/issue/29
+
+
+====
 
 ## nginx 설치(샘플용)
 ```
@@ -583,8 +590,11 @@ sudo htpasswd /etc/nginx/htpasswd.users kenuheo
 ```
 
 ### nginx 설정 추가
+* Reverse Proxy 설정
+
 ```
-sudo vi /etc/nginx/nginx.conf
+sudo su -
+vi /etc/nginx/nginx.conf
 ```
 
 * `server_name:` 아래 kibana 프록시 설정
@@ -607,20 +617,8 @@ sudo vi /etc/nginx/nginx.conf
         }
 ```
 * nginx 재시작
-  * `sudo service nginx start`
+  * `systemctl restart nginx`
 * 5601 포트는 막고 80으로만 접속
-
-## Kibana with PM2
-
-* download from http://nodejs.org and install node.js
-
-```
-npm install -g pm2
-cd ~/local/kibana
-pm2 start bin/cli
-```
-* check kibana status with `pm2 list`
-* pm2 logs path is placed in ~/.pm2/logs
 
 
 
