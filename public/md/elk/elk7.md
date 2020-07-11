@@ -31,6 +31,11 @@
 curl -L https://okdevtv.com/md/elk/elastic-setup.sh | sh
 ```
 
+### filebeat.yml.sample
+```bash
+wget https://okdevtv.com/md/elk/filebeat.yml.sample
+```
+
 ## nginx 설치(샘플용)
 ```
 sudo yum install nginx -y
@@ -278,9 +283,18 @@ wget https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-7.8.0-linux-
 tar xvfz filebeat-7.8.0-linux-x86_64.tar.gz
 ln -s filebeat-7.8.0-linux-x86_64 filebeat
 cd filebeat
+```
+
+* filebeat.yml 편집
+
+```
+# Change to true to enable this input configuration.
+  enabled: true
+
 # elasticsearch 부분 #으로 주석 처리
   # output.elasticsearch:
     #hosts: ["localhost:9200"]
+
 # logstash 부분 # 주석 해제
   output.logstash:
     hosts: ["localhost:5044"]
