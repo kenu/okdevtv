@@ -12,7 +12,7 @@ const okdevtvList = {
     if (repo && diff < 24 * 60 * 60 * 1000) {
       return repo;
     }
-    const info = { sheetId: process.env.SHEET_ID, index: 1 };
+    const info = { sheetId: process.env.SHEET_ID, id: '253705883' };
     const sheet = await sheetdb.getSheet(info);
     const rows = await sheet.getRows();
     const items = rows.map((row) => {
