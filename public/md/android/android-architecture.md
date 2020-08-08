@@ -4,10 +4,10 @@
 * use middleware server or api gateway
 
 
-* Insecure
+* Legacy web
 <img src="images/MobileServiceArchitecture1.png">
 
-* Secure
+* Secure, Insecure
 <img src="images/MobileServiceArchitecture2.png">
 
 ## ref
