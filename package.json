@@ -14,7 +14,7 @@
   "dependencies": {
     "@babel/polyfill": "^7.4.4",
     "aws-sdk": "^2.477.0",
-    "bcrypt": "^4.0.1",
+    "bcrypt": "^5.0.0",
     "body-parser": "^1.18.3",
     "cookie-parser": "~1.4.4",
     "debug": "^4.1.0",
