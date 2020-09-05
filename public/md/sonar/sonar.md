@@ -24,9 +24,9 @@
 * Download http://docs.sonarqube.org/display/SCAN/Analyzing+with+SonarQube+Scanner
 * add sonar-scanner/bin directory to $PATH
 * check `sonar-scanner` cmd
-* mac
+* npm
 ```
-brew install sonar-scanner
+npm i -g sonar-scanner
 ```
 
 ## JavaScript
