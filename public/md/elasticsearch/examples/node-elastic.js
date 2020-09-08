@@ -56,9 +56,9 @@ function getJson(line) {
     return t;
 }
 
-function sleep(time, callback) {
-    var stop = new Date().getTime();
-    while (new Date().getTime() < stop + time) {
+function sleep(timeMillis, callback) {
+    var stop = Date.now();
+    while (Date.now() < stop + timeMillis) {
         // This is intentional
     }
     callback();
