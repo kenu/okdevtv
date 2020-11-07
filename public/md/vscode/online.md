@@ -12,3 +12,4 @@
 
 ## ref
 * https://eclipsesource.com/blogs/2020/10/14/eclipse-che-vs-vs-code-onlinecodespaces/
+* https://okdevtv.com/mib/vscode
