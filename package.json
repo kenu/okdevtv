@@ -41,6 +41,7 @@
     "@babel/core": "^7.4.5",
     "@babel/preset-env": "^7.4.5",
     "eslint": "^6.3.0",
-    "eslint-config-google": "^0.14.0"
+    "eslint-config-google": "^0.14.0",
+    "frameguard": "^3.1.0"
   }
 }
