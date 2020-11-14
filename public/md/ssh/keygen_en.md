@@ -18,7 +18,7 @@
 * create file ~/.ssh/authorized_keys in server
 ```
 mkdir ~/.ssh
-vi ~/.ssh/authrized_keys
+vi ~/.ssh/authorized_keys
 ```
 * paste copied client's public key
 

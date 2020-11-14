@@ -18,7 +18,7 @@
 * **~/.ssh/authorized_keys** 파일을 생성해서 복사한 공개키를 붙여넣기
 ```
 mkdir ~/.ssh
-vi ~/.ssh/authrized_keys
+vi ~/.ssh/authorized_keys
 ```
 
 ### GitHub login
