@@ -32,5 +32,6 @@ EOF
 * L13 Diff
 
 ## ref
+* [VSCode Online](/mib/vscode/online)
 * https://code.visualstudio.com/docs/setup/mac
 * https://code.visualstudio.com/docs/getstarted/tips-and-tricks

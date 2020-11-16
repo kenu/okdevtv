@@ -2,33 +2,36 @@
 * https://github.com/spring-projects/spring-boot
 
 ## Goals
-* 매우 빠른 스프링 개발
+* 매우 빠른 스프링 개발 가능
 * 기본도 충실하지만, 요구사항 변화에 빨리 대응
 * 다양한 비기능 특징 제공(임베디드 서버, 보안, 메트릭, 헬스 체크, 외부 설정)
-* 코드 생성이 없고, XML 요구되지 않음
 
 ## Simple Example
+* https://start.spring.io
+* spring boot 기본 앱 생성
 * Example.java
 
 ```java
-import org.springframework.boot.*;
-import org.springframework.boot.autoconfigure.*;
-import org.springframework.stereotype.*;
-import org.springframework.web.bind.annotation.*;
+package com.example.demo;
 
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+@SpringBootApplication
 @RestController
-@EnableAutoConfiguration
-public class Example {
+public class DemoApplication {
 
-    @RequestMapping("/")
-    String home() {
-        return "Hello World!";
-    }
+  public static void main(String[] args) {
+    SpringApplication.run(DemoApplication.class, args);
+  }
 
-    public static void main(String[] args) throws Exception {
-        SpringApplication.run(Example.class, args);
-    }
-
+  @GetMapping("/hello")
+  public String hello(@RequestParam(value = "name", defaultValue = "World") String name) {
+    return String.format("Hello %s!", name);
+  }
 }
 ```
 

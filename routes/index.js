@@ -1,22 +1,20 @@
-var express = require('express');
-var router = express.Router();
-var sheetdb = require('../lib/sheetdb');
+const express = require('express');
+const router = express.Router();
+const okdevtv = require('../services/okdevtv-list');
 
 /* GET home page. */
 router.get('/', function (req, res) {
-  console.log(req.session.user);
-  res.render('index', { user: req.session.user });
+    res.render('index', { user: req.session.user });
 });
 
 router.get('/okdevtv-list', async function (req, res) {
-  const info = { sheetId: process.env.SHEET_ID, index: 1 };
-  const sheet = await sheetdb.getSheet(info);
-  const rows = await sheet.getRows();
-  console.log(rows.length);
-  const items = rows.map((row) => {
-    return row;
-  });
+    const items = await okdevtv.getItems(req);
 
-  res.render('okdevtv-list', { title: 'OKdevTV List', items: items });
+    res.render('okdevtv-list', { title: '<a href="/">OKdevTV List</a>', desc: 'OKdevTV', items: items });
 });
 module.exports = router;
+
+router.get('/f/:url', function (req, res) {
+    const url = req.params.url;
+    res.redirect(url);
+});

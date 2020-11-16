@@ -1,24 +1,45 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
-    <link rel="stylesheet" href="/stylesheets/style.css" />
-    <style>
-      .cgrey {
-        color: lightgray;
+    <title>방송 목록 - OKdevTV</title>
+    <meta name="viewport" content="width=device-width, user-scalable=yes" />
+    <link rel="stylesheet" href="/stylesheets/okdevtv-list.css" />
+    <script>
+      let repo = '';
+      function search(evt) {
+        const keyword = evt.currentTarget.value.toLowerCase();
+        if (!repo) {
+          repo = document.querySelectorAll('li');
+        }
+        let allData = repo;
+        const filtered = [...allData].filter(function (e) {
+          const text = e.innerText.toLowerCase();
+          return text.includes(keyword);
+        });
+        let htmlFiltered = '';
+        filtered.forEach(function(e) {
+          htmlFiltered += e.outerHTML;
+        });
+        document.getElementById('list').innerHTML = htmlFiltered;
       }
-      .cblack {
-        color: black;
-      }
-    </style>
+
+      window.onload = function () {
+        const el = document.getElementById('keyword');
+        el.addEventListener('keyup', search);
+      };
+    </script>
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-    <ul>
+    <h1><%- title %></h1>
+    <p>Welcome to <a href="https://youtube.com/kenuheo"><%= desc %></a></p>
+    <input type="text" id="keyword" placeholder="search keyword" autocomplete="off">
+    <ul id="list">
       <%
       let lastOne = '';
       let css = '';
+      if (!items) {
+        return;
+      }
       items.forEach(item => {
         if (lastOne !== item.date) {
           css = 'cblack'; lastOne = item.date;
@@ -27,8 +48,8 @@
       } %>
       <li>
         <span class="<%= css %>">[<%= item.date %>]</span> <%= item.topic %>
-        <a href="<%= item.movie %>" target="_blank" rel="noreferrer">movie</a>
-        <a href="<%= item.slide %>" target="_blank"rel="noreferrer">slide</a>
+        <a href="/f/<%= encodeURIComponent(item.movie) %>" target="_blank" rel="noreferrer">movie</a>
+        <a href="/f/<%= encodeURIComponent(item.slide) %>" target="_blank" rel="noreferrer">slide</a>
       </li>
       <% }); %>
     </ul>

@@ -1,9 +1,9 @@
-# ELK
+# ELK (Elastic Stack)
 * Elasticsearch + Logstash + Kibana
 * Elasticsearch는 Apache의 Lucene을 바탕으로 개발한 실시간 분산 검색 엔진이며,
 * Logstash는 각종 로그를 가져와 JSON형태로 만들어 Elasticsearch로 전송하고,
 * Kibana는 Elasticsearch에 저장된 Data를 사용자에게 Chart 형태로 보여주는 시각화 솔루션이다.
-![ELK Architecture](images/elastic-stack.png)
+* ![ELK Architecture](images/elastic-stack.png)
 * http://elastic.co 사이트 오픈소스 제품
 
 
@@ -22,7 +22,7 @@
 * 리눅스 서버 CentOS 또는 Ubuntu
 * Java 1.8 이상
 
-## 통합설치
+## 간단 통합설치
 
 * elasticsearch + kibana + logstash with openjdk1.8 + nginx
 * for AWS t2.medium : minimum 4G RAM
@@ -30,6 +30,18 @@
 ```bash
 curl -L https://okdevtv.com/md/elk/elastic-setup.sh | sh
 ```
+* nginx reverse proxy 설정은 아래 참고
+
+### filebeat.yml.sample
+```bash
+wget https://okdevtv.com/md/elk/filebeat.yml.sample
+```
+
+### kibana sample
+* https://yona.okdevtv.com/study/okdevtv/issue/29
+
+
+====
 
 ## nginx 설치(샘플용)
 ```
@@ -113,9 +125,9 @@ sudo reboot
 ```
 mkdir ~/local
 cd ~/local
-wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-7.7.0-linux-x86_64.tar.gz
-tar xvfz elasticsearch-7.7.0-linux-x86_64.tar.gz
-ln -s elasticsearch-7.7.0 elasticsearch
+wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-7.8.0-linux-x86_64.tar.gz
+tar xvfz elasticsearch-7.8.0-linux-x86_64.tar.gz
+ln -s elasticsearch-7.8.0 elasticsearch
 cd elasticsearch
 bin/elasticsearch -d
   # 데몬(백그라운드)로 실행. 옵션 -d를 빼면 터미널 접속해 있는 동안만 실행
@@ -130,9 +142,9 @@ curl -i http://localhost:9200/
 
 ```
 cd ~/local
-wget https://artifacts.elastic.co/downloads/kibana/kibana-7.7.0-linux-x86_64.tar.gz
-tar xvfz kibana-7.7.0-linux-x86_64.tar.gz
-ln -s kibana-7.7.0-linux-x86_64 kibana
+wget https://artifacts.elastic.co/downloads/kibana/kibana-7.8.0-linux-x86_64.tar.gz
+tar xvfz kibana-7.8.0-linux-x86_64.tar.gz
+ln -s kibana-7.8.0-linux-x86_64 kibana
 cd kibana
 ```
 
@@ -149,9 +161,9 @@ nohup bin/kibana &
 
 ```
 cd ~/local
-wget https://artifacts.elastic.co/downloads/logstash/logstash-7.7.0.tar.gz
-tar xvfz logstash-7.7.0.tar.gz
-ln -s logstash-7.7.0 logstash
+wget https://artifacts.elastic.co/downloads/logstash/logstash-7.8.0.tar.gz
+tar xvfz logstash-7.8.0.tar.gz
+ln -s logstash-7.8.0 logstash
 cd logstash
 ```
 
@@ -274,13 +286,22 @@ cd ~/local/logstash
 
 ```
 cd ~/local
-wget https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-7.7.0-linux-x86_64.tar.gz
-tar xvfz filebeat-7.7.0-linux-x86_64.tar.gz
-ln -s filebeat-7.7.0-linux-x86_64 filebeat
+wget https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-7.8.0-linux-x86_64.tar.gz
+tar xvfz filebeat-7.8.0-linux-x86_64.tar.gz
+ln -s filebeat-7.8.0-linux-x86_64 filebeat
 cd filebeat
+```
+
+* filebeat.yml 편집
+
+```
+# Change to true to enable this input configuration.
+  enabled: true
+
 # elasticsearch 부분 #으로 주석 처리
   # output.elasticsearch:
     #hosts: ["localhost:9200"]
+
 # logstash 부분 # 주석 해제
   output.logstash:
     hosts: ["localhost:5044"]
@@ -569,8 +590,11 @@ sudo htpasswd /etc/nginx/htpasswd.users kenuheo
 ```
 
 ### nginx 설정 추가
+* Reverse Proxy 설정
+
 ```
-sudo vi /etc/nginx/nginx.conf
+sudo su -
+vi /etc/nginx/nginx.conf
 ```
 
 * `server_name:` 아래 kibana 프록시 설정
@@ -593,20 +617,8 @@ sudo vi /etc/nginx/nginx.conf
         }
 ```
 * nginx 재시작
-  * `sudo service nginx start`
+  * `systemctl restart nginx`
 * 5601 포트는 막고 80으로만 접속
-
-## Kibana with PM2
-
-* download from http://nodejs.org and install node.js
-
-```
-npm install -g pm2
-cd ~/local/kibana
-pm2 start bin/cli
-```
-* check kibana status with `pm2 list`
-* pm2 logs path is placed in ~/.pm2/logs
 
 
 
@@ -647,5 +659,5 @@ pm2 start bin/cli
 * ELK Kibana 사용법
   * https://www.dropbox.com/s/xjwyta14b5nw7j8/Kibana-basic.pdf?dl=0
 
-* okky.conf
-  * https://okdevtv.com/md/elk/okky.conf
+* okdevtv.conf
+  * https://okdevtv.com/md/elk/okdevtv.conf

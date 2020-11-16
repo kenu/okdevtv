@@ -629,5 +629,5 @@ pm2 start bin/cli
 * ELK Kibana 사용법
   * https://www.dropbox.com/s/xjwyta14b5nw7j8/Kibana-basic.pdf?dl=0
 
-* okky.conf
-  * https://okdevtv.com/md/elk/okky.conf
+* okdevtv.conf
+  * https://okdevtv.com/md/elk/okdevtv.conf

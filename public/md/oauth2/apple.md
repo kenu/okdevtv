@@ -100,7 +100,7 @@ Apple의 발표 에서 알 수 있듯이 Sign In With Apple 기능을 채택하�
 
 개발자 계정에 로그인하면 ["인증서, ID 및 프로필" 섹션](https://developer.apple.com/account/resources/certificates/list)으로 이동하여 왼쪽 메뉴에서 ["식별자" 하위 섹션](https://developer.apple.com/account/resources/identifiers/list/serviceId)을 선택해야 합니다.
 
-![Apple Developer - Certificates, IDs, & Profiles page of Developer Account](https://cdn.auth0.com/blog/sign-in-with-apple/certificates-identifiers-and-profiles-section.png)
+<img src="https://cdn.auth0.com/blog/sign-in-with-apple/certificates-identifiers-and-profiles-section.png" style="width: 85%;" alt="Apple Developer - Certificates, IDs, & Profiles page of Developer Account">
 
 ### Apple Developer - 개발자 계정의 인증서, ID 및 프로필 페이지
 

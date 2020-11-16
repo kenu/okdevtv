@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const user_service = require('../service/user_service');
+const user_service = require('../services/user-service');
 const uuidv4 = require('uuid/v4');
 
 router.get('/signup', function (req, res) {

@@ -1,0 +1,17 @@
+body {
+  padding: 10px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+#list {
+  padding: 0 8px;
+}
+a {
+  color: #00B7FF;
+}
+.cgrey {
+  color: lightgray;
+}
+.cblack {
+  color: black;
+}
