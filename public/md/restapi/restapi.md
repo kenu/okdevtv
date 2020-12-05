@@ -2,6 +2,7 @@
 * Roy Fielding - 2000
 * RESTful API
 * REpresentational State Transfer
+* output: json, xml
 
 ## 구성
 * 자원(RESOURCE) - URI
@@ -18,7 +19,7 @@
 
 ## REST API 디자인 가이드
 
-* URI는 정보의 자원 표현 
+* URI는 정보의 자원 표현
 * 행위는 HTTP Method(GET, POST, PUT, DELETE)로 표현한다
 
 ### 중심 규칙
