@@ -1,9 +1,5 @@
 # Heroku PaaS
 * https://www.heroku.com/
-
-## Node.js
-* https://devcenter.heroku.com/categories/nodejs
-
 ## Process
 * [Register Account](https://signup.heroku.com/)
 * [Install Heroku Toolbelt](https://devcenter.heroku.com/articles/heroku-cli)
@@ -12,3 +8,13 @@
 * change appname
 * change app git remote
 * upload app
+
+## Node.js
+* https://devcenter.heroku.com/categories/nodejs-support
+
+## Java (SpringBoot)
+* https://devcenter.heroku.com/categories/java-support
+
+## DB
+* PostgreSQL
+  * https://devcenter.heroku.com/articles/connecting-to-relational-databases-on-heroku-with-java
