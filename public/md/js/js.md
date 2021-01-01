@@ -86,6 +86,7 @@
 
 ## related
 * [JSON](/mib/js/json)
+* [Object](/mib/js/object)
 * [Array](/mib/js/array)
 * [Promise](/mib/js/promise)
 
