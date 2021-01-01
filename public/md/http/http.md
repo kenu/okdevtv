@@ -12,6 +12,6 @@
 * HTTP Secure
 * 기본포트: 443
 * 웹서버에 인증서 설치 필요
-ㄴ
+
 ## ref
 * https://developer.mozilla.org/ko/docs/Web/HTTP/Overview
