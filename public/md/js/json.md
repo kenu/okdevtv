@@ -1,9 +1,9 @@
-# JavaScript Object Notation
+# JSON(JavaScript Object Notation)
 * https://www.json.org
+* 기찻길 표기법(Railroad diagram)
 * 1999 Douglas Crockford
 * Standard ECMA-262 3rd Edition—December 1999
-* Data format
-* 기찻길 표기법(Railroad diagram)
+* Data format의 사실상 표준
 * 거의 모든 언어별 파서 라이브러리 목록
 
 ## 구조
