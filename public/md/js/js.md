@@ -13,8 +13,6 @@
 
 ## JSON
 * JavaScript Object Notation
-* 1999 Douglas Crockford
-* Standard ECMA-262 3rd Edition—December 1999
 * http://www.json.org/
 
 ## Object
@@ -87,6 +85,7 @@
 ```
 
 ## related
+* [JSON](/mib/js/json)
 * [Array](/mib/js/array)
 * [Promise](/mib/js/promise)
 
