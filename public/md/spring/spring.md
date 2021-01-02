@@ -28,14 +28,14 @@
 * <img src="/images/spring/spring-overview.png" alt="Spring Framework Architecture">
 
 ## Simple Spring Code
+* use : MainApp.java
 * bean : HelloWorld.java
 * config : Beans.xml
-* use : MainApp.java
 
 * HelloWorld.java
 
 ```java
-package okdevtvspring;
+package com.okdevtv.okspring;
 
 public class HelloWorld {
 	private String message;
@@ -53,7 +53,7 @@ public class HelloWorld {
 * MainApp.java
 
 ```java
-package okdevtvspring;
+package com.okdevtv.okspring;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -73,13 +73,13 @@ public class MainApp {
 <?xml version = "1.0" encoding = "UTF-8"?>
 
 <beans xmlns="http://www.springframework.org/schema/beans"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
-	<bean id="helloWorld" class="okdevtvspring.HelloWorld">
-		<property name="message" value="# Hello World!" />
-	</bean>
+    <bean id="helloWorld" class="com.okdevtv.okspring.HelloWorld">
+        <property name="message" value="# Hello World!" />
+    </bean>
 
 </beans>
 ```
@@ -87,19 +87,18 @@ public class MainApp {
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.okdevtv</groupId>
-	<artifactId>mvc</artifactId>
+	<artifactId>okspring</artifactId>
 	<name>okspring</name>
-	<packaging>war</packaging>
 	<version>1.0.0-BUILD-SNAPSHOT</version>
 	<properties>
-		<java-version>1.6</java-version>
+		<java-version>1.8</java-version>
 		<org.springframework-version>3.1.1.RELEASE</org.springframework-version>
-		<org.aspectj-version>1.6.10</org.aspectj-version>
-		<org.slf4j-version>1.6.6</org.slf4j-version>
+		<failOnMissingWebXml>false</failOnMissingWebXml>
 	</properties>
 	<dependencies>
 		<!-- Spring -->
@@ -120,6 +119,7 @@ public class MainApp {
 * global-session
 
 ### example
+
 ```xml
 <bean id="..." class="..." scope="singleton">
 </bean>
@@ -129,6 +129,7 @@ public class MainApp {
 * Initialization callbacks
   * init-method="init"
   * InitializingBean interface
+
 ```java
 public class ExampleBean implements InitializingBean {
        public void afterPropertiesSet() {
@@ -139,6 +140,7 @@ public class ExampleBean implements InitializingBean {
 * Destruction callbacks
   * destroy-method="destroy"
   * DisposableBean interface
+  
 ```java
 public class ExampleBean implements DisposableBean {
         public void destroy() {
