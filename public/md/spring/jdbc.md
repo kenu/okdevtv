@@ -19,4 +19,6 @@
 
 
 ## ref
-https://docs.spring.io/spring-framework/docs/current/reference/html/data-access.html#jdbc
+* https://docs.spring.io/spring-framework/docs/current/reference/html/data-access.html#jdbc
+* https://spring.io/guides/gs/relational-data-access/
+* https://spring.io/guides/gs/accessing-data-mysql/
