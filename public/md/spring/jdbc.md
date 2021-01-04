@@ -3,7 +3,7 @@
 * Table 19.1. Spring JDBC - who does what?
 
 |Action |Spring	|You|
-|---|---|---|
+|---|:---:|:---:|
 |Define connection parameters.| | X|
 |Open the connection.|  X| |
 |Specify the SQL statement. | |X |
