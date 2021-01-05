@@ -1,5 +1,5 @@
 # Spring JDBC
-* `JDBCTemplate`
+* `JdbcTemplate`
 * Table 19.1. Spring JDBC - who does what?
 
 |Action |Spring	|You|
