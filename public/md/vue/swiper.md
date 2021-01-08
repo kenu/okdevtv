@@ -5,37 +5,53 @@
 
 ## npm install
 ```
-npm i -S swiper vue-awesome-swiper
+npm i -S swiper@5 vue-awesome-swiper
 ```
+* swiper@6 에서 많이 변경됨 #주의필요
 
 ```
 <template>
   <div>
-    <swiper ref="mySwiper">
-      <swiper-slide>Slide 1</swiper-slide>
-      <swiper-slide>Slide 2</swiper-slide>
-      <swiper-slide>Slide 3</swiper-slide>
-      <swiper-slide>Slide 4</swiper-slide>
-      <swiper-slide>Slide 5</swiper-slide>
-    </swiper>
+    <div v-swiper:mySwiper="swiperOptions">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">Slide 1</div>
+        <div class="swiper-slide">Slide 2</div>
+      </div>
+      <!-- If we need pagination -->
+      <div class="swiper-pagination"></div>
+    </div>
   </div>
 </template>
+
 <script>
-import { Swiper, SwiperSlide, directive } from "vue-awesome-swiper";
-import "swiper/swiper-bundle.css"; // >= Swiper 6.*
+import { directive } from 'vue-awesome-swiper';
+import 'swiper/css/swiper.css'; // <= Swiper 5.*
 
 export default {
-  name: "HelloWorld",
+  name: 'SwiperTest',
+  data() {
+    return {
+      swiperOptions: {
+        pagination: {
+          el: '.swiper-pagination',
+        },
+      },
+    };
+  },
   props: {
     msg: String,
-  },
-  components: {
-    Swiper,
-    SwiperSlide,
   },
   directives: {
     swiper: directive,
   },
 };
 </script>
+
+<style scoped>
+.swiper-container {
+  width: 600px;
+  height: 300px;
+}
+</style>
 ```
