@@ -9,7 +9,7 @@ module.exports = {
     callback_url: "http://localhost:3000/auth/facebook/callback",
     use_database: false,
     host: "localhost",
-    username: "root",
-    password: "",
-    database: ""
+    username: process.env.DB_USER,
+    password: process.env.DB_PASS,
+    database: process.env.DB_NAME
 };
