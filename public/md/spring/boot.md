@@ -147,3 +147,6 @@ sudo rm /etc/init.d/myapp
     <version>1.5.6.RELEASE</version>
 </parent>
 ```
+
+## related
+* [Spring Boot 2](/mib/spring/boot2)
