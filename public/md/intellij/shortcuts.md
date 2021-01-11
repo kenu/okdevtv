@@ -19,12 +19,12 @@
 |다음 작업 위치(반대) | Ctrl + Alt + → | | Alt + → | Shift + Ctrl + - |
 |코드 한 줄 혹은 선택 영역을 한 줄 위로 이동| Ctrl + Shift + ↑ | Alt + ↑ | Alt + ↑ | Alt + ↑ |
 |코드 한 줄 혹은 선택 영역을 한 줄 아래로 이동 | Ctrl + Shift + ↓ | Alt + ↓ | Alt + ↓ |  Alt + ↓ |
-|코드 한 줄 혹은 선택 영역 복사 | Ctrl + D | Ctrl + C | Ctrl + D | |
+|코드 한 줄 혹은 선택 영역 복사 | Ctrl + D | Ctrl + C<br>Alt + Shift + ↓ | Ctrl + D | Ctrl + C |
 |**기능** |**IntelliJ**|**VSCode** |**Eclipse** |**VS** |
 |도구(메뉴나 다이얼로그 항목 등) 찾기<br>Search Action (Quick Access)| Ctrl + Shift + A | Ctrl + Shift + P | Ctrl + 3 | Ctrl + Q |
 |Search everywhere (Quick Search Plugin) | Double Shift | | Ctrl + Shift + L | |
 |View Hierarchy (Show Hierarchy)| Ctrl + H | | Ctrl + T | |
-|Find Usages (Find References)| Alt + F7 | | Ctrl + Shift + G| |
+|Find Usages (Find References)| Alt + F7 | | Ctrl + Shift + G | |
 |Find | Ctrl + F | Ctrl + F | Ctrl + F | |
 |Find next | F3 | | Ctrl + K | |
 |Find previous | Shift + F3 | | Ctrl + Shift + K | |
