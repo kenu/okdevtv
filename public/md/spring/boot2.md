@@ -11,6 +11,12 @@
 * Functional APIs
 * Kotlin Support
 
+## IntelliJ Devtools Reload
+* Compiler option
+  * check `Build project automatically`
+* Registry option
+  * check `compiler.automake.allow.when.app.running`
+
 ## related
 * [logging](/mib/spring/logging) : 로그 레벨 조정
 * [multipart](/mib/spring/multipart) : 파일 업로드
