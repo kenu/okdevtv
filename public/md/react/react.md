@@ -75,6 +75,9 @@ var Timer = React.createClass({
 ReactDOM.render(<Timer />, mountNode);
 ```
 
+## related
+* [mobx](/mib/react/mobx)
+* [redux](/mib/react/redux)
 
 ## 참고
 * inflearn react 강좌
