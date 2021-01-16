@@ -1,0 +1,25 @@
+# Spring Boot Devtools
+* 개발할 때 자동 재시작
+* 브라우저 라이브 새로고침
+* 기타 개발에 필요한 기능 지원
+
+## Install
+```xml
+<dependencies>
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-devtools</artifactId>
+        <optional>true</optional>
+    </dependency>
+</dependencies>
+```
+
+## IntelliJ Devtools Reload
+* Compiler option
+  * check `Build project automatically`
+* Registry option
+  * check `compiler.automake.allow.when.app.running`
+
+## ref
+* https://docs.spring.io/spring-boot/docs/current/reference/html/using-spring-boot.html#using-boot-devtools
+
