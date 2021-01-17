@@ -14,6 +14,10 @@
 </dependencies>
 ```
 
+## Chrome Extention
+* Live Reload
+  * https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei?hl=en
+
 ## IntelliJ Devtools Reload
 * Compiler option
   * check `Build project automatically`
@@ -22,4 +26,5 @@
 
 ## ref
 * https://docs.spring.io/spring-boot/docs/current/reference/html/using-spring-boot.html#using-boot-devtools
-
+* Spring boot + LiveReload
+  * https://gwonsungjun.github.io/articles/2018-08/springbootAutoreload
