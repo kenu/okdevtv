@@ -15,6 +15,8 @@
 |Handle transactions. |X | |
 |Close the connection, statement and resultset. | X | &nbsp; |
 
+## Transactional
+* @Transactional
 ## Sample
 
 
@@ -22,3 +24,4 @@
 * https://docs.spring.io/spring-framework/docs/current/reference/html/data-access.html#jdbc
 * https://spring.io/guides/gs/relational-data-access/
 * https://spring.io/guides/gs/accessing-data-mysql/
+* https://spring.io/guides/gs/managing-transactions/
