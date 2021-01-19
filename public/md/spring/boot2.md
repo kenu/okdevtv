@@ -16,4 +16,5 @@
 * [multipart](/mib/spring/multipart) : 파일 업로드
 * [security](/mib/spring/security) : 스프링 시큐리티
 * [devtools](/mib/spring/devtools) : 스프링 부트 데브툴
+* [cors](/mib/spring/cors) : 스프링 부트 CORS
 * [jsp](/mib/spring/jsp) : 스프링 부트 JSP
