@@ -11,6 +11,12 @@
 * Functional APIs
 * Kotlin Support
 
+## argument
+* Spring Boot 2 `-Dspring-boot.run.arguments`
+```
+mvn spring-boot:run -Dspring-boot.run.arguments=--server.port=9003
+```
+
 ## related
 * [logging](/mib/spring/logging) : 로그 레벨 조정
 * [multipart](/mib/spring/multipart) : 파일 업로드
