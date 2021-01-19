@@ -36,6 +36,7 @@
 ## 크기
 * 16px 12pt 1.0em 100%
 *  8px  6pt 0.5em  50%
+*  1vh 1% of viewport height
 
 ## 텍스트
 * font-weight: bold italic;
