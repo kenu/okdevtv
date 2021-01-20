@@ -75,6 +75,9 @@ var Timer = React.createClass({
 ReactDOM.render(<Timer />, mountNode);
 ```
 
+## React Developer Tools
+* https://reactjs.org/blog/2015/09/02/new-react-developer-tools.html#installation
+
 ## related
 * [mobx](/mib/react/mobx)
 * [redux](/mib/react/redux)
