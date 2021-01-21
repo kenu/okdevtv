@@ -57,6 +57,11 @@ BUILD SUCCESSFUL in 4s
 1 actionable task: 1 executed
 ```
 
+## Dependency scope
+* `implementation` : compile
+* `testImplementation` : test
+* `compileOnly` : provided
+
 ## gradle wrapper
 * for those who don't have installed gradle
 
@@ -73,8 +78,8 @@ gradle wrapper
 │   └── wrapper
 │       ├── gradle-wrapper.jar
 │       └── gradle-wrapper.properties
-├── gradlew          
-└── gradlew.bat      
+├── gradlew
+└── gradlew.bat
 ```
 
 ## Simple task
