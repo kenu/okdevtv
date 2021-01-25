@@ -27,3 +27,4 @@ mvn spring-boot:run -Dspring-boot.run.arguments=--server.port=9003
 * [jsp](/mib/spring/jsp) : 스프링 부트 JSP
 * [docker](/mib/docker) : Docker
   * https://spring.io/guides/gs/spring-boot-docker/
+* [starter](/mib/spring/starter) : 스프링 부트 스타터 종류
