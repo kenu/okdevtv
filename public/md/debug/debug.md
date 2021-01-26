@@ -10,3 +10,6 @@
 
 ## debugging mode
 <img src="images/debug.jpg" alt="debugging mode" />
+
+## related
+* [Java Debug](/mib/java/debug)
