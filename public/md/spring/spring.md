@@ -141,7 +141,7 @@ public class ExampleBean implements InitializingBean {
 * Destruction callbacks
   * destroy-method="destroy"
   * DisposableBean interface
-  
+
 ```java
 public class ExampleBean implements DisposableBean {
         public void destroy() {
@@ -150,15 +150,17 @@ public class ExampleBean implements DisposableBean {
 }
 ```
 
+# related
+* [boot](/mib/spring/boot): 스프링 부트
+* [boot2](/mib/spring/boot2): 스프링 부트2
+* [utils](/mib/spring/utils): 스프링 Utils
 
 ## 참고
 
 * Spring 동영상 강의
   * http://bit.ly/okdevtv-spring
-
 * Spring Guides
   * http://spring.io/guides
   * [가이드 목록](https://okky.kr/article/619099)
-
 * 스프링 프레임워크 레퍼런스 번역
   * http://blog.outsider.ne.kr/tag/스프링%20프레임워크

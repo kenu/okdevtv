@@ -18,15 +18,16 @@ mvn spring-boot:run -Dspring-boot.run.arguments=--server.port=9003
 ```
 
 ## related
-* [logging](/mib/spring/logging) : 로그 레벨 조정
-* [multipart](/mib/spring/multipart) : 파일 업로드
-* [security](/mib/spring/security) : 스프링 시큐리티
-* [devtools](/mib/spring/devtools) : 스프링 부트 데브툴
-* [cache](/mib/spring/cache) : 스프링 부트 Cache
-* [cors](/mib/spring/cors) : 스프링 부트 CORS
-* [jsp](/mib/spring/jsp) : 스프링 부트 JSP
-* [docker](/mib/docker) : Docker
+* [logging](/mib/spring/logging): 로그 레벨 조정
+* [multipart](/mib/spring/multipart): 파일 업로드
+* [security](/mib/spring/security): 스프링 시큐리티
+* [devtools](/mib/spring/devtools): 스프링 부트 데브툴
+* [cache](/mib/spring/cache): 스프링 부트 Cache
+* [cors](/mib/spring/cors): 스프링 부트 CORS
+* [jsp](/mib/spring/jsp): 스프링 부트 JSP
+* [docker](/mib/docker): Docker
   * https://spring.io/guides/gs/spring-boot-docker/
-* [starter](/mib/spring/starter) : 스프링 부트 스타터 종류
-* [websocket](/mib/spring/websocket) : 스프링 부트 웹소켓
-* [mybatis](/mib/spring/mybatis) : 스프링 부트 MyBatis
+* [starter](/mib/spring/starter): 스프링 부트 스타터 종류
+* [websocket](/mib/spring/websocket): 스프링 부트 웹소켓
+* [mybatis](/mib/spring/mybatis): 스프링 부트 MyBatis
+* [utils](/mib/spring/utils): 스프링 Utils
