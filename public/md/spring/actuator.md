@@ -1,9 +1,12 @@
 # Spring Boot Actuator
 * 운영을 위한 기능 추가
 * `/actuator/health` 등
+* JMX는 기본적으로 모두 enabled
+* HTTP는 `health`, `info` 만 열림
+* `/actuator`는 가능한 기능 목록 조회
 
 ## 설정
-* `spring-boot-starter-actuator` 추가
+* `pom.xml` 또는 `build.gradle`에 `spring-boot-starter-actuator` 추가
 * `application.properties`
 
 ```
