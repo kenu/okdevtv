@@ -79,7 +79,26 @@ public String checkPersonInfo(@Valid PersonForm personForm, BindingResult bindin
 </form>
 ```
 
+## Validation Annotations JSR380
+* `@NotNull`
+* `@AssertTrue`
+* `@Size`
+* `@Min`
+* `@Max`
+* `@Email`
+* `@NotEmpty`: not null, not empty of String, Collection, Map or Array values
+* `@NotBlank`: not null or no whitespace
+* `@Positive`, `@PositiveOrZero`
+* `@Negative`, `@NegativeOrZero`
+* `@Past`, `@PastOrPresent`: date value
+* `@Future`, `@FutureOrPresent`
+
+```
+List<@NotBlank String> preferences;
+```
+
 ## ref
+* https://www.baeldung.com/javax-validation
 * https://spring.io/guides/gs/handling-form-submission/
 * https://spring.io/guides/gs/validating-form-input/
 * Customize Validation Error Message
