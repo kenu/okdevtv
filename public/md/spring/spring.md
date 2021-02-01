@@ -151,7 +151,7 @@ public class ExampleBean implements DisposableBean {
 ```
 
 # related
-* [ioc](/mib/spring/ico): IoC Container
+* [ioc](/mib/spring/ioc): IoC Container
 * [bean](/mib/spring/bean): Bean
 * [boot](/mib/spring/boot): 스프링 부트
 * [boot2](/mib/spring/boot2): 스프링 부트2
