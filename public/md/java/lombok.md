@@ -13,6 +13,13 @@
    </dependency>
 ```
 
+## Features
+@Getter
+@Setter
+@ToString
+@Cleanup
+@NotNull
+
 ## IDE install
 * IntelliJ - Plugins
 * Eclipse(STS) - run lombok.jar
