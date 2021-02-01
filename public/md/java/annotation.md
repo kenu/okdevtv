@@ -75,6 +75,11 @@ void monitorTemperature() throws
 ```java
 package okdevtv;
 
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
+
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.METHOD)
 public @interface Name {
@@ -93,7 +98,7 @@ public class Z {
 
     @Name(myName = "Kenu")
     public void something() {
-
+        System.out.println("Do something");
     }
 }
 ```
@@ -101,17 +106,30 @@ public class Z {
 ```java
 package okdevtv.java;
 
-import spring.Name;
+import okdevtv.Name;
+
+import java.lang.annotation.Annotation;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 
 public class NameTest {
-	public static void main(String[] args) throws NoSuchMethodException, SecurityException {
-		final Method method = Z.class.getMethod("something");
-		if (method.isAnnotationPresent(Name.class)) {
-		    final Annotation annotation = method.getAnnotation(Name.class);
-		    final Name name = (Name) annotation;
-		    System.out.println(name.myName()); // Prints George
-		}
-	}
+    public static void main(String[] args) throws NoSuchMethodException, SecurityException {
+        final Method method = Z.class.getMethod("something");
+        if (method.isAnnotationPresent(Name.class)) {
+            final Annotation annotation = method.getAnnotation(Name.class);
+            final Name name = (Name) annotation;
+            System.out.println(name.myName()); // Prints Kenu
+        }
+        Z z = new Z();
+        try {
+            method.invoke(z);
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        } catch (InvocationTargetException e) {
+            e.printStackTrace();
+        }
+        z.something();
+    }
 }
 ```
 
@@ -121,3 +139,4 @@ public class NameTest {
 * http://docs.oracle.com/javase/1.5.0/docs/guide/language/annotations.html
 * https://docs.oracle.com/javase/tutorial/java/annotations/basics.html
 * https://www.mkyong.com/java/java-custom-annotations-example/
+* https://www.baeldung.com/java-method-reflection
