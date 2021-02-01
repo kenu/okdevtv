@@ -14,8 +14,8 @@
 ## 필요조건
 
 * [Java](/mib/java)
-* [JSP](/jsp.html), 웹 개발을 할 경우
-
+* [Thymeleaf](/mib/spring/thymeleaf), 웹 개발을 할 경우
+* [JSP](/mib/spring/jsp), 웹 개발을 할 경우
 ## 기본 개념
 
 * IoC/DI Inversion of Control/Dependency Injection
@@ -38,15 +38,15 @@
 package com.okdevtv.okspring;
 
 public class HelloWorld {
-    private String message;
+  private String message;
 
-    public void setMessage(String message) {
-        this.message = message;
-    }
+  public void setMessage(String message) {
+    this.message = message;
+  }
 
-    public String getMessage() {
-    	return this.message;
-    }
+  public String getMessage() {
+    return this.message;
+  }
 }
 ```
 
@@ -133,9 +133,9 @@ public class MainApp {
 
 ```java
 public class ExampleBean implements InitializingBean {
-       public void afterPropertiesSet() {
-           // do some initialization work
-       }
+  public void afterPropertiesSet() {
+      // do some initialization work
+  }
 }
 ```
 * Destruction callbacks
@@ -144,9 +144,9 @@ public class ExampleBean implements InitializingBean {
 
 ```java
 public class ExampleBean implements DisposableBean {
-        public void destroy() {
-           System.out.println("destroy");
-        }
+  public void destroy() {
+      System.out.println("destroy");
+  }
 }
 ```
 
