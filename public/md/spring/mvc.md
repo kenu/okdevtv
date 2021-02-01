@@ -1,8 +1,9 @@
 # Spring Web MVC framework
 * Model-View-Controller (MVC) architecture
 * Model : POJO
-* View : Rendering HTML, UI
+* View : Rendering HTML(UI), JSON(Data)
 * Controller : Handle request and build model and pass to view
+* `WebApplicationContext extends ApplicationContext`
 
 ## DispatcherServlet
 * http request
@@ -12,7 +13,13 @@
 * View
 * http response
 
-* `WebApplicationContext extends ApplicationContext`
+
+## `@Controller` vs `@RestController`
+* `@Controller`는 주로 Web 페이지의 컨트롤러에서 사용
+* Web 페이지용 컨트롤러는 템플릿 엔진 View나 JSP로 전환 응답의 HTML을 생성하기 때문에 기본적으로 메소드의 반환값은 View 전환 대상을 지정하는 데 사용
+* `@RestController`는 Json이나 XML 등을 반환 WebAPI 용 컨트롤러로 사용
+* View로 전환하지 않기 때문에 메소드의 반환값은 응답(response)의 내용(content) 표시
+  * https://araikuma.tistory.com/14
 
 ## web.xml
 
@@ -57,7 +64,7 @@
 <beans xmlns = "http://www.springframework.org/schema/beans"
    xmlns:context = "http://www.springframework.org/schema/context"
    xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
-   xsi:schemaLocation = "http://www.springframework.org/schema/beans     
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
    http://www.springframework.org/schema/context
    http://www.springframework.org/schema/context/spring-context-3.0.xsd">
@@ -102,6 +109,8 @@ public class HelloController {
 </html>
 ```
 
+## related
+* [URL Mapping](/mib/spring/mapping)
 
 ## ref
 * https://www.tutorialspoint.com/spring/spring_web_mvc_framework.htm
