@@ -1,5 +1,8 @@
 # Spring Boot Validation
 * JSR 380: Bean Validation 2.0
+  * https://beanvalidation.org/2.0/spec/
+* JSR 303: Bean Validation 1.0
+  * https://beanvalidation.org/1.0/spec/
 
 ## Form
 * Controller

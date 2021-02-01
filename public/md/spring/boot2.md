@@ -34,3 +34,4 @@ mvn spring-boot:run -Dspring-boot.run.arguments=--server.port=9003
 * [actuator](/mib/spring/actuator): 스프링 부트 Actuator
 * [test](/mib/spring/test): 스프링 테스트 자동화
 * [validation](/mib/spring/validation): 스프링 유효성 검증
+* [yaml](/mib/spring/yaml): YAML 설정
