@@ -110,6 +110,17 @@ logging:
     root: error
 ```
 
+## Group
+* group으로 여러 파일 동시에 로딩 가능
+
+```yaml
+spring:
+  profiles:
+    group:
+      - dev
+      - qa
+```
+
 ## 주의
 * @PropertySource 어노테이션으로 프로퍼티 값을 불러 올 수 없다.
 * 해당 어노테이션을 사용 하려면 프로퍼티 파일을 사용 필요
