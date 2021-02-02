@@ -9,3 +9,4 @@
 
 ## ref
 * https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#boot-features-logging
+* https://www.baeldung.com/spring-boot-logging
