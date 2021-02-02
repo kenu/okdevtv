@@ -1,5 +1,5 @@
 # Spring Boot JSP
-* Thymeleaf 권하지만, 레거시 유지보수, 운영시 필요
+* [Thymeleaf](/mib/spring/thymeleaf) 권하지만, 레거시 유지보수, 운영시 필요
 
 ## pom.xml
 ```xml
