@@ -31,7 +31,15 @@ GRANT ALL PRIVILEGES ON devdb.* TO devuser@localhost
 IDENTIFIED BY 'devpass' WITH GRANT OPTION;
 ```
 
+* MySQL 8+
+
+```
+create user 'devuser'@'localhost' identified by 'devpass';
+grant all on devdb.* to 'devuser'@'localhost';
+```
+
 * Read only account
+
 ```
 GRANT SELECT, SHOW VIEW ON devdb.* TO devuser2@localhost
 IDENTIFIED BY 'devpass';
@@ -64,7 +72,7 @@ show processlist;
 
 ## Table stats
 ```sql
-select TABLE_NAME, TABLE_ROWS 
+select TABLE_NAME, TABLE_ROWS
 from information_schema.tables
 order by 2 desc;
 ```
