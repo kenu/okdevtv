@@ -35,10 +35,57 @@ dependencies {
 * `./mvnw test` or `./gradlew test`
 
 ## Smoke Test
+```java
+@SpringBootTest
+public class SmokeTest {
+
+	@Autowired
+	private HomeController controller;
+
+	@Test
+	public void contextLoads() throws Exception {
+		assertThat(controller).isNotNull();
+	}
+}
+```
 
 ## Http Request Test
+```java
+@SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
+public class HttpRequestTest {
+
+	@LocalServerPort
+	private int port;
+
+	@Autowired
+	private TestRestTemplate restTemplate;
+
+	@Test
+	public void greetingShouldReturnDefaultMessage() throws Exception {
+		assertThat(this.restTemplate.getForObject("http://localhost:" + port + "/",
+				String.class)).contains("Hello, World");
+	}
+}
+```
 
 ## Web MVC Test
+```java
+@SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
+public class HttpRequestTest {
+
+	@LocalServerPort
+	private int port;
+
+	@Autowired
+	private TestRestTemplate restTemplate;
+
+	@Test
+	public void greetingShouldReturnDefaultMessage() throws Exception {
+		assertThat(this.restTemplate.getForObject("http://localhost:" + port + "/",
+				String.class)).contains("Hello, World");
+	}
+}
+```
 
 ## ref
 * https://spring.io/guides/gs/testing-web/
