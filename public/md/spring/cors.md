@@ -6,12 +6,30 @@
 ### Controller
   * `@CrossOrigin(origins = "http://localhost:8080")`
 
+```java
+@RequestMapping("/somePath")
+@CrossOrigin(origins = "*", allowedHeaders = "*")
+public class SomeController {}
+```
+
+```java
+@RestController
+@RequestMapping("/somePath")
+public class SomeController {
+
+	@CrossOrigin(origins="*")
+	@DeleteMapping(value = "/{key}",method = RequestMethod.DELETE)
+	public Object delete(@PathVariable String key) {}
+
+}
+```
+
 ### Global
   * java
   * properties
   * YAML
 
-```
+```java
   @Bean
   public WebMvcConfigurer corsConfigurer() {
     return new WebMvcConfigurer() {
@@ -23,13 +41,14 @@
   }
 ```
 
-```
+```java
 @Configuration
 public class WebConfig implements WebMvcConfigurer {
   @Override
   public void addCorsMappings(CorsRegistry registry) {
     registry.addMapping("/**")
-      .allowedOrigins("http://localhost:8080", "http://localhost:8090");
+      .allowedOrigins("http://localhost:8080", "http://localhost:8090")
+			.maxAge(3000);
   }
 }
 ```
@@ -38,6 +57,7 @@ public class WebConfig implements WebMvcConfigurer {
 * `.addMapping("/**")`: 패턴
 * `.allowedOrigins()`: 허용 도메인
 * `.allowedOrigins("*")`: 모든 도메인 허용
+* `.maxAge()`: preflight 캐시 시간
 
 ### SpringSecurity
 
