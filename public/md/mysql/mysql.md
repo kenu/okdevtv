@@ -5,9 +5,32 @@
 
 ### Mac
 ```
-# mysql 설치 # 아래 삭제 참고
+# mysql 설치
+# (이전에 설치 되어 있다면 아래 삭제 참고)
 brew install mysql
+```
 
+<pre style="font-size: 8px">
+==> Caveats
+We've installed your MySQL database without a root password. To secure it run:
+    mysql_secure_installation
+
+MySQL is configured to only allow connections from localhost by default
+
+To connect run:
+    mysql -uroot
+
+To have launchd start mysql now and restart at login:
+  brew services start mysql
+Or, if you don't want/need a background service you can just run:
+  mysql.server start
+==> Summary
+🍺  /usr/local/Cellar/mysql/8.0.23: 298 files, 297.8MB
+➜  var mysql.server start
+Starting MySQL
+</pre>
+
+```
 # 서버 시작
 mysql.server start
 
@@ -49,6 +72,9 @@ exit;
 #### 삭제
 
 ```
+# mysql 종료
+mysql.server stop
+
 # mysql 서버 삭제
 brew uninstall mysql
 Uninstalling /usr/local/Cellar/mysql/8.0.23... (298 files, 297.8MB)
