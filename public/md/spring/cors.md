@@ -3,28 +3,45 @@
 * 도메인이 다를 때 설정
 
 ## Code
-* Controller
+### Controller
   * `@CrossOrigin(origins = "http://localhost:8080")`
 
-* Global
+### Global
   * java
   * properties
   * YAML
 
 ```
-	@Bean
-	public WebMvcConfigurer corsConfigurer() {
-		return new WebMvcConfigurer() {
-			@Override
-			public void addCorsMappings(CorsRegistry registry) {
-				registry.addMapping("/greeting-javaconfig").allowedOrigins("http://localhost:8080");
-			}
-		};
-	}
+  @Bean
+  public WebMvcConfigurer corsConfigurer() {
+    return new WebMvcConfigurer() {
+      @Override
+      public void addCorsMappings(CorsRegistry registry) {
+        registry.addMapping("/greeting-javaconfig").allowedOrigins("http://localhost:8080");
+      }
+    };
+  }
 ```
 
-* SpringSecurity
+```
+@Configuration
+public class WebConfig implements WebMvcConfigurer {
+  @Override
+  public void addCorsMappings(CorsRegistry registry) {
+    registry.addMapping("/**")
+      .allowedOrigins("http://localhost:8080", "http://localhost:8090");
+  }
+}
+```
+* `WebMvcConfigurer`: 전역 설정
+* `.addCorsMapping()`: CORS 설정 메소드
+* `.addMapping("/**")`: 패턴
+* `.allowedOrigins()`: 허용 도메인
+* `.allowedOrigins("*")`: 모든 도메인 허용
+
+### SpringSecurity
 
 ## ref
 * https://spring.io/guides/gs/rest-service-cors/
 * [CORS](/mib/cors)
+* https://dev-pengun.tistory.com/entry/Spring-Boot-CORS-설정하기
