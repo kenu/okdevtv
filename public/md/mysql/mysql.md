@@ -41,6 +41,9 @@ grant all on devdb.* to 'devuser'@'localhost';
 
 use devdb;
 show tables;
+
+# 또는 ctrl+D
+exit;
 ```
 
 #### 삭제
