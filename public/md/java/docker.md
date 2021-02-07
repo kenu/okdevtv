@@ -23,8 +23,8 @@ ENTRYPOINT ["java","-jar","/app.jar"]
   * `gradle build`
 2. build docker image
   * `docker build -t kenu/sb-demo`
-  * `kenu`: hub.docker.com account
-  * `sb-demo`: image file name
+    * `kenu`: hub.docker.com account
+    * `sb-demo`: image file name
 3. test image locally
   * `docker run -p 8100:8080`
 4. login and push to https://hub.docker.com
@@ -35,10 +35,18 @@ ENTRYPOINT ["java","-jar","/app.jar"]
   * `sudo yum install docker -y`
   * `sudo systemctl start docker`
 7. run docker image
-  * `sudo docker run -p 80:8080 kenu/sb-demo &`
+  * `sudo docker run -p 8080:8080 kenu/sb-demo`
+  * `sudo docker run -d -p 8080:8080 kenu/sb-demo`
 8. stop docker image
   * `docker ps`
-  * ``docker stop `docker ps -q\` ``
+  * ``docker stop `docker ps -q` ``
+
+## With Jenkins
+```
+sudo docker stop `sudo docker ps -q`
+sudo docker rmi kenu/sb-demo -f
+sudo docker run -d -p 8080:8080 kenu/sb-demo
+```
 
 ## ref
 * https://spring.io/guides/gs/spring-boot-docker/

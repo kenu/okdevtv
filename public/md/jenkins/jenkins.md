@@ -17,7 +17,9 @@ jenkins
 * others
   * download `jenkins.war`
   * run
+
 ```
+wget https://get.jenkins.io/war-stable/2.263.3/jenkins.war
 java -jar jenkins.war --httpPort=9090
 ```
 
