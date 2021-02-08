@@ -44,13 +44,13 @@
 public class LoggingAspect {
     private long startTime;
 
-    @Before("execution(* check*(..))")
+    @Before("execution(* com.example..check*(..))")
     public void onBeforeHandler(JoinPoint joinPoint) {
         startTime = System.nanoTime();
         System.out.println("start");
     }
 
-    @After("execution(* check*(..))")
+    @After("execution(* com.example..check*(..))")
     public void onAfterHandler(JoinPoint joinPoint) {
         long endTime = System.nanoTime();
         System.out.println("elapsed time: " + (endTime - startTime));
