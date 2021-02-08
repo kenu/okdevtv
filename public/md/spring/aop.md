@@ -71,6 +71,24 @@ public class LoggingAspect {
 }
 ```
 
+```java
+@RestController
+public class HotelController {
+
+    @GetMapping("/in")
+    @ResponseBody
+    public String checkIn() {
+        return "check-in";
+    }
+
+    @GetMapping("/out")
+    @ResponseBody
+    public String checkOut() {
+        return "check-in";
+    }
+}
+```
+
 ### Spring Framework 3.x
 * pom.xml
 
