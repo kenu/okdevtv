@@ -69,7 +69,7 @@ export JAVA_HOME="$(/usr/libexec/java_home -v 1.8)"
 * [gradle](/mib/java/gradle)
 * [ant](/mib/java/ant)
 * [lombok](/mib/java/lombok)
-
+* [httpclient](/mib/java/httpclient)
 ## 참고
 * 2시간만에 자바 시작
   * http://www.slideshare.net/kenu/java-in-2-hours
