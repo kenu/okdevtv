@@ -69,6 +69,8 @@ export spring_profiles_active=dev
 @ActiveProfiles("dev")
 ```
 
+## related
+* [환경변수](/mib/env)
 
 ## ref
 * https://www.baeldung.com/spring-profiles
