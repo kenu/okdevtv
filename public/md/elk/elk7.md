@@ -162,7 +162,7 @@ nohup bin/kibana &
 
 ```
 cd ~/local
-wget https://artifacts.elastic.co/downloads/logstash/logstash-7.11.0.tar.gz
+wget https://artifacts.elastic.co/downloads/logstash/logstash-7.11.0-linux-x86_64.tar.gz
 tar xvfz logstash-7.11.0.tar.gz
 ln -s logstash-7.11.0 logstash
 cd logstash
