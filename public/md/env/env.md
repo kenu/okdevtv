@@ -27,10 +27,15 @@
 ```java
 @Value("${REFRESH_TOKEN}")
 private String rToken;
+
+@Value("${spring.datasource.hikari.username}")
+private String username;
 ```
 
 * Properties with default value
+
 ```
+# application.properties
 spring.datasource.hikari.jdbc-url=${JDBC_URL:localhost}
 spring.datasource.hikari.username=${DB_USER:devuser}
 spring.datasource.hikari.password=${DB_PASS:devpass}
