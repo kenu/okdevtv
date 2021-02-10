@@ -22,7 +22,7 @@ sudo vi /etc/yum.repos.d/MariaDB.repo
 ```
 [mariadb]
 name = MariaDB
-baseurl = http://yum.mariadb.org/10.4/centos7-amd64
+baseurl = http://yum.mariadb.org/10.5/centos7-amd64
 gpgkey=https://yum.mariadb.org/RPM-GPG-KEY-MariaDB
 gpgcheck=1
 ```
@@ -90,11 +90,11 @@ default-character-set=utf8mb4
 
 ```
 mkdir local && cd local
-# MariaDB 10.4 required
-wget https://github.com/yona-projects/yona/releases/download/v1.12.0/yona-v1.12.0-bin.zip
+# MariaDB 10.5 required
+wget https://github.com/yona-projects/yona/releases/download/v1.14.0/yona-v1.14.0-bin.zip
 
-unzip yona-v1.12.0-bin.zip
-ln -s yona-1.12.0/ yona
+unzip yona-v1.14.0-bin.zip
+ln -s yona-1.14.0/ yona
 cd yona
 bin/yona # first for unarchive folders
 vi conf/application.conf
@@ -140,7 +140,7 @@ rpm -iv --nodeps lib64boost5-1.39.0-2mdv2010.0.x86_64.rpm
 * 환경변수
 
 ```
-SET YONA_HOME=c:\yona\yona-1.12.0
+SET YONA_HOME=c:\yona\yona-1.14.0
 SET JAVA_OPTS=-Dyona.home=%YONA_HOME% -Dconfig.file=%YONA_HOME%\conf\application.conf -Dlogger.file=%YONA_HOME%\conf\application-logger.xml
 ```
 
