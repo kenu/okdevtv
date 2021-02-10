@@ -36,5 +36,11 @@ spring.datasource.hikari.username=${DB_USER:devuser}
 spring.datasource.hikari.password=${DB_PASS:devpass}
 ```
 
+## Docker env
+```
+docker run -p 8080:8080 -e DB_USER -e DB_PASS -e JDBC_URL kenu/sb-kenu
+```
+* https://docs.docker.com/engine/reference/commandline/run/#set-environment-variables--e---env---env-file
+
 ## related
 * [스프링 프로파일](/mib/spring/profile)
