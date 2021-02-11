@@ -67,6 +67,7 @@ public JdbcBatchItemWriter<Person> writer(DataSource dataSource) {
 
 * Job listener
    * The `JobCompletionNotificationListener` listens for when a job is BatchStatus.COMPLETED and then uses JdbcTemplate to inspect the results.
+
 ```java
 @Component
 public class JobCompletionNotificationListener extends JobExecutionListenerSupport {
