@@ -36,4 +36,5 @@ mvn spring-boot:run -Dspring-boot.run.arguments=--server.port=9003
 * [validation](/mib/spring/validation): 스프링 유효성 검증
 * [yaml](/mib/spring/yaml): YAML 설정
 * [hateoas](/mib/spring/hateoas): HATEOAS
+* [async](/mib/spring/async): 스프링 비동기 메소드
 * [batch](/mib/spring/batch): 스프링 배치
