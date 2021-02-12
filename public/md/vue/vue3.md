@@ -1,5 +1,7 @@
 # Vue 3
 * https://v3.vuejs.org
+* Vite build tool
+  * https://github.com/vitejs/vite
 * TypeScript
 
 ## QuickStart
