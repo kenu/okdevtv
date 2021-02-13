@@ -1,57 +1,71 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>방송 목록 - OKdevTV</title>
-    <meta name="viewport" content="width=device-width, user-scalable=yes" />
-    <link rel="stylesheet" href="/stylesheets/okdevtv-list.css" />
-    <script>
-      let repo = '';
-      function search(evt) {
-        const keyword = evt.currentTarget.value.toLowerCase();
-        if (!repo) {
-          repo = document.querySelectorAll('li');
-        }
-        let allData = repo;
-        const filtered = [...allData].filter(function (e) {
-          const text = e.innerText.toLowerCase();
-          return text.includes(keyword);
-        });
-        let htmlFiltered = '';
-        filtered.forEach(function(e) {
-          htmlFiltered += e.outerHTML;
-        });
-        document.getElementById('list').innerHTML = htmlFiltered;
-      }
 
-      window.onload = function () {
-        const el = document.getElementById('keyword');
-        el.addEventListener('keyup', search);
-      };
-    </script>
-  </head>
-  <body>
-    <h1><%- title %></h1>
-    <p>Welcome to <a href="https://youtube.com/kenuheo"><%= desc %></a></p>
-    <input type="text" id="keyword" placeholder="search keyword" autocomplete="off">
-    <ul id="list">
-      <%
-      let lastOne = '';
-      let css = '';
-      if (!items) {
-        return;
+<head>
+  <title>방송 목록 - OKdevTV</title>
+  <meta name="viewport" content="width=device-width, user-scalable=yes" />
+  <link rel="stylesheet" href="/stylesheets/okdevtv-list.css" />
+  <script>
+    let repo = '';
+    function search(evt) {
+      const keyword = evt.currentTarget.value.toLowerCase();
+      if (!repo) {
+        repo = document.querySelectorAll('li');
       }
-      items.forEach(item => {
-        if (lastOne !== item.date) {
-          css = 'cblack'; lastOne = item.date;
-        } else {
-          css = 'cgrey';
+      let allData = repo;
+      const filtered = [...allData].filter(function (e) {
+        const text = e.innerText.toLowerCase();
+        return text.includes(keyword);
+      });
+      let htmlFiltered = '';
+      filtered.forEach(function (e) {
+        htmlFiltered += e.outerHTML;
+      });
+      document.getElementById('list').innerHTML = htmlFiltered;
+    }
+
+    window.onload = function () {
+      const el = document.getElementById('keyword');
+      el.addEventListener('keyup', search);
+    };
+  </script>
+</head>
+
+<body>
+  <h1>
+    <%- title %>
+  </h1>
+  <nav>
+    <ul>
+      <li><a href="/okdevtv-list?p=Broadcast">재미있는 개발 이야기</a></li>
+      <li><a href="/okdevtv-list?p=CastAll">전체 방송 목록</a></li>
+      <li><a href="/okdevtv-list?p=Courses">커리큘럼</a></li>
+      <!-- <li><a href="/okdevtv-list?p=Article"></a></li> -->
+    </ul>
+  </nav>
+  <p>Welcome to <a href="https://youtube.com/kenuheo">
+      <%= desc %>
+    </a></p>
+  <input type="text" id="keyword" placeholder="search keyword" autocomplete="off">
+  <ul id="list">
+    <% let lastOne='' ; let css='' ; if (!items) { return; } items.forEach(item=> {
+      if (lastOne !== item.date) {
+      css = 'cblack'; lastOne = item.date;
+      } else {
+      css = 'cgrey';
       } %>
       <li>
-        <span class="<%= css %>">[<%= item.date %>]</span> <%= item.topic %>
-        <a href="/f/<%= encodeURIComponent(item.movie) %>" target="_blank" rel="noreferrer">movie</a>
-        <a href="/f/<%= encodeURIComponent(item.slide) %>" target="_blank" rel="noreferrer">slide</a>
+        <span class="<%= css %>">[<%= item.date %>]</span>
+        <%= item.topic %>
+          <% if (item.movie) { %><a href="/f/<%= encodeURIComponent(item.movie) %>" target="_blank"
+              rel="noreferrer">movie</a>
+            <% } %>
+              <% if (item.slide) { %><a href="/f/<%= encodeURIComponent(item.slide) %>" target="_blank"
+                  rel="noreferrer">slide</a>
+                <% } %>
       </li>
       <% }); %>
-    </ul>
-  </body>
+  </ul>
+</body>
+
 </html>

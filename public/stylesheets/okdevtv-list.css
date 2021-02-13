@@ -1,13 +1,19 @@
 body {
   padding: 10px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 14px 'Lucida Grande', Helvetica, Arial, sans-serif;
+}
+
+nav ul li {
+  width: max-content;
+  display: inline-block;
+  margin: 0 20px;
 }
 
 #list {
   padding: 0 8px;
 }
 a {
-  color: #00B7FF;
+  color: #00b7ff;
 }
 .cgrey {
   color: lightgray;
