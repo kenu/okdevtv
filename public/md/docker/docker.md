@@ -179,6 +179,9 @@ docker push shykes/broken-ubuntu
 https://index.docker.io
 ```
 
+## related
+* [docker compose](/mib/docker/compose)
+
 ## ref
 * Docker in 12 minutes
   * https://www.youtube.com/watch?v=YFl2mCHdv24
