@@ -1,5 +1,8 @@
 # Article, journal, blog
 
+## 2021-02
+* [개발팀 체크리스트](/mib/article/devteam)
+
 ## 2020-02
 * [10년만에 SI 일하면서 배운 것들](/mib/article/20200208-sireview)
 * [si manifesto](/mib/article/20200221-si)
