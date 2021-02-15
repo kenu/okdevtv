@@ -26,5 +26,8 @@ java -jar jenkins.war --httpPort=9090
 ## Configure admin
 * copy code and paste it
 
+## related
+* [jenkins-docker](/mib/jenkins/docker)
+
 ## ref
 * http://okjsp.tistory.com/tag/hudson
