@@ -64,6 +64,16 @@ sudo docker-compose down
 sudo docker-compose up -d --force-recreate
 ```
 
+## UI change
+
+```
+sudo docker-compose down
+sudo docker images
+sudo docker rmi 1510c84d373c 555c5ebf5f85
+git pull kenu develop && sudo docker build -f Dockerfile.ui -t openvino/cvat_ui .
+sudo docker-compose up -d --force-recreate
+```
+
 ## ref
 
 - https://github.com/openvinotoolkit/cvat/blob/develop/cvat/apps/documentation/installation.md#advanced-settings
