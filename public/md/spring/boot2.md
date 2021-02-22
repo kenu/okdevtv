@@ -1,22 +1,6 @@
 # Spring Boot 2
 * Youtube 재생목록
   * https://youtube.com/playlist?list=PLDMPhWe3CfpY9idK7tGd8QKr36KBID58P
-## Requirement
-* Java 8+
-* Tomcat 8+
-* Thymeleaf 3
-* Hibernate 5.2
-
-## Spring Framework 5
-* Reactive Spring
-* Functional APIs
-* Kotlin Support
-
-## argument
-* Spring Boot 2 `-Dspring-boot.run.arguments`
-```
-mvn spring-boot:run -Dspring-boot.run.arguments=--server.port=9003
-```
 
 ## related
 * [logging](/mib/spring/logging): 로그 레벨 조정
@@ -39,3 +23,21 @@ mvn spring-boot:run -Dspring-boot.run.arguments=--server.port=9003
 * [hateoas](/mib/spring/hateoas): HATEOAS
 * [async](/mib/spring/async): 스프링 비동기 메소드
 * [batch](/mib/spring/batch): 스프링 배치
+
+## Requirement
+* Java 8+
+* Tomcat 8+
+* Thymeleaf 3
+* Hibernate 5.2
+
+## Spring Framework 5
+* Reactive Spring
+* Functional APIs
+* Kotlin Support
+
+## argument
+* Spring Boot 2 `-Dspring-boot.run.arguments`
+```
+mvn spring-boot:run -Dspring-boot.run.arguments=--server.port=9003
+```
+
