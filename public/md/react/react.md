@@ -36,6 +36,7 @@ ReactDOM.render(<HelloMessage name="John" />, mountNode);
   </body>
 </html>
 ```
+* [run react01.html](/md/react/react01.html)
 
 ## render lifecycle
 * LIFECYCLE METHODS
