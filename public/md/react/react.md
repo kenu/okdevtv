@@ -1,6 +1,6 @@
 # React.js
-
-* https://facebook.github.io/react/
+* A JavaScript library for building user interfaces
+* https://ko.reactjs.org
 
 ```
 var HelloMessage = React.createClass({
