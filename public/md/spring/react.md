@@ -1,6 +1,6 @@
 # Spring Boot + React.js
 * Tutorial https://spring.io/guides/tutorials/react-and-spring-data-rest/
-* Spring Boot REST Data
+* Spring Data REST
 * React.js
 * Single Page Application
 
@@ -33,11 +33,12 @@
   * node.js 빌드 지원
   * 운영으로는 비추천
     * https://github.com/eirslett/frontend-maven-plugin#what-is-this-plugin-meant-to-do
+
 ### React.js
 * `react.js`: UI 개발 자바스크립트 라이브러리
 * `rest.js`: REST call
 * `webpack`: compile JS to bundle
-* `babel`: ES6 -> ES5
+* `babel`: ES6 -> ES5 for browser
 
 ### project package
 * `package.json`: dependency for react.js project
@@ -116,15 +117,28 @@ module.exports = {
 
 ## Part 2
 * `hypermedia`: https://github.com/spring-guides/tut-react-and-spring-data-rest/tree/master/hypermedia
+* If the engine of application state (and hence the API) is not being driven by hypertext, then it cannot be RESTful and cannot be a REST API. - Roy Fielding
+* A key feature of REST is to include links to relevant resources. For example, if you were looking at an order, a RESTful API would include a link to the related customer, links to the catalog of items, and perhaps a link to the store from which the order was placed. In this section, you will introduce paging and see how to also use navigational paging links.
+* `application/hal+json`, Spring Data REST’s default media type
+
+### Paging
+```java
+public interface EmployeeRepository extends PagingAndSortingRepository<Employee, Long> {
+}
+```
 
 ## Part 3
 * `conditional`: https://github.com/spring-guides/tut-react-and-spring-data-rest/tree/master/conditional
+* Record Version, when inserting and updating
+  * `javax.persistence.Version`
 
 ## Part 4
 * `events`: https://github.com/spring-guides/tut-react-and-spring-data-rest/tree/master/events
+* Spring WebSocket
 
 ## Part 5
 * `security`: https://github.com/spring-guides/tut-react-and-spring-data-rest/tree/master/security
+* Spring Security
 
 ## ref
 * https://spring.io/guides/tutorials/react-and-spring-data-rest/
