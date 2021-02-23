@@ -23,6 +23,7 @@
 * [hateoas](/mib/spring/hateoas): HATEOAS
 * [async](/mib/spring/async): 스프링 비동기 메소드
 * [batch](/mib/spring/batch): 스프링 배치
+* [boot + react.js tutorial]: 스프링 부트와 React.js
 
 ## Requirement
 * Java 8+
