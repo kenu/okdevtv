@@ -131,6 +131,15 @@ if __name__ == "__main__":
 * `curl localhost:4000`
 
 ## 업로드 이미지 삭제
+```
+export USERNAME=myuser
+export PASSWORD=mypass
+export ORGANIZATION=myorg (if it's personal, then it's your username)
+export REPOSITORY=myrepo
+export TAG=latest
+
+curl -u $USERNAME:$PASSWORD -X "DELETE" https://cloud.docker.com/v2/repositories/$ORGANIZATION/$REPOSITORY/tags/$TAG/
+```
 
 ## 네트워크
 * https://docs.docker.com/engine/tutorials/networkingcontainers/
@@ -151,6 +160,11 @@ docker ps
 
 * docker-compose 설치
   * https://docs.docker.com/compose/install/
+
+## Cases
+* copy file
+  * `docker cp d362659da5fc:/opt/app/app.log .`
+    * d362659da5fc: container id
 
 ## 참고
 
@@ -184,6 +198,8 @@ https://index.docker.io
 * [docker mysql](/mib/docker/mysql)
 
 ## ref
+* How to remove docker images containers and volumes
+  * https://www.digitalocean.com/community/tutorials/how-to-remove-docker-images-containers-and-volumes
 * Docker in 12 minutes
   * https://www.youtube.com/watch?v=YFl2mCHdv24
 * Getting Started for non-technical
