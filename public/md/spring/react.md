@@ -193,18 +193,455 @@ public interface EmployeeRepository extends PagingAndSortingRepository<Employee,
 }
 ```
 
+```
+$ curl "localhost:8080/api/employees?size=2"
+{
+  "_links" : {
+    "first" : {
+      "href" : "http://localhost:8080/api/employees?page=0&size=2"
+    },
+    "self" : {
+      "href" : "http://localhost:8080/api/employees"
+    },
+    "next" : {
+      "href" : "http://localhost:8080/api/employees?page=1&size=2"
+    },
+    "last" : {
+      "href" : "http://localhost:8080/api/employees?page=2&size=2"
+    }
+  },
+  "_embedded" : {
+    "employees" : [ {
+      "firstName" : "Frodo",
+      "lastName" : "Baggins",
+      "description" : "ring bearer",
+      "_links" : {
+        "self" : {
+          "href" : "http://localhost:8080/api/employees/1"
+        }
+      }
+    }, {
+      "firstName" : "Bilbo",
+      "lastName" : "Baggins",
+      "description" : "burglar",
+      "_links" : {
+        "self" : {
+          "href" : "http://localhost:8080/api/employees/2"
+        }
+      }
+    } ]
+  },
+  "page" : {
+    "size" : 2,
+    "totalElements" : 6,
+    "totalPages" : 3,
+    "number" : 0
+  }
+}
+```
+
+* default size: 20
+* `first`, `next`, `last`
+* `next` data
+
+```
+$ curl "http://localhost:8080/api/employees?page=1&size=2"
+{
+  "_links" : {
+    "first" : {
+      "href" : "http://localhost:8080/api/employees?page=0&size=2"
+    },
+    "prev" : {
+      "href" : "http://localhost:8080/api/employees?page=0&size=2"
+    },
+    "self" : {
+      "href" : "http://localhost:8080/api/employees"
+    },
+    "next" : {
+      "href" : "http://localhost:8080/api/employees?page=2&size=2"
+    },
+    "last" : {
+      "href" : "http://localhost:8080/api/employees?page=2&size=2"
+    }
+  },
+...
+```
+
+* `curl http://localhost:8080/api/profile/employees -H "Accept:application/schema+json"`
+
+```
+{
+  "title" : "Employee",
+  "properties" : {
+    "firstName" : {
+      "title" : "First name",
+      "readOnly" : false,
+      "type" : "string"
+    },
+    "lastName" : {
+      "title" : "Last name",
+      "readOnly" : false,
+      "type" : "string"
+    },
+    "description" : {
+      "title" : "Description",
+      "readOnly" : false,
+      "type" : "string"
+    }
+  },
+  "definitions" : { },
+  "type" : "object",
+  "$schema" : "https://json-schema.org/draft-04/schema#"
+}
+```
+
+### Delete
+```js
+class Employee extends React.Component {
+
+	constructor(props) {
+		super(props);
+		this.handleDelete = this.handleDelete.bind(this);
+	}
+
+	handleDelete() {
+		this.props.onDelete(this.props.employee);
+	}
+
+	render() {
+		return (
+			<tr>
+				<td>{this.props.employee.firstName}</td>
+				<td>{this.props.employee.lastName}</td>
+				<td>{this.props.employee.description}</td>
+				<td>
+					<button onClick={this.handleDelete}>Delete</button>
+				</td>
+			</tr>
+		)
+	}
+}
+```
+
+```js
+onDelete(employee) {
+	client({method: 'DELETE', path: employee._links.self.href}).done(response => {
+		this.loadFromServer(this.state.pageSize);
+	});
+}
+```
+
+### Page Size
+```js
+<input ref="pageSize" defaultValue={this.props.pageSize} onInput={this.handleInput}/>
+```
+* `ref="pageSize"`, `this.refs.pageSize`
+
+```js
+handleInput(e) {
+	e.preventDefault();
+	const pageSize = ReactDOM.findDOMNode(this.refs.pageSize).value;
+	if (/^[0-9]+$/.test(pageSize)) {
+		this.props.updatePageSize(pageSize);
+	} else {
+		ReactDOM.findDOMNode(this.refs.pageSize).value =
+			pageSize.substring(0, pageSize.length - 1);
+	}
+}
+```
+
+```js
+updatePageSize(pageSize) {
+	if (pageSize !== this.state.pageSize) {
+		this.loadFromServer(pageSize);
+	}
+}
+```
+
 ## Part 3
 * `conditional`: https://github.com/spring-guides/tut-react-and-spring-data-rest/tree/master/conditional
 * Record Version, when inserting and updating
   * `javax.persistence.Version`
+* Spring Data REST feature:
+  * 리소스 버전
+  * 프론트엔드 ETag
+
+### Version
+```java
+	private @Version @JsonIgnore Long version;
+```
+
+### Etag
+```js
+onUpdate(employee, updatedEmployee) {
+	client({
+		method: 'PUT',
+		path: employee.entity._links.self.href,
+		entity: updatedEmployee,
+		headers: {
+			'Content-Type': 'application/json',
+			'If-Match': employee.headers.Etag
+		}
+	}).done(response => {
+		this.loadFromServer(this.state.pageSize);
+	}, response => {
+		if (response.status.code === 412) {
+			alert('DENIED: Unable to update ' +
+				employee.entity._links.self.href + '. Your copy is stale.');
+		}
+	});
+}
+```
+* `If-Match` header
 
 ## Part 4
 * `events`: https://github.com/spring-guides/tut-react-and-spring-data-rest/tree/master/events
 * Spring WebSocket
 
+```xml
+<dependency>
+	<groupId>org.springframework.boot</groupId>
+	<artifactId>spring-boot-starter-websocket</artifactId>
+</dependency>
+```
+
+```java
+@Component
+@EnableWebSocketMessageBroker
+public class WebSocketConfiguration implements WebSocketMessageBrokerConfigurer {
+
+	static final String MESSAGE_PREFIX = "/topic";
+
+	@Override
+	public void registerStompEndpoints(StompEndpointRegistry registry) {
+		registry.addEndpoint("/payroll").withSockJS();
+	}
+
+	@Override
+	public void configureMessageBroker(MessageBrokerRegistry registry) {
+		registry.enableSimpleBroker(MESSAGE_PREFIX);
+		registry.setApplicationDestinationPrefixes("/app");
+	}
+}
+```
+1. `@EnableWebSocketMessageBroker` WebSocket 시작.
+2. `WebSocketMessageBrokerConfigurer` 기본 설정.
+3. `MESSAGE_PREFIX` 모든 메시지 경로의 전치사.
+4. `registerStompEndpoints()` `/payroll` 엔드포인트 설정.
+5. `configureMessageBroker()` 메시지 브로커 설정.
+
+### Java Event Handler
+```java
+@Component
+@RepositoryEventHandler(Employee.class)
+public class EventHandler {
+
+	private final SimpMessagingTemplate websocket;
+
+	private final EntityLinks entityLinks;
+
+	@Autowired
+	public EventHandler(SimpMessagingTemplate websocket, EntityLinks entityLinks) {
+		this.websocket = websocket;
+		this.entityLinks = entityLinks;
+	}
+
+	@HandleAfterCreate
+	public void newEmployee(Employee employee) {
+		this.websocket.convertAndSend(
+				MESSAGE_PREFIX + "/newEmployee", getPath(employee));
+	}
+
+	@HandleAfterDelete
+	public void deleteEmployee(Employee employee) {
+		this.websocket.convertAndSend(
+				MESSAGE_PREFIX + "/deleteEmployee", getPath(employee));
+	}
+
+	@HandleAfterSave
+	public void updateEmployee(Employee employee) {
+		this.websocket.convertAndSend(
+				MESSAGE_PREFIX + "/updateEmployee", getPath(employee));
+	}
+
+	/**
+	 * Take an {@link Employee} and get the URI using Spring Data REST's {@link EntityLinks}.
+	 *
+	 * @param employee
+	 */
+	private String getPath(Employee employee) {
+		return this.entityLinks.linkForItemResource(employee.getClass(),
+				employee.getId()).toUri().getPath();
+	}
+
+}
+```
+* `@RepositoryEventHandler(Employee.class)` 이벤트 기본 설정
+* `SimpMessagingTemplate`, `EntityLinks` Autowired
+* `@HandleXYZ`
+
+### JavaScript WebSocket
+```js
+var stompClient = require('./websocket-listener')
+```
+
 ## Part 5
 * `security`: https://github.com/spring-guides/tut-react-and-spring-data-rest/tree/master/security
 * Spring Security
+
+```xml
+<dependency>
+	<groupId>org.springframework.boot</groupId>
+	<artifactId>spring-boot-starter-security</artifactId>
+</dependency>
+<dependency>
+	<groupId>org.thymeleaf.extras</groupId>
+	<artifactId>thymeleaf-extras-springsecurity5</artifactId>
+</dependency>
+```
+
+```java
+@Entity
+public class Manager {
+
+	public static final PasswordEncoder PASSWORD_ENCODER = new BCryptPasswordEncoder();
+
+	private @Id @GeneratedValue Long id;
+
+	private String name;
+
+	private @JsonIgnore String password;
+
+	private String[] roles;
+
+	public void setPassword(String password) {
+		this.password = PASSWORD_ENCODER.encode(password);
+	}
+
+	protected Manager() {}
+
+	public Manager(String name, String password, String... roles) {
+
+		this.name = name;
+		this.setPassword(password);
+		this.roles = roles;
+	}
+
+	@Override
+	public boolean equals(Object o) {
+		if (this == o) return true;
+		if (o == null || getClass() != o.getClass()) return false;
+		Manager manager = (Manager) o;
+		return Objects.equals(id, manager.id) &&
+			Objects.equals(name, manager.name) &&
+			Objects.equals(password, manager.password) &&
+			Arrays.equals(roles, manager.roles);
+	}
+
+	@Override
+	public int hashCode() {
+
+		int result = Objects.hash(id, name, password);
+		result = 31 * result + Arrays.hashCode(roles);
+		return result;
+	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public String[] getRoles() {
+		return roles;
+	}
+
+	public void setRoles(String[] roles) {
+		this.roles = roles;
+	}
+
+	@Override
+	public String toString() {
+		return "Manager{" +
+			"id=" + id +
+			", name='" + name + '\'' +
+			", roles=" + Arrays.toString(roles) +
+			'}';
+	}
+}
+```
+
+### Manager
+```java
+@PreAuthorize("hasRole('ROLE_MANAGER')")
+public interface EmployeeRepository extends PagingAndSortingRepository<Employee, Long> {
+
+	@Override
+	@PreAuthorize("#employee?.manager == null or #employee?.manager?.name == authentication?.name")
+	Employee save(@Param("employee") Employee employee);
+
+	@Override
+	@PreAuthorize("@employeeRepository.findById(#id)?.manager?.name == authentication?.name")
+	void deleteById(@Param("id") Long id);
+
+	@Override
+	@PreAuthorize("#employee?.manager?.name == authentication?.name")
+	void delete(@Param("employee") Employee employee);
+
+}
+```
+
+### Security Config
+```java
+@Configuration
+@EnableWebSecurity
+@EnableGlobalMethodSecurity(prePostEnabled = true)
+public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
+
+	@Autowired
+	private SpringDataJpaUserDetailsService userDetailsService;
+
+	@Override
+	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+		auth
+			.userDetailsService(this.userDetailsService)
+				.passwordEncoder(Manager.PASSWORD_ENCODER);
+	}
+
+	@Override
+	protected void configure(HttpSecurity http) throws Exception {
+		http
+			.authorizeRequests()
+				.antMatchers("/built/**", "/main.css").permitAll()
+				.anyRequest().authenticated()
+				.and()
+			.formLogin()
+				.defaultSuccessUrl("/", true)
+				.permitAll()
+				.and()
+			.httpBasic()
+				.and()
+			.csrf().disable()
+			.logout()
+				.logoutSuccessUrl("/");
+	}
+
+}
+```
 
 ## ref
 * https://spring.io/guides/tutorials/react-and-spring-data-rest/
