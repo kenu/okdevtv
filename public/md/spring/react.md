@@ -187,6 +187,9 @@ ReactDOM.render(
 * A key feature of REST is to include links to relevant resources. For example, if you were looking at an order, a RESTful API would include a link to the related customer, links to the catalog of items, and perhaps a link to the store from which the order was placed. In this section, you will introduce paging and see how to also use navigational paging links.
 * `application/hal+json`, Spring Data REST’s default media type
 
+### diff
+* <img src="images/react/part2-diff.png" alt="part2 diff" class="img"/>
+
 ### Paging
 ```java
 public interface EmployeeRepository extends PagingAndSortingRepository<Employee, Long> {
@@ -366,6 +369,9 @@ updatePageSize(pageSize) {
   * 리소스 버전
   * 프론트엔드 ETag
 
+### diff
+* <img src="images/react/part3-diff.png" alt="part3 diff" class="img"/>
+
 ### Version
 ```java
 	private @Version @JsonIgnore Long version;
@@ -404,6 +410,9 @@ onUpdate(employee, updatedEmployee) {
 	<artifactId>spring-boot-starter-websocket</artifactId>
 </dependency>
 ```
+
+### diff
+* <img src="images/react/part4-diff.png" alt="part4 diff" class="img"/>
 
 ```java
 @Component
@@ -499,6 +508,9 @@ var stompClient = require('./websocket-listener')
 	<artifactId>thymeleaf-extras-springsecurity5</artifactId>
 </dependency>
 ```
+
+### diff
+* <img src="images/react/part5-diff.png" alt="part5 diff" class="img"/>
 
 ```java
 @Entity
