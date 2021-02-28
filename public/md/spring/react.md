@@ -22,6 +22,8 @@
   * Part 4: 웹소켓 이벤트
   * Part 5: UI 및 API 보안
 
+## Youtube
+* https://youtu.be/LAxaEBELods
 ## Part 1
 * `basic`: https://github.com/spring-guides/tut-react-and-spring-data-rest/tree/master/basic
 * Spring Boot 프로젝트 만들기
