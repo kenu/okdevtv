@@ -24,6 +24,11 @@
 
 ## Youtube
 * https://youtu.be/LAxaEBELods
+* https://youtu.be/5b2Vn4kb22U
+* https://youtu.be/fpJqx3j9p98
+* https://youtu.be/hMUJzrxvl8g
+* https://youtu.be/KrUbBiUgBvc
+
 ## Part 1
 * `basic`: https://github.com/spring-guides/tut-react-and-spring-data-rest/tree/master/basic
 * Spring Boot 프로젝트 만들기
