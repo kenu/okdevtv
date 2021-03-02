@@ -89,7 +89,7 @@
 * [Object](/mib/js/object)
 * [Array](/mib/js/array)
 * [Promise](/mib/js/promise)
-
+* [ES7](/mib/js/es7)
 
 ## ref
 * JS the right way
