@@ -93,6 +93,8 @@
 * [ES7](/mib/js/es7) ECMAScript2016
 
 ## ref
+* 모던 JavaScript 튜토리얼
+  * https://ko.javascript.info/
 * JS the right way
   * http://jstherightway.org/
 * w3schools
