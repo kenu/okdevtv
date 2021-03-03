@@ -89,7 +89,8 @@
 * [Object](/mib/js/object)
 * [Array](/mib/js/array)
 * [Promise](/mib/js/promise)
-* [ES7](/mib/js/es7)
+* [ES6](/mib/js/es6) ECMAScript2015
+* [ES7](/mib/js/es7) ECMAScript2016
 
 ## ref
 * JS the right way
