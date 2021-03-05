@@ -14,4 +14,8 @@
 * https://toolbelt.heroku.com
 * http://nodejs.org
 * http://git-scm.com
-* https://api.slack.com/custom-integrations
+
+## WebHook
+```
+curl -X POST -H 'Content-type: application/json' --data '{"text":"Hello, World!"}' https://hooks.slack.com/services/xxxxR3xx4/B0xxDNExx11/xxxWeAVFWcFJOoJBxxxx6Bxx
+```
