@@ -1,4 +1,4 @@
-# Chrome DevTools
+# Chrome DevTools 개발도구 기본 사용법
 * https://developers.google.com/web/tools/chrome-devtools
 * Inspect(요소 검사) 메뉴로 열기
 * Control+Shift+C, Control+Shift+J 단축키
@@ -10,6 +10,7 @@
 
 ## Console
 * JavaScript 공간
+* JS 함수 내용 확인 가능
 
 ## Sources
 * 실제 서버에서 가져온 소스
