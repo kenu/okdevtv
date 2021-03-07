@@ -13,3 +13,5 @@
 ## CI Deployment
 * CI 도구를 사용해서 배포
 
+## ref
+* https://jenkins.io
