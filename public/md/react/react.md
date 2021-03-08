@@ -38,6 +38,16 @@ ReactDOM.render(<HelloMessage name="John" />, mountNode);
 ```
 * [run react01.html](/md/react/react01.html)
 
+## React 프로젝트 생성
+* CRA: Create React App
+* https://ko.reactjs.org/docs/create-a-new-react-app.html
+
+```
+npx create-react-app my-app
+cd my-app
+npm start
+```
+
 ## render lifecycle
 * LIFECYCLE METHODS
   * `componentWillMount` – 한 번 실행, 렌더링 전 클라이언트, 서버 양쪽에서
