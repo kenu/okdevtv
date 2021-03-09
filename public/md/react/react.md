@@ -48,6 +48,14 @@ cd my-app
 npm start
 ```
 
+## 새로운 페이지 추가
+* React Router
+* https://reactrouter.com/web/guides/quick-start
+
+```
+npm install react-router-dom --save
+```
+
 ## render lifecycle
 * LIFECYCLE METHODS
   * `componentWillMount` – 한 번 실행, 렌더링 전 클라이언트, 서버 양쪽에서
