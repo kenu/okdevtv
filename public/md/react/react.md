@@ -56,6 +56,49 @@ npm start
 npm install react-router-dom --save
 ```
 
+## 데이터 바인딩
+* https://ko.reactjs.org/docs/introducing-jsx.html#embedding-expressions-in-jsx
+
+### 변수
+```jsx
+const name = 'Kenu Heo';
+const element = <h1>Hello, {name}</h1>;
+
+ReactDOM.render(
+  element,
+  document.getElementById('root')
+);
+```
+
+### 함수
+```jsx
+function formatName(user) {
+  return user.firstName + ' ' + user.lastName;
+}
+
+const user = {
+  firstName: 'Harper',
+  lastName: 'Perez'
+};
+
+const element = (
+  <h1>
+    Hello, {formatName(user)}!
+  </h1>
+);
+
+ReactDOM.render(
+  element,
+  document.getElementById('root')
+);
+```
+
+## 컴포넌트 만들기
+* https://ko.reactjs.org/docs/components-and-props.html#extracting-components
+
+## 데이터 가져오기
+* https://reactjs.org/docs/faq-ajax.html
+
 ## render lifecycle
 * LIFECYCLE METHODS
   * `componentWillMount` – 한 번 실행, 렌더링 전 클라이언트, 서버 양쪽에서
