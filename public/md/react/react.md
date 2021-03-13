@@ -101,7 +101,7 @@ ReactDOM.render(
 ### 컴포넌트 간 데이터 전달하기
 * `props`
 ## state
-* https://reactjs.org/docs/state-and-lifecycle.html
+* https://ko.reactjs.org/docs/state-and-lifecycle.html
 
 ## 데이터 가져오기
 * https://reactjs.org/docs/faq-ajax.html
