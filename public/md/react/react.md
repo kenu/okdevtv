@@ -105,6 +105,7 @@ ReactDOM.render(
 
 ## 데이터 가져오기
 * https://reactjs.org/docs/faq-ajax.html
+* https://www.freecodecamp.org/news/fetch-data-react/
 
 ```js
 import React, { useState, useEffect } from 'react';
