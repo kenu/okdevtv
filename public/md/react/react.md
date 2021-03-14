@@ -105,6 +105,7 @@ ReactDOM.render(
 
 ## 데이터 가져오기
 * https://reactjs.org/docs/faq-ajax.html
+
 ```js
 import React, { useState, useEffect } from 'react';
 export default function App() {
