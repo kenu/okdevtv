@@ -31,7 +31,10 @@ EOF
 * GitGraph
 * L13 Diff
 
-## ref
+## related
+* [VSCode Debug](/mib/vscode/debug)
 * [VSCode Online](/mib/vscode/online)
+
+## ref
 * https://code.visualstudio.com/docs/setup/mac
 * https://code.visualstudio.com/docs/getstarted/tips-and-tricks
