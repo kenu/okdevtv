@@ -1,4 +1,5 @@
-# Passport-github
+# Passport GitHub
+* OAuth
 * https://github.com/jaredhanson/passport-github
 
 ## Register GitHub App
