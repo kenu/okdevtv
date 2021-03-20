@@ -8,7 +8,7 @@
 
 ## 장점
 * No separate CI/CD service (Jenkins, Travis CI, etc.)
-* No need to set up webhooks
+* No need to set up webhooks!
 
 ## 개념
 * Workflows: 작업 뭉치
