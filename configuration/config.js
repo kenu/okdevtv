@@ -1,3 +1,4 @@
+require('dotenv').config();
 module.exports = {
     /*
      * This file contains the configurations information of Twitter login app.
