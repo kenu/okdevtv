@@ -3,8 +3,8 @@
 * CI/CD 기능
 * Automate, customize, and execute your software development workflows **right in your repository**
 * `.github/workflows/*.yml`
-<img src="https://miro.medium.com/max/1000/1*8mUtip6z_oydfLi4P86KUw.png" alt="github actions workflows" class="img">
-  * from: https://itnext.io/getting-started-with-github-actions-fe94167dbc6d
+* <img src="https://miro.medium.com/max/1000/1*8mUtip6z_oydfLi4P86KUw.png" alt="github actions workflows" class="img">
+* image from: https://itnext.io/getting-started-with-github-actions-fe94167dbc6d
 
 ## 장점
 * No separate CI/CD service (Jenkins, Travis CI, etc.)
