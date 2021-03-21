@@ -1,6 +1,14 @@
 # Data for development
 * 개발에 필요한 데이터
 
+```js
+fetch('https://randomuser.me/api?results=2')
+.then(response => {
+  return response.json();
+})
+.then(data => console.log(data));
+```
+
 ## 공공정보
 * 공공 데이터 포털
   * https://www.data.go.kr/
