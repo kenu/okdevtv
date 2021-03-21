@@ -1,4 +1,4 @@
-name: remote ssh command
+name: remote ssh command for deploy
 on: [push]
 jobs:
 
