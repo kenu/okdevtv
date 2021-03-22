@@ -17,9 +17,13 @@ export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/b
 EOF
 ```
 
-## Auto Guess Encoding
-* settings
+## Settings
+* `cmd` + `,`
 
+### 자동 저장
+* `Auto Save`
+
+### Auto Guess Encoding
 ```
 "files.autoGuessEncoding": true
 ```
