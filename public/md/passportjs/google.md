@@ -1,4 +1,5 @@
 # Passport Google
 
 ## ref
-* https://github.com/jaredhanson/passport-google
+* https://github.com/jaredhanson/passport-google-oauth
+
