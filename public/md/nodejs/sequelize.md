@@ -1,4 +1,5 @@
 # Sequelize
+* https://sequelize.org/
 * Node.js ORM
 
 ## Install
