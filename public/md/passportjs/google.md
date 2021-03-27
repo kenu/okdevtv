@@ -2,6 +2,7 @@
 
 ## Create Google App
 * https://console.cloud.google.com/apis/dashboard
+* scope: 'email', 'profile'
 
 ## Example
 * https://github.com/kenu/express-4.x-google-example
