@@ -509,6 +509,7 @@ $ npm install
 ## 참고
 * node.js
   * http://nodejs.org
+* [nvm](/mib/nodejs/nvm)
 * [환경변수 다루기](/mib/nodejs/dotenv)
 * [Node.js ORM](/mib/nodejs/sequelize)
 * http://bit.ly/okjavascript
