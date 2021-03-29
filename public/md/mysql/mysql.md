@@ -107,3 +107,7 @@ spring.datasource.url=jdbc:mysql://localhost/devdb?useUnicode=true&charaterEncod
 spring.datasource.username=devuser
 spring.datasource.password=devpass
 ```
+
+### Data path
+* `/usr/local/var/mysql`
+* uninstall할 때 삭제 필요할 수도 있음.
