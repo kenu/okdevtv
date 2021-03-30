@@ -1,5 +1,6 @@
 # zeppelin
 * https://zeppelin.apache.org
+* 📊 데이터 시각화 플랫폼 제플린
 * Multi-purpose notebook
   * Data Ingestion
   * Data Discovery
