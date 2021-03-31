@@ -44,4 +44,5 @@ app.post('/login',
 * 주의: 전략은 라우트에서 사용하기 전에 설정되어야 함
 
 ## related
+* [Google OAuth](/mib/passportjs/google)
 * [GitHub OAuth](/mib/passportjs/github)
