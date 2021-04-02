@@ -1,85 +1,57 @@
-<%- include('header', {title: 'OKdevTV 로그인'}) %>
-<link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/sign-in/">
+<%- include('header', {title: 'OKdevTV 로그인' }) %>
+  <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/sign-in/">
 
-<!-- Bootstrap core CSS -->
-<link href="https://getbootstrap.com/docs/4.3/dist/css/bootstrap.min.css" rel="stylesheet"
+  <!-- Bootstrap core CSS -->
+  <link href="https://getbootstrap.com/docs/4.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<!-- Custom styles for this template -->
-<link href="https://getbootstrap.com/docs/4.3/examples/sign-in/signin.css" rel="stylesheet">
-<style>
+  <!-- Custom styles for this template -->
+  <link href="https://getbootstrap.com/docs/4.3/examples/sign-in/signin.css" rel="stylesheet">
+  <style>
     .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
     }
+
     .login {
-        width: 24px;
-        vertical-align: text-top;
-        border-radius: 50%;
+      width: 24px;
+      vertical-align: text-top;
+      border-radius: 50%;
     }
 
     @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-            font-size: 3.5rem;
-        }
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
     }
-</style>
+  </style>
 
-<script>
-    $(function () {
-        $('#form_login').on('submit', function (e) {
-            e.preventDefault();
-            const email = $('#email').val();
-            const password = $('#password').val();
-            if (password.length < 8) {
-                $('#msg').html('비밀번호는 8자리 이상으로 해주세요.');
-                return;
-            }
-            $.post('/user/login',
-                { email, password })
-                .done(function (res) {
-                    if (res.status === 'ok') {
-                        $('#msg').html('로그인이 완료되었습니다.');
-                        setTimeout(function () {
-                            document.location.href = '/';
-                        }, 1000);
-                    } else {
-                        if (res.msg.code === 'ECONNREFUSED') {
-                            $('#msg').html('죄송합니다. 서버 장애 상태입니다.');
-                        } else {
-                            $('#msg').html(res.msg);
-                        }
-                    }
-                })
-                .fail(function (e) { console.log(e); });
-            $('#msg').html('submitted');
-        });
-    });
-</script>
+  <script src="/js/login-page.js"></script>
 
-</head>
+  </head>
 
-<body class="text-center">
+  <body class="text-center">
     <form class="form-signin" id="form_login">
-        <img class="mb-4" src="/images/logo.png" alt="" width="72" height="72">
-        <h1 class="h3 mb-3 font-weight-normal">OKdevTV 로그인</h1>
-        <label for="email" class="sr-only">Email address</label>
-        <input type="email" id="email" class="form-control" placeholder="Email address" required autofocus>
-        <label for="password" class="sr-only">Password</label>
-        <input type="password" id="password" class="form-control" placeholder="8자 이상의 비밀번호를 입력하세요." required>
-        <button class="btn btn-lg btn-primary btn-block" id="btn_login" type="submit">로그인</button>
-        <button class="btn btn-lg btn-primary btn-block"><img src="/images/GitHub-Mark.png" class="login"> GitHub Login</button>
-        <div id="msg"></div>
-        <p class="mt-5 mb-3 text-muted">
-            <a href="/user/signup">회원가입</a> |
-            <a href="/user/reset_password">비밀번호 변경</a>
-        </p>
-        <p class="mt-5 mb-3 text-muted">
-            &copy; 2013-2021</p>
+      <img class="mb-4" src="/images/logo.png" alt="" width="72" height="72">
+      <h1 class="h3 mb-3 font-weight-normal">OKdevTV 로그인</h1>
+      <label for="email" class="sr-only">Email address</label>
+      <input type="email" id="email" class="form-control" placeholder="Email address" required autofocus>
+      <label for="password" class="sr-only">Password</label>
+      <input type="password" id="password" class="form-control" placeholder="8자 이상의 비밀번호를 입력하세요." required>
+      <button class="btn btn-lg btn-primary btn-block" id="btn_login" type="submit">로그인</button>
+      <button class="btn btn-lg btn-primary btn-block" id="btn_github"><img src="/images/GitHub-Mark.png" class="login">
+        GitHub Login</button>
+      <div id="msg"></div>
+      <p class="mt-5 mb-3 text-muted">
+        <a href="/user/signup">회원가입</a> |
+        <a href="/user/reset_password">비밀번호 변경</a>
+      </p>
+      <p class="mt-5 mb-3 text-muted">
+        &copy; 2013-2021</p>
     </form>
-</body>
+  </body>
 
 </html>

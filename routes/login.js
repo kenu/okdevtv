@@ -1,11 +1,11 @@
-const express = require('express'),
-  passport = require('passport'),
-  FacebookStrategy = require('passport-facebook').Strategy,
-  session = require('express-session'),
-  cookieParser = require('cookie-parser'),
-  bodyParser = require('body-parser'),
-  config = require('../configuration/config'),
-  mysql = require('mysql');
+const express = require('express');
+const passport = require('passport');
+const FacebookStrategy = require('passport-facebook').Strategy;
+const session = require('express-session');
+const cookieParser = require('cookie-parser');
+const bodyParser = require('body-parser');
+const config = require('../configuration/config');
+const mysql = require('mysql');
 const router = express.Router();
 
 //Define MySQL parameter in Config.js file.
@@ -18,11 +18,11 @@ const pool = mysql.createPool({
 
 try {
   // Passport session setup.
-  passport.serializeUser(function(user, done) {
+  passport.serializeUser(function (user, done) {
     done(null, user);
   });
 
-  passport.deserializeUser(function(obj, done) {
+  passport.deserializeUser(function (obj, done) {
     done(null, obj);
   });
 
@@ -34,8 +34,8 @@ try {
         clientSecret: config.facebook_api_secret,
         callbackURL: config.callback_url
       },
-      function(accessToken, refreshToken, profile, done) {
-        process.nextTick(function() {
+      function (accessToken, refreshToken, profile, done) {
+        process.nextTick(function () {
           //Check whether the User exists or not using profile.id
           if (config.use_database) {
             // if sets to true
@@ -47,10 +47,10 @@ try {
                   console.log('There is no such user, adding now');
                   pool.query(
                     "INSERT into user_info(user_id,user_name) VALUES('" +
-                      profile.id +
-                      "','" +
-                      profile.username +
-                      "')"
+                    profile.id +
+                    "','" +
+                    profile.username +
+                    "')"
                   );
                 } else {
                   console.log('User already exists in database');
@@ -81,12 +81,12 @@ router.use(passport.initialize());
 router.use(passport.session());
 router.use(express.static(__dirname + '/public'));
 
-router.get('/', function(req, res) {
+router.get('/', function (req, res) {
   console.log(req.session.passport);
   res.render('login', { user: req.user });
 });
 
-router.get('/account', ensureAuthenticated, function(req, res) {
+router.get('/account', ensureAuthenticated, function (req, res) {
   res.render('account', { user: req.user });
 });
 
@@ -101,12 +101,19 @@ router.get(
     successRedirect: '/',
     failureRedirect: '/login'
   }),
-  function(req, res) {
+  function (req, res) {
     res.redirect('/');
   }
 );
 
-router.get('/logout', function(req, res) {
+router.get('/user/login/github',
+  function (req, res) {
+    req.logout();
+    res.redirect('/');
+  }
+);
+
+router.get('/logout', function (req, res) {
   req.logout();
   res.redirect('/');
 });
@@ -119,7 +126,7 @@ function ensureAuthenticated(req, res, next) {
 }
 
 /* GET users listing. */
-router.get('/', function(req, res) {
+router.get('/', function (req, res) {
   res.render('login', { user: req.user });
 });
 
