@@ -34,18 +34,20 @@ ENTRYPOINT ["java","-jar","/app.jar"]
 6. install docker and start docker daemon
   * `sudo yum install docker -y`
   * `sudo systemctl start docker`
+  * `sudo usermod -a -G docker ec2-user`
+  * re login
 7. run docker image
-  * `sudo docker run -p 8080:8080 kenu/sb-demo`
-  * `sudo docker run -d -p 8080:8080 kenu/sb-demo`
+  * `docker run -p 8080:8080 kenu/sb-demo`
+  * `docker run -d -p 8080:8080 kenu/sb-demo`
 8. stop docker image
   * `docker ps`
   * ``docker stop `docker ps -q` ``
 
 ## With Jenkins
 ```
-sudo docker stop `sudo docker ps -q`
-sudo docker rmi kenu/sb-demo -f
-sudo docker run -d -p 8080:8080 kenu/sb-demo
+docker stop `docker ps -q`
+docker rmi kenu/sb-demo -f
+docker run -d -p 8080:8080 kenu/sb-demo
 ```
 
 ## ref

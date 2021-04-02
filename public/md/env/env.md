@@ -47,7 +47,9 @@ spring.datasource.hikari.password=${DB_PASS:devpass}
 docker run -p 8080:8080 -e DB_USER -e DB_PASS -e JDBC_URL kenu/sb-kenu
 
 # docker version 19+ in AWS EC2
-sudo docker run -e DB_USER=${DB_USER} -e DB_PASS=$DB_PASS -e JDBC_URL=$JDBC_URL -p 8080:8080 kenu/aop-demo
+sudo usermod -a -G docker ec2-user
+# re login
+docker run -e DB_USER=${DB_USER} -e DB_PASS=$DB_PASS -e JDBC_URL=$JDBC_URL -p 8080:8080 kenu/aop-demo
 ```
 * https://docs.docker.com/engine/reference/commandline/run/#set-environment-variables--e---env---env-file
 

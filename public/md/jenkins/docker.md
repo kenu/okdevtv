@@ -21,11 +21,13 @@ ENTRYPOINT ["java","-jar","/app.jar"]
 ```
 
 ```
-sudo docker build -t kenu/sb-kenu .
+sudo usermod -a -G docker ec2-user
+# re login
+docker build -t kenu/sb-kenu .
 ```
 
 ```
-sudo docker stop `sudo docker ps -q`
-sudo docker rmi -f kenu/sb-kenu
-sudo docker run -d -p 8080:8080 kenu/sb-kenu
+docker stop `docker ps -q`
+docker rmi -f kenu/sb-kenu
+docker run -d -p 8080:8080 kenu/sb-kenu
 ```
