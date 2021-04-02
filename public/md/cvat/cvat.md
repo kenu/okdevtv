@@ -35,7 +35,7 @@ docker-compose --version
 
 ```
 docker-compose up -d
-sudo docker ps
+docker ps
 ```
 
 ## 관리자 계정 설정
@@ -73,7 +73,7 @@ docker-compose up -d --force-recreate
 docker-compose down
 docker images
 docker rmi 1510c84d373c 555c5ebf5f85
-git pull kenu develop && sudo docker build -f Dockerfile.ui -t openvino/cvat_ui .
+git pull kenu develop && docker build -f Dockerfile.ui -t openvino/cvat_ui .
 docker-compose up -d --force-recreate
 ```
 
