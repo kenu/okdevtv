@@ -20,7 +20,7 @@ gpgcheck=1
 
 ```
 sudo yum install MariaDB-server MariaDB-client
-sudo service mysql start
+sudo systemctl mariadb start
 sudo mysql_secure_installation
 ```
 * login
