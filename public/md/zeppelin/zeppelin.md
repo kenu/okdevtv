@@ -23,9 +23,9 @@ bin/zeppelin-daemon.sh stop
 * Interpreters
 * Create
 
-### MySQL
+### MySQL Interpreter
 * url: `jdbc:mysql://localhost:3306/?serverTimezone=UTC`
-* Artifact: mysql:mysql-connector-java:8.0.11
+* Artifact: mysql:mysql-connector-java:8.0.23
 
 ## Nginx reverse proxying
 ```
