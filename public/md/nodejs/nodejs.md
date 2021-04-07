@@ -512,6 +512,7 @@ $ npm install
 * [nvm](/mib/nodejs/nvm)
 * [환경변수 다루기](/mib/nodejs/dotenv)
 * [Node.js ORM](/mib/nodejs/sequelize)
+* [날짜 다루기](/mib/nodejs/dayjs)
 * http://bit.ly/okjavascript
 * http://bit.ly/oknodejs
 * node.js 내가-쓰기로-선택한-이유
