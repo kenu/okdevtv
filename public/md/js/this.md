@@ -9,7 +9,7 @@
 ## function context
 * 함수 내부에서 `this`의 값은 함수를 호출한 방법에 의해 좌우
 
-###
+### Case
 * 엄격 모드가 아니면 `this`의 값이 호출에 의해 설정되지 않으므로, 기본값으로 브라우저에서는 `window`인 전역 객체를 참조
 * 엄격 모드에서 `this` 값은 실행 문맥에 진입하며 설정되는 값을 유지
 * ECMAScript 5는 `Function.prototype.bind`를 도입. `f.bind(someObject)`를 호출하면 `f`와 같은 본문(코드)과 범위를 가졌지만 this는 원본 함수를 가진 새로운 함수를 생성
