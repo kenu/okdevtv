@@ -47,3 +47,15 @@ const sequelize = new Sequelize('database', 'username', 'password', {
   dialect: /* one of 'mysql' | 'mariadb' | 'postgres' | 'mssql' */
 });
 ```
+
+## Template
+```
+npm i -g sequelize-cli
+sequelize init
+```
+* `config`, contains config file, which tells CLI how to connect with database
+* `models`, contains all models for your project
+* `migrations`, contains all migration files
+* `seeders`, contains all seed files
+* https://sequelize.org/master/manual/migrations.html
+
