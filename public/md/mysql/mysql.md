@@ -112,5 +112,14 @@ spring.datasource.password=devpass
 * `/usr/local/var/mysql`
 * uninstall할 때 삭제 필요할 수도 있음.
 
+## Functions
+* `str_to_date`
+
+```
+select str_to_date('2021-04-14T04:42:00.000Z','%Y-%m-%dT%T.%fZ');
+-- timezone
+select CONVERT_TZ(str_to_date('2021-04-06T04:42:00.000Z','%Y-%m-%dT%T.%fZ'), '+09:00', 'system');
+```
+
 ## related
 * [MySQL JSON](/mib/mysql/json)
