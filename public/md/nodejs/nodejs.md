@@ -513,6 +513,7 @@ $ npm install
 * [환경변수 다루기](/mib/nodejs/dotenv)
 * [Node.js ORM](/mib/nodejs/sequelize)
 * [날짜 다루기](/mib/nodejs/dayjs)
+* [스케줄 실행](/mib/nodejs/schedule)
 * http://bit.ly/okjavascript
 * http://bit.ly/oknodejs
 * node.js 내가-쓰기로-선택한-이유
