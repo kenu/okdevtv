@@ -13,3 +13,7 @@
 
 ## Passport Example
 * https://github.com/kenu/express-4.x-github-example
+
+## ref
+* Manage GitHub Apps
+  * https://github.com/settings/developers
