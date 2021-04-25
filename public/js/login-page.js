@@ -1,7 +1,7 @@
 function init() {
   $('#btn_github').on('click', function (e) {
     e.preventDefault();
-    location.href = '/user/login/github';
+    location.href = '/login/github';
   });
   $('#form_login').on('submit', function (e) {
     e.preventDefault();

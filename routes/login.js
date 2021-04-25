@@ -1,6 +1,8 @@
 const express = require('express');
 const passport = require('passport');
 const FacebookStrategy = require('passport-facebook').Strategy;
+const GitHubStrategy = require('passport-github').Strategy;
+const user_service = require('../services/user-service');
 const session = require('express-session');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
@@ -67,6 +69,17 @@ try {
   console.error(e.message);
 }
 
+passport.use(new GitHubStrategy({
+    clientID: process.env['GITHUB_CLIENT_ID'],
+    clientSecret: process.env['GITHUB_CLIENT_SECRET'],
+    callbackURL: '/login/github/return'
+  },
+  function(accessToken, refreshToken, profile, cb) {
+    console.log('accessToken', accessToken);
+    return cb(null, profile);
+  })
+);
+
 router.use(cookieParser());
 router.use(bodyParser.urlencoded({ extended: false }));
 router.use(
@@ -106,12 +119,17 @@ router.get(
   }
 );
 
-router.get('/user/login/github',
-  function (req, res) {
-    req.logout();
-    res.redirect('/');
-  }
+router.get('/github',
+  passport.authenticate('github')
 );
+
+router.get('/github/return',
+  passport.authenticate('github', { failureRedirect: '/login' }),
+  async function(req, res) {
+    const result = await user_service.signupByGitHub(req.user._json);
+    req.session.user = req.user._json.email;
+    res.redirect('/');
+});
 
 router.get('/logout', function (req, res) {
   req.logout();

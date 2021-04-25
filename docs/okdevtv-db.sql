@@ -61,12 +61,12 @@ CREATE TABLE `user` (
   `seq` int(11) unsigned NOT NULL AUTO_INCREMENT COMMENT '일련번호',
   `email` varchar(50) NOT NULL DEFAULT '' COMMENT '사용자아이디-email',
   `passwd` varchar(120) NOT NULL DEFAULT '' COMMENT '비밀번호',
+  `github` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin COMMENT 'github social login' CHECK (json_valid(`github`)),
   `created_at` datetime NOT NULL COMMENT '생성일시',
   `updated_at` datetime DEFAULT NULL COMMENT '갱신일시',
   PRIMARY KEY (`seq`),
   UNIQUE KEY `idx_user_email` (`email`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
 
 
 # Dump of table user_candidate
