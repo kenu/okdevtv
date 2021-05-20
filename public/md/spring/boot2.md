@@ -1,5 +1,5 @@
 # Spring Boot 2
-* Youtube 재생목록
+* YouTube 재생목록
   * https://youtube.com/playlist?list=PLDMPhWe3CfpY9idK7tGd8QKr36KBID58P
 
 ## related

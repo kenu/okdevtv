@@ -22,7 +22,7 @@
   * Part 4: 웹소켓 이벤트
   * Part 5: UI 및 API 보안
 
-## Youtube
+## YouTube
 * https://youtu.be/LAxaEBELods
 * https://youtu.be/5b2Vn4kb22U
 * https://youtu.be/fpJqx3j9p98
