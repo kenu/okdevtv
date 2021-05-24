@@ -3,7 +3,7 @@
 * MySQL과 동일한 API
 * https://www.mariadb.org
 * install MariaDB
-  * mac : `brew install mariadb` or `brew install mariadb@10.2`
+  * mac : `brew install mariadb` or `brew install mariadb@10.4`
   * `vi /etc/yum.repos.d/MariaDB.repo`
 
 ```
@@ -20,9 +20,11 @@ gpgcheck=1
 
 ```
 sudo yum install MariaDB-server MariaDB-client
-sudo systemctl mariadb start
+sudo systemctl start mariadb
 sudo mysql_secure_installation
 ```
+
+## Create Database Schema And DB User
 * login
   * `mysql -uroot -p`
 
