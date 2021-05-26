@@ -1,7 +1,16 @@
 name: remote ssh command for deploy
-on: [push]
+on:
+  push:
+    branches: [main]
+    paths-ignore:
+      - 'README.md'
+      - 'docs/**'
+  pull_request:
+    branches: [main]
+    paths-ignore:
+      - 'README.md'
+      - 'docs/**'
 jobs:
-
   build:
     name: Build
     runs-on: ubuntu-latest
@@ -15,4 +24,3 @@ jobs:
         port: ${{ secrets.PORT }}
         script: |
           ./deploy.sh
-
