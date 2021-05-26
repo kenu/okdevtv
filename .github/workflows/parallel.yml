@@ -1,7 +1,16 @@
 name: check storage
-on: [push]
+on:
+  push:
+    branches: [main]
+    paths-ignore:
+      - 'README.md'
+      - 'docs/**'
+#  pull_request:
+#    branches: [main]
+#    paths-ignore:
+#      - 'README.md'
+#      - 'docs/**'
 jobs:
-
   build:
     name: Check
     runs-on: ubuntu-latest
