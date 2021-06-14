@@ -106,6 +106,13 @@ git log --pretty=format:"%h - %an, %ar : %s" --author kenu.heo --since=2.days
 git log --name-only -1 f002a898
 ```
 
+## 로컬 브랜치 정리
+```
+git remote prune origin
+git fetch -p
+```
+* https://railsware.com/blog/git-housekeeping-tutorial-clean-up-outdated-branches-in-local-and-remote-repositories/
+
 ## errors
 * The remote end hung up unexpectedly
 ```
