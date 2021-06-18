@@ -4,7 +4,7 @@
 * https://www.mariadb.org
 * install MariaDB
   * mac : `brew install mariadb` or `brew install mariadb@10.4`
-  * `vi /etc/yum.repos.d/MariaDB.repo`
+  * `sudo vi /etc/yum.repos.d/MariaDB.repo`
 
 ```
 # MariaDB 10.4 CentOS repository list
