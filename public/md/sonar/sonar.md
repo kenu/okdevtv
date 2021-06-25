@@ -51,6 +51,20 @@ sonar.sources=.
 ```
 * run `sonar-scanner` in project root
 
+## Java
+* In project root directory, `sonar-project.properties`
+
+```
+sonar.projectKey=swlabs:helper
+sonar.projectName=helper
+sonar.projectVersion=1.0
+sonar.language=java
+sonar.sources=src/main/java/
+sonar.java.binaries=target/classes
+
+sonar.sourceEncoding=UTF-8
+```
+
 
 ## android sonar
 * `app/build.gradle`
