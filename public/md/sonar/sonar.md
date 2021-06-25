@@ -61,9 +61,14 @@ sonar.projectVersion=1.0
 sonar.language=java
 sonar.sources=src/main/java/
 sonar.java.binaries=target/classes
-
 sonar.sourceEncoding=UTF-8
+sonar.login=tokenxxxxxxxxxxxxxxxxxx
 ```
+
+## Generate User Token
+* http://localhost:9000/account/security/
+* use it in `sonar.login`
+* https://docs.sonarqube.org/latest/user-guide/user-token/
 
 
 ## android sonar
