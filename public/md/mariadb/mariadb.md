@@ -21,7 +21,7 @@ gpgcheck=1
 ```
 sudo yum install MariaDB-server MariaDB-client
 sudo systemctl start mariadb
-sudo mysql_secure_installation
+sudo mariadb-secure-installation
 ```
 
 ## Create Database Schema And DB User
