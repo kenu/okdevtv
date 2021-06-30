@@ -1,4 +1,4 @@
-# VS Code plug in
+# VSCode plug in
 
 ## First Extension
 * https://code.visualstudio.com/api/get-started/your-first-extension
