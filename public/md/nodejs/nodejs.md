@@ -127,93 +127,113 @@ from: http://www.nodebeginner.org/index-kr.html#how-to-not-do-it
 ## socket.io 모듈
 * socket.io
   * [채팅 튜토리얼](https://okdevtv.com/kr/socket.io-chat-kr.html)
-* 52라인으로 웹채팅 가능
-* index.html
+* 짧은 줄의 코드로 웹채팅 구현 가능
+* `index.html`
 
-```
+```html
 <!doctype html>
 <html>
-  <head>
-    <title>Socket.IO chat</title>
-    <style>
-      * { margin: 0; padding: 0; box-sizing: border-box; }
-      body { font: 13px Helvetica, Arial; }
-      form { background: #000; padding: 3px; position: fixed; bottom: 0; width: 100%; }
-      form input { border: 0; padding: 10px; width: 90%; margin-right: .5%; }
-      form button { width: 9%; background: rgb(130, 224, 255); border: none; padding: 10px; }
-      #messages { list-style-type: none; margin: 0; padding: 0; }
-      #messages li { padding: 5px 10px; }
-      #messages li:nth-child(odd) { background: #eee; }
-    </style>
-  </head>
-  <body>
-    <ul id="messages"></ul>
-    <form action="">
-      <input id="m" autocomplete="off" /><button>Send</button>
-    </form>
-<script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
-<script src="http://code.jquery.com/jquery-1.11.1.js"></script>
 
-<script>
-  var socket = io();
-  $('form').submit(function(){
-    socket.emit('chat message', $('#m').val());
-    $('#m').val('');
-    return false;
-  });
-  socket.on('chat message', function(msg){
-    $('#messages').append($('<li>').text(msg));
-  });
-</script>
-  </body>
+<head>
+  <title>Socket.IO chat</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font: 13px Helvetica, Arial; }
+    form { background: #000; padding: 3px; position: fixed; bottom: 0; width: 100%; }
+    form input { border: 0; padding: 10px; width: 90%; margin-right: .5%; }
+    form button { width: 9%; background: rgb(130, 224, 255); border: none; padding: 10px; }
+    #messages { list-style-type: none; margin: 0; padding: 0; }
+    #messages li { padding: 5px 10px; }
+    #messages li:nth-child(odd) { background: #eee; }
+  </style>
+</head>
+
+<body>
+  <ul id="messages"></ul>
+  <form id="form" action="">
+    <input id="input" autocomplete="off" /><button>Send</button>
+  </form>
+  <script src="/socket.io/socket.io.js"></script>
+  <script>
+    var socket = io();
+
+    var messages = document.getElementById('messages');
+    var form = document.getElementById('form');
+    var input = document.getElementById('input');
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (input.value) {
+        socket.emit('chat message', input.value);
+        input.value = '';
+      }
+    });
+
+    socket.on('chat message', function (msg) {
+      var item = document.createElement('li');
+      item.textContent = msg;
+      messages.appendChild(item);
+      window.scrollTo(0, document.body.scrollHeight);
+    });
+  </script>
+</body>
+
 </html>
-```
-
-* index.js
 
 ```
+
+* `server.js`
+
+```js
 var app = require('express')();
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
 
-app.get('/', function(req, res){
-  res.sendfile('index.html');
+app.get('/', function (req, res) {
+  res.sendFile(__dirname + '/index.html');
 });
 
-io.on('connection', function(socket){
-  socket.on('chat message', function(msg){
+io.on('connection', function (socket) {
+  socket.on('chat message', function (msg) {
     io.emit('chat message', msg);
   });
 });
 
-http.listen(3000, function(){
+http.listen(3000, function () {
   console.log('listening on *:3000');
 });
-```
-
-* package.json
 
 ```
+
+* `package.json`
+
+```json
 {
   "name": "socket-chat-example",
   "version": "0.0.1",
   "description": "my first socket.io app",
   "dependencies": {
     "express": "^4.14.0",
-    "socket.io": "^1.5.0"
+    "socket.io": "^4.1.2"
   }
 }
 ```
+
+## 실행
+```
+npm i
+node server.js
+```
+* http://localhost:3000/
 
 ## expressjs 웹 프레임워크
 * http://expressjs.com/
 * npm install -g express-generator
 * express myapp
 * node.js의 기본 API인 http를 확장
-
 * 기본 http
 
-```
+```js
 const http = require('http');
 
 const hostname = '127.0.0.1';
@@ -230,12 +250,12 @@ server.listen(port, hostname, () => {
 });
 ```
 
-* express.js
+### express.js
   * with package.json `npm init`
   * `npm install express --save`
   * create `exp.js` file
 
-```
+```js
 var express = require('express')
 var app = express()
 
@@ -266,9 +286,9 @@ app.listen(3000, function () {
   * PATH is a path on the server.
   * HANDLER is the function executed when the route is matched.
 
-* get
+#### get
 
-```
+```js
 app.get('/', function (req, res) {
     res.send('Hello World!')
 })
@@ -277,27 +297,27 @@ app.get('/', function (req, res) {
   * `curl -XGET 'localhost:3000'`
 
 
-* post
+#### post
 
-```
+```js
 app.post('/', function (req, res) {
     res.send('Got a POST request')
 })
 ```
   * `curl -XPOST 'localhost:3000'`
 
-* put
+#### put
 
-```
+```js
 app.put('/user', function (req, res) {
     res.send('Got a PUT request at /user')
 })
 ```
   * `curl -XPUT 'localhost:3000/user'`
 
-* delete
+#### delete
 
-```
+```js
 app.delete('/user', function (req, res) {
     res.send('Got a DELETE request at /user')
 })
@@ -315,7 +335,7 @@ notify, subscribe, unsubscribe, patch, search, connect.
 
 * all
 
-```
+```js
 app.all('/secret', function (req, res, next) {
   console.log('Accessing the secret section ...')
   next() // pass control to the next handler
