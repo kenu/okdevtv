@@ -28,29 +28,27 @@ sudo mariadb-secure-installation
 * login
   * `mysql -uroot -p`
 
-```
-GRANT ALL PRIVILEGES ON devdb.* TO devuser@localhost
-IDENTIFIED BY 'devpass' WITH GRANT OPTION;
+```sql
+GRANT ALL PRIVILEGES ON devdb.* TO devuser@localhost IDENTIFIED BY 'devpass' WITH GRANT OPTION;
 ```
 
 * MySQL 8+
 
-```
+```sql
 create user 'devuser'@'localhost' identified by 'devpass';
 grant all on devdb.* to 'devuser'@'localhost';
 ```
 
 * Read only account
 
-```
+```sql
 GRANT SELECT, SHOW VIEW ON devdb.* TO devuser2@localhost
 IDENTIFIED BY 'devpass';
 ```
 
 * role account
-```
-GRANT TRIGGER, SELECT, SHOW VIEW ON devdb.* TO devuser2@localhost
-IDENTIFIED BY 'devpass';
+```ㄴ비
+GRANT TRIGGER, SELECT, SHOW VIEW ON devdb.* TO devuser2@localhost IDENTIFIED BY 'devpass';
 ```
 
 ## DB backup
