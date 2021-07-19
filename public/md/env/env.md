@@ -53,5 +53,7 @@ docker run -e DB_USER=${DB_USER} -e DB_PASS=$DB_PASS -e JDBC_URL=$JDBC_URL -p 80
 ```
 * https://docs.docker.com/engine/reference/commandline/run/#set-environment-variables--e---env---env-file
 
+## 동영상
+* https://youtu.be/2-6wCr3A6Xg
 ## related
 * [스프링 프로파일](/mib/spring/profile)
