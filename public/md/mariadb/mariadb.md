@@ -42,8 +42,7 @@ grant all on devdb.* to 'devuser'@'localhost';
 * Read only account
 
 ```sql
-GRANT SELECT, SHOW VIEW ON devdb.* TO devuser2@localhost
-IDENTIFIED BY 'devpass';
+GRANT SELECT, SHOW VIEW ON devdb.* TO devuser2@localhost IDENTIFIED BY 'devpass';
 ```
 
 * role account
