@@ -9,7 +9,7 @@
   "scripts": {
     "start": "node ./bin/www",
     "serve": "pm2-dev start ./bin/www",
-    "test:watch": "jest tests/aws-ses.test.js -o --watch"
+    "test": "node_modules/.bin/jest tests/aws-ses.test.js -o --watch"
   },
   "dependencies": {
     "@babel/polyfill": "^7.4.4",
@@ -39,11 +39,12 @@
     "uuid": "^3.3.2"
   },
   "devDependencies": {
-    "@babel/cli": "^7.4.4",
-    "@babel/core": "^7.4.5",
-    "@babel/preset-env": "^7.4.5",
+    "@babel/cli": "^7.14.8",
+    "@babel/core": "^7.15.0",
+    "@babel/preset-env": "^7.15.0",
     "eslint": "^6.3.0",
     "eslint-config-google": "^0.14.0",
-    "frameguard": "^3.1.0"
+    "frameguard": "^3.1.0",
+    "jest": "^27.0.6"
   }
 }
