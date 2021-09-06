@@ -1,11 +1,39 @@
 # Java
 
+* 1995 James Gosling
+* 1996 Sun Microsystems > Oracle Corporation(2010)
+
 ## JDK, JRE
 * Java Development Kit
 * Java Runtime Environment
 * JDK = JRE + javac
 
+## Version LTS
+
+| Release Family | End Of Support Life (EOSL)|
+|---|---|
+| 18 | September 2022(1)|
+| 17 LTS | September 2029|
+| 16 | September 2021|
+| 15 | March 2021|
+| 14 | September 2020|
+| 13 | March 2020|
+| 11 LTS | September 2026|
+| 10 | September 2018|
+| 9 | March 2018|
+| 8 LTS | **December 2030** |
+| 7 LTS | July 2022|
+| 6 LTS | December 2018|
+| 5 LTS | July 2015|
+| 4 LTS | March 2013|
+| 3 LTS | April 2011|
+| 2 LTS | December 2003|
+| 1 LTS | October 2002|
+
+* from: https://java.com/releases/
+
 ## Install
+* [sdkman](/mib/sdkman) recommended
 * https://github.com/ojdkbuild/ojdkbuild
 * CentOS
 
