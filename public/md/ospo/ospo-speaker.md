@@ -1,4 +1,6 @@
 # List By Type
+  * from: https://osselc21.sched.com/overview/type/OSPOCon
+
 ## 101 Essentials -Cloud Administration
 ### Monday, September 27
 * Observability with Prometheus and Beyond: Leveraging Cloud-native Technologies Outside of Cloud - Richard Hartmann, Grafana Labs
