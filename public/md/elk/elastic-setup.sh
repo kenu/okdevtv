@@ -1,7 +1,4 @@
-sudo yum install nginx -y
-sudo service nginx start
 sudo amazon-linux-extras install nginx1.12
-sudo systemctl start nginx
 curl -i http://localhost
 sudo chmod 644 /var/log/nginx
 sudo chown -R ec2-user:ec2-user /usr/share/nginx/html
@@ -44,5 +41,5 @@ sudo sh -c "sed '38,87d' /etc/nginx/nginx.conf.orig > /etc/nginx/nginx.conf"
 cd /etc/nginx/conf.d
 sudo curl -O https://raw.githubusercontent.com/kenu/okdevtv/main/sh/elk.conf
 sleep 5
-sudo systemctl start nginx
+sudo systemctl restart nginx
 
