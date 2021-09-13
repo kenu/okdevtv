@@ -43,6 +43,6 @@ sudo mv /etc/nginx/nginx.conf /etc/nginx/nginx.conf.orig
 sudo sh -c "sed '38,87d' /etc/nginx/nginx.conf.orig > /etc/nginx/nginx.conf"
 cd /etc/nginx/conf.d
 sudo curl -O https://raw.githubusercontent.com/kenu/okdevtv/main/sh/elk.conf
-sleep 2
+sleep 5
 sudo systemctl start nginx
 
