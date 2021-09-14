@@ -192,7 +192,7 @@
 * Lightning Talk: Why a Diverse Team is Crucial to Startup Success - Melissa Jurkoic, addapptation
 * Lightning Talk: Strategies for Inclusivity as an Open Source Project Maintainer - Peter Somogyvari, Accenture
 
-* Embedded Linux Conference (ELC)
+## Embedded Linux Conference (ELC)
 ### Monday, September 27
 * Introduction to Pin Muxing and GPIO Control Under Linux - Neil Armstrong, BayLibre
   * Panel Discussion: Industrial Linux Beyond 2022 - Kate Stewart, Linux Foundation & Guy Lunardi, Collabora;
@@ -260,7 +260,7 @@
 * IoT as a Platform: Scaling IoT Applications for the Enterprise Using Kubenernetes/OpenShift - Luigi Mario Zuccarelli, Red Hat & Fan Zhang, Threefold
 
 
-* Keynote Sessions
+## Keynote Sessions
 ### Monday, September 27
 
 * Keynote: Welcome & Opening Remarks - Jim Zemlin, Executive Director, The Linux Foundation

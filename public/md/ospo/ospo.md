@@ -192,7 +192,7 @@
 * Lightning Talk: Why a Diverse Team is Crucial to Startup Success
 * Lightning Talk: Strategies for Inclusivity as an Open Source Project Maintainer
 
-* Embedded Linux Conference (ELC)
+## Embedded Linux Conference (ELC)
 ### Monday, September 27
 * Introduction to Pin Muxing and GPIO Control Under Linux
   * Panel Discussion: Industrial Linux Beyond 2022
@@ -260,7 +260,7 @@
 * IoT as a Platform: Scaling IoT Applications for the Enterprise Using Kubenernetes/OpenShift
 
 
-* Keynote Sessions
+## Keynote Sessions
 ### Monday, September 27
 
 * Keynote: Welcome & Opening Remarks
