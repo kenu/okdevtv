@@ -4,7 +4,7 @@
 * plugin type
 
 ## css
-
+* Selector based HTML coding
 
 ## example
 ```
