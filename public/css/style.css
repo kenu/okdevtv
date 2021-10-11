@@ -710,10 +710,10 @@ body {
 }
 
 /*********************************************************************************/
-/* Intro                                                                         */
+/* About                                                                         */
 /*********************************************************************************/
 
-#intro {
+#about {
   background: url('images/overlay.png'), url('../images/intro.jpg');
   background-size: 256px 256px, cover;
   background-attachment: fixed, fixed;
