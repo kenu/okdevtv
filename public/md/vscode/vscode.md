@@ -31,14 +31,16 @@ EOF
 ## Plugins
 * Popular: `sort @installs`
 * GitLens
-* Prettier
 * GitGraph
+* Prettier
+* Thunder Client
 * L13 Diff
 
 ## related
 * [VSCode Debug](/mib/vscode/debug)
 * [VSCode Online](/mib/vscode/online)
 * [VSCode Plugin](/mib/vscode/plugin)
+
 ## ref
 * https://code.visualstudio.com/docs/setup/mac
 * https://code.visualstudio.com/docs/getstarted/tips-and-tricks
