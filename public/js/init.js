@@ -383,9 +383,6 @@ jQuery(function() {
     $all = $body.add($header),
     sectionTransitionState = false;
 
-  // Disable animations/transitions until everything's loaded
-  $all.addClass('loading').fadeTo(0, 0.0001);
-
   $window.load(function() {
     window.setTimeout(function() {
       $all.fadeTo(_settings.fadeInSpeed, 1, function() {
