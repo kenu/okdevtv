@@ -21,8 +21,10 @@
 ## IntelliJ Devtools Reload
 * Compiler option
   * check `Build project automatically`
-* Registry option
-  * check `compiler.automake.allow.when.app.running`
+* Advanced Settings > Compiler
+  * check `Allow auto-make to start even if developed application is currently running`
+* Registry option(Deprecated)
+  * ~~check `compiler.automake.allow.when.app.running`~~
 
 ## ref
 * https://docs.spring.io/spring-boot/docs/current/reference/html/using-spring-boot.html#using-boot-devtools
