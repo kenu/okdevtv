@@ -3,23 +3,23 @@
 * MySQL과 동일한 API
 * https://www.mariadb.org
 * install MariaDB
-  * mac : `brew install mariadb` or `brew install mariadb@10.4`
+  * mac : `brew install mariadb` or `brew install mariadb@10.6`
   * `sudo vi /etc/yum.repos.d/MariaDB.repo`
 
 ```
-# MariaDB 10.4 CentOS repository list
+# MariaDB 10.6 CentOS repository list
 # http://mariadb.org/mariadb/repositories/
 [mariadb]
 name = MariaDB
-baseurl = http://yum.mariadb.org/10.4/centos7-amd64
+baseurl = http://yum.mariadb.org/10.6/centos7-amd64
 gpgkey=https://yum.mariadb.org/RPM-GPG-KEY-MariaDB
 gpgcheck=1
 ```
- * CentOS 6.x는 `baseurl = http://yum.mariadb.org/10.2/centos6-amd64`
+ * CentOS 6.x는 `baseurl = http://yum.mariadb.org/10.6/centos6-amd64`
 
 
 ```
-sudo yum install MariaDB-server MariaDB-client
+sudo yum install MariaDB-server
 sudo systemctl start mariadb
 sudo mariadb-secure-installation
 ```
@@ -29,6 +29,7 @@ sudo mariadb-secure-installation
   * `mysql -uroot -p`
 
 ```sql
+create database devdb;
 GRANT ALL PRIVILEGES ON devdb.* TO devuser@localhost IDENTIFIED BY 'devpass' WITH GRANT OPTION;
 ```
 
@@ -46,7 +47,7 @@ GRANT SELECT, SHOW VIEW ON devdb.* TO devuser2@localhost IDENTIFIED BY 'devpass'
 ```
 
 * role account
-```ㄴ비
+```sql
 GRANT TRIGGER, SELECT, SHOW VIEW ON devdb.* TO devuser2@localhost IDENTIFIED BY 'devpass';
 ```
 
