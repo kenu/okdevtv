@@ -172,6 +172,12 @@ ps -ef | grep httpd
 kill -TERM -- -22590
 ```
 
+* process id
+
+```
+pgrep -f java
+```
+
 ## htop
 
 ```
@@ -187,7 +193,7 @@ htop -p "$(pgrep -vfd, 'java|python')"
 
 ```
 ls -la --time-style=full-iso
-``` 
+```
 
 ## other topics
 
