@@ -1,4 +1,5 @@
 # Spring Boot Validation
+* [영상 링크](https://youtu.be/b5rzOaDRdyY)
 * JSR 380: Bean Validation 2.0
   * https://beanvalidation.org/2.0/spec/
 * JSR 303: Bean Validation 1.0
