@@ -1,4 +1,4 @@
-#Java Web Dev Camp
+# Java Web Dev
 
 ### 자바 웹 개발 강의
 * 이 강의에서 다루고자 하는 목표가 무엇일까요?
@@ -177,6 +177,8 @@ Java 8에 추가된 언어적인 특징을 확인합니다.
 * Kenu 허광남
 * https://okdevtv.com 프로그래밍 방송 BJ
 * https://okky.kr 사이트 공동대표
+* https://innovationacademy.kr 멘토
 * '12~'21 전자정부 표준프레임워크 에반젤리스트
   - 일 방문 40,000명의 국내 주요 개발자 커뮤니티
+* 펫프렌즈, 헬로네이처 CTO
 * '15~'17 GS SHOP 벤처투자팀 CoE 파트
