@@ -12,14 +12,8 @@
 
 ```
 # centos 7
-sudo amazon-linux-extras install nginx1.12
+sudo amazon-linux-extras install nginx1
 sudo systemctl start nginx
-```
-
-```
-# centos 6
-sudo yum install nginx -y
-sudo service nginx start
 ```
 
 * 기본 설정
@@ -40,15 +34,9 @@ echo "<h1>Hello World</h1>" > /usr/share/nginx/html/hello.html
 systemctl enable nginx.service
 ```
 
-```
-# centos 6
-sudo chkconfig nginx on
-```
-
 ## 설정
 * `cd /etc/nginx/ && vim nginx.conf` 기본 설정 파일
 * conf.d/ 폴더에 도메인별로 설정 파일 분리 가능
-
 
 ### Reverse Proxy
 * "서버단에 다수의 웹서버를 두고, 매번 요청이 발생할 때마다 어떤 서버에게 이 요청을 처리하도록 지시할지 결정하는 역할을 수행한다."
@@ -71,8 +59,8 @@ sudo chkconfig nginx on
 
 ### client ip forward to WAS
 ```
-        proxy_set_header        X-Real-Ip       $remote_addr;
-        proxy_set_header        X-Fowarded-For  $remote_addr;
+        proxy_set_header    X-Real-Ip        $remote_addr;
+        proxy_set_header    X-Fowarded-For   $remote_addr;
 ```
 
 ### gzip
@@ -120,7 +108,6 @@ server {
     if ($host = 'www.okdevtest.net' ) {
         rewrite  ^/(.*)$  http://okdevtest.net/$1  permanent;
     }
-
 ```
 
 * from: https://rsec.kr/?p=182
