@@ -17,7 +17,7 @@
   * C#
   * Web
   * XML
-* cost
+* Cost (Community Alternative)
   * COBOL, C/C++, PL/SQL, PL/I, ABAP, VB.NET, VB6, RPG, Flex, Objective-C, Swift
 
 ## SonarQube Scanner
@@ -28,6 +28,11 @@
 ```
 npm i -g sonar-scanner
 ```
+
+## Generate User Token
+* http://localhost:9000/account/security/
+* use it in `sonar.login`
+* https://docs.sonarqube.org/latest/user-guide/user-token/
 
 ## JavaScript
 * SonarJS plugin (default installed)
@@ -65,11 +70,30 @@ sonar.sourceEncoding=UTF-8
 sonar.login=tokenxxxxxxxxxxxxxxxxxx
 ```
 
-## Generate User Token
-* http://localhost:9000/account/security/
-* use it in `sonar.login`
-* https://docs.sonarqube.org/latest/user-guide/user-token/
+## CPP
+* Community Plugin sonar-cxx-plugin
+* https://github.com/SonarOpenCommunity/sonar-cxx
 
+```
+# must be unique in a given instance
+sonar.projectKey=cubrid:cubrid
+
+# defaults to project key
+#sonar.projectName=My project
+# defaults to 'not provided'
+#sonar.projectVersion=1.0
+
+# Path is relative to the sonar-project.properties file. Defaults to .
+#sonar.sources=.
+
+# Encoding of the source code. Default is default system encoding
+#sonar.sourceEncoding=UTF-8
+
+# mandatory: files to be handled by the _cxx plugin_
+sonar.cxx.file.suffixes=.h,.hpp,.c,.cpp
+sonar.login=tokenxxxxxxxxxxxxxxxxxx
+sonar.exclusions=src/jsp/**,contrib/**
+```
 
 ## android sonar
 * `app/build.gradle`
