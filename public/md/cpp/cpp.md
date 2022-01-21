@@ -43,3 +43,4 @@ Here you have instructions on how to compile and run console programs using diff
 
 ## related
 * [Unit Test](/mib/cpp/test)
+* [Build Error](/mib/cpp/err)
