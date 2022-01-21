@@ -26,7 +26,7 @@
     "googleapis": "^64.0.0",
     "helmet": "^3.21.1",
     "knex": "^0.20.1",
-    "marked": "^0.7.0",
+    "marked": "^4.0.10",
     "morgan": "~1.9.1",
     "mysql": "^2.16.0",
     "node-fetch": "^2.6.1",
