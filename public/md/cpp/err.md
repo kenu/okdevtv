@@ -10,5 +10,6 @@ compilation terminated.
 ```
 sudo yum install -y devtoolset-8 --nogpgcheck
 scl enable devtoolset-8 bash
+gcc --version
 ```
 * from: https://stackoverflow.com/a/66376026/510222
