@@ -14,3 +14,7 @@ npm run serve
 
 ## Test
 `npm run test`
+
+## Deploy
+
+## FAQ
