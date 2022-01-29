@@ -187,6 +187,7 @@ ReactDOM.render(<Timer />, mountNode);
 * https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi
 
 ## related
+* [router](/mib/react/router)
 * [mobx](/mib/react/mobx)
 * [redux](/mib/react/redux)
 
