@@ -11,6 +11,11 @@
   * https://play.google.com/store/apps/details?id=com.azure.authenticator
 3. Login with 6-digit code in Authentificator App
 
+## Key Uri Format
+* `otpauth://TYPE/LABEL?PARAMETERS`
+  * `TYPE`: `totp` or `hotp`
+  * https://github.com/google/google-authenticator/wiki/Key-Uri-Format
+
 ## ref
 * https://github.com/kenu/totp
 * https://blog.shahednasser.com/how-to-add-authentication-with-google-authenticator-in-node-js/
