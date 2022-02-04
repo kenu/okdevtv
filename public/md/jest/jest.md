@@ -48,3 +48,16 @@ test('adds 1 + 2 to equal 3', () => {
 * toMatchSnapshot
 * toThrowError
 
+## test ajax
+* `jest.config.js`
+
+```js
+const config = {
+  testEnvironment: 'node'
+}
+module.exports = config;
+```
+
+## Timeout
+* `test('title', () => {}, timeout);`
+* https://exerror.com/timeout-async-callback-was-not-invoked-within-the-5000-ms-timeout-specified-by-jest-settimeout/
