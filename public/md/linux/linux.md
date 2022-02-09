@@ -203,8 +203,19 @@ ls -la --time-style=full-iso
 
 ## Mail
 
+### sendmail
+```
+sudo yum install sendmail
+echo -e "Subject: Terminal Email Send\n\nEmail Content line 1\nEmail Content line 2" > content
+sendmail recipient@example.com < content
+```
+
+### mutt
 * 파일첨부
   * `mutt -s "subject" -i body.txt -a attachment.txt recipient@example.com`
+
+### mail
+* `mail -s "This is the subject" kenu.heo@gmail.com <<< 'This is the message'`
 
 ## Ref
 
@@ -214,3 +225,5 @@ ls -la --time-style=full-iso
   * https://www.cyberciti.biz/tips/linux-procfs-file-descriptors.html
 * Mutt
   * https://www.thegeekdiary.com/linux-unix-send-mail-with-attachment-using-mutt/
+* Send mail from linux command line
+  * https://www.lesstif.com/lpt/send-mail-from-linux-command-line-24445045.html
