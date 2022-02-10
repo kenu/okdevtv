@@ -15,14 +15,14 @@
 * 개발 기술 선택
 
 ## 승: 개발 기반 구축
-* 프로젝트 저장소 생성
+* 프로젝트 저장소 생성([GitHub](/mib/github))
 * 개발환경 구축 및 공유
 * 프로젝트 기본 폴더 구조 작업
 * 코딩 컨벤션 공유(https://bit.ly/webconvention)
 * 기능별 샘플 코드, 테스트 케이스(optional)
 * 개발 서버 구축
-* CI/CD 구성(GitHub Actions, Jenkins)
-* 빌드 결과 메시지 웹훅(slackbot, jandibot)
+* CI/CD 구성([GitHub Actions](/mib/github/actions), [Jenkins](/mib/jenkins))
+* 빌드 결과 메시지 웹훅([slackbot](/mib/slack), [jandibot](/mib/jandi))
 
 ## 전: 개발 진행
 * 점진적 개발(Sprint)
