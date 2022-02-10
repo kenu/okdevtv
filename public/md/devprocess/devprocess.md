@@ -7,14 +7,14 @@
   * 전: 개발 진행
   * 결: 서비스 진화
 
-## 기
+## 기: 기획
 * 구성원 모집
 * 기획(페르소나, 시나리오)
-* 화면설계(wireframe, figma)
+* 화면 설계(wireframe, figma)
 * 데이터 설계(https://erdcloud.com)
 * 개발 기술 선택
 
-## 승
+## 승: 개발 기반 구축
 * 프로젝트 저장소 생성
 * 개발환경 구축 및 공유
 * 프로젝트 기본 폴더 구조 작업
@@ -24,15 +24,15 @@
 * CI/CD 구성(GitHub Actions, Jenkins)
 * 빌드 결과 메시지 웹훅(slackbot, jandibot)
 
-## 전
+## 전: 개발 진행
 * 점진적 개발(Sprint)
 * 기능 테스트
 * 사이드 이펙트 감지
-* 버그 수정
-* 모니터링 기능 추가(sentry, GA)
+* 버그, 취약점 수정([SonarQube](/mib/sonar), [ZAP](/mib/zap))
+* 모니터링 기능 추가([sentry](/mib/sentry), [GA](/mib/ga))
 
-## 결
-* 서비스 운영
+## 결: 서비스 진화
+* 서비스 오픈 후 운영
 * 운영 데이터 시각화
 * 서비스 개선 기획
 
