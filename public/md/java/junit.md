@@ -8,7 +8,7 @@
 
 ## Required
 * junit.jar
-  * http://mvnrepository.com/artifact/junit/junit/4.12
+  * https://mvnrepository.com/artifact/junit/junit/4.13.2
 
 ## Getting started
 * Calculator.java
@@ -42,11 +42,34 @@ public class CalculatorTest {
 * compile
 
 ```
-javac -cp .:junit-4.12.jar CalculatorTest.java
+javac -cp .:junit-4.13.2.jar CalculatorTest.java
 ```
 
 * run
 
 ```
-java -cp .:junit-4.12.jar:hamcrest-core-1.3.jar org.junit.runner.JUnitCore CalculatorTest
+java -cp .:junit-4.13.2.jar:hamcrest-core-1.3.jar org.junit.runner.JUnitCore CalculatorTest
 ```
+
+## JUnit report
+### Maven report
+
+```xml
+<project>
+  ...
+  <reporting>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-report-plugin</artifactId>
+        <version>3.0.0-M5</version>
+      </plugin>
+    </plugins>
+  </reporting>
+  ...
+</project>
+```
+
+* `mvn site` or `mvn surefire-report:report`
+* from: https://maven.apache.org/surefire/maven-surefire-report-plugin/usage.html
+
