@@ -15,6 +15,8 @@ brew install maven
 ```
 
 * windows and linux
+  * [skdman](/mib/sdkman) 추천
+    * `sdk install maven 3.8.4`
   * JDK 설치 및 JAVA_HOME 환경변수 필요
   * https://maven.apache.org 위치에서 `apache-maven-*.*.*-bin.zip` 다운로드
   * download and unzip
@@ -43,7 +45,7 @@ brew install maven
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>3.8.1</version>
+      <version>4.13.2</version>
       <scope>test</scope>
     </dependency>
   </dependencies>
