@@ -1,9 +1,9 @@
 # Access server without password
 * 설정이 끝나면, 로그인에 비밀번호를 입력할 필요가 없어짐
-* 클라이언트 컴퓨터의 비밀(private)키, 공개(public)키 필요
+* 로컬 컴퓨터의 비밀(private)키, 공개(public)키 필요
 
 ## Generate keys
-* 클라이언트 컴퓨터에서 키 생성
+* 로컬 컴퓨터에서 키 생성
 * `ssh-keygen -t rsa`
 * 비밀번호 물어봐도 끝까지 계속 엔터
 * `cd ~/.ssh`
@@ -14,7 +14,7 @@
 * 내용을 복사
 
 ### Server login
-* 최초 설정 전까지는 비밀번호로 서버 접속
+* 최초 설정 전까지는 비밀번호로 자동 접속할 서버에 접속
 * **~/.ssh/authorized_keys** 파일을 생성해서 복사한 공개키를 붙여넣기
 ```
 mkdir ~/.ssh
@@ -26,7 +26,8 @@ vi ~/.ssh/authorized_keys
 * 브라우저에서 GitHub 설정페이지로 이동
   * https://github.com/settings/keys
 * New SSH key 버튼을 클릭
-* 클라이언트 컴퓨터 이름과 복사한 공개키를 붙여넣음
+* 로컬 컴퓨터 이름과 복사한 공개키를 붙여넣음
+* 이후 `https` 대신 `git` 프로토콜로 clone 할 수 있음
 
 ## Check point
 * 폴더와 파일의 퍼미션이 문제가 될 수 있음.

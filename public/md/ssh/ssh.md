@@ -18,6 +18,10 @@ ssh -N -L 3307:db.okdevtv.com:3306 ec2-user@gw.okdevtv.com
 mysql -u devuser -p -P 3307 -h 127.0.0.1
 ```
 
+## related
+* [ssh-keygen](/mib/ssh/keygen)
+* [ssh-keygen en](/mib/ssh/keygen_en)
+
 ## ref
 * Access Your Database Remotely Through an SSH Tunnel
   * https://support.cloud.engineyard.com/hc/en-us/articles/205408088-Access-Your-Database-Remotely-Through-an-SSH-Tunnel
