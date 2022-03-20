@@ -25,6 +25,23 @@ npm init vite@latest my-vue-app -- --template vue
   * svelte
   * svelte-ts
 
+## vite.config.js
+
+```js
+import { defineConfig } from 'vite'
+import vue from '@vitejs/plugin-vue'
+import path from 'path'
+
+export default defineConfig({
+  plugins: [vue()],
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, './src'),
+    },
+  }
+})
+```
+
 ## ref
 * 13 minutes Vite by Evan You
   * https://youtu.be/DkGV5F4XnfQ
