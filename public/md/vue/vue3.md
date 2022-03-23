@@ -7,6 +7,13 @@
 ## QuickStart
 * https://codesandbox.io/s/vue-3?utm_source=dotnew
 
+## related
+* [Vue Router](/mib/vue/router)
+* [Vue GA](/mib/vue/mkt)
+* [Vue Performance](/mib/vue/perf)
+* [Vuex](/mib/vue/vuex)
+* [NuxtJS](/mib/nuxt)
+* [Vue](/mib/vue)
 
 ## ref
 * Vue 3 Live Release Evan You Creator Vuejs

@@ -163,6 +163,7 @@ var app7 = new Vue({
 * [Vue Router](/mib/vue/router)
 * [Vue GA](/mib/vue/mkt)
 * [Vue Performance](/mib/vue/perf)
+* [Vuex](/mib/vue/vuex)
 * [NuxtJS](/mib/nuxt)
 
 ## example
