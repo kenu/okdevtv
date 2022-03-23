@@ -7,7 +7,7 @@
 npm init nuxt-app nuxtapp
 ```
 * Select options
-* <img src="./images/nuxtapp-init.png" alt="nuxt app init" class="img">
+* <img src="images/nuxtapp-init.png" alt="nuxt app init" class="img">
 
 ## Folder structure
 * `assets` : css, image, font 같은 정적 리소스
