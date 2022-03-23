@@ -159,9 +159,11 @@ var app7 = new Vue({
 ```
 
 ## ref
+* [Vue 3](/mib/vue/vue3)
 * [Vue Router](/mib/vue/router)
 * [Vue GA](/mib/vue/mkt)
 * [Vue Performance](/mib/vue/perf)
+* [NuxtJS](/mib/nuxt)
 
 ## example
 * 01: https://okdevtv.com/md/vue/examples/vue01.html
