@@ -37,6 +37,31 @@ sudo certbot --nginx
 echo "0 0,12 * * * root python -c 'import random; import time; time.sleep(random.random() * 3600)' && certbot renew" | sudo tee -a /etc/crontab > /dev/null
 ```
 
+## certbot renew issue
+* `certbot renew` 안되는 경우
+
+```
+certbot certonly -d v.okdevtv.com --manual --preferred-challenges dns
+```
+
+```
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Please deploy a DNS TXT record under the name
+_acme-challenge.v.okdevtv.com with the following value:
+
+oRq2CDAXdLYxyoKUNYatfQqx1KWy8M29fPSgbkhka80
+
+Before continuing, verify the record is deployed.
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Press Enter to Continue
+```
+
+* TXT 레코드 생성
+  * _acme-challenge.v.okdevtv.com
+  * oRq2CDAXdLYxyoKUNYatfQqx1KWy8M29fPSgbkhka80
+* 그리고 위에서 엔터를 누르면 자동으로 생성됨
+* https://ddil-ddil.tistory.com/67
+
 ## 참고
 * SSL Test
   * https://www.ssllabs.com/ssltest/analyze.html
