@@ -65,20 +65,20 @@ try {
       }
     )
   );
+  passport.use(new GitHubStrategy({
+      clientID: process.env['GITHUB_CLIENT_ID'],
+      clientSecret: process.env['GITHUB_CLIENT_SECRET'],
+      callbackURL: '/login/github/return'
+    },
+    function(accessToken, refreshToken, profile, cb) {
+      console.log('accessToken', accessToken);
+      return cb(null, profile);
+    })
+  );
 } catch (e) {
   console.error(e.message);
 }
 
-passport.use(new GitHubStrategy({
-    clientID: process.env['GITHUB_CLIENT_ID'],
-    clientSecret: process.env['GITHUB_CLIENT_SECRET'],
-    callbackURL: '/login/github/return'
-  },
-  function(accessToken, refreshToken, profile, cb) {
-    console.log('accessToken', accessToken);
-    return cb(null, profile);
-  })
-);
 
 router.use(cookieParser());
 router.use(bodyParser.urlencoded({ extended: false }));

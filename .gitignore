@@ -5,6 +5,7 @@
 .DS_Store
 .classpath
 .env
+*.local
 .ftpsync_settings
 .history
 .idea
