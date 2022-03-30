@@ -41,6 +41,12 @@ brew install maven
   <version>1.0-SNAPSHOT</version>
   <name>okdevtv</name>
   <url>http://maven.apache.org</url>
+
+  <properties>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+  </properties>
+
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
