@@ -7,6 +7,13 @@
 npm install vuex@next --save
 ```
 
+## Concept
+* state: Shared data itself
+* getters: Read gateway of state
+* actions: Asynchronous changing data
+* mutations: Synchronous changing data
+* modules: Fractally Scaled out group of states
+
 ## Simple Example
 ```js
 import { createApp } from 'vue'
