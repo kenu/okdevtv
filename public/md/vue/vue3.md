@@ -11,6 +11,7 @@
 * [Vue Router](/mib/vue/router)
 * [Vue GA](/mib/vue/mkt)
 * [Vue Performance](/mib/vue/perf)
+* [Pinia](/mib/vue/pinia)
 * [Vuex](/mib/vue/vuex)
 * [NuxtJS](/mib/nuxt)
 * [Vue](/mib/vue)
