@@ -15,8 +15,8 @@
 |Quick Documentation | Ctrl + Q | | F2 |  |
 |검색(형 기반의 전역 검색)<br>Go to class| Ctrl + N | | Ctrl + Shift + T |  Ctrl + , |
 |Go to symbol | Ctrl + Alt + Shift + N | | - | |
-|이전 작업 위치(이거 짱짱맨)| Ctrl + Alt + ← | | Alt + ← | Ctrl + - |
-|다음 작업 위치(반대) | Ctrl + Alt + → | | Alt + → | Shift + Ctrl + - |
+|이전 작업 위치(이거 짱짱맨)| Ctrl + Alt + ← | Alt + ←<br>Ctrl + - | Alt + ← | Ctrl + - |
+|다음 작업 위치(반대) | Ctrl + Alt + → | Alt + →<br>Ctrl + Shift + - | Alt + → | Shift + Ctrl + - |
 |코드 한 줄 혹은 선택 영역을 한 줄 위로 이동| Ctrl + Shift + ↑ | Alt + ↑ | Alt + ↑ | Alt + ↑ |
 |코드 한 줄 혹은 선택 영역을 한 줄 아래로 이동 | Ctrl + Shift + ↓ | Alt + ↓ | Alt + ↓ |  Alt + ↓ |
 |코드 한 줄 혹은 선택 영역 복사 | Ctrl + D | Ctrl + C<br>Alt + Shift + ↓ | Ctrl + D | Ctrl + C |
