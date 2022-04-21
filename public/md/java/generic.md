@@ -1,7 +1,7 @@
 # Generic Types
 * A generic type is a generic class or interface that is parameterized over types.
 
-* Generic example
+## Generic example
 
 ```java
 /**
@@ -17,7 +17,7 @@ public class Box<T> {
 }
 ```
 
-* type parameter names
+## Type parameter names
 
 ```
 E - Element (used extensively by the Java Collections Framework)
@@ -28,7 +28,7 @@ V - Value
 S,U,V etc. - 2nd, 3rd, 4th types
 ```
 
-* Multiple Type Parameters
+## Multiple Type Parameters
 
 ```java
 public interface Pair<K, V> {
@@ -51,6 +51,18 @@ public class OrderedPair<K, V> implements Pair<K, V> {
 }
 ```
 
+## Generic Types vs. Object
+```java
+MyClass<Foo> my = new MyClass<Foo>();
+Foo foo = new Foo();
 
-* ref
+Foo newFoo = my.doSomething(foo);
+Foo newFoo = (Foo) my.doSomething(foo); // Object typecasting
+```
+* Two pros:
+  * no need of casting (the compiler hides this from you)
+  * compile time safety that works.
+* https://stackoverflow.com/a/5207140/510222
+
+## ref
   * https://docs.oracle.com/javase/tutorial/java/generics/types.html
