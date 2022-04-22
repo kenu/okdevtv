@@ -11,6 +11,8 @@ const FacebookStrategy = require('passport-facebook').Strategy;
 const config = require('./configuration/config');
 
 const app = express();
+const cors = require('cors');
+app.use(cors());
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
