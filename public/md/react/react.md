@@ -43,9 +43,10 @@ ReactDOM.render(<HelloMessage name="John" />, mountNode);
 * https://ko.reactjs.org/docs/create-a-new-react-app.html
 
 ```
-npx create-react-app my-app
+npm create vite my-app -- --template react
 cd my-app
-npm start
+npm install
+npm run dev
 ```
 
 ## 새로운 페이지 추가
