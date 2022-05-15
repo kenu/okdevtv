@@ -11,6 +11,7 @@
   * Type in `OOBE\BYPASSNRO` and press Enter
   * you should see an option for `I don't have internet.`
 * Download `SPICE guest tools` iso and connect with USB drive
+  * https://mac.getutm.app/support/
 
 ## ref
 * https://mac.getutm.app/gallery/windows-11-arm
