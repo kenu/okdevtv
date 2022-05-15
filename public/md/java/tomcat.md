@@ -16,6 +16,9 @@ bin\startup.bat
   * ROOT.war
 * Maven folder structure vs. WebContent
 
+## Tomcat Architecture
+<img src="images/tomcat-architecture.png" alt="tomcat architecture">
+
 ## Eclipse(STS) Tomcat Tip
 * Server Options
   * Check `Serve modules without publishing`
