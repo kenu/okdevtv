@@ -111,3 +111,28 @@ module.exports = {
     'vue-clamp',
   ],
 ```
+
+* log
+* `Could not initialize class org.apache.maven.plugin.war.util.WebappStructureSerializer	pom.xml	/org.springframework.samples.jpetstore	line 1	Maven Configuration Problem`
+
+* solv
+
+```xml
+<plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-war-plugin</artifactId>
+    <version>3.3.1</version>
+</plugin>
+```
+* https://stackoverflow.com/a/68598931/510222
+
+* log
+* `cvc-id.3: A field of identity constraint 'web-app-servlet-name-uniqueness' matched element 'web-app', but this element does not have a simple type.	web.xml`
+
+* solv
+
+```
+xsi:schemaLocation="http://Java.sun.com/xml/ns/javaee
+```
+* web-app 태그의 sci:schemaLocation 의 java를 Java 대문자로 변경하면 해결
+* https://heekng.tistory.com/95
