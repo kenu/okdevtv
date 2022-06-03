@@ -6,19 +6,19 @@
 * https://github.com/nvm-sh/nvm#installing-and-updating
 
 ```
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 ```
 
 ## install node
 
 ```
-nvm install v14
+nvm install v16
 ```
 
 ## set default version
 
 ```
-nvm alias default v12
+nvm alias default v16
 ```
 
 ## list lts versions
