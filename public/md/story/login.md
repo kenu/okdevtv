@@ -1,6 +1,6 @@
 ## Sign Up
 
-1\. 등록
+1\. 등록 페이지
   * `GET /user/signup`
 
 2\. 확인메일 발송

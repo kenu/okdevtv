@@ -7,15 +7,15 @@
   * `sudo vi /etc/yum.repos.d/MariaDB.repo`
 
 ```
-# MariaDB 10.6 CentOS repository list
+# MariaDB 10.8 CentOS repository list
 # http://mariadb.org/mariadb/repositories/
 [mariadb]
 name = MariaDB
-baseurl = http://yum.mariadb.org/10.6/centos7-amd64
+baseurl = http://yum.mariadb.org/10.8/centos7-amd64
 gpgkey=https://yum.mariadb.org/RPM-GPG-KEY-MariaDB
 gpgcheck=1
 ```
- * CentOS 6.x는 `baseurl = http://yum.mariadb.org/10.6/centos6-amd64`
+ * CentOS 6.x는 `baseurl = http://yum.mariadb.org/10.8/centos6-amd64`
 
 
 ```
@@ -46,7 +46,8 @@ grant all on devdb.* to 'devuser'@'localhost';
 GRANT SELECT, SHOW VIEW ON devdb.* TO devuser2@localhost IDENTIFIED BY 'devpass';
 ```
 
-* role account
+* Role account
+
 ```sql
 GRANT TRIGGER, SELECT, SHOW VIEW ON devdb.* TO devuser2@localhost IDENTIFIED BY 'devpass';
 ```
@@ -79,10 +80,11 @@ order by 2 desc;
 
 ## MariaDB on ubuntu
 * https://downloads.mariadb.org/mariadb/repositories/#mirror=kaist
+
 ```
 sudo apt-get install software-properties-common
 sudo apt-key adv --recv-keys --keyserver hkp://keyserver.ubuntu.com:80 0xcbcb082a1bb943db
-sudo add-apt-repository 'deb [arch=amd64,i386,ppc64el] http://ftp.kaist.ac.kr/mariadb/repo/10.1/ubuntu trusty main'
+sudo add-apt-repository 'deb [arch=amd64,i386,ppc64el] http://ftp.kaist.ac.kr/mariadb/repo/10.8/ubuntu trusty main'
 ```
 
 ## MariaDB + node.js
