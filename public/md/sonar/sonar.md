@@ -34,7 +34,7 @@ npm i -g sonar-scanner
 * use it in `sonar.login`
 * https://docs.sonarqube.org/latest/user-guide/user-token/
 
-## JavaScript
+## JavaScript/TypeScript
 * SonarJS plugin (default installed)
 * In project root directory, `sonar-project.properties`
 
@@ -50,6 +50,7 @@ sonar.projectVersion=1.0
 # If not set, SonarQube starts looking for source code from the directory containing
 # the sonar-project.properties file.
 sonar.sources=.
+sonar.login=tokenxxxxxxxxxxxxxxxxxx
 
 # Encoding of the source code. Default is default system encoding
 #sonar.sourceEncoding=UTF-8
