@@ -3,7 +3,7 @@
 Apple WWDC 2019에서 발표된 새로운 ID 제공 업체인 `Sign In With Apple`에 대해 알아보십시오.
 
 [브루노 크렙스](https://auth0.com/blog/authors/bruno-krebs/)
-2019-06-06
+2019-06-06!!
 
 목차
 * Apple에 로그인 하시겠습니까? 왜?
