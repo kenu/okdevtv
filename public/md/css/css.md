@@ -65,7 +65,7 @@
 * 그레디언트, 그림자 효과, 투명도, 둥근 모서리 등
 * 애니메이션, 트랜지션 효과
 
-## Related
+## related
 * [Flexbox](/mib/css/flexbox)
 * [SASS](/mib/css/sass)
 
