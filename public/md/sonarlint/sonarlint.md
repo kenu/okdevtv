@@ -7,4 +7,3 @@
 ## related
 * [sonar](/mib/sonar)
 *
-*
