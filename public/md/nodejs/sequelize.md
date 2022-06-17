@@ -59,3 +59,9 @@ sequelize init
 * `seeders`, contains all seed files
 * https://sequelize.org/master/manual/migrations.html
 
+## Model
+```bash
+npx sequelize-cli model:generate --name like --attributes userId:integer,articleId:integer
+npx sequelize-cli db:migrate
+```
+* `attributes`: define attributes no spaces between fields
