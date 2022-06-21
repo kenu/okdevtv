@@ -4,7 +4,7 @@
 ## WebHook
 * https://api.slack.com/tutorials/slack-apps-hello-world
 * https://api.slack.com/apps
-  * Create Slack App
+  * Create Slack App!
   * Incoming Webhooks
   * Select channel
   * `Add New Webhook to Workspace`
