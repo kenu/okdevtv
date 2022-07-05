@@ -6,7 +6,9 @@
 * `sdk install kotlin`
 * `sdk install springboot`
 * `sdk help`
-* Windows need Cygwin or Git Bash
+* Windows need Cygwin or [Git Bash](https://git-scm.com)
+  * zip, unzip in Windows/System32 folder
+  * http://stahlworks.com/dev/index.php?tool=zipunzip
 
 ## version
 * `sdk install springboot 1.5.6.RELEASE`
