@@ -28,6 +28,14 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(frameguard({ action: 'sameorigin' }));
 app.use(express.static(path.join(__dirname, 'public')));
+
+const sess = {
+  secret: 'okdevtv cat',
+  resave: true,
+  saveUninitialized: true,
+  cookie: {}
+};
+app.use(session(sess));
 app.use(passport.initialize());
 app.use(passport.session());
 
@@ -82,17 +90,10 @@ try {
   console.error(e.message);
 }
 
-const sess = {
-  secret: 'okdevtv cat',
-  resave: true,
-  saveUninitialized: true,
-  cookie: {}
-};
 if (app.get('env') === 'production') {
   app.set('trust proxy', 1); // trust first proxy
   sess.cookie.secure = true; // serve secure cookies
 }
-app.use(session(sess));
 
 app.use('/', require('./routes/index'));
 app.use('/apis', require('./routes/apis'));
