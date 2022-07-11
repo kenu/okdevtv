@@ -23,6 +23,7 @@
     "ejs": "^3.1.7",
     "express": "~4.16.4",
     "express-session": "^1.16.1",
+    "global": "^4.4.0",
     "google-spreadsheet": "^3.0.13",
     "googleapis": "^64.0.0",
     "helmet": "^3.21.1",
@@ -37,6 +38,7 @@
     "redis": "^3.1.2",
     "sequelize": "^6.5.1",
     "serve-favicon": "^2.5.0",
+    "upgrade": "^1.1.0",
     "uuid": "^3.3.2"
   },
   "devDependencies": {
