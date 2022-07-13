@@ -14,3 +14,4 @@
 
 ## related
 * [GitHub Actions](/mib/github/actions)
+* [GitHub Verified](/mib/github/verified)
