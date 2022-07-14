@@ -1,4 +1,7 @@
-## GitHub `verified`
+## GitHub `Verified`
+* GPG 또는 S/MIME을 사용하여 로컬에서 작업에 서명 가능
+* GitHub은 이러한 서명을 확인하여 다른 사람들이 당신의 커밋이 신뢰할 수 있는 소스로부터 왔다는 것 표시
+* GitHub은 GitHub 웹 인터페이스를 사용하여 한 커밋에 자동으로 서명
 * gpg 키 생성
 * GitHub 이메일 사용
 
@@ -88,3 +91,7 @@ j7gKAP9SxmHCksD3rhA7qQUq2vNHIuwP+FRlFabNF4qUumiPDQ==
 
 * 퍼블릭 키를 GitHub Settings → SSH and GPG keys 에 등록
 * https://github.com/settings/keys
+
+## ref
+* GitHub - 소스 커밋 서명 관리
+  * https://docs.github.com/en/authentication/managing-commit-signature-verification
