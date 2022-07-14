@@ -65,3 +65,7 @@ npx sequelize-cli model:generate --name like --attributes userId:integer,article
 npx sequelize-cli db:migrate
 ```
 * `attributes`: define attributes no spaces between fields
+
+## related
+* Reverse Model
+  * https://github.com/sequelize/sequelize-auto
