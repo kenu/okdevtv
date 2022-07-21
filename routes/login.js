@@ -1,7 +1,7 @@
 const express = require('express');
 const passport = require('passport');
 const FacebookStrategy = require('passport-facebook').Strategy;
-const GitHubStrategy = require('passport-github').Strategy;
+const GitHubStrategy = require('passport-github2').Strategy;
 const user_service = require('../services/user-service');
 const session = require('express-session');
 const cookieParser = require('cookie-parser');
@@ -15,7 +15,7 @@ const pool = mysql.createPool({
   host: config.host,
   user: config.username,
   password: config.password,
-  database: config.database
+  database: config.database,
 });
 
 try {
@@ -34,9 +34,9 @@ try {
       {
         clientID: config.facebook_api_key,
         clientSecret: config.facebook_api_secret,
-        callbackURL: config.callback_url
+        callbackURL: config.callback_url,
       },
-      function (accessToken, refreshToken, profile, done) {
+      function (_accessToken, _refreshToken, profile, done) {
         process.nextTick(function () {
           //Check whether the User exists or not using profile.id
           if (config.use_database) {
@@ -49,10 +49,10 @@ try {
                   console.log('There is no such user, adding now');
                   pool.query(
                     "INSERT into user_info(user_id,user_name) VALUES('" +
-                    profile.id +
-                    "','" +
-                    profile.username +
-                    "')"
+                      profile.id +
+                      "','" +
+                      profile.username +
+                      "')"
                   );
                 } else {
                   console.log('User already exists in database');
@@ -65,20 +65,22 @@ try {
       }
     )
   );
-  passport.use(new GitHubStrategy({
-      clientID: process.env['GITHUB_CLIENT_ID'],
-      clientSecret: process.env['GITHUB_CLIENT_SECRET'],
-      callbackURL: '/login/github/return'
-    },
-    function(accessToken, refreshToken, profile, cb) {
-      console.log('accessToken', accessToken);
-      return cb(null, profile);
-    })
+  passport.use(
+    new GitHubStrategy(
+      {
+        clientID: process.env['GITHUB_CLIENT_ID'],
+        clientSecret: process.env['GITHUB_CLIENT_SECRET'],
+        callbackURL: '/login/github/return',
+      },
+      function (accessToken, _refreshToken, profile, cb) {
+        console.log('accessToken', accessToken);
+        return cb(null, profile);
+      }
+    )
   );
 } catch (e) {
   console.error(e.message);
 }
-
 
 router.use(cookieParser());
 router.use(bodyParser.urlencoded({ extended: false }));
@@ -87,7 +89,7 @@ router.use(
     secret: 'keyboard cat',
     key: 'sid',
     resave: true,
-    saveUninitialized: true
+    saveUninitialized: true,
   })
 );
 router.use(passport.initialize());
@@ -112,24 +114,37 @@ router.get(
   '/auth/facebook/callback',
   passport.authenticate('facebook', {
     successRedirect: '/',
-    failureRedirect: '/login'
+    failureRedirect: '/login',
   }),
   function (req, res) {
-    res.redirect('/');
+    let prevSession = req.session;
+    req.session.regenerate((_err) => {
+      Object.assign(req.session, prevSession);
+      res.redirect('/');
+    });
   }
 );
 
-router.get('/github',
-  passport.authenticate('github')
+router.get(
+  '/github',
+  passport.authenticate('github', { scope: ['user:email'] })
 );
 
-router.get('/github/return',
-  passport.authenticate('github', { failureRedirect: '/login' }),
-  async function(req, res) {
-    const result = await user_service.signupByGitHub(req.user._json);
+router.get(
+  '/github/return',
+  passport.authenticate('github', {
+    failureRedirect: '/login',
+    scope: ['user:email'],
+  }),
+  async function (req, res) {
+    await user_service.signupByGitHub(req.user._json);
     req.session.user = req.user._json.email;
-    res.redirect('/');
-});
+    req.session.regenerate((_err) => {
+      Object.assign(req.session, prevSession);
+      res.redirect('/');
+    });
+  }
+);
 
 router.get('/logout', function (req, res) {
   req.logout();

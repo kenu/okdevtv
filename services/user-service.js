@@ -1,42 +1,52 @@
 const knex = require('../lib/knex');
 const mail = require('../lib/mail');
 const uuidv4 = require('uuid/v4');
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 
-async function hashPassword(password) {
+function hashPassword(password) {
   const saltRounds = 10;
-  const hashedPassword = await new Promise((resolve, reject) => {
+  return new Promise((resolve, reject) => {
     bcrypt.hash(password, saltRounds, function (err, hash) {
       if (err) reject(err);
       resolve(hash);
     });
   });
-  return hashedPassword;
 }
 
 module.exports = {
   signupByGitHub: async function (github) {
+    console.log(github);
     const email = github.email;
     // check duplication
-    const result = await knex.raw(`select email from user where email = ?`, [email.trim()]);
+    const result = await knex.raw(`select email from user where email = ?`, [
+      email.trim(),
+    ]);
     let changedRows = 0;
     if (result[0].length > 0) {
       const update_account = `update user set github = ?, updated_at = now() where email = ?;`;
-      const result2 = await knex.raw(update_account, [JSON.stringify(github), email]);
+      const result2 = await knex.raw(update_account, [
+        JSON.stringify(github),
+        email,
+      ]);
       changedRows = result2[0].changedRows;
     } else {
       const insert_account = `insert into user (seq, email, github, created_at)
       values (null, ?, ?, now());`;
-      const result2 = await knex.raw(insert_account, [email, JSON.stringify(github)]);
+      const result2 = await knex.raw(insert_account, [
+        email,
+        JSON.stringify(github),
+      ]);
       changedRows = result2[0].changedRows;
     }
     return changedRows;
   },
   signupByEmail: async function (email) {
     // check duplication
-    const result = await knex.raw(`select email from user where email = ?`, [email.trim()]);
+    const result = await knex.raw(`select email from user where email = ?`, [
+      email.trim(),
+    ]);
     if (result[0].length > 0) {
-      throw { msg: 'duplicate email' };
+      throw new Error('duplicate email');
     }
 
     // check recent
@@ -46,7 +56,7 @@ module.exports = {
         and timediff(now(), created_at) < '00:05:00';`;
     const result_recent = await knex.raw(sql_recent, [email.trim()]);
     if (result_recent[0][0]['cnt'] > 0) {
-      throw { msg: 'email sent already' };
+      throw new Error('email sent already');
     }
 
     // generate uuid
@@ -63,17 +73,18 @@ module.exports = {
     console.log(send_result);
 
     // save sending info
-    const save_result = await knex.raw(
+    return knex.raw(
       `insert into user_candidate
-(seq, email, uuid, created_at) values (null, ?, ?, now());`, [email, uuid]);
-    return save_result;
+(seq, email, uuid, created_at) values (null, ?, ?, now());`,
+      [email, uuid]
+    );
   },
   setUpAccount: async (hash) => {
     const query = `select * from user_candidate
 where uuid = ? and finish != 'Y';`;
     const result = await knex.raw(query, [hash]);
     if (result[0].length == 0) {
-      throw { msg: `invalid code` };
+      throw new Error(`invalid code`);
     }
     const { seq, email, reset } = result[0][0];
 
@@ -83,25 +94,21 @@ where uuid = ? and finish != 'Y';`;
       await knex.raw(query_account, [email]);
     }
 
-    const query_finish_candidate =
-      `update user_candidate set finish = 'P', finished_at = now() where seq = ?;`;
-    const result_finish = await knex.raw(query_finish_candidate, [seq]);
-
-    return result_finish;
+    const query_finish_candidate = `update user_candidate set finish = 'P', finished_at = now() where seq = ?;`;
+    return knex.raw(query_finish_candidate, [seq]);
   },
   setUpPassword: async ({ password, password_confirm, hash }) => {
-
     if (password.length < 8) {
-      throw '비밀번호는 8자리 이상으로 해주세요.';
+      throw new Error('비밀번호는 8자리 이상으로 해주세요.');
     }
     if (password !== password_confirm) {
-      throw '입력하신 두 비밀번호가 다릅니다.';
+      throw new Error('입력하신 두 비밀번호가 다릅니다.');
     }
     const crypted_password = await hashPassword(password);
     const query_account = `select seq, email, reset from user_candidate where uuid = ?`;
     const result_account = await knex.raw(query_account, [hash]);
     if (result_account[0].length === 0) {
-      throw 'email 주소를 찾을 수 없습니다.';
+      throw new Error('email 주소를 찾을 수 없습니다.');
     }
 
     const { seq, email, reset } = result_account[0][0];
@@ -111,17 +118,17 @@ where uuid = ? and finish != 'Y';`;
     const result = await knex.raw(query, [crypted_password, email]);
 
     const query_finish = `update user_candidate set finish='Y', finished_at = now()
-        where seq = ?;`
+        where seq = ?;`;
     await knex.raw(query_finish, [seq]);
 
     return { result, reset };
   },
   changePassword: async ({ password, password_confirm, email }) => {
     if (password.length < 8) {
-      throw '비밀번호는 8자리 이상으로 해주세요.';
+      throw new Error('비밀번호는 8자리 이상으로 해주세요.');
     }
     if (password !== password_confirm) {
-      throw '입력하신 두 비밀번호가 다릅니다.';
+      throw new Error('입력하신 두 비밀번호가 다릅니다.');
     }
     const crypted_password = await hashPassword(password);
 
@@ -136,11 +143,10 @@ where uuid = ? and finish != 'Y';`;
     const query = `select seq, passwd from user where email = ?`;
     const result = await knex.raw(query, [email]);
     if (result[0].length === 0) {
-      throw '등록되지 않은 사용자입니다.';
+      throw new Error('등록되지 않은 사용자입니다.');
     }
     const hashedPassword = result[0][0].passwd;
-    const match = await bcrypt.compare(password, hashedPassword);
-    return match;
+    return bcrypt.compare(password, hashedPassword);
   },
   resetPassword: async (email) => {
     // generate uuid
@@ -157,9 +163,10 @@ where uuid = ? and finish != 'Y';`;
     console.log(send_result);
 
     // save sending info
-    const save_result = await knex.raw(
+    return knex.raw(
       `insert into user_candidate
-(seq, email, uuid, created_at, reset) values (null, ?, ?, now(), 'Y');`, [email, uuid]);
-    return save_result;
-  }
-}
+(seq, email, uuid, created_at, reset) values (null, ?, ?, now(), 'Y');`,
+      [email, uuid]
+    );
+  },
+};
