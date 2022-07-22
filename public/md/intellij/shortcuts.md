@@ -1,7 +1,15 @@
 # 단축키 비교표<br>IntelliJ, VSCode, Eclipse, Visual Studio
+// add please your shortcut here
+[]: # Language: markdown
+[]: # Path: public/md/intellij/style.md
+* 우측상단
+* 한줄만 추가해 주세요. 당신의 단축키
+* 기억 안남 천천히 추가해 주세요.
+* 편집은 제가 할게요.
 
 |**기능** |**IntelliJ**| **VSCode** |**Eclipse** | **VS** |
 |---|---|---|---|--|
+|블럭 선택 | Ctrl + Alt + Ins | Ctrl + Alt + Up(Dn) | Alt + Shift + A |
 |자동 완성, 인텔리센스 |Ctrl + Space | | Ctrl + Space | Alt + Right |
 |SmartType code completion | Ctrl + Shift + Space | | - | |
 |Reformat, Code Tidy | Ctrl + Alt + L | Ctrl + Alt + F | Ctrl + Shift + F | |
