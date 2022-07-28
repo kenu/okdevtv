@@ -25,7 +25,7 @@
 * 빌드 결과 메시지 웹훅([slackbot](/mib/slack), [jandibot](/mib/jandi))
 
 ## 전: 개발 진행
-* 점진적 개발(Sprint)
+* 점진적 개발([Sprint](https://docs.google.com/presentation/d/1icF44HQUgApBL4Fiv4pChOrGY1Shlxj3/edit#slide=id.p25))
 * 기능 테스트
 * 사이드 이펙트 감지
 * 버그, 취약점 수정([SonarQube](/mib/sonar), [ZAP](/mib/zap))
