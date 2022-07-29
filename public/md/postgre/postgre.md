@@ -3,12 +3,15 @@
 * object-relational database
 
 ## Install
-* mac : `brew install postgresql`
+* mac: `brew install postgresql`
+* aws:
 * `sudo vi /etc/yum.repos.d/postgresql.repo`
 * `sudo yum install postgresql-server`
 * `sudo systemctl start postgresql`
-* `sudo postgresql-setup initdb`
 * `sudo systemctl enable postgresql`
+
+## Config
+* `sudo postgresql-setup initdb`
 * `sudo vi /var/lib/pgsql/data/pg_hba.conf`
 * `sudo vi /var/lib/pgsql/data/postgresql.conf`
 * `sudo systemctl restart postgresql`
