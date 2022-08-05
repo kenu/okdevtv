@@ -4,7 +4,7 @@
 ## 설치
 
 ```
-npm install --save vue-router
+npm install vue-router
 ```
 
 ## 사용

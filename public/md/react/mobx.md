@@ -3,8 +3,8 @@
 * Simple, scalable state management.
 
 ## 설치
-* `npm install --save mobx`
-* `npm install --save mobx-react`
+* `npm install mobx`
+* `npm install mobx-react`
 
 ## Quick example
 ```js

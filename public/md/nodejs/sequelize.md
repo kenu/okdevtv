@@ -4,18 +4,18 @@
 
 ## Install
 ```
-npm i -S sequelize
+npm i sequelize
 ```
 * 해당 DB 라이브러리 추가 설치
 
 ```
 # One of the following:
-$ npm install --save pg pg-hstore # Postgres
-$ npm install --save mysql2
+$ npm install pg pg-hstore # Postgres
+$ npm install mysql2
 
-$ npm install --save mariadb
-$ npm install --save sqlite3
-$ npm install --save tedious # Microsoft SQL Server
+$ npm install mariadb
+$ npm install sqlite3
+$ npm install tedious # Microsoft SQL Server
 ```
 
 ## Quick start

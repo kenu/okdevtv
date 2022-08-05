@@ -10,7 +10,7 @@ npx create-react-app my-app --template typescript
 * 기존 프로젝트에 추가
 
 ```
-npm install --save typescript @types/node @types/react @types/react-dom @types/jest
+npm install typescript @types/node @types/react @types/react-dom @types/jest
 ```
 
 * Person.tsx

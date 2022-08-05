@@ -63,7 +63,7 @@ Authorization: Bearer <token>
 ## example
 
 * code from https://www.jsonwebtoken.io/
-* `npm i --save njwt`
+* `npm i njwt`
 
 ```js
 var uuid = require('uuid');

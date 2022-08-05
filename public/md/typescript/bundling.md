@@ -54,7 +54,7 @@ mkdir list-jquery
 cd list-jquery
 tsc --init
 npm init -y
-npm i --save @types/jquery @types/underscore jquery underscore
+npm i @types/jquery @types/underscore jquery underscore
 npm i --save-dev html-webpack-plugin ts-loader typescript webpack uglifyjs-webpack-plugin
 ```
 
@@ -65,7 +65,7 @@ mkdir list-angularjs
 cd list-angularjs
 tsc --init
 npm init -y
-npm i --save @types/angular @types/underscore angular underscore
+npm i @types/angular @types/underscore angular underscore
 npm i --save-dev html-webpack-plugin ts-loader typescript webpack uglifyjs-webpack-plugin
 ```
 

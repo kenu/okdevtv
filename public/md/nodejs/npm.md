@@ -15,7 +15,7 @@ npm i 모듈명
 * `package.json` 모듈 추가
 
 ```
-npm install --save 모듈명
+npm install 모듈명
 ```
 
 * 글로벌 설치

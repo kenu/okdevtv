@@ -25,8 +25,8 @@
   "description": "my first socket.io app",
   "dependencies": {}
 }
-</code></pre><p>이제, 필요한 것을 쉽게 <code>dependencies</code>에 추가하기 위해서, <code>npm install --save </code>를 사용하겠습니다:</p><pre><code data-origin="&lt;pre&gt;&lt;code&gt;npm install --save express
-&lt;/code&gt;&lt;/pre&gt;">npm install --save express
+</code></pre><p>이제, 필요한 것을 쉽게 <code>dependencies</code>에 추가하기 위해서, <code>npm install </code>를 사용하겠습니다:</p><pre><code data-origin="&lt;pre&gt;&lt;code&gt;npm install express
+&lt;/code&gt;&lt;/pre&gt;">npm install express
 </code></pre><p>express가 설치되었으므로 우리 애플리케이션을 만들기 위한 <code>index.js</code> 파일을 만들 수 있습니다.</p><pre><code class="lang-javascript hljs" data-origin="&lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;var app = require('express')();
 var http = require('http').Server(app);
 
@@ -107,8 +107,8 @@ http.listen(3000, function(){
 <img src="https://i.cloudup.com/985FgSH2HQ.png" alt=""></p><h3 id="socket.io와-통합하기"><a name="socket.io와-통합하기" href="#socket.io와-통합하기"></a>Socket.IO와 통합하기</h3><p>Socket.IO는 두 가지로 이루어져 있습니다:</p><ul>
 <li>Node.JS HTTP 서버에(또는 기반해서) 통합되는 서버: <code>socket.io</code></li>
 <li>브라우저에서 실행되는 클라이언트 라이브러리: <code>socket.io-client</code></li>
-</ul><p>개발하는 동안, <code>socket.io</code>는 클라이언트를 자동으로 제공해주기 때문에, 곧 알게 될 것입니다. 지금은 모듈 하나를 더 추가하기만 하면 됩니다:</p><pre><code data-origin="&lt;pre&gt;&lt;code&gt;npm install --save socket.io
-&lt;/code&gt;&lt;/pre&gt;">npm install --save socket.io
+</ul><p>개발하는 동안, <code>socket.io</code>는 클라이언트를 자동으로 제공해주기 때문에, 곧 알게 될 것입니다. 지금은 모듈 하나를 더 추가하기만 하면 됩니다:</p><pre><code data-origin="&lt;pre&gt;&lt;code&gt;npm install socket.io
+&lt;/code&gt;&lt;/pre&gt;">npm install socket.io
 </code></pre><p>모듈이 설치되고, <code>package.json</code>에 의존성이 추가될 것입니다. 이제 index.js 파일을 수정해서 다음을 추가합니다:</p><pre><code class="lang-javascript hljs" data-origin="&lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;var app = require('express')();
 var http = require('http').Server(app);
 var io = require('socket.io')(http);

@@ -5,7 +5,7 @@
 
 ## npm install
 ```
-npm i -S swiper@5 vue-awesome-swiper
+npm i swiper@5 vue-awesome-swiper
 ```
 * swiper@6 에서 많이 변경됨 #주의필요
 
