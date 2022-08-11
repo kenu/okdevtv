@@ -70,7 +70,7 @@
         <li><a href="/#about">About</a></li>
         <li><a href="/#two">Who I Am</a></li>
         <li><a href="/#work">My Work</a></li>
-        <li><a href="/#contact">Send Tip</a></li>
+        <li><a href="/#contact">Contact</a></li>
         <li>
           <% if (user) { %>
             <a href="/user/mypage">My Page</a>
@@ -186,7 +186,7 @@
         함께 보면서 리뷰합니다.
       </p>
       <div id="utv">
-        <iframe width="420" height="315" src="https://www.youtube.com/embed/jQOZgJLlw84" allowfullscreen></iframe>
+        <iframe width="420" height="315" src="https://www.youtube.com/embed/jQOZgJLlw84" allowfullscreen title="OKdevTV"></iframe>
       </div>
       <footer>
         <a href="#one" class="button style2 down">More</a>
@@ -248,7 +248,7 @@
             </a>
           </div>
           <div class="6u">
-            <a href="images/fulls/khcu-html5.jpg" class="image full r">
+            <a href="images/fulls/khcu-html5.jpg?l" class="image full r">
               <img src="images/thumbs/02.jpg"
                 title="<a href='https://www.facebook.com/khcumobile'>경희사이버대학 모바일융합학과 HTML5</a>"
                 alt="경희사이버대학 모바일융합학과 HTML5" />
@@ -262,7 +262,7 @@
             </a>
           </div>
           <div class="6u">
-            <a href="images/fulls/okdevtv.jpg" class="image full l">
+            <a href="images/fulls/okdevtv.jpg?l" class="image full l">
               <img src="images/thumbs/okdevtv.jpg" title="OKdevTV" alt="OKdevTV.com" />
             </a>
           </div>
@@ -275,17 +275,10 @@
   <section id="contact" class="main style3 secondary">
     <div class="content container">
       <header>
-        <h2>Say Tip.</h2>
-        <p>공유하고 싶은 팁이 있다면 알려주세요. (email은 비공개)</p>
+        <h2>Contact</h2>
+        <p>Say What You Want (email은 비공개)</p>
       </header>
       <div class="box container small">
-        <!--
-							 Contact Form
-
-							 To get this working, place a script on your server to receive the form data, then
-							 point the "action" attribute to it (eg. action="http://mydomain.tld/mail.php").
-							 More on how it all works here: http://www.1stwebdesigner.com/tutorials/custom-php-contact-forms/
-						-->
         <form method="post" id="form">
           <div class="row half">
             <div class="12u" id="result"></div>
