@@ -45,3 +45,5 @@ export default defineConfig({
 ## ref
 * 13 minutes Vite by Evan You
   * https://youtu.be/DkGV5F4XnfQ
+* CRA 2 Vite
+  * https://okdevtv.com/mib/vite/cra
