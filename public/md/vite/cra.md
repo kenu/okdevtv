@@ -6,11 +6,13 @@
 4. vite 추가
 `yarn add vite @vitejs/plugin-react -D`
 5. node-sass 제거, sass 추가
+
 ```
 yarn remove node-sass
 yarn add sass -D
 ```
 6. vite.config.ts 추가
+
 ```js
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
@@ -25,19 +27,23 @@ export default defineConfig({
   },
 })
 ```
+
 7. package.json 에 scripts 수정
   * react-scripts 삭제
   * vite 추가
+
 ```
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
 ```
 8. tsconfig.json 의 es5 수정
+
 ```
   * "target": "es6",
 ```
 9. index.html 위치 변경, `%PUBLIC_URL%` 삭제, `script` 추가
+
 ```html
     <div id="root"></div>
     <script type="module" src="/src/index.jsx"></script>
@@ -53,6 +59,7 @@ export default defineConfig({
 14. build용 tsc-silent 추가
   * yarn add tsc-silent -D
   * package.json 수정
+
 ```
   "scripts": {
     "dev": "vite",
@@ -62,6 +69,7 @@ export default defineConfig({
 15. vite-plugin-babel-macros 설치
   * `yarn add vite-plugin-babel-macros -D`
   * vite.config.ts 추가
+
 ```
 import macrosPlugin from "vite-plugin-babel-macros";
 ...
@@ -70,6 +78,7 @@ import macrosPlugin from "vite-plugin-babel-macros";
 
 16. outDir to build
 * vite.config.ts
+
 ```
   build: {
     outDir: "build",
