@@ -1,7 +1,7 @@
 # CloudFoundry
 
 * Pivotal 클라우드 서비스
-* 
+*
 
 
 ## Download and install
@@ -13,7 +13,7 @@
 
 
 
-## References
+## ref
 
 * Getting Started
   * http://docs.cloudfoundry.org

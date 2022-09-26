@@ -35,13 +35,13 @@
 ### 기본 명령
 * git flow 시작
   * `git flow init`
-* feature/okfeature11 브랜치 따기 
+* feature/okfeature11 브랜치 따기
   * `git flow feature start okfeature11`
 * feature/okfeature11 브랜치 종료하고 부모 브랜치에 머지
   * `git flow feature finish okfeature11`
 
 
-## References
+## ref
 * http://nvie.com/posts/a-successful-git-branching-model/
   * 번역 http://hundredin.net/2014/04/06/a-successful-git-branching-model/
 * https://github.com/nvie/gitflow
@@ -49,5 +49,4 @@
   * https://git-scm.com/book/ko/v1/Git-브랜치-리모트-브랜치
 * git flow
   * http://ohgyun.com/402
-  
-  
+

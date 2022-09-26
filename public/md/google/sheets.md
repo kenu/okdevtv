@@ -25,7 +25,7 @@ npm i google-spreadsheet --save
 
 * Add Service Account email to SpreadSheets permission list
 
-## Ref
+## ref
 * Reading & Writing Cell Values
   * https://developers.google.com/sheets/api/guides/values#node.js_4
 * Writing to Google Sheets using Node JS

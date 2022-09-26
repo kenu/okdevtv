@@ -24,5 +24,5 @@ sudo echo "<?php phpinfo(); ?>" > php.php
 open http://localhost/php.php
 ```
 
-## Ref
+## ref
 https://coolestguidesontheplanet.com/get-apache-mysql-php-and-phpmyadmin-working-on-osx-10-11-el-capitan/
