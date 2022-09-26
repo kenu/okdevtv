@@ -32,10 +32,10 @@ head -n 3 file | tail -n 1
 ## File opened count
 * `lsof | wc -l`
 
-## inode file rm
+## inode file rm (too long file name)
 
 ```
-ls -altri
+ls -il
 find . -inum 782263 -exec rm -i {} \;
 ```
 
