@@ -38,7 +38,9 @@ EOF
 
 ## related
 * [VSCode Debug](/mib/vscode/debug)
+* [VSCode Snippet](/mib/vscode/snippet)
 * [VSCode Online](/mib/vscode/online)
+* [Plugin 수동 설치 vsix](/mib/vscode/vsix)
 * [VSCode Plugin](/mib/vscode/plugin)
 
 ## ref
