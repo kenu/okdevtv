@@ -6,7 +6,7 @@ const user_service = require('../services/user-service');
 const session = require('express-session');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
-const config = require('../configuration/config');
+const config = require('../config/config');
 const mysql = require('mysql');
 const router = express.Router();
 

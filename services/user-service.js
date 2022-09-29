@@ -42,42 +42,47 @@ module.exports = {
   },
   signupByEmail: async function (email) {
     // check duplication
-    const result = await knex.raw(`select email from user where email = ?`, [
-      email.trim(),
-    ]);
-    if (result[0].length > 0) {
-      throw new Error('duplicate email');
+    try {
+      const result = await knex.raw(`select email from user where email = ?`, [
+        email.trim(),
+      ]);
+      if (result[0].length > 0) {
+        throw new Error('duplicate email');
+      }
+
+      // check recent
+      const sql_recent = `select count(*) as cnt
+          from user_candidate
+          where email = ? and finish = 'N'
+          and timediff(now(), created_at) < '00:05:00';`;
+      const result_recent = await knex.raw(sql_recent, [email.trim()]);
+      if (result_recent[0][0]['cnt'] > 0) {
+        throw new Error('email sent already');
+      }
+
+      // generate uuid
+      const uuid = uuidv4();
+      const message = `
+      <p>안녕하세요. OKdevTV 가입 안내 메일입니다.</p>
+          <p>아래 링크 페이지로 오셔서 가입을 완료하실 수 있습니다.</p>
+          <p><a href="https://okdevtv.com/user/setup?q=${uuid}" target="_blank">
+          https://okdevtv.com/user/setup?q=${uuid}</a></p>
+          <p></p><p>- Kenu @ OKdevTV</p>`;
+
+      // send email
+      const send_result = await mail.send(email, message);
+      console.log(send_result);
+
+      // save sending info
+      return knex.raw(
+        `insert into user_candidate
+  (seq, email, uuid, created_at) values (null, ?, ?, now());`,
+        [email, uuid]
+      );
+    } catch (error) {
+      console.error(error);
+      throw error;
     }
-
-    // check recent
-    const sql_recent = `select count(*) as cnt
-        from user_candidate
-        where email = ? and finish = 'N'
-        and timediff(now(), created_at) < '00:05:00';`;
-    const result_recent = await knex.raw(sql_recent, [email.trim()]);
-    if (result_recent[0][0]['cnt'] > 0) {
-      throw new Error('email sent already');
-    }
-
-    // generate uuid
-    const uuid = uuidv4();
-    const message = `
-        <p>안녕하세요. OKdevTV 가입 안내 메일입니다.</p>
-        <p>아래 링크 페이지로 오셔서 가입을 완료하실 수 있습니다.</p>
-        <p><a href="https://okdevtv.com/user/setup?q=${uuid}" target="_blank">
-        https://okdevtv.com/user/setup?q=${uuid}</a></p>
-        <p></p><p>- Kenu @ OKdevTV</p>`;
-
-    // send email
-    const send_result = await mail.send(email, message);
-    console.log(send_result);
-
-    // save sending info
-    return knex.raw(
-      `insert into user_candidate
-(seq, email, uuid, created_at) values (null, ?, ?, now());`,
-      [email, uuid]
-    );
   },
   setUpAccount: async (hash) => {
     const query = `select * from user_candidate

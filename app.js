@@ -8,7 +8,7 @@ const bodyParser = require('body-parser');
 const frameguard = require('frameguard');
 const passport = require('passport');
 const FacebookStrategy = require('passport-facebook').Strategy;
-const config = require('./configuration/config');
+const config = require('./config/config');
 
 const app = express();
 const cors = require('cors');
@@ -99,6 +99,7 @@ app.use('/', require('./routes/index'));
 app.use('/apis', require('./routes/apis'));
 app.use('/user', require('./routes/user'));
 app.use('/users', require('./routes/users'));
+app.use('/hq', require('./routes/hq'));
 app.use('/login', require('./routes/login'));
 app.use('/mib*', require('./routes/mib'));
 

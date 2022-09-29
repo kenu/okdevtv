@@ -18,11 +18,11 @@ router.post('/signup', async function (req, res) {
       status = 'ok';
     }
   } catch (e) {
-    msg = e.msg;
+    msg = e.message;
   }
   let result = {
     status: status,
-    data: email
+    msg: msg,
   }
   if (msg) {
     result.msg = msg;
@@ -37,7 +37,7 @@ router.get('/setup', async function (req, res) {
     const result = await user_service.setUpAccount(hash);
     console.log(result);
   } catch (e) {
-    msg = e.msg;
+    msg = e.message;
   }
   if (msg) {
     res.render('error', { message: msg });
@@ -62,7 +62,7 @@ router.post('/setup', async function (req, res) {
       status = 'ok';
     }
   } catch (e) {
-    msg = e.msg;
+    msg = e.message;
     console.log(e);
   }
   let result = {
@@ -91,7 +91,7 @@ router.post('/change_password', async function (req, res) {
       msg = 'login이 필요합니다.';
     }
   } catch (e) {
-    msg = e.msg;
+    msg = e.message;
     console.log(e);
   }
   let result = {
@@ -117,7 +117,7 @@ router.post('/reset_password', async function (req, res) {
       status = 'ok';
     }
   } catch (e) {
-    msg = e.msg;
+    msg = e.message;
   }
   let result = {
     status: status,

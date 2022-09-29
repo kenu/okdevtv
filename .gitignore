@@ -24,3 +24,4 @@ package-lock.json
 target
 token.json
 yarn.lock
+*config.json
