@@ -9,6 +9,11 @@ const frameguard = require('frameguard');
 const passport = require('passport');
 const FacebookStrategy = require('passport-facebook').Strategy;
 const config = require('./config/config');
+const Sentry = require("@sentry/node");
+Sentry.init({
+  dsn: "https://97d7b2e6ec3341f0b98ab3c50de2a3e2@o1431453.ingest.sentry.io/4503895780753408",
+  tracesSampleRate: 1.0,
+});
 
 const app = express();
 const cors = require('cors');
@@ -104,29 +109,19 @@ app.use('/login', require('./routes/login'));
 app.use('/mib*', require('./routes/mib'));
 
 // catch 404 and forward to error handler
-app.use(function (_req, _res, next) {
-  const err = new Error('Not Found');
+app.use(function (_req, res) {
+  const err = new Error('Page Not Found');
   err.status = 404;
-  next(err);
+  res.render('error', {
+    message: err.message,
+    error: {}
+  });
 });
 
 // error handlers
-
-// development error handler
-// will print stacktrace
-if (app.get('env') === 'development') {
-  app.use(function (err, _req, res) {
-    res.status(err.status || 500);
-    res.render('error', {
-      message: err.message,
-      error: err
-    });
-  });
-}
-
-// production error handler
 // no stacktraces leaked to user
 app.use(function (err, _req, res) {
+  Sentry.captureException(err);
   res.status(err.status || 500);
   res.render('error', {
     message: err.message,
