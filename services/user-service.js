@@ -62,11 +62,12 @@ module.exports = {
 
       // generate uuid
       const uuid = uuidv4();
+      const url = process.env.BASE_URL;
       const message = `
       <p>안녕하세요. OKdevTV 가입 안내 메일입니다.</p>
           <p>아래 링크 페이지로 오셔서 가입을 완료하실 수 있습니다.</p>
-          <p><a href="https://okdevtv.com/user/setup?q=${uuid}" target="_blank">
-          https://okdevtv.com/user/setup?q=${uuid}</a></p>
+          <p><a href="${url}/user/setup?q=${uuid}" target="_blank">
+          ${url}/user/setup?q=${uuid}</a></p>
           <p></p><p>- Kenu @ OKdevTV</p>`;
 
       // send email
@@ -156,11 +157,12 @@ where uuid = ? and finish != 'Y';`;
   resetPassword: async (email) => {
     // generate uuid
     const uuid = uuidv4();
+    const url = process.env.BASE_URL;
     const message = `
         <p>안녕하세요. OKdevTV 비밀번호 변경 메일입니다.</p>
         <p>아래 링크 페이지로 오셔서 비밀번호를 변경하실 수 있습니다.</p>
-        <p><a href="https://okdevtv.com/user/setup?q=${uuid}" target="_blank">
-        https://okdevtv.com/user/setup?q=${uuid}</a></p>
+        <p><a href="${url}/user/setup?q=${uuid}" target="_blank">
+        ${url}/user/setup?q=${uuid}</a></p>
         <p></p><p>- Kenu @ OKdevTV</p>`;
 
     // send email
