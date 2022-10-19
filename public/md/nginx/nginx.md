@@ -96,21 +96,16 @@ server {
 
 ```
 server {
-    listen         80;
-    server_name    okdevtest.net www.okdevtest.net;
-    return         307 https://$host$request_uri;
+    server_name  www.okdevtest.net;
+    rewrite ^(.*) http://okdevtest.net$1 permanent;
 }
 
 server {
     listen 443 ssl;
-    server_name www.okdevtest.net okdevtest.net;
-
-    if ($host = 'www.okdevtest.net' ) {
-        rewrite  ^/(.*)$  http://okdevtest.net/$1  permanent;
-    }
+    server_name okdevtest.net;
 ```
 
-* from: https://rsec.kr/?p=182
+* from: https://stackoverflow.com/a/7958540/510222 , https://rsec.kr/?p=182
 
 ## 관련
 * nginx detailed https://okdevtv.com/mib/nginx/nginx-detail
