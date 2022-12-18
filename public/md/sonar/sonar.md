@@ -71,6 +71,17 @@ sonar.sourceEncoding=UTF-8
 sonar.login=tokenxxxxxxxxxxxxxxxxxx
 ```
 
+## Python
+* In project root directory, `sonar-project.properties`
+
+```
+sonar.projectKey=swlabs:django
+sonar.projectName=django
+sonar.sources=.
+sonar.language=py
+sonar.login=tokenxxxxxxxxxxxxxxxxxx
+```
+
 ## CPP
 * Community Plugin sonar-cxx-plugin
 * https://github.com/SonarOpenCommunity/sonar-cxx
