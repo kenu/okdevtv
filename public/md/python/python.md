@@ -69,6 +69,9 @@ backend: TkAgg
 * Unofficial Windows Binaries for Python Extension Packages
   * http://www.lfd.uci.edu/~gohlke/pythonlibs/#scipy
 ## ref
+* Python Style Guide(PEP8)
+  * https://peps.python.org/pep-0008/
+  * https://okdevtv.com/mib/python/pep8
 * 생활코딩 Python & Ruby
   * https://opentutorials.org/course/1750
 * Tutoiral Point Python
