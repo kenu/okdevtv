@@ -10,58 +10,35 @@
 Introduction
 ============
 
-This document gives coding conventions for the Python code comprising
-the standard library in the main Python distribution.  Please see the
-companion informational PEP describing :pep:`style guidelines for the C code
-in the C implementation of Python <7>`.
+이 문서는 기본 Python 배포판의 표준 라이브러리를 구성하는 Python 코드에 대한 코딩 규칙을 제공합니다. [Python의 C 구현에서 C 코드에 대한 스타일 지침](https://peps.python.org/pep-0007)을 설명하는 동반자 정보 PEP를 참조하십시오 .
 
-This document and :pep:`257` (Docstring Conventions) were adapted from
-Guido's original Python Style Guide essay, with some additions from
-Barry's style guide [2]_.
+This document and [PEP 257](https://peps.python.org/pep-0257) (Docstring Conventions) were adapted from Guido’s original Python Style Guide essay, with some additions from Barry’s style guide [[2](https://peps.python.org/pep-0008/#id6)].
 
-This style guide evolves over time as additional conventions are
-identified and past conventions are rendered obsolete by changes in
-the language itself.
+이 스타일 가이드는 추가 규칙이 식별되고 과거 규칙이 언어 자체의 변경으로 인해 쓸모없게 됨에 따라 시간이 지남에 따라 발전합니다.
 
-Many projects have their own coding style guidelines. In the event of any
-conflicts, such project-specific guides take precedence for that project.
+많은 프로젝트에는 자체 코딩 스타일 지침이 있습니다. 충돌이 있는 경우 해당 프로젝트에 대한 해당 프로젝트별 가이드가 우선합니다.
 
 
-A Foolish Consistency is the Hobgoblin of Little Minds
+어리석은 일관성은 작은 마음의 홉고블린입니다.
 ======================================================
 
-One of Guido's key insights is that code is read much more often than
-it is written.  The guidelines provided here are intended to improve
-the readability of code and make it consistent across the wide
-spectrum of Python code.  As :pep:`20` says, "Readability counts".
+Guido의 핵심 통찰력 중 하나는 코드가 작성된 것보다 훨씬 더 자주 읽힌다는 것입니다. 여기에 제공된 지침은 코드의 가독성을 개선하고 광범위한 Python 코드에서 일관성을 유지하기 위한 것입니다. [PEP 20](https://peps.python.org/pep-0020) 이 말했듯 이 "가독성이 중요합니다".
 
-A style guide is about consistency.  Consistency with this style guide
-is important.  Consistency within a project is more important.
-Consistency within one module or function is the most important.
+스타일 가이드는 일관성에 관한 것입니다. 이 스타일 가이드와의 일관성이 중요합니다. 프로젝트 내 일관성이 더 중요합니다. 하나의 모듈 또는 기능 내에서 일관성이 가장 중요합니다.
 
-However, know when to be inconsistent -- sometimes style guide
-recommendations just aren't applicable.  When in doubt, use your best
-judgment.  Look at other examples and decide what looks best.  And
-don't hesitate to ask!
+그러나 일관성이 없어야 할 때를 알아야 합니다. 때로는 스타일 가이드 권장 사항이 적용되지 않을 수 있습니다. 의심스러운 경우 최선의 판단을 사용하십시오. 다른 예를 보고 가장 잘 보이는 것을 결정하십시오. 그리고 주저하지 말고 물어보세요!
 
-In particular: do not break backwards compatibility just to comply with
-this PEP!
+특히: 이 PEP를 준수하기 위해 이전 버전과의 호환성을 중단하지 마십시오!
 
-Some other good reasons to ignore a particular guideline:
+특정 지침을 무시해야 하는 다른 좋은 이유:
 
-1. When applying the guideline would make the code less readable, even
-   for someone who is used to reading code that follows this PEP.
+1. 가이드라인을 적용하면 이 PEP를 따르는 코드를 읽는 데 익숙한 사람이라도 코드의 가독성이 떨어집니다.
 
-2. To be consistent with surrounding code that also breaks it (maybe
-   for historic reasons) -- although this is also an opportunity to
-   clean up someone else's mess (in true XP style).
+2. 그것을 깨뜨리는 주변 코드와 일관성을 유지하기 위해(역사적인 이유 때문일 수 있음) – 이것은 또한 다른 사람의 엉망진창을 정리할 수 있는 기회이기도 합니다(진정한 XP 스타일).
 
-3. Because the code in question predates the introduction of the
-   guideline and there is no other reason to be modifying that code.
+3. 문제의 코드는 가이드라인 도입 이전의 코드이고 해당 코드를 수정할 다른 이유가 없기 때문입니다.
 
-4. When the code needs to remain compatible with older versions of
-   Python that don't support the feature recommended by the style guide.
-
+4. 스타일 가이드에서 권장하는 기능을 지원하지 않는 이전 버전의 Python과 코드가 계속 호환되어야 하는 경우.
 
 Code Lay-out
 ============
