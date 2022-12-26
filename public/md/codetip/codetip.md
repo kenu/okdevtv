@@ -5,9 +5,7 @@
 ```js
 function sleep(timeMillis, callback) {
   var stop = Date.now();
-  while (Date.now() < stop + timeMillis) {
-    // This is intentional
-  }
+  while (Date.now() < stop + timeMillis) {}
   callback();
 }
 ```
