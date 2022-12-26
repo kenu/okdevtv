@@ -1,20 +1,20 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
 const { marked } = require('marked');
-var fs = require('fs');
+const fs = require('fs');
 router.all('*', function (req, res) {
-    var path = req.baseUrl.split('/');
+    const path = req.baseUrl.split('/');
     if (path.length < 4) {
         path.push(path[2]);
     }
-    var mdPath = path.slice(2).join('/');
-    var filePath = './public/md/' + mdPath + '.md';
+    const mdPath = path.slice(2).join('/');
+    const filePath = './public/md/' + mdPath + '.md';
     if (fs.existsSync(filePath)) {
         fs.readFile(filePath, function (err, data) {
             if (err) {
                 throw err;
             }
-            var html = setBody(marked(data.toString()), path);
+            const html = setBody(marked(data.toString()), path);
             res.send(html);
         });
     } else {
