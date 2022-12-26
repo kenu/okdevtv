@@ -42,17 +42,15 @@ try {
           if (config.use_database) {
             // if sets to true
             pool.query(
-              'SELECT * from user_info where user_id=' + profile.id,
+              'SELECT * from user_info where user_id=$1',
+              [profile.id],
               (err, rows) => {
                 if (err) throw err;
                 if (rows && rows.length === 0) {
                   console.log('There is no such user, adding now');
                   pool.query(
-                    "INSERT into user_info(user_id,user_name) VALUES('" +
-                      profile.id +
-                      "','" +
-                      profile.username +
-                      "')"
+                    "INSERT into user_info(user_id,user_name) VALUES('$1','$2')",
+                    [profile.id, profile.username]
                   );
                 } else {
                   console.log('User already exists in database');

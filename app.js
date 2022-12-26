@@ -14,10 +14,15 @@ Sentry.init({
   dsn: "https://97d7b2e6ec3341f0b98ab3c50de2a3e2@o1431453.ingest.sentry.io/4503895780753408",
   tracesSampleRate: 1.0,
 });
-
+let helmet = require("helmet");
 const app = express();
+app.use(helmet.hidePoweredBy());
+
 const cors = require('cors');
-app.use(cors());
+let corsOptions = {
+  origin: 'okdevtv.com'
+};
+app.use(cors(corsOptions));
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
