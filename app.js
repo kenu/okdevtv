@@ -7,20 +7,18 @@ const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const frameguard = require('frameguard');
 const passport = require('passport');
-const FacebookStrategy = require('passport-facebook').Strategy;
-const config = require('./config/config');
-const Sentry = require("@sentry/node");
+const Sentry = require('@sentry/node');
 Sentry.init({
-  dsn: "https://97d7b2e6ec3341f0b98ab3c50de2a3e2@o1431453.ingest.sentry.io/4503895780753408",
+  dsn: 'https://8b4aa37266b14f298fc101e6bc02a4d7@o1064669.ingest.sentry.io/4504407883644928',
   tracesSampleRate: 1.0,
 });
-let helmet = require("helmet");
+let helmet = require('helmet');
 const app = express();
 app.use(helmet.hidePoweredBy());
 
 const cors = require('cors');
 let corsOptions = {
-  origin: 'okdevtv.com'
+  origin: 'okdevtv.com',
 };
 app.use(cors(corsOptions));
 
@@ -43,7 +41,7 @@ const sess = {
   secret: 'okdevtv cat',
   resave: true,
   saveUninitialized: true,
-  cookie: {}
+  cookie: {},
 };
 app.use(session(sess));
 app.use(passport.initialize());
@@ -59,43 +57,6 @@ try {
     done(null, obj);
   });
 
-  // Use the FacebookStrategy within Passport.
-  passport.use(
-    new FacebookStrategy(
-      {
-        clientID: config.facebook_api_key,
-        clientSecret: config.facebook_api_secret,
-        callbackURL: config.callback_url
-      },
-      function (_accessToken, _refreshToken, profile, done) {
-        process.nextTick(function () {
-          // Check whether the User exists or not using profile.id
-          if (config.use_database) {
-            // if sets to true
-            pool.query(
-              'SELECT * from user_info where user_id=' + profile.id,
-              (err, rows) => {
-                if (err) throw err;
-                if (rows && rows.length === 0) {
-                  console.log('There is no such user, adding now');
-                  pool.query(
-                    "INSERT into user_info(user_id,user_name) VALUES('" +
-                    profile.id +
-                    "','" +
-                    profile.username +
-                    "')"
-                  );
-                } else {
-                  console.log('User already exists in database');
-                }
-              }
-            );
-          }
-          return done(null, profile);
-        });
-      }
-    )
-  );
 } catch (e) {
   console.error(e.message);
 }
@@ -119,7 +80,7 @@ app.use(function (_req, res) {
   err.status = 404;
   res.render('error', {
     message: err.message,
-    error: {}
+    error: {},
   });
 });
 
@@ -130,7 +91,7 @@ app.use(function (err, _req, res) {
   res.status(err.status || 500);
   res.render('error', {
     message: err.message,
-    error: {}
+    error: {},
   });
 });
 
