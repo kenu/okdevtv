@@ -11,6 +11,7 @@
 .idea
 .project
 .scannerwork
+sonar-project.properties
 .sonar
 .vscode
 Thumbs.db

@@ -10,7 +10,7 @@ sonar.projectVersion=1.0
 # the sonar-project.properties file.
 sonar.sources=.
 sonar.exclusions=test/**, node_modules/**, public/**
-sonar.login=squ_7c74fc757207d8a6533bc4c4a7a156a178ec0174
+sonar.login=squ_3fe90a58a7fd0130965078b4ebbbd7ecbe0623bc
 
 # Encoding of the source code. Default is default system encoding
 sonar.sourceEncoding=UTF-8
