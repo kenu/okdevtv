@@ -35,6 +35,8 @@
   * 누룽지, 순두부찌개, 된장찌개
 * [님아 그 시장을 가오_EP.18_속초](https://youtu.be/zGsqGy5fZ8s) : 아바이회국수, 아바이마을
   * 회국수
-* [님아 그 시장을 가오_EP.19_논산](https://youtu.be/zGsqGy5fZ8s) : 선진가든, 양촌 양조장, 양촌리
+* [님아 그 시장을 가오_EP.19_논산](https://youtu.be/aK3ijuftswc) : 선진가든, 양촌 양조장, 양촌리
   * 오리주물럭
+* [님아 그 시장을 가오_EP.20_해남](https://youtu.be/PlVOk8GV28Y) : 한아름, 마산면
+  * 생고기
 
