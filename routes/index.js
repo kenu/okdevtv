@@ -32,7 +32,10 @@ router.get('/645', function (req, res) {
     ArrayUtils.shuffle(list);
     return list.slice(0, count);
   }
-  res.end(getRandomList(45, 6).sort((a, b) => a - b).join(', '));
+  const header = '<meta name="viewport" content="width=device-width, initial-scale=1.0">';
+  const lotto = getRandomList(45, 6).sort((a, b) => a - b).join(', ');
+  res.header('Content-Type', 'text/html');
+  res.end(header + lotto);
 });
 
 const ArrayUtils = {
