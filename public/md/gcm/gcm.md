@@ -4,7 +4,7 @@
 * https://developers.google.com/cloud-messaging/
 * https://developers.google.com/cloud-messaging/android/start
 * https://developers.google.com/cloud-messaging/android/client#get-config
-  * Server API Key : AIzaSyCGjogtCOOOOOOOOOOd7x31nFYqD4WbTCc
+  * Server API Key : API-KEYCGjogtCOOOOOOOOOOd7x31nFYqD4WbTCc
   * SenderID : 946300000009
 
 ## 참고
