@@ -1,6 +1,6 @@
 #!/bin/bash
 PARAMS=('-m 6 -q 70 -mt -af -progress')
-BASEDIR=$(dirname "$0")
+BASEDIR=`pwd`
 for D in `find . -type d`
 do
   cd $BASEDIR
