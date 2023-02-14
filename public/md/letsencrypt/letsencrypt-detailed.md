@@ -1,4 +1,6 @@
 # LetsEncrypt SSL
+~Outdated~ see [/mib/letsencrypt](/mib/letsencrypt)
+
 * SSL 무료 서비스
   * Secure Socket Layer
 * 세계적인 루트 인증기관이 도메인을 안전하다고 보증하는 서비스
@@ -241,7 +243,7 @@ service nginx stop && certbot-auto renew && service nginx start
 
 * error "ImportError: No module named cryptography"
   * solution
-  
+
 ```
 cd /opt/eff.org/certbot/venv/lib64/python2.7
 rmdir site-packages

@@ -101,7 +101,7 @@ server {
 }
 
 server {
-    listen 443 ssl;
+    listen 443 ssl http2;
     server_name okdevtest.net;
 ```
 
@@ -112,4 +112,5 @@ server {
 * letsencrypt https://okdevtv.com/mib/letsencrypt
 
 ## 참고
-* http://nginx.org/
+* https://nginx.org/
+* https://dassur.ma/things/h2setup/
