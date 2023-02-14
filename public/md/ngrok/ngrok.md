@@ -18,4 +18,4 @@ npm i -g ngrok
 ```
 ngrok http 8080
 ```
-* <img src="images/ngrok.jpg" alt="ngrok">
+* <img src="images/ngrok.webp" alt="ngrok">

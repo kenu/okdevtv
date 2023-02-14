@@ -4,23 +4,23 @@
 * http://bit.ly/macfreeca
 
 ## Afreeca 설정
-<img src="images/obs01.png" alt="" class="img">
+<img src="images/obs01.webp" alt="" class="img">
 
-<img src="images/obs02.png" alt="" class="img">
+<img src="images/obs02.webp" alt="" class="img">
 
 ## obs 설정
-<img src="images/obs03.png" alt="" class="img">
+<img src="images/obs03.webp" alt="" class="img">
 
-<img src="images/obs04.png" alt="" class="img">
+<img src="images/obs04.webp" alt="" class="img">
 
-<img src="images/obs05.png" alt="" class="img">
+<img src="images/obs05.webp" alt="" class="img">
 
-<img src="images/obs06.png" alt="" class="img">
+<img src="images/obs06.webp" alt="" class="img">
 
-<img src="images/obs07.png" alt="" class="img">
+<img src="images/obs07.webp" alt="" class="img">
 
-<img src="images/obs08.png" alt="" class="img">
+<img src="images/obs08.webp" alt="" class="img">
 
-<img src="images/obs09.png" alt="" class="img">
+<img src="images/obs09.webp" alt="" class="img">
 
-<img src="images/obs10.png" alt="" class="img">
+<img src="images/obs10.webp" alt="" class="img">

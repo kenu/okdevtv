@@ -28,7 +28,7 @@ open -n Simulator.app
   * Library pane
 
 ### ViewController Lifecycle
-* <img src="images/WWVC_vclife_2x.png" alt="ViewController Lifecycle">
+* <img src="images/WWVC_vclife_2x.webp" alt="ViewController Lifecycle">
 
 * viewDidLoad() :
 * viewWillAppear() :

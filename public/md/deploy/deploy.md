@@ -8,7 +8,7 @@
 
 ## Simple Deployment
 * 버전 관리 시스템에 등록된 코드를 받아와서 빌드하는 쉘 스크립트를 실행
-* <img src="images/deploy.png" alt="Simple Deployment" class="img">
+* <img src="images/deploy.webp" alt="Simple Deployment" class="img">
 
 ## CI Deployment
 * CI 도구를 사용해서 배포

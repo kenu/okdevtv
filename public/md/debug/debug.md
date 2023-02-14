@@ -9,7 +9,7 @@
 * `hot swap` : 디버깅 중의 메모리의 값을 변경해서 시뮬레이션하는 방법입니다.
 
 ## debugging mode
-<img src="images/debug.jpg" alt="debugging mode" />
+<img src="images/debug.webp" alt="debugging mode" />
 
 ## related
 * [Java Debug](/mib/java/debug)

@@ -11,7 +11,7 @@
   * brew (http://brew.sh)
 
 * `sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"`
-<img src="images/zsh-installed.png" alt="zsh installed">
+<img src="images/zsh-installed.webp" alt="zsh installed">
 
 * 정상적으로 설치되었다면 cmd+N 으로 zsh로 실행됨
 * 만약 그대로라면 `chsh -s /usr/local/bin/zsh` 명령으로 shell 변경 가능

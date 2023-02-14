@@ -2,7 +2,7 @@
 * http://nginx.org/
 * 아파치 httpd 서버의 뚱뚱함 때문에 만들어진 경량 웹서버
 * 이벤트 루프를 이용해 성능 탁월함
-  * <img src="images/nginx-apache-memory.png" alt="nginx-apache-memory">
+  * <img src="images/nginx-apache-memory.webp" alt="nginx-apache-memory">
   * from: https://blog.webfaction.com/2008/12/a-little-holiday-present-10000-reqssec-with-nginx-2/
 * 설정이 간편함
 * [영상: Nginx 정말 가벼운 웹서버](https://youtu.be/u-leHy-l2a8)

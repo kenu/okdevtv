@@ -5,10 +5,10 @@
 * Scattered duplicated code
 * Caching, Logging, Transaction, Security, ...
 * Devide Concerns
-<img src="images/aop01.png" alt="AOP" class="img">
+<img src="images/aop01.webp" alt="AOP" class="img">
 
 * Weaving
-<img src="images/aop02.png" alt="Weaving" class="img">
+<img src="images/aop02.webp" alt="Weaving" class="img">
 
 ## Terms
 * JoinPoint

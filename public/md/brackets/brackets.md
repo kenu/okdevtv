@@ -2,16 +2,16 @@
 * https://brackets.io
 * Adobe의 오픈소스 웹 개발도구
 
-<img src="/images/brackets/brackets01.png" alt="Brackets.io 웹사이트">
+<img src="/images/brackets/brackets01.webp" alt="Brackets.io 웹사이트">
 
 * 실시간 미리보기
 
-<img src="/images/brackets/brackets11.png" alt="실시간 미리보기">
+<img src="/images/brackets/brackets11.webp" alt="실시간 미리보기">
 
 * 코드 자동완성
 * 확장기능(플러그인)
 
-<img src="/images/brackets/brackets12.png" alt="플러그인">
+<img src="/images/brackets/brackets12.webp" alt="플러그인">
 
 * 컬러 테이블 픽커
 * JavaScript 코드 검사
@@ -36,7 +36,7 @@
 * 왼쪽에 나오는 파일 목록은 최근 사용 목록과 하단의 프로젝트 폴더보기로 구분
 * 파일이나 폴더를 선택하고 콘텍스트 메뉴에서 Show in Explorer 선택하면 탐색기 열림
 
-<img src="/images/brackets/brackets13.png" alt="Show in Explorer">
+<img src="/images/brackets/brackets13.webp" alt="Show in Explorer">
 
 ## 플러그인
 

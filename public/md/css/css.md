@@ -48,7 +48,7 @@
 * 4방향의 순서는 top right bottom left
 * box model
 
-<img src="https://okdevtv.com/images/css/boxmodel.png" alt="box model" />
+<img src="https://okdevtv.com/images/css/boxmodel.webp" alt="box model" />
 
 ## 레이아웃
 * 테이블 태그로 레이아웃 잡을 때의 단점

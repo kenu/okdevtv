@@ -14,4 +14,4 @@
 * `sdk install springboot 1.5.6.RELEASE`
 * `sdk default springboot 1.5.8.RELEASE`
 * `sdk list java`
-<img src="images/sdkman.jpg" alt="sdkman" />
+<img src="images/sdkman.webp" alt="sdkman" />

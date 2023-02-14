@@ -17,7 +17,7 @@ bin\startup.bat
 * Maven folder structure vs. WebContent
 
 ## Tomcat Architecture
-<img src="images/tomcat-architecture.png" alt="tomcat architecture">
+<img src="images/tomcat-architecture.webp" alt="tomcat architecture">
 
 ## Eclipse(STS) Tomcat Tip
 * Server Options

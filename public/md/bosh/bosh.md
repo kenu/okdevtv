@@ -26,7 +26,7 @@
 
 ## bosh-init
 * tool for creating and updating the Director in an environment
-<img src="http://bosh.io/docs/images/bosh-architecture.png" alt="bosh-init">
+<img src="http://bosh.io/docs/images/bosh-architecture.webp" alt="bosh-init">
 
 ### Director
 * Task Queue

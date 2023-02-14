@@ -25,7 +25,7 @@
 * local repository
 * remote repository
 
-<img src="images/basic-remote-workflow.png" alt="git repository" class="img"/>
+<img src="images/basic-remote-workflow.webp" alt="git repository" class="img"/>
 
 * image from : https://www.git-tower.com/learn/git/ebook/en/command-line/remote-repositories/introduction
 

@@ -195,7 +195,7 @@ ReactDOM.render(
 * `application/hal+json`, Spring Data REST’s default media type
 
 ### diff
-* <img src="images/react/part2-diff.png" alt="part2 diff" class="img"/>
+* <img src="images/react/part2-diff.webp" alt="part2 diff" class="img"/>
 
 ### Paging
 ```java
@@ -377,7 +377,7 @@ updatePageSize(pageSize) {
   * 프론트엔드 ETag
 
 ### diff
-* <img src="images/react/part3-diff.png" alt="part3 diff" class="img"/>
+* <img src="images/react/part3-diff.webp" alt="part3 diff" class="img"/>
 
 ### Version
 ```java
@@ -419,7 +419,7 @@ onUpdate(employee, updatedEmployee) {
 ```
 
 ### diff
-* <img src="images/react/part4-diff.png" alt="part4 diff" class="img"/>
+* <img src="images/react/part4-diff.webp" alt="part4 diff" class="img"/>
 
 ```java
 @Component
@@ -517,7 +517,7 @@ var stompClient = require('./websocket-listener')
 ```
 
 ### diff
-* <img src="images/react/part5-diff.png" alt="part5 diff" class="img"/>
+* <img src="images/react/part5-diff.webp" alt="part5 diff" class="img"/>
 
 ```java
 @Entity

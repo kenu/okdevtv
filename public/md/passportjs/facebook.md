@@ -5,7 +5,7 @@
   * app id
   * app secret key
   * config
-  * <img src="/md/passportjs/images/facebookloginconf.png">
+  * <img src="/md/passportjs/images/facebookloginconf.webp">
 
 
 * example

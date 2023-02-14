@@ -24,7 +24,7 @@ console.log(greeter(user));
 * `ts-node  greeter.js`
 
 ## TypeScript Type 계층도
-<img src="images/typescript.mmd.png">
+<img src="images/typescript.mmd.webp">
 * image from: https://github.com/bcherny/language-types-comparison
 
 ## Object Oriented Programming
@@ -56,7 +56,7 @@ console.log(greeter(user));
 
 ## 클래스와 인스턴스
 * 클래스는 도장(Type)과 같음. 청사진
-* 인스턴스는 종이(메모리)위에 찍힌 도장자국과 같음 
+* 인스턴스는 종이(메모리)위에 찍힌 도장자국과 같음
 * `new` 키워드 사용해서 메모리 위치 정해줌
 * `Car car = new Car();`
 * 클래스에 `()`이 붙은 것을 생성자(Constructor)라고 함

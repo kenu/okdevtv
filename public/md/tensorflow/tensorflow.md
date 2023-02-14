@@ -92,17 +92,17 @@ for step in range(201):
 * code from : https://www.tensorflow.org/get_started/
 
 ## Linear Regression
-<img src="images/Linear_regression.png" class="img"/>
+<img src="images/Linear_regression.webp" class="img"/>
 
 ### Gradient Descent Method
 * 경사하강법
 * `tf.train.GradientDescentOptimizer()`
-* <img src="images/Gradient_descent.png" class="img"/>
-* <img src="images/Gradient_descent_2d.jpg" class="img"/>
+* <img src="images/Gradient_descent.webp" class="img"/>
+* <img src="images/Gradient_descent_2d.webp" class="img"/>
 
 ## Logistic Regression
-* <img src="images/logistic-equation.png" />
-* <img src="images/Logistic-curve.png" class="img"/>
+* <img src="images/logistic-equation.webp" />
+* <img src="images/Logistic-curve.webp" class="img"/>
 * 0 or 1
 * True of False
 
@@ -140,11 +140,11 @@ for step in range(201):
 
 ### Convolutional Layer
 * 합성곱
-  * <img src="http://sanghyukchun.github.io/images/post/75-7.jpg">
+  * <img src="http://sanghyukchun.github.io/images/post/75-7.webp">
 * CNN Architecture
   * Convolutional Layers
   * Sub-sample Layers
-  * <img src="http://masters.donntu.org/2012/fknt/umiarov/diss/images/image3_en.png">
+  * <img src="http://masters.donntu.org/2012/fknt/umiarov/diss/images/image3_en.webp">
 
 ### Pooling Layer
 * 더 dimension이 낮은 feature map을 얻기 위하여 Subsampling
@@ -233,11 +233,11 @@ tensor_2d[0:2,0:2]
   * multilayer perceptrons
     * backpropagation
 
-*  
-<img src="images/Perceptron_1.png" />
+*
+<img src="images/Perceptron_1.webp" />
   * image from : http://www.saedsayad.com/artificial_neural_network_bkp.htm
-*  
-<img src="images/mlp.png" />
+*
+<img src="images/mlp.webp" />
   * image from : http://blog.refu.co/?p=931
 * one-hot : 벡터에서 하나만 1이고 나머지는 0으로 채워진 경우 [0,0,0,1,0,0,0,0,0,0] == 3
 

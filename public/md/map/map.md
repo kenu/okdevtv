@@ -5,7 +5,7 @@
 
 * [sample.html](/md/map/sample.html)
 
-<a href="/md/map/sample.html"><img src="/md/map/images/map.jpg"></a>
+<a href="/md/map/sample.html"><img src="/md/map/images/map.webp"></a>
 
 ```
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"

@@ -9,7 +9,7 @@
 * 요소 검사(inspect element) > Console 탭
 * 3 * 5 JS Console
 
-<img src="images/js01-console.png" alt="JS Console">
+<img src="images/js01-console.webp" alt="JS Console">
 
 ## JSON
 * JavaScript Object Notation

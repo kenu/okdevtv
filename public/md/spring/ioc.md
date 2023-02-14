@@ -5,7 +5,7 @@
 * `org.springframework.beans`, `org.springframework.context` 패키지
 
 ## Mechanism
-<img src="images/container-magic.png" class="img" alt="Spring IoC container">
+<img src="images/container-magic.webp" class="img" alt="Spring IoC container">
 * Config metadata + POJO = executable app
 
 ## Bean Factory

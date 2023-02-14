@@ -4,4 +4,4 @@
 * port 53
 
 ## Mechanism
-* <img src="images/DNS.png" alt="DNS Mechanism" class="img"/>
+* <img src="images/DNS.webp" alt="DNS Mechanism" class="img"/>

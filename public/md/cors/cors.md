@@ -39,7 +39,7 @@ OPTIONS: access-control-request-method, access-control-request-headers,
 POST:    content-length, ping-other, content-type, cookie
 ```
 
-<img src="images/mobile-crosssite.jpg" alt="mobile crosssite">
+<img src="images/mobile-crosssite.webp" alt="mobile crosssite">
 
 ## ref
 * CORS는 왜 이렇게 우리를 힘들게 하는걸까?

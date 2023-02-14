@@ -9,7 +9,7 @@ and have 2 and 7 different commits each, respectively.
 ```
 
 * Status
-<img src="images/branch-diverged.png" alt="branch diverged" class="img">
+<img src="images/branch-diverged.webp" alt="branch diverged" class="img">
 
 
 * Solve
@@ -43,7 +43,7 @@ gitk
 
 * 결과
 
-<img src="images/branch-merged.png" alt="branch merged" class="img">
+<img src="images/branch-merged.webp" alt="branch merged" class="img">
 
 
 

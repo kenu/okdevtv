@@ -11,7 +11,7 @@
 * Run
 * Update code and deploy
 
-<img src="images/jenkins-docker.png" alt="jenkins docker" />
+<img src="images/jenkins-docker.webp" alt="jenkins docker" />
 
 ```
 FROM openjdk:11-jre-slim-buster

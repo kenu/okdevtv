@@ -7,7 +7,7 @@
 * 가상 요소를 포함하지 않음 (Ex. ::after)
 * 보이지 않는 요소를 포함 (Ex. display: none)
 
-<img src="images/domtree.jpg" alt="DOM Tree" class="img">
+<img src="images/domtree.webp" alt="DOM Tree" class="img">
 
 ## ref
 * (번역) DOM은 정확히 무엇일까?

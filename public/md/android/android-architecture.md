@@ -5,10 +5,10 @@
 
 
 * Legacy web
-<img src="images/MobileServiceArchitecture1.png">
+<img src="images/MobileServiceArchitecture1.webp">
 
 * Secure, Insecure
-<img src="images/MobileServiceArchitecture2.png">
+<img src="images/MobileServiceArchitecture2.webp">
 
 ## ref
 * https://okdevtv.com/mib/android

@@ -10,7 +10,7 @@
 4. Refresh the access token, if necessary.
 
 ## oauth2 mechanism
-<img src="images/webflow.png" alt="Using OAuth 2.0 for Installed Applications">
+<img src="images/webflow.webp" alt="Using OAuth 2.0 for Installed Applications">
 image from: https://developers.google.com/identity/protocols/OAuth2InstalledApp
 
 

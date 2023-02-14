@@ -7,7 +7,7 @@
 * Non-blocking io
 * Spring WebFlux
 
-* <img src="images/diagram-reactive.svg" alt="reactive" class="img"/>
+* <img src="images/diagram-reactive.webp" alt="reactive" class="img"/>
 
 ## JavaEE 지원
 * Servlet API ([JSR 340](https://jcp.org/en/jsr/detail?id=340))

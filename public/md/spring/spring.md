@@ -25,7 +25,7 @@
 ## 스프링 아키텍처
 
 * from: [Spring Framework Reference](http://docs.spring.io/spring/docs/current/spring-framework-reference/htmlsingle/#spring-introduction)
-* <img src="/images/spring/spring-overview.png" alt="Spring Framework Architecture">
+* <img src="/images/spring/spring-overview.webp" alt="Spring Framework Architecture">
 
 ## Simple Spring Code
 * use : MainApp.java

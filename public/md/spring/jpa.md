@@ -7,7 +7,7 @@
 * JPA Provider
   * Hibernate, Eclipselink, Toplink, Spring Data JPA, etc.
 
-<img src="images/object_relational_mapping.png" class="img" alt="ORM">
+<img src="images/object_relational_mapping.webp" class="img" alt="ORM">
 
 ## 관계형과 차이점
   * Granularity: 객체 모델은 관계형 모델보다 세분화됩니다.
@@ -17,7 +17,7 @@
   * Data navigation: 객체 네트워크의 객체 간 데이터 탐색은 두 모델에서 다릅니다.
 
 ## Class Level Architecture
-<img src="images/jpa_class_relationships.png" class="img" alt="JPA Class Relationships">
+<img src="images/jpa_class_relationships.webp" class="img" alt="JPA Class Relationships">
 
 * javax.persistence.*
 * `Entity`: 데이터를 저장하기 위한 객체

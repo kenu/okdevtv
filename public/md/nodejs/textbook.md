@@ -78,7 +78,7 @@ console.log(checkStringOddOrEven('hello');
 
 * 모듈로부터 값을 불러올 때 변수 이름을 다르게 지정할 수 있음
 * `checkOddOrEven`이 `checkNumber`로 사용
-* `*.mjs` ES2015에 도입된 모듈 시스템. 
+* `*.mjs` ES2015에 도입된 모듈 시스템.
   * `node --experimental-modules 파일명` 처럼 옵션 필요
 
 ## 노드 내장 객체 알아보기
@@ -87,7 +87,7 @@ console.log(checkStringOddOrEven('hello');
 
 ### `global`
 * 전역객체
-* 생략 가능 
+* 생략 가능
   * `global.require` -> `require`
   * `global.console` -> `console`
 * node.js에는 DOM(Document Object Model), BOM(Browser Object Model)이 없기 때문에 `window`, `document` 사용할 수 없음
@@ -130,7 +130,7 @@ console.log(A());
 exports.odd = '홀수입니다';
 exports.even = '짝수입니다';
 ```
-* `console.log(module.exports === exports)` 
+* `console.log(module.exports === exports)`
 
 
 ### process
@@ -162,7 +162,7 @@ exports.even = '짝수입니다';
 * `path.js`
 
 ### `url`
-<img src="images/whatwg-url.png" alt="whatwg url" class="img"/>
+<img src="images/whatwg-url.webp" alt="whatwg url" class="img"/>
 
 * `url.js`
 * `searchParams.js`
@@ -307,7 +307,7 @@ exports.even = '짝수입니다';
 * `const fs = require('fs')`
 * `readme.txt`
 * `readFile.js`
-  * `readFile()` 결과는 버퍼(메모리의 데이터) 형식, `.toString()` 을 통해서 문자열로 변환  
+  * `readFile()` 결과는 버퍼(메모리의 데이터) 형식, `.toString()` 을 통해서 문자열로 변환
 * `writeFile.js`
 
 ### 동기 메서드와 비동기 메서드

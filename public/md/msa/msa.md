@@ -28,5 +28,5 @@
 
 1. 거의 모든 성공적인 마이크로서비스 사례는 너무 커져서 부서진 단일체(monolith)에서 시작되었습니다.
 2. 처음부터 마이크로서비스 시스템으로 구축된 시스템에 대해 들어본 거의 모든 경우는 심각한 문제로 끝났습니다.
-<img src="https://martinfowler.com/bliki/images/microservice-verdict/path.png" class="img" alt="2 patterns">
+<img src="https://martinfowler.com/bliki/images/microservice-verdict/path.webp" class="img" alt="2 patterns">
 * from: https://martinfowler.com/bliki/MonolithFirst.html
