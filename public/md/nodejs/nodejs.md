@@ -127,6 +127,44 @@ from: http://www.nodebeginner.org/index-kr.html#how-to-not-do-it
 * socket.io
   * [채팅 튜토리얼](https://okdevtv.com/kr/socket.io-chat-kr.html)
 * 짧은 줄의 코드로 웹채팅 구현 가능
+
+* `package.json`
+
+```json
+{
+  "name": "socket-chat-example",
+  "version": "0.0.1",
+  "description": "my first socket.io app",
+  "dependencies": {
+    "express": "^4.14.0",
+    "socket.io": "^4.1.2"
+  }
+}
+```
+
+* `server.js`
+
+```js
+const app = require('express')();
+const http = require('http').Server(app);
+const io = require('socket.io')(http);
+
+app.get('/', function (req, res) {
+  res.sendFile(__dirname + '/index.html');
+});
+
+io.on('connection', function (socket) {
+  socket.on('chat message', function (msg) {
+    io.emit('chat message', msg);
+  });
+});
+
+http.listen(3000, function () {
+  console.log('listening on *:3000');
+});
+
+```
+
 * `index.html`
 
 ```html
@@ -178,43 +216,6 @@ from: http://www.nodebeginner.org/index-kr.html#how-to-not-do-it
 
 </html>
 
-```
-
-* `server.js`
-
-```js
-const app = require('express')();
-const http = require('http').Server(app);
-const io = require('socket.io')(http);
-
-app.get('/', function (req, res) {
-  res.sendFile(__dirname + '/index.html');
-});
-
-io.on('connection', function (socket) {
-  socket.on('chat message', function (msg) {
-    io.emit('chat message', msg);
-  });
-});
-
-http.listen(3000, function () {
-  console.log('listening on *:3000');
-});
-
-```
-
-* `package.json`
-
-```json
-{
-  "name": "socket-chat-example",
-  "version": "0.0.1",
-  "description": "my first socket.io app",
-  "dependencies": {
-    "express": "^4.14.0",
-    "socket.io": "^4.1.2"
-  }
-}
 ```
 
 ## 실행
