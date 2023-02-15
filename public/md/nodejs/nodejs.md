@@ -1,9 +1,8 @@
 # node.js
-[toc]
 
 ## JS Warm Up
 
-* JavaScript platform
+* **JavaScript platform** like JVM of Java
 * [JSON](http://www.json.org)
 
 ## 설치
@@ -132,13 +131,12 @@ from: http://www.nodebeginner.org/index-kr.html#how-to-not-do-it
 
 ```html
 <!doctype html>
-<html>
+<html lang="ko">
 
 <head>
   <title>Socket.IO chat</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font: 13px Helvetica, Arial; }
     form { background: #000; padding: 3px; position: fixed; bottom: 0; width: 100%; }
     form input { border: 0; padding: 10px; width: 90%; margin-right: .5%; }
     form button { width: 9%; background: rgb(130, 224, 255); border: none; padding: 10px; }
@@ -185,9 +183,9 @@ from: http://www.nodebeginner.org/index-kr.html#how-to-not-do-it
 * `server.js`
 
 ```js
-var app = require('express')();
-var http = require('http').Server(app);
-var io = require('socket.io')(http);
+const app = require('express')();
+const http = require('http').Server(app);
+const io = require('socket.io')(http);
 
 app.get('/', function (req, res) {
   res.sendFile(__dirname + '/index.html');
