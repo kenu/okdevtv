@@ -34,8 +34,9 @@ router.get('/645', function (req, res) {
   }
   const header = '<meta name="viewport" content="width=device-width, initial-scale=1.0">';
   const lotto = getRandomList(45, 6).sort((a, b) => a - b).join(', ');
+  const reloadButton = '<hr/><button onclick="location.reload()">다시 뽑기</button>';
   res.header('Content-Type', 'text/html');
-  res.end(header + lotto);
+  res.end(header + lotto + reloadButton);
 });
 
 const ArrayUtils = {
