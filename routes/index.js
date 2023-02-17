@@ -16,6 +16,18 @@ router.get('/okdevtv-list', async function (req, res) {
     items: items,
   });
 });
+
+// json api with cors
+router.get('/api/okdevtv-list', async function (req, res) {
+  const items = await okdevtv.getItems(req);
+  res.header('Access-Control-Allow-Origin', '*');
+  const data = {
+    items: items.map((item) => {
+      return item._rawData;}),
+  }
+  res.json(data);
+});
+
 module.exports = router;
 
 router.get('/f/:url', function (req, res) {

@@ -6,7 +6,10 @@ test('add', () => {
 test('subtract', () => {
   expect(subtract(2, 1)).toBe(1);
 });
-
+// add
+function add(a, b) {
+  return a + b;
+}
 function subtract(a, b) {
   return a - b;
 }
