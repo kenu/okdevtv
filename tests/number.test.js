@@ -18,3 +18,18 @@ function subtract(a, b) {
 function multiply(a, b) {
   return a * b;
 }
+
+// divide
+function divide(a, b) {
+  return a / b;
+}
+
+// test for multiply
+test('multiply', () => {
+  expect(multiply(2, 2)).toBe(4);
+});
+
+// test for divide
+test('divide', () => {
+  expect(divide(4, 2)).toBe(2);
+});
