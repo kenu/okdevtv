@@ -9,6 +9,13 @@ npm install --save-dev prettier
 npm i -D prettier
 ```
 
+## Configuration
+* `.prettierrc.json`, etc
+* https://prettier.io/docs/en/configuration.html
+* Setting as Default Formatter
+## Format
+* Shortcut: `cmd` + `alt` + `F`
+
 ## Options
 ```json
 Prettier Options:
