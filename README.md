@@ -18,3 +18,6 @@ npm run serve
 ## Deploy
 
 ## FAQ
+
+## License
+* MIT
