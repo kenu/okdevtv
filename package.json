@@ -11,10 +11,11 @@
     "test": "jest tests -o --watch"
   },
   "dependencies": {
+    "@aws-sdk/client-ses": "^3.282.0",
     "@babel/polyfill": "^7.12.1",
     "@sentry/node": "^7.40.0",
     "@sentry/tracing": "^7.40.0",
-    "aws-sdk": "^2.1327.0",
+    "aws-sdk": "^2.1328.0",
     "axios": "^0.27.2",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.20.2",
