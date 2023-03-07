@@ -4,7 +4,6 @@
 
 	.button, input, select, textarea {
 		position: relative;
-		-ms-behavior: url('css/ie/PIE.htc');
 	}
 
 	input, select, textarea {
@@ -25,7 +24,6 @@
 /*********************************************************************************/
 
 	#intro {
-		-ms-behavior: url('css/ie/backgroundsize.min.htc');
 		background: url('../../images/intro.webp');
 		background-size: cover;
 	}
@@ -45,8 +43,7 @@
 /*********************************************************************************/
 
 	#one {
-		-ms-behavior: url('css/ie/backgroundsize.min.htc');
-		background: url('../../images/one.webp');
+		background: url('../../images/8DJ62Bk38BI.webp');
 		background-size: cover;
 	}
 
@@ -65,7 +62,6 @@
 /*********************************************************************************/
 
 	#two {
-		-ms-behavior: url('css/ie/backgroundsize.min.htc');
 		background: url('../../images/two.webp');
 		background-size: cover;
 	}
