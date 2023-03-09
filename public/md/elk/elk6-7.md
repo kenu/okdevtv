@@ -6,7 +6,7 @@
 * Logstash는 각종 로그를 가져와 JSON형태로 만들어 Elasticsearch로 전송하고,
 * Kibana는 Elasticsearch에 저장된 Data를 사용자에게 Chart 형태로 보여주는 시각화 솔루션이다.
 
-![ELK Architecture](images/elastic-stack.png)
+![ELK Architecture](images/elastic-stack.webp)
 
 
 ## 장점

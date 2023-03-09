@@ -81,7 +81,7 @@
 ./elk/elk6-7.md
 ./elk/elk6.md
 ./elk/elk7.md
-./elk/images/elastic-stack.png
+./elk/images/elastic-stack.webp
 ./elk/images/elk_arch.jpg
 ./elk/images/filebeat.jpg
 ./elk/images/timelion-01-offset.webp
