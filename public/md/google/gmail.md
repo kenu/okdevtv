@@ -2,7 +2,7 @@
 
 ## Quickstart
 
-- https://developers.google.com/gmail/api/quickstart/nodejs
+- https://developers.google.com/gmail/api/quickstart/nodejs?hl=ko
 - Just for only local test
 - Create project and get credentials.json
 - It shows `Labels` of your Gmail account
