@@ -28,6 +28,22 @@ curl -OL https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh
 bash install.sh
 ```
 
+## Plugin
+```
+$ cd ~/.oh-my-zsh/custom/plugins
+$ git clone https://github.com/zsh-users/zsh-autosuggestions.git
+$ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
+```
+
+```
+$ vi ~/.zshrc
+
+plugins=(
+	git
+    zsh-autosuggestions
+    zsh-syntax-highlighting
+)
+```
 
 ## 참고
 * http://sourabhbajaj.com/mac-setup/iTerm/zsh.html
