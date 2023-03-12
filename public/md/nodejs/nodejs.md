@@ -100,24 +100,17 @@ from [blog.udemy.com/learn-node-js/](https://lh4.googleusercontent.com/pwtI1uBbT
   * 아파치 등은 커넥션 증가에 따라서 메모리 증가
 * nginx는 이벤트 루프 방식
 
-
-### 안티 패턴
-```
-“헤이, probablyExpensiveFunction(), 니 일을 해줘.
-하지만 나 Single Node.js 쓰레드는 네가 끝낼 때까지 여기서 기다리지 않을거야.
-네 아래에 있는 코드 라인을 계속 실행할거야.
-그러니 여기 이 callbackFunction()을 가져가서
-네가 너의 비싼 일을 모두 끝냈을 때 호출해 주겠니?
-고마워!”
-```
-from: http://www.nodebeginner.org/index-kr.html#how-to-not-do-it
-
 ## 서버사이드 자바스크립트 개발환경 설치
 * http://nodejs.org
 
 ## 모듈 만들고 참조하기
 * commonjs
-* require()
+* `const path = require('path')`
+
+## ES6 setting
+* `package.json`
+* `"type": "module"`
+* `import path from path`
 
 ## npm 을 통한 확장
 * http://npmjs.org
