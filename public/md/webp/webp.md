@@ -37,6 +37,28 @@ brew cask install webpquicklook
 <img src="images/caniuse.webp" alt="webp limited" class="img"/>
 * check : http://caniuse.com/#feat=webp
 
+## change.sh
+
+```sh
+#!/bin/bash
+PARAMS=('-m 6 -q 70 -mt -af -progress')
+BASEDIR=`pwd`
+for D in `find . -type d`
+do
+  cd $BASEDIR
+  cd $D
+  pwd
+
+  for FILE in *.{jpg,jpeg,png,svg,tif,tiff}; do
+    [ -e "$FILE" ] || continue
+    # Here "$FILE" exists
+    cwebp $PARAMS "$FILE" -o "${FILE%.*}".webp;
+  done
+
+  cd -
+done
+```
+
 ## ref
 * https://developers.google.com/speed/webp/docs/cwebp
 * quick look plugins
