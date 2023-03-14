@@ -1,6 +1,6 @@
 # NPM
 * Node Package Manager
-
+* [`pnpm`](/mib/nodejs/pnpm) 참고
 ## 설치
 * node.js 와 함께 설치됨
 * `package.json` 파일 참조
