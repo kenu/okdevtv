@@ -1,5 +1,5 @@
 # 님아 그 시장을 가오
-* [님아 그 시장을 가오_EP.01_대구](https://youtu.be/2n2pcobA6DI) : 청보석, 석곡전통시장
+* [님아 그 시장을 가오_EP.01_곡성](https://youtu.be/2n2pcobA6DI) : 청보석, 석곡전통시장
   * 콩국수
 * [님아 그 시장을 가오_EP.02_군위](https://youtu.be/EZX-WO2QkiM) : 시장닭발, 군위
   * 연탄닭구이
