@@ -197,6 +197,7 @@ ls -la --time-style=full-iso
 
 ## other topics
 
+* [dnf](https://okdevtv.com/mib/linux/dnf)
 * [cron](https://okdevtv.com/mib/linux/cron)
 * [curl](https://okdevtv.com/mib/linux/curl)
 * [pigz](https://okdevtv.com/mib/linux/pigz) : parallel gzip
