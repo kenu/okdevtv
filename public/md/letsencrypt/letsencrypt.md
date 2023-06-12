@@ -13,7 +13,7 @@
 
 ## 필요사항
 * 도메인 (예 okdevtest.net)
-* 서버 aws EC2 Amazon Linux 2
+* 서버 aws EC2 Amazon Linux 2023, Amazon Linux 2
 
 ## nginx 설치
 * [nginx 설치](/mib/nginx)
@@ -23,6 +23,21 @@
 * https://certbot.eff.org/lets-encrypt/centosrhel7-nginx
 
 ```
+# Amazon Linux 2023
+sudo su -
+dnf install python3 augeas-libs
+dnf remove certbot
+python3 -m venv /opt/certbot/
+/opt/certbot/bin/pip install --upgrade pip
+/opt/certbot/bin/pip install certbot certbot-nginx
+ln -s /opt/certbot/bin/certbot /usr/bin/certbot
+
+certbot --nginx
+systemctl restart nginx
+```
+
+```bash
+# Amazon Linux 2
 sudo su -
 yum -y install yum-utils
 yum-config-manager --enable rhui-REGION-rhel-server-extras rhui-REGION-rhel-server-optional
