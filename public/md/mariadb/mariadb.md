@@ -4,18 +4,24 @@
 * https://www.mariadb.org
 * install MariaDB
   * mac : `brew install mariadb` or `brew install mariadb@10.6`
-  * `sudo vi /etc/yum.repos.d/MariaDB.repo`
-
+  * Amazon Linux 2023
 ```
-# MariaDB 10.8 CentOS repository list
+sudo dnf install mariadb105-server
+sudo systemctl start mariadb
+```
+
+* CentOS 7.x
+  * `sudo vi /etc/yum.repos.d/MariaDB.repo`
+```
+# MariaDB 10.10 CentOS repository list
 # http://mariadb.org/mariadb/repositories/
 [mariadb]
 name = MariaDB
-baseurl = http://yum.mariadb.org/10.8/centos7-amd64
+baseurl = http://yum.mariadb.org/10.10/centos7-amd64
 gpgkey=https://yum.mariadb.org/RPM-GPG-KEY-MariaDB
 gpgcheck=1
 ```
- * CentOS 6.x는 `baseurl = http://yum.mariadb.org/10.8/centos6-amd64`
+  * CentOS 6.x는 `baseurl = http://yum.mariadb.org/10.8/centos6-amd64`
 
 
 ```
