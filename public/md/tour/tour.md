@@ -47,3 +47,12 @@
   * 고등어두부구이
 * [님아 그 시장을 가오_EP.24_강진](https://youtu.be/b_kG0OwqiluTg) : 무지개식당, 병영양조장
   * 병어찜
+* [님아 그 시장을 가오_EP.25_양구](https://youtu.be/iPLW-aOdq6I) : 파로호육개장
+  * 육개장
+* [님아 그 시장을 가오_EP.26_영주](https://youtu.be/NaSPnfM03_E) : 동방식당
+  * 해물탕
+* [님아 그 시장을 가오_EP.27_고흥](https://youtu.be/uX07TFcxKnY) : 신성식당
+  * 문어코
+* [님아 그 시장을 가오_EP.28_구미](https://youtu.be/BZEjXGZMxrE) : 바로그집
+  * 돌곱창
+
