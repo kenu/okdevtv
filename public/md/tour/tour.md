@@ -55,4 +55,6 @@
   * 문어코
 * [님아 그 시장을 가오_EP.28_구미](https://youtu.be/BZEjXGZMxrE) : 바로그집
   * 돌곱창
+* [님아 그 시장을 가오_EP.29_구미](https://youtu.be/rEhi5E11hT4) : 도산식육식당
+  * 돼지찌개
 
