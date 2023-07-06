@@ -13,6 +13,9 @@
 * `cat ~/.ssh/id_rsa.pub`
 * 내용을 복사
 
+## Generate public key from private key
+* `ssh-keygen -y -f ~/.ssh/id_rsa > ~/.ssh/id_rsa.pub`
+
 ### Server login
 * 최초 설정 전까지는 비밀번호로 자동 접속할 서버에 접속
 * **~/.ssh/authorized_keys** 파일을 생성해서 복사한 공개키를 붙여넣기
