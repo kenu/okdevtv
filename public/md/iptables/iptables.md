@@ -11,3 +11,7 @@
 
 * `iptables -A INPUT -s 65.55.xxx.100 -j DROP`
   * 추가
+* 80port open
+  * `iptables -A INPUT -p tcp --dport 80 -j ACCEPT`
+* 80port close
+  * `iptables -A INPUT -p tcp --dport 80 -j DROP`
