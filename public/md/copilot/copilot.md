@@ -15,7 +15,7 @@
 * vscode로 돌아와서 `Sign in with GitHub` 클릭
   * <img src="images/copilot-setup05.webp" alt="copilot" class="img"/>
   * <img src="images/copilot-setup06.webp" alt="copilot" class="img"/>
-* GitHub Copilot은 30일 Free Trial 제공 30일 뒤부터 결재
+* GitHub Copilot은 30일 Free Trial 제공. 30일 뒤부터 결제됨
   * <img src="images/copilot-setup07.webp" alt="copilot" class="img"/>
 * 4대 개발도구에서 사용 가능
   * <img src="images/copilot-setup08.webp" alt="copilot" class="img"/>
