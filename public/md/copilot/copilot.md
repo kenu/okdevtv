@@ -23,6 +23,7 @@
   * <img src="images/copilot-setup09.webp" alt="copilot" class="img"/>
 * 정상 동작한다면 제안이 나옴. `Tab`키를 누르면 제안을 받아들임
   * <img src="images/copilot-setup10.webp" alt="copilot" class="img"/>
+* 설치 완료 후에 `기본 브라우저`는 자신이 사용하는 브라우저로 변경(Optional)
 
 ## ref
 * https://copilot.github.com/
