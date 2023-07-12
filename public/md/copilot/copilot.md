@@ -1,6 +1,7 @@
 # GitHub Copilot
 * AI 기반의 코드 제안 도구
 * AI Pair Programmer
+* [학생, 선생님, 유명한 오픈 소스 개발자](https://docs.github.com/en/copilot/overview-of-github-copilot/about-github-copilot-for-individuals#about-billing-for-github-copilot)는 무료로 사용 가능
 
 ## Installation
 
@@ -27,3 +28,5 @@
 
 ## ref
 * https://copilot.github.com/
+* https://docs.github.com/en/billing/managing-billing-for-github-copilot/about-billing-for-github-copilot
+* https://velog.io/@tl_dr/학교-인증으로-Github-Copilot-무료-사용하기
