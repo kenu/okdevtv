@@ -1,8 +1,8 @@
 # DNS
 * **D**omain **N**ame **S**erver
 * matching Domain with IP
-* port 53; aws route 53 is a DNS service for free
-* [CloudFlare.com](https://cloudflare.com) is a DNS service for free
+* port 53; aws route 53 is a DNS service
+* [CloudFlare.com](https://cloudflare.com) is a DNS service
 
 ## Mechanism
 * <img src="images/DNS.webp" alt="DNS Mechanism" class="img"/>
