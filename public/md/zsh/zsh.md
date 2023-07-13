@@ -45,6 +45,16 @@ plugins=(
 )
 ```
 
+## Change Shell
+```
+chsh -s $(which zsh)
+```
+* set password in cloud
+```
+sudo su
+passwd ec2-user
+```
+
 ## 참고
 * http://sourabhbajaj.com/mac-setup/iTerm/zsh.html
 * 터미널 초보의 필수품인 Oh My ZSH!를 사용하자
