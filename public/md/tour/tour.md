@@ -57,4 +57,5 @@
   * 돌곱창
 * [님아 그 시장을 가오_EP.29_구미](https://youtu.be/rEhi5E11hT4) : 도산식육식당
   * 돼지찌개
-
+* [님아 그 시장을 가오_EP.30_함양](https://youtu.be/o8wHu_bjGnQ) : 달동네식당
+  * 대구뽈찜
