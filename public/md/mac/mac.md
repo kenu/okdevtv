@@ -9,9 +9,9 @@
 * terminal을 열어서 다음 명령을 실행합니다.
 
 ```
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
-* `brew install tree` 
+* `brew install tree`
 * `brew install wget`
 * `brew update`
 * `brew upgrade`
@@ -65,4 +65,4 @@ xcode-select --install
 
 ## 관련 영상
 * 새로운 맥 개발환경 시작하기 (18분)
-  * https://www.youtube.com/watch?v=bJtdulEkf64 
+  * https://www.youtube.com/watch?v=bJtdulEkf64
