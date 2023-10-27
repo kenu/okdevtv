@@ -13,12 +13,21 @@ npm i -D prettier
 * `.prettierrc.json`, etc
 * https://prettier.io/docs/en/configuration.html
 * Setting as Default Formatter
+
 ## Format
 * Shortcut: `cmd` + `alt` + `F`
 
-## Options
+## Example
 ```json
-Prettier Options:
+{
+  "semi": true,
+  "singleQuote": false
+}
+```
+
+## Options
+* Prettier Options:
+```json
 {
   "arrowParens": "always",
   "bracketSpacing": true,
