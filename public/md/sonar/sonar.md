@@ -50,7 +50,7 @@ sonar.projectVersion=1.0
 # If not set, SonarQube starts looking for source code from the directory containing
 # the sonar-project.properties file.
 sonar.sources=.
-sonar.login=tokenxxxxxxxxxxxxxxxxxx
+sonar.login=${SONAR_TOKEN}
 
 # Encoding of the source code. Default is default system encoding
 #sonar.sourceEncoding=UTF-8
@@ -68,7 +68,7 @@ sonar.language=java
 sonar.sources=src/main/java/
 sonar.java.binaries=target/classes
 sonar.sourceEncoding=UTF-8
-sonar.login=tokenxxxxxxxxxxxxxxxxxx
+sonar.login=${SONAR_TOKEN}
 ```
 
 ## Python
@@ -79,7 +79,7 @@ sonar.projectKey=swlabs:django
 sonar.projectName=django
 sonar.sources=.
 sonar.language=py
-sonar.login=tokenxxxxxxxxxxxxxxxxxx
+sonar.login=${SONAR_TOKEN}
 ```
 
 ## CPP
@@ -103,7 +103,7 @@ sonar.projectKey=cubrid:cubrid
 
 # mandatory: files to be handled by the _cxx plugin_
 sonar.cxx.file.suffixes=.h,.hpp,.c,.cpp
-sonar.login=tokenxxxxxxxxxxxxxxxxxx
+sonar.login=${SONAR_TOKEN}
 sonar.exclusions=src/jsp/**,contrib/**
 ```
 
