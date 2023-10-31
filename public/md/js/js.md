@@ -1,6 +1,6 @@
 # JavaScript
 
-* 1995 Brendon Eich
+* 1995 Brendan Eich
 
 ## 시작하기
 * 브라우저에서 실행 가능
@@ -30,8 +30,9 @@
 ## 문법
 * 대소문자 구분
 * 문장은 세미콜론(;)으로 구분
-* 변수는 var로 선언
-* var 없이 선언된 변수는 글로벌 변수
+* 변수는 let으로 선언, 상수는 const로 선언
+* ~~변수는 var로 선언~~
+* var, let 없이 선언된 변수는 글로벌 변수
 
 ## 값 Value
 * 숫자 : 정수, 실수
@@ -43,8 +44,8 @@
 
 ## 변수 Variable
 * 값을 담고 있는 문자열
-* var 변수명 = 값;
-* 변수명은 a-zA-Z0-9_의 조합
+* let 변수명 = 값;
+* 변수명은 `a-zA-Z0-9_`의 조합
 * 변수의 type은 가변
 
 ## 문장 Statement
@@ -62,13 +63,15 @@
 
 ## 익명 함수 Anonymous function
 * 이름 없는 함수
-* 파라미터로 전달되는 함수
+* 파라미터로 전달되는 함수, 콜백 함수, 이벤트 핸들러 등에 사용
 * 비동기 프로그래밍에서 CallBack 함수로 사용
 * 익명 함수 선언 : function (파라미터) {명령문;}
-* 익명 함수 호출 : (function(){})();
+* 익명 함수 호출 : `(function(){})();` 또는 `(()=>{})()`
+* 람다(Lambda ƛ) 표현식 : (파라미터) => {명령문;}
+  * 화살표 함수 Arrow function
 
 ## DOM 스크립트
-* DOM; Document Object Model
+* DOM: Document Object Model
 * HTML document를 제어하는 스크립트
 
 ```
@@ -77,7 +80,7 @@
 <body>
     <div id="box"></div>
     <script>
-        var box = document.getElementById("box");
+        const box = document.getElementById("box");
         box.innerHTML = new Date();
     </script>
 </body>
