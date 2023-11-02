@@ -14,6 +14,10 @@
   - Deploy
   - Development
 - Lifecycle
+  - Init
+  - Service
+  - Destroy
+
 ## Syntax
 - 스크립틀릿 Scriptlet
   - Control Flow
