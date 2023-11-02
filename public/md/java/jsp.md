@@ -21,7 +21,9 @@
   - Loop
   - Operator
   - Literal
-- 선언자 Declarative
+- 선언부 Declaration
+  - <%! %>
+- 지시어 Directive
   - <%@ page %>
   - <%@ include %>
   - <%@ taglib %>
@@ -53,7 +55,6 @@
   - exception
     - Exception
 - 주석 Comment
-- 지시자 Directive
 - 커스텀 태그 Custom Tag
 - EL Expression Language
 
