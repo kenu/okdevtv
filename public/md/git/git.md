@@ -10,8 +10,6 @@
 * GitHub.com
   * git을 엔진으로 하는 개발 소셜 플랫폼
   * follow, watch, Pull Request
-* http://rankedin.kr
-  * GitHub 활동하는 한국인 개발자
 
 ## install
 * https://git-scm.com
@@ -40,6 +38,10 @@
 
 ## Git Conflict 해법
 * [충돌 난 경우 해법](/mib/git/conflict)
+
+## VS Code Git plugins
+* GitLens
+* Git Graph
 
 ## ref
 * easy git
