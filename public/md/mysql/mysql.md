@@ -3,6 +3,37 @@
 
 ## install
 
+### EC2 AMI2023
+* MySQL 8.0 Community Server
+```bash
+wget https://dev.mysql.com/get/mysql80-community-release-el9-5.noarch.rpm
+sudo dnf install mysql80-community-release-el9-5.noarch.rpm
+sudo dnf update
+sudo dnf install mysql-community-server
+```
+* 임시 비밀번호 확인
+```
+sudo grep 'temporary password' /var/log/mysqld.log
+```
+* `sudo mysql_secure_installation -p`
+* `mysql -u root -p`
+
+```sql
+mysql> create user 'devuser'@'localhost' identified by 'devpass';
+ERROR 1819 (HY000): Your password does not satisfy the current policy requirements
+mysql> create user 'devuser'@'localhost' identified by 'Devpass';
+ERROR 1819 (HY000): Your password does not satisfy the current policy requirements
+mysql> create user 'devuser'@'localhost' identified by 'Devpass!';
+ERROR 1819 (HY000): Your password does not satisfy the current policy requirements
+mysql> create user 'devuser'@'localhost' identified by 'Devpass!2';
+Query OK, 0 rows affected (0.01 sec)
+```
+* `create user 'devuser'@'localhost' identified by 'Devpass!2';`
+* `grant all privileges on devdb.* to 'devuser'@'localhost';`
+
+
+
+
 ### Mac
 ```
 # mysql 설치
@@ -55,8 +86,8 @@ drop database devdb;
 create database devdb;
 show databases;
 
-# devuser 계정 생성, 비번은 devpass
-create user 'devuser'@'localhost' identified by 'devpass';
+# devuser 계정 생성, 비번은 Devpass!2
+create user 'devuser'@'localhost' identified by 'Devpass!2';
 
 # devdb의 모든 권한을 devuser 계정에게 부여
 # `localhost`에서만 접속 가능. 외부는 `%`
@@ -105,7 +136,7 @@ spring.datasource.driverClassName=com.mysql.jdbc.Driver
 spring.datasource.url=jdbc:mysql://localhost/devdb?useUnicode=true&charaterEncoding=utf-8&allowPublicKeyRetrieval=true&useSSL=false
 # 8.0 부터 로컬 개발시 `allowPublicKeyRetrieval`, `useSSL` 설정 필요
 spring.datasource.username=devuser
-spring.datasource.password=devpass
+spring.datasource.password=Devpass!2
 ```
 
 ### Data path
