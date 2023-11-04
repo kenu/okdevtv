@@ -40,6 +40,9 @@ alter user devuser with password 'devpass';
 create database devdb with owner devuser;
 ```
 
+## Connect
+* `psql -U devuser -W -d devdb`
+
 ## ref
 * AWS EC2에 PostgreSQL 설치하고 접속하기
   * https://developerbee.tistory.com/192
