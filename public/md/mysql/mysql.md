@@ -154,3 +154,4 @@ select CONVERT_TZ(str_to_date('2021-04-06T04:42:00.000Z','%Y-%m-%dT%T.%fZ'), '+0
 
 ## related
 * [MySQL JSON](/mib/mysql/json)
+* [Installing MySQL 8 server & client on Amazon Linux 2023](https://linux.how2shout.com/installing-mysql-8-server-client-on-amazon-linux-2023/)
