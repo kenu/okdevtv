@@ -16,26 +16,26 @@ vi /var/lib/pgsql/data/postgresql.conf
 // listen_addresses, port uncomment
 ```
 
-`sudo systemctl restart postgresql`
-
-`vim /var/lib/pgsql/data/pg_hba.conf`
-
+* `sudo systemctl restart postgresql`
+* `vim /var/lib/pgsql/data/pg_hba.conf`
+  * change `peer` to `md5` for local, IPv4
 ```
+# TYPE  DATABASE        USER            ADDRESS                 METHOD
+
+# "local" is for Unix domain socket connections only
+local   all             all                                     md5
 # IPv4 local connections:
-#host    all             all             127.0.0.1/32            ident
-host    all             all             0.0.0.0/0               md5
+host    all             all             127.0.0.1/32            md5
 ```
 
-`sudo systemctl restart postgresql`
-
-`sudo su - postgres`
-
-`psql`
-
+* `sudo systemctl restart postgresql`
+* `sudo su - postgres`
+* `psql`
+  * Create user, database
 ```
 create user devuser nosuperuser;
 
-alter user devuser with password 'devpass';
+alter user devuser with encrypted password 'devpass';
 
 create database devdb with owner devuser;
 ```
