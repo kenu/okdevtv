@@ -10,6 +10,7 @@ wget https://dev.mysql.com/get/mysql80-community-release-el9-5.noarch.rpm
 sudo dnf install mysql80-community-release-el9-5.noarch.rpm
 sudo dnf update
 sudo dnf install mysql-community-server
+sudo systemctl start mysqld
 ```
 * 임시 비밀번호 확인
 ```
