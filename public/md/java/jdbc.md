@@ -22,6 +22,7 @@ import java.sql.SQLException;
 public class Jdbc {
 
     private static Connection conn;
+
     {
         try {
             Class.forName("org.h2.Driver");
@@ -56,4 +57,34 @@ public class Jdbc {
         }
     }
 }
+```
+
+## DB Info
+
+```
+spring.datasource.username=devuser
+spring.datasource.password=devpass
+
+spring.datasource.url=jdbc:postgresql://localhost:5432/devdb
+spring.datasource.platform=postgres
+
+spring.datasource.url=jdbc:mariadb://localhost:3306/devdb
+spring.datasource.platform=mariadb
+
+spring.datasource.url=jdbc:mysql://${MYSQL_HOST:localhost}:3306/devdb
+spring.datasource.platform=mysql
+
+spring.datasource.url=jdbc:oracle:thin:@localhost:1521:devdb
+spring.datasource.platform=oracle
+
+# spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+# spring.datasource.driver-class-name=org.postgresql.Driver
+# spring.datasource.driver-class-name=org.mariadb.jdbc.Driver
+# spring.datasource.driver-class-name=oracle.jdbc.OracleDriver
+
+spring.datasource.hikari.maximum-pool-size=4
+
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql: true
+
 ```
