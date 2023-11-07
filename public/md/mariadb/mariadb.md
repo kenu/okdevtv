@@ -93,6 +93,11 @@ sudo apt-key adv --recv-keys --keyserver hkp://keyserver.ubuntu.com:80 0xcbcb082
 sudo add-apt-repository 'deb [arch=amd64,i386,ppc64el] http://ftp.kaist.ac.kr/mariadb/repo/10.8/ubuntu trusty main'
 ```
 
+## Timestamp
+* oracle `SYSDATE`
+* default `CURRENT_TIMESTAMP`
+* mariadb, mysql `NOW()`
+
 ## MariaDB + node.js
 * https://github.com/felixge/node-mysql
 * https://github.com/mscdex/node-mariasql
