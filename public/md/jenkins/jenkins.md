@@ -24,7 +24,7 @@ java -jar jenkins.war --httpPort=9090
 ```
 
 * token for first login
-  * `cat /Users/$(whoami)/.jenkins/secrets/initialAdminPassword`
+  * `cat ~/.jenkins/secrets/initialAdminPassword`
 
 
 ## Headless java
