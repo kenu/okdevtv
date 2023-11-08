@@ -19,9 +19,13 @@ jenkins
   * run
 
 ```
-wget https://get.jenkins.io/war-stable/2.263.3/jenkins.war
+wget https://get.jenkins.io/war-stable/2.414.3/jenkins.war
 java -jar jenkins.war --httpPort=9090
 ```
+
+* token for first login
+  * `cat /Users/$(whoami)/.jenkins/secrets/initialAdminPassword`
+
 
 ## Headless java
 
