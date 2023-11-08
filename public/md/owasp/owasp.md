@@ -20,13 +20,13 @@
   * https://github.com/WebGoat/WebGoat
 * Juice Shop (Node.js)
   * https://owasp.org/www-project-juice-shop/
-* Damn Vulnerable Web Application (DVWA)
+* Damn Vulnerable Web Application (DVWA) (PHP)
   * https://owasp.org/www-project-damn-vulnerable-web-sockets/
-* OWASP Mutillidae II
+* OWASP Mutillidae II (PHP)
   * https://sourceforge.net/projects/mutillidae/
-* OWASP Security Shepherd
+* OWASP Security Shepherd (Node.js)
   * https://owasp.org/www-project-security-shepherd/
-* OWASP Web Security Testing Guide
+* OWASP Web Security Testing Guide (WSTG) (PDF)
   * https://owasp.org/www-project-web-security-testing-guide/
 
 ## ref
