@@ -1,5 +1,7 @@
 # OWASP Top 10
+* **O**pen **W**orldwide **A**pplication **S**ecurity **P**roject
 
+## [OWASP Top 10](https://owasp.org/www-project-top-ten/)
 * [SQL Injection](/mib/owasp/sqlinjection)
 * 인증 및 세션 관리 취약점
 * 크로스 사이트 스크립팅(XSS)
@@ -10,6 +12,22 @@
 * 크로스 사이트 요청 변조(CSRF)
 * 알려진 취약점이 있는 컴포넌트 사용
 * 취약한 API
+
+## Project
+* ZAP
+  * https://www.zaproxy.org/
+* WebGoat (Java)
+  * https://github.com/WebGoat/WebGoat
+* Juice Shop (Node.js)
+  * https://owasp.org/www-project-juice-shop/
+* Damn Vulnerable Web Application (DVWA)
+  * https://owasp.org/www-project-damn-vulnerable-web-sockets/
+* OWASP Mutillidae II
+  * https://sourceforge.net/projects/mutillidae/
+* OWASP Security Shepherd
+  * https://owasp.org/www-project-security-shepherd/
+* OWASP Web Security Testing Guide
+  * https://owasp.org/www-project-web-security-testing-guide/
 
 ## ref
 * 2017년판 OWASP TOP 10, 어떤 보안위협 담겼나
