@@ -22,6 +22,8 @@ jenkins
 wget https://get.jenkins.io/war-stable/2.414.3/jenkins.war
 java -jar jenkins.war --httpPort=9090
 ```
+* headless
+  * https://unix.stackexchange.com/a/729802
 
 * token for first login
   * `cat ~/.jenkins/secrets/initialAdminPassword`
