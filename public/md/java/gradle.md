@@ -134,5 +134,8 @@ repositories {
 }
 ```
 
+## Parameter
+* `./gradlew bootRun --args ' --server.port=9090'`
+
 ## ref
 * https://guides.gradle.org/creating-new-gradle-builds/
