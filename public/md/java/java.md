@@ -104,6 +104,18 @@ export JAVA_HOME="$(/usr/libexec/java_home -v 1.8)"
 - [servlet](/mib/java/servlet)
 - [jsp](/mib/java/jsp)
 
+## 실행 경로
+```java
+public class CheckDirectory {
+    public static void main(String args[]) {
+        Path currentPath = Paths.get("");
+        String path = currentPath.toAbsolutePath().toString();
+        System.out.println("현재 작업 경로: " + path);
+    }
+}
+```
+* from: https://7942yongdae.tistory.com/121
+
 ## 참고
 * 2시간만에 자바 시작
   * http://www.slideshare.net/kenu/java-in-2-hours
