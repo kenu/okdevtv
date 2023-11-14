@@ -51,6 +51,7 @@ fc-cache --force
 ## related
 * [jenkins-docker](/mib/jenkins/docker)
 * [jenkins-sonarqube](/mib/jenkins/sonarqube)
+* [jenkins-spotbugs](/mib/jenkins/spotbugs)
 
 ## ref
 * http://okjsp.tistory.com/tag/hudson
