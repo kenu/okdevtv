@@ -50,7 +50,7 @@ fc-cache --force
 
 ## related
 * [jenkins-docker](/mib/jenkins/docker)
-* [jekins-sonarqube](/mib/jenkins/sonarqube)
+* [jenkins-sonarqube](/mib/jenkins/sonarqube)
 
 ## ref
 * http://okjsp.tistory.com/tag/hudson
