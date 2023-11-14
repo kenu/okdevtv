@@ -3,9 +3,10 @@
 * https://jenkins.io
 * 2005 Hudson → 2011 Jenkins
 * Continous Integration Tool
+* 영상: https://www.youtube.com/watch?v=CSlCkCHHLCo
 
 ## Requirements
-* java 8+
+* java 11+
 
 ## Install and Run
 * mac
@@ -22,9 +23,6 @@ jenkins
 wget https://get.jenkins.io/war-stable/2.414.3/jenkins.war
 java -jar jenkins.war --httpPort=9090
 ```
-* headless
-  * https://unix.stackexchange.com/a/729802
-
 * token for first login
   * `cat ~/.jenkins/secrets/initialAdminPassword`
 
@@ -39,6 +37,9 @@ Caused: hudson.util.AWTProblem
     at org.eclipse.jetty.server.handler.ContextHandler.callContextInitialized(ContextHandler.java:1067)
 ```
 
+* headless
+  * https://unix.stackexchange.com/a/729802
+
 ```
 sudo yum install fontconfig
 fc-cache --force
@@ -49,6 +50,7 @@ fc-cache --force
 
 ## related
 * [jenkins-docker](/mib/jenkins/docker)
+* [jekins-sonarqube](/mib/jenkins/sonarqube)
 
 ## ref
 * http://okjsp.tistory.com/tag/hudson
