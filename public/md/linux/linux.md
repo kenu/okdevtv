@@ -52,7 +52,8 @@ find . -type l
 ```
 
 ## Port check
-* `lsof -i tcp:3000`
+* `lsof -t -i:3000` # pid
+* `lsof -i tcp:3000` # process
 
 * 열린 포트 확인
 
