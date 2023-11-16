@@ -20,6 +20,10 @@ jenkins
   * run
 
 ```
+# headless java
+sudo dnf install fontconfig -y
+fc-cache --force
+# jenkins
 wget https://ftp.yz.yamagata-u.ac.jp/pub/misc/jenkins/war-stable/2.414.3/jenkins.war
 java -jar jenkins.war --httpPort=9090
 ```
@@ -28,6 +32,11 @@ java -jar jenkins.war --httpPort=9090
 
 
 ## Headless java
+* solution
+```
+sudo dnf install fontconfig -y
+fc-cache --force
+```
 
 * EC2 java case
 
@@ -39,11 +48,6 @@ Caused: hudson.util.AWTProblem
 
 * headless
   * https://unix.stackexchange.com/a/729802
-
-```
-sudo yum install fontconfig
-fc-cache --force
-```
 
 ## Configure admin
 * copy code and paste it
