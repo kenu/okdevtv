@@ -6,12 +6,15 @@
 ## Download and Install
 * http://jmeter.apache.org/download_jmeter.cgi
 
-## run
+## run with GUI
 ```
 bin/jmeter
 ```
 
-## Getting Started
+## run without GUI
+```
+bin/jmeter -n -t test.jmx -e -l test.jtl -o /tmp/report
+```
 
 
 ## ref
