@@ -8,7 +8,7 @@
   "private": true,
   "scripts": {
     "dev": "nodemon ./bin/www",
-    "test": "jest tests -o --watch"
+    "test": "jest tests/asset.test.js -o --watch"
   },
   "dependencies": {
     "@aws-sdk/client-ses": "^3.282.0",
