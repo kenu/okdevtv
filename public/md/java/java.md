@@ -12,7 +12,10 @@
 
 | Release Family | End Of Support Life (EOSL)|
 |---|---|
-| 18 | September 2022(1)|
+| 21 LTS	| September 2031 |
+| 20 | September 2023 |
+| 19 | March 2023 |
+| 18 | September 2022|
 | 17 LTS | September 2029|
 | 16 | September 2021|
 | 15 | March 2021|
