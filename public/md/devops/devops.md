@@ -10,7 +10,7 @@
 - 복구 시 더 빠른 평균 시간 (새로운 릴리스의 충돌 및 그 밖에 현재의 시스템을 비활성화하는 상황에서)
 
 ## 툴 체인
-- <img src="./images/Devops-toolchain.webp" alt="devops toolchain" class="img" />
+- <img src="images/Devops-toolchain.webp" alt="devops toolchain" class="img" />
 - 계획: 목적을 수행하기 앞서 방법이나 절차 등을 미리 생각하여 계획.
 - 코드: 코드 개발 및 검토, 버전 관리 도구, 코드 병합
 - 빌드: 지속적 통합(CI) 도구, 빌드 상태
@@ -21,7 +21,7 @@
 - 모니터링: 애플리케이션 성능 모니터링, 최종 사용자 경험.
 
 ## DevSecOps
-- <img src="./images/devsecops-logo.webp" alt="devsecops logo" class="img" />
+- <img src="images/devsecops-logo.webp" alt="devsecops logo" class="img" />
 - 설계부터 테스트, 배포 및 제품 제공에 이르기까지 소프트웨어 개발 프로세스의 모든 단계에서 보안 구현을 자동화
 - 보안 취약점이 발생할 경우 이를 처리
 - 따라서 해결하는 것이 더 쉽고 비용도 저렴
