@@ -17,6 +17,9 @@ module.exports = {
   signupByGitHub: async function (github) {
     console.log(github);
     const email = github.email;
+    if (!email) {
+      return 0;
+    }
     // check duplication
     const result = await knex.raw(`select email from user where email = ?`, [
       email.trim(),
