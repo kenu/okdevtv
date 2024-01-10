@@ -93,6 +93,17 @@ mvn archetype:generate -DgroupId=com.okdevtv.java -DartifactId=okdevtv -Darchety
 * `~/.m2/repository` 기본 위치
 * 라이브러리 정보는 http://mvnrepository.com 에서 검색 가능
 
+## build file name
+```
+  <build>
+    <finalName>WhatEverYouLikey</finalName>
+  </build>
+```
+
+## to gradle
+- pom.xml to build.gradle
+- `gradle init`
+
 ## ref
 * 5분 메이븐
   * http://maven.apache.org/guides/getting-started/maven-in-five-minutes.html
