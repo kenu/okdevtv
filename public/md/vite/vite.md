@@ -1,46 +1,28 @@
 # Vite
 * https://vitejs.dev/
 * /vit/, french word for 'fast'
+* node.js 18+ required
 
 ## First vite project
 ```
-# npm 6.x
-npm init vite@latest my-vue-app --template vue
-
 # npm 7+, extra double-dash is needed:
-npm init vite@latest my-vue-app -- --template vue
+npm create vite@latest my-vue-app -- --template vue
+
+# pnpm (yarn)
+pnpm create vite my-vue-app --template vue
 ```
 
-* template preset list
-  * vanilla
-  * vanilla-ts
-  * vue
-  * vue-ts
-  * react
-  * react-ts
-  * preact
-  * preact-ts
-  * lit-element
-  * lit-element-ts
-  * svelte
-  * svelte-ts
+* template preset list x2(*-ts)
+  * vanilla, vue, react, preact
+  * lit, svelte, solid, qwik
 
-## vite.config.js
-
-```js
-import { defineConfig } from 'vite'
-import vue from '@vitejs/plugin-vue'
-import path from 'path'
-
-export default defineConfig({
-  plugins: [vue()],
-  resolve: {
-    alias: {
-      '@': path.resolve(__dirname, './src'),
-    },
-  }
-})
+## Run
 ```
+cd my-vue-app
+npm i
+npm run dev
+```
+* http://localhost:5173
 
 ## ref
 * 13 minutes Vite by Evan You
