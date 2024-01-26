@@ -28,7 +28,7 @@ const okdevtvList = {
     const sheet = await sheetdb.getSheet(info);
     const rows = await sheet.getRows();
     const items = rows.map((row) => {
-      return row;
+      return row._rawData;
     });
     repo[pageCode] = items;
     lastTime = Date.now();

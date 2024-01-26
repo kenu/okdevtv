@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 
 <head>
   <title>방송 목록 - OKdevTV</title>
@@ -49,18 +49,17 @@
   <input type="text" id="keyword" placeholder="search keyword" autocomplete="off">
   <ul id="list">
     <% let lastOne='' ; let css='' ; if (!items) { return; } items.forEach(item=> {
-      if (lastOne !== item.date) {
-      css = 'cblack'; lastOne = item.date;
+      if (lastOne !== item[0]) {
+      css = 'cblack'; lastOne = item[0];
       } else {
       css = 'cgrey';
       } %>
       <li>
-        <span class="<%= css %>">[<%= item.date %>]</span>
-        <%= item.topic %>
-          <% if (item.movie) { %><a href="/f/<%= encodeURIComponent(item.movie) %>" target="_blank"
-              rel="noreferrer">movie</a>
+        <span class="<%= css %>">[<%= item[0] %>]</span>
+        <%= item[1] %>
+          <% if (item[2]) { %><a href="/f/<%= encodeURIComponent(item[2]) %>" target="_blank" rel="noreferrer">movie</a>
             <% } %>
-              <% if (item.slide) { %><a href="/f/<%= encodeURIComponent(item.slide) %>" target="_blank"
+              <% if (item[3]) { %><a href="/f/<%= encodeURIComponent(item[3]) %>" target="_blank"
                   rel="noreferrer">slide</a>
                 <% } %>
       </li>
