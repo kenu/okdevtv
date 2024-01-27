@@ -10,10 +10,10 @@ npm i express-session --save
 ## example setting & use
 
 ```js
-var session = require('express-session')
+const session = require('express-session')
 
-var app = express();
-var sess = {
+const app = express();
+const sess = {
   secret: 'keyboard cat',
   resave: true,
   saveUninitialized: true,

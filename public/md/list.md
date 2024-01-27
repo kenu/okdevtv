@@ -209,7 +209,6 @@
 ./nginx/nginx.md
 ./nginx/php-fpm.md
 ./nodejs/async.md
-./nodejs/credentials.json.sample
 ./nodejs/debug.md
 ./nodejs/express-session.md
 ./nodejs/gmail-box.js
