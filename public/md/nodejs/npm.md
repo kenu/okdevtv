@@ -1,6 +1,7 @@
 # NPM
 * Node Package Manager
 * [`pnpm`](/mib/nodejs/pnpm) 참고
+
 ## 설치
 * node.js 와 함께 설치됨
 * `package.json` 파일 참조
@@ -32,10 +33,10 @@ npm init
 ```
 
 ## npx
-* npx(1) -- execute npm package binaries
+* npx -- execute npm package binaries
 
 ```
-npx -p node@8 npm run build
+npx serve
 ```
 
 ## yarn
