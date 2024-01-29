@@ -9,15 +9,15 @@
 
 ## How to
 
-- ![ec2win01](images/ec2win01.webp)
-- ![ec2win02](images/ec2win02.webp)
-- ![ec2win03](images/ec2win03.webp)
-- ![ec2win04](images/ec2win04.webp)
-- ![ec2win05](images/ec2win05.webp)
-- ![ec2win06](images/ec2win06.webp)
-- ![ec2win07](images/ec2win07.webp)
-- ![ec2win08](images/ec2win08.webp)
-- ![ec2win09](images/ec2win09.webp)
+- <img src="/md/aws/images/ec2win01.webp" alt="ec2win01" class="img">
+- <img src="/md/aws/images/ec2win02.webp" alt="ec2win02" class="img">
+- <img src="/md/aws/images/ec2win03.webp" alt="ec2win03" class="img">
+- <img src="/md/aws/images/ec2win03.webp" alt="ec2win04" class="img">
+- <img src="/md/aws/images/ec2win03.webp" alt="ec2win05" class="img">
+- <img src="/md/aws/images/ec2win03.webp" alt="ec2win06" class="img">
+- <img src="/md/aws/images/ec2win03.webp" alt="ec2win07" class="img">
+- <img src="/md/aws/images/ec2win03.webp" alt="ec2win08" class="img">
+- <img src="/md/aws/images/ec2win03.webp" alt="ec2win09" class="img">
 
 ## Install for dev
 
