@@ -23,6 +23,20 @@ sudo dnf install zsh git util-linux-user -y
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ```
 
+## Windows Git Bash
+* https://git-scm.com/downloads
+
+```
+echo 'test -f ~/.bashrc && . ~/.bashrc' > ~/.bash_profile
+echo 'if [ -t 1 ]; then
+  exec zsh
+fi' > ~/.bashrcc
+```
+- https://packages.msys2.org/package/zsh?repo=msys&variant=x86_64
+- Download https://mirror.msys2.org/msys/x86_64/zsh-5.9-2-x86_64.pkg.tar.zst
+- Extract and move to C:\Program Files\Git
+- from: https://medium.com/@leomaurodesenv/setting-up-your-git-bash-zsh-terminals-on-windows-fa94871f440d
+
 ### Remote CentOS
 ```
 su
