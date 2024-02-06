@@ -1,5 +1,6 @@
 # Regular Expressions
-* 정규 표현식
+* 정규 표현식, 정규식
+* 정규식은 문자열에서 특정 패턴을 찾는데 사용
 
 ## Syntax
 ```
@@ -14,9 +15,9 @@
 * `//` : pattern
 
 ## Modifiers(Flags)
-* `//g` : global
-* `//i` : ignore case
-* `//m` : multi line
+* `/.*/g` : global
+* `/.*/i` : ignore case
+* `/.*/m` : multi line
 
 ## Common Tokens
 * `[abc]` : Matches either an a, b or c character
@@ -41,11 +42,12 @@
 
 ## replace
 ```javascript
-var re = /(\w+)\s(\w+)/;
-var str = 'John Smith';
-str.replace(re, '$2, $1'); // "Smith, John"
+const re = /(\w+)\s(\w+)/;
+const str = 'John Smith';
+const result = str.replace(re, '$2, $1');
 RegExp.$1; // "John"
 RegExp.$2; // "Smith"
+result; // "Smith, John"
 ```
 
 ## Tools
@@ -56,9 +58,10 @@ RegExp.$2; // "Smith"
  class="$1"
 ```
 
-* grep
+* egrep, grep
 
 ```
+egrep ""
 grep -E ""
 ```
 
