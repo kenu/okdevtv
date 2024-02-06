@@ -63,3 +63,20 @@
   * 김밥, 닭발, 떡볶이, 순대, 잔치국수
 * [님아 그 시장을 가오_EP.32_태안](https://youtu.be/k0GiKImCvX4) : 바지락해장국, 안흥항 https://naver.me/583W60jA
   * 바지락해장국
+* [님아 그 시장을 가오_EP.33_충주](https://youtu.be/IBKaevIroGs) : 33년 막창구이집
+  * 막창구이
+* [님아 그 시장을 가오_EP.34_정읍](https://youtu.be/OBn-4leDft0) : 곰탕집
+  * 곰탕
+* [님아 그 시장을 가오_EP.35_안동](https://youtu.be/VkoHJpp9-2Q) : 뼈해장국집
+  * 뼈해장국
+* [님아 그 시장을 가오_EP.36_장성](https://youtu.be/FpnRPY9Rfdo) : 곱창집
+  * 소곱창
+* [님아 그 시장을 가오_EP.37_광주](https://youtu.be/IaPvcG_zlSw) : 여수집 국밥; 하루에 1시간 장사
+  * 붕장어백반
+* [님아 그 시장을 가오_EP.38_청주](https://youtu.be/A4xPw4IXb-g) : 우암설렁탕
+  * 수육 하루 4접시만
+* [님아 그 시장을 가오_EP.39_제천](https://youtu.be/S74RkwHeFUY) : 월성집
+  * 오징어 무침
+
+===
+* 재생목록: https://www.youtube.com/playlist=PLoABXt5mipg44IDlocl0rncGijN0b__bd
