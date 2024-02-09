@@ -77,6 +77,8 @@
   * 수육 하루 4접시만
 * [님아 그 시장을 가오_EP.39_제천](https://youtu.be/S74RkwHeFUY) : 월성집
   * 오징어 무침
+* [님아 그 시장을 가오_EP.40_부암](https://youtu.be/NROEyqEqkR4) : 기라성
+  * 쟁반짜장, 돈까스, 볶음밥
 
 ===
 * 재생목록: https://www.youtube.com/playlist=PLoABXt5mipg44IDlocl0rncGijN0b__bd
