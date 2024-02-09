@@ -30,4 +30,5 @@ spring.datasource.password=devpass
 # server.port = 8090
 ```
 
-
+## related
+- [Oracle Cloud](/mib/oracle/ocp)
