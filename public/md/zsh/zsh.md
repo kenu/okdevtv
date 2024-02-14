@@ -30,7 +30,7 @@ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/i
 echo 'test -f ~/.bashrc && . ~/.bashrc' > ~/.bash_profile
 echo 'if [ -t 1 ]; then
   exec zsh
-fi' > ~/.bashrcc
+fi' > ~/.bashrc
 ```
 - https://packages.msys2.org/package/zsh?repo=msys&variant=x86_64
 - Download
