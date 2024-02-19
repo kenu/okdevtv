@@ -33,4 +33,12 @@ router.get('/okdevtv-list', async function (req, res) {
   res.json(list);
 });
 
+router.post('/bookmark', function (req, res) {
+  let data = req.body;
+  console.log('data', data);
+  res.json({
+    status: 200,
+  });
+});
+
 module.exports = router;

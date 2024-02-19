@@ -29,6 +29,27 @@
     src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
     integrity="sha384-WSbvOaP5ZiKy3EecR/fpEjT2DCgj14tAP5MEAfpU7WGxGZ3w/MtlGEsKbisW1Aym"
     crossorigin="anonymous"></script>
+  <script>
+    window.onload = () => {
+      const bookmark = document.getElementById('bookmark');
+      bookmark.addEventListener('click', () => {
+        console.log('bookmark', location.pathname);
+        fetch('/apis/bookmark', {
+          method: 'POST', headers: {
+            "Content-Type": "application/json",
+          }, body: JSON.stringify({ pathname: location.pathname })
+        })
+          .then((res) => {
+            if (res.status === 200) {
+              bookmark.innerText = '🔖 bookmarked';
+            }
+          })
+          .catch((err) => {
+            console.error(err);
+          });
+      });
+    };
+  </script>
 </head>
 
 <body>
@@ -40,6 +61,9 @@
         <a href="/">
           <img src="/images/logo.webp" alt="okdevtv logo" id="logo" />OKdevTV</a>
       </h1>
+      <aside>
+        <div id="bookmark">🔖 bookmark</div>
+      </aside>
     </header>
     __html__
   </div>
