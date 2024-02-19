@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const tip = require('../lib/tip');
+const bookmark = require('../lib/bookmark');
 const okdevtv = require('../services/okdevtv-list');
 
 /* GET tip listing. */
@@ -31,6 +32,15 @@ router.get('/okdevtv-list', async function (req, res) {
     };
   });
   res.json(list);
+});
+
+router.post('/bookmark', async function (req, res) {
+  let data = req.body;
+  console.log('data', data);
+  await bookmark.save(res, data);
+  res.json({
+    status: 200,
+  });
 });
 
 module.exports = router;

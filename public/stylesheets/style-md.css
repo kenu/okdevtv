@@ -50,3 +50,17 @@ li code {
   text-align: center;
   margin: 20px 0;
 }
+
+#bookmark {
+  border-radius: 5px;
+  position: fixed;
+  right: 20px;
+  background: linen;
+  padding: 4px;
+  cursor: pointer;
+}
+#bookmark:hover {
+  background: #eefefe;
+  border: 1px #888 solid;
+  padding: 3px;
+}

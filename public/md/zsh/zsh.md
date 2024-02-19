@@ -20,6 +20,8 @@
 
 ```sh
 sudo dnf install zsh git util-linux-user -y
+```
+```
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ```
 
