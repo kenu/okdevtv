@@ -15,21 +15,6 @@
     Sentry.init({
       dsn: 'https://c543e6d71efa44598215f3d48c104afe@o1064669.ingest.sentry.io/4504407878074368',
     });
-    window.onload = clipboard;
-    function clipboard() {
-      const pres = document.querySelectorAll('pre');
-      pres.forEach(i => i.addEventListener('click', () => {
-        navigator.clipboard.writeText(i.innerText);
-        i.innerText += ('===\n📋Copied!');
-        setTimeout(() => {
-          i.innerText = i.innerText.replace('===\n📋Copied!', '');
-        }, 1500);
-        changeColor(i);
-      }));
-    }
-    function changeColor(element) {
-      element.style.backgroundColor = '#ffffff80';
-    }
   </script>
 
   <script src="/js/vendor/wcslog.js"></script>
@@ -45,7 +30,22 @@
     integrity="sha384-WSbvOaP5ZiKy3EecR/fpEjT2DCgj14tAP5MEAfpU7WGxGZ3w/MtlGEsKbisW1Aym"
     crossorigin="anonymous"></script>
   <script>
+    function clipboard() {
+      const pres = document.querySelectorAll('pre');
+      pres.forEach(i => i.addEventListener('click', () => {
+        navigator.clipboard.writeText(i.innerText);
+        i.innerText += ('===\n📋Copied!');
+        setTimeout(() => {
+          i.innerText = i.innerText.replace('===\n📋Copied!', '');
+        }, 1500);
+        changeColor(i);
+      }));
+    }
+    function changeColor(element) {
+      element.style.backgroundColor = '#ffffff80';
+    }
     window.onload = () => {
+      clipboard();
       const bookmark = document.getElementById('bookmark');
       bookmark.addEventListener('click', () => {
         console.log('bookmark', location.pathname);
