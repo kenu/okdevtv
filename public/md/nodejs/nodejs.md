@@ -31,7 +31,7 @@ that run across distributed devices.
 ### 장점
 * 쉬운 시작
 * 안정적인 서비스 w/ pm2
-* 모듈 248,062 total packages(2016/03/04)
+* 모듈 2,663,939 total packages(2024/01/27); https://modulecounts.com
 * 성능 개선
   * [linkedin 사례](http://highscalability.com/blog/2012/10/4/linkedin-moved-from-rails-to-node-27-servers-cut-and-up-to-2.html)
     * 서버 감축 Ruby + Mongrel 30대 -> node.js 3대
@@ -393,15 +393,7 @@ if (cluster.isMaster) {
 
 ## JavaScript Code Quality
 * SonarQube
-
-
-## node.js PaaS 활용 - heroku
-* node.js 지원하는 PaaS
-  * 무료사용 가능
-* https://www.heroku.com/
-* https://okdevtv.com/tip/nodehosting.html
-
-
+* SonarLint
 
 ## 디버깅
 ### 개요

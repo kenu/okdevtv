@@ -530,6 +530,6 @@ setTimeout(() => {
 ## 함께 보면 좋은 자료
 
 * http://bit.ly/oknodejs
-* https://nodejs.org/dist/latest-v10.x/docs/api/
-* https://nodejs.org/dist/latest-v10.x/docs/api/process.html#process_event_uncaughtexception
-* https://nodejs.org/dist/lastest-v10.x/docs/api/fs.html#fs_fs_promises_api
+* https://nodejs.org/dist/latest/docs/api/
+* https://nodejs.org/dist/latest/api/process.html#process_event_uncaughtexception
+* https://nodejs.org/docs/latest/api/fs.html#fs_fs_promises_api

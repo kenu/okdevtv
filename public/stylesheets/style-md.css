@@ -1,5 +1,6 @@
 #wrap {
   min-width: 576px;
+  max-width: 800px;
   width: 96%;
   margin: auto;
   padding: 0 12px;

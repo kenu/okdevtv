@@ -47,9 +47,9 @@ xcode-select --install
 
 
 ## 맥 node.js 설치법
-* http://nodejs.org
-* download and install
-* 또는 `brew install node@10`
+* http://nodejs.org download and install
+* or [nvm](/mib/nodejs/nvm) recommend
+* `brew install node`
 
 * `node --version`
 * `npm --version` 확인
