@@ -56,7 +56,6 @@ try {
   passport.deserializeUser(function (obj, done) {
     done(null, obj);
   });
-
 } catch (e) {
   console.error(e.message);
 }

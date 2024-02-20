@@ -157,8 +157,8 @@ function ensureAuthenticated(req, res, next) {
   res.redirect('/login');
 }
 
-/* GET users listing. */
 router.get('/', function (req, res) {
+  console.log(req.user);
   res.render('login', { user: req.user });
 });
 
