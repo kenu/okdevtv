@@ -6,7 +6,8 @@
   * mac : `brew install mariadb` or `brew install mariadb@10.6`
   * Amazon Linux 2023
 ```
-sudo dnf install mariadb105-server
+sudo dnf install mariadb105-server -y
+sudo systemctl enable mariadb
 sudo systemctl start mariadb
 ```
 
