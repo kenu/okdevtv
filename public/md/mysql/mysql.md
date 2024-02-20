@@ -80,11 +80,11 @@ mysql -u root -p
 Enter password:
 
 show databases;
-create database devdb;
+create database devdb default character set utf8mb4 collate utf8mb4_unicode_ci;
 drop database devdb;
 
 # DB(devdb) 생성
-create database devdb;
+create database devdb default character set utf8mb4 collate utf8mb4_unicode_ci;
 show databases;
 
 # devuser 계정 생성, 비번은 Devpass!2

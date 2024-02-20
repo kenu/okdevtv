@@ -104,14 +104,11 @@ sudo vi /etc/my.cnf.d/server.cnf
 ```
 
 ```
-```
-
-```
 mysql -u root -p
 ```
 
 ```
-create database wpdb;
+create database wpdb default character set utf8mb4 collate utf8mb4_unicode_ci;;
 GRANT ALL PRIVILEGES ON wpdb.* TO wpuser@localhost IDENTIFIED BY 'wppass' WITH GRANT OPTION;
 ```
 

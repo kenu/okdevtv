@@ -35,7 +35,7 @@ sudo mariadb-secure-installation
   * `mysql -uroot -p`
 
 ```sql
-create database devdb;
+create database devdb default character set utf8mb4 collate utf8mb4_unicode_ci;
 GRANT ALL PRIVILEGES ON devdb.* TO devuser@localhost IDENTIFIED BY 'devpass' WITH GRANT OPTION;
 ```
 

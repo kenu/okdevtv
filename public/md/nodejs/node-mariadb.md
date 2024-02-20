@@ -14,7 +14,7 @@ mysql -u root -p
 GRANT ALL PRIVILEGES ON okdevdb.* TO devuser@localhost
 IDENTIFIED BY 'okpassokpass' WITH GRANT OPTION;
 
-create database okdevdb;
+create database okdevdb default character set utf8mb4 collate utf8mb4_unicode_ci;
 
 ctrl-D
 ```
@@ -25,11 +25,11 @@ mysql -u devuser -p okdevdb
 
 ```
 CREATE TABLE user (
-    id     INT NOT NULL auto_increment PRIMARY KEY, 
-    name   VARCHAR(255) NOT NULL, 
-    email  VARCHAR(255) NOT NULL, 
+    id     INT NOT NULL auto_increment PRIMARY KEY,
+    name   VARCHAR(255) NOT NULL,
+    email  VARCHAR(255) NOT NULL,
     passwd VARCHAR(255) NOT NULL,
-    image VARCHAR(255) 
+    image VARCHAR(255)
 );
 ```
 
@@ -91,7 +91,7 @@ connection.end();
 connection.connect();
 
 var query = connection.query(
-  'UPDATE user SET name = ? WHERE id = ?', 
+  'UPDATE user SET name = ? WHERE id = ?',
   ['kenu.heo', 1 ], function(err, result) {
   console.log(result);
 });
@@ -102,7 +102,7 @@ connection.end();
 
 ```
 var query = connection.query(
-  'DELETE FROM user WHERE id = ?', 
+  'DELETE FROM user WHERE id = ?',
   [ 1 ], function(err, result) {
   console.log(result);
 });
