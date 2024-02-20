@@ -1,11 +1,7 @@
 const mail = require('../lib/mail');
 
-test('mail test', () => {
+test('mail test', async () => {
   const email = process.env.BASE_MAIL;
   const message = 'test message';
-  mail.send(email, message).then((result) => {
-    console.log(result);
-  }).catch((err) => {
-    console.error(err);
-  });
-})
+  await mail.send(email, message);
+});

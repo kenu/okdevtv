@@ -7,11 +7,11 @@ const session = require('express-session');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const config = require('../config/config');
-const mysql = require('mysql');
+const mariadb = require('mariadb');
 const router = express.Router();
 
-//Define MySQL parameter in Config.js file.
-const pool = mysql.createPool({
+//Define MariaDB parameter in Config.js file.
+const pool = mariadb.createPool({
   host: config.host,
   user: config.username,
   password: config.password,
