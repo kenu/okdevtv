@@ -10,10 +10,10 @@ npm i sequelize
 
 ```
 # One of the following:
+$ npm install mariadb
 $ npm install pg pg-hstore # Postgres
 $ npm install mysql2
 
-$ npm install mariadb
 $ npm install sqlite3
 $ npm install tedious # Microsoft SQL Server
 ```
@@ -66,6 +66,14 @@ npx sequelize-cli db:migrate
 ```
 * `attributes`: define attributes no spaces between fields
 
+## Timezone
+```
+const sequelize = new Sequelize('sqlite::memory:', {
+  timezone: '+05:30'
+  // or
+  timezone: 'Asia/Seoul'
+});
+```
 ## related
 * Reverse Model
   * https://github.com/sequelize/sequelize-auto
