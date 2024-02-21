@@ -36,8 +36,7 @@ router.get('/okdevtv-list', async function (req, res) {
 
 router.post('/bookmark', async function (req, res) {
   let data = req.body;
-  console.log('data', data);
-  await bookmark.save(res, data);
+  await bookmark.create(data);
   res.json({
     status: 200,
   });
