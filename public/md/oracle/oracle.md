@@ -20,6 +20,33 @@ GRANT CONNECT, resource TO devuser;
 DROP USER devuser CASCADE;
 ```
 
+## Listener 추가
+```
+LISTENER =
+  (DESCRIPTION_LIST =
+    (DESCRIPTION =
+      (ADDRESS = (PROTOCOL = TCP)(HOST = localhost)(PORT =  1521))
+    )
+  )
+
+SID_LIST_LISTENER =
+  (SID_LIST =
+    (SID_DESC =
+      (GLOBAL_DBNAME = devdb.your_domain)
+      (ORACLE_HOME = /path/to/your/oracle/home)
+      (SID_NAME = devdb)
+    )
+  )
+```
+
+## listener 재시작
+
+```
+lsnrctl stop
+lsnrctl start
+```
+
+
 * applicaiton.properties
 ```
 spring.jpa.hibernate.ddl-auto=update
