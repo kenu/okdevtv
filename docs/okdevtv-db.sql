@@ -15,24 +15,6 @@ CREATE TABLE `article` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Table structure for table `asset`
---
-
-DROP TABLE IF EXISTS `asset`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `asset` (
-  `seq` int(11) NOT NULL AUTO_INCREMENT COMMENT '일련번호',
-  `category` varchar(100) DEFAULT NULL COMMENT '항목',
-  `datetime` datetime NOT NULL COMMENT '일시',
-  `income` int(11) DEFAULT NULL COMMENT '수입',
-  `outlay` int(11) DEFAULT NULL COMMENT '지출',
-  `description` varchar(200) NOT NULL COMMENT '설명',
-  PRIMARY KEY (`seq`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
 -- Table structure for table `attends`
 --
 
