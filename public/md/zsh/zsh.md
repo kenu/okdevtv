@@ -53,13 +53,13 @@ bash install.sh
 
 ## Plugin
 ```
-$ cd ~/.oh-my-zsh/custom/plugins
-$ git clone https://github.com/zsh-users/zsh-autosuggestions.git
-$ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
+cd ~/.oh-my-zsh/custom/plugins
+git clone https://github.com/zsh-users/zsh-autosuggestions.git
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
 ```
 
 ```
-$ vi ~/.zshrc
+vi ~/.zshrc
 
 plugins=(
 	git
