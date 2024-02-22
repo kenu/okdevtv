@@ -6,18 +6,33 @@
   * Windows, Linux only
 * [MacOS] M1 맥북 도커로 ORACLE DB 실행하기
   * https://shanepark.tistory.com/400
-
-## Schema 만들기
-1. tablespace, user 만들기
-```sql
-CREATE tablespace devdb datafile 'devdbfile.dbf' SIZE 100m;
-
-CREATE USER devuser IDENTIFIED BY devpass DEFAULT tablespace devdb;
-
-GRANT CONNECT, resource TO devuser;
+## 개발 계정 추가하기
+```
+create user devuser identified by devpass;
+alter user devuser default tablespace users quota unlimited on users;
+grant connect, resource, CREATE view to devuser;
 
 -- 삭제
 DROP USER devuser CASCADE;
+```
+
+## XDB 비활성화
+* 8080 포트 비활성화
+
+```
+C:\Users\Administrator>sqlplus "/as sysdba"
+SQL> Exec DBMS_XDB.SETHTTPPORT(0);
+PL/SQL procedure successfully completed.
+
+SQL>commit;
+```
+
+## Tablespace 만들기
+1. tablespace, user 만들기
+```sql
+CREATE tablespace devdb datafile 'devdbfile.dbf' SIZE 100m;
+CREATE USER devuser IDENTIFIED BY devpass DEFAULT tablespace devdb;
+GRANT CONNECT, resource TO devuser;
 ```
 
 ## Listener 추가
