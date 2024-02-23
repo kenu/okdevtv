@@ -33,6 +33,15 @@ curl -s https://start.spring.io/starter.tgz\
   -d type=maven-project\
   | tar -xzvf -
 ```
+## Annotation
+* CRUD
+
+```java
+@Select
+@Insert
+@Update
+@Delete
+```
 
 ## xml
 * CRUD
@@ -44,5 +53,7 @@ curl -s https://start.spring.io/starter.tgz\
 <delete />
 ```
 
-
+## ref
 * https://github.com/mybatis/spring-boot-starter
+* jpetstore
+  - https://github.com/mybatis/jpetstore-6
