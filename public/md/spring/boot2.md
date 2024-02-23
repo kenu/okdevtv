@@ -14,7 +14,7 @@
   * https://spring.io/guides/gs/spring-boot-docker/
 * [starter](/mib/spring/starter): 스프링 부트 스타터 종류
 * [websocket](/mib/spring/websocket): 스프링 부트 웹소켓
-* [mybatis](/mib/spring/mybatis): 스프링 부트 MyBatis
+* [mybatis](/mib/mybatis): 스프링 부트 MyBatis
 * [utils](/mib/spring/utils): 스프링 Utils
 * [actuator](/mib/spring/actuator): 스프링 부트 Actuator
 * [test](/mib/spring/test): 스프링 테스트 자동화
