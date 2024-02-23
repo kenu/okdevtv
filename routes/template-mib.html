@@ -33,13 +33,14 @@
     function clipboard() {
       const pres = document.querySelectorAll('pre');
       pres.forEach(i => i.addEventListener('mouseup', () => {
-        navigator.clipboard.writeText(window.getSelection().toString());
+        navigator.clipboard?.writeText(window.getSelection().toString());
       }));
       pres.forEach(i => i.addEventListener('click', () => {
-        if (window.getSelection().toString() || checkCopied(i)) {
+        const isNotOk = window.getSelection().toString() || checkCopied(i);
+        if (isNotOk) {
           return;
         }
-        navigator.clipboard.writeText(i.innerText);
+        navigator.clipboard?.writeText(i.innerText);
         i.innerText += ('===\n📋Copied!');
         setTimeout(() => {
           i.innerText = i.innerText.replace('===\n📋Copied!', '');
