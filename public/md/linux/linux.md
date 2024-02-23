@@ -146,17 +146,25 @@ lspci | grep -i vga
 ## file filter
 
 ```
-find . -type f | egrep "gif$|jpg$|jpeg$|svg$|png$" | wc -l
+find . -type f | egrep "gif$|jpg$|jpeg$|svg$|png$|webp$" | wc -l
 ```
 
 ## archive filtered list containing spaces in file name
 
-```
+```sh
 find . -type f | grep -v list_files |egrep "php$|html$|htm$|js$|css$|inc$" > list.txt
 tar cvfz text.tgz -T list.txt
 
 find . -type f | grep -v list_files |egrep "gif$|jpg$|jpeg$|svg$|png$|ico$" > list_img.txt
 tar cvfz img.tgz -T list_img.txt
+```
+
+## find and remove
+
+```sh
+find . -name .DS_Store | xargs rm
+# to handle spaces in filenames
+find . -name .DS_Store -print0 | xargs -0 rm
 ```
 
 ## Process 확인
