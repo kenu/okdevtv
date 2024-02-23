@@ -82,7 +82,7 @@ CREATE TABLE `user_candidate` (
   `uuid` varchar(40) NOT NULL DEFAULT '' COMMENT 'uuid',
   `reset` char(1) NOT NULL DEFAULT 'N' COMMENT '비번리셋',
   `finish` char(1) NOT NULL DEFAULT 'N' COMMENT '완료',
-  `created_at` datetime NOT NULL COMMENT '생성일시',
-  `finished_at` datetime DEFAULT NULL COMMENT '완료일시',
+  `createdAt` datetime NOT NULL COMMENT '생성일시',
+  `updatedAt` datetime DEFAULT NULL COMMENT '완료일시',
   PRIMARY KEY (`seq`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
