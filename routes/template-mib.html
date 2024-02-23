@@ -32,7 +32,13 @@
   <script>
     function clipboard() {
       const pres = document.querySelectorAll('pre');
+      pres.forEach(i => i.addEventListener('mouseup', () => {
+        navigator.clipboard.writeText(window.getSelection().toString());
+      }));
       pres.forEach(i => i.addEventListener('click', () => {
+        if (window.getSelection().toString() || checkCopied(i)) {
+          return;
+        }
         navigator.clipboard.writeText(i.innerText);
         i.innerText += ('===\n📋Copied!');
         setTimeout(() => {
@@ -41,6 +47,10 @@
         changeColor(i);
       }));
     }
+    function checkCopied(element) {
+      return (element.innerText.includes('Copied!'));
+    }
+
     function changeColor(element) {
       element.style.backgroundColor = '#ffffff80';
     }
