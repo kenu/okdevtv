@@ -1,7 +1,6 @@
 const express = require('express');
 const router = express.Router();
 const user_service = require('../services/user-service');
-const uuidv4 = require('uuid/v4');
 
 router.get('/signup', function (req, res) {
   res.render('user/signup', {});
@@ -23,7 +22,7 @@ router.post('/signup', async function (req, res) {
   let result = {
     status: status,
     msg: msg,
-  }
+  };
   if (msg) {
     result.msg = msg;
   }
@@ -55,8 +54,11 @@ router.post('/setup', async function (req, res) {
   let reset = 'N';
 
   try {
-    const result = await user_service.setUpPassword(
-      { password, password_confirm, hash });
+    const result = await user_service.setUpPassword({
+      password,
+      password_confirm,
+      hash,
+    });
     reset = result.reset;
     if (result.result[0].affectedRows === 1) {
       status = 'ok';
@@ -67,7 +69,7 @@ router.post('/setup', async function (req, res) {
   }
   let result = {
     status: status,
-    reset
+    reset,
   };
   if (msg) {
     result.msg = msg;
@@ -83,7 +85,11 @@ router.post('/change_password', async function (req, res) {
   let msg = '';
   try {
     if (email) {
-      const change_result = await user_service.changePassword({ password, password_confirm, email });
+      const change_result = await user_service.changePassword({
+        password,
+        password_confirm,
+        email,
+      });
       if (change_result.result[0].affectedRows === 1) {
         status = 'ok';
       }
@@ -96,7 +102,7 @@ router.post('/change_password', async function (req, res) {
   }
   let result = {
     status: status,
-    msg
+    msg,
   };
   res.json(result);
 });
@@ -121,8 +127,8 @@ router.post('/reset_password', async function (req, res) {
   }
   let result = {
     status: status,
-    data: email
-  }
+    data: email,
+  };
   if (msg) {
     result.msg = msg;
   }
@@ -166,6 +172,6 @@ router.get('/mypage', async function (req, res) {
   } else {
     res.redirect('/user/login');
   }
-})
+});
 
 module.exports = router;

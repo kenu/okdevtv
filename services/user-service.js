@@ -1,6 +1,6 @@
 const knex = require('../lib/knex');
 const mail = require('../lib/mail');
-const uuidv4 = require('uuid/v4');
+const { v4: uuidv4 } = require('uuid');
 const bcrypt = require('bcryptjs');
 
 function hashPassword(password) {
@@ -33,7 +33,7 @@ module.exports = {
       ]);
       changedRows = result2[0].changedRows;
     } else {
-      const insert_account = `insert into user (seq, email, github, created_at)
+      const insert_account = `insert into user (seq, email, github, createdAt)
       values (null, ?, ?, now());`;
       const result2 = await knex.raw(insert_account, [
         email,
@@ -57,7 +57,7 @@ module.exports = {
       const sql_recent = `select count(*) as cnt
           from user_candidate
           where email = ? and finish = 'N'
-          and timediff(now(), created_at) < '00:05:00';`;
+          and timediff(now(), createdAt) < '00:05:00';`;
       const result_recent = await knex.raw(sql_recent, [email.trim()]);
       if (result_recent[0][0]['cnt'] > 0) {
         throw new Error('email sent already');
@@ -80,7 +80,7 @@ module.exports = {
       // save sending info
       return knex.raw(
         `insert into user_candidate
-  (seq, email, uuid, created_at) values (null, ?, ?, now());`,
+  (seq, email, uuid, createdAt) values (null, ?, ?, now());`,
         [email, uuid]
       );
     } catch (error) {
@@ -98,12 +98,12 @@ where uuid = ? and finish != 'Y';`;
     const { seq, email, reset } = result[0][0];
 
     if (reset === 'N') {
-      const query_account = `insert into user (seq, email, created_at)
+      const query_account = `insert into user (seq, email, createdAt)
             values (null, ?, now());`;
       await knex.raw(query_account, [email]);
     }
 
-    const query_finish_candidate = `update user_candidate set finish = 'P', finished_at = now() where seq = ?;`;
+    const query_finish_candidate = `update user_candidate set finish = 'P', updatedAt = now() where seq = ?;`;
     return knex.raw(query_finish_candidate, [seq]);
   },
   setUpPassword: async ({ password, password_confirm, hash }) => {
@@ -126,7 +126,7 @@ where uuid = ? and finish != 'Y';`;
         where email = ?`;
     const result = await knex.raw(query, [crypted_password, email]);
 
-    const query_finish = `update user_candidate set finish='Y', finished_at = now()
+    const query_finish = `update user_candidate set finish='Y', updatedAt = now()
         where seq = ?;`;
     await knex.raw(query_finish, [seq]);
 
@@ -175,7 +175,7 @@ where uuid = ? and finish != 'Y';`;
     // save sending info
     return knex.raw(
       `insert into user_candidate
-(seq, email, uuid, created_at, reset) values (null, ?, ?, now(), 'Y');`,
+(seq, email, uuid, createdAt, reset) values (null, ?, ?, now(), 'Y');`,
       [email, uuid]
     );
   },
