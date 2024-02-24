@@ -1045,3 +1045,8 @@ ol {
   margin-left: 20px;
   list-style: initial;
 }
+#inflearn {
+  text-align: center;
+  color: #fff;
+  font-weight: 600;
+}

@@ -64,3 +64,9 @@ li code {
   border: 1px #888 solid;
   padding: 3px;
 }
+
+#inflearn {
+  text-align: center;
+  color: #fff;
+  font-weight: 600;
+}
