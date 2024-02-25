@@ -1,7 +1,7 @@
 $(function () {
   $('#form').on('submit', function (e) {
     e.preventDefault();
-    var data = $(e.currentTarget).serialize();
+    const data = $(e.currentTarget).serialize();
     $.ajax('/apis/tip', {
       method: 'post',
       data: data,
@@ -47,13 +47,13 @@ function getList() {
     dataType: 'jsonp',
   })
     .done(function (data) {
-      var list = data.list;
-      for (var i in list) {
+      const list = data.list;
+      for (const i in list) {
         if (!list[i].message) {
           continue;
         }
-        var row = '<div><span>' + list[i].message.linkify() + '</span>';
-        var datetime = $.datepicker.formatDate(
+        const row = '<div><span>' + list[i].message.linkify() + '</span>';
+        const datetime = $.datepicker.formatDate(
           'yy/mm/dd',
           getDate(list[i]._id)
         );
@@ -79,12 +79,12 @@ function getDate(_id) {
 if (!String.linkify) {
   String.prototype.linkify = function () {
     // http://, https://, ftp://
-    var urlPattern =
+    const urlPattern =
       /\b(?:https?|ftp):\/\/[a-z0-9-+&@#\/%?=~_|!:,.;]*[a-z0-9-+&@#\/%=~_|]/gim;
     // www. sans http:// or https://
-    var pseudoUrlPattern = /(^|[^\/])(www\.[\S]+(\b|$))/gim;
+    const pseudoUrlPattern = /(^|[^\/])(www\.[\S]+(\b|$))/gim;
     // Email addresses
-    var emailAddressPattern = /[\w.]+@[a-zA-Z_-]+?(?:\.[a-zA-Z]{2,6})+/gim;
+    const emailAddressPattern = /[\w.]+@[a-zA-Z_-]+?(?:\.[a-zA-Z]{2,6})+/gim;
     return this.replace(urlPattern, '<a href="$&">$&</a>')
       .replace(pseudoUrlPattern, '$1<a href="http://$2">$2</a>')
       .replace(emailAddressPattern, '<a href="mailto:$&">$&</a>');
