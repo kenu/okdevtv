@@ -52,11 +52,11 @@ function getList() {
         if (!list[i].message) {
           continue;
         }
-        const row = '<div><span>' + list[i].message.linkify() + '</span>';
         const datetime = $.datepicker.formatDate(
           'yy/mm/dd',
           getDate(list[i]._id)
         );
+        let row = '<div><span>' + list[i].message.linkify() + '</span>';
         row += '<br><span>' + datetime + '</span>';
         row += ' <span>' + list[i].name + '</span></div>';
         $('#list').append(row);
