@@ -65,7 +65,8 @@ li code {
   padding: 3px;
 }
 
-#inflearn {
+#inflearn,
+#facebook-reply {
   text-align: center;
   color: #fff;
   font-weight: 600;
