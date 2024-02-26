@@ -196,6 +196,7 @@ https://index.docker.io
 ## related
 * [docker compose](/mib/docker/compose)
 * [docker mysql](/mib/docker/mysql)
+* [docker in Windows](/mib/docker/win)
 
 ## ref
 * How to remove docker images containers and volumes
