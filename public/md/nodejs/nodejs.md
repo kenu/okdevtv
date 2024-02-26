@@ -515,7 +515,8 @@ $ npm install
   * http://nodejs.org
 * [nvm](/mib/nodejs/nvm)
 * [환경변수 다루기](/mib/nodejs/dotenv)
-* [Node.js ORM](/mib/nodejs/sequelize)
+* [Sequelize ORM](/mib/nodejs/sequelize)
+* [Prisma ORM](/mib/nodejs/prisma)
 * [날짜 다루기](/mib/nodejs/dayjs)
 * [스케줄 실행](/mib/nodejs/schedule)
 * http://bit.ly/okjavascript

@@ -3,6 +3,7 @@
 * Node.js ORM
 
 ## Install
+
 ```
 npm i sequelize
 ```
@@ -10,12 +11,12 @@ npm i sequelize
 
 ```
 # One of the following:
-$ npm install mariadb
-$ npm install pg pg-hstore # Postgres
-$ npm install mysql2
+npm install mariadb
+npm install pg pg-hstore # Postgres
+npm install mysql2
 
-$ npm install sqlite3
-$ npm install tedious # Microsoft SQL Server
+npm install sqlite3
+npm install tedious # Microsoft SQL Server
 ```
 
 ## Quick start
