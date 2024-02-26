@@ -1,0 +1,10 @@
+User-agent: *
+Disallow: /
+
+User-agent: bingbot
+crawl-delay: 1
+User-agent: Googlebot
+User-agent: Yeti
+User-agent: Daumoa
+Allow: /
+Disallow: /hq/
