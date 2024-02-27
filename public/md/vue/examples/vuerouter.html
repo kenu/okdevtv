@@ -15,23 +15,23 @@
 
 <script>
   // 1. Define route components.
-  const Foo = { template: "<div>foo</div>" };
-  const Bar = { template: "<div>bar</div>" };
+  const Foo = { template: '<div>foo</div>' }
+  const Bar = { template: '<div>bar</div>' }
 
   // 2. Define some routes
   const routes = [
-    { path: "/foo", component: Foo },
-    { path: "/bar", component: Bar }
-  ];
+    { path: '/foo', component: Foo },
+    { path: '/bar', component: Bar },
+  ]
 
   // 3. Create the router instance and pass the `routes` option
   const router = new VueRouter({
-    routes
-  });
+    routes,
+  })
 
   const app = new Vue({
-    router
-  }).$mount("#app");
+    router,
+  }).$mount('#app')
 </script>
 
 <style>

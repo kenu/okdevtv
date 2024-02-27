@@ -1,3 +1,5 @@
+// disable for prettier
+/**
 module.exports = {
   env: {
     browser: true,
@@ -17,3 +19,4 @@ module.exports = {
     quotes: ['error', 'single', 'backtick'],
   },
 };
+*/

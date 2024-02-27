@@ -1,3 +1,3 @@
 function getOne() {
-  return 1.0;
+  return 1.0
 }

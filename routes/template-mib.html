@@ -1,152 +1,187 @@
 <!DOCTYPE html>
 <html lang="ko">
+  <head>
+    <title>__path3__</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta property="og:title" content="__path3__" />
+    <meta property="og:url" content="https://okdevtv.com__uri__" />
+    <link rel="stylesheet" href="/stylesheets/style-md.css" />
+    <script
+      src="https://browser.sentry-cdn.com/5.26.0/bundle.min.js"
+      integrity="sha384-VGljl8BTZL6Py4DmlOaYmfkOwp8mD3PrmD2L+fN446PZpsrIHuDhX7mnV/L5KuNR"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      Sentry.init({
+        dsn: 'https://c543e6d71efa44598215f3d48c104afe@o1064669.ingest.sentry.io/4504407878074368',
+      })
+    </script>
 
-<head>
-  <title>__path3__</title>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta property="og:title" content="__path3__" />
-  <meta property="og:url" content="https://okdevtv.com__uri__" />
-  <link rel="stylesheet" href="/stylesheets/style-md.css" />
-  <script src="https://browser.sentry-cdn.com/5.26.0/bundle.min.js"
-    integrity="sha384-VGljl8BTZL6Py4DmlOaYmfkOwp8mD3PrmD2L+fN446PZpsrIHuDhX7mnV/L5KuNR"
-    crossorigin="anonymous"></script>
-  <script>
-    Sentry.init({
-      dsn: 'https://c543e6d71efa44598215f3d48c104afe@o1064669.ingest.sentry.io/4504407878074368',
-    });
-  </script>
-
-  <script src="/js/vendor/wcslog.js"></script>
-  <script>
-    if (!wcs_add) var wcs_add = {};
-    wcs_add["wa"] = "17ba7b03656be6";
-    if (window.wcs) {
-      wcs_do();
-    }
-  </script>
-  <script data-ad-client="ca-pub-6888948265589071" async
-    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
-    integrity="sha384-WSbvOaP5ZiKy3EecR/fpEjT2DCgj14tAP5MEAfpU7WGxGZ3w/MtlGEsKbisW1Aym"
-    crossorigin="anonymous"></script>
-  <script>
-    function clipboard() {
-      const pres = document.querySelectorAll('pre');
-      pres.forEach(i => i.addEventListener('mouseup', () => {
-        navigator.clipboard?.writeText(window.getSelection().toString());
-      }));
-      pres.forEach(i => i.addEventListener('click', () => {
-        const isNotOk = window.getSelection().toString() || checkCopied(i);
-        if (isNotOk) {
-          return;
-        }
-        navigator.clipboard?.writeText(i.innerText);
-        i.innerText += ('===\n📋Copied!');
-        setTimeout(() => {
-          i.innerText = i.innerText.replace('===\n📋Copied!', '');
-        }, 1500);
-        changeColor(i);
-      }));
-    }
-    function checkCopied(element) {
-      return (element.innerText.includes('Copied!'));
-    }
-
-    function changeColor(element) {
-      element.style.backgroundColor = '#ffffff80';
-    }
-    window.onload = () => {
-      clipboard();
-      const bookmark = document.getElementById('bookmark');
-      bookmark.addEventListener('click', () => {
-        console.log('bookmark', location.pathname);
-        fetch('/apis/bookmark', {
-          method: 'POST', headers: {
-            "Content-Type": "application/json",
-          }, body: JSON.stringify({ pathname: location.pathname })
-        })
-          .then((res) => {
-            if (res.status === 200) {
-              bookmark.innerText = '🔖 bookmarked';
-            }
+    <script src="/js/vendor/wcslog.js"></script>
+    <script>
+      if (!wcs_add) var wcs_add = {}
+      wcs_add['wa'] = '17ba7b03656be6'
+      if (window.wcs) {
+        wcs_do()
+      }
+    </script>
+    <script
+      data-ad-client="ca-pub-6888948265589071"
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+      integrity="sha384-WSbvOaP5ZiKy3EecR/fpEjT2DCgj14tAP5MEAfpU7WGxGZ3w/MtlGEsKbisW1Aym"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      function clipboard() {
+        const pres = document.querySelectorAll('pre')
+        pres.forEach((i) =>
+          i.addEventListener('mouseup', () => {
+            navigator.clipboard?.writeText(window.getSelection().toString())
           })
-          .catch((err) => {
-            console.error(err);
-          });
-      });
-    };
-  </script>
-</head>
+        )
+        pres.forEach((i) =>
+          i.addEventListener('click', () => {
+            const isNotOk = window.getSelection().toString() || checkCopied(i)
+            if (isNotOk) {
+              return
+            }
+            navigator.clipboard?.writeText(i.innerText)
+            i.innerText += '===\n📋Copied!'
+            setTimeout(() => {
+              i.innerText = i.innerText.replace('===\n📋Copied!', '')
+            }, 1500)
+            changeColor(i)
+          })
+        )
+      }
+      function checkCopied(element) {
+        return element.innerText.includes('Copied!')
+      }
 
-<body>
-  <!-- Header -->
-  <div id="wrap">
-    <header id="header">
-      <!-- Logo -->
-      <h1 id="logo_heading">
-        <a href="/">
-          <img src="/images/logo.webp" alt="okdevtv logo" id="logo" />OKdevTV</a>
-      </h1>
-      <aside>
-        <div id="bookmark">🔖 bookmark</div>
-      </aside>
-    </header>
-    __html__
-  </div>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script src="https://www.googletagmanager.com/gtag/js?id=G-DGMC27QNFQ"
-    integrity="sha384-Yb/o7bACMagF7nECxk5A/xZUSokYGAKDr1a7O+H+rT9dmqetDpgE3HMOgM2UNyEH"
-    crossorigin="anonymous"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
+      function changeColor(element) {
+        element.style.backgroundColor = '#ffffff80'
+      }
+      window.onload = () => {
+        clipboard()
+        const bookmark = document.getElementById('bookmark')
+        bookmark.addEventListener('click', () => {
+          console.log('bookmark', location.pathname)
+          fetch('/apis/bookmark', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ pathname: location.pathname }),
+          })
+            .then((res) => {
+              if (res.status === 200) {
+                bookmark.innerText = '🔖 bookmarked'
+              }
+            })
+            .catch((err) => {
+              console.error(err)
+            })
+        })
+      }
+    </script>
+  </head>
 
-    gtag('config', 'G-DGMC27QNFQ');
-  </script>
-  <script>
-    (function (w, i, d, g, e) {
-      w[d] = w[d] || [];
-      const t = i.createElement(g);
-      t.async = 1;
-      t.src = e;
-      const s = i.getElementsByTagName(g)[0];
-      s.parentNode.insertBefore(t, s);
-    })(
-      window,
-      document,
-      '_gscq',
-      'script',
-      '//widgets.getsitecontrol.com/57011/script.js'
-    );
-  </script>
-  <div id="whatelse">
-    <a href="https://github.com/kenu/okdevtv/tree/main/public/md">What Else?</a>
-  </div>
-  <div id="inflearn">
-    <a href="https://bit.ly/oklearnreact" title="inflearn react api server">
-      <img src="/images/inflearn-react-api.webp" alt="inflearn react api server" style="width: 200px" />
-      <b>-50% 할인쿠폰: 15108-f2af1e086101</b>
-    </a>
-    <a href="https://www.buymeacoffee.com/kenu" title="buy me a coffee">
-      <img alt="buy me a coffee" src="/images/bmc_qr.webp" style="height: 130px" />
-    </a>
-  </div>
-  <div id="facebook-reply">
-    <div id="fb-root"></div>
-    <script>(function (d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = "//connect.facebook.net/ko_KR/sdk.js#xfbml=1&appId=1417763368476376&version=v2.0";
-        fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));</script>
-    <div class="fb-comments" data-href="https://okdevtv.com__uri__" data-width="700" data-numposts="5"
-      data-colorscheme="light"></div>
-  </div>
+  <body>
+    <!-- Header -->
+    <div id="wrap">
+      <header id="header">
+        <!-- Logo -->
+        <h1 id="logo_heading">
+          <a href="/">
+            <img
+              src="/images/logo.webp"
+              alt="okdevtv logo"
+              id="logo"
+            />OKdevTV</a
+          >
+        </h1>
+        <aside>
+          <div id="bookmark">🔖 bookmark</div>
+        </aside>
+      </header>
+      __html__
+    </div>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      src="https://www.googletagmanager.com/gtag/js?id=G-DGMC27QNFQ"
+      integrity="sha384-Yb/o7bACMagF7nECxk5A/xZUSokYGAKDr1a7O+H+rT9dmqetDpgE3HMOgM2UNyEH"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || []
+      function gtag() {
+        dataLayer.push(arguments)
+      }
+      gtag('js', new Date())
 
-</body>
-
+      gtag('config', 'G-DGMC27QNFQ')
+    </script>
+    <script>
+      ;(function (w, i, d, g, e) {
+        w[d] = w[d] || []
+        const t = i.createElement(g)
+        t.async = 1
+        t.src = e
+        const s = i.getElementsByTagName(g)[0]
+        s.parentNode.insertBefore(t, s)
+      })(
+        window,
+        document,
+        '_gscq',
+        'script',
+        '//widgets.getsitecontrol.com/57011/script.js'
+      )
+    </script>
+    <div id="whatelse">
+      <a href="https://github.com/kenu/okdevtv/tree/main/public/md"
+        >What Else?</a
+      >
+    </div>
+    <div id="inflearn">
+      <a href="https://bit.ly/oklearnreact" title="inflearn react api server">
+        <img
+          src="/images/inflearn-react-api.webp"
+          alt="inflearn react api server"
+          style="width: 200px"
+        />
+        <b>-50% 할인쿠폰: 15108-f2af1e086101</b>
+      </a>
+      <a href="https://www.buymeacoffee.com/kenu" title="buy me a coffee">
+        <img
+          alt="buy me a coffee"
+          src="/images/bmc_qr.webp"
+          style="height: 130px"
+        />
+      </a>
+    </div>
+    <div id="facebook-reply">
+      <div id="fb-root"></div>
+      <script>
+        ;(function (d, s, id) {
+          var js,
+            fjs = d.getElementsByTagName(s)[0]
+          if (d.getElementById(id)) return
+          js = d.createElement(s)
+          js.id = id
+          js.src =
+            '//connect.facebook.net/ko_KR/sdk.js#xfbml=1&appId=1417763368476376&version=v2.0'
+          fjs.parentNode.insertBefore(js, fjs)
+        })(document, 'script', 'facebook-jssdk')
+      </script>
+      <div
+        class="fb-comments"
+        data-href="https://okdevtv.com__uri__"
+        data-width="700"
+        data-numposts="5"
+        data-colorscheme="light"
+      ></div>
+    </div>
+  </body>
 </html>

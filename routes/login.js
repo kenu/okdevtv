@@ -1,14 +1,14 @@
-const express = require('express');
-const passport = require('passport');
-const FacebookStrategy = require('passport-facebook').Strategy;
-const GitHubStrategy = require('passport-github2').Strategy;
-const user_service = require('../services/user-service');
-const session = require('express-session');
-const cookieParser = require('cookie-parser');
-const bodyParser = require('body-parser');
-const config = require('../config/config');
-const mariadb = require('mariadb');
-const router = express.Router();
+const express = require('express')
+const passport = require('passport')
+const FacebookStrategy = require('passport-facebook').Strategy
+const GitHubStrategy = require('passport-github2').Strategy
+const user_service = require('../services/user-service')
+const session = require('express-session')
+const cookieParser = require('cookie-parser')
+const bodyParser = require('body-parser')
+const config = require('../config/config')
+const mariadb = require('mariadb')
+const router = express.Router()
 
 //Define MariaDB parameter in Config.js file.
 const pool = mariadb.createPool({
@@ -16,17 +16,17 @@ const pool = mariadb.createPool({
   user: config.username,
   password: config.password,
   database: config.database,
-});
+})
 
 try {
   // Passport session setup.
   passport.serializeUser(function (user, done) {
-    done(null, user);
-  });
+    done(null, user)
+  })
 
   passport.deserializeUser(function (obj, done) {
-    done(null, obj);
-  });
+    done(null, obj)
+  })
 
   // Use the FacebookStrategy within Passport.
   passport.use(
@@ -45,24 +45,24 @@ try {
               'SELECT * from user_info where user_id=$1',
               [profile.id],
               (err, rows) => {
-                if (err) throw err;
+                if (err) throw err
                 if (rows && rows.length === 0) {
-                  console.log('There is no such user, adding now');
+                  console.log('There is no such user, adding now')
                   pool.query(
                     "INSERT into user_info(user_id,user_name) VALUES('$1','$2')",
                     [profile.id, profile.username]
-                  );
+                  )
                 } else {
-                  console.log('User already exists in database');
+                  console.log('User already exists in database')
                 }
               }
-            );
+            )
           }
-          return done(null, profile);
-        });
+          return done(null, profile)
+        })
       }
     )
-  );
+  )
   passport.use(
     new GitHubStrategy(
       {
@@ -71,17 +71,17 @@ try {
         callbackURL: '/login/github/return',
       },
       function (accessToken, _refreshToken, profile, cb) {
-        console.log('accessToken', accessToken);
-        return cb(null, profile);
+        console.log('accessToken', accessToken)
+        return cb(null, profile)
       }
     )
-  );
+  )
 } catch (e) {
-  console.error(e.message);
+  console.error(e.message)
 }
 
-router.use(cookieParser());
-router.use(bodyParser.urlencoded({ extended: false }));
+router.use(cookieParser())
+router.use(bodyParser.urlencoded({ extended: false }))
 router.use(
   session({
     secret: 'keyboard cat',
@@ -89,24 +89,24 @@ router.use(
     resave: true,
     saveUninitialized: true,
   })
-);
-router.use(passport.initialize());
-router.use(passport.session());
-router.use(express.static(__dirname + '/public'));
+)
+router.use(passport.initialize())
+router.use(passport.session())
+router.use(express.static(__dirname + '/public'))
 
 router.get('/', function (req, res) {
-  console.log(req.session.passport);
-  res.render('login', { user: req.user });
-});
+  console.log(req.session.passport)
+  res.render('login', { user: req.user })
+})
 
 router.get('/account', ensureAuthenticated, function (req, res) {
-  res.render('account', { user: req.user });
-});
+  res.render('account', { user: req.user })
+})
 
 router.get(
   '/auth/facebook',
   passport.authenticate('facebook', { scope: 'email' })
-);
+)
 
 router.get(
   '/auth/facebook/callback',
@@ -115,18 +115,18 @@ router.get(
     failureRedirect: '/login',
   }),
   function (req, res) {
-    let prevSession = req.session;
+    let prevSession = req.session
     req.session.regenerate((_err) => {
-      Object.assign(req.session, prevSession);
-      res.redirect('/');
-    });
+      Object.assign(req.session, prevSession)
+      res.redirect('/')
+    })
   }
-);
+)
 
 router.get(
   '/github',
   passport.authenticate('github', { scope: ['user:email'] })
-);
+)
 
 router.get(
   '/github/return',
@@ -135,31 +135,31 @@ router.get(
     scope: ['user:email'],
   }),
   async function (req, res) {
-    await user_service.signupByGitHub(req.user._json);
-    req.session.user = req.user._json.email;
-    let prevSession = req.session;
+    await user_service.signupByGitHub(req.user._json)
+    req.session.user = req.user._json.email
+    let prevSession = req.session
     req.session.regenerate((_err) => {
-      Object.assign(req.session, prevSession);
-      res.redirect('/');
-    });
+      Object.assign(req.session, prevSession)
+      res.redirect('/')
+    })
   }
-);
+)
 
 router.get('/logout', function (req, res) {
-  req.logout();
-  res.redirect('/');
-});
+  req.logout()
+  res.redirect('/')
+})
 
 function ensureAuthenticated(req, res, next) {
   if (req.isAuthenticated()) {
-    return next();
+    return next()
   }
-  res.redirect('/login');
+  res.redirect('/login')
 }
 
 router.get('/', function (req, res) {
-  console.log(req.user);
-  res.render('login', { user: req.user });
-});
+  console.log(req.user)
+  res.render('login', { user: req.user })
+})
 
-module.exports = router;
+module.exports = router

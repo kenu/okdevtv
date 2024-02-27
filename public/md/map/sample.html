@@ -1,66 +1,73 @@
 <!DOCTYPE html>
 <html lang="ko">
+  <head>
+    <title>Quick Start - Leaflet</title>
 
-<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-	<title>Quick Start - Leaflet</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+      integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+      integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+      crossorigin=""
+    ></script>
+  </head>
 
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <body>
+    <div id="map" style="width: 600px; height: 400px"></div>
+    <script>
+      var map = L.map('map').setView([51.505, -0.09], 13)
 
-	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
-		integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
-		crossorigin="" />
-	<script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
-		integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
-		crossorigin=""></script>
+      var tiles = L.tileLayer(
+        'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+        {
+          maxZoom: 19,
+          attribution:
+            '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+        }
+      ).addTo(map)
 
-</head>
+      var marker = L.marker([51.5, -0.09])
+        .addTo(map)
+        .bindPopup('<b>Hello world!</b><br />I am a popup.')
+        .openPopup()
 
-<body>
+      var circle = L.circle([51.508, -0.11], {
+        color: 'red',
+        fillColor: '#f03',
+        fillOpacity: 0.5,
+        radius: 500,
+      })
+        .addTo(map)
+        .bindPopup('I am a circle.')
 
-	<div id="map" style="width: 600px; height: 400px;"></div>
-	<script>
+      var polygon = L.polygon([
+        [51.509, -0.08],
+        [51.503, -0.06],
+        [51.51, -0.047],
+      ])
+        .addTo(map)
+        .bindPopup('I am a polygon.')
 
-		var map = L.map('map').setView([51.505, -0.09], 13);
+      var popup = L.popup()
+        .setLatLng([51.513, -0.09])
+        .setContent('I am a standalone popup.')
+        .openOn(map)
 
-		var tiles = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-			maxZoom: 19,
-			attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-		}).addTo(map);
+      function onMapClick(e) {
+        popup
+          .setLatLng(e.latlng)
+          .setContent('You clicked the map at ' + e.latlng.toString())
+          .openOn(map)
+      }
 
-		var marker = L.marker([51.5, -0.09]).addTo(map)
-			.bindPopup('<b>Hello world!</b><br />I am a popup.').openPopup();
-
-		var circle = L.circle([51.508, -0.11], {
-			color: 'red',
-			fillColor: '#f03',
-			fillOpacity: 0.5,
-			radius: 500
-		}).addTo(map).bindPopup('I am a circle.');
-
-		var polygon = L.polygon([
-			[51.509, -0.08],
-			[51.503, -0.06],
-			[51.51, -0.047]
-		]).addTo(map).bindPopup('I am a polygon.');
-
-
-		var popup = L.popup()
-			.setLatLng([51.513, -0.09])
-			.setContent('I am a standalone popup.')
-			.openOn(map);
-
-		function onMapClick(e) {
-			popup
-				.setLatLng(e.latlng)
-				.setContent('You clicked the map at ' + e.latlng.toString())
-				.openOn(map);
-		}
-
-		map.on('click', onMapClick);
-	</script>
-
-</body>
-
+      map.on('click', onMapClick)
+    </script>
+  </body>
 </html>

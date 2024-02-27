@@ -2,76 +2,81 @@
 /* Basic                                                                         */
 /*********************************************************************************/
 
-	.button, input, select, textarea {
-		position: relative;
-	}
+.button,
+input,
+select,
+textarea {
+  position: relative;
+}
 
-	input, select, textarea {
-		border: solid 1px #ccc;
-	}
+input,
+select,
+textarea {
+  border: solid 1px #ccc;
+}
 
-	/* Buttons */
+/* Buttons */
 
-		.button {
-		}
+.button {
+}
 
-			.button.down {
-				text-indent: 0;
-			}
+.button.down {
+  text-indent: 0;
+}
 
 /*********************************************************************************/
 /* Intro                                                                         */
 /*********************************************************************************/
 
-	#intro {
-		background: url('../../images/intro.webp');
-		background-size: cover;
-	}
+#intro {
+  background: url('../../images/intro.webp');
+  background-size: cover;
+}
 
-		#intro:before {
-			content: '';
-			background: url('../images/overlay.webp');
-			width: 100%;
-			height: 100%;
-			position: absolute;
-			left: 0;
-			top: 0;
-		}
+#intro:before {
+  content: '';
+  background: url('../images/overlay.webp');
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
 
 /*********************************************************************************/
 /* One                                                                           */
 /*********************************************************************************/
 
-	#one {
-		background: url('../../images/8DJ62Bk38BI.webp');
-		background-size: cover;
-	}
+#one {
+  background: url('../../images/8DJ62Bk38BI.webp');
+  background-size: cover;
+}
 
-		#one:before {
-			content: '';
-			background: url('../images/overlay.webp');
-			width: 100%;
-			height: 100%;
-			position: absolute;
-			left: 0;
-			top: 0;
-		}
+#one:before {
+  content: '';
+  background: url('../images/overlay.webp');
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
 
 /*********************************************************************************/
 /* Two                                                                           */
 /*********************************************************************************/
 
-	#two {
-		background: url('../../images/two.webp');
-		background-size: cover;
-	}
+#two {
+  background: url('../../images/two.webp');
+  background-size: cover;
+}
 
-		#two:before {
-			content: '';
-			background: url('../images/overlay.webp');
-			width: 100%;
-			height: 100%;
-			position: absolute;
-			left: 0;
-			top: 0;
-		}
+#two:before {
+  content: '';
+  background: url('../images/overlay.webp');
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}

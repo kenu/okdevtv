@@ -1,16 +1,16 @@
 $(function () {
   $('#form').on('submit', function (e) {
-    e.preventDefault();
-    const data = $(e.currentTarget).serialize();
+    e.preventDefault()
+    const data = $(e.currentTarget).serialize()
     $.ajax('/apis/tip', {
       method: 'post',
       data: data,
       dataType: 'json', // data type
     }).done(function () {
-      $('form#form')[0].reset();
-    });
-  });
-});
+      $('form#form')[0].reset()
+    })
+  })
+})
 
 function sendMessage() {
   if ($('#name').val() && $('#message').val()) {
@@ -25,18 +25,18 @@ function sendMessage() {
       dataType: 'jsonp',
       type: 'POST',
     }).done(function (r) {
-      $('#result').html('sent:' + r);
-    });
+      $('#result').html('sent:' + r)
+    })
     // clear form
-    $('#form').find('input[type=text], textarea').val('');
+    $('#form').find('input[type=text], textarea').val('')
   } else {
     if (!$('#name').val()) {
-      $('#name').focus();
-      return;
+      $('#name').focus()
+      return
     }
     if (!$('#message').val()) {
-      $('#message').focus();
-      return;
+      $('#message').focus()
+      return
     }
   }
 }
@@ -47,28 +47,28 @@ function getList() {
     dataType: 'jsonp',
   })
     .done(function (data) {
-      const list = data.list;
+      const list = data.list
       for (const i in list) {
         if (!list[i].message) {
-          continue;
+          continue
         }
         const datetime = $.datepicker.formatDate(
           'yy/mm/dd',
           getDate(list[i]._id)
-        );
-        let row = '<div><span>' + list[i].message.linkify() + '</span>';
-        row += '<br><span>' + datetime + '</span>';
-        row += ' <span>' + list[i].name + '</span></div>';
-        $('#list').append(row);
+        )
+        let row = '<div><span>' + list[i].message.linkify() + '</span>'
+        row += '<br><span>' + datetime + '</span>'
+        row += ' <span>' + list[i].name + '</span></div>'
+        $('#list').append(row)
       }
     })
     .fail(function (e) {
-      throw e;
-    });
+      throw e
+    })
 }
 
 function getDate(_id) {
-  return new Date(parseInt(_id.substring(0, 8), 16) * 1000);
+  return new Date(parseInt(_id.substring(0, 8), 16) * 1000)
 }
 /**
  * "'버전의 의미 http://semver.org/lang/ko/ '".linkify()
@@ -80,13 +80,13 @@ if (!String.linkify) {
   String.prototype.linkify = function () {
     // http://, https://, ftp://
     const urlPattern =
-      /\b(?:https?|ftp):\/\/[a-z0-9-+&@#\/%?=~_|!:,.;]*[a-z0-9-+&@#\/%=~_|]/gim;
+      /\b(?:https?|ftp):\/\/[a-z0-9-+&@#\/%?=~_|!:,.;]*[a-z0-9-+&@#\/%=~_|]/gim
     // www. sans http:// or https://
-    const pseudoUrlPattern = /(^|[^\/])(www\.[\S]+(\b|$))/gim;
+    const pseudoUrlPattern = /(^|[^\/])(www\.[\S]+(\b|$))/gim
     // Email addresses
-    const emailAddressPattern = /[\w.]+@[a-zA-Z_-]+?(?:\.[a-zA-Z]{2,6})+/gim;
+    const emailAddressPattern = /[\w.]+@[a-zA-Z_-]+?(?:\.[a-zA-Z]{2,6})+/gim
     return this.replace(urlPattern, '<a href="$&">$&</a>')
       .replace(pseudoUrlPattern, '$1<a href="http://$2">$2</a>')
-      .replace(emailAddressPattern, '<a href="mailto:$&">$&</a>');
-  };
+      .replace(emailAddressPattern, '<a href="mailto:$&">$&</a>')
+  }
 }

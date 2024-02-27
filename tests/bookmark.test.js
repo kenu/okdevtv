@@ -1,12 +1,11 @@
-const bookmark = require('../lib/bookmark');
+const bookmark = require('../lib/bookmark')
+const data = {
+  pathname: '/mib/nginx',
+}
 describe('bookmark', () => {
-  it('should list bookmark', async () => {
-    const data = {
-      pathname: '/'
-    };
-    await bookmark.save(data);
-    const rows = await bookmark.list();
-    expect(rows).to.be.an('array');
-    // expect(rows.length).to.be.above(0);
-  });
-});
+  it('should create a bookmark', async () => {
+    const result = await bookmark.create(data)
+    expect(result.pathname).toBe(data.pathname)
+    bookmark.remove(result.dataValues.id)
+  })
+})

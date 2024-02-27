@@ -2,6 +2,9 @@
 /* Basic                                                                         */
 /*********************************************************************************/
 
-	body,input,textarea,select {
-		font-size: 15pt;
-	}
+body,
+input,
+textarea,
+select {
+  font-size: 15pt;
+}
