@@ -19,3 +19,5 @@ describe('User', () => {
     user.remove(result.dataValues.id)
   })
 })
+
+module.exports = userData;
