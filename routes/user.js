@@ -12,8 +12,7 @@ router.post('/signup', async function (req, res) {
   let msg = ''
   try {
     const response = await user_service.signupByEmail(email)
-    console.log(response[0].affectedRows)
-    if (response[0].affectedRows === 1) {
+    if (response.dataValues.id > 0) {
       status = 'ok'
     }
   } catch (e) {
@@ -30,10 +29,10 @@ router.post('/signup', async function (req, res) {
 })
 
 router.get('/setup', async function (req, res) {
-  const hash = req.query.q
+  const uuid = req.query.q
   let msg = ''
   try {
-    const result = await user_service.setUpAccount(hash)
+    const result = await user_service.setUpAccount(uuid)
     console.log(result)
   } catch (e) {
     msg = e.message
@@ -41,7 +40,7 @@ router.get('/setup', async function (req, res) {
   if (msg) {
     res.render('error', { message: msg })
   } else {
-    res.render('user/set_password', { hash })
+    res.render('user/set_password', { hash: uuid })
   }
 })
 
@@ -59,8 +58,7 @@ router.post('/setup', async function (req, res) {
       password_confirm,
       hash,
     })
-    reset = result.reset
-    if (result.result[0].affectedRows === 1) {
+    if (result[0] === 1) {
       status = 'ok'
     }
   } catch (e) {
