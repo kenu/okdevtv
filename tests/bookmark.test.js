@@ -16,5 +16,8 @@ describe('bookmark', () => {
     // get bookmark
     const row = await bookmark.get(result.dataValues.id)
     expect(row.pathname).toBe(data.pathname)
+    expect(row.userId).toBe(data.userId)
+    await bookmark.remove(result.dataValues.id)
+    user.remove(data.userId)
   })
 })

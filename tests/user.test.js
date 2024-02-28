@@ -1,6 +1,7 @@
 const user = require('../lib/user')
+const randomEmail = require('random-email')({ domain: 'okdevtv.com' })
 const userData = {
-  email: 'kenu.heo@gmail.com',
+  email: randomEmail,
   passwd: '',
   github: '',
 }
@@ -20,4 +21,4 @@ describe('User', () => {
   })
 })
 
-module.exports = userData;
+module.exports = userData

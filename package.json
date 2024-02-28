@@ -42,6 +42,7 @@
     "passport": "^0.6.0",
     "passport-facebook": "^3.0.0",
     "passport-github2": "^0.1.12",
+    "random-email": "^1.0.3",
     "redis": "^3.1.2",
     "sequelize": "^6.29.0",
     "serve-favicon": "^2.5.0",
