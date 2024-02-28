@@ -1,81 +1,85 @@
 <% if (!user) { %>
   <script>location.href = '/user/login';</script>
-<% } %>
-<%- include('header', {title: 'My Page' }) %>
-<script>
-  $(function () {
-    $('#form_pw').on('submit', function (e) {
-      e.preventDefault();
-      // validation
-      const password = $('#password').val();
-      const password_confirm = $('#password_confirm').val();
-      if (password.length < 8) {
-        $('#msg').html('비밀번호는 8자리 이상으로 해주세요.');
-        return;
-      }
-      if (password !== password_confirm) {
-        $('#msg').html('입력하신 두 비밀번호가 다릅니다.');
-        return;
-      }
-      $.post('/user/change_password',
-        {
-          password,
-          password_confirm
-        })
-        .done(function (res) {
-          console.log(res.reset === 'Y');
-          if (res.status === 'ok') {
-            let msg = '비밀번호 변경이 완료되었습니다.';
-            $('#msg').html(msg);
-          } else {
-            $('#msg').html(res.msg);
+  <% } %>
+    <%- include('header', {title: 'My Page' }) %>
+      <script>
+        $(function () {
+          $('#form_pw').on('submit', function (e) {
+            e.preventDefault();
+            // validation
+            const password = $('#password').val();
+            const password_confirm = $('#password_confirm').val();
+            if (password.length < 8) {
+              $('#msg').html('비밀번호는 8자리 이상으로 해주세요.');
+              return;
+            }
+            if (password !== password_confirm) {
+              $('#msg').html('입력하신 두 비밀번호가 다릅니다.');
+              return;
+            }
+            $.post('/user/change_password',
+              {
+                password,
+                password_confirm
+              })
+              .done(function (res) {
+                console.log(res.reset === 'Y');
+                if (res.status === 'ok') {
+                  let msg = '비밀번호 변경이 완료되었습니다.';
+                  $('#msg').html(msg);
+                } else {
+                  $('#msg').html(res.msg);
+                }
+              })
+              .fail(function (e) { console.log(e); });
+          });
+        });
+      </script>
+      <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/sign-in/">
+
+      <!-- Bootstrap core CSS -->
+      <link href="https://getbootstrap.com/docs/4.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      <!-- Custom styles for this template -->
+      <link href="https://getbootstrap.com/docs/4.3/examples/sign-in/signin.css" rel="stylesheet">
+      <style>
+        .bd-placeholder-img {
+          font-size: 1.125rem;
+          text-anchor: middle;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+          user-select: none;
+        }
+
+        @media (min-width: 768px) {
+          .bd-placeholder-img-lg {
+            font-size: 3.5rem;
           }
-        })
-        .fail(function (e) { console.log(e); });
-    });
-  });
-</script>
-<link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/sign-in/">
+        }
+      </style>
+      </head>
 
-<!-- Bootstrap core CSS -->
-<link href="https://getbootstrap.com/docs/4.3/dist/css/bootstrap.min.css" rel="stylesheet"
-  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<!-- Custom styles for this template -->
-<link href="https://getbootstrap.com/docs/4.3/examples/sign-in/signin.css" rel="stylesheet">
-<style>
-  .bd-placeholder-img {
-    font-size: 1.125rem;
-    text-anchor: middle;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-  }
+      <body class="text-center">
+        <div class="form-signin">
+          <h1>my page</h1>
+          <p>
+            <%= user %>
+          </p>
+          <hr />
+          <form id="form_pw">
+            <div><input type="password" id="password" placeholder="8자 이상의 비밀번호를 입력하세요."></div>
+            <div><input type="password" id="password_confirm" placeholder="위와 동일한 비밀번호를 입력하세요."></div>
+            <button id="set_password">수정</button>
+            <div id="msg"></div>
+          </form>
+          <hr />
+          <a href="/user/logout">로그아웃</a>
+          <!-- Logo -->
+          <div id="logo">
+            <a href="/"><img src="/images/logo.webp" id="logo" alt="okdevtv logo" style="width: 36px;" />OKdevTV</a>
+          </div>
+        </div>
+      </body>
 
-  @media (min-width: 768px) {
-    .bd-placeholder-img-lg {
-      font-size: 3.5rem;
-    }
-  }
-</style>
-</head>
-
-<body class="text-center">
-  <div class="form-signin">
-    <h1>my page</h1>
-    <p>
-      <%= user %>
-    </p>
-    <hr />
-    <form id="form_pw">
-      <div><input type="password" id="password" placeholder="8자 이상의 비밀번호를 입력하세요."></div>
-      <div><input type="password" id="password_confirm" placeholder="위와 동일한 비밀번호를 입력하세요."></div>
-      <button id="set_password">수정</button>
-      <div id="msg"></div>
-    </form>
-    <hr />
-    <a href="/user/logout">로그아웃</a>
-  </div>
-</body>
-
-</html>
+      </html>
