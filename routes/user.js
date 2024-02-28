@@ -1,6 +1,8 @@
 const express = require('express')
 const router = express.Router()
 const user_service = require('../services/user-service')
+const bookmark = require('../lib/bookmark')
+const dayjs = require('dayjs')
 
 router.get('/signup', function (req, res) {
   res.render('user/signup', {})
@@ -166,7 +168,16 @@ router.all('/logout', async function (req, res) {
 
 router.get('/mypage', async function (req, res) {
   if (req.session.user) {
-    res.render('user/mypage', { user: req.session.user })
+    const bookmarks = await bookmark.findAll(req.session.userId)
+    bookmarks.forEach((bookmark) => {
+      bookmark.created = dayjs(bookmark.createdAt).format(
+        'YYYY-MM-DD HH:mm:ss'
+      )
+    })
+    res.render('user/mypage', {
+      user: req.session.user,
+      bookmarks: bookmarks || [],
+    })
   } else {
     res.redirect('/user/login')
   }

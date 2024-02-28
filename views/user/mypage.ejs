@@ -74,6 +74,15 @@
             <div id="msg"></div>
           </form>
           <hr />
+          <section>
+            <h2>bookmark</h2>
+            <ul style="text-align: left;">
+              <% for (let i = 0; i < bookmarks.length; i++) { %>
+                <li><a href="<%= bookmarks[i].pathname %>" title="<%= bookmarks[i].created %>">
+                  <%= bookmarks[i].pathname %></a></li>
+              <% } %>
+            </ul>
+          </section>
           <a href="/user/logout">로그아웃</a>
           <!-- Logo -->
           <div id="logo">
