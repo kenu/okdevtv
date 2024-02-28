@@ -3,18 +3,7 @@ const user = require('../lib/user')
 const knex = require('../lib/knex')
 const mail = require('../lib/mail')
 const { v4: uuidv4 } = require('uuid')
-const bcrypt = require('bcryptjs')
-const { send } = require('../lib/aws-ses')
-
-function hashPassword(password) {
-  const saltRounds = 10
-  return new Promise((resolve, reject) => {
-    bcrypt.hash(password, saltRounds, function (err, hash) {
-      if (err) reject(err)
-      resolve(hash)
-    })
-  })
-}
+const { hashPassword, comparePassword } = require('../lib/utils')
 
 module.exports = {
   signupByGitHub: async function (github) {
@@ -57,39 +46,6 @@ module.exports = {
       email: email.trim(),
       uuid,
     })
-  },
-  signupByEmail_: async function (email) {
-    // check duplication
-    try {
-      const result = await knex.raw(`select email from user where email = ?`, [
-        email.trim(),
-      ])
-      if (result[0].length > 0) {
-        throw new Error('duplicate email')
-      }
-
-      // check recent
-      const sql_recent = `select count(*) as cnt
-          from user_candidate
-          where email = ? and finish = 'N'
-          and timediff(now(), createdAt) < '00:05:00';`
-      const result_recent = await knex.raw(sql_recent, [email.trim()])
-      if (result_recent[0][0]['cnt'] > 0) {
-        throw new Error('email sent already')
-      }
-
-      // generate uuid
-      const uuid = uuidv4()
-      const url = process.env.BASE_URL
-      await this.sendGuideMail(url, uuid, email)
-
-      // save sending info
-      const res = await user_candidate.create(email, uuid)
-      return res
-    } catch (error) {
-      console.error(error)
-      throw error
-    }
   },
   sendGuideMail: async function (uuid, email) {
     const url = process.env.BASE_URL
@@ -158,13 +114,16 @@ module.exports = {
   },
 
   doLogin: async ({ email, password }) => {
-    const query = `select id, passwd from users where email = ?`
-    const result = await knex.raw(query, [email])
-    if (result[0].length === 0) {
+    const result = await user.getByEmail(email)
+    if (!result.dataValues.id) {
       throw new Error('등록되지 않은 사용자입니다.')
     }
-    const hashedPassword = result[0][0].passwd
-    return bcrypt.compare(password, hashedPassword)
+    const isOk = await comparePassword(password, result.dataValues.passwd)
+    if (isOk) {
+      return result.dataValues
+    } else {
+      throw new Error('비밀번호가 일치하지 않습니다.')
+    }
   },
   resetPassword: async (email) => {
     // generate uuid

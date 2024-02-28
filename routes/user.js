@@ -142,9 +142,9 @@ router.post('/login', async function (req, res) {
   const password = req.body.password
   try {
     const result = await user_service.doLogin({ email, password })
-    if (result) {
+    if (result.id) {
       req.session.user = email
-      console.log(req.session.user)
+      req.session.userId = result.id
       res.json({ status: 'ok', msg: 'login success' })
       return
     } else {
