@@ -25,39 +25,7 @@ module.exports = {
       }
     }
   },
-  signupByGitHub_: async function (github) {
-    console.log(github)
-    const email = github.email
-    if (!email) {
-      return 0
-    }
-    // check duplication
-    const result = await knex.raw(`select email from user where email = ?`, [
-      email.trim(),
-    ])
-    let changedRows = 0
-    if (result[0].length > 0) {
-      const update_account = `update user set github = ?, updated_at = now() where email = ?;`
-      const result2 = await knex.raw(update_account, [
-        JSON.stringify(github),
-        email,
-      ])
-      changedRows = result2[0].changedRows
-    } else {
-      const insert_account = `insert into user (seq, email, github, createdAt)
-      values (null, ?, ?, now());`
-      const result2 = await knex.raw(insert_account, [
-        email,
-        JSON.stringify(github),
-      ])
-      changedRows = result2[0].changedRows
-    }
-    return changedRows
-  },
   signupByEmail: async function (email) {
-    // check duplication of email
-    // check frequency for spamming in five minutes
-    // send guide email with uuid
     const uuid = uuidv4()
     this.sendGuideMail(uuid, email)
     // save email, uuid
@@ -75,7 +43,6 @@ module.exports = {
         ${url}/user/setup?q=${uuid}</a></p>
         <p></p><p>- Kenu @ OKdevTV</p>`
 
-    // send email
     const send_result = await mail.send(email, message)
     console.log(send_result)
     return send_result
