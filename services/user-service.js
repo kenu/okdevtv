@@ -7,6 +7,25 @@ const { hashPassword, comparePassword } = require('../lib/utils')
 
 module.exports = {
   signupByGitHub: async function (github) {
+    const email = github.email
+    if (!email) {
+      return 0
+    }
+    const result = await user.getByEmail(email)
+    if (!result) {
+      return (await user.create({ github: JSON.stringify(github), email }))
+        .dataValues
+    } else {
+      const update = await user.update({
+        github: JSON.stringify(github),
+        id: result.dataValues.id,
+      })
+      if (update[0] === 1) {
+        return result.dataValues
+      }
+    }
+  },
+  signupByGitHub_: async function (github) {
     console.log(github)
     const email = github.email
     if (!email) {

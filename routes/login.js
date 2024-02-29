@@ -135,8 +135,9 @@ router.get(
     scope: ['user:email'],
   }),
   async function (req, res) {
-    await user_service.signupByGitHub(req.user._json)
-    req.session.user = req.user._json.email
+    const result = await user_service.signupByGitHub(req.user._json)
+    req.session.user = result.email
+    req.session.userId = result.id
     let prevSession = req.session
     req.session.regenerate((_err) => {
       Object.assign(req.session, prevSession)
