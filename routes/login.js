@@ -1,22 +1,11 @@
 const express = require('express')
 const passport = require('passport')
-const FacebookStrategy = require('passport-facebook').Strategy
 const GitHubStrategy = require('passport-github2').Strategy
 const user_service = require('../services/user-service')
 const session = require('express-session')
 const cookieParser = require('cookie-parser')
 const bodyParser = require('body-parser')
-const config = require('../config/config')
-const mariadb = require('mariadb')
 const router = express.Router()
-
-//Define MariaDB parameter in Config.js file.
-const pool = mariadb.createPool({
-  host: config.host,
-  user: config.username,
-  password: config.password,
-  database: config.database,
-})
 
 try {
   // Passport session setup.
@@ -28,41 +17,6 @@ try {
     done(null, obj)
   })
 
-  // Use the FacebookStrategy within Passport.
-  passport.use(
-    new FacebookStrategy(
-      {
-        clientID: config.facebook_api_key,
-        clientSecret: config.facebook_api_secret,
-        callbackURL: config.callback_url,
-      },
-      function (_accessToken, _refreshToken, profile, done) {
-        process.nextTick(function () {
-          //Check whether the User exists or not using profile.id
-          if (config.use_database) {
-            // if sets to true
-            pool.query(
-              'SELECT * from user_info where user_id=$1',
-              [profile.id],
-              (err, rows) => {
-                if (err) throw err
-                if (rows && rows.length === 0) {
-                  console.log('There is no such user, adding now')
-                  pool.query(
-                    "INSERT into user_info(user_id,user_name) VALUES('$1','$2')",
-                    [profile.id, profile.username]
-                  )
-                } else {
-                  console.log('User already exists in database')
-                }
-              }
-            )
-          }
-          return done(null, profile)
-        })
-      }
-    )
-  )
   passport.use(
     new GitHubStrategy(
       {
@@ -104,26 +58,6 @@ router.get('/account', ensureAuthenticated, function (req, res) {
 })
 
 router.get(
-  '/auth/facebook',
-  passport.authenticate('facebook', { scope: 'email' })
-)
-
-router.get(
-  '/auth/facebook/callback',
-  passport.authenticate('facebook', {
-    successRedirect: '/',
-    failureRedirect: '/login',
-  }),
-  function (req, res) {
-    let prevSession = req.session
-    req.session.regenerate((_err) => {
-      Object.assign(req.session, prevSession)
-      res.redirect('/')
-    })
-  }
-)
-
-router.get(
   '/github',
   passport.authenticate('github', { scope: ['user:email'] })
 )
@@ -159,7 +93,6 @@ function ensureAuthenticated(req, res, next) {
 }
 
 router.get('/', function (req, res) {
-  console.log(req.user)
   res.render('login', { user: req.user })
 })
 

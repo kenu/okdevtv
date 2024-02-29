@@ -7,7 +7,7 @@ module.exports = {
 
   facebook_api_key: process.env.FACEBOOK_API_KEY,
   facebook_api_secret: process.env.FACEBOOK_API_SECRET,
-  callback_url: 'http://localhost:3000/auth/facebook/callback',
+  callback_url: `${process.env.BASE_URL}/auth/facebook/callback`,
   use_database: false,
   host: 'localhost',
   username: process.env.DB_USER,
