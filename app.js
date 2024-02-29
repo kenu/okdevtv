@@ -8,8 +8,9 @@ const bodyParser = require('body-parser')
 const frameguard = require('frameguard')
 const passport = require('passport')
 const Sentry = require('@sentry/node')
+require('dotenv').config()
 Sentry.init({
-  dsn: 'https://8b4aa37266b14f298fc101e6bc02a4d7@o1064669.ingest.sentry.io/4504407883644928',
+  dsn: process.env.SENTRY_URL,
   tracesSampleRate: 1.0,
 })
 let helmet = require('helmet')
