@@ -1,6 +1,7 @@
 #wrap {
   min-width: 576px;
-  width: 80%;
+  max-width: 800px;
+  width: 96%;
   margin: auto;
   padding: 0 12px;
   border: 1px solid #99e;
@@ -48,4 +49,25 @@ li code {
 #whatelse {
   text-align: center;
   margin: 20px 0;
+}
+
+#bookmark {
+  border-radius: 5px;
+  position: fixed;
+  right: 20px;
+  background: linen;
+  padding: 4px;
+  cursor: pointer;
+}
+#bookmark:hover {
+  background: #eefefe;
+  border: 1px #888 solid;
+  padding: 3px;
+}
+
+#inflearn,
+#facebook-reply {
+  text-align: center;
+  color: #fff;
+  font-weight: 600;
 }
