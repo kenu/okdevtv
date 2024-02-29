@@ -62,14 +62,15 @@ module.exports = {
     return send_result
   },
 
-  setUpAccount: async (hash) => {
+  setUpAccount: async (uuid) => {
     // find by uuid
-    const res = await user_candidate.getByUuid(hash)
+    const res = await user_candidate.getByUuid(uuid)
     if (!res.dataValues.email) {
       throw new Error(`invalid code`)
     }
     const userData = {
       email: res.dataValues.email,
+      uuid: res.dataValues.uuid,
       finish: 'Y',
     }
 
