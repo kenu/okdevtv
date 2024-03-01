@@ -4,10 +4,6 @@ const user_service = require('../services/user-service')
 const bookmark = require('../lib/bookmark')
 const dayjs = require('dayjs')
 
-router.get('/signup', function (req, res) {
-  res.render('user/signup', {})
-})
-
 router.post('/signup', async function (req, res) {
   let email = req.body.email
   let status = 'fail'
@@ -30,110 +26,6 @@ router.post('/signup', async function (req, res) {
   res.json(result)
 })
 
-router.get('/setup', async function (req, res) {
-  const uuid = req.query.q
-  let msg = ''
-  try {
-    const result = await user_service.setUpAccount(uuid)
-    console.log(result)
-  } catch (e) {
-    msg = e.message
-  }
-  if (msg) {
-    res.render('error', { message: msg })
-  } else {
-    res.render('user/set_password', { hash: uuid })
-  }
-})
-
-router.post('/setup', async function (req, res) {
-  const password = req.body.password
-  const password_confirm = req.body.password_confirm
-  const uuid = req.body.hash
-  let status = 'fail'
-  let msg = ''
-  let reset = 'N'
-
-  try {
-    const result = await user_service.setUpPassword({
-      password,
-      password_confirm,
-      uuid,
-    })
-    if (result[0] === 1) {
-      status = 'ok'
-    }
-  } catch (e) {
-    msg = e.message
-    console.log(e)
-  }
-  let result = {
-    status: status,
-    reset,
-  }
-  if (msg) {
-    result.msg = msg
-  }
-  res.json(result)
-})
-
-router.post('/change_password', async function (req, res) {
-  const password = req.body.password
-  const password_confirm = req.body.password_confirm
-  const email = req.session.user
-  let status = 'fail'
-  let msg = ''
-  try {
-    if (email) {
-      const change_result = await user_service.changePassword({
-        password,
-        password_confirm,
-        email,
-      })
-      if (change_result.result[0].affectedRows === 1) {
-        status = 'ok'
-      }
-    } else {
-      msg = 'login이 필요합니다.'
-    }
-  } catch (e) {
-    msg = e.message
-    console.log(e)
-  }
-  let result = {
-    status: status,
-    msg,
-  }
-  res.json(result)
-})
-
-router.get('/reset_password', async function (req, res) {
-  const email = req.query.email
-  res.render('user/reset_password', { email })
-})
-
-router.post('/reset_password', async function (req, res) {
-  let email = req.body.email
-  let status = 'fail'
-  let msg = ''
-  try {
-    const result = await user_service.resetPassword(email)
-    console.log(result)
-    if (result.id > 1) {
-      status = 'ok'
-    }
-  } catch (e) {
-    msg = e.message
-  }
-  let result = {
-    status: status,
-    data: email,
-  }
-  if (msg) {
-    result.msg = msg
-  }
-  res.json(result)
-})
 
 router.get('/login', function (req, res) {
   res.render('user/login', { user: req.session.user, title: 'hello okdevtv' })
@@ -170,9 +62,7 @@ router.get('/mypage', async function (req, res) {
   if (req.session.user) {
     const bookmarks = await bookmark.findAll(req.session.userId)
     bookmarks.forEach((bookmark) => {
-      bookmark.created = dayjs(bookmark.createdAt).format(
-        'YYYY-MM-DD HH:mm:ss'
-      )
+      bookmark.created = dayjs(bookmark.createdAt).format('YYYY-MM-DD HH:mm:ss')
     })
     res.render('user/mypage', {
       user: req.session.user,
