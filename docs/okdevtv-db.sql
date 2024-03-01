@@ -68,21 +68,3 @@ CREATE TABLE `user` (
   UNIQUE KEY `idx_user_email` (`email`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Table structure for table `user_candidate`
---
-
-DROP TABLE IF EXISTS `user_candidate`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `user_candidate` (
-  `seq` int(11) unsigned NOT NULL AUTO_INCREMENT COMMENT '연번',
-  `email` varchar(50) NOT NULL DEFAULT '' COMMENT 'email',
-  `uuid` varchar(40) NOT NULL DEFAULT '' COMMENT 'uuid',
-  `reset` char(1) NOT NULL DEFAULT 'N' COMMENT '비번리셋',
-  `finish` char(1) NOT NULL DEFAULT 'N' COMMENT '완료',
-  `createdAt` datetime NOT NULL COMMENT '생성일시',
-  `updatedAt` datetime DEFAULT NULL COMMENT '완료일시',
-  PRIMARY KEY (`seq`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
