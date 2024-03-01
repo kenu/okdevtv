@@ -1,6 +1,5 @@
-const user_candidate = require('../lib/user_candidate')
 const user = require('../lib/user')
-const knex = require('../lib/knex')
+const user_candidate = require('../lib/user_candidate')
 const mail = require('../lib/mail')
 const { v4: uuidv4 } = require('uuid')
 const { hashPassword, comparePassword } = require('../lib/utils')
@@ -55,16 +54,16 @@ module.exports = {
       throw new Error(`invalid code`)
     }
     const userData = {
+      id: res.dataValues.id,
       email: res.dataValues.email,
-      uuid: res.dataValues.uuid,
-      finish: 'Y',
+      finish: 'P',
     }
 
     await user_candidate.update(userData)
     const resultUser = await user.create(userData)
     return resultUser
   },
-  setUpPassword: async ({ password, password_confirm, hash }) => {
+  setUpPassword: async ({ password, password_confirm, uuid }) => {
     if (password.length < 8) {
       throw new Error('비밀번호는 8자리 이상으로 해주세요.')
     }
@@ -72,15 +71,16 @@ module.exports = {
       throw new Error('입력하신 두 비밀번호가 다릅니다.')
     }
     const crypted_password = await hashPassword(password)
-    const data = await user_candidate.getByUuid(hash)
 
-    if (!data.dataValues.email) {
+    const data = await user_candidate.getByUuid(uuid)
+    if (!data.dataValues.id) {
       throw new Error('email 주소를 찾을 수 없습니다.')
     }
     const result = await user.update({
-      email: data.dataValues.email,
+      id: data.dataValues.id,
       passwd: crypted_password,
     })
+    await user_candidate.update({id: data.dataValues.id, finish: 'Y'})
 
     return result
   },
@@ -92,12 +92,12 @@ module.exports = {
       throw new Error('입력하신 두 비밀번호가 다릅니다.')
     }
     const crypted_password = await hashPassword(password)
-
-    const query = `update user set passwd = ?, updated_at = now()
-        where email = ?`
-    const result = await knex.raw(query, [crypted_password, email])
-
-    return { result }
+    const data = {
+      email,
+      passwd: crypted_password,
+    }
+    const result = await user.update(data)
+    return result
   },
 
   doLogin: async ({ email, password }) => {
@@ -126,12 +126,11 @@ module.exports = {
     // send email
     const send_result = await mail.send(email, message)
     console.log(send_result)
-
-    // save sending info
-    return knex.raw(
-      `insert into user_candidate
-(seq, email, uuid, createdAt, reset) values (null, ?, ?, now(), 'Y');`,
-      [email, uuid]
-    )
+    const data = {
+      email: email,
+      uuid: uuid,
+      reset: 'Y',
+    }
+    return (await user_candidate.create(data)).dataValues
   },
 }

@@ -49,7 +49,7 @@ router.get('/setup', async function (req, res) {
 router.post('/setup', async function (req, res) {
   const password = req.body.password
   const password_confirm = req.body.password_confirm
-  const hash = req.body.hash
+  const uuid = req.body.hash
   let status = 'fail'
   let msg = ''
   let reset = 'N'
@@ -58,7 +58,7 @@ router.post('/setup', async function (req, res) {
     const result = await user_service.setUpPassword({
       password,
       password_confirm,
-      hash,
+      uuid,
     })
     if (result[0] === 1) {
       status = 'ok'
@@ -117,9 +117,9 @@ router.post('/reset_password', async function (req, res) {
   let status = 'fail'
   let msg = ''
   try {
-    const response = await user_service.resetPassword(email)
-    console.log(response[0].affectedRows)
-    if (response[0].affectedRows === 1) {
+    const result = await user_service.resetPassword(email)
+    console.log(result)
+    if (result.id > 1) {
       status = 'ok'
     }
   } catch (e) {
