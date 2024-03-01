@@ -7,7 +7,7 @@ const { hashPassword, comparePassword } = require('../lib/utils')
 
 module.exports = {
   signupByGitHub: async function (github) {
-    const email = github.email
+    const email = github.email || github.login
     if (!email) {
       return 0
     }
