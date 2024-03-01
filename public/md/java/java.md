@@ -37,41 +37,8 @@
 
 ## Install
 * [sdkman](/mib/sdkman) recommended
-* https://github.com/ojdkbuild/ojdkbuild
-* CentOS
-
-```
-yum list | grep jdk
-sudo yum remove java-1.7.0-openjdk.x86_64 -y
-sudo yum install java-1.8.0-openjdk-devel.x86_64 -y
-```
-
-* Ubuntu openjdk
-
-```
-sudo add-apt-repository ppa:openjdk-r/ppa
-
-sudo apt-get update
-sudo apt-get install openjdk-8-jdk -y
-```
-
-* Ubuntu oracle-jdk
-
-```
-sudo add-apt-repository ppa:webupd8team/java
-sudo apt-get update
-sudo apt-get install oracle-java8-installer
-sudo apt-get install oracle-java8-set-default
-```
-
-* mac
-
-```
-export JAVA_HOME="$(/usr/libexec/java_home -v 1.8)"
-```
-
-* 자바의신 1권 36p
-
+* https://learn.microsoft.com/en-us/java/openjdk/download
+* https://openjdk.org/projects/jdk
 
 ## 기본 용어
 * 패키지(package)
