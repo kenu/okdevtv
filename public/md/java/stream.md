@@ -42,3 +42,6 @@ int sum = strStream.parallel()
 
 - 스트림 API는 강력하고 유연한 도구로, 복잡한 연산을 단순화하고 가독성을 높이며 코드를 간결하게 함
 - 하지만 스트림은 한 번만 소비할 수 있으며, 재사용할 수 없으며, 스트림 연산은 내부적으로 복잡하여 디버깅이 어려움
+
+## ref
+- https://java2blog.com/java-8-stream/
