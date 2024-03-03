@@ -79,6 +79,10 @@
   * 오징어 무침
 * [님아 그 시장을 가오_EP.40_부암](https://youtu.be/NROEyqEqkR4) : 기라성
   * 쟁반짜장, 돈까스, 볶음밥
+* [님아 그 시장을 가오_EP.41_대전](https://youtu.be/MnEdGm6bp7A) : 열매손만두
+  * 손만두, 쫄면, 고기만두
+* [님아 그 시장을 가오_EP.42_홍성](https://youtu.be/654d-BlJKPc) : 오누이식당
+  * 만두전골
 
 ===
 * 재생목록: https://www.youtube.com/playlist=PLoABXt5mipg44IDlocl0rncGijN0b__bd
