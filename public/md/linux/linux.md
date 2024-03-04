@@ -139,7 +139,7 @@ sudo service crond restart
 ## VGA 확인
 
 ```
-sudo yum install pciutils
+sudo dnf install pciutils
 lspci | grep -i vga
 ```
 
@@ -190,12 +190,20 @@ pgrep -f java
 ## htop
 
 ```
-sudo yum install htop
+sudo dnf install htop
 ```
 
 ```
 htop
 htop -p "$(pgrep -vfd, 'java|python')"
+```
+
+## dust
+
+* https://github.com/bootandy/dust/releases
+
+```
+dust -h
 ```
 
 ## ls for second
@@ -206,16 +214,16 @@ ls -la --time-style=full-iso
 
 ## other topics
 
-* [dnf](https://okdevtv.com/mib/linux/dnf)
-* [cron](https://okdevtv.com/mib/linux/cron)
-* [curl](https://okdevtv.com/mib/linux/curl)
-* [pigz](https://okdevtv.com/mib/linux/pigz) : parallel gzip
+* [dnf](/mib/linux/dnf)
+* [cron](/mib/linux/cron)
+* [curl](/mib/linux/curl)
+* [pigz](/mib/linux/pigz) : parallel gzip
 
 ## Mail
 
 ### sendmail
 ```
-sudo yum install sendmail
+sudo dnf install sendmail -y
 echo -e "Subject: Terminal Email Send\n\nEmail Content line 1\nEmail Content line 2" > content
 sendmail recipient@example.com < content
 ```
