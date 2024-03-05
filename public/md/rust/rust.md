@@ -1,5 +1,7 @@
 # Rust
 * https://www.rust-lang.org/
+* Korean ebook:
+  * https://doc.rust-kr.org/
 
 ## install
 * https://www.rust-lang.org/tools/install
@@ -94,5 +96,6 @@ fn main() {
 
 ## ref
 * https://www.rust-lang.org/learn
+* https://doc.rust-kr.org/
 
 <img src="https://www.rust-lang.org/static/images/ferris.gif" alt="rustacean" />
