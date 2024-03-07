@@ -5,8 +5,8 @@
 package com.okdevtv.java15;
 
 public class TextBlock {
-    public static void main(String[] args) {
-        String sql = """
+  public static void main(String[] args) {
+    String sql = """
 SELECT
   NAME,
   GENDER,
@@ -15,9 +15,9 @@ FROM
   USER
 WHERE
   NAME = ?
-                """;
-        System.out.println(sql);
-    }
+""";
+    System.out.println(sql);
+  }
 }
 ```
 

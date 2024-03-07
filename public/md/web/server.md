@@ -13,6 +13,8 @@ python -m SimpleHTTPServer 8090
 
 ### node.js
 ```
+npx serve
+# or
 npm i -g http-server
 http-server
 ```

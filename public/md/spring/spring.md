@@ -41,11 +41,11 @@ public class HelloWorld {
   private String message;
 
   public void setMessage(String message) {
-    this.message = message;
+  this.message = message;
   }
 
   public String getMessage() {
-    return this.message;
+  return this.message;
   }
 }
 ```
@@ -59,12 +59,12 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class MainApp {
-    public static void main(String[] args) {
-        ApplicationContext context = new ClassPathXmlApplicationContext("Beans.xml");
-        HelloWorld obj = (HelloWorld) context.getBean("helloWorld");
-        String message = obj.getMessage();
-        System.out.println("Your Message : " + message);
-    }
+  public static void main(String[] args) {
+    ApplicationContext context = new ClassPathXmlApplicationContext("Beans.xml");
+    HelloWorld obj = (HelloWorld) context.getBean("helloWorld");
+    String message = obj.getMessage();
+    System.out.println("Your Message : " + message);
+  }
 }
 ```
 
@@ -74,13 +74,13 @@ public class MainApp {
 <?xml version = "1.0" encoding = "UTF-8"?>
 
 <beans xmlns="http://www.springframework.org/schema/beans"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://www.springframework.org/schema/beans
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans
    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
-    <bean id="helloWorld" class="com.okdevtv.okspring.HelloWorld">
-        <property name="message" value="# Hello World!" />
-    </bean>
+  <bean id="helloWorld" class="com.okdevtv.okspring.HelloWorld">
+    <property name="message" value="# Hello World!" />
+  </bean>
 
 </beans>
 ```
@@ -134,7 +134,7 @@ public class MainApp {
 ```java
 public class ExampleBean implements InitializingBean {
   public void afterPropertiesSet() {
-      // do some initialization work
+    // do some initialization work
   }
 }
 ```
@@ -145,7 +145,7 @@ public class ExampleBean implements InitializingBean {
 ```java
 public class ExampleBean implements DisposableBean {
   public void destroy() {
-      System.out.println("destroy");
+    System.out.println("destroy");
   }
 }
 ```

@@ -13,7 +13,7 @@
 
 ## realted `server.xml`
 
-```
+```xml
 <Host name="localhost"  appBase="webapps"
       unpackWARs="true" autoDeploy="true">
 ```

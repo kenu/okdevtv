@@ -11,23 +11,23 @@
 ### Prerequisite
 * MariaDB 설치
 
-```
+```sh
 sudo dnf install mariadb105-server -y
 ```
 
-```
+```sh
 sudo systemctl enable mariadb
 sudo systemctl start mariadb
 sudo mariadb-secure-installation
 ```
 
-```
+```sh
 mysql -uroot -p
 ```
 
   * yona 계정, DB 생성
 
-```
+```sql
 create database yona DEFAULT CHARACTER SET utf8mb4 DEFAULT COLLATE utf8mb4_bin;
 
 GRANT ALL PRIVILEGES ON yona.* TO yona@localhost IDENTIFIED BY 'yonadan';
@@ -42,7 +42,7 @@ GRANT ALL PRIVILEGES ON yona.* TO yona@localhost IDENTIFIED BY 'yonadan';
 ### Install Yona
 * Yona 설치
 
-```
+```sh
 mkdir local && cd local
 wget https://github.com/yona-projects/yona/releases/download/v1.16.0/yona-v1.16.0-bin.zip
 
@@ -94,7 +94,7 @@ SET JAVA_OPTS=-Dyona.home=%YONA_HOME% -Dconfig.file=%YONA_HOME%\conf\application
 ```
 
 ## Yona restart shell
-```
+```sh
 #!/bin/bash
 source /home/ec2-user/.bash_profile
 

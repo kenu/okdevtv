@@ -9,7 +9,7 @@
 
 ## build.xml
 * structure
-```
+```xml
 <project>
   <property />
   <target>

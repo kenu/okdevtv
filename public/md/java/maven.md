@@ -8,22 +8,22 @@
 * 스프링 프레임워크와 밀접한 관계
 
 ## install
+
+* sdkman
+  * [sdkman](/mib/sdkman) 추천
+    * `sdk install maven`
+  * JDK 설치 및 JAVA_HOME 환경변수 필요
+  * https://maven.apache.org 위치에서 `apache-maven-*.*.*-bin.zip` 다운로드
+  * download and unzip
+  * 환경변수 %Path%;\path\to\maven\bin
 * mac
 
 ```
 brew install maven
 ```
 
-* windows and linux
-  * [skdman](/mib/sdkman) 추천
-    * `sdk install maven 3.8.4`
-  * JDK 설치 및 JAVA_HOME 환경변수 필요
-  * https://maven.apache.org 위치에서 `apache-maven-*.*.*-bin.zip` 다운로드
-  * download and unzip
-  * 환경변수 %Path%;\path\to\maven\bin
-
 ## run
-* 환경변수 설정 후 새로 cmd창을 띄우고 `mvn --version` 실행
+* 환경변수 설정 후 새로 cmd창을 띄우고 `mvn -v` 실행
 
 ## POM
 * Project Object Model
@@ -43,8 +43,8 @@ brew install maven
   <url>http://maven.apache.org</url>
 
   <properties>
-    <maven.compiler.source>1.8</maven.compiler.source>
-    <maven.compiler.target>1.8</maven.compiler.target>
+    <maven.compiler.source>17</maven.compiler.source>
+    <maven.compiler.target>17</maven.compiler.target>
   </properties>
 
   <dependencies>
@@ -107,3 +107,5 @@ mvn archetype:generate -DgroupId=com.okdevtv.java -DartifactId=okdevtv -Darchety
 ## ref
 * 5분 메이븐
   * http://maven.apache.org/guides/getting-started/maven-in-five-minutes.html
+* Polyglot maven
+  * https://github.com/takari/polyglot-maven

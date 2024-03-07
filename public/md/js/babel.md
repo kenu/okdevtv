@@ -62,7 +62,7 @@ module.exports = { presets };
 * package.json
   * `npm i -D @babel/cli @babel/core @babel/preset-env babel-jest`
 
-```
+```json
   "devDependencies": {
     "@babel/cli": "^7.8.4",
     "@babel/core": "^7.8.4",
@@ -73,9 +73,9 @@ module.exports = { presets };
 
 * babel.config.js
 
-```
+```js
 module.exports = {
-    "presets": ["@babel/preset-env"]
+  "presets": ["@babel/preset-env"]
 }
 ```
 

@@ -11,7 +11,7 @@
 ## 간단 테스트
 * 소스 다운로드 <a href="springsecurity.zip">springsecurity.zip</a>
 * pom.xml
-```
+```xml
 		<dependency>
 			<groupId>org.springframework.security</groupId>
 			<artifactId>spring-security-web</artifactId>
@@ -25,7 +25,7 @@
 		</dependency>
 ```
 * root-context.xml
-```
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <beans:beans xmlns="http://www.springframework.org/schema/security"
 	xmlns:beans="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -50,7 +50,7 @@
 </beans:beans>
 ```
 * servlet-context.xml
-```
+```xml
 <beans:beans xmlns="http://www.springframework.org/schema/mvc"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:beans="http://www.springframework.org/schema/beans"
@@ -62,7 +62,7 @@
 ```
 
 * web.xml
-```
+```xml
 	<!-- Spring Security -->
 	<filter>
 		<filter-name>springSecurityFilterChain</filter-name>

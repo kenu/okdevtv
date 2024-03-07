@@ -58,6 +58,11 @@ const config = {
 module.exports = config;
 ```
 
+## Coverage
+```
+jest --coverage
+```
+
 ## Timeout
 * `test('title', () => {}, timeout);`
 * https://exerror.com/timeout-async-callback-was-not-invoked-within-the-5000-ms-timeout-specified-by-jest-settimeout/

@@ -4,7 +4,7 @@
 ## Global Settings for maven
 * `~/.m2/settings.xml`
 
-```
+```xml
 <settings>
     <pluginGroups>
         <pluginGroup>org.sonarsource.scanner.maven</pluginGroup>

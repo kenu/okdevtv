@@ -18,7 +18,7 @@
 * `direc = direc.split('\0', 1)[0]`
 
 ### test
-```
+```py
 import matplotlib.pyplot as plt
 plt.plot([1,2,3,4])
 plt.ylabel('some numbers')

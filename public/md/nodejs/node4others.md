@@ -1,38 +1,38 @@
 ## Node.js for PHP Developer
 php
-```
+```js
 function roomlist() {
-    $rooms = array();
-    $room_list = mysql_query(
-        'SELECT room FROM '.SQL_PREFIX.'chats GROUP BY room ORDER BY room ASC'
-    );
-    while (
-        $row = mysql_fetch_assoc($room_list)) {
-        $room = $row['room'];
-        $rooms[] = $room;
-    }
-    print json_encode($r);
+  $rooms = array();
+  $room_list = mysql_query(
+    'SELECT room FROM '.SQL_PREFIX.'chats GROUP BY room ORDER BY room ASC'
+  );
+  while (
+    $row = mysql_fetch_assoc($room_list)) {
+    $room = $row['room'];
+    $rooms[] = $room;
+  }
+  print json_encode($r);
 }
 ```
 
 node.js
-```
+```js
 function roomlist() {
-    varrooms = [];
-    link.query(
-        'SELECT room FROM ' + SQL_PREFIX + 'chats GROUP BY room ORDER BY room ASC',
-        function (err, rows, fields) {
-            for (var r = 0; r < rows.length; ++r) {
-                var row = rows[r];
-                var room = row['room'];
-                rooms.push(room);
-            }
-            res.writeHead(200, {
-                'Content-Type': 'text/plain'
-            });
-            res.end(JSON.stringify(r));
-        }
-    });
+  const rooms = [];
+  link.query(
+    'SELECT room FROM ' + SQL_PREFIX + 'chats GROUP BY room ORDER BY room ASC',
+    function (err, rows, fields) {
+      for (var r = 0; r < rows.length; ++r) {
+        const row = rows[r];
+        const room = row['room'];
+        rooms.push(room);
+      }
+      res.writeHead(200, {
+        'Content-Type': 'text/plain'
+      });
+      res.end(JSON.stringify(r));
+    }
+  });
 };
 ```
 
@@ -55,7 +55,7 @@ Chapter 11, Plain Text, JSON, and XML
 Chapter 12, Miscellaneous Functions
   * Node.js implementations for PHP API functions.
   * speed along conversion
-  * contrast PHP and Node.js.
+  * contrast PHP and Node.js
 
 ## Node.js for Java Developer
 * enide plugin

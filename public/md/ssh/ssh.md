@@ -2,19 +2,19 @@
 
 * 원격 서버 명령 실행
 
-```
+```sh
 ssh user@server "command"
 ```
 
 ## ssh DB tunneling
-```
+```sh
 ssh -N -L [local port]:[database host]:[remote port] [username]@[remote host]
 ssh -N -L 3307:db.okdevtv.com:3306 ec2-user@gw.okdevtv.com
 ```
 
 * open other terminal
 
-```
+```sh
 mysql -u devuser -p -P 3307 -h 127.0.0.1
 ```
 

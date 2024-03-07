@@ -1,13 +1,14 @@
 # Uptime
 * A remote monitoring application using Node.js, MongoDB, and Twitter Bootstrap.
-* https://github.com/fzaninotto/uptime
+* ~https://github.com/fzaninotto/uptime~
+* https://www.supermonitoring.com/blog/the-updated-list-of-website-monitoring-services/
 <img src="https://camo.githubusercontent.com/4f3f0f0b79d15372f3a89e5f9085cade4bffb064/68747470733a2f2f7261772e6769746875622e636f6d2f667a616e696e6f74746f2f757074696d652f646f776e6c6f6164732f636865636b5f64657461696c732e706e67" />
 
 ## install
 
 * node.js
-```
-sudo yum update -y
+```sh
+sudo dnf update -y
 mkdir local && cd local/
 wget https://nodejs.org/dist/v6.11.3/node-v6.11.3-linux-x64.tar.xz
 tar xvf node-v6.11.3-linux-x64.tar.xz
@@ -16,14 +17,14 @@ ln -s node-v6.11.3-linux-x64 node
 
 * Linux Dev Tools
 
-```
+```sh
 sudo yum groupinstall -y "Development Tools"
 sudo yum install git -y
 ```
 
 * MongoDB
 
-```
+```sh
 wget https://fastdl.mongodb.org/linux/mongodb-linux-x86_64-amazon-3.4.9.tgz
 tar xvfz mongodb-linux-x86_64-amazon-3.4.9.tgz
 ln -s mongodb-linux-x86_64-amazon-3.4.9 mongodb

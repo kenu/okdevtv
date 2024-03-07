@@ -10,7 +10,8 @@
 ## nginx 설치
 * aws EC2 기준
 
-```
+```sh
+sudo dnf install nginx -y
 # centos 7
 sudo amazon-linux-extras install nginx1
 sudo systemctl start nginx
@@ -18,7 +19,7 @@ sudo systemctl start nginx
 
 * 기본 설정
 
-```
+```sh
 curl -i http://localhost
 sudo chmod 644 /var/log/nginx
 sudo chown -R ec2-user:ec2-user /usr/share/nginx/html
@@ -29,9 +30,8 @@ echo "<h1>Hello World</h1>" > /usr/share/nginx/html/hello.html
 * http://아이피/hello.html
 
 ## 자동 시작
-```
-# centos 7
-systemctl enable nginx.service
+```sh
+sudo systemctl enable nginx.service
 ```
 
 ## 설정

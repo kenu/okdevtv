@@ -87,8 +87,8 @@ gradle wrapper
 
 ```
 task copy(type: Copy) {
-    from 'src'
-    into 'dest'
+  from 'src'
+  into 'dest'
 }
 ```
 
@@ -109,13 +109,13 @@ task copy(type: Copy) {
 
 ```
 plugins {
-    id 'base'
+  id 'base'
 }
 
 task copy...
 
 task zip(type: Zip) {
-    from 'src'
+  from 'src'
 }
 ```
 
@@ -128,9 +128,9 @@ task zip(type: Zip) {
 ## custom repository
 ```
 repositories {
-    maven {
-      url 'http://repo.mycompany.com/maven2'
-    }
+  maven {
+    url 'http://repo.mycompany.com/maven2'
+  }
 }
 ```
 

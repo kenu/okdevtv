@@ -13,7 +13,7 @@
 
 ## 컨셉
 * 인증시 복잡하지만, 코드는 복잡할 필요없음
-```
+```js
 app.post('/login', passport.authenticate('local', { successRedirect: '/',
                                                     failureRedirect: '/login' }));
 ```
@@ -29,7 +29,7 @@ npm install passport
 * `authenticate()` 함수 시그니처는 표준 Connect 미들웨어
 * Express 애플리케이션에서 라우트 미들웨어로 사용하기 편리함
 
-```
+```js
 app.post('/login',
   passport.authenticate('local'),
   function(req, res) {

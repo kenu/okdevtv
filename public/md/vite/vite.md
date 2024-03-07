@@ -17,7 +17,7 @@ pnpm create vite my-vue-app --template vue
   * lit, svelte, solid, qwik
 
 ## Run
-```
+```sh
 cd my-vue-app
 npm i
 npm run dev

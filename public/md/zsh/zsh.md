@@ -6,6 +6,15 @@
 * git 사용시 브랜치 등을 프롬프트에 보여주며 매우 편리함
 * history 기능 압도적
 
+## 설치
+
+```sh
+sudo dnf install zsh git util-linux-user -y
+```
+```
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+```
+
 ## 설치(맥)
 * 필요조건
   * brew (http://brew.sh)
@@ -15,15 +24,6 @@
 
 * 정상적으로 설치되었다면 cmd+N 으로 zsh로 실행됨
 * 만약 그대로라면 `chsh -s /usr/local/bin/zsh` 명령으로 shell 변경 가능
-
-## 설치
-
-```sh
-sudo dnf install zsh git util-linux-user -y
-```
-```
-sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-```
 
 ## Windows Git Bash
 * https://git-scm.com/downloads
@@ -40,16 +40,6 @@ fi' > ~/.bashrc
   - https://github.com/facebook/zstd/releases/ *.zst extractor zstd-v1.5.5-win64.zip
 - Extract and move to C:\Program Files\Git
 - from: https://medium.com/@leomaurodesenv/setting-up-your-git-bash-zsh-terminals-on-windows-fa94871f440d
-
-### Remote CentOS
-```
-su
-yum install zsh
-exit
-
-curl -OL https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh
-bash install.sh
-```
 
 ## Plugin
 ```

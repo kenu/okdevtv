@@ -3,13 +3,13 @@
 * k520, 8.0.44_367
 
 ## VGA 확인
-```
+```sh
 sudo yum install pciutils
 lspci | grep -i vga
 ```
 
 ## env setup
-```
+```sh
 sudo apt-get update
 sudo apt-get upgrade -y
 sudo apt-get install -y build-essential cmake git unzip pkg-config libopenblas-dev liblapack-dev
@@ -28,15 +28,15 @@ alias nouveau off
 alias lbm-nouveau off
 ```
 
-```
+```sh
 echo options nouveau modeset=0 | sudo tee -a /etc/modprobe.d/nouveau-kms.conf
 sudo update-initramfs -u
-sudo reboot 
+sudo reboot
 ```
 
 ## cuda
 
-```
+```sh
 df -h
 sudo chown ubuntu:ubuntu -R /mnt
 cd /mnt
@@ -46,41 +46,41 @@ chmod +x cuda_8.0.44_linux.run
 mkdir /mnt/installers
 sudo ./cuda_8.0.44_linux.run -extract=/mnt/installers
 cd /mnt/installers
-sudo ./NVIDIA-Linux-x86_64-367.48.run 
+sudo ./NVIDIA-Linux-x86_64-367.48.run
 modprobe nvidia
-sudo ./cuda-linux64-rel-8.0.44-21122537.run 
-sudo ./cuda-samples-linux-8.0.44-21122537.run 
+sudo ./cuda-linux64-rel-8.0.44-21122537.run
+sudo ./cuda-samples-linux-8.0.44-21122537.run
 ```
 
 * vi ~/.profile
-```
+```sh
 export CUDA_HOME=/usr/local/cuda-8.0
 export PATH=/usr/local/cuda/bin:$PATH
 export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
 ```
 
-```
+```sh
 source ~/.profile
 nvcc --version
 ```
 
 * https://developer.nvidia.com/rdp/cudnn-download
 * Download cuDNN v5 (May 27, 2016), for CUDA 8.0
-```
+```sh
 tar xvfz cudnn-8.0-linux-x64-v6.0.tgz
 cd cuda
 sudo cp lib64/* /usr/local/cuda/lib64/
 sudo cp include/* /usr/local/cuda/include/
 ```
 
-```
+```sh
 sudo apt install libcupti-dev -y
 ```
 
 
 
 ## tensorflow env
-```
+```sh
 sudo apt install python3-pip --upgrade
 pip3 install virtualenv --upgrade
 virtualenv /mnt/tf
@@ -90,13 +90,13 @@ pip install --upgrade tensorflow-gpu
 
 
 ### devices
-```
+```py
 from tensorflow.python.client import device_lib
 device_lib.list_local_devices()
 ```
 
 ### sample
-```
+```py
 import tensorflow as tf
 # Creates a graph.
 a = tf.constant([1.0, 2.0, 3.0, 4.0, 5.0, 6.0], shape=[2, 3], name='a')

@@ -28,12 +28,12 @@ bin\startup.bat
 
 ## SSL
 * http://tomcat.apache.org/tomcat-9.0-doc/ssl-howto.html
-```
+```bash
 keytool -genkey -alias tomcat -keyalg RSA -keystore ~/.ssh/okdevtv.keystore
 ```
 
 * conf/server.xml
-```
+```xml
 <Connector
            protocol="org.apache.coyote.http11.Http11NioProtocol"
            port="8443" maxThreads="200"

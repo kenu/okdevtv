@@ -2,7 +2,7 @@
 
 * https://folium.readthedocs.io/en/latest/
 * `pip install folium`
-```
+```py
 import folium
 
 map_osm = folium.Map(location=[45.5236, -122.6750])
@@ -20,7 +20,7 @@ map_1
 ```
 
 ## cluster
-```
+```py
 map = folium.Map(location=[51.8860942,0.8336077], zoom_start=10, control_scale=True)
 marker_cluster = folium.MarkerCluster("Public cluster").add_to(map)
 folium.Marker([51.8860942,0.8336077], popup='popup').add_to(marker_cluster)
@@ -28,6 +28,6 @@ folium.Marker([51.8530942,0.8235077], popup='popup').add_to(marker_cluster)
 folium.Marker([51.8641942,0.8438077], popup='popup').add_to(marker_cluster)
 ```
 
-## ref: 
+## ref:
 * 지리적 정보를 시각화할 때 괜찮은 Python 지도 모듈 Folium
   * http://pinkwink.kr/971

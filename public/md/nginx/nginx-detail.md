@@ -4,9 +4,9 @@
 
 * CentOS는 `yum install nginx` 전에 `yum install epel-release` 필요
 * CentOS 6.x에서 epel-release는 1.0.x 버전의 구형 nginx 설치됨
-* CentOS 7.x에서 service는 systemctl로 바뀜  
+* CentOS 7.x에서 service는 systemctl로 바뀜
 
-```
+```sh
 ### CentOS 7.x
 [root@elk1 local]# service nginx start
 Redirecting to /bin/systemctl start  nginx.service

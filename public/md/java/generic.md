@@ -9,11 +9,11 @@
  * @param <T> the type of the value being boxed
  */
 public class Box<T> {
-    // T stands for "Type"
-    private T t;
+  // T stands for "Type"
+  private T t;
 
-    public void set(T t) { this.t = t; }
-    public T get() { return t; }
+  public void set(T t) { this.t = t; }
+  public T get() { return t; }
 }
 ```
 
@@ -32,22 +32,22 @@ S,U,V etc. - 2nd, 3rd, 4th types
 
 ```java
 public interface Pair<K, V> {
-    public K getKey();
-    public V getValue();
+  public K getKey();
+  public V getValue();
 }
 
 public class OrderedPair<K, V> implements Pair<K, V> {
 
-    private K key;
-    private V value;
+  private K key;
+  private V value;
 
-    public OrderedPair(K key, V value) {
-	this.key = key;
-	this.value = value;
-    }
+  public OrderedPair(K key, V value) {
+    this.key = key;
+    this.value = value;
+  }
 
-    public K getKey()	{ return key; }
-    public V getValue() { return value; }
+  public K getKey()	{ return key; }
+  public V getValue() { return value; }
 }
 ```
 
@@ -59,6 +59,7 @@ Foo foo = new Foo();
 Foo newFoo = my.doSomething(foo);
 Foo newFoo = (Foo) my.doSomething(foo); // Object typecasting
 ```
+
 * Two pros:
   * no need of casting (the compiler hides this from you)
   * compile time safety that works.

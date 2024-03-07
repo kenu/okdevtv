@@ -32,7 +32,7 @@ host    all             all             127.0.0.1/32            md5
 * `sudo su - postgres`
 * `psql`
   * Create user, database
-```
+```sql
 create user devuser nosuperuser;
 
 alter user devuser with encrypted password 'devpass';

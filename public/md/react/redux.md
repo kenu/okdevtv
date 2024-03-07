@@ -8,15 +8,15 @@
 
 ```js
 export const exampleReducer = (state: State, action: Action) => {
-    switch (action.type) {
-        case 'SET_COUNT':
-            return {
-                ...state,
-                count: action.payload
-            };
-        default:
-            return state;
-    }
+  switch (action.type) {
+    case 'SET_COUNT':
+      return {
+        ...state,
+        count: action.payload
+      };
+    default:
+      return state;
+  }
 };
 ```
 

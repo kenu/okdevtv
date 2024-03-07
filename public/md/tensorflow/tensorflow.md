@@ -11,7 +11,7 @@
 * mac
   * virtualenv 사용
 
-```
+```sh
 sudo pip install --upgrade virtualenv
 virtualenv --system-site-packages ~/tensorflow
 source ~/tensorflow/bin/activate
@@ -19,7 +19,7 @@ TF_BINARY_URL=https://storage.googleapis.com/tensorflow/mac/cpu/tensorflow-0.12.
 pip install --upgrade $TF_BINARY_URL
 ```
   * exit virtualenv mode
-```
+```sh
 deactivate
 ```
 
@@ -28,7 +28,7 @@ deactivate
   * https://www.microsoft.com/ko-KR/download/details.aspx?id=53587
     * Microsoft Visual C++ 2015 재배포 가능 패키지(x86) 14.0.23504 필요
 
-```
+```sh
 pip install --upgrade virtualenv
 virtualenv --system-site-packages -p python.exe tensorflow
 tensorflow\Scripts\activate
@@ -44,7 +44,7 @@ deactivate
 
 ## install v1.0.0
 * warning: most samples are not updated.
-```
+```sh
 sudo pip install --upgrade virtualenv
 virtualenv --system-site-packages ~/tensorflow
 source ~/tensorflow/bin/activate
@@ -54,7 +54,7 @@ deactivate
 
 
 ## first example
-```
+```sh
 import tensorflow as tf
 import numpy as np
 
@@ -191,7 +191,7 @@ for step in range(201):
 * type : data type of tensor
 * mlp : MultiLayer Perceptron
 
-```
+```py
 import numpy as np
 tensor_1d = np.array([1.3, 1, 4.0, 23.99])
 
@@ -209,7 +209,7 @@ import tensorflow as tf
 tf_tensor = tf.convert_to_tensor(tensor_1d, dtype=tf.float64)
 ```
 
-```
+```py
 tensor_2d = np.array([(1,2,3,4), (5,6,7,8), (9,10,11,12), (13,14,15,16)])
 print tensor_2d
 
@@ -280,7 +280,7 @@ tensorboard --logdir=/temp/tensorflowlogs
   * by nicki https://www.reddit.com/r/MachineLearning/comments/4nk45n/has_anyone_used_a_mac_gpu_with_tensorflow/
 * CUDA needed
 * device log
-```
+```py
 import tensorflow as tf
 # Creates a graph.
 a = tf.constant([1.0, 2.0, 3.0, 4.0, 5.0, 6.0], shape=[2, 3], name='a')
@@ -312,7 +312,7 @@ lspci | grep -i vga
 
 * set gpu
 
-```
+```py
 import tensorflow as tf
 # Creates a graph.
 with tf.device('/gpu:0'):

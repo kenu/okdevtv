@@ -8,7 +8,7 @@
   * Data Visualization & Collaboration
 
 ## Start, Stop
-```
+```sh
 bin/zeppelin-daemon.sh start
 bin/zeppelin-daemon.sh stop
 ```

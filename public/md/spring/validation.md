@@ -94,7 +94,7 @@ public String checkPersonInfo(@Valid PersonForm personForm, BindingResult bindin
 * `@Past`, `@PastOrPresent`: date value
 * `@Future`, `@FutureOrPresent`
 
-```
+```java
 List<@NotBlank String> preferences;
 ```
 

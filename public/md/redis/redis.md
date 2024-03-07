@@ -40,8 +40,8 @@ Error ReplyError: Ready check failed: DENIED Redis is running in protected mode 
 ## node.js for redis
 * https://github.com/NodeRedis/node_redis
 
-```
-var redis = require("redis"),
+```js
+const redis = require("redis"),
     client = redis.createClient({host:'127.0.0.1'});
 
 // if you'd like to select database 3, instead of 0 (default), call
@@ -55,11 +55,11 @@ client.set("string key", "string val", redis.print);
 client.hset("hash key", "hashtest 1", "some value", redis.print);
 client.hset(["hash key", "hashtest 2", "some other value"], redis.print);
 client.hkeys("hash key", function (err, replies) {
-    console.log(replies.length + " replies:");
-    replies.forEach(function (reply, i) {
-        console.log("    " + i + ": " + reply);
-    });
-    client.quit();
+  console.log(replies.length + " replies:");
+  replies.forEach(function (reply, i) {
+    console.log("    " + i + ": " + reply);
+  });
+  client.quit();
 });
 ```
 

@@ -64,7 +64,7 @@ npx prisma migrate dev --name init
 
 ## Run
 
-```
+```js
 const { PrismaClient } = require("@prisma/client");
 
 const prisma = new PrismaClient();

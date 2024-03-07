@@ -7,13 +7,13 @@
 
 ## Usage
 * basic
-```
+```sh
 cwebp filename.png -o filename.webp
 cwebp -q 80 filename.png -o filename.webp
 ```
 
 * resize
-```
+```sh
 cwebp -q 80 -resize 440 276 filename.png -o filename.webp
 ```
 
@@ -28,7 +28,7 @@ cwebp -q 80 -resize 440 276 filename.png -o filename.webp
 ```
 
 ## mac quick look plugin
-```
+```sh
 brew cask install webpquicklook
 ```
 

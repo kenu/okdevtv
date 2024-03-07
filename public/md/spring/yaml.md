@@ -47,7 +47,7 @@ my:
 
 ```yaml
 my:
-  server: [dev.example.com, another.example.com]
+  servers: [dev.example.com, another.example.com]
 ```
 
 ### 주석

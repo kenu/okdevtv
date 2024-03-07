@@ -7,7 +7,7 @@
 
 <a href="/md/map/sample.html"><img src="/md/map/images/map.webp"></a>
 
-```
+```js
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
 integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
 crossorigin=""/>
@@ -17,7 +17,7 @@ crossorigin=""></script>
 
 <div id="mapid" style="width: 600px; height: 400px;"></div>
 <script>
-	var mymap = L.map('mapid').setView([51.505, -0.09], 13);
+	const mymap = L.map('mapid').setView([51.505, -0.09], 13);
 
 	L.marker([51.5, -0.09]).addTo(mymap)
 		.bindPopup("<b>Hello world!</b><br />I am a popup.").openPopup();
@@ -35,7 +35,7 @@ crossorigin=""></script>
 	]).addTo(mymap).bindPopup("I am a polygon.");
 
 
-	var popup = L.popup();
+	const popup = L.popup();
 
 	function onMapClick(e) {
 		popup

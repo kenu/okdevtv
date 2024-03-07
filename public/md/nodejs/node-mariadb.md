@@ -38,9 +38,9 @@ CREATE TABLE user (
 
 * Connection
 
-```
-var mysql      = require('mysql');
-var connection = mysql.createConnection({
+```js
+const mysql      = require('mysql');
+const connection = mysql.createConnection({
   host     : 'localhost',
   user     : 'devuser',
   password : 'okpassokpass',
@@ -60,12 +60,12 @@ connection.end();
 
 * Create (insert)
 
-```
+```js
 connection.connect();
 
-var post  = {name : 'kenu', email: 'kenu.heo@gmail.com', passwd: 'okpassokpass'};
-var query = connection.query('INSERT INTO user SET ?', post, function(err, result) {
-    console.log(result);
+const post  = {name : 'kenu', email: 'kenu.heo@gmail.com', passwd: 'okpassokpass'};
+const query = connection.query('INSERT INTO user SET ?', post, function(err, result) {
+  console.log(result);
 });
 connection.end();
 
@@ -73,7 +73,7 @@ console.log(query.sql);
 ```
 * Retrieve (select)
 
-```
+```js
 connection.connect();
 
 connection.query('SELECT * FROM user', function(err, rows, fields) {
@@ -87,10 +87,10 @@ connection.end();
 
 * Update
 
-```
+```js
 connection.connect();
 
-var query = connection.query(
+const query = connection.query(
   'UPDATE user SET name = ? WHERE id = ?',
   ['kenu.heo', 1 ], function(err, result) {
   console.log(result);
@@ -100,8 +100,8 @@ connection.end();
 
 * Delete
 
-```
-var query = connection.query(
+```js
+const query = connection.query(
   'DELETE FROM user WHERE id = ?',
   [ 1 ], function(err, result) {
   console.log(result);

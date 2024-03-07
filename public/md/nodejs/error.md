@@ -1,6 +1,6 @@
 # Express Error Handling
 
-```
+```js
 app.use(function(err, req, res, next) {
   // Do logging and user-friendly error message display
   console.error(err.stack);

@@ -37,7 +37,7 @@ Creating Tests/HelloTests/HelloTests.swift
 * loop index
   * enumerate()
 
-```
+```swift
 var someStrs = [String]()
 
 someStrs.append("Apple")
@@ -51,7 +51,7 @@ for (index, item) in someStrs.enumerated() {
 
 * Dictionary
 
-```
+```swift
 var someDict:[Int:String] = [1:"One", 2:"Two", 3:"Three"]
 
 for (key, value) in someDict {
@@ -65,7 +65,7 @@ for (idx, value) in someDict.enumerated() {
 
 * External Parameter Name
 
-```
+```swift
 func pow(firstArg a: Int, secondArg b: Int) -> Int {
     var res = a
     for _ in 1..<b {
@@ -79,7 +79,7 @@ pow(firstArg:5, secondArg:3)
 
 * Variadic Parameters
 
-```
+```swift
 func vari<N>(members: N...) {
     for i in members {
         print(i)
@@ -91,7 +91,7 @@ vari(members: "a", "bb")
 
 * inout Parameters
 
-```
+```swift
 func swap(a1: inout Int, b1: inout Int) {
     let t = a1
     a1 = b1
@@ -105,7 +105,7 @@ print("Swapped values are \(no), \(co)")
 
 * Function Types
 
-```
+```swift
 func sum(a: Int, b: Int) -> Int {
     return a + b
 }
@@ -120,7 +120,7 @@ another(addition: sum, a: 10, b: 20)
 
 * Nested function
 
-```
+```swift
 func calcDecrement(forDecrement total: Int) -> () -> Int {
     var overallDecrement = 0
     func decrementer() -> Int {
@@ -135,7 +135,7 @@ print(decrem())
 
 * Closures
 
-```
+```swift
 let studname = { print("Welcome to Swift Closures") }
 studname()
 

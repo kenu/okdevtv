@@ -66,13 +66,13 @@ import javax.persistence.Id;
 
 @Entity // This tells Hibernate to make a table out of this class
 public class User {
-    @Id
-    @GeneratedValue(strategy=GenerationType.AUTO)
-    private Integer id;
+  @Id
+  @GeneratedValue(strategy=GenerationType.AUTO)
+  private Integer id;
 
-    private String name;
+  private String name;
 
-    private String email;
+  private String email;
 // setters and getters
 }
 ```
@@ -94,17 +94,17 @@ public interface UserRepository extends CrudRepository<User, Integer> {
 ```java
 @Bean
 public CommandLineRunner demo() {
-    return (args) -> {
-        User user = new User();
-        user.setName("Kenu");
-        user.setEmail("kenu.heo@gmail.com");
-        userRepository.save(user);
+  return (args) -> {
+    User user = new User();
+    user.setName("Kenu");
+    user.setEmail("kenu.heo@gmail.com");
+    userRepository.save(user);
 
-        Iterable<User> all = userRepository.findAll();
-        for (User u : all) {
-            log.info(u.toString());
-        }
+    Iterable<User> all = userRepository.findAll();
+    for (User u : all) {
+      log.info(u.toString());
     }
+  }
 }
 ```
 

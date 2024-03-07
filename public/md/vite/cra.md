@@ -45,8 +45,8 @@ export default defineConfig({
 9. index.html 위치 변경, `%PUBLIC_URL%` 삭제, `script` 추가
 
 ```html
-    <div id="root"></div>
-    <script type="module" src="/src/index.jsx"></script>
+  <div id="root"></div>
+  <script type="module" src="/src/index.jsx"></script>
 ```
 10. src/index.js 를 jsx 로 확장자 변환
 11. react, react-dom, @types/react 버전 일치
@@ -70,7 +70,7 @@ export default defineConfig({
   * `yarn add vite-plugin-babel-macros -D`
   * vite.config.ts 추가
 
-```
+```js
 import macrosPlugin from "vite-plugin-babel-macros";
 ...
   plugins: [react(), macrosPlugin()],
@@ -79,7 +79,7 @@ import macrosPlugin from "vite-plugin-babel-macros";
 16. outDir to build
 * vite.config.ts
 
-```
+```json
   build: {
     outDir: "build",
   }

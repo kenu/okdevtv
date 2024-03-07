@@ -23,8 +23,8 @@
 * `$('img').hide();`
 
 ### util
-    * $.ajax()
-    * $.map()
+* $.ajax()
+* $.map()
 
 ## ref
 * w3schools jquery

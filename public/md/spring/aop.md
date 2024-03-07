@@ -42,32 +42,32 @@
 @Aspect
 @Component
 public class LoggingAspect {
-    private long startTime;
+  private long startTime;
 
-    @Before("execution(* com.example..check*(..))")
-    public void onBeforeHandler(JoinPoint joinPoint) {
-        startTime = System.nanoTime();
-        System.out.println("start");
-    }
+  @Before("execution(* com.example..check*(..))")
+  public void onBeforeHandler(JoinPoint joinPoint) {
+    startTime = System.nanoTime();
+    System.out.println("start");
+  }
 
-    @After("execution(* com.example..check*(..))")
-    public void onAfterHandler(JoinPoint joinPoint) {
-        long endTime = System.nanoTime();
-        System.out.println("elapsed time: " + (endTime - startTime));
-    }
+  @After("execution(* com.example..check*(..))")
+  public void onAfterHandler(JoinPoint joinPoint) {
+    long endTime = System.nanoTime();
+    System.out.println("elapsed time: " + (endTime - startTime));
+  }
 
-    @Around("execution(* check*()) && within(com.example..*)")
-    public String around(ProceedingJoinPoint pjp) throws Throwable {
-        String returnValue = null;
-        try {
-            returnValue = (String) pjp.proceed();
-        } catch(Exception e) {
-            // log or re-throw the exception
-        }
-        // modify the return value
-        returnValue = "**" + returnValue + "**";
-        return returnValue;
+  @Around("execution(* check*()) && within(com.example..*)")
+  public String around(ProceedingJoinPoint pjp) throws Throwable {
+    String returnValue = null;
+    try {
+      returnValue = (String) pjp.proceed();
+    } catch(Exception e) {
+      // log or re-throw the exception
     }
+    // modify the return value
+    returnValue = "**" + returnValue + "**";
+    return returnValue;
+  }
 }
 ```
 
@@ -75,17 +75,17 @@ public class LoggingAspect {
 @RestController
 public class HotelController {
 
-    @GetMapping("/in")
-    @ResponseBody
-    public String checkIn() {
-        return "check-in";
-    }
+  @GetMapping("/in")
+  @ResponseBody
+  public String checkIn() {
+    return "check-in";
+  }
 
-    @GetMapping("/out")
-    @ResponseBody
-    public String checkOut() {
-        return "check-in";
-    }
+  @GetMapping("/out")
+  @ResponseBody
+  public String checkOut() {
+    return "check-in";
+  }
 }
 ```
 
@@ -93,27 +93,27 @@ public class HotelController {
 * pom.xml
 
 ```xml
-    <dependency>
-      <groupId>org.springframework</groupId>
-      <artifactId>spring-context</artifactId>
-      <version>3.2.18.RELEASE</version>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework</groupId>
-      <artifactId>spring-aop</artifactId>
-      <version>3.2.18.RELEASE</version>
-    </dependency>
+  <dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-context</artifactId>
+    <version>3.2.18.RELEASE</version>
+  </dependency>
+  <dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-aop</artifactId>
+    <version>3.2.18.RELEASE</version>
+  </dependency>
 
-    <dependency>
-      <groupId>org.aspectj</groupId>
-      <artifactId>aspectjrt</artifactId>
-      <version>1.9.5</version>
-    </dependency>
-    <dependency>
-      <groupId>org.aspectj</groupId>
-      <artifactId>aspectjweaver</artifactId>
-      <version>1.9.5</version>
-    </dependency>
+  <dependency>
+    <groupId>org.aspectj</groupId>
+    <artifactId>aspectjrt</artifactId>
+    <version>1.9.5</version>
+  </dependency>
+  <dependency>
+    <groupId>org.aspectj</groupId>
+    <artifactId>aspectjweaver</artifactId>
+    <version>1.9.5</version>
+  </dependency>
 ```
 
 * Beans.xml
@@ -198,12 +198,12 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class MainApp {
    public static void main(String[] args) {
-      ApplicationContext context = new ClassPathXmlApplicationContext("Beans.xml");
+    ApplicationContext context = new ClassPathXmlApplicationContext("Beans.xml");
 
-      Student student = (Student) context.getBean("student");
-      student.getName();
-      student.getAge();
-      student.printThrowException();
+    Student student = (Student) context.getBean("student");
+    student.getName();
+    student.getAge();
+    student.printThrowException();
    }
 }
 ```
@@ -252,10 +252,10 @@ public class Logging {
 ```xml
 <aop:config>
   <aop:aspect id="log" ref="logging">
-    <aop:pointcut id="selectAll"
-      expression="execution(* com.okdevtv.spring.aop.Student.getName(..))" />
-    <aop:before pointcut-ref="selectAll" method="beforeAdvice" />
-    <aop:after pointcut-ref="selectAll" method="afterAdvice" />
+  <aop:pointcut id="selectAll"
+    expression="execution(* com.okdevtv.spring.aop.Student.getName(..))" />
+  <aop:before pointcut-ref="selectAll" method="beforeAdvice" />
+  <aop:after pointcut-ref="selectAll" method="afterAdvice" />
   </aop:aspect>
 </aop:config>
 ```

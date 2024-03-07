@@ -9,30 +9,30 @@
 @Entity
 ```
 
-```
+```java
 @Override
 void mySuperMethod() { ... }
 ```
 
-```
+```java
 @Author(
-   name = "Benjamin Franklin",
-   date = "3/27/2003"
+  name = "Benjamin Franklin",
+  date = "3/27/2003"
 )
 class MyClass() { ... }
 ```
 
-```
+```java
 @SuppressWarnings(value = "unchecked")
 void myMethod() { ... }
 ```
 
-```
+```java
 @SuppressWarnings("unchecked")
 void myMethod() { ... }
 ```
 
-```
+```java
 @Author(name = "Jane Doe")
 @EBook
 class MyClass { ... }
@@ -44,29 +44,27 @@ class MyClass { ... }
 
 * Java SE 8 Annotations
 
-```
+```java
 @Author(name = "Jane Doe")
 @Author(name = "John Smith")
 class MyClass { ... }
 ```
 * Type Annotations
   * Class instance creation expression:
-```
+```java
 new @Interned MyObject();
 ```
   * Type cast:
-```
+```java
 myString = (@NonNull String) str;
 ```
   * implements clause:
-```
-class UnmodifiableList<T> implements
-    @Readonly List<@Readonly T> { ... }
+```java
+class UnmodifiableList<T> implements @Readonly List<@Readonly T> { ... }
 ```
   * Thrown exception declaration:
-```
-void monitorTemperature() throws
-    @Critical TemperatureException { ... }
+```java
+void monitorTemperature() throws @Critical TemperatureException { ... }
 ```
 
 ## Custom annotation
@@ -84,7 +82,7 @@ import java.lang.annotation.Target;
 @Target(ElementType.METHOD)
 public @interface Name {
 
-    public String myName();
+  public String myName();
 
 }
 ```
@@ -96,10 +94,10 @@ import okdevtv.Name;
 
 public class Z {
 
-    @Name(myName = "Kenu")
-    public void something() {
-        System.out.println("Do something");
-    }
+  @Name(myName = "Kenu")
+  public void something() {
+    System.out.println("Do something");
+  }
 }
 ```
 
@@ -113,23 +111,23 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 public class NameTest {
-    public static void main(String[] args) throws NoSuchMethodException, SecurityException {
-        final Method method = Z.class.getMethod("something");
-        if (method.isAnnotationPresent(Name.class)) {
-            final Annotation annotation = method.getAnnotation(Name.class);
-            final Name name = (Name) annotation;
-            System.out.println(name.myName()); // Prints Kenu
-        }
-        Z z = new Z();
-        try {
-            method.invoke(z);
-        } catch (IllegalAccessException e) {
-            e.printStackTrace();
-        } catch (InvocationTargetException e) {
-            e.printStackTrace();
-        }
-        z.something();
+  public static void main(String[] args) throws NoSuchMethodException, SecurityException {
+    final Method method = Z.class.getMethod("something");
+    if (method.isAnnotationPresent(Name.class)) {
+      final Annotation annotation = method.getAnnotation(Name.class);
+      final Name name = (Name) annotation;
+      System.out.println(name.myName()); // Prints Kenu
     }
+    Z z = new Z();
+    try {
+      method.invoke(z);
+    } catch (IllegalAccessException e) {
+      e.printStackTrace();
+    } catch (InvocationTargetException e) {
+      e.printStackTrace();
+    }
+    z.something();
+  }
 }
 ```
 

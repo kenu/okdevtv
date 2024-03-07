@@ -10,7 +10,7 @@ pip install Theano
 * numpy
 * Adding two Scalars
 
-```
+```py
 import numpy
 import theano.tensor as T
 from theano import function
@@ -41,20 +41,20 @@ True
 
 ```
 
-```
+```py
 from theano import pp
 print(pp(z))
 (x + y)
 ```
 
-```
+```py
 numpy.allclose(z.eval({x : 16.3, y : 12.1}), 28.4)
 True
 ```
 
 * Adding two Matrices
 
-```
+```py
 x = T.dmatrix('x')
 y = T.dmatrix('y')
 z = x + y
@@ -68,7 +68,7 @@ array([[ 11.,  22.],
 
 
 ## Tutorial
-```
+```py
 from theano import *
 import theano.tensor as T
 ```
@@ -77,7 +77,7 @@ import theano.tensor as T
 * Computing Gradients
   * http://deeplearning.net/software/theano/tutorial/gradients.html#computing-gradients
 
-```
+```py
 import numpy
 import theano
 import theano.tensor as T
@@ -101,7 +101,7 @@ pp(f.maker.fgraph.outputs[0])
 
   * the gradient of the logistic funtions
 
-```
+```py
 x = T.dmatrix('x')
 s = T.sum(1 / (1 + T.exp(-x)))
 gs = T.grad(s, x)
@@ -113,8 +113,8 @@ array([[ 0.25      ,  0.19661193],
 
 * Computing the Jacobian
   * http://deeplearning.net/software/theano/tutorial/gradients.html#computing-the-jacobian
-  
-```
+
+```py
 import theano
 import theano.tensor as T
 x = T.dvector('x')
@@ -129,8 +129,8 @@ array([[ 8.,  0.],
 
 * Computing the Hessian
   * http://deeplearning.net/software/theano/tutorial/gradients.html#computing-the-hessian
-  
-```
+
+```py
 x = T.dvector('x')
 y = x ** 2
 cost = y.sum()

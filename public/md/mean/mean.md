@@ -85,13 +85,13 @@ iptables -t nat -A PREROUTING -p tcp -d 1xx.2xx.1xx.xx --dport 80 -j REDIRECT --
 2. 설정 > 플랫폼 추가 > 웹사이트
 3. 사이트 URL
 
-mean/config/env/development.js
+* `mean/config/env/development.js`
 ```js
 facebook: {
-        clientID: '1417763...476376',
-        clientSecret: 'a535v2.......adf68c53f41ae6c73b',
-        callbackURL: 'https://okdevtv.com/auth/facebook/callback'
-    },
+  clientID: '1417763...476376',
+  clientSecret: 'a535v2.......adf68c53f41ae6c73b',
+  callbackURL: 'https://okdevtv.com/auth/facebook/callback'
+},
 ```
 
 ### 깃허브

@@ -6,14 +6,14 @@
 ## Simple Start
 * app.groovy
 
-```
+```groovy
 @RestController
 class ThisWillActuallyRun {
 
-    @RequestMapping("/")
-    String home() {
-        "Hello World!"
-    }
+  @RequestMapping("/")
+  String home() {
+    "Hello World!"
+  }
 
 }
 ```

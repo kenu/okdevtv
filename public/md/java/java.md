@@ -80,11 +80,11 @@
 ## 실행 경로
 ```java
 public class CheckDirectory {
-    public static void main(String args[]) {
-        Path currentPath = Paths.get("");
-        String path = currentPath.toAbsolutePath().toString();
-        System.out.println("현재 작업 경로: " + path);
-    }
+  public static void main(String args[]) {
+    Path currentPath = Paths.get("");
+    String path = currentPath.toAbsolutePath().toString();
+    System.out.println("현재 작업 경로: " + path);
+  }
 }
 ```
 * from: https://7942yongdae.tistory.com/121

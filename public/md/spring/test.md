@@ -14,7 +14,7 @@ dependencies {
 
 * pom.xml
 
-```
+```xml
 <dependency>
   <groupId>org.springframework.boot</groupId>
   <artifactId>spring-boot-starter-test</artifactId>

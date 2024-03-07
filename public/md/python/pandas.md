@@ -6,24 +6,24 @@
 
 ## to number
 * dash to number
-```
+```py
 df.apply(pd.to_numeric, errors='coerce')
 ```
 * fill N/A
-```
+```py
 df.fillna(0.0)
 ```
 
 ## column edit
 * column names
 
-```
+```py
 df.columns = ['prdcode', 'category', 'prdname', 'brand']
 ```
 
 * drop
 
-```
+```py
 # drop row 0-2
 df.drop(df.index[:3], inplace=True) # row
 
@@ -34,19 +34,19 @@ df.drop('column_name', axis=1, inplace=True)
 
 * reorder
 
-```
+```py
 df2 = df[['prdcode', 'category', 'prdname', 'brand']]
 df2.head()
 ```
 
 ## column type change
 
-```
+```py
 df[['ZIP_NO']] = df[['ZIP_NO']].astype(str)
 ```
 
 ## read sheet
-```
+```py
 xls = pd.ExcelFile('docs/20170525.xlsx')
 df1 = xls.parse('Sheet 1')
 df2 = xls.parse('Sheet 2')

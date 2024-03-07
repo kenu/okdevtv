@@ -23,8 +23,8 @@ public class DevDatasourceConfig
 
 ```xml
 <beans profile="dev">
-    <bean id="devDatasourceConfig"
-      class="com.okdevtv.profiles.DevDatasourceConfig" />
+  <bean id="devDatasourceConfig"
+    class="com.okdevtv.profiles.DevDatasourceConfig" />
 </beans>
 ```
 
@@ -32,13 +32,12 @@ public class DevDatasourceConfig
 
 ```java
 @Configuration
-public class MyWebApplicationInitializer
-  implements WebApplicationInitializer {
+public class MyWebApplicationInitializer implements WebApplicationInitializer {
 
-    @Override
-    public void onStartup(ServletContext servletContext) throws ServletException {
-        servletContext.setInitParameter("spring.profiles.active", "dev");
-    }
+  @Override
+  public void onStartup(ServletContext servletContext) throws ServletException {
+    servletContext.setInitParameter("spring.profiles.active", "dev");
+  }
 }
 ```
 

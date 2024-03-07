@@ -25,36 +25,36 @@
 
 ```xml
 <web-app id = "WebApp_ID" version = "2.4"
-   xmlns = "http://java.sun.com/xml/ns/j2ee"
-   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
-   xsi:schemaLocation = "http://java.sun.com/xml/ns/j2ee
-   http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+  xmlns = "http://java.sun.com/xml/ns/j2ee"
+  xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation = "http://java.sun.com/xml/ns/j2ee
+  http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
 
-   <display-name>Spring MVC Application</display-name>
+  <display-name>Spring MVC Application</display-name>
 
-   <servlet>
-      <servlet-name>HelloWeb</servlet-name>
-      <servlet-class>
-         org.springframework.web.servlet.DispatcherServlet
-      </servlet-class>
-      <load-on-startup>1</load-on-startup>
-   </servlet>
+  <servlet>
+    <servlet-name>HelloWeb</servlet-name>
+    <servlet-class>
+      org.springframework.web.servlet.DispatcherServlet
+    </servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
 
-   <servlet-mapping>
-      <servlet-name>HelloWeb</servlet-name>
-      <url-pattern>*.do</url-pattern>
-   </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>HelloWeb</servlet-name>
+    <url-pattern>*.do</url-pattern>
+  </servlet-mapping>
 
-   <context-param>
-      <param-name>contextConfigLocation</param-name>
-      <param-value>/WEB-INF/HelloWeb-servlet.xml</param-value>
-   </context-param>
+  <context-param>
+    <param-name>contextConfigLocation</param-name>
+    <param-value>/WEB-INF/HelloWeb-servlet.xml</param-value>
+  </context-param>
 
-   <listener>
-      <listener-class>
-         org.springframework.web.context.ContextLoaderListener
-      </listener-class>
-   </listener>
+  <listener>
+    <listener-class>
+      org.springframework.web.context.ContextLoaderListener
+    </listener-class>
+  </listener>
 </web-app>
 ```
 
@@ -62,19 +62,19 @@
 
 ```xml
 <beans xmlns = "http://www.springframework.org/schema/beans"
-   xmlns:context = "http://www.springframework.org/schema/context"
-   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
-   xsi:schemaLocation = "http://www.springframework.org/schema/beans
-   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
-   http://www.springframework.org/schema/context
-   http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+  xmlns:context = "http://www.springframework.org/schema/context"
+  xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation = "http://www.springframework.org/schema/beans
+  http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+  http://www.springframework.org/schema/context
+  http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 
-   <context:component-scan base-package = "com.okdevtv.spring" />
+  <context:component-scan base-package = "com.okdevtv.spring" />
 
-   <bean class = "org.springframework.web.servlet.view.InternalResourceViewResolver">
-      <property name = "prefix" value = "/WEB-INF/jsp/" />
-      <property name = "suffix" value = ".jsp" />
-   </bean>
+  <bean class = "org.springframework.web.servlet.view.InternalResourceViewResolver">
+    <property name = "prefix" value = "/WEB-INF/jsp/" />
+    <property name = "suffix" value = ".jsp" />
+  </bean>
 
 </beans>
 ```
@@ -87,11 +87,11 @@ package com.okdevtv.spring;
 @Controller
 @RequestMapping("/hello")
 public class HelloController {
-   @RequestMapping(method = RequestMethod.GET)
-   public String printHello(ModelMap model) {
-      model.addAttribute("message", "Hello Spring MVC Framework!");
-      return "hello";
-   }
+  @RequestMapping(method = RequestMethod.GET)
+  public String printHello(ModelMap model) {
+    model.addAttribute("message", "Hello Spring MVC Framework!");
+    return "hello";
+  }
 }
 ```
 
@@ -99,13 +99,13 @@ public class HelloController {
 
 ```html
 <html>
-   <head>
-      <title>Hello Spring MVC</title>
-   </head>
+  <head>
+    <title>Hello Spring MVC</title>
+  </head>
 
-   <body>
-      <h2>${message}</h2>
-   </body>
+  <body>
+    <h2>${message}</h2>
+  </body>
 </html>
 ```
 

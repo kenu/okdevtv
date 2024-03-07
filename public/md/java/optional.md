@@ -23,19 +23,20 @@
 - toString()
 
 ## 예제
+
 ```java
 public class OptionalTest {
-public static void main(String[] args) {
-  Optional<String> optional = Optional.of("Hello");
-  System.out.println(optional.get());
-  System.out.println(optional.orElse("World"));
-  System.out.println(optional.orElseGet(() -> "World"));
-  System.out.println(optional.orElseThrow(() -> new RuntimeException("No value present")));
-  System.out.println(optional.map(s -> s.toUpperCase()).orElse("World"));
-  System.out.println(optional.flatMap(s -> Optional.of(s.toUpperCase())).orElse("World"));
-  System.out.println(optional.equals(optional));
-  System.out.println(optional.equals(Optional.of("Hello")));
-}
+  public static void main(String[] args) {
+    Optional<String> optional = Optional.of("Hello");
+    System.out.println(optional.get());
+    System.out.println(optional.orElse("World"));
+    System.out.println(optional.orElseGet(() -> "World"));
+    System.out.println(optional.orElseThrow(() -> new RuntimeException("No value present")));
+    System.out.println(optional.map(s -> s.toUpperCase()).orElse("World"));
+    System.out.println(optional.flatMap(s -> Optional.of(s.toUpperCase())).orElse("World"));
+    System.out.println(optional.equals(optional));
+    System.out.println(optional.equals(Optional.of("Hello")));
+  }
 }
 ```
 

@@ -15,7 +15,7 @@
 
 ## 00 init
 
-```
+```sh
 npm i -g jest
 ```
 

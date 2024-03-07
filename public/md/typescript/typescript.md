@@ -6,7 +6,7 @@
 
 ```typescript
 function greeter(person: string) {
-    return "Hello, " + person;
+  return "Hello, " + person;
 }
 
 let user = "Kenu";
@@ -38,11 +38,11 @@ console.log(greeter(user));
 * ref: http://www.nextree.co.kr/p6960/
 
 * 풀어서 얘기하자면(#그래도 #어려움)
-    * 어떤 변화에 의해 클래스를 변경해야 하는 이유는 오직 하나뿐이어야 함
-    * 소프트웨어의 구성요소(컴포넌트, 클래스, 모듈, 함수)는 확장에는 열려있고, 변경에는 닫혀있어야 한다는 원리
-    * 서브 타입은 언제나 기반 타입으로 교체할 수 있어야 한다.
-    * 한 클래스는 자신이 사용하지 않는 인터페이스는 구현하지 말아야 한다는 원리
-    * 실제 사용 관계는 바뀌지 않으며, 추상을 매개로 메시지를 주고 받음으로써 관계를 최대한 느슨하게 만드는 원칙
+  * 어떤 변화에 의해 클래스를 변경해야 하는 이유는 오직 하나뿐이어야 함
+  * 소프트웨어의 구성요소(컴포넌트, 클래스, 모듈, 함수)는 확장에는 열려있고, 변경에는 닫혀있어야 한다는 원리
+  * 서브 타입은 언제나 기반 타입으로 교체할 수 있어야 한다.
+  * 한 클래스는 자신이 사용하지 않는 인터페이스는 구현하지 말아야 한다는 원리
+  * 실제 사용 관계는 바뀌지 않으며, 추상을 매개로 메시지를 주고 받음으로써 관계를 최대한 느슨하게 만드는 원칙
 
 ## Object
 * 객체란 속성과 행동을 포함
@@ -69,13 +69,13 @@ console.log(greeter(user));
 
 ```ts
 class Greeter {
-    greeting: string;
-    constructor(message: string) {
-        this.greeting = message;
-    }
-    greet() {
-        return "Hello, " + this.greeting;
-    }
+  greeting: string;
+  constructor(message: string) {
+    this.greeting = message;
+  }
+  greet() {
+    return "Hello, " + this.greeting;
+  }
 }
 
 let greeter = new Greeter("world");
@@ -102,17 +102,17 @@ let suits = ["hearts", "spades", "clubs", "diamonds"];
 function pickCard(x: {suit: string; card: number; }[]): number;
 function pickCard(x: number): {suit: string; card: number; };
 function pickCard(x): any {
-    // Check to see if we're working with an object/array
-    // if so, they gave us the deck and we'll pick the card
-    if (typeof x == "object") {
-        let pickedCard = Math.floor(Math.random() * x.length);
-        return pickedCard;
-    }
-    // Otherwise just let them pick the card
-    else if (typeof x == "number") {
-        let pickedSuit = Math.floor(x / 13);
-        return { suit: suits[pickedSuit], card: x % 13 };
-    }
+  // Check to see if we're working with an object/array
+  // if so, they gave us the deck and we'll pick the card
+  if (typeof x == "object") {
+    let pickedCard = Math.floor(Math.random() * x.length);
+    return pickedCard;
+  }
+  // Otherwise just let them pick the card
+  else if (typeof x == "number") {
+    let pickedSuit = Math.floor(x / 13);
+    return { suit: suits[pickedSuit], card: x % 13 };
+  }
 }
 ```
 
@@ -123,9 +123,9 @@ function pickCard(x): any {
 
 ```ts
 class Octopus {
-    readonly numberOfLegs: number = 8;
-    constructor(readonly name: string) {
-    }
+  readonly numberOfLegs: number = 8;
+  constructor(readonly name: string) {
+  }
 }
 ```
 
@@ -137,20 +137,20 @@ class Octopus {
 let passcode = "secret passcode";
 
 class Employee {
-    private _fullName: string;
+  private _fullName: string;
 
-    get fullName(): string {
-        return this._fullName;
-    }
+  get fullName(): string {
+    return this._fullName;
+  }
 
-    set fullName(newName: string) {
-        if (passcode && passcode == "secret passcode") {
-            this._fullName = newName;
-        }
-        else {
-            console.log("오류 : employee의 무단 업데이트!");
-        }
+  set fullName(newName: string) {
+    if (passcode && passcode == "secret passcode") {
+      this._fullName = newName;
     }
+    else {
+      console.log("오류 : employee의 무단 업데이트!");
+    }
+  }
 }
 
 let employee = new Employee();
@@ -165,13 +165,13 @@ if (employee.fullName) {
 
 ```ts
 class Grid {
-    static origin = {x: 0, y: 0};
-    calculateDistanceFromOrigin(point: {x: number; y: number;}) {
-        let xDist = (point.x - Grid.origin.x);
-        let yDist = (point.y - Grid.origin.y);
-        return Math.sqrt(xDist * xDist + yDist * yDist) / this.scale;
-    }
-    constructor (public scale: number) { }
+  static origin = {x: 0, y: 0};
+  calculateDistanceFromOrigin(point: {x: number; y: number;}) {
+    let xDist = (point.x - Grid.origin.x);
+    let yDist = (point.y - Grid.origin.y);
+    return Math.sqrt(xDist * xDist + yDist * yDist) / this.scale;
+  }
+  constructor (public scale: number) { }
 }
 ```
 

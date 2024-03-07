@@ -11,7 +11,7 @@ Argument List   Arrow Token   Body
 ```
 
 ## Example
-```
+```java
 public class RunnableTest {
   public static void main(String[] args) {
 

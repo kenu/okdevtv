@@ -2,7 +2,7 @@
 * https://webpack.github.io
 
 ## install
-```
+```sh
 npm install -g webpack
 npm init
 npm install --save-dev webpack
@@ -13,18 +13,18 @@ npm install --save-dev webpack
 * `public/index.html`
 
 ## `index.html`
-```
+```html
 <script src="bundle.js"></script>
 ```
 
 ## Build
 * command line
-```
+```sh
 webpack app/main.js public/bundle.js
 ```
 
 * `webpack.config.js`
-```
+```js
 module.exports = {
 	entry: __dirname + "/app/main.js",
 	output: {
@@ -41,7 +41,7 @@ module.exports = {
 }
 ```
 
-```
+```js
 // webpack은 모듈 번들러
 // 의존성 있는 모듈을 다루고,
 //   그 모듈들을 정적으로 다룹니다.

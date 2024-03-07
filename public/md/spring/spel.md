@@ -41,10 +41,10 @@ String literalString;
 
 @Override
 public void run(ApplicationArguments args) throws Exception {
-    System.out.println(value);
-    System.out.println(greeting);
-    System.out.println(trueOrFalse);
-    System.out.println(literalString);
+  System.out.println(value);
+  System.out.println(greeting);
+  System.out.println(trueOrFalse);
+  System.out.println(literalString);
 }
 ```
 
@@ -54,18 +54,18 @@ public void run(ApplicationArguments args) throws Exception {
 my.value=100
 ```
 
-```
+```java
 @Value("#{'${my.value}' eq '100'}")
 boolean isEqual;
 
 @Override
 public void run(ApplicationArguments args) throws Exception {
-    System.out.println(isEqual);
+  System.out.println(isEqual);
 }
 ```
 
 ## `ExpressionParser`
-```
+```java
 ExpressionParser parser = new SpelExpressionParser();
 Expression expression = parser.parseExpression("1+1");
 Object value = expression.getValue();

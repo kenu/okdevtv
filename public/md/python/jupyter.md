@@ -45,20 +45,20 @@ print('Done')
 import mysql.connector
 
 def query(sql, params):
-    mydb = mysql.connector.connect(
-      host="localhost",
-      user="okdev",
-      passwd="okpass",
-      database="okdevtv"
-    )
+  mydb = mysql.connector.connect(
+    host="localhost",
+    user="okdev",
+    passwd="okpass",
+    database="okdevtv"
+  )
 
-    mycursor = mydb.cursor()
+  mycursor = mydb.cursor()
 
-    mycursor.execute(sql, params)
-    
-    mydb.close()
+  mycursor.execute(sql, params)
 
-    return mycursor.fetchall()
+  mydb.close()
+
+  return mycursor.fetchall()
 ```
 
 ## ref

@@ -1,5 +1,5 @@
 # Python datetime
-```
+```py
 from datetime import datetime, timedelta
 date = datetime.today()
 yesterday = datetime.today() - timedelta(days=1)
@@ -8,6 +8,6 @@ print(date, d2)
 ```
 
 * timestamp
-```
+```py
 date.strftime("%s")
 ```
