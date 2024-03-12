@@ -13,7 +13,7 @@
   * JPA
   * H2
 * React.js, ES6
-  * https://ko.reactjs.org/
+  * https://ko.react.dev/
   * http://es6-features.org/
 * Part 1~5
   * Part 1: 기본 세팅
@@ -39,7 +39,7 @@
   * frontend-gradle-plugin 그래들 플러그인
   * node.js 빌드 지원
   * 운영으로는 비추천
-    * https://github.com/eirslett/frontend-maven-plugin#what-is-this-plugin-meant-to-do
+  * https://github.com/eirslett/frontend-maven-plugin#what-is-this-plugin-meant-to-do
 
 ### React.js
 * `react.js`: UI 개발 자바스크립트 라이브러리
@@ -56,37 +56,37 @@
   "version": "0.1.0",
   "description": "Demo of ReactJS + Spring Data REST",
   "repository": {
-    "type": "git",
-    "url": "git@github.com:spring-guides/tut-react-and-spring-data-rest.git"
+  "type": "git",
+  "url": "git@github.com:spring-guides/tut-react-and-spring-data-rest.git"
   },
   "keywords": [
-    "rest",
-    "hateoas",
-    "spring",
-    "data",
-    "react"
+  "rest",
+  "hateoas",
+  "spring",
+  "data",
+  "react"
   ],
   "author": "Greg L. Turnquist",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/spring-guides/tut-react-and-spring-data-rest/issues"
+  "url": "https://github.com/spring-guides/tut-react-and-spring-data-rest/issues"
   },
   "homepage": "https://github.com/spring-guides/tut-react-and-spring-data-rest",
   "dependencies": {
-    "react": "^16.5.2",
-    "react-dom": "^16.5.2",
-    "rest": "^1.8.0"
+  "react": "^16.5.2",
+  "react-dom": "^16.5.2",
+  "rest": "^1.8.0"
   },
   "scripts": {
-    "watch": "webpack --watch -d --output ./target/classes/static/built/bundle.js"
+  "watch": "webpack --watch -d --output ./target/classes/static/built/bundle.js"
   },
   "devDependencies": {
-    "@babel/core": "^7.1.0",
-    "@babel/preset-env": "^7.1.0",
-    "@babel/preset-react": "^7.0.0",
-    "babel-loader": "^8.0.2",
-    "webpack": "^4.19.1",
-    "webpack-cli": "^3.1.0"
+  "@babel/core": "^7.1.0",
+  "@babel/preset-env": "^7.1.0",
+  "@babel/preset-react": "^7.0.0",
+  "babel-loader": "^8.0.2",
+  "webpack": "^4.19.1",
+  "webpack-cli": "^3.1.0"
   }
 }
 ```
@@ -97,28 +97,28 @@
 var path = require('path');
 
 module.exports = {
-    entry: './src/main/js/app.js',
-    devtool: 'sourcemaps',
-    cache: true,
-    mode: 'development',
-    output: {
-        path: __dirname,
-        filename: './src/main/resources/static/built/bundle.js'
-    },
-    module: {
-        rules: [
-            {
-                test: path.join(__dirname, '.'),
-                exclude: /(node_modules)/,
-                use: [{
-                    loader: 'babel-loader',
-                    options: {
-                        presets: ["@babel/preset-env", "@babel/preset-react"]
-                    }
-                }]
-            }
-        ]
-    }
+  entry: './src/main/js/app.js',
+  devtool: 'sourcemaps',
+  cache: true,
+  mode: 'development',
+  output: {
+    path: __dirname,
+    filename: './src/main/resources/static/built/bundle.js'
+  },
+  module: {
+    rules: [
+      {
+        test: path.join(__dirname, '.'),
+        exclude: /(node_modules)/,
+        use: [{
+          loader: 'babel-loader',
+          options: {
+            presets: ["@babel/preset-env", "@babel/preset-react"]
+          }
+        }]
+      }
+    ]
+  }
 };
 ```
 
@@ -207,45 +207,45 @@ public interface EmployeeRepository extends PagingAndSortingRepository<Employee,
 $ curl "localhost:8080/api/employees?size=2"
 {
   "_links" : {
-    "first" : {
-      "href" : "http://localhost:8080/api/employees?page=0&size=2"
-    },
-    "self" : {
-      "href" : "http://localhost:8080/api/employees"
-    },
-    "next" : {
-      "href" : "http://localhost:8080/api/employees?page=1&size=2"
-    },
-    "last" : {
-      "href" : "http://localhost:8080/api/employees?page=2&size=2"
-    }
+  "first" : {
+    "href" : "http://localhost:8080/api/employees?page=0&size=2"
+  },
+  "self" : {
+    "href" : "http://localhost:8080/api/employees"
+  },
+  "next" : {
+    "href" : "http://localhost:8080/api/employees?page=1&size=2"
+  },
+  "last" : {
+    "href" : "http://localhost:8080/api/employees?page=2&size=2"
+  }
   },
   "_embedded" : {
-    "employees" : [ {
-      "firstName" : "Frodo",
-      "lastName" : "Baggins",
-      "description" : "ring bearer",
-      "_links" : {
-        "self" : {
-          "href" : "http://localhost:8080/api/employees/1"
-        }
-      }
-    }, {
-      "firstName" : "Bilbo",
-      "lastName" : "Baggins",
-      "description" : "burglar",
-      "_links" : {
-        "self" : {
-          "href" : "http://localhost:8080/api/employees/2"
-        }
-      }
-    } ]
+  "employees" : [ {
+    "firstName" : "Frodo",
+    "lastName" : "Baggins",
+    "description" : "ring bearer",
+    "_links" : {
+    "self" : {
+      "href" : "http://localhost:8080/api/employees/1"
+    }
+    }
+  }, {
+    "firstName" : "Bilbo",
+    "lastName" : "Baggins",
+    "description" : "burglar",
+    "_links" : {
+    "self" : {
+      "href" : "http://localhost:8080/api/employees/2"
+    }
+    }
+  } ]
   },
   "page" : {
-    "size" : 2,
-    "totalElements" : 6,
-    "totalPages" : 3,
-    "number" : 0
+  "size" : 2,
+  "totalElements" : 6,
+  "totalPages" : 3,
+  "number" : 0
   }
 }
 ```
@@ -258,21 +258,21 @@ $ curl "localhost:8080/api/employees?size=2"
 $ curl "http://localhost:8080/api/employees?page=1&size=2"
 {
   "_links" : {
-    "first" : {
-      "href" : "http://localhost:8080/api/employees?page=0&size=2"
-    },
-    "prev" : {
-      "href" : "http://localhost:8080/api/employees?page=0&size=2"
-    },
-    "self" : {
-      "href" : "http://localhost:8080/api/employees"
-    },
-    "next" : {
-      "href" : "http://localhost:8080/api/employees?page=2&size=2"
-    },
-    "last" : {
-      "href" : "http://localhost:8080/api/employees?page=2&size=2"
-    }
+  "first" : {
+    "href" : "http://localhost:8080/api/employees?page=0&size=2"
+  },
+  "prev" : {
+    "href" : "http://localhost:8080/api/employees?page=0&size=2"
+  },
+  "self" : {
+    "href" : "http://localhost:8080/api/employees"
+  },
+  "next" : {
+    "href" : "http://localhost:8080/api/employees?page=2&size=2"
+  },
+  "last" : {
+    "href" : "http://localhost:8080/api/employees?page=2&size=2"
+  }
   },
 ...
 ```
@@ -283,21 +283,21 @@ $ curl "http://localhost:8080/api/employees?page=1&size=2"
 {
   "title" : "Employee",
   "properties" : {
-    "firstName" : {
-      "title" : "First name",
-      "readOnly" : false,
-      "type" : "string"
-    },
-    "lastName" : {
-      "title" : "Last name",
-      "readOnly" : false,
-      "type" : "string"
-    },
-    "description" : {
-      "title" : "Description",
-      "readOnly" : false,
-      "type" : "string"
-    }
+  "firstName" : {
+    "title" : "First name",
+    "readOnly" : false,
+    "type" : "string"
+  },
+  "lastName" : {
+    "title" : "Last name",
+    "readOnly" : false,
+    "type" : "string"
+  },
+  "description" : {
+    "title" : "Description",
+    "readOnly" : false,
+    "type" : "string"
+  }
   },
   "definitions" : { },
   "type" : "object",
