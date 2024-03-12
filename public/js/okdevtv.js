@@ -10,6 +10,14 @@ $(function () {
       $('form#form')[0].reset()
     })
   })
+  fetch('https://fun.okdevtv.com/api/words')
+  .then(function (response) {
+    return response.json()
+  })
+  .then(function (data) {
+    console.log(data)
+    $('#words').text(data.content)
+  })
 })
 
 function sendMessage() {
