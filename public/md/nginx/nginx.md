@@ -83,6 +83,17 @@ http {
 client_max_body_size 200M;
 ```
 
+### nginx for ec2-user
+
+* `/etc/nginx/nginx.conf`
+```
+user ec2-user;
+```
+
+```
+chown -R ec2-user:ec2-user /usr/share/nginx/html
+```
+
 ### http to https
 
 ```
