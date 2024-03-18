@@ -45,12 +45,6 @@
   <script src="js/okdevtv.js" defer></script>
 
   <!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
-  <style>
-    .latest {
-      color: #ccc !important;
-      text-shadow: 2px 2px 6px #000;
-    }
-  </style>
 </head>
 
 <body>
@@ -58,7 +52,8 @@
   <header id="header">
     <!-- Logo -->
     <h1 id="logo_heading">
-      <a href="#"><img src="images/logo.webp" id="logo" alt="okdevtv logo" style="width: 36px; margin-right: 6px; margin-bottom: -6px;" />OKdevTV</a>
+      <a href="#"><img src="images/logo.webp" id="logo" alt="okdevtv logo"
+          style="width: 36px; margin-right: 6px; margin-bottom: -6px;" />OKdevTV</a>
     </h1>
 
     <!-- Nav -->
@@ -71,11 +66,9 @@
         <li><a href="/#contact">Contact</a></li>
         <li><a href="https://github.com/kenu/okdevtv/issues" target="_blank" title="GitHub Issues">Issues</a></li>
         <li>
-          <% if (user) { %>
-          <a href="/user/mypage">My Page</a>
-          <% } else { %>
-          <a href="/user/login">Login</a>
-          <% } %>
+          <a href="/user/<%= (user)? 'mypage' : 'login' %>">
+            <%= (user) ? 'My Page' : 'Login' %>
+          </a>
         </li>
       </ul>
     </nav>
@@ -83,12 +76,22 @@
       <div id="words">컴퓨터가 이해할수 있는 코드는 어느 바보나 다 짤 수 있다. 좋은 프로그래머는 사람이 이해할 수 있는 코드를 짠다. - 마틴 파울러
       </div>
       <div id="inflearn">
+        <a href="https://mp4.okdevtv.com/" title="개발 관련 유튜브 모음">개발 관련 유튜브 모음</a> |
         <a href="https://bit.ly/oklearnreact" title="inflearn react api server">
-          <img src="/images/inflearn-react-api.webp" alt="inflearn react api server" style="width: 120px; padding-top: 12px; padding-bottom: 0;" /></a>-50% 할인쿠폰: 15108-f2af1e086101
+          <img src="/images/inflearn-react-api.webp" alt="inflearn react api server"
+            style="width: 120px; padding-top: 12px; padding-bottom: 0;" /></a>-50% 할인쿠폰: 15108-f2af1e086101
       </div>
     </aside>
   </header>
 
+  <section id="zero">
+    <ul>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </section>
   <!-- Topic -->
   <section id="one" class="main style2 right dark fullscreen">
     <div class="content box style2">
@@ -185,7 +188,8 @@
         함께 보면서 리뷰합니다.
       </p>
       <div id="utv">
-        <iframe width="420" height="315" src="https://www.youtube.com/embed/jQOZgJLlw84" allowfullscreen title="OKdevTV"></iframe>
+        <iframe width="420" height="315" src="https://www.youtube.com/embed/jQOZgJLlw84" allowfullscreen
+          title="OKdevTV"></iframe>
       </div>
       <footer>
         <a href="#one" class="button style2 down">More</a>
@@ -242,12 +246,15 @@
         <div class="row flush images">
           <div class="6u">
             <a href="images/fulls/01.webp" class="image full l">
-              <img src="images/thumbs/01.webp" title="<a href='http://bit.ly/okdevtv-spring'>http://bit.ly/okdevtv-spring</a>" alt="easy spring" />
+              <img src="images/thumbs/01.webp"
+                title="<a href='http://bit.ly/okdevtv-spring'>http://bit.ly/okdevtv-spring</a>" alt="easy spring" />
             </a>
           </div>
           <div class="6u">
             <a href="images/fulls/khcu-html5.webp" class="image full r">
-              <img src="images/thumbs/02.webp" title="<a href='https://www.facebook.com/khcumobile'>경희사이버대학 모바일융합학과 HTML5</a>" alt="경희사이버대학 모바일융합학과 HTML5" />
+              <img src="images/thumbs/02.webp"
+                title="<a href='https://www.facebook.com/khcumobile'>경희사이버대학 모바일융합학과 HTML5</a>"
+                alt="경희사이버대학 모바일융합학과 HTML5" />
             </a>
           </div>
         </div>
@@ -304,7 +311,8 @@
         <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
           <input type="hidden" name="cmd" value="_s-xclick" />
           <input type="hidden" name="hosted_button_id" value="XMMGV95ADN77S" />
-          <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" name="submit" alt="PayPal - The safer, easier way to pay online!" />
+          <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" name="submit"
+            alt="PayPal - The safer, easier way to pay online!" />
           <img alt="" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1" />
         </form>
       </div>
@@ -312,7 +320,7 @@
 
     <div id="fb-root"></div>
     <script>
-      (function(d, s, id) {
+      (function (d, s, id) {
         var js,
           fjs = d.getElementsByTagName(s)[0];
         if (d.getElementById(id)) return;
@@ -323,7 +331,8 @@
         fjs.parentNode.insertBefore(js, fjs);
       })(document, 'script', 'facebook-jssdk');
     </script>
-    <div class="fb-comments" data-href="https://okdevtv.com/" data-width="630" data-numposts="5" data-colorscheme="light"></div>
+    <div class="fb-comments" data-href="https://okdevtv.com/" data-width="630" data-numposts="5"
+      data-colorscheme="light"></div>
   </section>
 
   <!-- Footer -->
@@ -354,7 +363,7 @@
     </ul>
   </footer>
   <script>
-    (function(w, i, d, g, e, t, s) {
+    (function (w, i, d, g, e, t, s) {
       w[d] = w[d] || [];
       t = i.createElement(g);
       t.async = 1;
@@ -381,8 +390,11 @@
 
     gtag('config', 'G-DGMC27QNFQ');
   </script>
-  <script data-ad-client="ca-pub-6888948265589071" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-  <script src="https://browser.sentry-cdn.com/5.26.0/bundle.min.js" integrity="sha384-VGljl8BTZL6Py4DmlOaYmfkOwp8mD3PrmD2L+fN446PZpsrIHuDhX7mnV/L5KuNR" crossorigin="anonymous"></script>
+  <script data-ad-client="ca-pub-6888948265589071" async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script src="https://browser.sentry-cdn.com/5.26.0/bundle.min.js"
+    integrity="sha384-VGljl8BTZL6Py4DmlOaYmfkOwp8mD3PrmD2L+fN446PZpsrIHuDhX7mnV/L5KuNR"
+    crossorigin="anonymous"></script>
   <script>
     Sentry.init({
       dsn: 'https://dae63085eaed40edad257594e2aa8d36@sentry.io/1769825',

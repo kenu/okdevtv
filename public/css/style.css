@@ -1033,9 +1033,6 @@ body.touch .main {
   background-attachment: scroll !important;
 }
 
-body.touch .poptrox-popup {
-}
-
 body.touch .poptrox-popup .nav-next,
 body.touch .poptrox-popup .nav-previous,
 body.touch .poptrox-popup .closer {
@@ -1053,4 +1050,9 @@ ol {
   text-align: center;
   color: #fff;
   font-weight: 600;
+}
+
+.latest {
+  color: #ccc !important;
+  text-shadow: 2px 2px 6px #000;
 }
