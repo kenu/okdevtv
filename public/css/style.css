@@ -278,9 +278,6 @@ ol.default li {
 
 /* Forms */
 
-form {
-}
-
 form label {
   display: block;
 }
@@ -310,12 +307,6 @@ form textarea {
   -o-transition: all 0.04s ease-in-out, color 0.04s ease-in-out;
   -ms-transition: all 0.04s ease-in-out, color 0.04s ease-in-out;
   transition: all 0.04s ease-in-out, color 0.04s ease-in-out;
-}
-
-form input[type='text']:hover,
-form input[type='password']:hover,
-form select:hover,
-form textarea:hover {
 }
 
 form input[type='text']:focus,
@@ -391,9 +382,6 @@ table.default thead {
 
 table.default tfoot {
   background: #eee;
-}
-
-table.default tbody {
 }
 
 /* Buttons */
@@ -520,9 +508,6 @@ table.default tbody {
   transform: translateZ(0);
 }
 
-.main.style1.inactive {
-}
-
 .main.style1.inactive .content {
   opacity: 0;
 }
@@ -549,24 +534,12 @@ table.default tbody {
   transform: translateZ(0);
 }
 
-.main.style2.left {
-}
-
 .main.style2.left .content {
   left: 0;
 }
 
-.main.style2.right {
-}
-
 .main.style2.right .content {
   left: 65%;
-}
-
-.main.style2.inactive {
-}
-
-.main.style2.inactive .content {
 }
 
 .main.style2.inactive.left .content {
@@ -580,9 +553,6 @@ table.default tbody {
 .main.style3 {
   text-align: center;
   padding: 6em 0 6em 0;
-}
-
-.main.style3 .content {
 }
 
 .main.style3 .content > header {
@@ -626,9 +596,6 @@ table.default tbody {
 
 .fa {
   text-decoration: none;
-}
-
-.fa.solo {
 }
 
 .fa.solo span {
@@ -747,12 +714,6 @@ body {
 /* Work                                                                          */
 /*********************************************************************************/
 
-#work {
-}
-
-#work .row.images {
-}
-
 #work .row.images .image {
   position: relative;
   top: 0;
@@ -770,9 +731,6 @@ body {
   -o-transform: translateZ(0);
   -ms-transform: translateZ(0);
   transform: translateZ(0);
-}
-
-#work .row.images.inactive {
 }
 
 #work .row.images.inactive .image {
@@ -811,9 +769,6 @@ body {
   -o-transform: translateZ(0);
   -ms-transform: translateZ(0);
   transform: translateZ(0);
-}
-
-#contact.inactive {
 }
 
 #contact.inactive .box {
@@ -1025,9 +980,6 @@ body {
 /*********************************************************************************/
 /* Touch Mode                                                                    */
 /*********************************************************************************/
-
-body.touch {
-}
 
 body.touch .main {
   background-attachment: scroll !important;
