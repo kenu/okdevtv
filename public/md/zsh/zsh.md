@@ -1,6 +1,6 @@
 # zsh
 
-* http://www.zsh.org
+* https://www.zsh.org
 * https://ohmyz.sh/
 * 인터랙티브한 사용을 위해 설계된 쉘, 파워풀한 스크립팅 언어
 * git 사용시 브랜치 등을 프롬프트에 보여주며 매우 편리함
