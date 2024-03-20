@@ -1,3 +1,9 @@
+@import url('https://cdn.jsdelivr.net/gh/rivercory/rivercory/font.css');
+
+body {
+  font-family: 'SUIT-Regular', sans-serif;
+}
+
 .bd-placeholder-img {
   font-size: 1.125rem;
   text-anchor: middle;
