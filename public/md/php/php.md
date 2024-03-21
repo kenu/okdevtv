@@ -44,7 +44,8 @@ sudo systemctl restart nginx
 
 ```sh
 cd /usr/share/nginx/html
-sudo echo "<?php phpinfo(); ?>" > info.php
+sudo su
+echo "<?php phpinfo(); ?>" > info.php
 curl localhost/info.php
 ```
 
