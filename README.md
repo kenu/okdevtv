@@ -40,7 +40,5 @@ REFRESH_TOKEN=
 
 ## Deploy
 
-## FAQ
-
 ## License
 * MIT
