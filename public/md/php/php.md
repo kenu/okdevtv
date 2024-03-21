@@ -1,76 +1,44 @@
-# php
+# PHP
+* A popular general-purpose scripting language
+* https://www.php.net/
 
-## php for windows
-* https://nginx.org
-* http://windows.php.net
-  * x86 Non Thread Safe
+## Installation
+* EC2
 
-### config
-* conf/nginx.conf
-```
-location / {
-    root   html;
-    index  index.html index.htm index.php;
-}
+```sh
+sudo dnf install php php-fpm php-zip nginx -y
+sudo systemctl start php-fpm
 ```
 
-* Uncomment and change to nginx home path
+* nginx
+
+```sh
+sudo mkdir /etc/nginx/sites-available
+sudo vi /etc/nginx/sites-available/default
 ```
-# pass the PHP scripts to FastCGI server listening on 127.0.0.1:9000
-#
+
+```sh
+index index.php;
+
 location ~ \.php$ {
-    root           html;
-    fastcgi_pass   127.0.0.1:9000;
-    fastcgi_index  index.php;
-    fastcgi_param  SCRIPT_FILENAME  D:/dev/nginx-1.13.4/html$fastcgi_script_name;
-    include        fastcgi_params;
+    fastcgi_pass unix:/run/php/php8.2-fpm.sock;
+    fastcgi_index index.php;
+    fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+    include fastcgi_params;
 }
 ```
 
-### start
-
-```
-start nginx
-```
-
-```
-php-cgi.exe -b 127.0.0.1:9000
+```sh
+sudo nginx -t
+sudo systemctl restart nginx
 ```
 
-### check process
-
-```
-tasklist /fi "imagename eq nginx.exe"
-```
-
-
-* stop
-```
-nginx -s stop
+```sh
+cd /usr/share/nginx/html
+sudo echo "<?php phpinfo(); ?>" > info.php
+curl localhost/info.php
 ```
 
-  * close `php-cgi.exe` window
-
-
-## Reserved Keywords
-
-* Read Environment Variables
-```
-$_ENV["USER"]
-```
-
-* Web root path
-```
-$_SERVER['DOCUMENT_ROOT']
-```
-
-## function
-
-
-## ref
-* nginx-php
-  * [/mib/php/nginx-php](/mib/php/nginx-php)
-* 윈도우(Windows) nginx와 php 연동하기
-  * http://homaki.tistory.com/
-* nginx for Windows
-  * http://nginx.org/en/docs/windows.html
+## related
+* [nginx-php](/mib/php/nginx-php)
+* [win-php](/mib/php/win-php)
