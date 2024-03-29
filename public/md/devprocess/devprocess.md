@@ -11,7 +11,7 @@
 * 구성원 모집
 * 기획(페르소나, 시나리오)
 * 화면 설계(wireframe, [figma](https://www.figma.com/))
-* 데이터 설계(https://erdcloud.com)
+* 데이터 설계(https://erdcloud.com , https://erdspace.com)
 * 개발 기술 선택
 
 ## 승: 개발 기반 구축
