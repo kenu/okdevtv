@@ -64,16 +64,14 @@
 
 ## HTTP 응답 상태 코드
 
-200
-201
-
-400
-401
-403
-405
-
-301
-500
+* [200](https://http.cat/200)
+* [201](https://http.cat/201)
+* [400](https://http.cat/400)
+* [401](https://http.cat/401)
+* [403](https://http.cat/403)
+* [405](https://http.cat/405)
+* [301](https://http.cat/301)
+* [500](https://http.cat/500)
 
 
 ## ref

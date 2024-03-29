@@ -11,21 +11,23 @@
 ## Config
 ```
 sudo /usr/bin/postgresql-setup --initdb
-sudo su
-vi /var/lib/pgsql/data/postgresql.conf
-// listen_addresses, port uncomment
 ```
 
-* `sudo systemctl restart postgresql`
+```
+sudo su
+vi /var/lib/pgsql/data/postgresql.conf
+// uncomment #listen_addresses, #port
+```
+
 * `vim /var/lib/pgsql/data/pg_hba.conf`
-  * change `peer` to `md5` for local, IPv4
+  * change `peer` to `trust` for local, IPv4
 ```
 # TYPE  DATABASE        USER            ADDRESS                 METHOD
 
 # "local" is for Unix domain socket connections only
-local   all             all                                     md5
+local   all             all                                     trust
 # IPv4 local connections:
-host    all             all             127.0.0.1/32            md5
+host    all             all             127.0.0.1/32            trust
 ```
 
 * `sudo systemctl restart postgresql`
