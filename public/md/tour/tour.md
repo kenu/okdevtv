@@ -83,6 +83,10 @@
   * 손만두, 쫄면, 고기만두
 * [님아 그 시장을 가오_EP.42_홍성](https://youtu.be/654d-BlJKPc) : 오누이식당
   * 만두전골
+* [님아 그 시장을 가오_EP.43_포항](https://youtu.be/Kj3iNd_RmQ0) : 우현해물찜
+  * 아귀찜
+* [님아 그 시장을 가오_EP.44_홍성](https://youtu.be/q5xpyh1l2zg) : 치킨하우스
+  * 고추야채통닭
 
 ===
-* 재생목록: https://www.youtube.com/playlist=PLoABXt5mipg44IDlocl0rncGijN0b__bd
+* 재생목록: https://www.youtube.com/watch?v=2n2pcobA6DI&list=PLoABXt5mipg44IDlocl0rncGijN0b__bd
