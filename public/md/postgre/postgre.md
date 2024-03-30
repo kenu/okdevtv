@@ -5,15 +5,17 @@
 ## Install
 * mac: `brew install postgresql`
 * aws:
-* `sudo dnf install postgresql15-server`
-* `sudo systemctl enable postgresql`
+```sh
+sudo dnf install postgresql15-server -y
+sudo systemctl enable postgresql
+```
 
 ## Config
-```
+```sh
 sudo /usr/bin/postgresql-setup --initdb
 ```
 
-```
+```sh
 sudo su
 vi /var/lib/pgsql/data/postgresql.conf
 // uncomment #listen_addresses, #port
@@ -43,7 +45,9 @@ create database devdb with owner devuser;
 ```
 
 ## Connect
-* `psql -U devuser -W -d devdb`
+```sh
+psql -U devuser -W -d devdb`
+```
 
 ## ref
 * AWS EC2에 PostgreSQL 설치하고 접속하기
