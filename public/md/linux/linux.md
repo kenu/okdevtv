@@ -212,13 +212,6 @@ dust -h
 ls -la --time-style=full-iso
 ```
 
-## other topics
-
-* [dnf](/mib/linux/dnf)
-* [cron](/mib/linux/cron)
-* [curl](/mib/linux/curl)
-* [pigz](/mib/linux/pigz) : parallel gzip
-
 ## Mail
 
 ### sendmail
@@ -234,6 +227,14 @@ sendmail recipient@example.com < content
 
 ### mail
 * `mail -s "This is the subject" kenu.heo@gmail.com <<< 'This is the message'`
+
+## other topics
+
+* [dnf](/mib/linux/dnf)
+* [systemctl](/mib/linux/systemctl)
+* [cron](/mib/linux/cron)
+* [curl](/mib/linux/curl)
+* [pigz](/mib/linux/pigz) : parallel gzip
 
 ## ref
 

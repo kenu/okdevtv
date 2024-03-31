@@ -57,6 +57,8 @@ echo "-- end of job"
 
 ```
 crontab -e
+# 또는
+sudo vi /etc/crontab
 ```
 
 ```
@@ -65,6 +67,10 @@ crontab -e
 # every 5 minutes
 */5 * * * * /home/ec2-user/local/cron/delete_old.sh >> /home/ec2-user/local/cron/log/delete_old.log
 ```
+
+* 특정시간 지정
+  * `0 6-23 * * *`
+  * `0 2,3,12 * * *`
 
 ## ref
 * https://crontab.guru/every-5-minutes
