@@ -3,7 +3,12 @@
 * object-relational database
 
 ## Install
-* mac: `brew install postgresql`
+* mac:
+```sh
+brew install postgresql@15
+brew services start postgresql@15
+psql postgres
+```
 * aws:
 ```sh
 sudo dnf install postgresql15-server -y
