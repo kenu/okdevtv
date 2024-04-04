@@ -1,10 +1,16 @@
 ## GitHub `Verified`
-* GPG 또는 S/MIME을 사용하여 로컬에서 작업에 서명 가능
-* GitHub은 이러한 서명을 확인하여 다른 사람들이 당신의 커밋이 신뢰할 수 있는 소스로부터 왔다는 것 표시
-* GitHub은 GitHub 웹 인터페이스를 사용하여 한 커밋에 자동으로 서명
+* GPG 또는 S/MIME을 사용하여 로컬에서 작업에 서명(Verified) 가능
+* 서명을 확인하여 다른 사람들이 당신의 커밋이 신뢰할 수 있는 소스 표시
 * gpg 키 생성
 * GitHub 이메일 사용
 
+```sh
+gpg --list-secret-keys --keyid-format=long
+gpg --full-generate-key
+gpg --armor --export B0ACXXX79X956C35
+```
+
+### process
 ```
 ➜  ~ gpg --full-generate-key
 gpg (GnuPG) 2.3.6; Copyright (C) 2021 Free Software Foundation, Inc.
