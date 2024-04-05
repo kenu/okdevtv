@@ -85,7 +85,7 @@
   * 만두전골
 * [님아 그 시장을 가오_EP.43_포항](https://youtu.be/Kj3iNd_RmQ0) : 우현해물찜
   * 아귀찜
-* [님아 그 시장을 가오_EP.44_홍성](https://youtu.be/q5xpyh1l2zg) : 치킨하우스
+* [님아 그 시장을 가오_EP.44_울산](https://youtu.be/q5xpyh1l2zg) : 치킨하우스
   * 고추야채통닭
 
 ===
