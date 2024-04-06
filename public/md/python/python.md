@@ -4,18 +4,15 @@
 * hacker's favorite language
 
 ## basic
-|python 실행	|python|
+|python 실행	|python (py)|
 |----|----|
 |python 종료	|ctrl + D or `exit()`|
-|python file 실행	|`python sample.py`|
-|python 버전 확인	|`python -V`|
+|python file 실행	|`python sample.py`, `py sample.py`|
+|python 버전 확인	|`python -V`, `py -V`|
 
 ## pip
 * `curl -O https://bootstrap.pypa.io/get-pip.py`
 * `sudo python get-pip.py`
-
-* mac permission
-  * `sudo chown -R kenu:staff /Library/Python/2.7/site-packages`
 
 ### commands
 * `pip --help`
