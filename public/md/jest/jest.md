@@ -66,3 +66,36 @@ jest --coverage
 ## Timeout
 * `test('title', () => {}, timeout);`
 * https://exerror.com/timeout-async-callback-was-not-invoked-within-the-5000-ms-timeout-specified-by-jest-settimeout/
+
+## ESM module
+* install babel
+```sh
+npm i -D jest @babel/core @babel/preset-env
+```
+
+* `babel.config.json`
+```json
+{
+  "presets": ["@babel/preset-env"]
+}
+```
+
+* test file
+* add.js
+```js
+export default function add(a, b) {
+  return a + b;
+}
+```
+
+* add.test.js
+```js
+import add from './add';
+
+test('adds 1 + 2 to equal 3', () => {
+  expect(add(1, 2)).toBe(3);
+})
+```
+
+## ref
+* https://poiemaweb.com/jest-esm
