@@ -40,6 +40,11 @@
 - node token.js
 - node send.js
 
+## App Password
+* https://myaccount.google.com/apppasswords
+  * 2 단계 인증 > 앱 비밀번호
+  * `**** xzka **** gmpr`
+
 ## ref
 * example
   * https://github.com/kenu/okdevtv-examples/tree/main/node/email
