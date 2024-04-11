@@ -10,7 +10,7 @@
 
 ## SonarQube
 * free
-  * JavaScript
+  * JavaScript/TypeScript
   * Java
   * Python
   * PHP
@@ -53,12 +53,15 @@ sonar.sources=.
 sonar.login=${SONAR_TOKEN}
 
 # Encoding of the source code. Default is default system encoding
-#sonar.sourceEncoding=UTF-8
+# sonar.sourceEncoding=UTF-8
+# jest --coverage report
+# sonar.javascript.lcov.reportPaths=./coverage/lcov.info
 ```
 * run `sonar-scanner` in project root
 
 ## Java
 * In project root directory, `sonar-project.properties`
+* or maven pom.xml
 
 ```
 sonar.projectKey=swlabs:helper
@@ -135,3 +138,4 @@ sonarRunner {
 
 ## ref
 * http://galmaegi74.tistory.com/9
+* https://docs.sonarsource.com/sonarqube/latest/analyzing-source-code/test-coverage/overview/
