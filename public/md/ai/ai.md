@@ -16,3 +16,11 @@
 - https://groq.com : 응답속도 빠름
 - https://chat.mistral.ai/ : beta
 
+## features
+- Refactor
+- Prototype
+- Code generation
+- Code completion
+- Test generation
+- Code analysis
+- Explain Code
