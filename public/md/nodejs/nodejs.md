@@ -510,15 +510,18 @@ $ npm install
 12. Async, Nested SQL https://www.youtube.com/watch?v=PJ7fQnDLmWg
 13. email
 
-## 참고
-* node.js
-  * http://nodejs.org
+## related
+* [npmjs registry](/mib/nodejs/npmjs)
 * [nvm](/mib/nodejs/nvm)
 * [환경변수 다루기](/mib/nodejs/dotenv)
 * [Sequelize ORM](/mib/nodejs/sequelize)
 * [Prisma ORM](/mib/nodejs/prisma)
 * [날짜 다루기](/mib/nodejs/dayjs)
 * [스케줄 실행](/mib/nodejs/schedule)
+
+## ref
+* node.js
+  * http://nodejs.org
 * http://bit.ly/okjavascript
 * http://bit.ly/oknodejs
 * node.js 내가-쓰기로-선택한-이유

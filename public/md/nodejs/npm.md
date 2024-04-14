@@ -39,8 +39,14 @@ npm init
 npx serve
 ```
 
+## pnpm
+* https://pnpm.io
+
 ## yarn
 * https://yarnpkg.com
+
+## npmtrends
+* https://npmtrends.com
 
 ## ref
 * https://www.npmjs.com/
