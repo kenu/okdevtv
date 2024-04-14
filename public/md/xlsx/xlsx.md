@@ -20,8 +20,8 @@ npm i xlsx
 ## Simple Example
 
 ```js
-var XLSX = require('xlsx');
-var workbook = XLSX.readFile('test.xlsx');
+const XLSX = require('xlsx');
+const workbook = XLSX.readFile('test.xlsx');
 /* DO SOMETHING WITH workbook HERE */
 ```
 

@@ -17,9 +17,9 @@ DROP USER devuser CASCADE;
 ```
 
 ## XDB 비활성화
-* 8080 포트 비활성화
+* 8080 포트 비활성화 Oracle HTTP Server Stop
 
-```
+```sql
 C:\Users\Administrator>sqlplus "/as sysdba"
 SQL> Exec DBMS_XDB.SETHTTPPORT(0);
 PL/SQL procedure successfully completed.

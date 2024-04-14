@@ -47,7 +47,7 @@ module.exports = {
 //   그 모듈들을 정적으로 다룹니다.
 
 // CommonJs로 의존성이 표기됩니다
-var commonjs = require("./commonjs");
+const commonjs = require("./commonjs");
 // 또는 AMD로
 define(["amd-module", "../file"], function(amdModule, file) {
 	// while previous constructs are sync
@@ -57,7 +57,7 @@ define(["amd-module", "../file"], function(amdModule, file) {
 		 //  your application into multiple "chunks".
 		 // This part of your application is
 		 //  loaded on demand (Code Splitting)
-		var stuff = require("../my/stuff");
+		vconstar stuff = require("../my/stuff");
 		// "../my/stuff" is also loaded on demand
 		//  because it's in the callback function
 		//  of the AMD require

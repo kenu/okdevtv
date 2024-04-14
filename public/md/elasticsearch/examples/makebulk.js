@@ -1,11 +1,11 @@
-var fs = require('graceful-fs')
-var data = fs.readFileSync('./d.txt', 'utf8')
-var dl = data.split('\n')
-var i = 0
-for (var idx in dl) {
+const fs = require('graceful-fs')
+const data = fs.readFileSync('./d.txt', 'utf8')
+const dl = data.split('\n')
+const i = 0
+for (let idx in dl) {
   if (dl.hasOwnProperty(idx)) {
-    var obj = getJson(dl[idx])
-    var row =
+    const obj = getJson(dl[idx])
+    const row =
       '{ "index" : { "_index": "cs", "_type": "record", "_id": ' +
       i++ +
       '} }\n' +
@@ -26,7 +26,7 @@ for (var idx in dl) {
 }
 
 function getJson(line) {
-  var scheme = [
+  const scheme = [
     'service_type',
     'pcode',
     'pname',
@@ -43,23 +43,23 @@ function getJson(line) {
     'act_cnt',
     'cs_content',
   ]
-  var l = line.replace(/\r/g, '')
-  var arr = l.split('\t')
-  var t = {}
+  const l = line.replace(/\r/g, '')
+  const arr = l.split('\t')
+  const t = {}
   for (idx in arr) {
     t[scheme[idx]] = arr[idx]
   }
-  var content = t.cs_content
+  const content = t.cs_content
   if (t.cs_content) {
-    var carray = content.split('>')
+    const carray = content.split('>')
     t.cat4 = carray[0].split('<')[1]
     t.cat5 =
       carray[1] && carray[1].indexOf('<') > -1
         ? carray[1].split('<')[1]
         : carray[1]
   }
-  var d = t.date
-  var d2 = t.date
+  const d = t.date
+  const d2 = t.date
     ? d.substring(0, 4) + '-' + d.substring(4, 6) + '-' + d.substring(6, 8)
     : '2017-01-01'
   t.timestamp = new Date(d2)

@@ -94,7 +94,7 @@
 * `webpack.config.js`: build tool for js
 
 ```json
-var path = require('path');
+const path = require('path');
 
 module.exports = {
   entry: './src/main/js/app.js',
@@ -498,7 +498,7 @@ public class EventHandler {
 
 ### JavaScript WebSocket
 ```js
-var stompClient = require('./websocket-listener')
+const stompClient = require('./websocket-listener')
 ```
 
 ## Part 5

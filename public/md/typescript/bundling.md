@@ -21,7 +21,7 @@ document.write("hello World!");
 * `webpack.config.js`
 
 ```js
-var path = require('path');
+const path = require('path');
 module.exports = {
   entry: './src/entry1.js',
   output: {

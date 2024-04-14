@@ -12,7 +12,7 @@
   {{ message }}
 </div>
 <script>
-var app = new Vue({
+const app = new Vue({
   el: '#app',
   data: {
   message: '안녕하세요 Vue!'
@@ -30,7 +30,7 @@ var app = new Vue({
   </span>
 </div>
 <script>
-var app2 = new Vue({
+const app2 = new Vue({
   el: '#app-2',
   data: {
   message: '이 페이지는 ' + new Date() + ' 에 로드 되었습니다'
@@ -46,7 +46,7 @@ var app2 = new Vue({
   <p v-if="seen">이제 나를 볼 수 있어요</p>
 </div>
 <script>
-var app3 = new Vue({
+const app3 = new Vue({
   el: '#app-3',
   data: {
     seen: true
@@ -66,7 +66,7 @@ var app3 = new Vue({
   </ol>
 </div>
 <script>
-var app4 = new Vue({
+const app4 = new Vue({
   el: '#app-4',
   data: {
     todos: [
@@ -87,7 +87,7 @@ var app4 = new Vue({
   <button v-on:click="reverseMessage">메시지 뒤집기</button>
 </div>
 <script>
-var app5 = new Vue({
+const app5 = new Vue({
   el: '#app-5',
   data: {
     message: '안녕하세요! Vue.js!'
@@ -107,7 +107,7 @@ var app5 = new Vue({
   <input v-model="message">
 </div>
 <script>
-var app6 = new Vue({
+const app6 = new Vue({
   el: '#app-6',
   data: {
     message: '안녕하세요 Vue!'
@@ -134,7 +134,7 @@ Vue.component('todo-item', {
   template: '<li>{{ todo.text }}</li>'
 });
 
-var app7 = new Vue({
+const app7 = new Vue({
   el: '#app-7',
   data: {
     groceryList: [

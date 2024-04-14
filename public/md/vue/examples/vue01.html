@@ -1,140 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Vue Test</title>
-  </head>
 
-  <body>
-    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<head>
+  <meta charset="UTF-8" />
+  <title>Vue Test</title>
+</head>
 
-    <div id="app">{{ message }}</div>
-    <hr />
+<body>
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 
-    <div id="app-2">
-      <span v-bind:title="message">
-        내 위에 잠시 마우스를 올리면 마우스 툴팁에 동적으로 바인딩 된 title을 볼
-        수 있습니다!
-      </span>
-    </div>
-    <hr />
+  <div id="app">{{ message }}</div>
+  <hr />
 
-    <div id="app-3">
-      <p v-if="seen">이제 나를 볼 수 있어요</p>
-    </div>
-    <hr />
+  <div id="app-2">
+    <span v-bind:title="message">
+      내 위에 잠시 마우스를 올리면 마우스 툴팁에 동적으로 바인딩 된 title을 볼
+      수 있습니다!
+    </span>
+  </div>
+  <hr />
 
-    <div id="app-4">
-      <ol>
-        <li v-for="todo in todos">{{ todo.text }}</li>
-      </ol>
-    </div>
-    <hr />
+  <div id="app-3">
+    <p v-if="seen">이제 나를 볼 수 있어요</p>
+  </div>
+  <hr />
 
-    <div id="app-5">
-      <p>{{ message }}</p>
-      <button v-on:click="reverseMessage">메시지 뒤집기</button>
-    </div>
-    <hr />
+  <div id="app-4">
+    <ol>
+      <li v-for="todo in todos">{{ todo.text }}</li>
+    </ol>
+  </div>
+  <hr />
 
-    <div id="app-6">
-      <p>{{ message }}</p>
-      <input v-model="message" />
-    </div>
-    <hr />
+  <div id="app-5">
+    <p>{{ message }}</p>
+    <button v-on:click="reverseMessage">메시지 뒤집기</button>
+  </div>
+  <hr />
 
-    <div id="app-7">
-      <ol>
-        <!-- 
+  <div id="app-6">
+    <p>{{ message }}</p>
+    <input v-model="message" />
+  </div>
+  <hr />
+
+  <div id="app-7">
+    <ol>
+      <!--
                 이제 각 todo-item 에 todo 객체를 제공합니다.
-                화면에 나오므로, 각 항목의 컨텐츠는 동적으로 바뀔 수 있습니다. 
+                화면에 나오므로, 각 항목의 컨텐츠는 동적으로 바뀔 수 있습니다.
                 또한 각 구성 요소에 "키"를 제공해야 합니다 (나중에 설명 됨).
                -->
-        <todo-item
-          v-for="item in groceryList"
-          v-bind:todo="item"
-          v-bind:key="item.id"
-        >
-        </todo-item>
-      </ol>
-    </div>
-    <hr />
+      <todo-item v-for="item in groceryList" v-bind:todo="item" v-bind:key="item.id">
+      </todo-item>
+    </ol>
+  </div>
+  <hr />
 
-    code from :
-    <a href="https://kr.vuejs.org/v2/guide/index.html"
-      >https://kr.vuejs.org/v2/guide/index.html</a
-    >
+  code from :
+  <a href="https://kr.vuejs.org/v2/guide/index.html">https://kr.vuejs.org/v2/guide/index.html</a>
 
-    <script>
-      var app = new Vue({
-        el: '#app',
-        data: {
-          message: '안녕하세요 Vue!',
+  <script>
+    const app = new Vue({
+      el: '#app',
+      data: {
+        message: '안녕하세요 Vue!',
+      },
+    })
+
+    const app2 = new Vue({
+      el: '#app-2',
+      data: {
+        message:
+          '이 페이지는 ' +
+          new Date().toLocaleString() +
+          ' 에 로드 되었습니다',
+      },
+    })
+
+    const app3 = new Vue({
+      el: '#app-3',
+      data: {
+        seen: true,
+      },
+    })
+
+    const app4 = new Vue({
+      el: '#app-4',
+      data: {
+        todos: [
+          { text: 'JavaScript 배우기' },
+          { text: 'Vue 배우기' },
+          { text: '무언가 멋진 것을 만들기' },
+        ],
+      },
+    })
+
+    const app5 = new Vue({
+      el: '#app-5',
+      data: {
+        message: '안녕하세요! Vue.js!',
+      },
+      methods: {
+        reverseMessage: function () {
+          this.message = this.message.split('').reverse().join('')
         },
-      })
+      },
+    })
 
-      var app2 = new Vue({
-        el: '#app-2',
-        data: {
-          message:
-            '이 페이지는 ' +
-            new Date().toLocaleString() +
-            ' 에 로드 되었습니다',
-        },
-      })
+    const app6 = new Vue({
+      el: '#app-6',
+      data: {
+        message: '안녕하세요 Vue!',
+      },
+    })
 
-      var app3 = new Vue({
-        el: '#app-3',
-        data: {
-          seen: true,
-        },
-      })
+    Vue.component('todo-item', {
+      props: ['todo'],
+      template: '<li>{{ todo.text }}</li>',
+    })
 
-      var app4 = new Vue({
-        el: '#app-4',
-        data: {
-          todos: [
-            { text: 'JavaScript 배우기' },
-            { text: 'Vue 배우기' },
-            { text: '무언가 멋진 것을 만들기' },
-          ],
-        },
-      })
+    const app7 = new Vue({
+      el: '#app-7',
+      data: {
+        groceryList: [
+          { id: 0, text: 'Vegetables' },
+          { id: 1, text: 'Cheese' },
+          { id: 2, text: 'Whatever else humans are supposed to eat' },
+        ],
+      },
+    })
+  </script>
+</body>
 
-      var app5 = new Vue({
-        el: '#app-5',
-        data: {
-          message: '안녕하세요! Vue.js!',
-        },
-        methods: {
-          reverseMessage: function () {
-            this.message = this.message.split('').reverse().join('')
-          },
-        },
-      })
-
-      var app6 = new Vue({
-        el: '#app-6',
-        data: {
-          message: '안녕하세요 Vue!',
-        },
-      })
-
-      Vue.component('todo-item', {
-        props: ['todo'],
-        template: '<li>{{ todo.text }}</li>',
-      })
-
-      var app7 = new Vue({
-        el: '#app-7',
-        data: {
-          groceryList: [
-            { id: 0, text: 'Vegetables' },
-            { id: 1, text: 'Cheese' },
-            { id: 2, text: 'Whatever else humans are supposed to eat' },
-          ],
-        },
-      })
-    </script>
-  </body>
 </html>
