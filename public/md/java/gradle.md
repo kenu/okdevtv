@@ -3,10 +3,23 @@
 * build tool
 
 ## install
+* [sdkman](/mib/sdkman)
+```
+sdk install gradle
+```
+
 * mac
 ```
 brew install gradle
 ```
+
+## run
+```
+gradle build
+gradle build -x test
+gradle bootRun
+```
+
 
 ## Simple Start
 ```
@@ -62,26 +75,6 @@ BUILD SUCCESSFUL in 4s
 * `testImplementation` : test
 * `compileOnly` : provided
 
-## gradle wrapper
-* for those who don't have installed gradle
-
-```
-gradle wrapper
-```
-
-* output
-
-```
-.
-├── build.gradle
-├── gradle
-│   └── wrapper
-│       ├── gradle-wrapper.jar
-│       └── gradle-wrapper.properties
-├── gradlew
-└── gradlew.bat
-```
-
 ## Simple task
 * build.gradle
 
@@ -102,7 +95,13 @@ task copy(type: Copy) {
 
 ```
 ./gradlew copy
+gradle copy
 ```
+
+## gradle daemon
+* `ps -ef | grep gradle`
+* `gradle --stop`
+
 
 ## Plugin
 * build.gradle
@@ -123,6 +122,26 @@ task zip(type: Zip) {
 
 ```
 ./gradlew tasks --all
+```
+
+## gradle wrapper
+* for those who don't have installed gradle
+
+```
+gradle wrapper
+```
+
+* output
+
+```
+.
+├── build.gradle
+├── gradle
+│   └── wrapper
+│       ├── gradle-wrapper.jar
+│       └── gradle-wrapper.properties
+├── gradlew
+└── gradlew.bat
 ```
 
 ## custom repository
