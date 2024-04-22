@@ -16,6 +16,11 @@
 * 데이터 제공시 키는 ""로 감싸야 됨
 * 코드 내에서는 키는 "" 없이 사용 가능
 
+## XML 2 JSON
+* `fast-xml-parser`
+  * https://github.com/NaturalIntelligence/fast-xml-parser
+
 ## ref
 * Railroad diagram(Syntax diagram)
   * https://en.wikipedia.org/wiki/Syntax_diagram
+
