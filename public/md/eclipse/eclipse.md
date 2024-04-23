@@ -1,6 +1,13 @@
 # eclipse
 * http://www.eclipse.org
 
+## M1 eclipse error
+
+```sh
+sudo codesign --force --deep --sign - /Applications/Eclipse.app
+```
+- https://stackoverflow.com/a/71740449/510222
+
 ## Marketplace
 * <img src="images/marketplace01.webp" alt="eclipse marketplace">
 * <img src="images/marketplace02.webp" alt="search quick text">
