@@ -8,6 +8,7 @@
 *.local
 .ftpsync_settings
 .history
+.obsidian
 .idea
 .project
 .scannerwork
