@@ -22,7 +22,7 @@
 * https://certbot.eff.org/
 * https://certbot.eff.org/lets-encrypt/centosrhel7-nginx
 
-```
+```sh
 # Amazon Linux 2023
 sudo su -
 dnf install python3 augeas-libs -y
@@ -36,7 +36,7 @@ certbot --nginx
 systemctl restart nginx
 ```
 
-```bash
+```sh
 # Amazon Linux 2
 sudo su -
 yum -y install yum-utils
@@ -48,14 +48,14 @@ certbot --nginx
 ```
 
 ## Set up automatic renewal
-```
+```sh
 echo "0 0,12 * * * root python -c 'import random; import time; time.sleep(random.random() * 3600)' && certbot renew" | sudo tee -a /etc/crontab > /dev/null
 ```
 
 ## certbot renew issue
 * `certbot renew` 안되는 경우
 
-```
+```sh
 certbot certonly -d v.okdevtv.com --manual --preferred-challenges dns
 ```
 

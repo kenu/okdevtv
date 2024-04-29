@@ -5,7 +5,7 @@
 * install MariaDB
   * mac : `brew install mariadb` or `brew install mariadb@10.6`
   * Amazon Linux 2023
-```
+```sh
 sudo dnf install mariadb105-server -y
 sudo systemctl enable mariadb
 sudo systemctl start mariadb
@@ -13,7 +13,7 @@ sudo systemctl start mariadb
 
 * CentOS 7.x
   * `sudo vi /etc/yum.repos.d/MariaDB.repo`
-```
+```sh
 # MariaDB 10.10 CentOS repository list
 # http://mariadb.org/mariadb/repositories/
 [mariadb]
@@ -25,7 +25,7 @@ gpgcheck=1
   * CentOS 6.x는 `baseurl = http://yum.mariadb.org/10.8/centos6-amd64`
 
 
-```
+```sh
 sudo yum install MariaDB-server
 sudo systemctl start mariadb
 sudo mariadb-secure-installation
@@ -60,21 +60,21 @@ GRANT TRIGGER, SELECT, SHOW VIEW ON devdb.* TO devuser2@localhost IDENTIFIED BY 
 ```
 
 ## DB backup
-```
+```sh
 mysqldump -h localhost -u devuser -p devpass devdb > okdevdb-20180724.sql
 # low CPU
 mysqldump -h localhost -u devuser -p devpass --single-transaction --quick --lock-tables=false $DBNAME > okdevdb-20180724.sql
 ```
 
 ## Timezone
-```
+```sh
 sudo cp /usr/share/zoneinfo/Asia/Seoul /etc/localtime
 sudo service mysql restart
 ```
 
 
 ## all process
-```
+```sql
 show processlist;
 ```
 
@@ -88,7 +88,7 @@ order by 2 desc;
 ## MariaDB on ubuntu
 * https://downloads.mariadb.org/mariadb/repositories/#mirror=kaist
 
-```
+```sh
 sudo apt-get install software-properties-common
 sudo apt-key adv --recv-keys --keyserver hkp://keyserver.ubuntu.com:80 0xcbcb082a1bb943db
 sudo add-apt-repository 'deb [arch=amd64,i386,ppc64el] http://ftp.kaist.ac.kr/mariadb/repo/10.8/ubuntu trusty main'

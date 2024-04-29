@@ -41,7 +41,7 @@
 * wget http://fastdl.mongodb.org/linux/mongodb-linux-x86_64-2.4.9.tgz
 * PATH에 node.js, mongodb 추가
 * grunt, bower 설치
-```
+```sh
 npm install -g grunt-cli
 npm install -g bower
 ```

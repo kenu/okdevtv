@@ -42,7 +42,7 @@ sudo systemctl enable nginx.service
 * "서버단에 다수의 웹서버를 두고, 매번 요청이 발생할 때마다 어떤 서버에게 이 요청을 처리하도록 지시할지 결정하는 역할을 수행한다."
   * from: [IT 방랑기] https://jcdgods.tistory.com/322
 
-```
+```nginx
     location / {
         sendfile off;
         proxy_pass         http://127.0.0.1:3000;
@@ -60,13 +60,13 @@ sudo systemctl enable nginx.service
 ```
 
 ### client ip forward to WAS
-```
+```nginx
         proxy_set_header    X-Real-Ip        $remote_addr;
         proxy_set_header    X-Fowarded-For   $remote_addr;
 ```
 
 ### gzip
-```
+```nginx
 http {
 ...
     keepalive_timeout  65;
@@ -79,24 +79,24 @@ http {
 
 ### max file upload
 
-```
+```nginx
 client_max_body_size 200M;
 ```
 
 ### nginx for ec2-user
 
 * `/etc/nginx/nginx.conf`
-```
+```nginx
 user ec2-user;
 ```
 
-```
+```sh
 chown -R ec2-user:ec2-user /usr/share/nginx/html
 ```
 
 ### http to https
 
-```
+```nginx
 server {
     # ...
     if ($http_x_forwarded_proto = 'http') {
@@ -107,7 +107,7 @@ server {
 
 ### http to https without `www.`
 
-```
+```nginx
 server {
     server_name  www.okdevtest.net;
     rewrite ^(.*) http://okdevtest.net$1 permanent;

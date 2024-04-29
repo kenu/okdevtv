@@ -11,7 +11,7 @@
 ```sh
 sudo dnf install zsh git util-linux-user -y
 ```
-```
+```sh
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ```
 
@@ -28,7 +28,7 @@ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/i
 ## Windows Git Bash
 * https://git-scm.com/downloads
 
-```
+```sh
 echo 'test -f ~/.bashrc && . ~/.bashrc' > ~/.bash_profile
 echo 'if [ -t 1 ]; then
   exec zsh
@@ -42,7 +42,7 @@ fi' > ~/.bashrc
 - from: https://medium.com/@leomaurodesenv/setting-up-your-git-bash-zsh-terminals-on-windows-fa94871f440d
 
 ## Plugin
-```
+```sh
 cd ~/.oh-my-zsh/custom/plugins
 git clone https://github.com/zsh-users/zsh-autosuggestions.git
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
@@ -50,7 +50,7 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
 
 * `vi ~/.zshrc`
 
-```
+```sh
 plugins=(
 	git
     zsh-autosuggestions
@@ -59,11 +59,11 @@ plugins=(
 ```
 
 ## Change Shell
-```
+```sh
 chsh -s $(which zsh)
 ```
 * set password in cloud
-```
+```sh
 sudo su
 passwd ec2-user
 ```

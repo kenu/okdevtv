@@ -8,20 +8,20 @@
 
 ## Install
 
-```
+```sh
 npm i prisma -D
 npm i @prisma/client
 ```
 
 ## .env
 
-```
+```sh
 DATABASE_URL="mysql://devuser:devpass@localhost:3306/devdb"
 ```
 
 ## prisma.schema
 
-```
+```sh
 datasource db {
   provider = "mysql"
   url      = env("DATABASE_URL")
@@ -58,7 +58,7 @@ generator client {
 }
 ```
 
-```
+```sh
 npx prisma migrate dev --name init
 ```
 
@@ -110,7 +110,7 @@ main()
   });
 ```
 
-```
+```sh
 node index.js
 ```
 

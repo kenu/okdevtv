@@ -7,11 +7,11 @@
   * zip.exe in Windows folder
   * http://stahlworks.com/dev/index.php?tool=zipunzip
 ```sh
-curl -O http://stahlworks.com/dev/zip.exe 
+curl -O http://stahlworks.com/dev/zip.exe
 mv zip.exe /c/Windows
 ```
 * open bash shell
-```
+```sh
 curl -s "https://get.sdkman.io" | bash`
 ```
 * restart bash shell
