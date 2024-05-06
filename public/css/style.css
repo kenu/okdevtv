@@ -551,7 +551,7 @@ table.default tfoot {
 
 .main.style3 {
   text-align: center;
-  padding: 6em 0 6em 0;
+  padding: 6em 0 1em;
 }
 
 .main.style3 .content > header {
@@ -698,6 +698,19 @@ body {
   background-position: top left, center center;
 }
 
+#posts {
+  list-style-type: none;
+  padding: 0;
+  margin: 3rem 0 0;
+}
+
+#posts li {
+  display: inline-block;
+  margin: 5px 10px 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 5rem;
+  padding: 10px 15px;
+}
 /*********************************************************************************/
 /* Two                                                                           */
 /*********************************************************************************/
