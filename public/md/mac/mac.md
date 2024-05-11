@@ -1,8 +1,6 @@
 # 맥 개발 세팅
 
 * 맥 brew 설치법
-* 맥 node.js 설치법
-* node cluster 테스트
 
 ## brew 설치법
 * http://brew.sh
@@ -44,16 +42,6 @@ xcode-select --install
 sudo rm -rf $(xcode-select -print-path)
 xcode-select --install
 ```
-
-
-## 맥 node.js 설치법
-* http://nodejs.org download and install
-* or [nvm](/mib/nodejs/nvm) recommend
-* `brew install node`
-
-* `node --version`
-* `npm --version` 확인
-
 
 ## rootless
 * 참고 https://macnews.tistory.com/3408
