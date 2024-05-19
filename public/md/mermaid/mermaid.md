@@ -9,6 +9,7 @@ graph LR
   A["$$x^2 = 4$$"]
   B["$$x^2 = -4$$"]
   C["$$i = \sqrt{-1}$$"]
-  D["$$x = 2i$$"]
+  D["$$x = \pm2i$$"]
+  E["$$a + ib, \space where \space a, b \in {R}$$"]
 ```
 
