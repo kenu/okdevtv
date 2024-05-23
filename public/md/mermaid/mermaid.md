@@ -1,6 +1,14 @@
 # mermaid js
 - https://mermaid.js.org/
 - mermaid is a javascript based diagramming and charting tool.
+## Pie Chart
+```mermaid
+pie title Pets adopted by volunteers
+    "Dogs" : 386
+    "Cats" : 85
+    "Rats" : 15
+```
+- example: [/md/mermaid/m.html](/md/mermaid/m.html)
 
 ## Math
 
