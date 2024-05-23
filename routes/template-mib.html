@@ -10,14 +10,16 @@
   <link href="/css/vendor/prism.css" rel="stylesheet" />
   <link rel="stylesheet" href="/css/style-md.css" />
   <script src="https://browser.sentry-cdn.com/5.26.0/bundle.min.js"
-    integrity="sha384-VGljl8BTZL6Py4DmlOaYmfkOwp8mD3PrmD2L+fN446PZpsrIHuDhX7mnV/L5KuNR"
     crossorigin="anonymous"></script>
   <script>
     Sentry.init({
       dsn: 'https://c543e6d71efa44598215f3d48c104afe@o1064669.ingest.sentry.io/4504407878074368',
     })
   </script>
-
+  <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({ startOnLoad: true });
+  </script>
   <script src="/js/vendor/prism.js"></script>
   <script src="/js/vendor/wcslog.js"></script>
   <script>
@@ -29,7 +31,6 @@
   </script>
   <script data-ad-client="ca-pub-6888948265589071" async
     src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
-    integrity="sha384-WSbvOaP5ZiKy3EecR/fpEjT2DCgj14tAP5MEAfpU7WGxGZ3w/MtlGEsKbisW1Aym"
     crossorigin="anonymous"></script>
   <script>
     function clipboard() {
