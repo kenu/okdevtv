@@ -46,8 +46,33 @@ graph LR
   A["$$|a+ib| = \sqrt{a^2+b^2}=r$$"]
   B["$$a+ib = \frac{a+ib}{\sqrt{a^2+b^2}}$$"]
   C["$$a+ib = \frac{a}{\sqrt{a^2+b^2}} + i\frac{b}{\sqrt{a^2+b^2}}$$"]
+```
+
+```mermaid
+graph LR
   D["$$a+ib = r(cos\theta+i sin\theta)$$"]
   E["$$tan \theta = \frac{b}{a}$$"]
   F["$$\theta = arctan (\frac{b}{a})$$"]
   G["$$a+ib=re^{i\theta}$$"]
 ```
+
+- polar form
+$$a+ib = r(cos\theta+i sin\theta)$$
+- exponential form
+$$a+ib=re^{i\theta}$$
+
+$$1+i
+=\sqrt{2}(cos(\frac{\pi}{4})+i sin(\frac{\pi}{4}))
+=\sqrt{2}e^{i\frac{\pi}{4}}$$
+
+$$2\sqrt{2}e^{i\frac{\pi}{4}}$$
+$$2\sqrt{2}e^{i\frac{-\pi}{2}}$$
+$$2\sqrt{2}e^{i\frac{3\pi}{4}}$$
+
+$$e^{i\frac{\pi}{5}}e^{i\frac{\pi}{3}} = e^{i\frac{8\pi}{15}}$$
+
+### Matricies
+
+$$\begin{bmatrix}1\space -2\\0\space -10\end{bmatrix}$$
+$$\begin{bmatrix}1\\2\\-3\\8\end{bmatrix}$$
+$$\begin{bmatrix}5\space-2\space3\\7\space2\space1.5\end{bmatrix}$$
