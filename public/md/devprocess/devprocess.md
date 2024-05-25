@@ -29,7 +29,7 @@
 * 기능 테스트
 * 사이드 이펙트 감지
 * 버그, 취약점 수정([SonarQube](/mib/sonar), [ZAP](/mib/zap))
-* 모니터링 기능 추가([Sentry](/mib/sentry), [GA](/mib/ga))
+* 모니터링 기능 추가([Sentry](/mib/sentry), [GA](/mib/ga), [FreeWebMonitoring](https://www.freewebmonitoring.com/))
 
 ## 결: 서비스 진화
 * 서비스 오픈 후 운영

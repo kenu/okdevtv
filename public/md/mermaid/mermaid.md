@@ -76,3 +76,7 @@ $$e^{i\frac{\pi}{5}}e^{i\frac{\pi}{3}} = e^{i\frac{8\pi}{15}}$$
 $$\begin{bmatrix}1\space -2\\0\space -10\end{bmatrix}$$
 $$\begin{bmatrix}1\\2\\-3\\8\end{bmatrix}$$
 $$\begin{bmatrix}5\space-2\space3\\7\space2\space1.5\end{bmatrix}$$
+
+#### m x n matrix
+
+$$\begin{bmatrix}1\space -2\space 3\\0\space -10\space 4\\1\space 2\space 3\end{bmatrix}$$
