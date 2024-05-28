@@ -5,6 +5,8 @@
 
 ```sh
 sudo codesign --force --deep --sign - /Applications/Eclipse.app
+#
+rm -rf ~/workspace-eclipse/.metadata/.plugins/
 ```
 - https://stackoverflow.com/a/71740449/510222
 
