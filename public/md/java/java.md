@@ -64,6 +64,7 @@
 * [generic](/mib/java/generic)
 * [autoboxing](/mib/java/autoboxing)
 * [annotation](/mib/java/annotation)
+* [synchronized](/mib/java/synchronized)
 * [lambda](/mib/java/lambda)
 * [future](/mib/java/future)
 * [stream](/mib/java/stream)
