@@ -4,7 +4,7 @@
 ## Skill Set
 * Spring Boot
 * Docker
-* MariaDB
+* MySQL
 * Redis
 * Zipkin
 * Next.JS
@@ -38,9 +38,9 @@ git clone https://github.com/zsh-users/zsh-autosuggestions.git
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
 ```
 
-vi ~/.zshrc
-/(gi
-dd
+* vi ~/.zshrc
+* /(gi
+* dd
 
 ```
 plugins=(
@@ -74,7 +74,7 @@ docker compose version
 
 
 
-sudo reboot
+* `sudo reboot`
 
 ### msa sample
 
@@ -86,12 +86,15 @@ cd egovframe-msa-edu/docker-compose/mysql
 docker compose up -d
 ```
 
+```sh
+# check db
 docker exec -it mysql bash
 mysql -u msaportal -p
 msaportal
 show databases;
 exit;
 ctrl + D
+```
 
 ```sh
 docker run -d -e TZ=Asia/Seoul --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:management
