@@ -10,16 +10,17 @@
 * Next.JS
 
 ## MSA on EC2
+- starting order
 
-* config(8888)              : rabbitmq 서버 필요
-* discovery(8761)              : config, rabbitmq 서버 필요
-* apigateway(8000)              : discovery, rabbitmq 서버 필요
-* board-service(0)           port: 0 # random port
-* user-service(0)
-* portal-service(0)
-* reserve-check-service(0)
-* reserve-item-service(0)
-* reserve-request-service(0)
+1. config(8888)              : rabbitmq 서버 필요
+1. discovery(8761)              : config, rabbitmq 서버 필요
+1. apigateway(8000)              : discovery, rabbitmq 서버 필요
+1. board-service(0)           port: 0 # random port
+1. user-service(0)
+1. portal-service(0)
+1. reserve-check-service(0)
+1. reserve-item-service(0)
+1. reserve-request-service(0)
 
 ---
 
