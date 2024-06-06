@@ -19,7 +19,6 @@ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/i
 * 필요조건
   * brew (http://brew.sh)
 
-* `sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"`
 <img src="images/zsh-installed.webp" alt="zsh installed">
 
 * 정상적으로 설치되었다면 cmd+N 으로 zsh로 실행됨
@@ -40,6 +39,10 @@ fi' > ~/.bashrc
   - https://github.com/facebook/zstd/releases/ *.zst extractor zstd-v1.5.5-win64.zip
 - Extract and move to C:\Program Files\Git
 - from: https://medium.com/@leomaurodesenv/setting-up-your-git-bash-zsh-terminals-on-windows-fa94871f440d
+
+```sh
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+```
 
 ## Plugin
 ```sh

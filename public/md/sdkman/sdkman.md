@@ -12,7 +12,7 @@ mv zip.exe /c/Windows
 ```
 * open bash shell
 ```sh
-curl -s "https://get.sdkman.io" | bash`
+curl -s "https://get.sdkman.io" | bash
 ```
 * restart bash shell
 
