@@ -107,16 +107,16 @@ docker run -d -e TZ=Asia/Seoul -p 5672:5672 -p 15672:15672 rabbitmq:management
 docker run -d -e TZ=Asia/Seoul -p 9411:9411 openzipkin/zipkin
 ```
 
-aws 보안 그룹 15672 추가
-http://ipaddress:15672
+* aws 보안 그룹 15672 추가
+  * http://ipaddress:15672
 
-aws 보안 그룹 9411 추가
-http://ipaddress:9411
+* aws 보안 그룹 9411 추가
+  * http://ipaddress:9411
 
 
 
-cd ~/workspace.edu/egovframe-msa-edu/backend/config
-vi ./src/main/resources/application.yml
+* `cd ~/workspace.edu/egovframe-msa-edu/backend/config`
+* `vi ./src/main/resources/application.yml`
 
 ```yaml
       server:
@@ -130,7 +130,6 @@ vi ./src/main/resources/application.yml
 ./gradlew build -x test
 sleep 3
 nohup java -jar build/libs/config-1.0.0.jar&
-# xxx docker build -t config ./
 ```
 
 
@@ -185,12 +184,11 @@ nohup java -jar build/libs/reserve-request-service-1.0.0.jar&
 cd ../../frontend/admin
 ```
 
-vi next.config.js
+* `vi next.config.js`
 
 ```sh
 npm i
 npm run build
-# docker build -t admin .
 
 cd ../portal
 cp .env.local.sample .env.local                     
@@ -199,7 +197,6 @@ vi .env.local
 vi src/constants/env.ts
 npm i
 npm run build
-# docker build -t portal .
 ```
 
 ## To be continued...
