@@ -27,3 +27,4 @@ target
 token.json
 yarn.lock
 *config.json
+coverage

@@ -14,8 +14,8 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
 ```sh
 vi ~/.zshrc
 ```
-/(gi
-dd
+- `/(gi`
+- `dd`
 
 ```sh
 plugins=(
@@ -42,30 +42,26 @@ pnpm setup
 
 ```sh
 sudo usermod -a -G docker ec2-user
-```
-
-```sh
-sudo reboot
-```
-
-```sh
 DOCKER_CONFIG=${DOCKER_CONFIG:-$HOME/.docker}
 mkdir -p $DOCKER_CONFIG/cli-plugins
 ```
 
 - x86
 ```sh
-curl -SL https://github.com/docker/compose/releases/download/v2.27.0/docker-compose-linux-x86_64 -o $DOCKER_CONFIG/cli-plugins/docker-compose
+curl -SL https://github.com/docker/compose/releases/download/v2.27.1/docker-compose-linux-x86_64 -o $DOCKER_CONFIG/cli-plugins/docker-compose
 ```
 - Arm
 ```sh
-curl -SL https://github.com/docker/compose/releases/download/v2.27.0/docker-compose-linux-armv7 -o $DOCKER_CONFIG/cli-plugins/docker-compose
+curl -SL https://github.com/docker/compose/releases/download/v2.27.1/docker-compose-linux-armv7 -o $DOCKER_CONFIG/cli-plugins/docker-compose
 ```
-
 
 ```sh
 chmod +x $DOCKER_CONFIG/cli-plugins/docker-compose
 docker compose version
+```
+
+```sh
+sudo reboot
 ```
 
 ## pip
