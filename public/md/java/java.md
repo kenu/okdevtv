@@ -79,7 +79,6 @@
 * [gradle](/mib/java/gradle)
 * [ant](/mib/java/ant)
 * [lombok](/mib/java/lombok)
-* [httpclient](/mib/java/httpclient)
 * [excel](/mib/java/excel)
 
 ## related
