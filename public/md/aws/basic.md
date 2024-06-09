@@ -79,3 +79,10 @@ touch hello
 cd /data
 ls -altr
 ```
+
+```
+mkdir -p ~/app/.cache ~/app/git ~/app/miniconda3
+ln -s ~/app/.cache ~/.cache
+ln -s ~/app/git ~/git
+ln -s ~/app/miniconda3 ~/miniconda3
+```
