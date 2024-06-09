@@ -29,9 +29,7 @@ plugins=(
 # node
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
 . ~/.zshrc
-nvm i 20
 ```
-
 
 ```sh
 nvm i 20
@@ -64,14 +62,20 @@ docker compose version
 sudo reboot
 ```
 
-## pip
-```sh
-curl -O https://bootstrap.pypa.io/get-pip.py
-sudo python3 get-pip.py
-```
+## Mount Volume
+* g4dn instance
 
 ```sh
-echo 'export PATH=/home/ec2-user/.local/bin:$PATH' >> ~/.zshrc
-. ~/.zshrc
+df -h
+lsblk
+sudo mkfs -t xfs /dev/nvme1n1
+sudo mkdir /data
+sudo mount /dev/nvme1n1 /data
+# mount after reboot
+ln -s /data ~/app
+cd ~/app
+sudo chown ec2-user:ec2-user .
+touch hello
+cd /data
+ls -altr
 ```
-
