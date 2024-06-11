@@ -1,5 +1,10 @@
+#inflearn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 #inflearn img {
-  width: 20rem;
+  width: 8.8rem;
 }
 
 /* Base styles */
@@ -31,8 +36,12 @@ header {
   align-items: center;
 }
 
-#logo_heading h1 {
+#logo_heading h2 {
   margin: 0;
+}
+
+#logo {
+  width: 8.8rem;
 }
 
 nav ul {
@@ -51,7 +60,6 @@ nav a {
 
 aside {
   flex-grow: 1;
-  padding-left: 20px;
 }
 
 .content {
@@ -65,6 +73,10 @@ aside {
   border-radius: 4px;
   box-sizing: border-box;
   margin-bottom: 10px;
+}
+.paypal {
+  text-align: center;
+  margin-top: 2.2rem;
 }
 
 /* Responsive adjustments */

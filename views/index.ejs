@@ -37,17 +37,16 @@
     <!-- Header -->
     <header id="header">
       <!-- Logo -->
-      <h1 id="logo_heading">
+      <h2 id="logo_heading">
         <a href="#"><img src="images/logo.webp" id="logo" alt="okdevtv logo" />OKdevTV</a>
-      </h1>
+      </h2>
 
       <!-- Nav -->
       <nav id="nav">
         <ul>
           <li><a href="/#one">Topic</a></li>
-          <li><a href="/#two">Who I Am</a></li>
+          <li><a href="/#two">Bio</a></li>
           <li><a href="/#contact">Contact</a></li>
-          <li><a href="https://mp4.okdevtv.com">Mp4</a></li>
           <li>
             <a href="/user/<%= (user)? 'mypage' : 'login' %>">
               <%= (user) ? 'My Page' : 'Login' %>
@@ -58,8 +57,10 @@
       <aside>
         <div id="words">컴퓨터가 이해할수 있는 코드는 어느 바보나 다 짤 수 있다. 좋은 프로그래머는 사람이 이해할 수 있는 코드를 짠다. - 마틴 파울러
         </div>
+        <div id="mp4">
+          <a href="https://mp4.okdevtv.com/" title="개발 관련 유튜브 모음">개발 관련 유튜브 모음</a>
+        </div>
         <div id="inflearn">
-          <a href="https://mp4.okdevtv.com/" title="개발 관련 유튜브 모음">개발 관련 유튜브 모음</a> |
           <a href="https://bit.ly/oklearnreact" title="inflearn react api server">
             <img src="/images/inflearn-react-api.webp" alt="inflearn react api server" /></a>
           <br>-50% 할인쿠폰: 15108-f2af1e086101
@@ -97,7 +98,6 @@
       <div class="content box style2">
         <header>
           <h2>토픽</h2>
-          <p><a href="/okdevtv-list?p=CastAll">최근 방송 목록</a></p>
         </header>
         <h3>아티클, 저널, 블로그</h3>
         <ul>
@@ -177,7 +177,7 @@
     <section id="two">
       <div>
         <header>
-          <h2>Who I Am</h2>
+          <h2>Bio</h2>
         </header>
         <h3>허광남 OKKY 공동대표</h3>
         <ul>
@@ -229,7 +229,7 @@
               </div>
             </div>
           </form>
-          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" class="paypal">
             <input type="hidden" name="cmd" value="_s-xclick" />
             <input type="hidden" name="hosted_button_id" value="XMMGV95ADN77S" />
             <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" name="submit"
