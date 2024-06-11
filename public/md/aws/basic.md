@@ -76,6 +76,7 @@ sudo mount /dev/nvme1n1 /data
 ln -s /data ~/app
 cd ~/app
 sudo chown ec2-user:ec2-user .
+# sudo chown ubuntu:ubuntu .
 touch hello
 cd /data
 ls -altr
@@ -96,11 +97,12 @@ sudo apt install zsh git zip unzip -y
 ```
 
 ```sh
+sudo snap install docker dust
+```
+
+```sh
 sudo groupadd docker
 sudo usermod -aG docker ${USER}
 sudo reboot
 ```
 
-```sh
-sudo snap install dust
-```
