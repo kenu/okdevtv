@@ -1,5 +1,6 @@
 # ec2 basic install
 
+## Amazon Linux 2023
 ```sh
 sudo dnf install zsh git util-linux-user htop maven docker -y
 
@@ -85,4 +86,21 @@ mkdir -p ~/app/.cache ~/app/git ~/app/miniconda3
 ln -s ~/app/.cache ~/.cache
 ln -s ~/app/git ~/git
 ln -s ~/app/miniconda3 ~/miniconda3
+```
+
+
+## Ubuntu
+
+```sh
+sudo apt install zsh git zip unzip -y
+```
+
+```sh
+sudo groupadd docker
+sudo usermod -aG docker ${USER}
+sudo reboot
+```
+
+```sh
+sudo snap install dust
 ```
