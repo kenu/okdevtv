@@ -4,6 +4,7 @@
 <head>
   <title>OKdevTV!</title>
   <meta name="viewport" content="width=device-width, user-scalable=yes" />
+
   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
   <meta name="description" content="tv, dev, ok, devTools, JavaScript, Node.js, Python, eclipse, java" />
   <meta name="keywords" content="tv, dev, js" />
@@ -23,289 +24,271 @@
   <link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
   <link rel="manifest" href="/manifest.json" />
-  <link rel="stylesheet" href="/css/style2.css">
   <meta name="msapplication-TileColor" content="#ffffff" />
   <meta name="msapplication-TileImage" content="/favicon/ms-icon-144x144.png" />
   <meta name="theme-color" content="#ffffff" />
+  <link rel="stylesheet" href="/css/style2.css">
   <script src="js/jquery.min.js" defer></script>
-  <script src="js/jquery.poptrox.min.js" defer></script>
-  <script src="js/skel.min.js" defer></script>
-  <script src="js/init.js" defer></script>
   <script src="js/okdevtv.js" defer></script>
 </head>
 
 <body>
-  <!-- Header -->
-  <header id="header">
-    <!-- Logo -->
-    <h1 id="logo_heading">
-      <a href="#"><img src="images/logo.webp" id="logo" alt="okdevtv logo" />OKdevTV</a>
-    </h1>
+  <div id="wrap">
+    <!-- Header -->
+    <header id="header">
+      <!-- Logo -->
+      <h1 id="logo_heading">
+        <a href="#"><img src="images/logo.webp" id="logo" alt="okdevtv logo" />OKdevTV</a>
+      </h1>
 
-    <!-- Nav -->
-    <nav id="nav">
-      <ul>
-        <li><a href="/#one">Topic</a></li>
-        <li><a href="/#two">Who I Am</a></li>
-        <li><a href="https://mp4.okdevtv.com">Mp4</a></li>
-        <li><a href="/#contact">Contact</a></li>
-        <li><a href="https://github.com/kenu/okdevtv/issues" target="_blank" title="GitHub Issues">Issues</a></li>
-        <li>
-          <a href="/user/<%= (user)? 'mypage' : 'login' %>">
-            <%= (user) ? 'My Page' : 'Login' %>
-          </a>
-        </li>
-      </ul>
-    </nav>
-    <aside>
-      <div id="words">컴퓨터가 이해할수 있는 코드는 어느 바보나 다 짤 수 있다. 좋은 프로그래머는 사람이 이해할 수 있는 코드를 짠다. - 마틴 파울러
-      </div>
-      <div id="inflearn">
-        <a href="https://mp4.okdevtv.com/" title="개발 관련 유튜브 모음">개발 관련 유튜브 모음</a> |
-        <a href="https://bit.ly/oklearnreact" title="inflearn react api server">
-          <img src="/images/inflearn-react-api.webp" alt="inflearn react api server" /></a>-50% 할인쿠폰: 15108-f2af1e086101
-      </div>
-    </aside>
-  </header>
-  <section id="zero" class="main style3 right dark">
-    <div class="content small">
-      <h3>About OKdevTV</h3>
-      <p><a href="/okdevtv-list?p=CastAll" class="latest">최근 방송 목록!</a></p>
-      <p>
-        <strong>OKdevTV</strong>는 프로그래밍을 시작하는 사람들을 위한 개인
-        방송입니다.
-      </p>
-      <p>
-        자바, 자바스크립트, Node.js, MariaDB, MongoDB, 개발도구, IntelliJ,
-        안드로이드 등을 방송에서 다루었고, 다양한 기술을 블로그나 뉴스 등을
-        함께 보면서 리뷰합니다.
-      </p>
-    </div>
-    <ul id="posts">
-      <li><a href="/mib/ollama" title="ollama">Ollama</a></li>
-      <li><a href="/mib/aws/basic" title="aws basic">aws basic install</a></li>
-      <li><a href="/mib/ai" title="add">ai driven development</a></li>
-      <li><a href="/mib/zsh" title="zsh">zsh</a></li>
-      <li><a href="/mib/sdkman" title="sdkman">sdkman</a></li>
-      <li><a href="/mib/nodejs/nvm" title="nvm">nvm</a></li>
-      <li><a href="/mib/nodejs/npmjs" title="npmjs">npmjs</a></li>
-      <li><a href="/mib/spring" title="spring">spring</a></li>
-      <li><a href="/mib/php" title="php">php</a></li>
-      <li><a href="/mib/nginx" title="nginx">nginx</a></li>
-      <li><a href="/mib/letsencrypt" title="letsencrypt">Let's Encrypt</a></li>
-      <li><a href="/mib/mariadb" title="mariadb">MariaDB</a></li>
-    </ul>
-  </section>
-  <!-- Topic -->
-  <section id="one" class="main style2 right dark fullscreen">
-    <div class="content box style2">
-      <header>
-        <h2>토픽</h2>
-      </header>
-      <p><a href="/okdevtv-list?p=CastAll" style="font-weight: 700;">최근 방송 목록</a></p>
-      <h3>아티클, 저널, 블로그</h3>
-      <ul>
-        <li><a href="/mib/java/jsp">JSP JavaServer Pages</a></li>
-        <li><a href="/mib/java/servlet">Servlet with maven</a></li>
-        <li><a href="https://okjsp.tistory.com/1165644328">✨ 코드 잘 짜는 방법</a></li>
-        <li><a href="/mib/tour">🥘 Tour</a></li>
-        <li><a href="/mib/utm">✨ mac m1 windows vm with UTM</a></li>
-        <li><a href="/mib/prettier">Prettier</a></li>
-        <li><a href="/mib/article/kenu20070908">유물 Kenu인터뷰</a></li>
-        <li><a href="/mib/spring/validation">입력값 검증</a></li>
-        <li><a href="/mib/opensource">오픈 소스 소프트웨어</a></li>
-        <li><a href="/mib/vite">Vite</a></li>
-        <li><a href="/mib/oauth2">OAuth 2.0</a></li>
-        <li><a href="/mib/devprocess">개발 프로젝트 진행 순서</a></li>
-        <li><a href="/mib/ngrok">localhost 외부 테스트 #ngrok</a></li>
-        <li><a href="/mib/data">개발을 위한 데이터</a></li>
-        <li><a href="/mib/devtools/devtools">크롬 데브툴</a></li>
-        <li><a href="/mib/spring/thymeleaf">Thymeleaf 자바 템플릿 엔진</a></li>
-        <li><a href="/mib/rust">Rust 시작하기</a></li>
-        <li><a href="/mib/vscode/online">VSCode 온라인</a></li>
-        <li><a href="/mib/refactor">자주 사용하는 리팩토링</a></li>
-        <li><a href="/mib/intellij/shortcuts">개발도구 단축키</a></li>
-        <li><a href="/mib/err">에러 모음</a></li>
-        <li><a href="/mib/nginx">Nginx 정말 가벼운 웹서버</a></li>
-        <li>
-          <a href="/mib/article/20200208-sireview">10년만에 SI 일하면서 배운 것들</a>
-        </li>
-        <li><a href="/mib/article/ppark">개발하면서 제일 빡칠 때</a></li>
-      </ul>
-      <h3>언어</h3>
-      <ul>
-        <li><a href="/mib/js">JavaScript</a></li>
-        <li><a href="/mib/html">HTML</a></li>
-        <li><a href="/mib/css">CSS</a></li>
-        <li><a href="/mib/java">Java</a></li>
-      </ul>
-      <h3>라이브러리, 프레임워크</h3>
-      <ul>
-        <li><a href="/mib/nodejs">node.js</a></li>
-        <li><a href="/mib/jquery">jQuery</a></li>
-        <li><a href="/mib/spring">Spring</a></li>
-        <li><a href="/mib/egov">eGovFrame</a></li>
-        <li><a href="/mib/android">Android</a></li>
-      </ul>
-
-      <h3>개발도구</h3>
-      <ul>
-        <li><a href="/mib/eclipse">Eclipse</a></li>
-        <li><a href="/mib/intellij/classroom">IntelliJ</a></li>
-        <li><a href="/mib/git">Git</a></li>
-        <li><a href="/mib/java/maven">Maven</a></li>
-      </ul>
-      <h3>번역</h3>
-      <ul>
-        <li>
-          <a href="kr/socket.io-chat-kr.html">socket.io기반 채팅 만들기</a>
-        </li>
-        <li>
-          <a href="http://kenu.github.io/tomcat70/docs">아파치 톰캣 7 문서</a>
-        </li>
-        <li><a href="/mib/mean">MEAN.io</a></li>
-      </ul>
-      <h3>기타</h3>
-      <ul>
-        <li><a href="/mib/mongodb">MongoDB</a></li>
-        <li><a href="/mib/mongodb_nodejs">MongoDB와 Node.js</a></li>
-        <li><a href="tip/javakr.html">자바 한글 파라미터 인코딩</a></li>
-        <li><a href="tip/nodehosting.html">nodejs hosting</a></li>
-        <li><a href="/md/list.html" target="_blank">관심 사항</a></li>
-      </ul>
-    </div>
-    <a href="#two" class="button style2 down anchored">Next</a>
-  </section>
-
-  <!-- Two -->
-  <section id="two" class="main style2 left dark fullscreen">
-    <div class="content box style2">
-      <header>
-        <h2>Who I Am</h2>
-      </header>
-      <h3>허광남 OKKY 공동대표</h3>
-      <ul>
-        <li>
-          okky.kr 사이트 공동대표
-          <ul>
-            <li>- 일 방문 60,000명의 국내 주요 개발자 커뮤니티</li>
-          </ul>
-        </li>
-        <li>okdevtv.com 프로그래밍 방송 BJ</li>
-        <li>'12~'24 전자정부 표준프레임워크 에반젤리스트</li>
-        <li>前 '18~'19 펫프렌즈 CTO</li>
-        <li>前 '17~'18 헬로네이처 CTO</li>
-        <li>
-          前 '15~'17 GS SHOP 벤처투자팀
-          <a href="https://en.wikipedia.org/wiki/Center_of_excellence" target="_blank">CoE</a>
-          파트
-        </li>
-      </ul>
-    </div>
-    <a href="#work" class="button style2 down anchored">Next</a>
-  </section>
-
-  <!-- Work -->
-  <section id="work" class="main style3 primary">
-    <div class="content ">
-      <header>
-        <h2>My Work</h2>
+      <!-- Nav -->
+      <nav id="nav">
+        <ul>
+          <li><a href="/#one">Topic</a></li>
+          <li><a href="/#two">Who I Am</a></li>
+          <li><a href="/#contact">Contact</a></li>
+          <li><a href="https://mp4.okdevtv.com">Mp4</a></li>
+          <li>
+            <a href="/user/<%= (user)? 'mypage' : 'login' %>">
+              <%= (user) ? 'My Page' : 'Login' %>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <aside>
+        <div id="words">컴퓨터가 이해할수 있는 코드는 어느 바보나 다 짤 수 있다. 좋은 프로그래머는 사람이 이해할 수 있는 코드를 짠다. - 마틴 파울러
+        </div>
+        <div id="inflearn">
+          <a href="https://mp4.okdevtv.com/" title="개발 관련 유튜브 모음">개발 관련 유튜브 모음</a> |
+          <a href="https://bit.ly/oklearnreact" title="inflearn react api server">
+            <img src="/images/inflearn-react-api.webp" alt="inflearn react api server" /></a>
+          <br>-50% 할인쿠폰: 15108-f2af1e086101
+        </div>
+      </aside>
+    </header>
+    <section id="zero" class="main style3 right dark">
+      <div class="content small">
+        <h3>About OKdevTV</h3>
+        <p><a href="/okdevtv-list?p=CastAll" class="latest">최근 방송 목록!</a></p>
         <p>
-          1984년 중학교 1학년 때부터 애플 베이직으로 프로그래밍을 해왔습니다.
-          이것 저것 컴퓨터로 만든 작품을 올리고 싶지만, 제가 참여한 최근의
-          프로젝트들을 올리겠습니다.
+          <strong>OKdevTV</strong>는 프로그래밍을 시작하는 사람들을 위한 개인 방송입니다.
         </p>
-      </header>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact" class="main style3 secondary">
-    <div class="content ">
-      <header>
-        <h2>Contact</h2>
-        <p>Say What You Want (email은 비공개)</p>
-      </header>
-      <div class="box  small">
-        <form method="post" id="form">
-          <div class="row half">
-            <div class="12u" id="result"></div>
-            <div class="6u">
-              <input type="text" name="name" id="name" placeholder="Name" required />
-            </div>
-            <div class="6u">
-              <input type="email" name="email" id="email" placeholder="Email (Not published)" required />
-            </div>
-          </div>
-          <div class="row half">
-            <div class="12u">
-              <textarea name="message" id="message" placeholder="Message" rows="6" required></textarea>
-            </div>
-          </div>
-          <div class="row">
-            <div class="12u">
-              <ul class="actions">
-                <li>
-                  <input type="submit" class="button" id="send" value="Send Message" />
-                </li>
-              </ul>
-            </div>
-          </div>
-        </form>
-        <div id="list"></div>
-        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-          <input type="hidden" name="cmd" value="_s-xclick" />
-          <input type="hidden" name="hosted_button_id" value="XMMGV95ADN77S" />
-          <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" name="submit"
-            alt="PayPal - The safer, easier way to pay online!" />
-          <img alt="" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1" />
-        </form>
+        <p>
+          GPT, AI, 자바, 자바스크립트, Node.js, MariaDB, MongoDB, 개발도구, IntelliJ 등을 방송에서 다루었고, 다양한 기술을 블로그나 뉴스 등을 함께 보면서 리뷰합니다.
+        </p>
       </div>
-    </div>
+      <ul id="posts">
+        <li><a href="/mib/ollama" title="ollama">Ollama</a></li>
+        <li><a href="/mib/aws/basic" title="aws basic">aws basic install</a></li>
+        <li><a href="/mib/ai" title="add">ai driven development</a></li>
+        <li><a href="/mib/zsh" title="zsh">zsh</a></li>
+        <li><a href="/mib/sdkman" title="sdkman">sdkman</a></li>
+        <li><a href="/mib/nodejs/nvm" title="nvm">nvm</a></li>
+        <li><a href="/mib/nodejs/npmjs" title="npmjs">npmjs</a></li>
+        <li><a href="/mib/spring" title="spring">spring</a></li>
+        <li><a href="/mib/php" title="php">php</a></li>
+        <li><a href="/mib/nginx" title="nginx">nginx</a></li>
+        <li><a href="/mib/letsencrypt" title="letsencrypt">Let's Encrypt</a></li>
+        <li><a href="/mib/mariadb" title="mariadb">MariaDB</a></li>
+      </ul>
+    </section>
+    <!-- Topic -->
+    <section id="one">
+      <div class="content box style2">
+        <header>
+          <h2>토픽</h2>
+          <p><a href="/okdevtv-list?p=CastAll">최근 방송 목록</a></p>
+        </header>
+        <h3>아티클, 저널, 블로그</h3>
+        <ul>
+          <li><a href="/mib/java/jsp">JSP JavaServer Pages</a></li>
+          <li><a href="/mib/java/servlet">Servlet with maven</a></li>
+          <li><a href="https://okjsp.tistory.com/1165644328">✨ 코드 잘 짜는 방법</a></li>
+          <li><a href="/mib/tour">🥘 Tour</a></li>
+          <li><a href="/mib/utm">✨ mac m1 windows vm with UTM</a></li>
+          <li><a href="/mib/prettier">Prettier</a></li>
+          <li><a href="/mib/article/kenu20070908">유물 Kenu인터뷰</a></li>
+          <li><a href="/mib/spring/validation">입력값 검증</a></li>
+          <li><a href="/mib/opensource">오픈 소스 소프트웨어</a></li>
+          <li><a href="/mib/vite">Vite</a></li>
+          <li><a href="/mib/oauth2">OAuth 2.0</a></li>
+          <li><a href="/mib/devprocess">개발 프로젝트 진행 순서</a></li>
+          <li><a href="/mib/ngrok">localhost 외부 테스트 #ngrok</a></li>
+          <li><a href="/mib/data">개발을 위한 데이터</a></li>
+          <li><a href="/mib/devtools/devtools">크롬 데브툴</a></li>
+          <li><a href="/mib/spring/thymeleaf">Thymeleaf 자바 템플릿 엔진</a></li>
+          <li><a href="/mib/rust">Rust 시작하기</a></li>
+          <li><a href="/mib/vscode/online">VSCode 온라인</a></li>
+          <li><a href="/mib/refactor">자주 사용하는 리팩토링</a></li>
+          <li><a href="/mib/intellij/shortcuts">개발도구 단축키</a></li>
+          <li><a href="/mib/err">에러 모음</a></li>
+          <li><a href="/mib/nginx">Nginx 정말 가벼운 웹서버</a></li>
+          <li>
+            <a href="/mib/article/20200208-sireview">10년만에 SI 일하면서 배운 것들</a>
+          </li>
+          <li><a href="/mib/article/ppark">개발하면서 제일 빡칠 때</a></li>
+        </ul>
+        <h3>언어</h3>
+        <ul>
+          <li><a href="/mib/js">JavaScript</a></li>
+          <li><a href="/mib/html">HTML</a></li>
+          <li><a href="/mib/css">CSS</a></li>
+          <li><a href="/mib/java">Java</a></li>
+        </ul>
+        <h3>라이브러리, 프레임워크</h3>
+        <ul>
+          <li><a href="/mib/nodejs">node.js</a></li>
+          <li><a href="/mib/jquery">jQuery</a></li>
+          <li><a href="/mib/spring">Spring</a></li>
+          <li><a href="/mib/egov">eGovFrame</a></li>
+          <li><a href="/mib/android">Android</a></li>
+        </ul>
 
-    <div id="fb-root"></div>
-    <script>
-      (function (d, s, id) {
-        const fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        const js = d.createElement(s);
-        js.id = id;
-        js.src =
-          '//connect.facebook.net/ko_KR/sdk.js#xfbml=1&appId=1417763368476376&version=v2.0';
-        fjs.parentNode.insertBefore(js, fjs);
-      })(document, 'script', 'facebook-jssdk');
-    </script>
-    <div class="fb-comments" data-href="https://okdevtv.com/" data-width="630" data-numposts="5"
-      data-colorscheme="light"></div>
-  </section>
+        <h3>개발도구</h3>
+        <ul>
+          <li><a href="/mib/git">Git</a></li>
+          <li><a href="/mib/java/maven">Maven</a></li>
+          <li><a href="/mib/intellij/classroom">IntelliJ</a></li>
+          <li><a href="/mib/eclipse">Eclipse</a></li>
+        </ul>
+        <h3>번역</h3>
+        <ul>
+          <li>
+            <a href="kr/socket.io-chat-kr.html">socket.io기반 채팅 만들기</a>
+          </li>
+          <li>
+            <a href="http://kenu.github.io/tomcat70/docs">아파치 톰캣 7 문서</a>
+          </li>
+          <li><a href="/mib/mean">MEAN.io</a></li>
+        </ul>
+        <h3>기타</h3>
+        <ul>
+          <li><a href="/mib/mongodb">MongoDB</a></li>
+          <li><a href="/mib/mongodb_nodejs">MongoDB와 Node.js</a></li>
+          <li><a href="tip/javakr.html">자바 한글 파라미터 인코딩</a></li>
+          <li><a href="tip/nodehosting.html">nodejs hosting</a></li>
+          <li><a href="/md/list.html" target="_blank">관심 사항</a></li>
+        </ul>
+      </div>
+      <a href="#two" class="button style2 down anchored">Next</a>
+    </section>
 
-  <!-- Footer -->
-  <footer id="footer">
-    <!--
+    <!-- Two -->
+    <section id="two">
+      <div>
+        <header>
+          <h2>Who I Am</h2>
+        </header>
+        <h3>허광남 OKKY 공동대표</h3>
+        <ul>
+          <li>
+            okky.kr 사이트 공동대표
+            <ul>
+              <li>- 일 방문 60,000명의 국내 주요 개발자 커뮤니티</li>
+            </ul>
+          </li>
+          <li>okdevtv.com 프로그래밍 방송 BJ</li>
+          <li>'12~'24 전자정부 표준프레임워크 에반젤리스트</li>
+          <li>前 '18~'19 펫프렌즈 CTO</li>
+          <li>前 '17~'18 헬로네이처 CTO</li>
+          <li>
+            前 '15~'17 GS SHOP 벤처투자팀
+            <a href="https://en.wikipedia.org/wiki/Center_of_excellence" target="_blank">CoE</a>
+            파트
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="main style3 secondary">
+      <div class="content ">
+        <header>
+          <h2>Contact</h2>
+          <p>Say What You Want (email은 비공개)</p>
+        </header>
+        <div class="box  small">
+          <form method="post" id="form">
+            <div class="row half">
+              <div id="result"></div>
+              <div>
+                <input type="text" name="name" id="name" placeholder="Name" required />
+              </div>
+              <div>
+                <input type="email" name="email" id="email" placeholder="Email (Not published)" required />
+              </div>
+            </div>
+            <div class="row half">
+              <div>
+                <textarea name="message" id="message" placeholder="Message" rows="6" required></textarea>
+              </div>
+            </div>
+            <div class="row">
+              <div>
+                <ul class="actions">
+                  <li>
+                    <input type="submit" class="button" id="send" value="Send Message" />
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </form>
+          <div id="list"></div>
+          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+            <input type="hidden" name="cmd" value="_s-xclick" />
+            <input type="hidden" name="hosted_button_id" value="XMMGV95ADN77S" />
+            <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" name="submit"
+              alt="PayPal - The safer, easier way to pay online!" />
+            <img alt="" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1" />
+          </form>
+        </div>
+      </div>
+
+      <div id="fb-root"></div>
+      <script>
+        (function (d, s, id) {
+          const fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          const js = d.createElement(s);
+          js.id = id;
+          js.src =
+            '//connect.facebook.net/ko_KR/sdk.js#xfbml=1&appId=1417763368476376&version=v2.0';
+          fjs.parentNode.insertBefore(js, fjs);
+        })(document, 'script', 'facebook-jssdk');
+      </script>
+      <div class="fb-comments" data-href="https://okdevtv.com/" data-width="630" data-numposts="5"
+        data-colorscheme="light"></div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+      <!--
 				     Social Icons
 				     Use anything from here: http://fortawesome.github.io/Font-Awesome/cheatsheet/)
 				-->
-    <ul class="actions">
-      <li>
-        <a href="http://okky.kr" class="fa solo fa-users"><span>OKKY</span></a>
-      </li>
-      <li>
-        <a href="http://github.com/kenu" class="fa solo fa-github"><span>GitHub</span></a>
-      </li>
-      <li>
-        <a href="http://twitter.com/kenu0000" class="fa solo fa-twitter"><span>Twitter</span></a>
-      </li>
-      <li>
-        <a href="https://www.facebook.com/kenu.heo" class="fa solo fa-facebook"><span>Facebook</span></a>
-      </li>
-    </ul>
+      <ul class="actions">
+        <li>
+          <a href="http://okky.kr" class="fa solo fa-users"><span>OKKY</span></a>
+        </li>
+        <li>
+          <a href="http://github.com/kenu" class="fa solo fa-github"><span>GitHub</span></a>
+        </li>
+        <li>
+          <a href="http://twitter.com/kenu0000" class="fa solo fa-twitter"><span>Twitter</span></a>
+        </li>
+        <li>
+          <a href="https://www.facebook.com/kenu.heo" class="fa solo fa-facebook"><span>Facebook</span></a>
+        </li>
+      </ul>
 
-    <!-- Menu -->
-    <ul class="menu">
-      <li>&copy; <a href="https://github.com/kenu/okdevtv">OKdevTV</a></li>
-      <li>Design: <a href="http://html5up.net/">HTML5 UP</a></li>
-    </ul>
-  </footer>
+      <!-- Menu -->
+      <ul class="menu">
+        <li>&copy; <a href="https://github.com/kenu/okdevtv">OKdevTV</a></li>
+        <li>Design: <a href="http://html5up.net/">HTML5 UP</a></li>
+      </ul>
+    </footer>
+
+  </div>
   <script>
     (function (w, i, d, g, e, t, s) {
       w[d] = w[d] || [];
