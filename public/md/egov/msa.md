@@ -185,7 +185,7 @@ cd ../../frontend/admin
 ```
 
 * `vi next.config.js`
-
+  - `localhost` to `ipaddress`
 ```sh
 npm i
 npm run build
