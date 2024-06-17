@@ -184,9 +184,9 @@ nohup java -jar build/libs/reserve-request-service-1.0.0.jar&
 cd ../../frontend/admin
 ```
 
-* `vi next.config.js`
-  - `localhost` to `ipaddress`
 ```sh
+vi next.config.js
+#  `localhost` to `ipaddress`
 npm i
 npm run build
 
@@ -194,7 +194,9 @@ cd ../portal
 cp .env.local.sample .env.local                     
 vi .env.local
 
+vi next.config.js
 vi src/constants/env.ts
+# `localhost` to `ipaddress`
 npm i
 npm run build
 ```
