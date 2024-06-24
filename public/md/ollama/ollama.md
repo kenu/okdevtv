@@ -25,30 +25,20 @@ bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
 rm -rf ~/miniconda3/miniconda.sh
 ~/miniconda3/bin/conda init zsh
 . ~/.zshrc
-# conda install python=3.10.14
+conda install python=3.11.9
 ```
 
 ## Install open-webui
 ```sh
-take ~/git
-git clone https://github.com/open-webui/open-webui.git
-cd ~/git/open-webui/
-
-# Copying required .env file
-cp -RPp .env.example .env
+pip install open-webui
 ```
 
-## build and run open-webui
+## run open-webui
 ```sh
-# Building Frontend Using Node
-pnpm i
-pnpm run build
-
-# Serving Frontend with the Backend
-cd ./backend
-pip install -r requirements.txt -U
-bash start.sh
+open-webui serve
 ```
+
+- 8080port
 
 ## related
 * [open-webui](/mib/ollama/webui)
