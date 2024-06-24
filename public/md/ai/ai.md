@@ -31,3 +31,4 @@
 
 ### API
 - https://platform.openai.com/
+- https://www.perplexity.ai/settings/api
