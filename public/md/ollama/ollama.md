@@ -38,7 +38,7 @@ pip install open-webui
 open-webui serve
 ```
 
-- 8080port
+- 8080 port
 
 ## related
 * [open-webui](/mib/ollama/webui)
