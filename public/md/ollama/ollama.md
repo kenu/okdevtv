@@ -8,6 +8,16 @@
 ```sh
 curl -fsSL https://ollama.com/install.sh | sh
 ```
+- `NVIDIA installed` message check
+- or run again
+
+```sh
+sudo su
+mv /usr/share/ollama/.ollama/ /data/.ollama/
+ln -s /data/.ollama /usr/share/ollama/.ollama
+ls -al /usr/share/ollama
+exit
+```
 
 ```sh
 ollama pull llama3

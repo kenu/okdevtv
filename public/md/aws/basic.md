@@ -2,7 +2,7 @@
 
 ## Amazon Linux 2023
 ```sh
-sudo dnf install zsh git util-linux-user htop maven docker -y
+sudo dnf install zsh git util-linux-user htop -y
 
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ```
@@ -82,13 +82,20 @@ cd /data
 ls -altr
 ```
 
-```
+```sh
 mkdir -p ~/app/.cache ~/app/git ~/app/miniconda3
 ln -s ~/app/.cache ~/.cache
 ln -s ~/app/git ~/git
 ln -s ~/app/miniconda3 ~/miniconda3
 ```
 
+```sh
+wget https://github.com/bootandy/dust/releases/download/v1.0.0/dust-v1.0.0-x86_64-unknown-linux-gnu.tar.gz
+tar xvfz dust-v1.0.0-x86_64-unknown-linux-gnu.tar.gz
+sudo mv dust-v1.0.0-x86_64-unknown-linux-gnu/dust /usr/local/bin
+rm -rf dust-v1.0.0-x86_64-unknown-linux-gnu*
+sudo dust /
+```
 
 ## Ubuntu
 
