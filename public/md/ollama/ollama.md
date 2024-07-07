@@ -13,6 +13,9 @@ curl -fsSL https://ollama.com/install.sh | sh
 
 ```sh
 sudo su
+```
+
+```sh
 mv /usr/share/ollama/.ollama/ /data/.ollama/
 ln -s /data/.ollama /usr/share/ollama/.ollama
 ls -al /usr/share/ollama
