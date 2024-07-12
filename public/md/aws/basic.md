@@ -26,43 +26,6 @@ plugins=(
 )
 ```
 
-```sh
-# node
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
-. ~/.zshrc
-```
-
-```sh
-nvm i 20
-npm i -g pnpm
-pnpm setup
-. ~/.zshrc
-```
-
-```sh
-sudo usermod -a -G docker ec2-user
-DOCKER_CONFIG=${DOCKER_CONFIG:-$HOME/.docker}
-mkdir -p $DOCKER_CONFIG/cli-plugins
-```
-
-- x86
-```sh
-curl -SL https://github.com/docker/compose/releases/download/v2.27.1/docker-compose-linux-x86_64 -o $DOCKER_CONFIG/cli-plugins/docker-compose
-```
-- Arm
-```sh
-curl -SL https://github.com/docker/compose/releases/download/v2.27.1/docker-compose-linux-armv7 -o $DOCKER_CONFIG/cli-plugins/docker-compose
-```
-
-```sh
-chmod +x $DOCKER_CONFIG/cli-plugins/docker-compose
-docker compose version
-```
-
-```sh
-sudo reboot
-```
-
 ## Mount Volume
 * g4dn instance
 
@@ -96,6 +59,46 @@ sudo mv dust-v1.0.0-x86_64-unknown-linux-gnu/dust /usr/local/bin
 rm -rf dust-v1.0.0-x86_64-unknown-linux-gnu*
 sudo dust /
 ```
+
+## Node.js, Docker
+
+```sh
+# node
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+. ~/.zshrc
+```
+
+```sh
+nvm i 20
+npm i -g pnpm
+pnpm setup
+. ~/.zshrc
+```
+
+```sh
+sudo usermod -a -G docker ec2-user
+DOCKER_CONFIG=${DOCKER_CONFIG:-$HOME/.docker}
+mkdir -p $DOCKER_CONFIG/cli-plugins
+```
+
+- x86
+```sh
+curl -SL https://github.com/docker/compose/releases/download/v.2.28.1/docker-compose-linux-x86_64 -o $DOCKER_CONFIG/cli-plugins/docker-compose
+```
+- Arm
+```sh
+curl -SL https://github.com/docker/compose/releases/download/v.2.28.1/docker-compose-linux-armv7 -o $DOCKER_CONFIG/cli-plugins/docker-compose
+```
+
+```sh
+chmod +x $DOCKER_CONFIG/cli-plugins/docker-compose
+docker compose version
+```
+
+```sh
+sudo reboot
+```
+
 
 ## Ubuntu
 

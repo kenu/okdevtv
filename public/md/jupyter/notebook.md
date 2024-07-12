@@ -20,6 +20,20 @@ pip install jupyter notebook
 ```
 
 ```bash
+jupyter server --generate-config
+vi /home/ec2-user/.jupyter/jupyter_server_config.py
+# change `remote` to True
+```
+
+```bash
+jupyter server password
+# 1234 / 1234
+jupyter-notebook
+```
+
+- install nginx for reverse proxy
+## 
+```bash
 sudo dnf install nginx -y
 sudo vi /etc/nginx/nginx.conf
 ```
@@ -41,15 +55,9 @@ sudo vi /etc/nginx/nginx.conf
     }
 ```
 
-```bash
+```sh
 sudo systemctl start nginx
-jupyter server --generate-config
-vi /home/ec2-user/.jupyter/jupyter_server_config.py
-# change `remote` to True
 ```
+- open in the browser
 
-```bash
-jupyter server password
-# 1234 / 1234
-jupyter-notebook
-```
+## EOF
