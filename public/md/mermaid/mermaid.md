@@ -80,3 +80,9 @@ $$\begin{bmatrix}5\space-2\space3\\7\space2\space1.5\end{bmatrix}$$
 #### m x n matrix
 
 $$\begin{bmatrix}1\space -2\space 3\\0\space -10\space 4\\1\space 2\space 3\end{bmatrix}$$
+
+---
+
+$$\begin{pmatrix} 1 & 1 & 2 \\ -1 & 2 & 1 \ \end{pmatrix}$$
+
+$$\text{det} = 1(-1) - (-1)(2) = -1 + 2 = 1$$
