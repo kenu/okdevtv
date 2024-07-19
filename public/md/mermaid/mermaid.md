@@ -57,32 +57,45 @@ graph LR
 ```
 
 - polar form
-$$a+ib = r(cos\theta+i sin\theta)$$
+```mermaid
+graph LR
+  A["$$a+ib = r(cos\theta+i sin\theta)$$"]
+```
+
 - exponential form
-$$a+ib=re^{i\theta}$$
+```mermaid
+graph LR
+  A["$$a+ib=re^{i\theta}$$"]
+```
 
-$$1+i
-=\sqrt{2}(cos(\frac{\pi}{4})+i sin(\frac{\pi}{4}))
-=\sqrt{2}e^{i\frac{\pi}{4}}$$
+```mermaid
+graph LR
+  B["$$1+i=\sqrt{2}(cos(\frac{\pi}{4})+i sin(\frac{\pi}{4}))=\sqrt{2}e^{i\frac{\pi}{4}}$$"]
+```
 
-$$2\sqrt{2}e^{i\frac{\pi}{4}}$$
-$$2\sqrt{2}e^{i\frac{-\pi}{2}}$$
-$$2\sqrt{2}e^{i\frac{3\pi}{4}}$$
+```mermaid
+graph LR
+  A["$$2\sqrt{2}e^{i\frac{\pi}{4}}$$"]
+  A["$$2\sqrt{2}e^{i\frac{-\pi}{2}}$$"]
+  A["$$2\sqrt{2}e^{i\frac{3\pi}{4}}$$"]
 
-$$e^{i\frac{\pi}{5}}e^{i\frac{\pi}{3}} = e^{i\frac{8\pi}{15}}$$
+  A["$$e^{i\frac{\pi}{5}}e^{i\frac{\pi}{3}} = e^{i\frac{8\pi}{15}}$$"]
+```
 
 ### Matricies
-
-$$\begin{bmatrix}1\space -2\\0\space -10\end{bmatrix}$$
-$$\begin{bmatrix}1\\2\\-3\\8\end{bmatrix}$$
-$$\begin{bmatrix}5\space-2\space3\\7\space2\space1.5\end{bmatrix}$$
+```mermaid
+graph LR
+  A["$$\begin{bmatrix}1\space -2\\0\space -10\end{bmatrix}$$"]
+  A["$$\begin{bmatrix}1\\2\\-3\\8\end{bmatrix}$$"]
+  A["$$\begin{bmatrix}5\space-2\space3\\7\space2\space1.5\end{bmatrix}$$"]
+```
 
 #### m x n matrix
+```mermaid
+graph LR
+  A["$$\begin{bmatrix}1\space -2\space 3\\0\space -10\space 4\\1\space 2\space 3\end{bmatrix}$$"]
 
-$$\begin{bmatrix}1\space -2\space 3\\0\space -10\space 4\\1\space 2\space 3\end{bmatrix}$$
+  B["$$\begin{pmatrix} 1 & 1 & 2 \\ -1 & 2 & 1 \ \end{pmatrix}$$"]
 
----
-
-$$\begin{pmatrix} 1 & 1 & 2 \\ -1 & 2 & 1 \ \end{pmatrix}$$
-
-$$\text{det} = 1(-1) - (-1)(2) = -1 + 2 = 1$$
+  C["$$\text{det} = 1(-1) - (-1)(2) = -1 + 2 = 1$$"]
+```
