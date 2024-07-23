@@ -32,4 +32,5 @@
 ### API
 - https://platform.openai.com/
 - https://console.anthropic.com/
+- https://console.groq.com/
 - https://www.perplexity.ai/settings/api
