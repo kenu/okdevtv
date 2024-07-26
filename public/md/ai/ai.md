@@ -34,3 +34,6 @@
 - https://console.anthropic.com/
 - https://console.groq.com/
 - https://www.perplexity.ai/settings/api
+
+## Related
+- [ai-digest](./digest.md)
