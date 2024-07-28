@@ -83,11 +83,11 @@ mkdir -p $DOCKER_CONFIG/cli-plugins
 
 - x86
 ```sh
-curl -SL https://github.com/docker/compose/releases/download/v.2.28.1/docker-compose-linux-x86_64 -o $DOCKER_CONFIG/cli-plugins/docker-compose
+curl -SL https://github.com/docker/compose/releases/download/v.2.29.1/docker-compose-linux-x86_64 -o $DOCKER_CONFIG/cli-plugins/docker-compose
 ```
 - Arm
 ```sh
-curl -SL https://github.com/docker/compose/releases/download/v.2.28.1/docker-compose-linux-armv7 -o $DOCKER_CONFIG/cli-plugins/docker-compose
+curl -SL https://github.com/docker/compose/releases/download/v.2.29.1/docker-compose-linux-armv7 -o $DOCKER_CONFIG/cli-plugins/docker-compose
 ```
 
 ```sh
