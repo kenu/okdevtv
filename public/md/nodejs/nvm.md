@@ -6,6 +6,13 @@
 * https://github.com/nvm-sh/nvm#installing-and-updating
 
 ```sh
+# for Windows Git Bash
+touch ~/.bashrc
+echo "test -f ~/.bashrc && . ~/.bashrc" >> ~/.bash_profile
+```
+
+```sh
+# install
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
 ```
 
