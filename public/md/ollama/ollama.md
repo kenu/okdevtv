@@ -23,7 +23,11 @@ exit
 ```
 
 ```sh
-ollama pull llama3
+ollama pull llama3.1
+```
+
+```sh
+ollama pull gemma2
 ```
 
 ```sh
