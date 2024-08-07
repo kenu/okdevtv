@@ -53,8 +53,9 @@ sudo vi /etc/fstab
 /dev/nvme1n1     /data       xfs        defaults     0    0
 ```
 
-- https://repost.aws/ko/knowledge-center/ec2-linux-ssh-troubleshooting
+- https://guide.ncloud-docs.com/docs/server-ts-fstab-classic
 - https://yoyostudy.tistory.com/61
+- https://repost.aws/ko/knowledge-center/ec2-linux-ssh-troubleshooting
 
 #### 심볼릭 링크 생성
 
