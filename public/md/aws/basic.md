@@ -27,7 +27,7 @@ plugins=(
 ```
 
 ## Mount Volume
-* g4dn instance
+- g4dn instance
 
 ```sh
 df -h
@@ -35,7 +35,6 @@ lsblk
 sudo mkfs -t xfs /dev/nvme1n1
 sudo mkdir /data
 sudo mount /dev/nvme1n1 /data
-# mount after reboot
 ln -s /data ~/app
 cd ~/app
 sudo chown ec2-user:ec2-user .
@@ -44,6 +43,20 @@ touch hello
 cd /data
 ls -altr
 ```
+
+- 자동 마운트 설정
+```sh
+sudo vi /etc/fstab
+```
+
+```
+/dev/nvme1n1     /data       xfs        defaults     0    0
+```
+
+- https://repost.aws/ko/knowledge-center/ec2-linux-ssh-troubleshooting
+- https://yoyostudy.tistory.com/61
+
+#### 심볼릭 링크 생성
 
 ```sh
 mkdir -p ~/app/.cache ~/app/git ~/app/miniconda3
