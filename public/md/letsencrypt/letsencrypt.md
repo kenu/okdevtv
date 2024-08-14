@@ -26,7 +26,7 @@
 # Amazon Linux 2023
 sudo su -
 dnf install python3 augeas-libs -y
-dnf remove certbot
+# dnf remove certbot
 python3 -m venv /opt/certbot/
 /opt/certbot/bin/pip install --upgrade pip
 /opt/certbot/bin/pip install certbot certbot-nginx
