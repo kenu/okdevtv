@@ -40,6 +40,14 @@ create database devdb default character set utf8mb4 collate utf8mb4_unicode_ci;
 GRANT ALL PRIVILEGES ON devdb.* TO devuser@localhost IDENTIFIED BY 'devpass' WITH GRANT OPTION;
 ```
 
+## lower_case
+- `sudo vi /etc/my.cnf`
+
+```
+[mariadb]
+lower_case_table_names=1
+```
+
 * MySQL 8+
 
 ```sql
