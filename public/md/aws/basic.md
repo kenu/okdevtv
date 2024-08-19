@@ -67,10 +67,18 @@ ln -s ~/app/miniconda3 ~/miniconda3
 ```
 
 ```sh
-wget https://github.com/bootandy/dust/releases/download/v1.0.0/dust-v1.0.0-x86_64-unknown-linux-gnu.tar.gz
-tar xvfz dust-v1.0.0-x86_64-unknown-linux-gnu.tar.gz
-sudo mv dust-v1.0.0-x86_64-unknown-linux-gnu/dust /usr/local/bin
-rm -rf dust-v1.0.0-x86_64-unknown-linux-gnu*
+wget https://github.com/bootandy/dust/releases/download/v1.1.1/dust-v1.1.1-x86_64-unknown-linux-gnu.tar.gz
+tar xvfz dust-v1.1.1-x86_64-unknown-linux-gnu.tar.gz
+sudo mv dust-v1.1.1-x86_64-unknown-linux-gnu/dust /usr/local/bin
+rm -rf dust-v1.1.1-x86_64-unknown-linux-gnu*
+sudo dust /
+```
+
+```sh
+wget https://github.com/bootandy/dust/releases/download/v1.1.1/dust-v1.1.1-aarch64-unknown-linux-gnu.tar.gz
+tar xvfz dust-v1.1.1-aarch64-unknown-linux-gnu.tar.gz
+sudo mv dust-v1.1.1-aarch64-unknown-linux-gnu/dust /usr/local/bin
+rm -rf dust-v1.1.1-aarch64-unknown-linux-gnu*
 sudo dust /
 ```
 
