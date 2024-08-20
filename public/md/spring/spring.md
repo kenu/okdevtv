@@ -159,11 +159,10 @@ public class ExampleBean implements DisposableBean {
 * [spel](/mib/spring/spel): 스프링 표현식
 
 ## 참고
-
-* Spring 동영상 강의
-  * http://bit.ly/okdevtv-spring
-* Spring Guides
-  * http://spring.io/guides
-  * [가이드 목록](https://okky.kr/article/619099)
-* 스프링 프레임워크 레퍼런스 번역
-  * http://blog.outsider.ne.kr/tag/스프링%20프레임워크
+- Spring AI
+  - https://okdevtv.com/mib/spring/ai
+- Spring 동영상 강의
+  - http://bit.ly/okdevtv-spring
+- Spring Guides
+  - http://spring.io/guides
+  - [가이드 목록](https://okky.kr/article/619099)
