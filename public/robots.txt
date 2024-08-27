@@ -1,8 +1,8 @@
 User-agent: *
-Disallow: /
+Allow: /
 
-User-agent: bingbot
 crawl-delay: 1
+User-agent: bingbot
 User-agent: Googlebot
 User-agent: Yeti
 User-agent: Daumoa
