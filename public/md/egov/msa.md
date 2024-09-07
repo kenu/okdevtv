@@ -85,7 +85,8 @@ docker compose version
 ```sh
 docker network create egov-network
 take ~/workspace.edu
-git clone https://github.com/egovframework/egovframe-msa-edu
+# git clone https://github.com/egovframework/egovframe-msa-edu
+git clone https://github.com/kenu/egovframe-msa-edu
 cd egovframe-msa-edu/docker-compose/mysql
 docker compose up -d
 ```
