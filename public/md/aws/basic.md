@@ -86,7 +86,7 @@ sudo dust /
 
 ```sh
 # node
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
 . ~/.zshrc
 ```
 

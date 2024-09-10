@@ -13,7 +13,7 @@ echo "test -f ~/.bashrc && . ~/.bashrc" >> ~/.bash_profile
 
 ```sh
 # install
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
 ```
 
 ## install node
