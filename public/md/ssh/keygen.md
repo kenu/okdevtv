@@ -6,6 +6,8 @@
 * 로컬 컴퓨터에서 키 생성
 * `ssh-keygen -t rsa`
 * 비밀번호 물어봐도 끝까지 계속 엔터
+* 또는,
+* `ssh-keygen -t rsa -b 4096 -C "your_email@okdevtv.com" -f ~/.ssh/id_rsa -N ""`
 * `cd ~/.ssh`
 * **id_rsa** : 비밀키
 * **id_rsa.pub** : 공개키
