@@ -7,14 +7,17 @@
 ## Install
 * https://hub.docker.com/ id 생성
 * Docker.dmg 엔진 다운받아 복사 후 실행 (login 필요)
-  * https://www.docker.com/community-edition#/download
+  * https://www.docker.com/products/docker-desktop/
+  * https://orbstack.dev/
 
 ## Basic keywords
 ```
+docker version
 docker ps
 docker info
 docker images
-docker version
+docker container ls
+docker container ls -a
 ```
 
 * `docker run hello-world`
@@ -25,8 +28,7 @@ docker version
 * 고래가라사대
   * docker hub 이미지 정보
     * 포함한 소프트웨어 종류와 사용법
-  * 우분투 OS
-* `docker run -d -p 80:80 --name webserver nginx`
+* `docker run -it -p 80:80 docker/getting-started`
 * stop
 
 ```
@@ -51,77 +53,32 @@ docker exec -it  92d58318f84e /bin/bash
 
 ## 컨테이너 전체 삭제
 ```
+docker ps -aq
 docker stop $(docker ps -aq)
 docker rm $(docker ps -aq)
 ```
 
 ## 이미지 만들기
-* https://docs.docker.com/get-started/part2/
-* `Dockerfile`
+* https://docs.docker.com/get-started/workshop/02_our_app/
+* `git clone https://github.com/docker/getting-started-app.git`
+* `cd getting-started-app`
+* create `Dockerfile`
 
-```
-# Use an official Python runtime as a parent image
-FROM python:2.7-slim
+```dockerfile
+# syntax=docker/dockerfile:1
 
-# Set the working directory to /app
+FROM node:18-alpine
 WORKDIR /app
-
-# Copy the current directory contents into the container at /app
-ADD . /app
-
-# Install any needed packages specified in requirements.txt
-RUN pip install --trusted-host pypi.python.org -r requirements.txt
-
-# Make port 80 available to the world outside this container
-EXPOSE 80
-
-# Define environment variable
-ENV NAME World
-
-# Run app.py when the container launches
-CMD ["python", "app.py"]
+COPY . .
+RUN yarn install --production
+CMD ["node", "src/index.js"]
+EXPOSE 3000
 ```
 
-* `requirements.txt`
-
-```
-Flask
-Redis
-```
-
-* `app.py`
-
-```
-from flask import Flask
-from redis import Redis, RedisError
-import os
-import socket
-
-# Connect to Redis
-redis = Redis(host="redis", db=0, socket_connect_timeout=2, socket_timeout=2)
-
-app = Flask(__name__)
-
-@app.route("/")
-def hello():
-    try:
-        visits = redis.incr("counter")
-    except RedisError:
-        visits = "<i>cannot connect to Redis, counter disabled</i>"
-
-    html = "<h3>Hello {name}!</h3>" \
-           "<b>Hostname:</b> {hostname}<br/>" \
-           "<b>Visits:</b> {visits}"
-    return html.format(name=os.getenv("NAME", "world"), hostname=socket.gethostname(), visits=visits)
-
-if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=80)
-```
-
-* `docker build -t friendlyhello .`
-* `docker run -p 4000:80 friendlyhello`
+* `docker build -t getting-started .`
+* `docker run -p 4000:80 getting-started`
 * `curl localhost:4000`
-* `docker tag friendlyhello kenu/get-started:part2`
+* `docker tag getting-started kenu/get-started:part2`
 
 ## 이미지 업로드
 * `docker push kenu/get-started:part2`
@@ -168,8 +125,8 @@ mkdir -p $DOCKER_CONFIG/cli-plugins
 
 ```sh
 # https://github.com/docker/compose/releases/
-curl -SL https://github.com/docker/compose/releases/download/v2.29.2/docker-compose-linux-x86_64 -o $DOCKER_CONFIG/cli-plugins/docker-compose
-curl -SL https://github.com/docker/compose/releases/download/v2.29.2/docker-compose-linux-aarch64 -o $DOCKER_CONFIG/cli-plugins/docker-compose
+curl -SL https://github.com/docker/compose/releases/download/v2.29.7/docker-compose-linux-x86_64 -o $DOCKER_CONFIG/cli-plugins/docker-compose
+curl -SL https://github.com/docker/compose/releases/download/v2.29.7/docker-compose-linux-aarch64 -o $DOCKER_CONFIG/cli-plugins/docker-compose
 chmod +x $DOCKER_CONFIG/cli-plugins/docker-compose
 ```
 
@@ -229,12 +186,6 @@ https://index.docker.io
   * https://hub.docker.com/r/docker/whalesay/
 * docker for mac
   * https://pilsniak.com/how-to-install-docker-on-mac-os-using-brew/
-
-## deprecated
-
-* Docker Toolbox 다운로드
-* https://www.docker.com/products/docker-toolbox
-* docker quick start terminal 실행
 
 ```
 brew install docker docker-compose docker-machine xhyve docker-machine-driver-xhyve
