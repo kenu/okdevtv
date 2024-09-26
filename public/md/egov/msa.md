@@ -127,7 +127,7 @@ docker run -d -e TZ=Asia/Seoul -p 9411:9411 openzipkin/zipkin
       server:
         native:
 #           search-locations: ${search.location:file:///${user.home}/workspace.edu/egovframe-msa-edu/config} # Windows
-           search-locations: file://${user.home}/workspace.edu/egovframe-msa-edu/config # MacOS
+          search-locations: file://${user.home}/workspace.edu/egovframe-msa-edu/config # MacOS
 ```
 
 
@@ -183,7 +183,7 @@ cd ../reserve-request-service
 nohup java -jar build/libs/reserve-request-service-1.0.0.jar&
 
 ```
-
+- http://ipaddress:8000/swagger-ui.html
 
 ```sh
 cd ../../frontend/admin
@@ -194,16 +194,19 @@ vi next.config.js
 #  `localhost` to `ipaddress`
 npm i
 npm run build
+npm run start
+# http://ipaddress:3000
+1@gmail.com / test1234!
 
 cd ../portal
-cp .env.local.sample .env.local                     
-vi .env.local
 
 vi next.config.js
 vi src/constants/env.ts
 # `localhost` to `ipaddress`
 npm i
 npm run build
+PORT=4000 npm run start
+# http://ipaddress:4000
 ```
 
 ## To be continued...
