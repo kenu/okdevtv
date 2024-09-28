@@ -84,6 +84,9 @@ docker compose version
 
 ```sh
 docker network create egov-network
+```
+
+```sh
 take ~/workspace.edu
 # git clone https://github.com/egovframework/egovframe-msa-edu
 git clone https://github.com/kenu/egovframe-msa-edu
