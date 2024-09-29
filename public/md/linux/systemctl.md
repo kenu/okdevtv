@@ -39,15 +39,19 @@ sudo ln -s /home/ec2-user/app/sbapp.jar /etc/init.d/sbapp
 
 # 서비스 시작
 sudo systemctl start sbapp
+
 # 프로세스 확인
 pgrep java
+
 # 서비스 상태 확인
 sudo systemctl status sbapp
+
 # 재시작
 sudo systemctl restart sbapp
+
 # 리눅스 부팅시 자동 시작
 sudo systemctl enable sbapp
 ```
 
 ## ref
-* https://docs.spring.io/spring-boot/docs/current-SNAPSHOT/reference/htmlsingle/#deployment.installing
+* https://docs.spring.io/spring-boot/how-to/deployment/installing.html#howto.deployment.installing
