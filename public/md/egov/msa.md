@@ -194,6 +194,9 @@ cd ../../frontend/admin
 
 ```sh
 vi next.config.js
+```
+
+```sh
 #  `localhost` to `ipaddress`
 npm i
 npm run build
@@ -206,6 +209,9 @@ cd ../portal
 vi next.config.js
 vi src/constants/env.ts
 # `localhost` to `ipaddress`
+```
+
+```sh
 npm i
 npm run build
 PORT=4000 npm run start
