@@ -92,13 +92,13 @@ bin/nutch invertlinks crawl/linkdb -dir crawl/segments
 10. Solr download https://dlcdn.apache.org/lucene/solr/
 ```
 take ~/dev
-wget https://dlcdn.apache.org/lucene/solr/8.11.3/solr-8.11.3.tgz
-tar xvfz solr-8.11.3.tgz
+wget https://dlcdn.apache.org/lucene/solr/8.11.4/solr-8.11.4.tgz
+tar xvfz solr-8.11.4.tgz
 ```
 
 11. create new nutch Solr core
 ```sh
-cd ~/dev/solr-8.11.3
+cd ~/dev/solr-8.11.4
 mkdir -p ./server/solr/configsets/nutch/
 cp -r ./server/solr/configsets/_default/* ./server/solr/configsets/nutch/
 ```
