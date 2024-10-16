@@ -61,5 +61,4 @@ done
 
 ## ref
 * https://developers.google.com/speed/webp/docs/cwebp
-* quick look plugins
-  * https://github.com/sindresorhus/quick-look-plugins#webp
+* https://apps.microsoft.com/detail/9pg2dk419drg
