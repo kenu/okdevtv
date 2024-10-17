@@ -9,12 +9,13 @@
 ## Basic commands
 |basic commands	| mac	| windows |
 |----|----|----|
-|change directory	| cd	| cd|
-|list files	|ls	|dir|
-|list files info	|ls -l	|dir|
-|view file content	|cat filename	|type filename|
-|open site	|open http://www.naver.com	|explorer http://www.naver.com|
-|edit file	|nano filename	|notepad filename|
+|change directory	| `cd`	| `cd` |
+|current directory	| `pwd`	| `cd` |
+|list files	|`ls`, `ll`	| `dir` |
+|list files info	| `ls -l`	| `dir` |
+|view file content	| `cat filename`	| `type filename` |
+|open site	| `open http://www.naver.com`	| `explorer http://www.naver.com` |
+|edit file	| `nano filename`	| `notepad filename` |
 
 ## File extract 1 line
 
@@ -57,7 +58,7 @@ find . -type l
 
 * 열린 포트 확인
 
-```
+```sh
 lsof -i -nP | grep LISTEN | awk '{print $(NF-1)" "$1}' | sort -u
 *:27017 mongod
 *:8082 node
@@ -65,7 +66,7 @@ lsof -i -nP | grep LISTEN | awk '{print $(NF-1)" "$1}' | sort -u
 
 * 원격 열린 포트 확인
 
-```
+```sh
 # dest
 nc -l -p 7555 > myfile.txt
 # mac
@@ -79,20 +80,20 @@ nc 172.31.95.135 7555 < myfile.txt
 
 * /etc/environment
 
-```
+```sh
 LANG=en_US.utf-8
 LC_ALL=en_US.utf-8
 ```
 
 ## change file encoding
 
-```
+```sh
 iconv -f euc-kr -t utf-8 kimchi.txt > kimchi_utf8.txt
 ```
 
 ### multi files
 
-```
+```sh
 mkdir utf8
 for file in *.csv; do
     iconv -f euc-kr -t utf-8 "$file" > "utf8/${file%.csv}.utf8.csv"
@@ -101,7 +102,7 @@ done
 
 ## date
 
-```
+```sh
 date '+%Y%m%d %H%M%S' # today
 date -v-3d '+%Y%m%d %H%M%S' # 1 days before
 # or
@@ -112,22 +113,22 @@ date -d "3days ago" '+%Y-%m-%d %H' # bash
 
 * ~/.bash_profile
 
-```
+```sh
 # .bash_profile
-TZ='Asia/Seoul'; export TZ
+export TZ='Asia/Seoul';
 ```
 
 * for cron
 
-```
+```sh
 sudo cp -p /usr/share/zoneinfo/Asia/Seoul /etc/localtime
 sudo service crond restart
 ```
 
 ## sudo
 
-```
-# vi /etc/sudoers
+```sh
+vi /etc/sudoers
 ```
 
 ```
@@ -138,14 +139,14 @@ sudo service crond restart
 
 ## VGA 확인
 
-```
+```sh
 sudo dnf install pciutils
 lspci | grep -i vga
 ```
 
 ## file filter
 
-```
+```sh
 find . -type f | egrep "gif$|jpg$|jpeg$|svg$|png$|webp$" | wc -l
 ```
 
@@ -169,53 +170,61 @@ find . -name .DS_Store -print0 | xargs -0 rm
 
 ## Process 확인
 
-```
+```sh
 ps -ef | grep httpd
 ps x -o  "%p %r %c"
 ```
 
 * group process kill
 
-```
+```sh
 ps -ef | grep httpd
 kill -TERM -- -22590
 ```
 
 * process id
 
-```
+```sh
 pgrep -f java
 ```
 
 ## htop
 
-```
-sudo dnf install htop
+```sh
+sudo dnf -y install htop
 ```
 
-```
+```sh
 htop
 htop -p "$(pgrep -vfd, 'java|python')"
 ```
 
 ## dust
 
+```sh
+wget https://github.com/bootandy/dust/releases/download/v1.1.1/dust-v1.1.1-x86_64-unknown-linux-gnu.tar.gz
+tar xvfz dust-v1.1.1-x86_64-unknown-linux-gnu.tar.gz
+sudo mv dust-v1.1.1-x86_64-unknown-linux-gnu/dust /usr/local/bin
+rm -rf dust-v1.1.1-x86_64-unknown-linux-gnu*
+sudo dust /
+```
+
 * https://github.com/bootandy/dust/releases
 
-```
+```sh
 dust -h
 ```
 
 ## ls for second
 
-```
+```sh
 ls -la --time-style=full-iso
 ```
 
 ## Mail
 
 ### sendmail
-```
+```sh
 sudo dnf install sendmail -y
 echo -e "Subject: Terminal Email Send\n\nEmail Content line 1\nEmail Content line 2" > content
 sendmail recipient@example.com < content

@@ -3,6 +3,7 @@
 ## Services
 
 ### Plugin type
+- CodeGPT
 - Cody AI Plugin: VS Code, IntelliJ
 - Copilot AI Plugin: VS Code, IntelliJ, Eclipse
 - Codeium AI
