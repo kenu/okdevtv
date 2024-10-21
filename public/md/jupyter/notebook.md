@@ -15,7 +15,7 @@ bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
 rm -rf ~/miniconda3/miniconda.sh
 ~/miniconda3/bin/conda init bash
 . ~/.bash_profile
-conda install python=3.11.9
+conda install python=3.11.9 -y
 pip install jupyter notebook
 ```
 
@@ -32,7 +32,7 @@ jupyter-notebook
 ```
 
 - install nginx for reverse proxy
-## 
+##
 ```bash
 sudo dnf install nginx -y
 sudo vi /etc/nginx/nginx.conf
