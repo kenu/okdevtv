@@ -3,9 +3,9 @@
 ## Amazon Linux 2023
 ```sh
 sudo dnf install zsh git util-linux-user htop -y
-
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ```
+
 ```sh
 cd ~/.oh-my-zsh/custom/plugins
 git clone https://github.com/zsh-users/zsh-autosuggestions.git
@@ -16,15 +16,29 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
 vi ~/.zshrc
 ```
 - `/(gi`
-- `dd`
 
 ```sh
-plugins=(
-    git
-    zsh-autosuggestions
-    zsh-syntax-highlighting
-)
+plugins=( git zsh-autosuggestions zsh-syntax-highlighting )
 ```
+
+## Dust
+
+```sh
+wget https://github.com/bootandy/dust/releases/download/v1.1.1/dust-v1.1.1-x86_64-unknown-linux-gnu.tar.gz
+tar xvfz dust-v1.1.1-x86_64-unknown-linux-gnu.tar.gz
+sudo mv dust-v1.1.1-x86_64-unknown-linux-gnu/dust /usr/local/bin
+rm -rf dust-v1.1.1-x86_64-unknown-linux-gnu*
+sudo dust /
+```
+
+```sh
+wget https://github.com/bootandy/dust/releases/download/v1.1.1/dust-v1.1.1-aarch64-unknown-linux-gnu.tar.gz
+tar xvfz dust-v1.1.1-aarch64-unknown-linux-gnu.tar.gz
+sudo mv dust-v1.1.1-aarch64-unknown-linux-gnu/dust /usr/local/bin
+rm -rf dust-v1.1.1-aarch64-unknown-linux-gnu*
+sudo dust /
+```
+
 
 ## Mount Volume
 - g4dn instance
@@ -64,22 +78,6 @@ mkdir -p ~/app/.cache ~/app/git ~/app/miniconda3
 ln -s ~/app/.cache ~/.cache
 ln -s ~/app/git ~/git
 ln -s ~/app/miniconda3 ~/miniconda3
-```
-
-```sh
-wget https://github.com/bootandy/dust/releases/download/v1.1.1/dust-v1.1.1-x86_64-unknown-linux-gnu.tar.gz
-tar xvfz dust-v1.1.1-x86_64-unknown-linux-gnu.tar.gz
-sudo mv dust-v1.1.1-x86_64-unknown-linux-gnu/dust /usr/local/bin
-rm -rf dust-v1.1.1-x86_64-unknown-linux-gnu*
-sudo dust /
-```
-
-```sh
-wget https://github.com/bootandy/dust/releases/download/v1.1.1/dust-v1.1.1-aarch64-unknown-linux-gnu.tar.gz
-tar xvfz dust-v1.1.1-aarch64-unknown-linux-gnu.tar.gz
-sudo mv dust-v1.1.1-aarch64-unknown-linux-gnu/dust /usr/local/bin
-rm -rf dust-v1.1.1-aarch64-unknown-linux-gnu*
-sudo dust /
 ```
 
 ## Node.js, Docker

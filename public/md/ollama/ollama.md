@@ -4,6 +4,28 @@
 ## Install ec2 env
 [ec2 basic install](/mib/aws/basic)
 
+## Install nvidia
+- https://developer.nvidia.com/cuda-downloads
+- https://developer.nvidia.com/cuda-toolkit-archive
+- CUDA and NVidia GPU Driver
+```sh
+wget https://developer.download.nvidia.com/compute/cuda/12.6.2/local_installers/cuda-repo-amzn2023-12-6-local-12.6.2_560.35.03-1.x86_64.rpm
+sudo rpm -i cuda-repo-amzn2023-12-6-local-12.6.2_560.35.03-1.x86_64.rpm
+sudo dnf clean all
+sudo dnf -y install cuda-toolkit-12-6
+```
+
+```sh
+echo "export PATH=/usr/local/cuda-12.6/bin:$PATH" >> ~/.zshrc
+. ~/.zshrc
+nvcc -V
+```
+
+```sh
+sudo dnf -y install kernel-devel-$(uname -r) kernel-headers-$(uname -r) kernel-modules-extra-$(uname -r) -y
+sudo dnf -y module install nvidia-driver:latest-dkms
+```
+
 ## Install ollama
 ```sh
 curl -fsSL https://ollama.com/install.sh | sh
@@ -23,7 +45,7 @@ exit
 ```
 
 ```sh
-ollama pull llama3.1
+ollama pull llama3.2
 ```
 
 ```sh
@@ -31,7 +53,7 @@ ollama pull gemma2
 ```
 
 ```sh
-ollama pull phi3
+ollama pull phi3.5
 ```
 
 ## Install conda
