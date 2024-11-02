@@ -56,6 +56,29 @@ ollama pull gemma2
 ollama pull phi3.5
 ```
 
+## Ollama Network Open
+
+```sh
+sudo systemctl stop ollama
+sudo vi /etc/systemd/system/ollama.service
+```
+
+- [Service] Environment 부분 수정
+```sh
+Environment="OLLAMA_HOST=0.0.0.0:11434"
+```
+
+- ollama service 재실행
+```sh
+sudo systemctl daemon-reload
+sudo systemctl start ollama
+```
+
+- 열린 포트 확인 TCP *:11434 (LISTEN) 확인
+```sh
+sudo lsof -i :11434
+```
+
 ## Install conda
 ```sh
 mkdir -p ~/miniconda3
