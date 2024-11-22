@@ -36,5 +36,50 @@
 - https://console.groq.com/
 - https://www.perplexity.ai/settings/api
 
+## AI UI/UX
+
+### AI UI/UX Tools
+- https://v0.dev/ : Vercel의 AI 기반 UI 생성 도구
+- https://magicul.io/ : AI 기반 Figma to Code 변환
+- https://github.com/features/preview/copilot-chat : GitHub Copilot Chat의 UI 제안 기능
+- https://designer.microsoft.com/ : Microsoft Designer AI
+- https://www.midjourney.com/ : AI 이미지 생성 및 디자인 도구
+
+#### Key Features
+- UI 컴포넌트 자동 생성
+- 디자인 시스템 제안
+- 반응형 레이아웃 생성
+- 접근성(A11y) 고려한 UI 생성
+- 디자인 패턴 추천
+- 프로토타입 자동 생성
+
+## VS Code AI Integration Tips
+
+#### Browser to VS Code
+- 브라우저에서 코드 가져올 때는 전체 컨텍스트(import문, 의존성 등)를 함께 복사
+- 코드 블록 단위로 복사하여 구조 유지
+- 주석도 함께 복사하여 코드의 의도 파악
+- 필요한 경우 패키지 버전 정보도 함께 확인
+
+#### VS Code AI Plugin Tips
+- `# @param` 주석을 사용하여 AI에게 상세한 컨텍스트 제공
+- 커서 위치를 활용한 인라인 코드 생성
+- 테스트 코드 생성 시 `describe`/`it` 구조 활용
+- 에러 메시지를 그대로 복사하여 디버깅 요청
+- 기존 코드를 선택한 후 리팩토링 요청
+- 주석으로 코드 설명 요청 시 영어로 받아서 번역
+
+#### Keyboard Shortcuts
+- `Ctrl + I` (macOS: `Cmd + I`): 인라인 제안
+- `Ctrl + Enter` (macOS: `Cmd + Enter`): 전체 파일 컨텍스트로 질문
+- 코드 선택 후 `Ctrl + Shift + P`: 명령 팔레트에서 AI 관련 명령 실행
+
+#### 효율적인 프롬프트
+- "개선해줘" 대신 구체적인 요구사항 전달
+- 예상 출력 포맷 명시
+- 에러 발생 시 실행 환경 정보 함께 전달
+- 코드 스타일 가이드 명시
+- 성능/보안 요구사항 명시
+
 ## Related
 - [ai-digest](./digest.md)
