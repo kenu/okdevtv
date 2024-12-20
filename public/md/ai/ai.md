@@ -10,7 +10,7 @@
 
 ### Query type
 - https://phind.com : 로그인 안해도 결과 공유 가능
-- https://chat.openai.com : 원조
+- https://chatgpt.com : 원조
 - https://gemini.google.com : 긴 텍스트 요약 잘함
 - https://claude.ai : 이미지 붙여넣어 질문 가능
 - https://www.perplexity.ai/ : 지식이 시작되는 곳
@@ -44,6 +44,7 @@
 - https://github.com/features/preview/copilot-chat : GitHub Copilot Chat의 UI 제안 기능
 - https://designer.microsoft.com/ : Microsoft Designer AI
 - https://www.midjourney.com/ : AI 이미지 생성 및 디자인 도구
+- https://sora.com/ : Text to Movie #openai
 
 #### Key Features
 - UI 컴포넌트 자동 생성
@@ -76,10 +77,23 @@
 
 #### 효율적인 프롬프트
 - "개선해줘" 대신 구체적인 요구사항 전달
+- 영어로 하면, 토큰 수도 절반이고, 응답 속도 빠름
+- `한국어로` 치면, 방금 답변을 한국어로 번역해 줌
 - 예상 출력 포맷 명시
 - 에러 발생 시 실행 환경 정보 함께 전달
 - 코드 스타일 가이드 명시
 - 성능/보안 요구사항 명시
+- 예
+```
+I made 2 folders backend and frontend
+tech stacks are like these.
+plz, complete it
+
+backend:
+8080, spring boot, google callback url: http://localhost:8080/login/oauth2/code/google
+frontend:
+5173, vite react.js, login page and profile page, sample data array
+```
 
 ## Related
 - [ai-digest](./digest.md)
