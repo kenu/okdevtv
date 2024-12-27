@@ -6,12 +6,20 @@
   * Windows, Linux only
 * [MacOS] M1 맥북 도커로 ORACLE DB 실행하기
   * https://shanepark.tistory.com/400
-## 개발 계정 추가하기
-```
-create user devuser identified by devpass;
-alter user devuser default tablespace users quota unlimited on users;
-grant connect, resource, CREATE view to devuser;
 
+## Tablespace 만들기
+1. tablespace, user 만들기
+```sql
+CREATE TABLESPACE devdb DATAFILE 'devdbfile.dbf' SIZE 100m;
+ALTER DATABASE DATAFILE 'devdbfile.dbf' AUTOEXTEND ON NEXT 50M MAXSIZE 1000M;
+
+CREATE USER devuser IDENTIFIED BY devpass;
+ALTER USER devuser DEFAULT TABLESPACE devdb QUOTA UNLIMITED ON devdb;
+GRANT CONNECT, RESOURCE, CREATE VIEW TO devuser;
+
+```
+
+```sql
 -- 삭제
 DROP USER devuser CASCADE;
 ```
@@ -25,14 +33,6 @@ SQL> Exec DBMS_XDB.SETHTTPPORT(0);
 PL/SQL procedure successfully completed.
 
 SQL>commit;
-```
-
-## Tablespace 만들기
-1. tablespace, user 만들기
-```sql
-CREATE tablespace devdb datafile 'devdbfile.dbf' SIZE 100m;
-CREATE USER devuser IDENTIFIED BY devpass DEFAULT tablespace devdb;
-GRANT CONNECT, resource TO devuser;
 ```
 
 ## Listener 추가
@@ -62,7 +62,7 @@ lsnrctl start
 ```
 
 
-* applicaiton.properties
+- applicaiton.properties
 ```
 spring.jpa.hibernate.ddl-auto=update
 spring.datasource.driver-class-name=oracle.jdbc.driver.OracleDriver
@@ -70,6 +70,25 @@ spring.datasource.url=jdbc:oracle:thin:@localhost:1521:xe
 spring.datasource.username=devuser
 spring.datasource.password=devpass
 # server.port = 8090
+```
+
+## docker compose for oracle
+```
+services:
+  oracle:
+    image: gvenzl/oracle-free #oracle 23c
+    container_name: eduperform-oracle
+    restart: unless-stopped
+    environment:
+      ORACLE_PASSWORD: pass
+    ports:
+      - "1521:1521"
+    volumes:
+      - oracle-data:/opt/oracle/oradata
+
+volumes:
+  oracle-data:
+    driver: local
 ```
 
 ## related
