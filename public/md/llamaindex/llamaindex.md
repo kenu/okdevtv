@@ -16,7 +16,7 @@ LlamaIndex (formerly GPT Index) is a data framework designed to help you build L
 
 ## Installation
 ```bash
-pip install llama-index
+pip install llama-index-core llama-index-llms-openai
 ```
 
 ## Basic Usage
@@ -24,12 +24,15 @@ pip install llama-index
 ### 1. Setting up
 ```python
 import os
-from llama_index import VectorStoreIndex, SimpleDirectoryReader
-from llama_index import ServiceContext
-from llama_index.llms import OpenAI
+from llama_index.core import VectorStoreIndex, SimpleDirectoryReader
+from llama_index.core import Settings
+from llama_index.llms.openai import OpenAI
 
 # Set your OpenAI API key
 os.environ['OPENAI_API_KEY'] = 'your-api-key'
+
+# Configure settings
+Settings.llm = OpenAI(model="gpt-3.5-turbo")
 ```
 
 ### 2. Loading Documents
@@ -88,5 +91,5 @@ Different types of indexes available:
 
 ## Resources
 - [Official Documentation](https://docs.llamaindex.ai/)
-- [GitHub Repository](https://github.com/jerryjliu/llama_index)
+- [GitHub Repository](https://github.com/run-llama/llama_index)
 - [Discord Community](https://discord.gg/dGcwcsnxhU)
