@@ -47,5 +47,30 @@ keytool -genkey -alias tomcat -keyalg RSA -keystore ~/.ssh/okdevtv.keystore
 curl https://localhost:8443 -k
 ```
 
+## Sharing Session
+conf/context.xml
+```xml
+<Context sessionCookiePath="/">
+```
+
+- clear cookie and test
+- `checker.jsp` in each webapp
+```jsp
+<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checker</title>
+</head>
+<body>
+  <b>context path</b> : <%= application.getContextPath() %><hr />
+  <b>sesseion id</b> : <%= session.getId() %><hr />
+  <b>cookie string</b> : <%= request.getHeader("cookie") %>
+</body>
+</html>
+```
+
 ## ref
 * http://kenu.github.io/tomcat70/docs/
