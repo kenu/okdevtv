@@ -2,6 +2,7 @@
 
 * https://okdevtv.com
 * https://youtube.com/kenuheo
+* https://mp4.okdevtv.com
 
 ## Build and Run
 ```
