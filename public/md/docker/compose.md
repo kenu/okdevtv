@@ -11,7 +11,6 @@
 
 ## `docker-compose.yml`
 ```
-version: "3.9"
 services:
   web:
     build: .
@@ -22,7 +21,6 @@ services:
 ```
 
 ```
-version: "3.9"
 services:
   web:
     build: .
@@ -52,7 +50,6 @@ services:
 - volumes: 데이터 볼륨을 정의
 
 ```yaml
-version: '3'
 services:
   web:
     build:.
