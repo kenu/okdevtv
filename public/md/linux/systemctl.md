@@ -27,6 +27,8 @@ Group=ec2-user
 ExecStart=/usr/bin/java -jar /home/ec2-user/app/sbapp.jar
 ExecStop=/bin/kill -15 $MAINPID
 SuccessExitStatus=143
+StandardOutput=append:/home/ec2-user/app/logs/sbapp.log
+StandardError=inherit
 
 [Install]
 WantedBy=multi-user.target
