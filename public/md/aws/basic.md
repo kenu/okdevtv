@@ -84,7 +84,7 @@ ln -s ~/app/miniconda3 ~/miniconda3
 
 ```sh
 # node
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
 . ~/.zshrc
 ```
 
