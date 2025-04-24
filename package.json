@@ -14,38 +14,41 @@
   "pnpm": {
     "overrides": {
       "qs@>=6.5.0 <6.5.3": ">=6.5.3"
-    }
+    },
+    "ignoredBuiltDependencies": [
+      "aws-sdk"
+    ]
   },
   "dependencies": {
-    "@aws-sdk/client-ses": "^3.654.0",
-    "@sentry/node": "^8.31.0",
-    "@sentry/tracing": "^7.114.0",
-    "aws-sdk": "^2.1691.0",
-    "axios": "^1.7.7",
+    "@aws-sdk/client-ses": "^3.782.0",
+    "@sentry/node": "^8.55.0",
+    "@sentry/tracing": "^7.120.3",
+    "aws-sdk": "^2.1692.0",
+    "axios": "^1.8.4",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.20.3",
-    "cookie-parser": "^1.4.6",
+    "cookie-parser": "^1.4.7",
     "cors": "^2.8.5",
     "dayjs": "^1.11.13",
-    "debug": "^4.3.7",
-    "dotenv": "^16.4.5",
+    "debug": "^4.4.0",
+    "dotenv": "^16.4.7",
     "ejs": "^3.1.10",
-    "express": "^4.21.0",
-    "express-session": "^1.18.0",
+    "express": "^4.21.2",
+    "express-session": "^1.18.1",
     "global": "^4.4.0",
-    "google-auth-library": "^9.14.1",
+    "google-auth-library": "^9.15.1",
     "google-spreadsheet": "^4.1.4",
     "googleapis": "^144.0.0",
-    "helmet": "^7.1.0",
-    "mariadb": "^3.3.2",
-    "marked": "^14.1.2",
+    "helmet": "^7.2.0",
+    "mariadb": "^3.4.1",
+    "marked": "^14.1.4",
     "morgan": "^1.10.0",
     "mysql": "^2.18.1",
     "passport": "^0.7.0",
     "passport-facebook": "^3.0.0",
     "passport-github2": "^0.1.12",
     "random-email": "^1.0.3",
-    "sequelize": "^6.37.3",
+    "sequelize": "^6.37.7",
     "serve-favicon": "^2.5.0",
     "sqlite3": "^5.1.7",
     "uuid": "^10.0.0"
@@ -53,7 +56,7 @@
   "devDependencies": {
     "frameguard": "^4.0.0",
     "jest": "^29.7.0",
-    "nodemon": "^3.1.7",
-    "prettier": "^3.3.3"
+    "nodemon": "^3.1.9",
+    "prettier": "^3.5.3"
   }
 }

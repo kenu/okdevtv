@@ -1,48 +1,41 @@
 # Visual Studio Code
-* https://code.visualstudio.com
+- https://code.visualstudio.com
 
 ## mac terminal setup
-* `code .`
-
-```sh
-cat << EOF >> ~/.zshrc
-# Add Visual Studio Code (code)
-export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
-EOF
-```
-```sh
-cat << EOF >> ~/.bash_profile
-# Add Visual Studio Code (code)
-export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
-EOF
-```
+- `code .`
+- `cmd` + `shift` + `p` > `Shell Command: Install 'code' command in PATH`
 
 ## Settings
-* `cmd` + `,`
+- `cmd` + `,`
 
 ### 자동 저장
-* `Auto Save`
+- `Auto Save`
+
+## Plugins
+- Popular: `sort @installs`
+- GitLens
+- GitGraph
+- Prettier
+- Postman
+- L13 Diff
+
+### Documents Plugins
+- [Docx/ODT Viewer](https://marketplace.visualstudio.com/items/?itemName=ShahilKumar.docxreader)
+- [vscode-hwp](https://marketplace.visualstudio.com/items?itemName=pusnow.hwp)
+- [vscode-pdf](https://marketplace.visualstudio.com/items?itemName=tomoki1207.pdf)
+
+## related
+- [VSCode Debug](/mib/vscode/debug)
+- [VSCode Snippet](/mib/vscode/snippet)
+- [VSCode Online](/mib/vscode/online)
+- [Plugin 수동 설치 vsix](/mib/vscode/vsix)
+- [VSCode Plugin](/mib/vscode/plugin)
 
 ### Auto Guess Encoding
 ```
 "files.autoGuessEncoding": true
 ```
 
-## Plugins
-* Popular: `sort @installs`
-* GitLens
-* GitGraph
-* Prettier
-* Thunder Client
-* L13 Diff
-
-## related
-* [VSCode Debug](/mib/vscode/debug)
-* [VSCode Snippet](/mib/vscode/snippet)
-* [VSCode Online](/mib/vscode/online)
-* [Plugin 수동 설치 vsix](/mib/vscode/vsix)
-* [VSCode Plugin](/mib/vscode/plugin)
-
 ## ref
-* https://code.visualstudio.com/docs/setup/mac
-* https://code.visualstudio.com/docs/getstarted/tips-and-tricks
+- https://code.visualstudio.com/docs/setup/mac
+- https://code.visualstudio.com/docs/getstarted/tips-and-tricks
