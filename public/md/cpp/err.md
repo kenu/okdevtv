@@ -8,7 +8,7 @@ compilation terminated.
 ```
 
 ```
-sudo yum install -y devtoolset-8 --nogpgcheck
+sudo dnf install -y devtoolset-8 --nogpgcheck
 scl enable devtoolset-8 bash
 gcc --version
 ```

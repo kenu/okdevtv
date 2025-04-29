@@ -32,7 +32,7 @@ ENTRYPOINT ["java","-jar","/app.jar"]
   * `docker push kenu/sb-demo`
 5. make EC2 instance
 6. install docker and start docker daemon
-  * `sudo yum install docker -y`
+  * `sudo dnf install docker -y`
   * `sudo systemctl start docker`
   * `sudo usermod -a -G docker ec2-user`
   * re login

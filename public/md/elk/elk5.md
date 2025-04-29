@@ -24,7 +24,7 @@
 
 ## nginx 설치(샘플용)
 ```
-sudo yum install nginx -y
+sudo dnf install nginx -y
 sudo service nginx start
 curl -i http://localhost
 sudo chmod 644 /var/log/nginx
@@ -35,8 +35,8 @@ echo "<h1>Hello World</h1>" > /usr/share/nginx/html/hello.html
 
 ## jdk 1.8
 ```
-sudo yum remove java-1.7.0-openjdk.x86_64 -y
-sudo yum install java-1.8.0-openjdk-devel.x86_64 -y
+sudo dnf remove java-1.7.0-openjdk.x86_64 -y
+sudo dnf install java-1.8.0-openjdk-devel.x86_64 -y
 ```
 * more [install](https://okdevtv.com/mib/java)
 
@@ -456,7 +456,7 @@ lv,region_addr,latitude,longitude,cnt
 ### htpasswd 설치
 
 ```
-sudo yum install httpd-tools -y
+sudo dnf install httpd-tools -y
 ```
 
 ```

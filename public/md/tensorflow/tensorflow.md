@@ -306,7 +306,7 @@ MatMul: /job:localhost/replica:0/task:0/gpu:0
 
 ## VGA 확인
 ```
-sudo yum install pciutils
+sudo dnf install pciutils
 lspci | grep -i vga
 ```
 

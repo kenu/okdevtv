@@ -4,8 +4,8 @@
 
 ## install
 ```
-sudo yum install nginx -y
-sudo yum install php-fpm -y
+sudo dnf install nginx -y
+sudo dnf install php-fpm -y
 ```
 
 ```

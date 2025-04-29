@@ -1,10 +1,10 @@
 #!/bin/bash
 REPO=https://github.com/kenu/10ynews
 
-sudo yum install -y git
+sudo dnf install -y git
 curl -sL https://rpm.nodesource.com/setup_16.x | sudo bash -
 sleep 2
-sudo yum install -y nodejs
+sudo dnf install -y nodejs
 sudo npm i -g npm
 sudo npm i -g pm2
 mkdir ~/git

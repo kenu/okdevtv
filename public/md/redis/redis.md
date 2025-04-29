@@ -7,7 +7,7 @@
 
 ```
 mkdir ~/local && cd ~/local
-sudo yum groupinstall "Development Tools" -y
+sudo dnf groupinstall "Development Tools" -y
 wget http://download.redis.io/releases/redis-5.0.5.tar.gz
 tar xvfz redis-5.0.5.tar.gz
 cd redis-5.0.5

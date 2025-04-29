@@ -12,7 +12,7 @@
 ## docker, git 설치
 
 ```
-sudo yum install docker git -y
+sudo dnf install docker git -y
 sudo systemctl start docker
 sudo usermod -a -G docker ec2-user
 # re login

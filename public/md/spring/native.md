@@ -6,7 +6,7 @@
 * https://www.graalvm.org/reference-manual/native-image/#prerequisites
 
 ```
-sudo yum install gcc glibc-devel zlib-devel
+sudo dnf install gcc glibc-devel zlib-devel
 ```
 
 * https://sdkman.io/install

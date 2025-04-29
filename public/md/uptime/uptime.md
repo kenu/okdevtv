@@ -18,8 +18,8 @@ ln -s node-v6.11.3-linux-x64 node
 * Linux Dev Tools
 
 ```sh
-sudo yum groupinstall -y "Development Tools"
-sudo yum install git -y
+sudo dnf groupinstall -y "Development Tools"
+sudo dnf install git -y
 ```
 
 * MongoDB

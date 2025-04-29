@@ -71,7 +71,7 @@ echo "<h1>Hello World</h1>" > /usr/share/nginx/html/hello.html
 
 ## htpasswd 설정
 ```
-sudo yum install httpd-tools
+sudo dnf install httpd-tools
 sudo htpasswd -c /etc/nginx/htpasswd.users kibanaadmin
 sudo htpasswd /etc/nginx/htpasswd.users kenuheo
 sudo vi /etc/nginx/nginx.conf

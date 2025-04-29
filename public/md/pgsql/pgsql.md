@@ -9,7 +9,7 @@
 * install postresql server
 
 ```
-sudo yum install -y postgresql postgresql-server postgresql-devel postgresql-contrib postgresql-docs
+sudo dnf install -y postgresql postgresql-server postgresql-devel postgresql-contrib postgresql-docs
 sudo postgresql-setup initdb
 ```
 

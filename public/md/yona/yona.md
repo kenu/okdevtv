@@ -82,7 +82,7 @@ nohup bin/yona &
 ## Err 발생시
 * `[error] play - Specified key was too long; max key length is 767 bytes [ERROR:1071, SQLSTATE:42000]`
 에러메시지를 만나면, MariaDB 삭제했다가 다시 설치
-* `sudo yum uninstall -y MariaDB-server`
+* `sudo dnf uninstall -y MariaDB-server`
 
 
 ## Yona in Windows

@@ -12,7 +12,7 @@
 * MariaDB
   * CentOS
 ```
-sudo yum update -y
+sudo dnf update -y
 # for aws ec2 with 10.2.16
 rpm -ev --nodeps mariadb-libs-5.5.56-2.amzn2.x86_64
 wget https://rpmfind.net/linux/Mandriva/official/2010.0/x86_64/media/main/release/lib64boost5-1.39.0-2mdv2010.0.x86_64.rpm
@@ -31,7 +31,7 @@ gpgcheck=1
 
     * MariaDB config
 ```
-sudo yum install MariaDB-server
+sudo dnf install MariaDB-server
 ```
 
 ```
@@ -126,7 +126,7 @@ nohup bin/yona &
 ## Errors
 * `[error] play - Specified key was too long; max key length is 767 bytes [ERROR:1071, SQLSTATE:42000]`
 If you see this, delete MariaDB and reinstall
-* `sudo yum uninstall -y MariaDB-server MariaDB-client`
+* `sudo dnf uninstall -y MariaDB-server MariaDB-client`
 
 ## Yona in Windows
 * env variables

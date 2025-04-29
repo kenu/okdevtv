@@ -4,7 +4,7 @@ sudo chmod 644 /var/log/nginx
 sudo chown -R ec2-user:ec2-user /usr/share/nginx/html
 echo "<h1>Hello World</h1>" > /usr/share/nginx/html/hello.html
 
-sudo yum install java-1.8.0-openjdk-devel.x86_64 -y
+sudo dnf install java-1.8.0-openjdk-devel.x86_64 -y
 
 mkdir ~/local
 cd ~/local

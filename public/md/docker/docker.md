@@ -1,14 +1,14 @@
 # Docker
 
-* http://docker.io
+* http://docker.com
 * Build, Ship, Run
 * 개발자와 시스템어드민을 위한 분산 애플리케이션용 오픈 플랫폼
 
 ## Install
 * https://hub.docker.com/ id 생성
-* Docker.dmg 엔진 다운받아 복사 후 실행 (login 필요)
+* Docker 설치
   * https://www.docker.com/products/docker-desktop/
-  * https://orbstack.dev/
+  * https://orbstack.dev/ (macOS)
 
 ## Basic keywords
 ```

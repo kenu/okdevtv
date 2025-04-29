@@ -15,7 +15,7 @@ NOTE: The livepatch extra is in public preview, not meant for production use
  31  php7.3                   available    \
  42  php7.4                   available    [ =stable ]
 sudo amazon-linux-extras install php7.4
-sudo yum install php-cli php-common php-gd php-mbstring  php-mysqlnd php-pdo php-fpm php-xml php-opcache php-zip php-bcmath
+sudo dnf install php-cli php-common php-gd php-mbstring  php-mysqlnd php-pdo php-fpm php-xml php-opcache php-zip php-bcmath
 sudo vi /etc/nginx/fastcgi_params
 ```
 
@@ -97,7 +97,7 @@ phpinfo();'
 ```
 
 ```
-sudo yum install mariadb-server
+sudo dnf install mariadb-server
 sudo systemctl start mariadb
 sudo mysql_secure_installation
 sudo vi /etc/my.cnf.d/server.cnf

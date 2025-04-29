@@ -4,7 +4,7 @@
 
 ## VGA 확인
 ```sh
-sudo yum install pciutils
+sudo dnf install pciutils
 lspci | grep -i vga
 ```
 

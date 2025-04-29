@@ -26,7 +26,7 @@ gpgcheck=1
 
 
 ```sh
-sudo yum install MariaDB-server
+sudo dnf install MariaDB-server
 sudo systemctl start mariadb
 sudo mariadb-secure-installation
 ```
