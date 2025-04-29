@@ -24,7 +24,7 @@ docker info
 ```
 git clone https://github.com/opencv/cvat
 cd cvat
-sudo curl -L https://github.com/docker/compose/releases/download/v2.29.7/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose
+sudo curl -L https://github.com/docker/compose/releases/download/v2.35.1/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose
 sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
 # re login
