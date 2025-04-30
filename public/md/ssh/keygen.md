@@ -29,7 +29,7 @@ vi ~/.ssh/authorized_keys
 ### GitHub login
 - **https:** 대신 **git:** 프로토콜을 사용함
 - 브라우저에서 GitHub 설정페이지로 이동
-  * https://github.com/settings/keys
+  - https://github.com/settings/keys
 - New SSH key 버튼을 클릭
 - 로컬 컴퓨터 이름과 복사한 공개키를 붙여넣음
 - 이후 `https` 대신 `git` 프로토콜로 clone 할 수 있음

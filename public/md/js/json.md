@@ -8,9 +8,9 @@
 
 ## 구조
 - Object `{}`
-  * key: value
+  - key: value
 - Array `[]`
-  * value
+  - value
 
 ## 특징
 - 데이터 제공시 키는 ""로 감싸야 됨
@@ -18,9 +18,9 @@
 
 ## XML 2 JSON, JSON 2 XML
 - `fast-xml-parser`
-  * https://github.com/NaturalIntelligence/fast-xml-parser
+  - https://github.com/NaturalIntelligence/fast-xml-parser
 
 ## ref
 - Railroad diagram(Syntax diagram)
-  * https://en.wikipedia.org/wiki/Syntax_diagram
+  - https://en.wikipedia.org/wiki/Syntax_diagram
 

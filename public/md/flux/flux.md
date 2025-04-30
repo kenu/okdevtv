@@ -25,5 +25,5 @@ var Store = Reflux.createStore({
 
 ## 참고
 - reflux
-  * https://github.com/reflux/refluxjs
+  - https://github.com/reflux/refluxjs
   

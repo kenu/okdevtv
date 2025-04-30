@@ -30,29 +30,29 @@ console.log(greeter(user));
 ## Object Oriented Programming
 - 객체 지향 프로그래밍
 - SOLID
-  * SRP (단일책임의 원칙: Single Responsibility Principle)
-  * OCP (개방폐쇄의 원칙: Open Close Principle)
-  * LSP (리스코브 치환의 원칙: The Liskov Substitution Principle)
-  * ISP (인터페이스 분리의 원칙: Interface Segregation Principle)
-  * DIP (의존성역전의 원칙: Dependency Inversion Principle)
+  - SRP (단일책임의 원칙: Single Responsibility Principle)
+  - OCP (개방폐쇄의 원칙: Open Close Principle)
+  - LSP (리스코브 치환의 원칙: The Liskov Substitution Principle)
+  - ISP (인터페이스 분리의 원칙: Interface Segregation Principle)
+  - DIP (의존성역전의 원칙: Dependency Inversion Principle)
 - ref: http://www.nextree.co.kr/p6960/
 
 - 풀어서 얘기하자면(#그래도 #어려움)
-  * 어떤 변화에 의해 클래스를 변경해야 하는 이유는 오직 하나뿐이어야 함
-  * 소프트웨어의 구성요소(컴포넌트, 클래스, 모듈, 함수)는 확장에는 열려있고, 변경에는 닫혀있어야 한다는 원리
-  * 서브 타입은 언제나 기반 타입으로 교체할 수 있어야 한다.
-  * 한 클래스는 자신이 사용하지 않는 인터페이스는 구현하지 말아야 한다는 원리
-  * 실제 사용 관계는 바뀌지 않으며, 추상을 매개로 메시지를 주고 받음으로써 관계를 최대한 느슨하게 만드는 원칙
+  - 어떤 변화에 의해 클래스를 변경해야 하는 이유는 오직 하나뿐이어야 함
+  - 소프트웨어의 구성요소(컴포넌트, 클래스, 모듈, 함수)는 확장에는 열려있고, 변경에는 닫혀있어야 한다는 원리
+  - 서브 타입은 언제나 기반 타입으로 교체할 수 있어야 한다.
+  - 한 클래스는 자신이 사용하지 않는 인터페이스는 구현하지 말아야 한다는 원리
+  - 실제 사용 관계는 바뀌지 않으며, 추상을 매개로 메시지를 주고 받음으로써 관계를 최대한 느슨하게 만드는 원칙
 
 ## Object
 - 객체란 속성과 행동을 포함
 - 속성 : state, property, attribute, field, member variable
-  * 상태를 저장
-  * Car : 검은색, 바퀴수4개
+  - 상태를 저장
+  - Car : 검은색, 바퀴수4개
 - 행동 : behavior, method, function
-  * 기능을 수행함
-  * 매개변수를 인자로 받음 _f(x)_
-  * 차 : 가속하다(), 멈추다()
+  - 기능을 수행함
+  - 매개변수를 인자로 받음 _f(x)_
+  - 차 : 가속하다(), 멈추다()
 
 ## 클래스와 인스턴스
 - 클래스는 도장(Type)과 같음. 청사진
@@ -183,10 +183,10 @@ class Grid {
 ## Symbol Type
 - `let greeterMaker: typeof Greeter = Greeter;`
 - 인스턴스 타입이 아닌 "`Greeter` 클래스 자체의 타입을 제공"
-  * 생성자 함수의 타입인 "`Greeter`라는 Symbol 타입을 제공"
+  - 생성자 함수의 타입인 "`Greeter`라는 Symbol 타입을 제공"
 
 ## ref
 - in 5 minutes
-  * https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html
+  - https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html
 - TypeScript Deep Dive
-  * https://basarat.gitbooks.io/typescript/content/
+  - https://basarat.gitbooks.io/typescript/content/

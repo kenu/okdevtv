@@ -18,4 +18,4 @@
 
 ## YouTube
 - 자주 사용하는 리팩토링 5가지
-  * https://youtu.be/z0cxmGfuuWg
+  - https://youtu.be/z0cxmGfuuWg

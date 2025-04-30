@@ -232,7 +232,7 @@ sendmail recipient@example.com < content
 
 ### mutt
 - 파일첨부
-  * `mutt -s "subject" -i body.txt -a attachment.txt recipient@example.com`
+  - `mutt -s "subject" -i body.txt -a attachment.txt recipient@example.com`
 
 ### mail
 - `mail -s "This is the subject" kenu.heo@gmail.com <<< 'This is the message'`
@@ -248,10 +248,10 @@ sendmail recipient@example.com < content
 ## ref
 
 - vi 에디터에서 utf8, euc-kr 전환하기
-  * http://egloos.zum.com/indirock/v/3791689
+  - http://egloos.zum.com/indirock/v/3791689
 - Linux file descriptors
-  * https://www.cyberciti.biz/tips/linux-procfs-file-descriptors.html
+  - https://www.cyberciti.biz/tips/linux-procfs-file-descriptors.html
 - Mutt
-  * https://www.thegeekdiary.com/linux-unix-send-mail-with-attachment-using-mutt/
+  - https://www.thegeekdiary.com/linux-unix-send-mail-with-attachment-using-mutt/
 - Send mail from linux command line
-  * https://www.lesstif.com/lpt/send-mail-from-linux-command-line-24445045.html
+  - https://www.lesstif.com/lpt/send-mail-from-linux-command-line-24445045.html

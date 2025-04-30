@@ -8,9 +8,9 @@
 
 ## 접속 방법
 - EC2 instance 생성
-  * OS 선택
-  * spec 선택
-  * key 생성 또는 선택
-  * Launch
+  - OS 선택
+  - spec 선택
+  - key 생성 또는 선택
+  - Launch
 - `ssh -i /path/to/key.pem ec2-user@ipaddress` # Amazon AMI(Amazon Machine Image)
 - `ssh -i /path/to/key.pem ubuntu@ipaddress` # Ubuntu

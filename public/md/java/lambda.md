@@ -36,4 +36,4 @@ public class RunnableTest {
 ## ref
 - http://www.oracle.com/webfolder/technetwork/tutorials/obe/java/Lambda-QuickStart/index.html
 - Lambda calculus
-  * https://en.wikipedia.org/wiki/Lambda_calculus
+  - https://en.wikipedia.org/wiki/Lambda_calculus

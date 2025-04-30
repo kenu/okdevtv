@@ -7,9 +7,9 @@
 
 ## 라이브러리
 - SheetJS
-  * https://github.com/SheetJS/js-xlsx
+  - https://github.com/SheetJS/js-xlsx
 - Demo
-  * http://sheetjs.com/demos
+  - http://sheetjs.com/demos
 
 ## 설치
 
@@ -28,9 +28,9 @@ const workbook = XLSX.readFile('test.xlsx');
 ## SpreadSheet 구조
 
 - File WorkBook
-  * Sheet
-    * Cell
-      * Content
+  - Sheet
+    - Cell
+      - Content
 
 ```js
 let workbook = XLSX.readFile("test.xlx");

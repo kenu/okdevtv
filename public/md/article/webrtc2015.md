@@ -13,41 +13,41 @@
 
 - 2012 WebRTC 준비기간
 - 2013 급부상
-  * H.264 (CISCO) vs webm, vp(Google)
-  * Google ChromeCast
-  * Amazon Kindle 고객센터
-  * appear.in
-  * weemo
-  * Platform Biz
-    * easyRTC
-    * PEERJS
-    * tokbox
+  - H.264 (CISCO) vs webm, vp(Google)
+  - Google ChromeCast
+  - Amazon Kindle 고객센터
+  - appear.in
+  - weemo
+  - Platform Biz
+    - easyRTC
+    - PEERJS
+    - tokbox
 - 2014 참여자 증가, 고리의 완성
-  * VP8+H.264
-  * 서비스 증가
-    * Azar 서비스
-    * Veckon
-    * talko
-    * switch.co
-  * 기술 보유 회사 인수
-  * 플랫폼 증가
+  - VP8+H.264
+  - 서비스 증가
+    - Azar 서비스
+    - Veckon
+    - talko
+    - switch.co
+  - 기술 보유 회사 인수
+  - 플랫폼 증가
 - 2015 
-  * 매우 많은 서비스 등장
-  * 거대 기업의 서비스
-    * facebook VoIP
-    * CISCO Tropo
-    * AT&T Enhanced WebRTC
-    * Slack, HipChat
-    * Microsoft Edge Browser
+  - 매우 많은 서비스 등장
+  - 거대 기업의 서비스
+    - facebook VoIP
+    - CISCO Tropo
+    - AT&T Enhanced WebRTC
+    - Slack, HipChat
+    - Microsoft Edge Browser
 
 ### WebRTC biz model
 - B2C 서비스
 - 기업&통신솔루션
 - 개발플랫폼
 - 핵심기술
-  * 브라우저
-  * Codec
-  * STURN, TURN, ICE
+  - 브라우저
+  - Codec
+  - STURN, TURN, ICE
 
 ### WebRTC Browser
 - Safari, Microsoft 미참
@@ -89,7 +89,7 @@
 - AJAX(2004)
 - Web Sockets(2008)
 - WebRTC(2012)
-  * page 2 page communications
+  - page 2 page communications
 
 ### WebRTC & JINGLE
 - XMPP + P2P = JINGLE

@@ -11,9 +11,9 @@ bin\startup.bat
 
 ## Folder
 - conf
-  * server.xml
+  - server.xml
 - webapps
-  * ROOT.war
+  - ROOT.war
 - Maven folder structure vs. WebContent
 
 ## Tomcat Architecture
@@ -21,8 +21,8 @@ bin\startup.bat
 
 ## Eclipse(STS) Tomcat Tip
 - Server Options
-  * Check `Serve modules without publishing`
-  * `application.getRealPath("/")`
+  - Check `Serve modules without publishing`
+  - `application.getRealPath("/")`
 - External Web Browser
 - Disable all validations
 

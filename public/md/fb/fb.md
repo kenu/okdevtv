@@ -28,8 +28,8 @@ http://159.203.239.61:3000/
 
 ## 참고
 - [node.js] passport-facebook 모듈로 페이스북 로그인 연동하기
-  * http://dhparkblog.tistory.com/21
+  - http://dhparkblog.tistory.com/21
 - passport-facebook
-  * https://github.com/jaredhanson/passport
+  - https://github.com/jaredhanson/passport
 - passport-facebook example
-  * https://github.com/passport/express-4.x-local-example
+  - https://github.com/passport/express-4.x-local-example

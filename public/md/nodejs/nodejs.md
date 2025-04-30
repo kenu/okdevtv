@@ -33,24 +33,24 @@ that run across distributed devices.
 - 안정적인 서비스 w/ pm2
 - 모듈 2,663,939 total packages(2024/01/27); https://modulecounts.com
 - 성능 개선
-  * [linkedin 사례](http://highscalability.com/blog/2012/10/4/linkedin-moved-from-rails-to-node-27-servers-cut-and-up-to-2.html)
-    * 서버 감축 Ruby + Mongrel 30대 -> node.js 3대
-    * Frontend, Backend 개발자 소통 원활
-    * 잡다한 작업 감소해서 로직에 집중
-  * [paypal 사례](https://www.paypal-engineering.com/2013/11/22/node-js-at-paypal/)
-    * Java를 Node.js로 대치
-    * 더 적은 인원으로 개발 2배 정도 빨라짐
-    * 코드량 33%, 파일 40% 감소
-    * 성능 개선됨 (15-user: 11.3 vs 21.6 pages/sec)
+  - [linkedin 사례](http://highscalability.com/blog/2012/10/4/linkedin-moved-from-rails-to-node-27-servers-cut-and-up-to-2.html)
+    - 서버 감축 Ruby + Mongrel 30대 -> node.js 3대
+    - Frontend, Backend 개발자 소통 원활
+    - 잡다한 작업 감소해서 로직에 집중
+  - [paypal 사례](https://www.paypal-engineering.com/2013/11/22/node-js-at-paypal/)
+    - Java를 Node.js로 대치
+    - 더 적은 인원으로 개발 2배 정도 빨라짐
+    - 코드량 33%, 파일 40% 감소
+    - 성능 개선됨 (15-user: 11.3 vs 21.6 pages/sec)
 - C/C++ Addon
-  * https://nodejs.org/api/addons.html
+  - https://nodejs.org/api/addons.html
 
 ### 단점
 - No Silver Bullet
-  * CPU과다 사용시 이슈
+  - CPU과다 사용시 이슈
 - 예외처리 실수하면 서버 다운 (pm2로 자동 재시작 가능)
 - Callback Hell (Async로 커버 가능)
-  * http://callbackhell.com
+  - http://callbackhell.com
 
 
 ## 비동기 프로그래밍
@@ -63,11 +63,11 @@ that run across distributed devices.
 
 - Input/Output
 - IO latency
-  * L1: 3 cycles
-  * L2: 14 cycles
-  * RAM: 250 cycles
-  * DISK: 41,000,000 cycles
-  * NETWORK: 240,000,000 cycles
+  - L1: 3 cycles
+  - L2: 14 cycles
+  - RAM: 250 cycles
+  - DISK: 41,000,000 cycles
+  - NETWORK: 240,000,000 cycles
 
 from: https://www.dropbox.com/s/o9g4m7tug3yt1xx/jsconf2009-nodejs.pdf?dl=0
 
@@ -96,8 +96,8 @@ db.query("select * from T",
 from [blog.udemy.com/learn-node-js/](https://lh4.googleusercontent.com/pwtI1uBbT5Gthva6sGtKu_L3Ih3w2oxt-LA28mEamjrz6dKl87NFKiTxgzlHfGhIuFF107PxLFeWMdc8z3dchWtpqpcaqE4D4nrcSx3UQmfEDmJTL_LzNKQVjg)
 
 - 이벤트 루프 사용으로 싱글쓰레드 동작
-  * 기존 서버는 쓰레드 기반
-  * 아파치 등은 커넥션 증가에 따라서 메모리 증가
+  - 기존 서버는 쓰레드 기반
+  - 아파치 등은 커넥션 증가에 따라서 메모리 증가
 - nginx는 이벤트 루프 방식
 
 ## 서버사이드 자바스크립트 개발환경 설치
@@ -118,7 +118,7 @@ from [blog.udemy.com/learn-node-js/](https://lh4.googleusercontent.com/pwtI1uBbT
 
 ## socket.io 모듈
 - socket.io
-  * [채팅 튜토리얼](https://okdevtv.com/kr/socket.io-chat-kr.html)
+  - [채팅 튜토리얼](https://okdevtv.com/kr/socket.io-chat-kr.html)
 - 짧은 줄의 코드로 웹채팅 구현 가능
 
 - `package.json`
@@ -167,7 +167,7 @@ http.listen(3000, function () {
 <head>
   <title>Socket.IO chat</title>
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    - { margin: 0; padding: 0; box-sizing: border-box; }
     form { background: #000; padding: 3px; position: fixed; bottom: 0; width: 100%; }
     form input { border: 0; padding: 10px; width: 90%; margin-right: .5%; }
     form button { width: 9%; background: rgb(130, 224, 255); border: none; padding: 10px; }
@@ -243,9 +243,9 @@ server.listen(port, hostname, () => {
 ```
 
 ### express.js
-  * with package.json `npm init`
-  * `npm install express --save`
-  * create `exp.js` file
+  - with package.json `npm init`
+  - `npm install express --save`
+  - create `exp.js` file
 
 ```js
 var express = require('express')
@@ -260,23 +260,23 @@ app.listen(3000, function () {
 })
 ```
 
-  * 실행 `node exp.js`
+  - 실행 `node exp.js`
 
 ### express-generator
-  * `npm install express-generator -g`
-  * express.js의 scafold 코드 생성
-  * `express myweb`
-  * `cd myweb && npm install`
-  * run `npm start`
-    * or `node bin/www`
-    * or `DEBUG=myweb:* node bin/www`
+  - `npm install express-generator -g`
+  - express.js의 scafold 코드 생성
+  - `express myweb`
+  - `cd myweb && npm install`
+  - run `npm start`
+    - or `node bin/www`
+    - or `DEBUG=myweb:* node bin/www`
 
 ### basic routing
 - `app.METHOD(PATH, HANDLER)`
-  * app is an instance of express.
-  * **METHOD** is an HTTP request method, in lowercase.
-  * PATH is a path on the server.
-  * HANDLER is the function executed when the route is matched.
+  - app is an instance of express.
+  - **METHOD** is an HTTP request method, in lowercase.
+  - PATH is a path on the server.
+  - HANDLER is the function executed when the route is matched.
 
 #### get
 
@@ -285,8 +285,8 @@ app.get('/', function (req, res) {
     res.send('Hello World!')
 })
 ```
-  * `curl 'localhost:3000'`
-  * `curl -XGET 'localhost:3000'`
+  - `curl 'localhost:3000'`
+  - `curl -XGET 'localhost:3000'`
 
 
 #### post
@@ -296,7 +296,7 @@ app.post('/', function (req, res) {
     res.send('Got a POST request')
 })
 ```
-  * `curl -XPOST 'localhost:3000'`
+  - `curl -XPOST 'localhost:3000'`
 
 #### put
 
@@ -305,7 +305,7 @@ app.put('/user', function (req, res) {
     res.send('Got a PUT request at /user')
 })
 ```
-  * `curl -XPUT 'localhost:3000/user'`
+  - `curl -XPUT 'localhost:3000/user'`
 
 #### delete
 
@@ -314,7 +314,7 @@ app.delete('/user', function (req, res) {
     res.send('Got a DELETE request at /user')
 })
 ```
-  * `curl -XDELETE 'localhost:3000/user'`
+  - `curl -XDELETE 'localhost:3000/user'`
 
 ## Routing
 - http://expressjs.com/en/guide/routing.html
@@ -358,7 +358,7 @@ app.get('/users/:userId/books/:bookId', function (req, res) {
 
 ## node cluster 시작하기
 - native cluster api
-  * https://nodejs.org/api/cluster.html
+  - https://nodejs.org/api/cluster.html
 
 ```
 const cluster = require('cluster');
@@ -398,11 +398,11 @@ if (cluster.isMaster) {
 ## 디버깅
 ### 개요
 - debugging에서 알아야 할 용어들
-  * breakpoint : 중단점입니다. 실행 모드가 아닌 디버그 모드에서 프로그램을 중지하게 되는 지점의 표시입니다. 보통 ide에서 소스 라인 맨 앞 여백을 (더블)클릭하면 생깁니다. 다시 (더블)클릭하면 없어집니다. resume을 실행하면 다음 중단점을 만날 때까지 실행됩니다.
-  * step over : 한 줄을 실행합니다. 함수가 있어도 실행 후 다음으로 넘어갑니다.
-  * step into : 포커스된 라인에 있는 함수 내부로 들어갑니다.
-  * step out : 현재 함수를 끝까지 실행시키고, 호출시킨 곳으로 되돌아 갑니다.
-  * resume : 디버그로 한 줄 한 줄 실행시키는 트레이스 모드를 그만두고 다음 브레이크포인트를 만날 때까지 실행합니다.
+  - breakpoint : 중단점입니다. 실행 모드가 아닌 디버그 모드에서 프로그램을 중지하게 되는 지점의 표시입니다. 보통 ide에서 소스 라인 맨 앞 여백을 (더블)클릭하면 생깁니다. 다시 (더블)클릭하면 없어집니다. resume을 실행하면 다음 중단점을 만날 때까지 실행됩니다.
+  - step over : 한 줄을 실행합니다. 함수가 있어도 실행 후 다음으로 넘어갑니다.
+  - step into : 포커스된 라인에 있는 함수 내부로 들어갑니다.
+  - step out : 현재 함수를 끝까지 실행시키고, 호출시킨 곳으로 되돌아 갑니다.
+  - resume : 디버그로 한 줄 한 줄 실행시키는 트레이스 모드를 그만두고 다음 브레이크포인트를 만날 때까지 실행합니다.
 
 
 ### node.js debug
@@ -424,39 +424,39 @@ console.log('hello');
 ```
 
 - node-inspector (X)
-  * https://github.com/node-inspector/node-inspector#node-inspector
-  * 크롬브라우저를 독립적으로 띄워서 크롬 인스펙터 UI로 디버깅 가능
-  * http://okjsp.tistory.com/1165644244
-  * `npm install -g node-inspector`
-  * `node-debug app.js`
+  - https://github.com/node-inspector/node-inspector#node-inspector
+  - 크롬브라우저를 독립적으로 띄워서 크롬 인스펙터 UI로 디버깅 가능
+  - http://okjsp.tistory.com/1165644244
+  - `npm install -g node-inspector`
+  - `node-debug app.js`
 
 ## email
 - node-emailer
 - gmail smtp 설정 필요
-  * https://www.google.com/settings/security/lesssecureapps
+  - https://www.google.com/settings/security/lesssecureapps
 - OAuth2
-  * https://developers.google.com/gmail/api/quickstart/nodejs
+  - https://developers.google.com/gmail/api/quickstart/nodejs
 
 ## Test Frameworks
 - QUnit
-  * http://qunitjs.com/
-  * http://backbonejs.org/test/
-    * test source  https://github.com/jashkenas/backbone/blob/master/test/index.html
+  - http://qunitjs.com/
+  - http://backbonejs.org/test/
+    - test source  https://github.com/jashkenas/backbone/blob/master/test/index.html
 - Testing Essentials
-  * http://thenodeway.io/posts/testing-essentials/
+  - http://thenodeway.io/posts/testing-essentials/
 
 - UI 테스트
-  * GUITAR
-    * http://naver.github.io
-    * http://dev.naver.com/projects/guitar
-  * jmeter maven
-    * jenkins jmeter
+  - GUITAR
+    - http://naver.github.io
+    - http://dev.naver.com/projects/guitar
+  - jmeter maven
+    - jenkins jmeter
 
 
 ## 서버 모니터링
 - uptime
-  * https://github.com/fzaninotto/uptime
-  * http://localhost:8082/
+  - https://github.com/fzaninotto/uptime
+  - http://localhost:8082/
 
 ```
 $ cd ~/dev/mongodb/bin
@@ -485,15 +485,15 @@ $ npm install
 ```
 
 - PM2
-  * https://github.com/Unitech/PM2
-  * `pm2-dev` : watch and restart
+  - https://github.com/Unitech/PM2
+  - `pm2-dev` : watch and restart
 
 - node server monitor
-  * [alternative](https://strongloop.com/strongblog/comparison-tools-to-automate-restarting-node-js-server-after-code-changes-forever-nodemon-nodesupervisor-nodedev/)
-  * forever
-  * nodemon
-  * node-supervisor
-  * node-dev
+  - [alternative](https://strongloop.com/strongblog/comparison-tools-to-automate-restarting-node-js-server-after-code-changes-forever-nodemon-nodesupervisor-nodedev/)
+  - forever
+  - nodemon
+  - node-supervisor
+  - node-dev
 
 ## 영상
 1. 개요, 설치  https://www.youtube.com/watch?v=Z8cOppJwOeU
@@ -521,14 +521,14 @@ $ npm install
 
 ## ref
 - node.js
-  * http://nodejs.org
+  - http://nodejs.org
 - http://bit.ly/okjavascript
 - http://bit.ly/oknodejs
 - node.js 내가-쓰기로-선택한-이유
-  * https://vinebrancho.wordpress.com/2014/03/24/node-js-내가-쓰기로-선택한-이유/
+  - https://vinebrancho.wordpress.com/2014/03/24/node-js-내가-쓰기로-선택한-이유/
 - octobersky.js
-  * https://github.com/octoberskyjs
+  - https://github.com/octoberskyjs
 - PM2 (Process Monitor 2)
-  * http://devo.ps/blog/goodbye-node-forever-hello-pm2/
+  - http://devo.ps/blog/goodbye-node-forever-hello-pm2/
 - node.js for other languages
-  * https://okdevtv.com/mib/nodejs/node4others
+  - https://okdevtv.com/mib/nodejs/node4others

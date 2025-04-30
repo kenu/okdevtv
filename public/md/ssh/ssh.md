@@ -24,5 +24,5 @@ mysql -u devuser -p -P 3307 -h 127.0.0.1
 
 ## ref
 - Access Your Database Remotely Through an SSH Tunnel
-  * https://support.cloud.engineyard.com/hc/en-us/articles/205408088-Access-Your-Database-Remotely-Through-an-SSH-Tunnel
+  - https://support.cloud.engineyard.com/hc/en-us/articles/205408088-Access-Your-Database-Remotely-Through-an-SSH-Tunnel
 - https://www.ssh.com/ssh/tunneling/example

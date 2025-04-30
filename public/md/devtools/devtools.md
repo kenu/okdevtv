@@ -15,7 +15,7 @@
 ## Sources
 - 실제 서버에서 가져온 소스
 - 자바스크립트 디버깅 기능
-  * https://okdevtv.com/mib/debug
+  - https://okdevtv.com/mib/debug
 
 ## Network
 - 네트워크 상황 기록

@@ -10,7 +10,7 @@
 
 ## Selections
 - example
-  * legacy
+  - legacy
 ```
 var paragraphs = document.getElementsByTagName("p");
 for (var i = 0; i < paragraphs.length; i++) {
@@ -18,11 +18,11 @@ for (var i = 0; i < paragraphs.length; i++) {
   paragraph.style.setProperty("color", "white", null);
 }
 ```
-  * d3 selector
+  - d3 selector
 ```
 d3.selectAll("p").style("color", "white");
 ```
-  * or another selector
+  - or another selector
 ```
 d3.select("body").style("background-color", "black");
 ```
@@ -55,6 +55,6 @@ d3.selectAll("p")
 
 ## ref
 - 한국 지도
-  * http://codefactory.kr/demos/D3/korean-map/
+  - http://codefactory.kr/demos/D3/korean-map/
   
 

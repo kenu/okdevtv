@@ -18,19 +18,19 @@ http.cors.allow-origin: "*"
 # "*"일 경우 모든 도메인 접속 가능하기 때문에, 보안 해제와 같음
 ```
 - head :
-  * `git clone https://github.com/mobz/elasticsearch-head.git`
-  * `npm install locally -g`
-  * `nohup locally -p 9100 &`
-  * `http://localhost:9100/_plugin/head`
+  - `git clone https://github.com/mobz/elasticsearch-head.git`
+  - `npm install locally -g`
+  - `nohup locally -p 9100 &`
+  - `http://localhost:9100/_plugin/head`
 
 ### 2.x 버전
 - `bin/plugin install {org}/{user/component}/{version}`
 - head :
-  * `bin/plugin install mobz/elasticsearch-head`
-  * http://localhost:9200/_plugin/head
+  - `bin/plugin install mobz/elasticsearch-head`
+  - http://localhost:9200/_plugin/head
 - hq :
-  * `bin/plugin install royrusso/elasticsearch-HQ`
-  * http://localhost:9200/_plugin/hq
+  - `bin/plugin install royrusso/elasticsearch-HQ`
+  - http://localhost:9200/_plugin/hq
 
 ## 데이터 구조 및 입출력
 - 데이터 구조
@@ -112,13 +112,13 @@ curl localhost:9200/_cat/indices?v
 
 ## 검색
 - query방식은 2가지
-  * URI방식 : REST API
-  * request body방식 : http 데이터
+  - URI방식 : REST API
+  - request body방식 : http 데이터
 - index/type 검색, index 검색, multi index 검색
 - 시작하세요! 엘라스틱서치 예제
 - downloads
-  * `curl -O https://codeload.github.com/wikibook/elasticsearch/zip/master`
-  * `git clone https://github.com/wikibook/elasticsearch`
+  - `curl -O https://codeload.github.com/wikibook/elasticsearch/zip/master`
+  - `git clone https://github.com/wikibook/elasticsearch`
 ```
 #데이터 적재
 cd elasticsearch/cd 05.검색
@@ -132,44 +132,44 @@ curl -XPOST http://localhost:9200/_bulk --data-binary @5_2_magazines.json
 - index/type 단위로 검색, 또는 index로 검색 가능
 - 결과는 hits 필드에 배열로 표시
 - url 자체를 문자열처럼 '로 감싸서 조회 가능
-  * "took" : 검색 소요시간 밀리초 단위
+  - "took" : 검색 소요시간 밀리초 단위
 - multi tenancy
-  * `curl 'localhost:9200/books,magazines/_search?q=time&pretty'`
-  * `curl 'localhost:9200/_all/_search?q=time&pretty'`
-  * `curl 'localhost:9200/_search?q=time&pretty'`
+  - `curl 'localhost:9200/books,magazines/_search?q=time&pretty'`
+  - `curl 'localhost:9200/_all/_search?q=time&pretty'`
+  - `curl 'localhost:9200/_search?q=time&pretty'`
 - URI 검색
-  * `q`
-    * 필드명:질의어
-      * `curl 'localhost:9200/_search?q=title:time&pretty'`
-    * 공백 처리
-      * `curl 'localhost:9200/_search?q=title:time%20AND%20machine&pretty'`
-  * `df`(default field)
-    * `curl 'localhost:9200/_search?q=time&df=title&pretty'`
-  * `default_operator`
-    * `curl 'localhost:9200/_search?q=time%20machine&default_operator=AND&pretty'`
-  * `explain`
-    * 상세 점수(score) 표시
-    * score : 검색어에 해당하는 데이터의 정확도
-    * 점수가 높을수록 상위에 표시
-    * `curl 'localhost:9200/_search?q=title:time&explain&pretty'`
-  * `_source`
-    * 기본값은 true
-    * false로 설정한 경우 hit와 score같은 메타 정보만 출력
-    * `curl 'localhost:9200/_search?q=title:time&_source=false&pretty'`
-  * `fields`
-    * 출력 결과에 해당 지정된 필드만 표시
-    * `curl 'localhost:9200/_search?q=title:time&fields=title,author,category&pretty'`
-  * `sort`
-    * `curl 'localhost:9200/_search?q=author:jules&sort=pages&pretty'`
-    * `curl 'localhost:9200/_search?q=author:jules&sort=pages:desc&pretty'`
-    * `curl 'localhost:9200/_search?q=author:jules&fields=author,title&sort=title&pretty'`
-    * `curl 'localhost:9200/_search?q=author:jules&fields=author,title&sort=title:desc&pretty'`
-    * 값 전체로 정렬하려면 데이터 색인 전에 title 필드를 `not_analyzed`로 매핑(mapping)해야 함(8장 참고)
-  * `from`
-    * 몇 번째부터 출력할지 지정, 기본값 0
-    * `curl 'localhost:9200/_search?q=author:jules&fields=author,title&from=1&pretty'`
+  - `q`
+    - 필드명:질의어
+      - `curl 'localhost:9200/_search?q=title:time&pretty'`
+    - 공백 처리
+      - `curl 'localhost:9200/_search?q=title:time%20AND%20machine&pretty'`
+  - `df`(default field)
+    - `curl 'localhost:9200/_search?q=time&df=title&pretty'`
+  - `default_operator`
+    - `curl 'localhost:9200/_search?q=time%20machine&default_operator=AND&pretty'`
+  - `explain`
+    - 상세 점수(score) 표시
+    - score : 검색어에 해당하는 데이터의 정확도
+    - 점수가 높을수록 상위에 표시
+    - `curl 'localhost:9200/_search?q=title:time&explain&pretty'`
+  - `_source`
+    - 기본값은 true
+    - false로 설정한 경우 hit와 score같은 메타 정보만 출력
+    - `curl 'localhost:9200/_search?q=title:time&_source=false&pretty'`
+  - `fields`
+    - 출력 결과에 해당 지정된 필드만 표시
+    - `curl 'localhost:9200/_search?q=title:time&fields=title,author,category&pretty'`
+  - `sort`
+    - `curl 'localhost:9200/_search?q=author:jules&sort=pages&pretty'`
+    - `curl 'localhost:9200/_search?q=author:jules&sort=pages:desc&pretty'`
+    - `curl 'localhost:9200/_search?q=author:jules&fields=author,title&sort=title&pretty'`
+    - `curl 'localhost:9200/_search?q=author:jules&fields=author,title&sort=title:desc&pretty'`
+    - 값 전체로 정렬하려면 데이터 색인 전에 title 필드를 `not_analyzed`로 매핑(mapping)해야 함(8장 참고)
+  - `from`
+    - 몇 번째부터 출력할지 지정, 기본값 0
+    - `curl 'localhost:9200/_search?q=author:jules&fields=author,title&from=1&pretty'`
 - 리퀘스트 바디 검색
-  * JSON 형태의 질의
+  - JSON 형태의 질의
 ```
 curl 'localhost:9200/books/_search?pretty' -d '
 {
@@ -186,7 +186,7 @@ curl 'localhost:9200/books/_search?pretty' -d '
 }'
 ```
 
-  * 옵션
+  - 옵션
 ```
 curl 'localhost:9200/books/_search?pretty' -d '
 {
@@ -199,11 +199,11 @@ curl 'localhost:9200/books/_search?pretty' -d '
 }'
 ```
 
-  * `sort`
+  - `sort`
 - https://www.elastic.co/guide/en/elasticsearch/reference/current/search-request-sort.html
 
-  * `_source`
-    * false
+  - `_source`
+    - false
 ```
 curl 'localhost:9200/books/_search?pretty' -d '
 {
@@ -213,7 +213,7 @@ curl 'localhost:9200/books/_search?pretty' -d '
   }
 }'
 ```
-    * fields
+    - fields
 ```
 curl 'localhost:9200/magazines/_search?pretty' -d '
 {
@@ -221,7 +221,7 @@ curl 'localhost:9200/magazines/_search?pretty' -d '
 }'
 ```
 
-    * `include`, `exclude`
+    - `include`, `exclude`
 ```
 curl 'localhost:9200/magazines/_search?pretty' -d '
 {
@@ -265,7 +265,7 @@ curl -XPUT http://localhost:9200/hotels/ -d '
 ```
 
 - 매핑 적용한 후에 데이터 적재
-  * `curl -XPOST localhost:9200/_bulk --data-binary @6_1_hotels.json`
+  - `curl -XPOST localhost:9200/_bulk --data-binary @6_1_hotels.json`
 
 - 최소값
 ```
@@ -611,15 +611,15 @@ curl 'localhost:9200/hotels/_search?pretty' -d '
 
 ## 질의(QueryDSL)
 - Query
-  * 전문 검색(full text search)
-  * scoring
-  * 결과 캐싱 안함
-  * 응답속도 느림
+  - 전문 검색(full text search)
+  - scoring
+  - 결과 캐싱 안함
+  - 응답속도 느림
 - Filter
-  * Y/N조건의 바이너리 구분
-  * no scoring
-  * 결과 캐싱됨
-  * 응답속도 빠름
+  - Y/N조건의 바이너리 구분
+  - no scoring
+  - 결과 캐싱됨
+  - 응답속도 빠름
 
 ```
 curl 'localhost:9200/books/_search?pretty' -d '
@@ -651,9 +651,9 @@ curl 'localhost:9200/books/_search?pretty' -d '
 
 ### Query
 - 형태소 분석
-  * The Prince and the Pauper → the, prince, and, pauper
-  * 모두 소문자로, 중복 삭제
-  * the, prince, and, pauper 같은 토큰을 텀term 이라고 함
+  - The Prince and the Pauper → the, prince, and, pauper
+  - 모두 소문자로, 중복 삭제
+  - the, prince, and, pauper 같은 토큰을 텀term 이라고 함
 
 - 소문자로 검색
 ```
@@ -679,7 +679,7 @@ curl 'localhost:9200/books/_search?pretty' -d '
 ```
 
 - 매치, 다중 매치(multi match) 쿼리
-  * 질의문을 형태소 분석한 뒤에 term 검색
+  - 질의문을 형태소 분석한 뒤에 term 검색
 ```
 curl 'localhost:9200/books/_search?pretty' -d '
 {
@@ -690,7 +690,7 @@ curl 'localhost:9200/books/_search?pretty' -d '
   }
 }'
 ```
-  * operator 사용
+  - operator 사용
 ```
 curl 'localhost:9200/books/_search?pretty' -d '
 {
@@ -704,7 +704,7 @@ curl 'localhost:9200/books/_search?pretty' -d '
   }
 }'
 ```
-  * analyzer 사용
+  - analyzer 사용
 ```
 curl 'localhost:9200/books/_search?pretty' -d '
 {
@@ -718,7 +718,7 @@ curl 'localhost:9200/books/_search?pretty' -d '
   }
 }'
 ```
-  * type:phrase
+  - type:phrase
 ```
 curl 'localhost:9200/books/_search?pretty' -d '
 {
@@ -732,7 +732,7 @@ curl 'localhost:9200/books/_search?pretty' -d '
   }
 }'
 ```
-  * multi match
+  - multi match
 ```
 curl 'localhost:9200/books/_search?pretty' -d '
 {
@@ -746,7 +746,7 @@ curl 'localhost:9200/books/_search?pretty' -d '
 ```
 
 - Bool query
-  * `must`, `must_not`, `should`
+  - `must`, `must_not`, `should`
 ```
 curl 'localhost:9200/books/_search?pretty' -d '
 {
@@ -843,8 +843,8 @@ curl 'localhost:9200/books/_search?pretty' -d '
 
 
 - fuzzy query
-  * 레벤슈타인 거리(Levenshtein distance) 알고리즘 기반
-  * `tree`로 검색시 `three` 포함
+  - 레벤슈타인 거리(Levenshtein distance) 알고리즘 기반
+  - `tree`로 검색시 `three` 포함
 ```
 curl 'localhost:9200/books/_search?pretty' -d '
 {
@@ -858,7 +858,7 @@ curl 'localhost:9200/books/_search?pretty' -d '
 
 
 - geo
-  * geo_bounding_box
+  - geo_bounding_box
 ```
 curl 'localhost:9200/hotels/_search?pretty' -d '
 {
@@ -872,7 +872,7 @@ curl 'localhost:9200/hotels/_search?pretty' -d '
   }
 }'
 ```
-  * geo_distance
+  - geo_distance
 ```
 curl 'localhost:9200/hotels/_search?pretty' -d '
 {
@@ -885,7 +885,7 @@ curl 'localhost:9200/hotels/_search?pretty' -d '
 }'
 ```
 
-  * geo_polygon
+  - geo_polygon
 ```
 curl 'localhost:9200/hotels/_search?pretty' -d '
 {
@@ -931,7 +931,7 @@ curl -XPUT 'http://localhost:9200/books/_mapping/book' -d '
 - 도큐먼트 데이터의 스키마 구조를 정의
 
 - `_source`
-  * 원본 저장 여부 결정
+  - 원본 저장 여부 결정
 
 ```
 curl -XDELETE 'http://localhost:9200/books'
@@ -949,7 +949,7 @@ curl -XPOST localhost:9200/_bulk --data-binary @5_1_books.json
 
 curl 'http://localhost:9200/books/_search?q=prince&pretty'
 ```
-  * 특정 필드만 원본으로 저장
+  - 특정 필드만 원본으로 저장
 
 ```
 curl -XPUT 'http://localhost:9200/books' -d '
@@ -963,7 +963,7 @@ curl -XPUT 'http://localhost:9200/books' -d '
   }
 }'
 ```
-  * 특정 필드 제외
+  - 특정 필드 제외
 
 ```
 curl -XPUT 'http://localhost:9200/books' -d '
@@ -1005,7 +1005,7 @@ curl -XPUT 'http://localhost:9200/books' -d '
 ### 데이터 타입
 
 - 문자열
-  * 옵션  
+  - 옵션  
 
 | 이름 | 설명 | 기본값 |
 |---|---|---|
@@ -1025,9 +1025,9 @@ curl -XPUT 'http://localhost:9200/books' -d '
 - `curl 'localhost:9200/books/_search?q=category:Science%20Fiction&pretty'`
 
 - 숫자
-  * 정수: byte, short, integer, long
-  * 실수: float, double
-  * 자바의 자료형과 같은 범위
+  - 정수: byte, short, integer, long
+  - 실수: float, double
+  - 자바의 자료형과 같은 범위
 
 ```
 curl -XPUT 'localhost:9200/test_nums' -d '
@@ -1066,25 +1066,25 @@ curl 'localhost:9200/test_nums/_search?pretty' -d '
 
 
 - 날짜
-  * 엔진 내부적으로는 long으로 저장
-  * `ignore_malformed`, `format` 옵션
+  - 엔진 내부적으로는 long으로 저장
+  - `ignore_malformed`, `format` 옵션
 
 - 불린
-  * `true`, `false`
+  - `true`, `false`
 
 - 바이너리
-  * base64로 변환된 이미지 저장 가능
-  * 옵션
-    * `store`, `compress`, `compress_threshold`
+  - base64로 변환된 이미지 저장 가능
+  - 옵션
+    - `store`, `compress`, `compress_threshold`
 
 - 객체
-  * object type 저장 가능
-  * 색인 안 됨
+  - object type 저장 가능
+  - 색인 안 됨
 
 - 중첩
-  * 트리 형태가 아닌 독립 데이터로 저장
-  * `user.name`
-  * 색인 가능
+  - 트리 형태가 아닌 독립 데이터로 저장
+  - `user.name`
+  - 색인 가능
 
 - 좌표
 ```
@@ -1125,10 +1125,10 @@ curl 'http://localhost:9200/test_geos/_search?pretty' -d '
 
 ```
 - 위치 모형
-  * 선, 원, 사각형, 다각형 geo shape 타입의 필드
-  * 옵션
-    * precision : 1~12 표준정밀도 또는 1km 같은 길이값
-    * distance_error_pct
+  - 선, 원, 사각형, 다각형 geo shape 타입의 필드
+  - 옵션
+    - precision : 1~12 표준정밀도 또는 1km 같은 길이값
+    - distance_error_pct
 ```
 curl -XPUT localhost:9200/test_geos/ -d '
 {
@@ -1413,7 +1413,7 @@ curl -XPOST 'localhost:9200/books/_analyze?analyzer=language&pretty' -d '삼국�
 ```
 
 - snowball 분석기
-  * days -> day
+  - days -> day
 
 ```
 curl -XPUT 'localhost:9200/books' -d '
@@ -1863,7 +1863,7 @@ curl -XPUT 'localhost:9200/books' -d '
 curl -XPOST 'localhost:9200/books/_analyze?analyzer=my_analyzer&pretty' -d 'The Quick Rabbit Jumped'
 ```
 
-  * synonyms_path
+  - synonyms_path
 ```
 echo 'quick, fast
 jump, hop => hop' > config/synonym.txt
@@ -1978,11 +1978,11 @@ curl -XPOST 'localhost:9200/books/_analyze?analyzer=my_analyzer&pretty' -d 'Arou
 - trim 토큰필터
 - limit 토큰필터
 - hunspell 토큰필터
-  * `open http://extensions.openoffice.org/en/project/us-english-spell-checking-dictionary`
-  * `curl -O http://tenet.dl.sourceforge.net/project/aoo-extensions/1470/1/en_us.oxt`
-  * `curl -O http://tenet.dl.sourceforge.net/project/aoo-extensions/5968/0/korean_spell-checker-0.5.6_ooo.oxt`
-  * `unzip en_us.oxt`
-  * `unzip korean_spell-checker-0.5.6_ooo.oxt`
+  - `open http://extensions.openoffice.org/en/project/us-english-spell-checking-dictionary`
+  - `curl -O http://tenet.dl.sourceforge.net/project/aoo-extensions/1470/1/en_us.oxt`
+  - `curl -O http://tenet.dl.sourceforge.net/project/aoo-extensions/5968/0/korean_spell-checker-0.5.6_ooo.oxt`
+  - `unzip en_us.oxt`
+  - `unzip korean_spell-checker-0.5.6_ooo.oxt`
 
 ```
 cd $ELASTICSEARCH_HOME
@@ -2084,7 +2084,7 @@ curl -XPOST 'localhost:9200/books/_analyze?analyzer=my_analyzer&pretty' -d 'Arou
 ./bin/elasticsearch-plugin install https://oss.sonatype.org/service/local/repositories/releases/content/org/bitbucket/eunjeon/elasticsearch-analysis-seunjeon/5.1.1.1/elasticsearch-analysis-seunjeon-5.1.1.1.zip
 ```
 - file
-  * 다운받은 파일 압축 풀고, plugin-descriptor.properties 파일 버전 수정 후 다시 압축해서 설치 가능
+  - 다운받은 파일 압축 풀고, plugin-descriptor.properties 파일 버전 수정 후 다시 압축해서 설치 가능
 ```
 wget https://oss.sonatype.org/service/local/repositories/releases/content/org/bitbucket/eunjeon/elasticsearch-analysis-seunjeon/5.1.1.1/elasticsearch-analysis-seunjeon-5.1.1.1.zip
 ./bin/elasticsearch-plugin install file:///home/ec2-user/local/elasticsearch/elasticsearch-analysis-seunjeon-5.1.1.1.zip
@@ -2156,7 +2156,7 @@ curl -XPOST 'localhost:9200/${ES}/_analyze?analyzer=korean&pretty' -d '동해물
 ### 부분삭제
 - query 된 목록 삭제
 - `_delete-by-query`
-  * https://www.elastic.co/guide/en/elasticsearch/reference/6.7/docs-delete-by-query.html
+  - https://www.elastic.co/guide/en/elasticsearch/reference/6.7/docs-delete-by-query.html
 
 ```
 curl -XDELETE 'http://localhost:9200/twitter/tweet/_delete_by_query?q=user:kimchy'
@@ -2193,15 +2193,15 @@ bin/plugin install file:/path/to/master.zip
 
 ## 참고
 - 시작하세요! 엘라스틱서치 by 김종민
-  * https://github.com/wikibook/elasticsearch
+  - https://github.com/wikibook/elasticsearch
 - http://elastic.co
 
 - Elasticsearch에서 아리랑 한글 분석기 사용하기
-  * https://www.elastic.co/kr/blog/arirang-analyzer-with-elasticsearch 
+  - https://www.elastic.co/kr/blog/arirang-analyzer-with-elasticsearch 
 
 - 은전한닢+elasticsearch
-  * https://bitbucket.org/eunjeon/seunjeon/raw/master/elasticsearch/
-  * http://blog.lyuwonkyung.com/elasticsearch/
+  - https://bitbucket.org/eunjeon/seunjeon/raw/master/elasticsearch/
+  - http://blog.lyuwonkyung.com/elasticsearch/
 
 - 엘라스틱서치 기초 사용법 by 박연오
-  * http://bakyeono.net/post/2016-06-03-start-elasticsearch.html
+  - http://bakyeono.net/post/2016-06-03-start-elasticsearch.html

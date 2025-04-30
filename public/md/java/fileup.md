@@ -96,8 +96,8 @@ public class FileUploadServlet extends HttpServlet {
 
 ## Issue
 - same file name overwrite issue
-  * change name and store original name to somewhere
-  * add postfix such as count number, timestamp
+  - change name and store original name to somewhere
+  - add postfix such as count number, timestamp
 
 ## ref
 - http://docs.oracle.com/javaee/6/tutorial/doc/glraq.html

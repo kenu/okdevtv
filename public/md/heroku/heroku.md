@@ -17,4 +17,4 @@
 
 ## DB
 - PostgreSQL
-  * https://devcenter.heroku.com/articles/connecting-to-relational-databases-on-heroku-with-java
+  - https://devcenter.heroku.com/articles/connecting-to-relational-databases-on-heroku-with-java

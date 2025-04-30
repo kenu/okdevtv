@@ -34,7 +34,7 @@ kubernetes-bootcamp   1/1     1            1           73s
 ## Install on MacOS
 - `brew install kubernetes-cli`
 - `brew cask install minikube`
-  * [VirtualBox](https://www.virtualbox.org) 필요
+  - [VirtualBox](https://www.virtualbox.org) 필요
 - Other platform : https://kubernetes.io/docs/tasks/tools/
 
 ## ref

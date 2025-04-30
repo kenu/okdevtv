@@ -7,7 +7,7 @@
 
 ## 설치하기
 - mac
-  * `brew install kotlin`
+  - `brew install kotlin`
 
 ## compile & run
 - hello.kt

@@ -1,7 +1,7 @@
 # Vue 3
 - https://v3.vuejs.org
 - Vite build tool
-  * https://github.com/vitejs/vite
+  - https://github.com/vitejs/vite
 - TypeScript
 
 ## QuickStart
@@ -18,6 +18,6 @@
 
 ## ref
 - Vue 3 Live Release Evan You Creator Vuejs
-  * https://www.youtube.com/watch?v=Vp5ANvd88x0
+  - https://www.youtube.com/watch?v=Vp5ANvd88x0
 - Migration Guide
-  * https://v3.vuejs.org/guide/migration/introduction.html
+  - https://v3.vuejs.org/guide/migration/introduction.html

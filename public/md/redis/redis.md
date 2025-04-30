@@ -19,11 +19,11 @@ make
 
 ## 실행
 - server
-  * `src/redis-server`
-  * port : 6379
+  - `src/redis-server`
+  - port : 6379
 
 - client
-  * `src/redis-cli`
+  - `src/redis-cli`
 
 ## command
 - `set name kenu`
@@ -31,7 +31,7 @@ make
 - `get name`
 
 - protected-mode 해제
-  * `config set protected-mode no`
+  - `config set protected-mode no`
 
 ```
 Error ReplyError: Ready check failed: DENIED Redis is running in protected mode because protected mode is enabled, no bind address was specified, no authentication password is requested to clients. In this mode connections are only accepted from the loopback interface. If you want to connect from external computers to Redis you may adopt one of the following solutions: 1) Just disable protected mode sending the command 'CONFIG SET protected-mode no' from the loopback interface by connecting to Redis from the same host the server is running, however MAKE SURE Redis is not publicly accessible from internet if you do so.
@@ -73,4 +73,4 @@ docker exec -it 7c7dd57eb291 /bin/bash
 
 ## ref
 - redis on windows
-  * http://hwigyeom.ntils.com/entry/Windows-%EC%97%90-Redis-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0-1
+  - http://hwigyeom.ntils.com/entry/Windows-%EC%97%90-Redis-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0-1

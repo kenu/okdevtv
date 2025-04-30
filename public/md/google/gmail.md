@@ -42,10 +42,10 @@
 
 ## App Password
 - https://myaccount.google.com/apppasswords
-  * 2 단계 인증 > 앱 비밀번호
-  * `**** xzka **** gmpr`
+  - 2 단계 인증 > 앱 비밀번호
+  - `**** xzka **** gmpr`
 
 ## ref
 - example
-  * https://github.com/kenu/okdevtv-examples/tree/main/node/email
+  - https://github.com/kenu/okdevtv-examples/tree/main/node/email
 

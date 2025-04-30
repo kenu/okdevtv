@@ -17,4 +17,4 @@
 
 ## ref
 - Yarn 대신 pnpm으로 넘어간 3가지 이유
-  * https://hiddenest.dev/yarn-pnpm-3
+  - https://hiddenest.dev/yarn-pnpm-3

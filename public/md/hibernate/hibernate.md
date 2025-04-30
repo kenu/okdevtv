@@ -52,10 +52,10 @@
 ## 참고
 - http://www.hibernate.org
 - Quick Guide
-  * http://www.tutorialspoint.com/hibernate/hibernate_quick_guide.htm
+  - http://www.tutorialspoint.com/hibernate/hibernate_quick_guide.htm
 - Spring 3.2 and Hibernate 4
-  * http://www.mkyong.com/spring-security/spring-security-hibernate-xml-example/
+  - http://www.mkyong.com/spring-security/spring-security-hibernate-xml-example/
 - Spring 4 and Hibernate 3
-  * http://www.journaldev.com/3524/spring-hibernate-integration-example-tutorial-spring-4-hibernate-3-and-hibernate-4
+  - http://www.journaldev.com/3524/spring-hibernate-integration-example-tutorial-spring-4-hibernate-3-and-hibernate-4
 - Hibernate Core Tutorials
-  * http://www.mkyong.com/tutorials/hibernate-tutorials/
+  - http://www.mkyong.com/tutorials/hibernate-tutorials/

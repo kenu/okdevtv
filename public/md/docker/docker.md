@@ -7,8 +7,8 @@
 ## Install
 - https://hub.docker.com/ id 생성
 - Docker 설치
-  * https://www.docker.com/products/docker-desktop/
-  * https://orbstack.dev/ (macOS)
+  - https://www.docker.com/products/docker-desktop/
+  - https://orbstack.dev/ (macOS)
 
 ## Basic keywords
 ```
@@ -21,13 +21,13 @@ docker container ls -a
 ```
 
 - `docker run hello-world`
-  * docker : 시스템에 있는 docker 사용
-  * run : 서브명령, 컨테이너 실행
-  * hello-world : 컨테이너에 실을 이미지 이름
+  - docker : 시스템에 있는 docker 사용
+  - run : 서브명령, 컨테이너 실행
+  - hello-world : 컨테이너에 실을 이미지 이름
 - 컨테이너는 아무것도 꾸미지 않은 버전의 리눅스 운영체제
 - 고래가라사대
-  * docker hub 이미지 정보
-    * 포함한 소프트웨어 종류와 사용법
+  - docker hub 이미지 정보
+    - 포함한 소프트웨어 종류와 사용법
 - `docker run -it -p 80:80 docker/getting-started`
 - stop
 
@@ -76,7 +76,7 @@ EXPOSE 3000
 ```
 
 - `docker build -t getting-started .`
-- `docker run -p 4000:80 getting-started`
+- `docker run -p 4000:3000 getting-started`
 - `curl localhost:4000`
 - `docker tag getting-started kenu/get-started:part2`
 
@@ -84,7 +84,7 @@ EXPOSE 3000
 - `docker push kenu/get-started:part2`
 
 ## 원격 이미지 로컬에서 실행
-- `docker run -p 4000:80 kenu/get-started:part2`
+- `docker run -p 4000:3000 kenu/get-started:part2`
 - `curl localhost:4000`
 
 ## 업로드 이미지 삭제
@@ -116,7 +116,7 @@ docker ps
 ```
 
 - docker-compose 설치
-  * https://docs.docker.com/compose/install/
+  - https://docs.docker.com/compose/install/
 
 ```sh
 DOCKER_CONFIG=${DOCKER_CONFIG:-$HOME/.docker}
@@ -136,8 +136,8 @@ docker compose version
 
 ## Cases
 - copy file
-  * `docker cp d362659da5fc:/opt/app/app.log .`
-    * d362659da5fc: container id
+  - `docker cp d362659da5fc:/opt/app/app.log .`
+    - d362659da5fc: container id
 
 ## 참고
 
@@ -173,19 +173,19 @@ https://index.docker.io
 
 ## ref
 - How to remove docker images containers and volumes
-  * https://www.digitalocean.com/community/tutorials/how-to-remove-docker-images-containers-and-volumes
+  - https://www.digitalocean.com/community/tutorials/how-to-remove-docker-images-containers-and-volumes
 - Docker in 12 minutes
-  * https://www.youtube.com/watch?v=YFl2mCHdv24
+  - https://www.youtube.com/watch?v=YFl2mCHdv24
 - Docker Compose in 12 minutes
-  * https://www.youtube.com/watch?v=Qw9zlE3t8Ko
+  - https://www.youtube.com/watch?v=Qw9zlE3t8Ko
 - Getting Started for non-technical
-  * https://docs.docker.com/mac/
-  * https://docs.docker.com/docker-for-windows/
+  - https://docs.docker.com/mac/
+  - https://docs.docker.com/docker-for-windows/
 - https://docs.docker.com/mac/step_three/
 - docker/whalesay
-  * https://hub.docker.com/r/docker/whalesay/
+  - https://hub.docker.com/r/docker/whalesay/
 - docker for mac
-  * https://pilsniak.com/how-to-install-docker-on-mac-os-using-brew/
+  - https://pilsniak.com/how-to-install-docker-on-mac-os-using-brew/
 
 ```
 brew install docker docker-compose docker-machine xhyve docker-machine-driver-xhyve

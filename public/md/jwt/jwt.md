@@ -10,9 +10,9 @@
 - `xxxxx.yyyyy.zzzzz`
 
 - Header
-  * type of the token
-  * hashing algorithm
-  * Base64Url encoded
+  - type of the token
+  - hashing algorithm
+  - Base64Url encoded
 
 ```json
 {
@@ -22,10 +22,10 @@
 ```
 
 - Payload
-  * three types of claims: reserved, public, and private claims.
-  * Reserved claims:  **iss** (issuer), **exp** (expiration time), **sub** (subject), **aud** (audience), and others.
-  * Public claims: IANA JSON Web Token Registry or a collision resistant namespace
-  * Private claims: custom claims created to share information
+  - three types of claims: reserved, public, and private claims.
+  - Reserved claims:  -*iss** (issuer), **exp** (expiration time), **sub** (subject), **aud** (audience), and others.
+  - Public claims: IANA JSON Web Token Registry or a collision resistant namespace
+  - Private claims: custom claims created to share information
 
 ```json
 {
@@ -55,7 +55,7 @@ Authorization: Bearer <token>
 
 ## install
 - `npm install jsonwebtoken`
-  * https://github.com/auth0/node-jsonwebtoken
+  - https://github.com/auth0/node-jsonwebtoken
 
 ## Usage
 - `jwt.sign(payload, secretOrPrivateKey, [options, callback])`

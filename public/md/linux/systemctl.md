@@ -8,7 +8,7 @@
 
 ## Custom Service 등록
 - spring boot 예
-  * `java -jar sbapp.jar`
+  - `java -jar sbapp.jar`
 - **systemd** 에 service 파일 생성
 ```sh
 sudo vi /etc/systemd/system/sbapp.service

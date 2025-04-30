@@ -42,8 +42,8 @@ Chapter 1, Node.js Basics
 Chapter 2, A Simple Node.js Framework
 Chapter 3, Simple Callbacks
 Chapter 4, Advanced Callbacks
-  * This chapter presents a more sophisticated and generic way to refactor blocking PHP 4 source code to simulate anonymous functions, function variables, and clo‐ sure.
-  * For PHP 5 source code, it explains how to use PHP 5 features to actually implement anonymous functions, function variables, and closure.
+  - This chapter presents a more sophisticated and generic way to refactor blocking PHP 4 source code to simulate anonymous functions, function variables, and clo‐ sure.
+  - For PHP 5 source code, it explains how to use PHP 5 features to actually implement anonymous functions, function variables, and closure.
 
 Chapter 5, HTTP Responses
 Chapter 6, Syntax
@@ -53,9 +53,9 @@ Chapter 9, File Access
 Chapter 10, MySQL Access
 Chapter 11, Plain Text, JSON, and XML
 Chapter 12, Miscellaneous Functions
-  * Node.js implementations for PHP API functions.
-  * speed along conversion
-  * contrast PHP and Node.js
+  - Node.js implementations for PHP API functions.
+  - speed along conversion
+  - contrast PHP and Node.js
 
 ## Node.js for Java Developer
 - enide plugin

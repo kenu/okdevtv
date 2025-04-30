@@ -148,15 +148,15 @@ export default function App() {
 
 ## render lifecycle
 - LIFECYCLE METHODS
-  * `componentWillMount` – 한 번 실행, 렌더링 전 클라이언트, 서버 양쪽에서
-  * `componentDidMount` – 한 번 실행, 렌더링 후, 클라이언트에서만
-  * `shouldComponentUpdate` – 리턴 값이 컴포넌트 업데이트 결정
-  * `componentWillUnmount` – 컴포넌트 언마운트 이전에 실행
+  - `componentWillMount` – 한 번 실행, 렌더링 전 클라이언트, 서버 양쪽에서
+  - `componentDidMount` – 한 번 실행, 렌더링 후, 클라이언트에서만
+  - `shouldComponentUpdate` – 리턴 값이 컴포넌트 업데이트 결정
+  - `componentWillUnmount` – 컴포넌트 언마운트 이전에 실행
 
 - SPECS
-  * `getInitialState` – state용 리턴 값의 초기 값
-  * `getDefaultProps` – props가 없을 경우 props 기본값 설정
-  * `mixins` – 객체 배열, 현재 컴포넌트 기능 확장에 사용됨
+  - `getInitialState` – state용 리턴 값의 초기 값
+  - `getDefaultProps` – props가 없을 경우 props 기본값 설정
+  - `mixins` – 객체 배열, 현재 컴포넌트 기능 확장에 사용됨
 
 - stateful
 
@@ -194,7 +194,7 @@ ReactDOM.render(<Timer />, mountNode);
 
 ## 참고
 - inflearn react 강좌
-  * https://www.inflearn.com/course/react-%EA%B0%95%EC%A2%8C-velopert/
+  - https://www.inflearn.com/course/react-%EA%B0%95%EC%A2%8C-velopert/
 - https://scotch.io/tutorials/learning-react-getting-started-and-concepts
 - webpack
-  * https://okdevtv.com/mib/webpack
+  - https://okdevtv.com/mib/webpack

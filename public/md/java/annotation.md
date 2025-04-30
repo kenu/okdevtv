@@ -1,8 +1,8 @@
 # Annotation
 - a form of metadata, provide data about a program that is not part of the program itself
-  * **Information for the compiler** — Annotations can be used by the compiler to detect errors or suppress warnings.
-  * **Compile-time and deployment-time processing** — Software tools can process annotation information to generate code, XML files, and so forth.
-  * **Runtime processing** — Some annotations are available to be examined at runtime.
+  - **Information for the compiler** — Annotations can be used by the compiler to detect errors or suppress warnings.
+  - **Compile-time and deployment-time processing** — Software tools can process annotation information to generate code, XML files, and so forth.
+  - **Runtime processing** — Some annotations are available to be examined at runtime.
 
 ## Examples
 ```
@@ -39,7 +39,7 @@ class MyClass { ... }
 ```
 
 - Predefined Java Annotations : Override, SuppressWarnings
-  * https://docs.oracle.com/javase/tutorial/java/annotations/predefined.html
+  - https://docs.oracle.com/javase/tutorial/java/annotations/predefined.html
 - Custom Annotation types : EBook, Author
 
 - Java SE 8 Annotations
@@ -50,19 +50,19 @@ class MyClass { ... }
 class MyClass { ... }
 ```
 - Type Annotations
-  * Class instance creation expression:
+  - Class instance creation expression:
 ```java
 new @Interned MyObject();
 ```
-  * Type cast:
+  - Type cast:
 ```java
 myString = (@NonNull String) str;
 ```
-  * implements clause:
+  - implements clause:
 ```java
 class UnmodifiableList<T> implements @Readonly List<@Readonly T> { ... }
 ```
-  * Thrown exception declaration:
+  - Thrown exception declaration:
 ```java
 void monitorTemperature() throws @Critical TemperatureException { ... }
 ```

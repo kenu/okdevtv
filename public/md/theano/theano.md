@@ -64,7 +64,7 @@ array([[ 11.,  22.],
        [ 33.,  44.]])
 ```
 - more
-  * http://deeplearning.net/software/theano/tutorial/examples.html
+  - http://deeplearning.net/software/theano/tutorial/examples.html
 
 
 ## Tutorial
@@ -75,7 +75,7 @@ import theano.tensor as T
 
 ### Derivatives in Theano
 - Computing Gradients
-  * http://deeplearning.net/software/theano/tutorial/gradients.html#computing-gradients
+  - http://deeplearning.net/software/theano/tutorial/gradients.html#computing-gradients
 
 ```py
 import numpy
@@ -99,7 +99,7 @@ pp(f.maker.fgraph.outputs[0])
 '(TensorConstant{2.0} * x)'
 ```
 
-  * the gradient of the logistic funtions
+  - the gradient of the logistic funtions
 
 ```py
 x = T.dmatrix('x')
@@ -112,7 +112,7 @@ array([[ 0.25      ,  0.19661193],
 ```
 
 - Computing the Jacobian
-  * http://deeplearning.net/software/theano/tutorial/gradients.html#computing-the-jacobian
+  - http://deeplearning.net/software/theano/tutorial/gradients.html#computing-the-jacobian
 
 ```py
 import theano
@@ -128,7 +128,7 @@ array([[ 8.,  0.],
 
 
 - Computing the Hessian
-  * http://deeplearning.net/software/theano/tutorial/gradients.html#computing-the-hessian
+  - http://deeplearning.net/software/theano/tutorial/gradients.html#computing-the-hessian
 
 ```py
 x = T.dvector('x')
@@ -144,5 +144,5 @@ array([[ 2.,  0.],
 
 ## 참고
 - Theano basic tutorial
-  * http://deeplearning.net/software/theano/tutorial/
+  - http://deeplearning.net/software/theano/tutorial/
 - http://deeplearning.net/tutorial/

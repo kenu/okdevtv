@@ -1,11 +1,11 @@
 # Oracle Database
 
 - oracle 11g Oracle Database Express Edition (XE) Release 11.2.0.2.0 (11gR2).
-  * https://www.oracle.com/database/technologies/xe-prior-release-downloads.html
-  * https://bit.ly/3CUi8Dk
-  * Windows, Linux only
+  - https://www.oracle.com/database/technologies/xe-prior-release-downloads.html
+  - https://bit.ly/3CUi8Dk
+  - Windows, Linux only
 - [MacOS] M1 맥북 도커로 ORACLE DB 실행하기
-  * https://shanepark.tistory.com/400
+  - https://shanepark.tistory.com/400
 
 ## Tablespace 만들기
 1. tablespace, user 만들기

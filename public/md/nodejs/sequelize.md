@@ -77,4 +77,4 @@ const sequelize = new Sequelize('sqlite::memory:', {
 ```
 ## related
 - Reverse Model
-  * https://github.com/sequelize/sequelize-auto
+  - https://github.com/sequelize/sequelize-auto

@@ -4,7 +4,7 @@
 - GitHub의 설치형 + 프로젝트별 게시판
 - 한국어, 영어, 일어 지원
 - installation
-  * https://github.com/yona-projects/yona
+  - https://github.com/yona-projects/yona
 
 ## In AWS install Yona
 
@@ -25,7 +25,7 @@ sudo mariadb-secure-installation
 mysql -uroot -p
 ```
 
-  * yona 계정, DB 생성
+  - yona 계정, DB 생성
 
 ```sql
 create database yona DEFAULT CHARACTER SET utf8mb4 DEFAULT COLLATE utf8mb4_bin;
@@ -34,10 +34,10 @@ GRANT ALL PRIVILEGES ON yona.* TO yona@localhost IDENTIFIED BY 'yonadan';
 ```
 
 - JDK 11 설치
-  * [install](/mib/java)
-  * jna issue at aach64(Arm)
-    * https://github.com/java-native-access/jna
-    * wget https://repo1.maven.org/maven2/net/java/dev/jna/jna/5.14.0/jna-5.14.0.jar
+  - [install](/mib/java)
+  - jna issue at aach64(Arm)
+    - https://github.com/java-native-access/jna
+    - wget https://repo1.maven.org/maven2/net/java/dev/jna/jna/5.14.0/jna-5.14.0.jar
 
 ### Install Yona
 - Yona 설치
@@ -53,7 +53,7 @@ bin/yona # first for unarchive folders
 vi conf/application.conf
 ```
 
-  * DB info in conf/application.conf
+  - DB info in conf/application.conf
 
 ```
 # MariaDB
@@ -63,7 +63,7 @@ db.default.user=yona
 db.default.password="yonadan"
 ```
 
-  * run yona
+  - run yona
 ```
 bin/yona
 ```
@@ -107,6 +107,6 @@ sleep 5
 
 ## 참고
 - yona-1.16.0 설치 영상
-  * https://youtu.be/70N4yB5Tiys
+  - https://youtu.be/70N4yB5Tiys
 - yona-1.4.1 설치 영상
-  * https://youtu.be/B3Q2FVXZWBM
+  - https://youtu.be/B3Q2FVXZWBM

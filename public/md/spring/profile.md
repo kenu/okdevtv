@@ -1,11 +1,11 @@
 # Spring Profiles
 - 환경에 맞게 설정을 가져오기
 - 여러가지 방식으로 설정
-  * Bean @Profile
-  * jvm properties
-  * web.xml
-  * Environment
-  * `@ActiveProfiles`
+  - Bean @Profile
+  - jvm properties
+  - web.xml
+  - Environment
+  - `@ActiveProfiles`
 
 ## Sample
 

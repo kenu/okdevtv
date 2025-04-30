@@ -126,7 +126,7 @@ sudo service nginx restart
 ```
 2017/03/31 06:03:21 [crit] 1915#0: *8 connect() to 127.0.0.1:3000 failed (13: Permission denied) while connecting to upstream, client: 223.38.60.90, server: _, request: "GET /poweredby.png HTTP/1.1", upstream: "http://127.0.0.1:3000/poweredby.png", host: "104.197.6.69", referrer: "http://104.197.6.69/"
 ```
-  * from: http://stackoverflow.com/questions/23948527/13-permission-denied-while-connecting-to-upstreamnginx
+  - from: http://stackoverflow.com/questions/23948527/13-permission-denied-while-connecting-to-upstreamnginx
 - 해결 방법
 
 ```

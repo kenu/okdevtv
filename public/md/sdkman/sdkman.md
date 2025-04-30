@@ -4,8 +4,8 @@
 - `sdk install springboot`
 - `sdk help`
 - Windows need Cygwin or [Git Bash](https://git-scm.com)
-  * zip.exe in Windows folder
-  * http://stahlworks.com/dev/index.php?tool=zipunzip
+  - zip.exe in Windows folder
+  - http://stahlworks.com/dev/index.php?tool=zipunzip
 ```sh
 curl -O http://stahlworks.com/dev/zip.exe
 mv zip.exe /c/Windows

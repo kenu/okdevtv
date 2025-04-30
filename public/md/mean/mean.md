@@ -49,11 +49,11 @@ npm install -g bower
 
 ### MEAN 서비스 설치
 - 조건
-  * git
-  * node
-  * mongod --dbpath=~/data/db
-  * grunt
-  * bower
+  - git
+  - node
+  - mongod --dbpath=~/data/db
+  - grunt
+  - bower
 - git clone http://github.com/linnovate/mean.git
 - cd mean
 - npm install

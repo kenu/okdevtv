@@ -32,18 +32,18 @@
 
 ## ref
 - 시큐어코딩가이드(C, Java)
-  * https://www.mois.go.kr/frt/bbs/type001/commonSelectBoardArticle.do?bbsId=BBSMSTR_000000000012&nttId=42152
+  - https://www.mois.go.kr/frt/bbs/type001/commonSelectBoardArticle.do?bbsId=BBSMSTR_000000000012&nttId=42152
 - JavaScript 시큐어코딩 가이드
-  * https://www.kisa.or.kr/2060204/form?postSeq=14&page=1
+  - https://www.kisa.or.kr/2060204/form?postSeq=14&page=1
 - Python 시큐어코딩 가이드
-  * https://www.cisp.or.kr/archives/24779
+  - https://www.cisp.or.kr/archives/24779
 - 정보보안은 개발단계에서부터! 시큐어코딩(Secure Coding)
-  * https://www.insilicogen.com/blog/383
+  - https://www.insilicogen.com/blog/383
 - XXE Injection
-  * https://rootable.tistory.com/entry/XXE-Injection
+  - https://rootable.tistory.com/entry/XXE-Injection
 - Introduction to XXE injection
-  * https://beistlab.files.wordpress.com/2015/01/grayhash_intro_xxe.pdf
+  - https://beistlab.files.wordpress.com/2015/01/grayhash_intro_xxe.pdf
 - JWT (JSON Web Token) 취약점 알아보기
-  * https://velog.io/@thelm3716/JWTvul
+  - https://velog.io/@thelm3716/JWTvul
 - Burp Suite
-  * https://portswigger.net/burp
+  - https://portswigger.net/burp

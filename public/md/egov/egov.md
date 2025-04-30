@@ -8,4 +8,4 @@
 
 ## related
 - MSA tutorial
-  * [MSA tutorial](/mib/egov/msa)
+  - [MSA tutorial](/mib/egov/msa)

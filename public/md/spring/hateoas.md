@@ -1,7 +1,7 @@
 # Spring Boot HATEOAS
 - Hypermedia as the Engine of Application State (HATEOAS)
 - Hypermedia format
-  * http://stateless.co/hal_specification.html
+  - http://stateless.co/hal_specification.html
 - Response
 
 ```json

@@ -128,8 +128,8 @@ public class MainApp {
 
 ## Bean lifecycle
 - Initialization callbacks
-  * init-method="init"
-  * InitializingBean interface
+  - init-method="init"
+  - InitializingBean interface
 
 ```java
 public class ExampleBean implements InitializingBean {
@@ -139,8 +139,8 @@ public class ExampleBean implements InitializingBean {
 }
 ```
 - Destruction callbacks
-  * destroy-method="destroy"
-  * DisposableBean interface
+  - destroy-method="destroy"
+  - DisposableBean interface
 
 ```java
 public class ExampleBean implements DisposableBean {

@@ -28,7 +28,7 @@
 
 ### python3 (mac)
 - install brew
-  * https://brew.sh
+  - https://brew.sh
 
 - install python3
 
@@ -64,26 +64,26 @@ backend: TkAgg
 
 ## scipy on windows
 - Unofficial Windows Binaries for Python Extension Packages
-  * http://www.lfd.uci.edu/~gohlke/pythonlibs/#scipy
+  - http://www.lfd.uci.edu/~gohlke/pythonlibs/#scipy
 ## ref
 - Python Style Guide(PEP8)
-  * https://peps.python.org/pep-0008/
-  * https://okdevtv.com/mib/python/pep8
+  - https://peps.python.org/pep-0008/
+  - https://okdevtv.com/mib/python/pep8
 - 생활코딩 Python & Ruby
-  * https://opentutorials.org/course/1750
+  - https://opentutorials.org/course/1750
 - Tutoiral Point Python
-  * https://www.tutorialspoint.com/python/
+  - https://www.tutorialspoint.com/python/
 - Python 10 tasks
-  * [10 things possible with Python](https://okdevtv.com/mib/python/10)
+  - [10 things possible with Python](https://okdevtv.com/mib/python/10)
 - jupyter
-  * https://okdevtv.com/mib/python/jupyter
+  - https://okdevtv.com/mib/python/jupyter
 - jupyter-server
-  * https://okdevtv.com/mib/python/jupyter-server
+  - https://okdevtv.com/mib/python/jupyter-server
 - pyenv
-  * https://okdevtv.com/mib/python/pyenv
+  - https://okdevtv.com/mib/python/pyenv
 - pandas
-  * https://okdevtv.com/mib/python/pandas
+  - https://okdevtv.com/mib/python/pandas
 - matplotlib
-  * https://okdevtv.com/mib/python/matplotlib
+  - https://okdevtv.com/mib/python/matplotlib
 - datetime
-  * https://okdevtv.com/mib/python/datetime
+  - https://okdevtv.com/mib/python/datetime

@@ -15,9 +15,9 @@
 - `brew upgrade`
 
 - 문서
-  * https://docs.brew.sh/
+  - https://docs.brew.sh/
 - 트러블슈팅
-  * First, please run `brew update` and `brew doctor`
+  - First, please run `brew update` and `brew doctor`
 
 
 ## Roll back to Back Tick(\`) from (₩)
@@ -32,7 +32,7 @@ vi ~/Library/KeyBindings/DefaultkeyBinding.dict
 }
 ```
 
-  * restart application
+  - restart application
 
 ## Xcode command
 ```
@@ -53,4 +53,4 @@ xcode-select --install
 
 ## 관련 영상
 - 새로운 맥 개발환경 시작하기 (18분)
-  * https://www.youtube.com/watch?v=bJtdulEkf64
+  - https://www.youtube.com/watch?v=bJtdulEkf64

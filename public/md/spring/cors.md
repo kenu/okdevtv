@@ -4,7 +4,7 @@
 
 ## Code
 ### Controller
-  * `@CrossOrigin(origins = "http://localhost:8080")`
+  - `@CrossOrigin(origins = "http://localhost:8080")`
 
 ```java
 @RequestMapping("/somePath")
@@ -25,9 +25,9 @@ public class SomeController {
 ```
 
 ### Global
-  * java
-  * properties
-  * YAML
+  - java
+  - properties
+  - YAML
 
 ```java
   @Bean

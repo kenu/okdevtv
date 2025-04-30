@@ -14,7 +14,7 @@ cd /Applications/Xcode.app/Contents/Developer/Applications
 open -n Simulator.app
 open -n Simulator.app
 ```
-  * Hardware > Device > choose others
+  - Hardware > Device > choose others
 
 ## Getting Started Develop iOS Apps Swift
 - https://developer.apple.com/library/content/referencelibrary/GettingStarted/DevelopiOSAppsSwift/
@@ -24,8 +24,8 @@ open -n Simulator.app
 - Editor Area
 - Navigator Area
 - Utility Area
-  * Inspector pane
-  * Library pane
+  - Inspector pane
+  - Library pane
 
 ### ViewController Lifecycle
 - <img src="images/WWVC_vclife_2x.webp" alt="ViewController Lifecycle">
@@ -51,13 +51,13 @@ required init(coder: NSCoder) {
 }
 ```
 - Button status
-  * normal, highlighted, focused, selected, and disabled
+  - normal, highlighted, focused, selected, and disabled
 
 ### Define Data Model
 - failable, non-failable
 - Unit Test
-  * cmd+U
-  * XCTestCase
+  - cmd+U
+  - XCTestCase
 
 ### Table View
 - TableViewCell
@@ -71,7 +71,7 @@ required init(coder: NSCoder) {
 
 ### Persist Data
 - NSCoding
-  * a protocol that enables a lightweight solution for archiving objects and other structures
+  - a protocol that enables a lightweight solution for archiving objects and other structures
 - static properties
 - instance properties
 

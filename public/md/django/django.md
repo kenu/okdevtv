@@ -55,7 +55,7 @@ python manage.py migrate
 ```
 python manage.py runserver
 ```
-  * http://127.0.0.1:8000/
+  - http://127.0.0.1:8000/
 
 ## Create Django App
 ```
@@ -127,8 +127,8 @@ python manage.py createsuperuser
 
 ## 참고
 - django 
-  * https://www.djangoproject.com/
+  - https://www.djangoproject.com/
 - django girls tutorial
-  * https://tutorial.djangogirls.org/ko/
+  - https://tutorial.djangogirls.org/ko/
 - django unittest
-  * https://docs.djangoproject.com/ja/1.9/topics/testing/overview/
+  - https://docs.djangoproject.com/ja/1.9/topics/testing/overview/

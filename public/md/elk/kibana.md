@@ -15,7 +15,7 @@
 - "123.123.123.123" 
 - clientip: "123.123.123.123"
 - clientip:["188.208.0.0" TO "188.208.255.255"]
-  * TO는 대문자
+  - TO는 대문자
 
 ### URL 검색
 - "/order/form.html"
@@ -40,5 +40,5 @@
 
 ## 참고
 - 질의어 문법(query syntax)
-  * Lucene 검색 엔진의 문법
-  * https://lucene.apache.org/core/2_9_4/queryparsersyntax.html
+  - Lucene 검색 엔진의 문법
+  - https://lucene.apache.org/core/2_9_4/queryparsersyntax.html

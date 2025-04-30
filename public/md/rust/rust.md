@@ -1,12 +1,12 @@
 # Rust
 - https://www.rust-lang.org/
 - Korean ebook:
-  * https://doc.rust-kr.org/
+  - https://doc.rust-kr.org/
 
 ## install
 - https://www.rust-lang.org/tools/install
 - Windows C++ build tools
-  * https://visualstudio.microsoft.com/visual-cpp-build-tools/
+  - https://visualstudio.microsoft.com/visual-cpp-build-tools/
 
 ## Basic
 - `rustc --version`

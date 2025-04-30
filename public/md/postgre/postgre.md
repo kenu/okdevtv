@@ -27,7 +27,7 @@ vi /var/lib/pgsql/data/postgresql.conf
 ```
 
 - `vim /var/lib/pgsql/data/pg_hba.conf`
-  * change `peer` to `trust` for local, IPv4
+  - change `peer` to `trust` for local, IPv4
 ```
 # TYPE  DATABASE        USER            ADDRESS                 METHOD
 
@@ -40,7 +40,7 @@ host    all             all             127.0.0.1/32            trust
 - `sudo systemctl restart postgresql`
 - `sudo su - postgres`
 - `psql`
-  * Create user, database
+  - Create user, database
 ```sql
 create user devuser nosuperuser;
 
@@ -56,5 +56,5 @@ psql -U devuser -W -d devdb`
 
 ## ref
 - AWS EC2에 PostgreSQL 설치하고 접속하기
-  * https://developerbee.tistory.com/192
+  - https://developerbee.tistory.com/192
 

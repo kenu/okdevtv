@@ -57,10 +57,10 @@ module.exports = { presets };
 ## babel-jest
 
 - jest command
-  * `npm i -g jest`
+  - `npm i -g jest`
 
 - package.json
-  * `npm i -D @babel/cli @babel/core @babel/preset-env babel-jest`
+  - `npm i -D @babel/cli @babel/core @babel/preset-env babel-jest`
 
 ```json
   "devDependencies": {

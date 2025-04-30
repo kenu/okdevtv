@@ -10,7 +10,7 @@ npm i -g ngrok
 ```
 
 - download
-  * https://ngrok.com/download
+  - https://ngrok.com/download
 
 ## 사용
 - 로컬 서버 구동 후 ngrok 실행

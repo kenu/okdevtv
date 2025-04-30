@@ -71,8 +71,8 @@
 
 ##  참고
 - The History of CSS
-  * http://www.cssneuse.net/the-history-of-css.php
+  - http://www.cssneuse.net/the-history-of-css.php
 - w3schools
-  * http://www.w3schools.com/css/
+  - http://www.w3schools.com/css/
 - csszengarden.com
-  * http://csszengarden.com
+  - http://csszengarden.com

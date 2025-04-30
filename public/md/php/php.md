@@ -11,7 +11,7 @@ sudo systemctl start php-fpm
 ```
 
 - composer
-  * php package manager
+  - php package manager
 
 ```sh
 curl -sS https://getcomposer.org/installer | php

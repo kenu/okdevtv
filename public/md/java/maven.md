@@ -10,12 +10,12 @@
 ## install
 
 - sdkman
-  * [sdkman](/mib/sdkman) 추천
-    * `sdk install maven`
-  * JDK 설치 및 JAVA_HOME 환경변수 필요
-  * https://maven.apache.org 위치에서 `apache-maven-*.*.*-bin.zip` 다운로드
-  * download and unzip
-  * 환경변수 %Path%;\path\to\maven\bin
+  - [sdkman](/mib/sdkman) 추천
+    - `sdk install maven`
+  - JDK 설치 및 JAVA_HOME 환경변수 필요
+  - https://maven.apache.org 위치에서 `apache-maven-*.*.*-bin.zip` 다운로드
+  - download and unzip
+  - 환경변수 %Path%;\path\to\maven\bin
 - mac
 
 ```
@@ -106,6 +106,6 @@ mvn archetype:generate -DgroupId=com.okdevtv.java -DartifactId=okdevtv -Darchety
 
 ## ref
 - 5분 메이븐
-  * http://maven.apache.org/guides/getting-started/maven-in-five-minutes.html
+  - http://maven.apache.org/guides/getting-started/maven-in-five-minutes.html
 - Polyglot maven
-  * https://github.com/takari/polyglot-maven
+  - https://github.com/takari/polyglot-maven

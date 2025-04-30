@@ -15,20 +15,20 @@
 
 ## Project
 - ZAP
-  * https://www.zaproxy.org/
+  - https://www.zaproxy.org/
 - WebGoat (Java)
-  * https://github.com/WebGoat/WebGoat
+  - https://github.com/WebGoat/WebGoat
 - Juice Shop (Node.js)
-  * https://owasp.org/www-project-juice-shop/
+  - https://owasp.org/www-project-juice-shop/
 - Damn Vulnerable Web Application (DVWA) (PHP)
-  * https://owasp.org/www-project-damn-vulnerable-web-sockets/
+  - https://owasp.org/www-project-damn-vulnerable-web-sockets/
 - OWASP Mutillidae II (PHP)
-  * https://sourceforge.net/projects/mutillidae/
+  - https://sourceforge.net/projects/mutillidae/
 - OWASP Security Shepherd (Node.js)
-  * https://owasp.org/www-project-security-shepherd/
+  - https://owasp.org/www-project-security-shepherd/
 - OWASP Web Security Testing Guide (WSTG) (PDF)
-  * https://owasp.org/www-project-web-security-testing-guide/
+  - https://owasp.org/www-project-web-security-testing-guide/
 
 ## ref
 - 2017년판 OWASP TOP 10, 어떤 보안위협 담겼나
-  * http://www.boannews.com/media/view.asp?idx=54393
+  - http://www.boannews.com/media/view.asp?idx=54393

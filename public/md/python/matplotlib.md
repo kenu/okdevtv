@@ -29,5 +29,5 @@ plt.show()
 
 ## ref
 - troubleshooting
-  * http://stackoverflow.com/questions/34004063/error-on-import-matplotlib-pyplot-on-anaconda3-for-windows-10-home-64-bit-pc
+  - http://stackoverflow.com/questions/34004063/error-on-import-matplotlib-pyplot-on-anaconda3-for-windows-10-home-64-bit-pc
 - http://matplotlib.org/users/pyplot_tutorial.html

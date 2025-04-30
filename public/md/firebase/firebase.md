@@ -4,7 +4,7 @@
 - https://firebase.google.com/docs/auth/web/start
 - install firebase sdk
 - Sign up new users
-  * `createUserWithEmailAndPassword`
+  - `createUserWithEmailAndPassword`
 
 - Sign in existing users
 - Set auth state observer

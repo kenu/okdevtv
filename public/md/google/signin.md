@@ -6,7 +6,7 @@
 
 ## related
 - react google login
-  * https://github.com/anthonyjgrove/react-google-login
+  - https://github.com/anthonyjgrove/react-google-login
 
 ## ref
 - https://developers.google.com/identity/sign-in/web/sign-in

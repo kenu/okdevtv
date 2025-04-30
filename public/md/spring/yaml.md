@@ -63,12 +63,12 @@ my:
 
 ### 스프링 Profile 적용
 - 한 파일 내에서 여러 환경 표시 가능
-  * nested document
+  - nested document
 - applicaton.yml 파일 하나로 여러가지 yml 생성한 것과 같이 처리 가능
 - properties는 개별 파일 필요
-  * application-{profile}.properties
-  * application-local.properties
-  * application-dev.properties
+  - application-{profile}.properties
+  - application-local.properties
+  - application-dev.properties
 
 ```yaml
 #local, dev, prod 공통 설정

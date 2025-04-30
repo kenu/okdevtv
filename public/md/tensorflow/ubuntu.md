@@ -126,4 +126,4 @@ MatMul: /job:localhost/replica:0/task:0/gpu:0
 - http://www.pyimagesearch.com/2016/07/04/how-to-install-cuda-toolkit-and-cudnn-for-deep-learning/
 - http://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#axzz4dfIE2Rxb
 - AWS의 GPU를 이용한 TensorFlow
-  * http://goodtogreate.tistory.com/entry/AWS%EC%9D%98-GPU%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-TensorFlow
+  - http://goodtogreate.tistory.com/entry/AWS%EC%9D%98-GPU%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-TensorFlow

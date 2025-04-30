@@ -61,9 +61,9 @@ Foo newFoo = (Foo) my.doSomething(foo); // Object typecasting
 ```
 
 - Two pros:
-  * no need of casting (the compiler hides this from you)
-  * compile time safety that works.
+  - no need of casting (the compiler hides this from you)
+  - compile time safety that works.
 - https://stackoverflow.com/a/5207140/510222
 
 ## ref
-  * https://docs.oracle.com/javase/tutorial/java/generics/types.html
+  - https://docs.oracle.com/javase/tutorial/java/generics/types.html

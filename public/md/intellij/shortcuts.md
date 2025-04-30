@@ -56,8 +56,8 @@
 
 ## 참고
 - IntelliJ IDEA ReferenceCard pdf
-  * https://www.jetbrains.com/idea/docs/IntelliJIDEA_ReferenceCard.pdf
+  - https://www.jetbrains.com/idea/docs/IntelliJIDEA_ReferenceCard.pdf
 - IntelliJ on YouTube
-  * [JetBrainsTV](https://www.youtube.com/channel/UC4ogdcPcIAOOMJktgBMhQnQ)
+  - [JetBrainsTV](https://www.youtube.com/channel/UC4ogdcPcIAOOMJktgBMhQnQ)
 - Visual Studio 단축키
-  * https://www.facebook.com/gyuwon.yi/posts/939785252731365
+  - https://www.facebook.com/gyuwon.yi/posts/939785252731365

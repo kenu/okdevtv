@@ -8,19 +8,19 @@
 - Repo: https://github.com/spring-guides/tut-react-and-spring-data-rest
 - Java8, Maven
 - Spring Boot Dependencies
-  * Rest Repositories
-  * Thymeleaf
-  * JPA
-  * H2
+  - Rest Repositories
+  - Thymeleaf
+  - JPA
+  - H2
 - React.js, ES6
-  * https://ko.react.dev/
-  * http://es6-features.org/
+  - https://ko.react.dev/
+  - http://es6-features.org/
 - Part 1~5
-  * Part 1: 기본 세팅
-  * Part 2: Hypermedia 제어
-  * Part 3: 조건부 연산
-  * Part 4: 웹소켓 이벤트
-  * Part 5: UI 및 API 보안
+  - Part 1: 기본 세팅
+  - Part 2: Hypermedia 제어
+  - Part 3: 조건부 연산
+  - Part 4: 웹소켓 이벤트
+  - Part 5: UI 및 API 보안
 
 ## YouTube
 - https://youtu.be/LAxaEBELods
@@ -32,14 +32,14 @@
 ## Part 1
 - `basic`: https://github.com/spring-guides/tut-react-and-spring-data-rest/tree/master/basic
 - Spring Boot 프로젝트 만들기
-  * HAL: Hypermedia Application Language
-  * Rest Repositories HAL Explorer
-  * `spring.data.rest.base-path=/api`
+  - HAL: Hypermedia Application Language
+  - Rest Repositories HAL Explorer
+  - `spring.data.rest.base-path=/api`
 - frontend-maven-plugin 메이븐 플러그인
-  * frontend-gradle-plugin 그래들 플러그인
-  * node.js 빌드 지원
-  * 운영으로는 비추천
-  * https://github.com/eirslett/frontend-maven-plugin#what-is-this-plugin-meant-to-do
+  - frontend-gradle-plugin 그래들 플러그인
+  - node.js 빌드 지원
+  - 운영으로는 비추천
+  - https://github.com/eirslett/frontend-maven-plugin#what-is-this-plugin-meant-to-do
 
 ### React.js
 - `react.js`: UI 개발 자바스크립트 라이브러리
@@ -371,10 +371,10 @@ updatePageSize(pageSize) {
 ## Part 3
 - `conditional`: https://github.com/spring-guides/tut-react-and-spring-data-rest/tree/master/conditional
 - Record Version, when inserting and updating
-  * `javax.persistence.Version`
+  - `javax.persistence.Version`
 - Spring Data REST feature:
-  * 리소스 버전
-  * 프론트엔드 ETag
+  - 리소스 버전
+  - 프론트엔드 ETag
 
 ### diff
 - <img src="images/react/part3-diff.webp" alt="part3 diff" class="img"/>

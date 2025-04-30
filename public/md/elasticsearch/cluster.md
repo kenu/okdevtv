@@ -3,7 +3,7 @@
 ## Config
 - config/elasticsearch.yml
 
-  * master
+  - master
 ```
 cluster.name: elasticsearch
 node.master: true
@@ -12,7 +12,7 @@ network.host: 0.0.0.0
 discovery.zen.ping.unicast.hosts: ["127.0.0.1", "52.78.139.201"]
 ```
 
-  * data nodes
+  - data nodes
 ```
 cluster.name: elasticsearch
 node.master: false
@@ -22,9 +22,9 @@ discovery.zen.ping.unicast.hosts: ["127.0.0.1", "52.78.207.130"]
 ```
 
 - Security Group
-  * **Don't use 0.0.0.0/32**
-  * 9300
-  * 9301
+  - **Don't use 0.0.0.0/32**
+  - 9300
+  - 9301
 
 
 ## Performance

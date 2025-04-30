@@ -86,7 +86,7 @@
 
 ## ref
 - JavaSchool Spring Security
-  * http://java-school.net/spring/spring-security.php
+  - http://java-school.net/spring/spring-security.php
 - MKyoung Spring Security
-  * http://www.mkyong.com/tutorials/spring-security-tutorials/
+  - http://www.mkyong.com/tutorials/spring-security-tutorials/
 

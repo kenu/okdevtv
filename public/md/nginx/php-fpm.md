@@ -61,4 +61,4 @@ sudo service nginx restart
 
 ## 참고
 - NGINX-PHP-MySQL 설치(ubuntu)
-  * https://opentutorials.org/module/384/4332
+  - https://opentutorials.org/module/384/4332

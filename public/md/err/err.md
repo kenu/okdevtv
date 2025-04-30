@@ -12,17 +12,17 @@ gyp verb ensuring that file exists: C:\Python27\python.exe
 
 - solv 1
 
-  * delete node_modules folder
-  * running `npm install --global windows-build-tools`
-  * reinstalling node modules or node-sass with `npm install`
-  * **`node-sass` should check the node version** [more](https://github.com/sass/node-sass/releases)
+  - delete node_modules folder
+  - running `npm install --global windows-build-tools`
+  - reinstalling node modules or node-sass with `npm install`
+  - **`node-sass` should check the node version** [more](https://github.com/sass/node-sass/releases)
 
 - solv 2
-  * download and install Python2.7
-  * https://www.python.org/downloads/release/python-2717/
+  - download and install Python2.7
+  - https://www.python.org/downloads/release/python-2717/
 
 - ref
-  * https://stackoverflow.com/a/53009640
+  - https://stackoverflow.com/a/53009640
 
 ## unable to verify the first certificate
 
@@ -48,7 +48,7 @@ npm config set strict-ssl true
 ```
 
 - ref
-  * https://stackoverflow.com/a/21385322/510222
+  - https://stackoverflow.com/a/21385322/510222
 
 ## SCRIPT1046: strict 모드에서는 속성을 여러 번 정의할 수 없습니다.
 
@@ -80,7 +80,7 @@ v-model="checkedIdx">
 :checked="mvp.dYn === 'Y' ? 'checked' : ''"
 :value="index">
 ```
-  * `v-model`과 `:checked`는 동시에 사용할 수 없음
+  - `v-model`과 `:checked`는 동시에 사용할 수 없음
 
 ## SCRIPT1003: ':'가 필요합니다.
 

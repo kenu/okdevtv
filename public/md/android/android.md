@@ -49,8 +49,8 @@
 
 ## 참고
 - 안드로이드 스튜디오 가이드
-  * https://developer.android.com/sdk/installing/studio.html
+  - https://developer.android.com/sdk/installing/studio.html
 - 안드로이드 스튜디오와 이클립스 단축키 비교
-  * https://okdevtv.com/md/#intellij/intellij-shortcuts.md
+  - https://okdevtv.com/md/#intellij/intellij-shortcuts.md
 - 안드로이드 아프리카TV 방송 동영상
-  * http://bit.ly/okdevtv-android
+  - http://bit.ly/okdevtv-android

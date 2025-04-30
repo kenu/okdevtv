@@ -9,8 +9,8 @@
 ## WAR
 - local build WAR
 - upload
-  * file upload into webapps
-  * tomcat manager
+  - file upload into webapps
+  - tomcat manager
 
 
 ## source + build

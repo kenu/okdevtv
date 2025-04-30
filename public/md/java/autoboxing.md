@@ -1,12 +1,12 @@
 # Autoboxing and Unboxing
 - automatic conversion : Primitive types ↔︎ Wrapper classes
-  * int ↔︎ Integer
-  * long ↔︎ Long
-  * double ↔︎ Double
-  * boolean ↔︎ Boolean
-  * char ↔︎ Character
-  * byte ↔︎ Byte
-  * short ↔︎ Short
+  - int ↔︎ Integer
+  - long ↔︎ Long
+  - double ↔︎ Double
+  - boolean ↔︎ Boolean
+  - char ↔︎ Character
+  - byte ↔︎ Byte
+  - short ↔︎ Short
 - `Autoboxing` is for primitive types to Wrapper classes
 - `Unboxing` is for opposite direction
 - ex) int ↔︎ Integer, float ↔︎ Float, long ↔︎ Long

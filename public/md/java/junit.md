@@ -8,7 +8,7 @@
 
 ## Required
 - junit.jar
-  * https://mvnrepository.com/artifact/junit/junit/4.13.2
+  - https://mvnrepository.com/artifact/junit/junit/4.13.2
 
 ## Getting started
 - Calculator.java

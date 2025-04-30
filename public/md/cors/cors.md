@@ -43,6 +43,6 @@ POST:    content-length, ping-other, content-type, cookie
 
 ## ref
 - CORS는 왜 이렇게 우리를 힘들게 하는걸까?
-  * https://evan-moon.github.io/2020/05/21/about-cors/
+  - https://evan-moon.github.io/2020/05/21/about-cors/
 - ajax cookie 예제
-  * https://github.com/kenu/ajaxcookie
+  - https://github.com/kenu/ajaxcookie

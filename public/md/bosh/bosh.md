@@ -12,7 +12,7 @@
 ## Stemcell
 - 버전별 OS 이미지 특정 IaaS 패키지용
 - vSphere, AWS, OpenStack, vCloud 인프라스트럭처에 공통인 이미지
-  *  vSphere 위에 Ubuntu Trusty와 CentOS 6.5
+  -  vSphere 위에 Ubuntu Trusty와 CentOS 6.5
 - tarball로 배포 (*.tgz)
 
 ## Release

@@ -1,10 +1,10 @@
 # Spring Security
 - authentication and access-control framework.
 - 기능
-  * 인증과 권한 (Authentification, Authorization)
-  * 보안 기능 clickjacking, session fixation, cross site request forgery, 등
-  * Servlet API 통합
-  * 스프링 웹 MVC 지원
+  - 인증과 권한 (Authentification, Authorization)
+  - 보안 기능 clickjacking, session fixation, cross site request forgery, 등
+  - Servlet API 통합
+  - 스프링 웹 MVC 지원
 
 ## Simple Code
 ```xml

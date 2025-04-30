@@ -2,7 +2,7 @@
 - Function hosting service
 
 - Configure function
-  * languages : Java 8, NodeJS, Node.js 4.3, Python 2.7
+  - languages : Java 8, NodeJS, Node.js 4.3, Python 2.7
 
 ```
 def lambda_handler(event, context):

@@ -35,8 +35,8 @@ npm install vue-router
 ## mode
 - hash : `okdevtv.com/#/uri`
 - history : `okdevtv.com/uri`
-  * nginx 등의 웹서버 설정 필요함
-  * history.popState 지원
+  - nginx 등의 웹서버 설정 필요함
+  - history.popState 지원
 - https://router.vuejs.org/guide/essentials/history-mode.html
 
 ```js

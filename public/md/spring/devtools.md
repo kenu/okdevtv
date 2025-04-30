@@ -16,17 +16,17 @@
 
 ## Chrome Extention
 - Live Reload
-  * https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei?hl=en
+  - https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei?hl=en
 
 ## IntelliJ Devtools Reload
 - Compiler option
-  * check `Build project automatically`
+  - check `Build project automatically`
 - Advanced Settings > Compiler
-  * check `Allow auto-make to start even if developed application is currently running`
+  - check `Allow auto-make to start even if developed application is currently running`
 - Registry option(Deprecated)
-  * ~~check `compiler.automake.allow.when.app.running`~~
+  - ~~check `compiler.automake.allow.when.app.running`~~
 
 ## ref
 - https://docs.spring.io/spring-boot/docs/current/reference/html/using-spring-boot.html#using-boot-devtools
 - Spring boot + LiveReload
-  * https://gwonsungjun.github.io/articles/2018-08/springbootAutoreload
+  - https://gwonsungjun.github.io/articles/2018-08/springbootAutoreload

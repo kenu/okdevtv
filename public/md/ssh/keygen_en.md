@@ -25,7 +25,7 @@ vi ~/.ssh/authorized_keys
 ### GitHub login
 - You can use **git:** protocol, not **https:**
 - in GitHub open git settings in browser
-  * https://github.com/settings/keys
+  - https://github.com/settings/keys
 - click New SSH key button
 - input computer name and paste key in the below box
 

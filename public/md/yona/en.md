@@ -4,13 +4,13 @@
 - GitHub-like interface + wiki-type bbs
 - en, ko, jp, ru, uz languages
 - project home
-  * https://github.com/yona-projects/yona
+  - https://github.com/yona-projects/yona
 
 ## In AWS install Yona
 
 ### Prerequisite
 - MariaDB
-  * CentOS
+  - CentOS
 ```
 sudo dnf update -y
 # for aws ec2 with 10.2.16
@@ -20,7 +20,7 @@ rpm -iv --nodeps lib64boost5-1.39.0-2mdv2010.0.x86_64.rpm
 sudo vi /etc/yum.repos.d/MariaDB.repo
 ```
 
-    * MariaDB.repo
+    - MariaDB.repo
 ```
 [mariadb]
 name = MariaDB
@@ -29,7 +29,7 @@ gpgkey=https://yum.mariadb.org/RPM-GPG-KEY-MariaDB
 gpgcheck=1
 ```
 
-    * MariaDB config
+    - MariaDB config
 ```
 sudo dnf install MariaDB-server
 ```
@@ -43,10 +43,10 @@ sudo mysql_secure_installation
 mysql -uroot -p
 ```
 
-  * Ubuntu https://downloads.mariadb.org/mariadb/repositories/#mirror=kaist&distro=Ubuntu
+  - Ubuntu https://downloads.mariadb.org/mariadb/repositories/#mirror=kaist&distro=Ubuntu
 
 
-  * yona account, DB init
+  - yona account, DB init
 
 ```
 GRANT ALL PRIVILEGES ON yona.* TO yona@localhost
@@ -57,11 +57,11 @@ set global innodb_large_prefix = ON;
 create database yona DEFAULT CHARACTER SET utf8mb4 DEFAULT COLLATE utf8mb4_bin;
 ```
 
-  * Server config
+  - Server config
 ```
 sudo vi /etc/my.cnf.d/server.cnf
 ```
-    * ubuntu : `sudo vi /etc/mysql/my.cnf`
+    - ubuntu : `sudo vi /etc/mysql/my.cnf`
 
 ```
 [mysqld]
@@ -73,7 +73,7 @@ innodb_file_format=barracuda
 innodb_large_prefix=on
 ```
 
-  * Client config
+  - Client config
 ```
 sudo vi /etc/my.cnf.d/mysql-clients.cnf
 ```
@@ -84,7 +84,7 @@ default-character-set=utf8mb4
 ```
 
 - JDK 1.8 required
-  * [install](/mib/java)
+  - [install](/mib/java)
 
 ### Install Yona
 - Yona installation
@@ -100,7 +100,7 @@ cd yona
 bin/yona # first for unarchive folders
 vi conf/application.conf
 ```
-  * DB info in conf/application.conf
+  - DB info in conf/application.conf
 
 ```
 # MariaDB
@@ -110,7 +110,7 @@ db.default.user=yona
 db.default.password="yonadan"
 ```
 
-  * run yona
+  - run yona
 ```
 bin/yona
 ```
@@ -150,6 +150,6 @@ sleep 5
 
 ## ref
 - yona-1.4.1 (ko)
-  * https://youtu.be/B3Q2FVXZWBM
+  - https://youtu.be/B3Q2FVXZWBM
 - gmail security
-  * http://okky.kr/article/343036
+  - http://okky.kr/article/343036

@@ -14,7 +14,7 @@
 - cookie에 max-age를 넣지 않으면, 세션 쿠키로 브라우저 켜있는 동안만 살아있음
 - localStorage는 만료 기한이 없음
 - localStorage는 만료시간을 함께 저장해서 가져올 때 처리해야 함
-  * 참고: https://www.sohamkamani.com/blog/javascript-localstorage-with-ttl-expiry/
+  - 참고: https://www.sohamkamani.com/blog/javascript-localstorage-with-ttl-expiry/
 
 ## etc
 Session 쿠키와 달리 sessionStorage는 탭을 바꾸거나, 화면 새로고침하면 정보가 날아감

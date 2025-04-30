@@ -10,15 +10,15 @@
 
 ## SonarQube
 - free
-  * JavaScript/TypeScript
-  * Java
-  * Python
-  * PHP
-  * C#
-  * Web
-  * XML
+  - JavaScript/TypeScript
+  - Java
+  - Python
+  - PHP
+  - C#
+  - Web
+  - XML
 - Cost (Community Alternative)
-  * COBOL, C/C++, PL/SQL, PL/I, ABAP, VB.NET, VB6, RPG, Flex, Objective-C, Swift
+  - COBOL, C/C++, PL/SQL, PL/I, ABAP, VB.NET, VB6, RPG, Flex, Objective-C, Swift
 
 ## SonarQube Scanner
 - Download http://docs.sonarqube.org/display/SCAN/Analyzing+with+SonarQube+Scanner

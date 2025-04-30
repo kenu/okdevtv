@@ -17,8 +17,8 @@
 
 ## 사전 준비
 - 로그수집 서버(AWS 추천)
-  * aws 접속 key가 있는 경우
-  * 윈도우에서 git bash 추천(http://git-scm.com). putty 접속보다 쉬움
+  - aws 접속 key가 있는 경우
+  - 윈도우에서 git bash 추천(http://git-scm.com). putty 접속보다 쉬움
 - 리눅스 서버 CentOS 또는 Ubuntu
 - Java 1.8 이상
 
@@ -78,7 +78,7 @@ sudo reboot
 ## AWS 포트 설정
 - EC2 Security Groups
 - 외부 접근 포트 추가(inbound)
-  * http(80)
+  - http(80)
 
 
 ## 설치
@@ -231,13 +231,13 @@ chmod +x start.sh
 ## Kibana 통계
 
 ### 시각화(Visualize)
-  * Terms(request.raw, clientip.raw, ...) 또는 Filters(request: "/hello.html", ...) 이용해서 차트 생성
-  * 테이블, 라인차트, 파이차트, 지도 등 가능
-  * 만들어진 차트는 저장 가능
+  - Terms(request.raw, clientip.raw, ...) 또는 Filters(request: "/hello.html", ...) 이용해서 차트 생성
+  - 테이블, 라인차트, 파이차트, 지도 등 가능
+  - 만들어진 차트는 저장 가능
 
 
 ### 대시보드 만들기
-  * 저장된 차트를 한 화면에서 볼 수 있도록 추가, 레이아웃 가능
+  - 저장된 차트를 한 화면에서 볼 수 있도록 추가, 레이아웃 가능
 
 
 ## part 2
@@ -447,7 +447,7 @@ lv,region_addr,latitude,longitude,cnt
 
 ### elasticsearch
 - 데이터 지우기
-  * `curl -XDELETE http://localhost:9200/logstash*`
+  - `curl -XDELETE http://localhost:9200/logstash*`
 
 
 
@@ -490,7 +490,7 @@ sudo vi /etc/nginx/nginx.conf
         }
 ```
 - nginx 재시작
-  * `sudo service nginx start`
+  - `sudo service nginx start`
 - 5601 포트는 막고 80으로만 접속
 
 ## Kibana with PM2
@@ -508,40 +508,40 @@ pm2 start bin/cli
 
 ## 참고
 - Logstash grok patterns
-  * https://github.com/logstash-plugins/logstash-patterns-core/blob/master/patterns/grok-patterns
+  - https://github.com/logstash-plugins/logstash-patterns-core/blob/master/patterns/grok-patterns
 
 - ELKR (ElasticSearch + Logstash + Kibana + Redis) 를 이용한 로그분석 환경 구축하기
-  * http://brantiffy.axisj.com/archives/418
+  - http://brantiffy.axisj.com/archives/418
 
 - 2016 ELK 스택으로 서울시 지하철 대시보드 만들기 *추천*
-  * https://youtu.be/xPjNtd8xUZo
+  - https://youtu.be/xPjNtd8xUZo
 
 - EMOCON 2015 F/W ELK 스택을 사용한 서울시 지하철 대시보드 만들기
-  * https://youtu.be/ec-XzM6_CgU
+  - https://youtu.be/ec-XzM6_CgU
 
 - ELK 구축하기 1 – LOGSTASH
-  * http://linux.systemv.pe.kr/elk-구축하기-1-logstash/
+  - http://linux.systemv.pe.kr/elk-구축하기-1-logstash/
 
 - [Ubuntu] ELK 설치 및 테스트 하기
-  * http://digndig.kr/ubuntu/449/
+  - http://digndig.kr/ubuntu/449/
 
 - Splunk 대체 Solution으로서의 ELK Stack
-  * http://blog.embian.com/18
+  - http://blog.embian.com/18
 
 - How To Install Elasticsearch, Logstash, and Kibana 4 on Ubuntu 14.04
-  * https://www.digitalocean.com/community/tutorials/how-to-install-elasticsearch-logstash-and-kibana-4-on-ubuntu-14-04
+  - https://www.digitalocean.com/community/tutorials/how-to-install-elasticsearch-logstash-and-kibana-4-on-ubuntu-14-04
 
 - ELK 프로그래밍 방송 영상
-  * http://bit.ly/okdevtv-elk
+  - http://bit.ly/okdevtv-elk
 
 - Logstash Configuration
-  * https://www.elastic.co/guide/en/logstash/current/event-dependent-configuration.html
+  - https://www.elastic.co/guide/en/logstash/current/event-dependent-configuration.html
 
 - Elasticsearch(Lucene) Query Syntax
-  * https://lucene.apache.org/core/2_9_4/queryparsersyntax.html
+  - https://lucene.apache.org/core/2_9_4/queryparsersyntax.html
 
 - ELK Kibana 사용법
-  * https://www.dropbox.com/s/xjwyta14b5nw7j8/Kibana-basic.pdf?dl=0
+  - https://www.dropbox.com/s/xjwyta14b5nw7j8/Kibana-basic.pdf?dl=0
 
 - okdevtv.conf
-  * https://okdevtv.com/md/elk/okdevtv.conf
+  - https://okdevtv.com/md/elk/okdevtv.conf

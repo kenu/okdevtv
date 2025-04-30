@@ -16,8 +16,8 @@ jenkins
 ```
 
 - others
-  * download `jenkins.war`
-  * run
+  - download `jenkins.war`
+  - run
 
 ```
 # headless java
@@ -28,7 +28,7 @@ wget https://ftp.yz.yamagata-u.ac.jp/pub/misc/jenkins/war-stable/2.414.3/jenkins
 java -jar jenkins.war --httpPort=9090
 ```
 - token for first login
-  * `cat ~/.jenkins/secrets/initialAdminPassword`
+  - `cat ~/.jenkins/secrets/initialAdminPassword`
 
 
 ## Headless java
@@ -47,7 +47,7 @@ Caused: hudson.util.AWTProblem
 ```
 
 - headless
-  * https://unix.stackexchange.com/a/729802
+  - https://unix.stackexchange.com/a/729802
 
 ## Configure admin
 - copy code and paste it

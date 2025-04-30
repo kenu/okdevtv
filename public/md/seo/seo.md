@@ -11,7 +11,7 @@
 <img src="images/google-star-result.webp">
 
 - 소스 하단에 위치
-  * view-source:www.10x10.co.kr/shopping/category_prd.asp?itemid=282197
+  - view-source:www.10x10.co.kr/shopping/category_prd.asp?itemid=282197
 <img src="images/google-star-source.webp">
 
 <style>

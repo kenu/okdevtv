@@ -111,5 +111,5 @@ connection.end();
 
 ## ref
 - node-mysql
-  * https://github.com/mysqljs/mysql
+  - https://github.com/mysqljs/mysql
 - https://mariadb.org

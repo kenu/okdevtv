@@ -2,9 +2,9 @@
 
 ## Requirements
 - awscli
-  * https://docs.aws.amazon.com/ko_kr/cli/latest/userguide/cli-chap-install.html
+  - https://docs.aws.amazon.com/ko_kr/cli/latest/userguide/cli-chap-install.html
 - kubectl
-  * https://kubernetes.io/docs/tasks/tools/install-kubectl/
+  - https://kubernetes.io/docs/tasks/tools/install-kubectl/
 - IAM AdministratorAccess Permission
 
 ## eksctl
@@ -132,4 +132,4 @@ eksctl delete cluster --name okdevtv
 
 ## ref
 - eksctl
-  * https://docs.aws.amazon.com/ko_kr/eks/latest/userguide/getting-started-eksctl.html
+  - https://docs.aws.amazon.com/ko_kr/eks/latest/userguide/getting-started-eksctl.html

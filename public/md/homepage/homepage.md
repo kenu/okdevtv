@@ -7,23 +7,23 @@
 
 ## 콘텐츠
 - 메시지
-  * 오픈플랫폼개발자커뮤니티(OPDC)
+  - 오픈플랫폼개발자커뮤니티(OPDC)
 - 미디어
-  * 이미지
-  * 동영상
-  * 소리
+  - 이미지
+  - 동영상
+  - 소리
 
 ## 편집기
 - html, css, js 편집기
-  * http://brackets.io
-  * http://atom.io
-  * visual studio code
-  * Notepad++
+  - http://brackets.io
+  - http://atom.io
+  - visual studio code
+  - Notepad++
 
 ## 서버
-  * PaaS(Platform as a Service)
-  * IaaS(임대서버)
-  * 호스팅
+  - PaaS(Platform as a Service)
+  - IaaS(임대서버)
+  - 호스팅
 
 ## 작업
 1. 작업폴더 생성

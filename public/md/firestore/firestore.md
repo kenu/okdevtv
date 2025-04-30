@@ -4,4 +4,4 @@
 
 ## 시작하기
 - 데이터베이스를 설정한 후 데이터를 추가하고 읽기
-  * https://firebase.google.com/docs/firestore/quickstart
+  - https://firebase.google.com/docs/firestore/quickstart

@@ -55,16 +55,16 @@ curl http://www.weather.go.kr/weather/forecast/mid-term-rss3.jsp\?stnId\=109 | g
 - `=`으로 시작
 - `+` 대신 `&`
 - cell 표기법 행(알파벳) + 열(숫자)
-  * B3
+  - B3
 - cell 구간
-  * B1:B5
+  - B1:B5
 - cell 확장
-  * `+` 아이콘
-  * B1, C1, D1, ...
-  * B1, B2, B3, ...
+  - `+` 아이콘
+  - B1, C1, D1, ...
+  - B1, B2, B3, ...
 - 고정 표시 `$`
-  * $B1
-  * B$2
+  - $B1
+  - B$2
 
 ## ref
 - https://www.google.com/search?q=직장인+엑셀+강좌

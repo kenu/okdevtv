@@ -25,7 +25,7 @@ $stmt->execute();
 //$sql = "SELECT * FROM SQL_Injection WHERE type='".$_GET['type']."'";
 $sql = "SELECT * FROM SQL_Injection WHERE type='".mysql_real_escape_string($_GET['type'])."'";
 ```
-  * 결과
+  - 결과
 ```sql
 SELECT * FROM SQL_Injection WHERE type='public\' or 1=\'1'
 ```
@@ -34,4 +34,4 @@ SELECT * FROM SQL_Injection WHERE type='public\' or 1=\'1'
 - https://www.w3schools.com/sql/sql_injection.asp
 - http://php.net/manual/kr/security.database.sql-injection.php
 - prepared_statement
-  * http://php.net/manual/en/pdo.prepared-statements.php
+  - http://php.net/manual/en/pdo.prepared-statements.php

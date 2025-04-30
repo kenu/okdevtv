@@ -6,10 +6,10 @@
 - 장점은 오프라인에서 버전관리 가능
 - 단점은 또 배워야 됨
 - Git을 엔진으로 사용하는 서비스 다수
-  * GitHub, BitBucket, GitLab, Yona
+  - GitHub, BitBucket, GitLab, Yona
 - GitHub.com
-  * git을 엔진으로 하는 개발 소셜 플랫폼
-  * follow, watch, Pull Request
+  - git을 엔진으로 하는 개발 소셜 플랫폼
+  - follow, watch, Pull Request
 
 ## install
 - https://git-scm.com
@@ -45,15 +45,15 @@
 
 ## ref
 - easy git
-  * http://bit.ly/okeasygit
+  - http://bit.ly/okeasygit
 - dogfeet git
-  * http://dogfeet.github.io/
+  - http://dogfeet.github.io/
 - GitHub 이력서
-  * http://resume.github.io/
+  - http://resume.github.io/
 - 쉽게 살 수 있을까:GITHUB & GIT & Code Review
-  * http://hl1itj.tistory.com/118
+  - http://hl1itj.tistory.com/118
 - Pull Request
-  * https://okdevtv.com/mib/git/pr
+  - https://okdevtv.com/mib/git/pr
 
 ## for Windows error
 - too long path error
@@ -67,4 +67,4 @@ git config core.longpaths true
 ```
 error: unable to create file lib/:q: Invalid argument
 ```
-  * change filename
+  - change filename

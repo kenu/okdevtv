@@ -17,7 +17,7 @@ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/i
 
 ## 설치(맥)
 - 필요조건
-  * brew (http://brew.sh)
+  - brew (http://brew.sh)
 
 <img src="images/zsh-installed.webp" alt="zsh installed">
 
@@ -74,6 +74,6 @@ passwd ec2-user
 ## 참고
 - http://sourabhbajaj.com/mac-setup/iTerm/zsh.html
 - 터미널 초보의 필수품인 Oh My ZSH!를 사용하자
-  * https://nolboo.github.io/blog/2015/08/21/oh-my-zsh/
+  - https://nolboo.github.io/blog/2015/08/21/oh-my-zsh/
 - Install Oh My Zsh on Ubuntu EC2
-  * https://paikialog.wordpress.com/2012/02/29/install-oh-my-zsh-on-ubuntu-ec2/
+  - https://paikialog.wordpress.com/2012/02/29/install-oh-my-zsh-on-ubuntu-ec2/

@@ -5,16 +5,16 @@
 
 ## 용어
 - VM
-  * Virtual Machine, 가상 머신, Host OS 위에 설치되는 Guest OS
+  - Virtual Machine, 가상 머신, Host OS 위에 설치되는 Guest OS
 - Host OS
-  * VirtualBox 프로그램을 설치하는 OS
+  - VirtualBox 프로그램을 설치하는 OS
 - Guest OS
-  * VirutalBox 프로그램 내에 설치되는 가상 OS
+  - VirutalBox 프로그램 내에 설치되는 가상 OS
   
 ## 관련 자료
 - VirtualBox Guest OS 설치
-  * https://www.youtube.com/watch?v=P87NRdRtH4c
+  - https://www.youtube.com/watch?v=P87NRdRtH4c
 - VirtualBox 외부 접속 IP 설정
-  * https://www.youtube.com/watch?v=jbTHifYdkyA
+  - https://www.youtube.com/watch?v=jbTHifYdkyA
 - Host-Onlyway 접속 설정
-  * http://rorlab.org/rblogs/25
+  - http://rorlab.org/rblogs/25

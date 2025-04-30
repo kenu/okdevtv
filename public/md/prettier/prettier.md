@@ -54,9 +54,9 @@ npm i -D prettier
 - not recommended
 - https://prettier.io/docs/en/integrating-with-linters.html
 - 단점:
-  * 편집기에 많은 빨간색 구불구불한 선이 생겨 짜증이 납니다. Prettier는 포맷하는 것을 잊어버리게 만들어줍니다.
-  * Prettier를 직접 실행하는 것보다 느립니다.
-  * 그것들은 코드가 깨질 수 있는 간접적인 계층입니다.
+  - 편집기에 많은 빨간색 구불구불한 선이 생겨 짜증이 납니다. Prettier는 포맷하는 것을 잊어버리게 만들어줍니다.
+  - Prettier를 직접 실행하는 것보다 느립니다.
+  - 그것들은 코드가 깨질 수 있는 간접적인 계층입니다.
 
 ## Ignore
 - `.prettierignore` in project root

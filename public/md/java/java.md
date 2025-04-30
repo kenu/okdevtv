@@ -53,9 +53,9 @@
 
 ## Format
 - google style
-  * https://google.github.io/styleguide/javaguide.html
-  * https://github.com/google/styleguide
-  * https://raw.githubusercontent.com/google/styleguide/gh-pages/eclipse-java-google-style.xml
+  - https://google.github.io/styleguide/javaguide.html
+  - https://github.com/google/styleguide
+  - https://raw.githubusercontent.com/google/styleguide/gh-pages/eclipse-java-google-style.xml
 
 
 ## Other topic
@@ -99,9 +99,9 @@ public class CheckDirectory {
 
 ## 참고
 - 2시간만에 자바 시작
-  * http://www.slideshare.net/kenu/java-in-2-hours
-  * http://bit.ly/okjava2020
+  - http://www.slideshare.net/kenu/java-in-2-hours
+  - http://bit.ly/okjava2020
 - 2시간만에 자바를 쉽게 배우고 싶어요.
-  * http://www.slideshare.net/kenu/java-start01-in-2hours
+  - http://www.slideshare.net/kenu/java-start01-in-2hours
 - kenu's java
-  * http://j.mp/okdevtv-java
+  - http://j.mp/okdevtv-java

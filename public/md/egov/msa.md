@@ -116,10 +116,10 @@ docker run -d -e TZ=Asia/Seoul -p 9411:9411 openzipkin/zipkin
 ```
 
 - aws 보안 그룹 15672 추가
-  * http://ipaddress:15672
+  - http://ipaddress:15672
 
 - aws 보안 그룹 9411 추가
-  * http://ipaddress:9411
+  - http://ipaddress:9411
 
 
 

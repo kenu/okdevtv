@@ -6,8 +6,8 @@
 
 2. fluentd 설치
 - requirement
-  * ruby
-  * make
+  - ruby
+  - make
   
 ### ruby 설치
 - `sudo apt-get install ruby-dev`

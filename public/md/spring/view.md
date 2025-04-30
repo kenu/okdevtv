@@ -3,12 +3,12 @@
 - Spring Boot 이후 많이 간소화 되어서 거의 설정 없이 [thymeleaf](/mib/spring/thymeleaf)에 연결된다.
 - MVC Config에서 설정
 - 리디렉팅, 포워딩 등의 기능
-  * `AbstractCachingViewResolver`
-  * `UrlBasedViewResolver`
-  * `InternalResourceViewResolver`
-  * `FreeMarkerViewResolver`
-  * `ContentNegotiatingViewResolver`
-  * `BeanNameViewResolver`
+  - `AbstractCachingViewResolver`
+  - `UrlBasedViewResolver`
+  - `InternalResourceViewResolver`
+  - `FreeMarkerViewResolver`
+  - `ContentNegotiatingViewResolver`
+  - `BeanNameViewResolver`
 
 - MVC Configuration
 ```java

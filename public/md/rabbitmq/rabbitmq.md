@@ -14,12 +14,12 @@
 - http://www.rabbitmq.com/
 
 - message broker
-  * producers
-  * consumers
-  * 메시지 전달 기능
-    * 경로 지정, route
-    * 버퍼링 buffer
-    * 보관 persist
+  - producers
+  - consumers
+  - 메시지 전달 기능
+    - 경로 지정, route
+    - 버퍼링 buffer
+    - 보관 persist
 
 ### 설치
 - https://www.rabbitmq.com/download.html
@@ -42,7 +42,7 @@ rabbitmq-server
 - Python | Java | Ruby | PHP | C# 언어 지원
 
 - for mac
-  * pika 설치
+  - pika 설치
 ```
 sudo easy_install pip
 sudo pip install pika

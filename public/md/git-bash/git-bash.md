@@ -16,5 +16,5 @@
 ## ref
 - http://git-scm.com
 - SSH Key - 비밀번호 없이 로그인
-  * https://opentutorials.org/module/432/3742
+  - https://opentutorials.org/module/432/3742
 

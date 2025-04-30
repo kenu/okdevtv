@@ -25,14 +25,14 @@
 ### 중심 규칙
 
 - 잘못 사용한 예
-  * `GET /members/delete/1`
-  * `GET /members/show/1`
-  * `GET /members/insert/2`
+  - `GET /members/delete/1`
+  - `GET /members/show/1`
+  - `GET /members/insert/2`
 
 - 수정
-  * `DELETE /members/1`
-  * `GET /members/1`
-  * `POST /members/2`
+  - `DELETE /members/1`
+  - `GET /members/1`
+  - `POST /members/2`
 
 - HTTP METHOD 역할
 
@@ -58,8 +58,8 @@
 ### Collection과 Document
 
 - `http://restapi.exxample.com/sports/soccer`
-  * `sports` : Collection
-  * `soccer` : Document
+  - `sports` : Collection
+  - `soccer` : Document
 
 
 ## HTTP 응답 상태 코드
@@ -77,4 +77,4 @@
 ## ref
 - http://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm
 - REST API 제대로 알고 사용하기
-  * https://meetup.toast.com/posts/92
+  - https://meetup.toast.com/posts/92

@@ -28,27 +28,27 @@ title, meta, link, script
 
 ### 태그의 종류
 - 헤드
-  * doctype, html, head, title, base, link, meta, style, script, noscript
+  - doctype, html, head, title, base, link, meta, style, script, noscript
 - 섹션
-  * body, article, nav, aside, section, header, footer, h1-h6, main, address,
+  - body, article, nav, aside, section, header, footer, h1-h6, main, address,
 - 그루핑
-  * p, hr, pre, blockquote, ol, ul, li, dl, dt, dd, figure, figcaption, div
+  - p, hr, pre, blockquote, ol, ul, li, dl, dt, dd, figure, figcaption, div
 - 테이블
-  * table, caption, thead, tbody, tfoot, tr, th, td, col, colgroup
+  - table, caption, thead, tbody, tfoot, tr, th, td, col, colgroup
 - 폼
-  * form, fieldset, legend, label, input, button, select, datalist, optgroup, option, textarea
+  - form, fieldset, legend, label, input, button, select, datalist, optgroup, option, textarea
 - 폼2
-  * keygen, output, progress, meter
+  - keygen, output, progress, meter
 - 인터랙티브
-  * details, summary, command, menu
+  - details, summary, command, menu
 - 편집
-  * del, ins
+  - del, ins
 - 임베디드
-  * img, iframe, embed, object, param, video, audio, source, canvas, track, map, area
+  - img, iframe, embed, object, param, video, audio, source, canvas, track, map, area
 - 텍스트-레벨
-  * a, em, strong, i, b, u, s, small, abbr, q, cite, dfn, sub, sup
+  - a, em, strong, i, b, u, s, small, abbr, q, cite, dfn, sub, sup
 - 텍스트-레벨2
-  * time, code, kbd, samp, var, mark, bdi, bdo, ruby, rt, rp, span, br, wbr
+  - time, code, kbd, samp, var, mark, bdi, bdo, ruby, rt, rp, span, br, wbr
 
 ## 기본 HTML
 ```html
@@ -65,11 +65,11 @@ title, meta, link, script
 
 ## 참고
 - HTML5 템플릿
-  * https://html5up.net
-  * [list](/mib/html/html5upnet)
+  - https://html5up.net
+  - [list](/mib/html/html5upnet)
 - A history of HTML
-  * http://www.w3.org/People/Raggett/book4/ch02.html
+  - http://www.w3.org/People/Raggett/book4/ch02.html
 - w3schools
-  * http://www.w3schools.com/html/
+  - http://www.w3schools.com/html/
 - HTML5 Doctor
-  * http://html5doctor.com/
+  - http://html5doctor.com/

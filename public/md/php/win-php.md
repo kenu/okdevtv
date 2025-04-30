@@ -3,7 +3,7 @@
 ## php for windows
 - https://nginx.org
 - http://windows.php.net
-  * x86 Non Thread Safe
+  - x86 Non Thread Safe
 
 ### config
 - conf/nginx.conf
@@ -49,7 +49,7 @@ tasklist /fi "imagename eq nginx.exe"
 nginx -s stop
 ```
 
-  * close `php-cgi.exe` window
+  - close `php-cgi.exe` window
 
 
 ## Reserved Keywords
@@ -69,8 +69,8 @@ $_SERVER['DOCUMENT_ROOT']
 
 ## ref
 - nginx-php
-  * [/mib/php/nginx-php](/mib/php/nginx-php)
+  - [/mib/php/nginx-php](/mib/php/nginx-php)
 - 윈도우(Windows) nginx와 php 연동하기
-  * http://homaki.tistory.com/
+  - http://homaki.tistory.com/
 - nginx for Windows
-  * http://nginx.org/en/docs/windows.html
+  - http://nginx.org/en/docs/windows.html

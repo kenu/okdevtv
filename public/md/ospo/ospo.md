@@ -67,37 +67,37 @@
 ## Cloud Infrastructure
 ### Monday, September 27
 - Robocat Meets Octopus and Octocat: Interoperability in CI/CD
-  * Tutorial: Introducing Centaurus: A Cloud Native Infrastructure Project for Large Scale Distributed Cloud
-  * Tutorial: Hack My Mis-Configured Kubernetes
+  - Tutorial: Introducing Centaurus: A Cloud Native Infrastructure Project for Large Scale Distributed Cloud
+  - Tutorial: Hack My Mis-Configured Kubernetes
 - The Secret to Brewing up a Good API
-  * Under the Hood with Fluent Bit Operator: Kubernetes-native Log Processor
+  - Under the Hood with Fluent Bit Operator: Kubernetes-native Log Processor
 - AI Pipelines Workflows and ML lineage using Tekton Pipelines
-  * Hail Hydrate! From Stream to Lake Using Open Source
+  - Hail Hydrate! From Stream to Lake Using Open Source
 - Securing Serverless Functions on Kubernetes with Quarkus Extensions
 - Achieving End-to-end Visibility into Complex Event-sourcing Transactions using Distributed Tracing
-  * Leveraging WebAssembly to Write Kubernetes Admission Policies
+  - Leveraging WebAssembly to Write Kubernetes Admission Policies
 
 ### Tuesday, September 28
 - Introduction to Kubernetes Operators
-  * Security and Flexibility: Decouple Policy to Enable Architectural Choice
-  * Unify Data and Storage Management with SODA ODF
+  - Security and Flexibility: Decouple Policy to Enable Architectural Choice
+  - Unify Data and Storage Management with SODA ODF
 - Instant Self-contained Development Environments for Everyone
-  * Same-day Delivery: A Narrative in Painful Anecdotes about CI at Scale
+  - Same-day Delivery: A Narrative in Painful Anecdotes about CI at Scale
 - Container Standards Explained
 - Making Complex Open Source Safe for Operations
 
 ### Wednesday, September 29
 - Running My Actions: An Introduction to GitHub and GitLab Workflows
-  * What’s Breaking My Build? AIOps Tooling to Aid Your CI/CD Workflows
+  - What’s Breaking My Build? AIOps Tooling to Aid Your CI/CD Workflows
 - Kubernetes Policy as Code with Kyverno
-  * Long-Term Metrics with M3 and Prometheus
-  * Open Source for Better Observability
+  - Long-Term Metrics with M3 and Prometheus
+  - Open Source for Better Observability
 - Building Scalable APIs Using Serverless
-  * Deep-dive into Open Policy Agent + Conftest + GateKeeper: Kubernetes Policy in Action
+  - Deep-dive into Open Policy Agent + Conftest + GateKeeper: Kubernetes Policy in Action
 - Enhancing Metrics and Logs Support in OpenTelemetry
-  * How CNCF is Enabling End User Driven Open Source
+  - How CNCF is Enabling End User Driven Open Source
 - CYOK -Choose Your Own Kubernetes For Local Development
-  *  Agile and Dependable Service Development with Bosque and Morphir
+  -  Agile and Dependable Service Development with Bosque and Morphir
 - Distributed Authorization for Microservices Powered by Kubernetes, Istio and Open Policy Agent
 
 
@@ -123,7 +123,7 @@
 - Building an Open Source Community from the Ground Up
 - Delivering Bad News: Helping your Community Through a Rough Patch
 - Panel Discussion: Contributor Leaderboards to Incentivize Good Community Citizenship
-  * Panel Discussion: The EU Open Source Economic Impact Study: Findings, Analyses, Recommendations
+  - Panel Discussion: The EU Open Source Economic Impact Study: Findings, Analyses, Recommendations
 - Panel Discussion: Eliminating Common Barriers to Contribution for More Inclusive Communities
 - Europe’s Strategic Bet for an Open Source, Sovereign Edge Cloud
 - Unlocking Open Source Communities’ Potential: Community Handbook Best Practices to Foster Inclusivity and Diversity
@@ -154,7 +154,7 @@
 - Building an Open Source Community from the Ground Up
 - Delivering Bad News: Helping your Community Through a Rough Patch
 - Panel Discussion: Contributor Leaderboards to Incentivize Good Community Citizenship
-  * Panel Discussion: The EU Open Source Economic Impact Study: Findings, Analyses, Recommendations
+  - Panel Discussion: The EU Open Source Economic Impact Study: Findings, Analyses, Recommendations
 - Panel Discussion: Eliminating Common Barriers to Contribution for More Inclusive Communities
 - Europe’s Strategic Bet for an Open Source, Sovereign Edge Cloud
 - Unlocking Open Source Communities’ Potential: Community Handbook Best Practices to Foster Inclusivity and Diversity
@@ -178,12 +178,12 @@
 - Non-English Editions of Wikipedia Have a Misinformation Problem
 - Women of Open Source Community Africa; Emerging a Star
 - Growing Diversity in Open Hardware: It’s a Task for All of Us!
-  * Supporting Free and Open Source Software in Africa
+  - Supporting Free and Open Source Software in Africa
 - Creating an Employee Resource Group: Red Hat Asian Network
 - Diversity & Inclusion in Tech
 - Inclusion in Open Source
 - Panel Discussion: Experiences in Addressing Diversity, Equity, and Inclusion in Open Source Governance
-  * Additional Panelists to be Announced
+  - Additional Panelists to be Announced
 
 ### Wednesday, September 29
 - Getting Over Your Imposter Syndrome to Become a Conference Speaker
@@ -195,47 +195,47 @@
 ## Embedded Linux Conference (ELC)
 ### Monday, September 27
 - Introduction to Pin Muxing and GPIO Control Under Linux
-  * Panel Discussion: Industrial Linux Beyond 2022
-  * Additional Panelists to be Announced Teach an Old Network Driver New Tricks
+  - Panel Discussion: Industrial Linux Beyond 2022
+  - Additional Panelists to be Announced Teach an Old Network Driver New Tricks
 - Building Robotics Applications at Scale using Open Source from Zero to Hero
 - Cross Debugging on Linux : A History, Current State of the Art and Coming Improvements
-  * The 5 Key Success Factors to Deploy Yocto for “Production Grade” Embedded/IoT Devices
-  * Using OP-TEE as a Cryptography Engine
+  - The 5 Key Success Factors to Deploy Yocto for “Production Grade” Embedded/IoT Devices
+  - Using OP-TEE as a Cryptography Engine
 - Building Open Hardware with Open Software
-  * Reaching the Multimedia Web from Embedded Platforms with WPEWebKit
-  * Static Partitioning and VM-to-VM Communication Mechanisms
+  - Reaching the Multimedia Web from Embedded Platforms with WPEWebKit
+  - Static Partitioning and VM-to-VM Communication Mechanisms
 - BoF: Automotive Grade Linux Developer
-  * Panel Discussion: Super Long Term Kernel Maintenance
-  * Yocto Continuous Integration in a Kube
+  - Panel Discussion: Super Long Term Kernel Maintenance
+  - Yocto Continuous Integration in a Kube
 
 ### Tuesday, September 28
 - Board Farm APIs for Automated Testing of Embedded Linux -An Update
-  * Timesys Giving Linux a Camera Stack: libcamera's 3 Years Journey and Exciting Future
-  * Ideas on Board Meet All Scenarios OS: A Distributed O.S. with Feet on the Ground
+  - Timesys Giving Linux a Camera Stack: libcamera's 3 Years Journey and Exciting Future
+  - Ideas on Board Meet All Scenarios OS: A Distributed O.S. with Feet on the Ground
 - Automated Testing for Embedded Development: Next Generation Board Farming
-  * Binary Artifacts and the Ease of Use Onramp for the Yocto Project
-  * Improving the Linux Display Stack Reliability
+  - Binary Artifacts and the Ease of Use Onramp for the Yocto Project
+  - Improving the Linux Display Stack Reliability
 - Exploring PWM Subsystem and its Usage in Embedded Devices
-  * Host Performance Booster (HPB): Introduction and Current Mainline Support Status
+  - Host Performance Booster (HPB): Introduction and Current Mainline Support Status
 - Embedded Linux Nuggets found in Buildroot Package Eldorado
-  * Stateless HEVC Decoding in Mainline Linux: The Rocky Road to Becoming a Stable API
-  * The Future of Linux on RISC-V
+  - Stateless HEVC Decoding in Mainline Linux: The Rocky Road to Becoming a Stable API
+  - The Future of Linux on RISC-V
 - Building a Low-key XIP-enabled RISC-V Linux System
 - Hypervisor-less virtio for Real-time and Safety
 
 ### Wednesday, September 29
 - A Tale of Three Build Systems: Building a Custom Linux OS for BeagleV Starlight with Buildroot, Isar and Yocto Project
-  * Collabora Will it Boot? -- The Case for Platform Standards in Embedded
+  - Collabora Will it Boot? -- The Case for Platform Standards in Embedded
 - Behind the Curtains of Making Real Consumer Devices using Debian
-  * LAVA + OpenQA = Automated, Continuous Full System Testing
-  * OP-TEE: When Linux Loses Control
+  - LAVA + OpenQA = Automated, Continuous Full System Testing
+  - OP-TEE: When Linux Loses Control
 - Practical Experience with Linux A/B Upgrades
-  * Project and Android –Compare and Contrast
+  - Project and Android –Compare and Contrast
 - BoF: The Yocto Project and Embedded Linux
-  * Demystifying Graphics and Media Work Synchronisation
+  - Demystifying Graphics and Media Work Synchronisation
 - Advanced Camera Support on Allwinner SoCs with Mainline Linux
-  * BoF: Linux on Smartphones
-  * Huawei Understanding Linux Interrupt Subsystem
+  - BoF: Linux on Smartphones
+  - Huawei Understanding Linux Interrupt Subsystem
 - Embedded Linux Conference Annual Closing Game
 
 
@@ -256,7 +256,7 @@
 - Tutorial: Build a Green House Controller Using the MicroBit v2 and Rust
 - Remote Access to IoT Devices: Common Needs and Approaches
 - Lightning Talk: Managed VMs with WebAssembly for Scalable Secure IoT Deployments
-  * Adding RISC-V Support to Zephyr RTOS
+  - Adding RISC-V Support to Zephyr RTOS
 - IoT as a Platform: Scaling IoT Applications for the Enterprise Using Kubenernetes/OpenShift
 
 
@@ -284,7 +284,7 @@
 ### Wednesday, September 29
 
 - Keynote: Linux on Mars: How the Perseverance Rover and Ingenuity Helicopter Leveraged Linux to Accomplish their Mission
-  * Software and Operations Lead for the Mars Helicopter, NASA's Jet Propulsion...
+  - Software and Operations Lead for the Mars Helicopter, NASA's Jet Propulsion...
 - Keynote: Microsoft
 - Keynote: Kate Stewart, Vice President of Dependable Embedded Systems & Dr. David A. Wheeler, Director of Open Source Supply Chain Security, The Linux Foundation
 
@@ -293,39 +293,39 @@
 ### Monday, September 27
 
 - Perf on RISC-V: The Past, the Present and the Future
-  * The State of Open Source Games and Open Source Gaming Tools in 2021
+  - The State of Open Source Games and Open Source Gaming Tools in 2021
 - 35 Fedora Releases in 30 Minutes (plus Q&A!)
 - How Has Covid-19 Impacted the Kernel Development over the Last Year?
-  * The Linux Foundation Panel Discussion: Kernel Internship Report (Outreachy)
+  - The Linux Foundation Panel Discussion: Kernel Internship Report (Outreachy)
 - Icebreaker: Introducing Upstream Kernels to Google’s Data-centers
-  * openSUSE on the Mainframe
+  - openSUSE on the Mainframe
 - Demystify Intel Security Technologies in the Firmware
-  * What is new in KernelShark two
+  - What is new in KernelShark two
 
 ### Tuesday, September 28
 
 - Extra Boot Configuration -Expanding Kernel and Init Boot Parameters
-  * Sandboxing Applications with Landlock
+  - Sandboxing Applications with Landlock
 - A Rolling Stable Kernel Model
-  * Google Lessons Learned Applying Compile-time Hardening Options for Security-Critical Program Binary in Linux
+  - Google Lessons Learned Applying Compile-time Hardening Options for Security-Critical Program Binary in Linux
 - Restricted Address Spaces for Container Security
-  * Tracking Down What Happened: A Comparison of Tracing Solutions
+  - Tracking Down What Happened: A Comparison of Tracing Solutions
 - A Practical Approach to Control Unauthorized Execution of Interpreters
-  * Ply: Lightweight BPF Tracing
+  - Ply: Lightweight BPF Tracing
 
 ### Wednesday, September 29
 
 - "Plan to Throw One Away" -Pitfalls of API Design for Low-level User-space Libraries and Kernel Interfaces
-  * Virtual Addressing for High Performance Arm Infrastructure Platforms
+  - Virtual Addressing for High Performance Arm Infrastructure Platforms
 - Container Kernel Development
-  * Transport-level Testing of NVMe Devices using VFIO
+  - Transport-level Testing of NVMe Devices using VFIO
 - Distributed Switch Architecture (DSA): Running Mainline on Commercial Switches
 - Idmapped Mounts
-  * The Forefront of the Development for NVDIMM on Linux Kernel
+  - The Forefront of the Development for NVDIMM on Linux Kernel
 - Guider: Performance Tracing Features for Linux
-  * Toolchains for People in a Hurry: Latest Features of GCC/GLIBC
+  - Toolchains for People in a Hurry: Latest Features of GCC/GLIBC
 - Finding Unmet Dependencies in Kconfig with the Kismet Static Analyzer
-  * Linux Kernel Tracing Using eBPF
+  - Linux Kernel Tracing Using eBPF
 
 
 
@@ -354,7 +354,7 @@
 - Are We Forever Doomed to Software Supply Chain Security?
 - How Open Source is Eating Software: Numbers and Trends
 - Supply Chain Attacks: The New Reality
-  * Whitesource Tips and Tricks: Protecting Cloud Infrastructure
+  - Whitesource Tips and Tricks: Protecting Cloud Infrastructure
 - SW360 SBOM and License Obligation Management
 - Field Report: Setting up a Software Product Line (SPL) Architecture based on Zephyr
 
@@ -399,19 +399,19 @@
 - GitHub Gone Wrong
 - Emerging Automated License Compliance for Containers
 - 2021 Open Source Program Trends
-  * The Linux Foundation;
+  - The Linux Foundation;
 
 ### Wednesday, September 29
 
 - Co-host Sponsor Session: Making Open Source More Secure by Moving Upstream
 - Managing a GitHub Organization: Tools, Tips, and Best Practices
 - Panel Discussion: How Government OSPOs Deliver Value for Citizens at Scale
-  * OpenForum Europe;
-  * United Nations;
-  * GitHub;
+  - OpenForum Europe;
+  - United Nations;
+  - GitHub;
 - Monorepo Madness: Dependencies, License Compliance, and Automation
 - Lightning Talk: Amplifying University Research Impact with Open Source
-  * UC Santa Cruz Ensuring OSS License Compliance the Easy Way
+  - UC Santa Cruz Ensuring OSS License Compliance the Easy Way
 - Open Source Corporate Sustainability – Models to Consider
 - Growing Communities: A Research-based Framework for Eliminating Barriers to Contribution
 - Everything We've Learned From Three Years Of Funding Open Source
@@ -423,7 +423,7 @@
 ### Monday, September 27
 
 - Building and Growing an Open Source Community for an Incubating Project
-  * Leveraging Specifications in Open Source Projects
+  - Leveraging Specifications in Open Source Projects
 - Welcome to JavaScriptLandia
 - Memory Safety for Critical Digital Infrastructure
 - It's All about the Strategy: A Brief Story of the Open Source Renaissance in Financial Services
@@ -496,32 +496,32 @@
 
 - Cybersecurity Challenges & Community Based Risk Management
 - Arduino Sensor Data History in MySQL
-  * Optum Tutorial: Managing Raspberry Pi Pico Applications Using Tock OS and Rust
+  - Optum Tutorial: Managing Raspberry Pi Pico Applications Using Tock OS and Rust
 - "Installation Information" and GPLv3 & GPLv2 -- What Information Must you Provide, and What do you Need Not Provide, for your Embedded Systems?
 - Mattermost’s Approach to Layered Extensibility in Open Source
 - A Solution to the Tension Between Worker Shortage and the Hungry Hungry Developer
-  * Panel Discussion: Start Simple to Scale Decentralized Identity
+  - Panel Discussion: Start Simple to Scale Decentralized Identity
 
 ### Tuesday, September 28
 
 - Essential Guide to Preserving Freedom of Action for Open Source Developers
-  * IBM Tutorial: Blockchain Interoperability Demo with Cactus
+  - IBM Tutorial: Blockchain Interoperability Demo with Cactus
 - Tutorial: Yes, Your Applications are Under Attack -Struts2 Vulnerability Workshop
 - An Account of OpenAirInterface’s Open Software in 5G RAN, CORE NETWORK and MOSAIC5G
-  * Qualcomm Call for Code with The Linux Foundation: Contributing to Tech-for-good Even if You're Not Technical
+  - Qualcomm Call for Code with The Linux Foundation: Contributing to Tech-for-good Even if You're Not Technical
 
 ### Wednesday, September 29
 
 - Getting Started with Reference Design Toolkit (RDK) Open Source
-  * Tata Elxsi Open Source Metrics: Moving from Vanity to Value
+  - Tata Elxsi Open Source Metrics: Moving from Vanity to Value
 - Embrace FreeBSD to Let Your Innovations Soar!
-  * The FreeBSD Foundation Open Source Tooling for Software Bill of Materials
+  - The FreeBSD Foundation Open Source Tooling for Software Bill of Materials
 - Creating Quality Control Dashboard using Python for Manufacturing Issues
 - Bridging Worlds: Using Rust Build Scripts to Leverage Existing Build Infrastructure
 - Panel Discussion: Stories of Open Hardware in an Internet of Production
-  * Internet of Production Alliance;
-  * Field Ready;
-  * Wikifactory;
+  - Internet of Production Alliance;
+  - Field Ready;
+  - Wikifactory;
 - BoF: Software in Space -What Earthlings can Learn from Rocket Science Missions!
 
 

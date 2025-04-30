@@ -52,4 +52,4 @@ from employees where json_extract(profile, '$.age') >= 35;
 
 ## ref
 - MySQL 에서 JSON Data사용하기
-  * https://www.lesstif.com/dbms/mysql-json-data-54952420.html
+  - https://www.lesstif.com/dbms/mysql-json-data-54952420.html

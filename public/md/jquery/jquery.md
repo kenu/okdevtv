@@ -28,4 +28,4 @@
 
 ## ref
 - w3schools jquery
-  * http://www.w3schools.com/jquery/
+  - http://www.w3schools.com/jquery/

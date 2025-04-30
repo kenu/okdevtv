@@ -43,7 +43,7 @@ curl -XDELETE "localhost:9200/$INDEX"
 ```
 
 - make shell script file
-  * `~/local/cron/delete_old.sh`
+  - `~/local/cron/delete_old.sh`
 
 ```
 #!/bin/sh
@@ -69,8 +69,8 @@ sudo vi /etc/crontab
 ```
 
 - 특정시간 지정
-  * `0 6-23 * * *`
-  * `0 2,3,12 * * *`
+  - `0 6-23 * * *`
+  - `0 2,3,12 * * *`
 
 ## ref
 - https://crontab.guru/every-5-minutes

@@ -12,8 +12,8 @@ hellomake: hellomake.c hellofunc.c
   gcc -o hellomake hellomake.c hellofunc.c -I.
 ```
 - `tab` should be before `gcc`
-  * or `Makefile:2: *** missing separator.  Stop.`
+  - or `Makefile:2: *** missing separator.  Stop.`
 
 ## ref
 - A Simple Makefile Tutorial
-  * https://www.cs.colby.edu/maxwell/courses/tutorials/maketutor/
+  - https://www.cs.colby.edu/maxwell/courses/tutorials/maketutor/

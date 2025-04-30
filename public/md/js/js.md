@@ -68,7 +68,7 @@
 - 익명 함수 선언 : function (파라미터) {명령문;}
 - 익명 함수 호출 : `(function(){})();` 또는 `(()=>{})()`
 - 람다(Lambda ƛ) 표현식 : (파라미터) => {명령문;}
-  * 화살표 함수 Arrow function
+  - 화살표 함수 Arrow function
 
 ## DOM 스크립트
 - DOM: Document Object Model
@@ -99,10 +99,10 @@
 
 ## ref
 - 모던 JavaScript 튜토리얼
-  * https://ko.javascript.info/
+  - https://ko.javascript.info/
 - JS the right way
-  * http://jstherightway.org/
+  - http://jstherightway.org/
 - w3schools
-  * http://www.w3schools.com/js/
+  - http://www.w3schools.com/js/
 - JS expressions and operators
-  * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators
+  - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators

@@ -5,7 +5,7 @@
 ## Register GitHub App
 - https://github.com/settings/applications/new
 - Redirect Url
-  * http://localhost:3000/return
+  - http://localhost:3000/return
 
 ### Environment Variables
 - Client ID
@@ -16,4 +16,4 @@
 
 ## ref
 - Manage GitHub Apps
-  * https://github.com/settings/developers
+  - https://github.com/settings/developers

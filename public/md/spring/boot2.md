@@ -1,6 +1,6 @@
 # Spring Boot 2
 - YouTube 재생목록
-  * https://youtube.com/playlist?list=PLDMPhWe3CfpY9idK7tGd8QKr36KBID58P
+  - https://youtube.com/playlist?list=PLDMPhWe3CfpY9idK7tGd8QKr36KBID58P
 
 ## related
 - [logging](/mib/spring/logging): 로그 레벨 조정
@@ -11,7 +11,7 @@
 - [cors](/mib/spring/cors): 스프링 부트 CORS
 - [jsp](/mib/spring/jsp): 스프링 부트 JSP
 - [docker](/mib/docker): Docker
-  * https://spring.io/guides/gs/spring-boot-docker/
+  - https://spring.io/guides/gs/spring-boot-docker/
 - [starter](/mib/spring/starter): 스프링 부트 스타터 종류
 - [websocket](/mib/spring/websocket): 스프링 부트 웹소켓
 - [mybatis](/mib/mybatis): 스프링 부트 MyBatis

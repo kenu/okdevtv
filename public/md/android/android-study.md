@@ -58,7 +58,7 @@ JSON 데이터 처리
 
 참고: 
 - 어떻게 서비스 기획이 1주(5일)만에 이루어지는가|작성자 노노니
-  * http://blog.naver.com/durandot/220348523459
+  - http://blog.naver.com/durandot/220348523459
 
 
 ### 페이지 플로우
@@ -75,33 +75,33 @@ JSON 데이터 처리
 - XML
 - load XML Resource
 - Attribute
-  * ID
-  * Layout Parameters
-    * wrap_content
-    * match_parent
+  - ID
+  - Layout Parameters
+    - wrap_content
+    - match_parent
 - Layout Position
 - Size, Padding and Margins
 - Common Layouts
-  * Linear Layout
-  * Relative Layout
-  * Web View
+  - Linear Layout
+  - Relative Layout
+  - Web View
 - Layouts with an Adapter
-  * List View
-  * Grid View
-  * Filling an adapter view with data
-  * Handling click events
+  - List View
+  - Grid View
+  - Filling an adapter view with data
+  - Handling click events
 
 
 ## 참고
 - Android UI Design Trends by **Antonio Leiva Gordillo**
-  * http://www.slideshare.net/AntonioLeivaGordillo/android-ui-design-trends
+  - http://www.slideshare.net/AntonioLeivaGordillo/android-ui-design-trends
 - Mobile UX Design Essential by **동준상**
-  * http://www.slideshare.net/JonathanDong/mobile-ux-design-essential
+  - http://www.slideshare.net/JonathanDong/mobile-ux-design-essential
 - 안드로이드 디자인 가이드 번역
-  * http://klutzy.nanabi.org/android-design-ko
+  - http://klutzy.nanabi.org/android-design-ko
 - Material Design
-  * http://www.google.com/design/spec/material-design/introduction.html
+  - http://www.google.com/design/spec/material-design/introduction.html
 - Vogella Android Tutorials
-  * http://www.vogella.com/tutorials/android.html
+  - http://www.vogella.com/tutorials/android.html
 - Android Material Design Example from 5.0 by **Android Hive**
-  * http://www.androidhive.info/2015/04/android-getting-started-with-material-design/
+  - http://www.androidhive.info/2015/04/android-getting-started-with-material-design/

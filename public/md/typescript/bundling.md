@@ -9,7 +9,7 @@
 - HTML, CSS, JS 파일 모아서 배포 가능한 파일로 번들링
 - 모듈간의 의존관계 파악해서 정적 파일 형태로 빌드 결과 생성
 - 웹팩 설치
-  * `npm i -g webpack`
+  - `npm i -g webpack`
 - 샘플 파일 `src/entry1.js`
 
 ```js

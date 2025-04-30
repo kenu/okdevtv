@@ -28,14 +28,14 @@ Creating Tests/HelloTests/HelloTests.swift
 
 ## Syntax Features
 - Range Operators
-  * `1...5` : 1, 2, 3, 4, 5
-  * `1..<5` : 1, 2, 3, 4
+  - `1...5` : 1, 2, 3, 4, 5
+  - `1..<5` : 1, 2, 3, 4
 
 - Arrays
-  * `var someInts = [Int](repeating: 0, count: 3)`
+  - `var someInts = [Int](repeating: 0, count: 3)`
 
 - loop index
-  * enumerate()
+  - enumerate()
 
 ```swift
 var someStrs = [String]()
@@ -148,10 +148,10 @@ print(result)
 
 ## ref
 - facebook login
-  * https://okdevtv.com/mib/swift/fblogin-ios
+  - https://okdevtv.com/mib/swift/fblogin-ios
 - socket.io with swift
-  * https://github.com/nuclearace/socket.io-client-swift-spm-example
+  - https://github.com/nuclearace/socket.io-client-swift-spm-example
 - socket.io iOS chat(Deprecated)
-  * https://www.appcoda.com/socket-io-chat-app/
+  - https://www.appcoda.com/socket-io-chat-app/
 - swift Tutorialspoint
-  * https://www.tutorialspoint.com/swift/ (warning swift 1.2)
+  - https://www.tutorialspoint.com/swift/ (warning swift 1.2)

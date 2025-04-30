@@ -19,7 +19,7 @@
 - Web 페이지용 컨트롤러는 템플릿 엔진 View나 JSP로 전환 응답의 HTML을 생성하기 때문에 기본적으로 메소드의 반환값은 View 전환 대상을 지정하는 데 사용
 - `@RestController`는 Json이나 XML 등을 반환 WebAPI 용 컨트롤러로 사용
 - View로 전환하지 않기 때문에 메소드의 반환값은 응답(response)의 내용(content) 표시
-  * https://araikuma.tistory.com/14
+  - https://araikuma.tistory.com/14
 
 ## web.xml
 

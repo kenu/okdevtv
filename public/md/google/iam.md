@@ -8,4 +8,4 @@
 
 ## ref
 - Getting Started Authentication
-  * https://theoephraim.github.io/node-google-spreadsheet/#/getting-started/authentication
+  - https://theoephraim.github.io/node-google-spreadsheet/#/getting-started/authentication

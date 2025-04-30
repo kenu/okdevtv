@@ -3,7 +3,7 @@
 - https://www.jetbrains.com 회원가입 필요
 - Sign in
 - Buy IntelliJ Ultimate **Individual, Monthly**
-  * https://www.jetbrains.com/idea/buy/#edition=personal
+  - https://www.jetbrains.com/idea/buy/#edition=personal
 - Click __"Have a discount code?"__
 - Input coupon number. ex) **CIWV2-1FK8G-XXXXX-XXXXX-EJ0RJ**
 - Download IntelliJ Ultimate
@@ -21,7 +21,7 @@
 
 - https://www.jetbrains.com Sign in
 - Buy IntelliJ Ultimate **Individual, Monthly**
-  * https://www.jetbrains.com/idea/buy/#edition=personal
+  - https://www.jetbrains.com/idea/buy/#edition=personal
 <img src="images/05buymonthly.webp" alt="buy monthly" class="img">
 
 - Click __"Have a discount code?"__
@@ -31,8 +31,8 @@
 <img src="images/07complete.webp" alt="complete" class="img">
 
 - Download IntelliJ Ultimate
-  * https://www.jetbrains.com/idea/download/#section=mac
-  * Login with jetbrains account
+  - https://www.jetbrains.com/idea/download/#section=mac
+  - Login with jetbrains account
 - Help > Register... menu
 <img src="images/08register.webp" alt="register menu" class="img">
 - Login

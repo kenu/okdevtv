@@ -3,8 +3,8 @@
 - MySQL과 동일한 API
 - https://www.mariadb.org
 - install MariaDB
-  * mac : `brew install mariadb` or `brew install mariadb@10.6`
-  * Amazon Linux 2023
+  - mac : `brew install mariadb` or `brew install mariadb@10.6`
+  - Amazon Linux 2023
 ```sh
 sudo dnf install mariadb105-server -y
 sudo systemctl enable mariadb
@@ -12,7 +12,7 @@ sudo systemctl start mariadb
 ```
 
 - CentOS 7.x
-  * `sudo vi /etc/yum.repos.d/MariaDB.repo`
+  - `sudo vi /etc/yum.repos.d/MariaDB.repo`
 ```sh
 # MariaDB 10.10 CentOS repository list
 # http://mariadb.org/mariadb/repositories/
@@ -22,7 +22,7 @@ baseurl = http://yum.mariadb.org/10.10/centos7-amd64
 gpgkey=https://yum.mariadb.org/RPM-GPG-KEY-MariaDB
 gpgcheck=1
 ```
-  * CentOS 6.x는 `baseurl = http://yum.mariadb.org/10.8/centos6-amd64`
+  - CentOS 6.x는 `baseurl = http://yum.mariadb.org/10.8/centos6-amd64`
 
 
 ```sh
@@ -33,7 +33,7 @@ sudo mariadb-secure-installation
 
 ## Create Database Schema And DB User
 - login
-  * `mysql -uroot -p`
+  - `mysql -uroot -p`
 
 ```sql
 create database devdb default character set utf8mb4 collate utf8mb4_unicode_ci;

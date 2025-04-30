@@ -34,37 +34,37 @@
 
 # 오픈 소스로 웹 프로젝트 오픈까지
 - GitHub ID를 만든다.
-  * https://github.com/
+  - https://github.com/
 - 프로젝트 저장소(Repository)를 만든다.
-  * https://github.com/new
-  * `README.md` 항목을 체크한다.
+  - https://github.com/new
+  - `README.md` 항목을 체크한다.
 - `README.md` 파일을 수정한다.
-  * 프로젝트 빌드 및 실행 방법
+  - 프로젝트 빌드 및 실행 방법
 - `Issues` 메뉴에 할 작업들을 등록한다.
-  * https://github.com/innovationacademy-kr/slabs-saver/issues
+  - https://github.com/innovationacademy-kr/slabs-saver/issues
 - 이슈에 따른 개발을 한다.
-  * 커밋할 때 `코멘트`에 `#이슈번호`를 함께 기록한다.
+  - 커밋할 때 `코멘트`에 `#이슈번호`를 함께 기록한다.
 - 가끔 생길 수도 있는 Pull Requests 메뉴를 관리한다.
-  * 코드 리뷰, 합치기 또는 종료
+  - 코드 리뷰, 합치기 또는 종료
 - 개발 테스트할 서버에 프로젝트를 배포하고 확인한다.
-  * https://heroku.com
-    * 다양한 언어, 프레임워크 지원
-    * 일정 트래픽까지 무료
-  * AWS, GCP, Azure, Ncloud, Toast Cloud, 등
+  - https://heroku.com
+    - 다양한 언어, 프레임워크 지원
+    - 일정 트래픽까지 무료
+  - AWS, GCP, Azure, Ncloud, Toast Cloud, 등
 
 ## 함께 개발하는 경우
 - 작업 시작 전 로컬을 최신 버전으로 만든다.
-  * `git pull`
+  - `git pull`
 - 브랜치를 만든다.
-  * `git checkout -b branchname`
+  - `git checkout -b branchname`
 - 작업하고 커밋한다.
-  * 커밋할 때 `코멘트`에 `#이슈번호`를 함께 기록한다.
+  - 커밋할 때 `코멘트`에 `#이슈번호`를 함께 기록한다.
 - 작업이 완료되면 브랜치를 저장소에 올린다.
-  * `git push origin branchname`
+  - `git push origin branchname`
 - Pull Request를 생성한다.
-  * https://github.com/innovationacademy-kr/slabs-saver/compare
+  - https://github.com/innovationacademy-kr/slabs-saver/compare
 - 동료가 코드 리뷰하고 합치거나 종료한다.
-  * 개발하며 생성한 브랜치는 삭제한다.
+  - 개발하며 생성한 브랜치는 삭제한다.
 
 ## Todo
 - 오픈 소스 커뮤니티 활성화 사례

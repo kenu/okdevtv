@@ -77,17 +77,17 @@ password : $okuserPasswd
 
 ## Cases
 - show databases;
-  * `\l`
-  * `\l+`
-  * `SELECT datname FROM pg_database;`
+  - `\l`
+  - `\l+`
+  - `SELECT datname FROM pg_database;`
 - show tables;
-  * `\dt`
+  - `\dt`
 - dump
-  * `pg_dump dbname > outfile`
-  * `psql dbname < infile`
-  * `pg_dump -h host1 dbname | psql -h host2 dbname`
+  - `pg_dump dbname > outfile`
+  - `psql dbname < infile`
+  - `pg_dump -h host1 dbname | psql -h host2 dbname`
 - ref
-  * https://www.postgresql.org/docs/9.1/backup-dump.html
+  - https://www.postgresql.org/docs/9.1/backup-dump.html
 
 ## ref
 - https://github.com/snowplow/snowplow/wiki/Setting-up-PostgreSQL#ec2

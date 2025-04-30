@@ -79,7 +79,7 @@ console.log(checkStringOddOrEven('hello');
 - 모듈로부터 값을 불러올 때 변수 이름을 다르게 지정할 수 있음
 - `checkOddOrEven`이 `checkNumber`로 사용
 - `*.mjs` ES2015에 도입된 모듈 시스템.
-  * `node --experimental-modules 파일명` 처럼 옵션 필요
+  - `node --experimental-modules 파일명` 처럼 옵션 필요
 
 ## 노드 내장 객체 알아보기
 - 내장 객체와 내장 모듈
@@ -88,8 +88,8 @@ console.log(checkStringOddOrEven('hello');
 ### `global`
 - 전역객체
 - 생략 가능
-  * `global.require` -> `require`
-  * `global.console` -> `console`
+  - `global.require` -> `require`
+  - `global.console` -> `console`
 - node.js에는 DOM(Document Object Model), BOM(Browser Object Model)이 없기 때문에 `window`, `document` 사용할 수 없음
 - `global` 에는 수십 가지 속성이 담겨 있음
 
@@ -178,21 +178,21 @@ exports.even = '짝수입니다';
 - 비밀번호 등 복호화가 필요하지 않은 경우
 - 암호화된 문자열로만 비교
 - `hash.js`
-  * `crypto.createHash('sha512')` : ~~`md5`~~, ~~`sha1`~~, `sha256`, `sha512`
-  * `update(문자열)` : 비밀번호 등 변환할 문자열
-  * `digest(인코딩)` : `base64`, `hex`, `latin1`
+  - `crypto.createHash('sha512')` : ~~`md5`~~, ~~`sha1`~~, `sha256`, `sha512`
+  - `update(문자열)` : 비밀번호 등 변환할 문자열
+  - `digest(인코딩)` : `base64`, `hex`, `latin1`
 - `pbkdf2.js`
-  * node.js에서 기본 지원
-  * salt라고 불리는 문자열을 붙인 후 해시 알고리즘을 반복 적용해서 암호화
-  * `randomBytes()` : 64바이트 길이의 문자열 생성 `salt`
-  * `crypto.pbkdf2(비밀번호, salt, 반복횟수, 출력바이트, 해시알고리즘)`
+  - node.js에서 기본 지원
+  - salt라고 불리는 문자열을 붙인 후 해시 알고리즘을 반복 적용해서 암호화
+  - `randomBytes()` : 64바이트 길이의 문자열 생성 `salt`
+  - `crypto.pbkdf2(비밀번호, salt, 반복횟수, 출력바이트, 해시알고리즘)`
 
 #### 양방향 암호화
 - 전화번호, 이메일 등 복호화가 필요한 경우
 - key 사용해서 암호화하고 같은 key 사용해서 복호화
 - `cipher.js`
-  * `crypto.createCipher(알고리즘, 키)`
-  * `crypto.getCiphers()` : 사용 가능한 알고리즘 목록
+  - `crypto.createCipher(알고리즘, 키)`
+  - `crypto.getCiphers()` : 사용 가능한 알고리즘 목록
 
 ```
 > crypto.getCiphers()
@@ -307,7 +307,7 @@ exports.even = '짝수입니다';
 - `const fs = require('fs')`
 - `readme.txt`
 - `readFile.js`
-  * `readFile()` 결과는 버퍼(메모리의 데이터) 형식, `.toString()` 을 통해서 문자열로 변환
+  - `readFile()` 결과는 버퍼(메모리의 데이터) 형식, `.toString()` 을 통해서 문자열로 변환
 - `writeFile.js`
 
 ### 동기 메서드와 비동기 메서드
@@ -321,13 +321,13 @@ exports.even = '짝수입니다';
 - 로딩중일 때 버퍼링, 송출할 때는 스트리밍
 - 버퍼를 직접 다루는 클래스 : `Buffer`
 - `buffer.js`
-  * `from(문자열)` : 문자열을 버퍼로 변환
-  * `toString(인코딩)` : 버퍼를 다시 문자열로 `base64`, `hex` 인코딩 가능
-  * `concat(배열)` : 배열 안에 든 버퍼들을 하나로 합침
-  * `alloc(바이트)` : 빈 버퍼 생성
+  - `from(문자열)` : 문자열을 버퍼로 변환
+  - `toString(인코딩)` : 버퍼를 다시 문자열로 `base64`, `hex` 인코딩 가능
+  - `concat(배열)` : 배열 안에 든 버퍼들을 하나로 합침
+  - `alloc(바이트)` : 빈 버퍼 생성
 - 버퍼의 크기를 작게 만들어서 여러 번에 나눠서 보내는 방식
-  * 1MB 메모리로 100MB 파일 전송
-  * 이 작업을 편리하게 만든 것이 **스트림**
+  - 1MB 메모리로 100MB 파일 전송
+  - 이 작업을 편리하게 만든 것이 **스트림**
 - `readme3.txt`
 - `createReadStream.js`
 - `createWriteStream.js`

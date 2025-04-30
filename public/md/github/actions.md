@@ -20,6 +20,6 @@
 
 ## ref
 - Getting started with GitHub Actions
-  * https://itnext.io/getting-started-with-github-actions-fe94167dbc6d
+  - https://itnext.io/getting-started-with-github-actions-fe94167dbc6d
 - ssh-action
-  * https://github.com/appleboy/ssh-action
+  - https://github.com/appleboy/ssh-action

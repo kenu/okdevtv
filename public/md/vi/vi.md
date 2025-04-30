@@ -1,22 +1,22 @@
 # Vi/Vim
 
 - To UPPERCASE
-  * `gUU`
+  - `gUU`
 - To case toggle
-  * `g~~`
+  - `g~~`
 - To lowercase
-  * `guu` or `guL`
-  * 1 char `gul`
+  - `guu` or `guL`
+  - 1 char `gul`
 
 - search
-  * `/keyword`
+  - `/keyword`
 - no highlight
-  * `:noh`
+  - `:noh`
 
 - change encoding
-  * `:e ++enc=euc-kr`
-  * `:set fileencoding=utf-8`
+  - `:e ++enc=euc-kr`
+  - `:set fileencoding=utf-8`
 
 ## ref
 - Switching case of characters
-  * http://vim.wikia.com/wiki/VimTip49
+  - http://vim.wikia.com/wiki/VimTip49

@@ -18,135 +18,135 @@
 ### Compute
 
 - EC2
-  * Virtual Servers in the Cloud
+  - Virtual Servers in the Cloud
 - EC2 Container Service
-  * Run and Manage Docker Containers
+  - Run and Manage Docker Containers
 - Elastic Beanstalk
-  * Run and Manage Web Apps
+  - Run and Manage Web Apps
 - Lambda
-  * Run Code in Response to Events
+  - Run Code in Response to Events
 
 ### Storage & Content Delivery
 
 - S3
-  * Scalable Storage in the Cloud
+  - Scalable Storage in the Cloud
 - CloudFront
-  * Global Content Delivery Network
+  - Global Content Delivery Network
 - Elastic File System
-  * Fully Managed File System for EC2
+  - Fully Managed File System for EC2
 - Glacier
-  * Archive Storage in the Cloud
+  - Archive Storage in the Cloud
 - Import/Export Snowball
-  * Large Scale Data Transport
+  - Large Scale Data Transport
 - Storage Gateway
-  * Hybrid Storage Integration
+  - Hybrid Storage Integration
 
 ### Database
 
 - RDS
-  * Managed Relational Database Service
+  - Managed Relational Database Service
 - DynamoDB
-  * Managed NoSQL Database
+  - Managed NoSQL Database
 - ElastiCache
-  * In-Memory Cache
+  - In-Memory Cache
 - Redshift
-  * Fast, Simple, Cost-Effective Data Warehousing
+  - Fast, Simple, Cost-Effective Data Warehousing
 - DMS
-  * Managed Database Migration Service
+  - Managed Database Migration Service
 
 ### Networking
 - VPC
-  * Isolated Cloud Resources
+  - Isolated Cloud Resources
 - Direct Connect
-  * Dedicated Network Connection to AWS
+  - Dedicated Network Connection to AWS
 - Route 53
-  * Scalable DNS and Domain Name Registration
+  - Scalable DNS and Domain Name Registration
 
 ### Developer Tools
 - CodeCommit
-  * Store Code in Private Git Repositories
+  - Store Code in Private Git Repositories
 - CodeDeploy
-  * Automate Code Deployments
+  - Automate Code Deployments
 - CodePipeline
-  * Release Software using Continuous Delivery
+  - Release Software using Continuous Delivery
 
 ### Management Tools
 - CloudWatch
-  * Monitor Resources and Applications
+  - Monitor Resources and Applications
 - CloudFormation
-  * Create and Manage Resources with Templates
+  - Create and Manage Resources with Templates
 - CloudTrail
-  * Track User Activity and API Usage
+  - Track User Activity and API Usage
 - Config
-  * Track Resource Inventory and Changes
+  - Track Resource Inventory and Changes
 - OpsWorks
-  * Automate Operations with Chef
+  - Automate Operations with Chef
 - Service Catalog
-  * Create and Use Standardized Products
+  - Create and Use Standardized Products
 - Trusted Advisor
-  * Optimize Performance and Security
+  - Optimize Performance and Security
 
 ### Security & Identity
 - Identity & Access Management
-  * Manage User Access and Encryption Keys
+  - Manage User Access and Encryption Keys
 - Directory Service
-  * Host and Manage Active Directory
+  - Host and Manage Active Directory
 - Inspector
-  * Analyze Application Security
+  - Analyze Application Security
 - WAF
-  * Filter Malicious Web Traffic
+  - Filter Malicious Web Traffic
 
 ### Analytics
 - EMR
-  * Managed Hadoop Framework
+  - Managed Hadoop Framework
 - Data Pipeline
-  * Orchestration for Data-Driven Workflows
+  - Orchestration for Data-Driven Workflows
 - Elasticsearch Service
-  * Run and Scale Elasticsearch Clusters
+  - Run and Scale Elasticsearch Clusters
 - Kinesis
-  * Work with Real-Time Streaming Data
+  - Work with Real-Time Streaming Data
 - Machine Learning
-  * Build Smart Applications Quickly and Easily
+  - Build Smart Applications Quickly and Easily
 
 ### Internet of Things
 - AWS IoT
-  * Connect Devices to the Cloud
+  - Connect Devices to the Cloud
 
 ### Mobile Services
 - Mobile Hub
-  * Build, Test, and Monitor Mobile apps
+  - Build, Test, and Monitor Mobile apps
 - Cognito
-  * User Identity and App Data Synchronization
+  - User Identity and App Data Synchronization
 - Device Farm
-  * Test Android, FireOS, and iOS Apps on Real Devices in the Cloud
+  - Test Android, FireOS, and iOS Apps on Real Devices in the Cloud
 - Mobile Analytics
-  * Collect, View and Export App Analytics
+  - Collect, View and Export App Analytics
 - SNS
-  * Push Notification Service
+  - Push Notification Service
 
 ### Application Services
 - API Gateway
-  * Build, Deploy and Manage APIs
+  - Build, Deploy and Manage APIs
 - AppStream
-  * Low Latency Application Streaming
+  - Low Latency Application Streaming
 - CloudSearch
-  * Managed Search Service
+  - Managed Search Service
 - Elastic Transcoder
-  * Easy-to-Use Scalable Media Transcoding
+  - Easy-to-Use Scalable Media Transcoding
 - SES
-  * Email Sending and Receiving Service
+  - Email Sending and Receiving Service
 - SQS
-  * Message Queue Service
+  - Message Queue Service
 - SWF
-  * Workflow Service for Coordinating Application Components
+  - Workflow Service for Coordinating Application Components
 
 ### Enterprise Applications
 - WorkSpaces
-  * Desktops in the Cloud
+  - Desktops in the Cloud
 - WorkDocs
-  * Secure Enterprise Storage and Sharing Service
+  - Secure Enterprise Storage and Sharing Service
 - WorkMail
-  * Secure Email and Calendaring Service
+  - Secure Email and Calendaring Service
 
 ## related
 - [aws start](https://okdevtv.com/mib/aws/aws-start)

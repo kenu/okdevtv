@@ -1,6 +1,6 @@
 # Vue Swiper
 - vue-awesome-swiper
-  * https://github.com/surmon-china/vue-awesome-swiper
+  - https://github.com/surmon-china/vue-awesome-swiper
 - Swiperjs 의존성
 
 ## npm install

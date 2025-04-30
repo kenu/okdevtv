@@ -5,16 +5,16 @@
 - Relational: table 구조, Object: graph 구조
 - JSR 220, JSR 317, JSR 338
 - JPA Provider
-  * Hibernate, Eclipselink, Toplink, Spring Data JPA, etc.
+  - Hibernate, Eclipselink, Toplink, Spring Data JPA, etc.
 
 <img src="images/object_relational_mapping.webp" class="img" alt="ORM">
 
 ## 관계형과 차이점
-  * Granularity: 객체 모델은 관계형 모델보다 세분화됩니다.
-  * Subtypes: 하위 유형(상속을 의미)은 모든 유형의 관계형 데이터베이스에서 지원되지 않습니다.
-  * Identity: 객체 모델과 마찬가지로 관계형 모델은 동등성을 작성하는 동안 정체성을 노출하지 않습니다.
-  * Associations: 관계형 모델은 개체 도메인 모델을 조사하는 동안 여러 관계를 결정할 수 없습니다.
-  * Data navigation: 객체 네트워크의 객체 간 데이터 탐색은 두 모델에서 다릅니다.
+  - Granularity: 객체 모델은 관계형 모델보다 세분화됩니다.
+  - Subtypes: 하위 유형(상속을 의미)은 모든 유형의 관계형 데이터베이스에서 지원되지 않습니다.
+  - Identity: 객체 모델과 마찬가지로 관계형 모델은 동등성을 작성하는 동안 정체성을 노출하지 않습니다.
+  - Associations: 관계형 모델은 개체 도메인 모델을 조사하는 동안 여러 관계를 결정할 수 없습니다.
+  - Data navigation: 객체 네트워크의 객체 간 데이터 탐색은 두 모델에서 다릅니다.
 
 ## Class Level Architecture
 <img src="images/jpa_class_relationships.webp" class="img" alt="JPA Class Relationships">

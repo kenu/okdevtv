@@ -11,9 +11,9 @@ fetch('https://randomuser.me/api?results=2')
 
 ## 공공정보
 - 공공 데이터 포털
-  * https://www.data.go.kr/
+  - https://www.data.go.kr/
 - 코로나바이러스감염증-19(COVID-19)
-  * http://ncov.mohw.go.kr/
+  - http://ncov.mohw.go.kr/
 
 ## OpenAPI
 - https://developers.naver.com/docs/common/openapiguide/
@@ -22,15 +22,15 @@ fetch('https://randomuser.me/api?results=2')
 
 ## 무의미 텍스트 생성
 - Lorem Ipsum
-  * https://www.lipsum.com/
+  - https://www.lipsum.com/
 - 한글 Lorem Ipsum
-  * http://guny.kr/stuff/klorem/
+  - http://guny.kr/stuff/klorem/
 - 한글입숨
-  * http://hangul.thefron.me/
+  - http://hangul.thefron.me/
 
 ## 랜덤 정보
 - RANDOM USER GENERATOR
-  * https://randomuser.me/documentation
+  - https://randomuser.me/documentation
 - 존재하지 않는 인물
-  * https://thispersondoesnotexist.com/image
+  - https://thispersondoesnotexist.com/image
 

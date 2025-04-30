@@ -30,4 +30,4 @@ folium.Marker([51.8641942,0.8438077], popup='popup').add_to(marker_cluster)
 
 ## ref:
 - 지리적 정보를 시각화할 때 괜찮은 Python 지도 모듈 Folium
-  * http://pinkwink.kr/971
+  - http://pinkwink.kr/971

@@ -11,7 +11,7 @@
 
 ## ref
 - (번역) DOM은 정확히 무엇일까?
-  * https://wit.nts-corp.com/2019/02/14/5522
+  - https://wit.nts-corp.com/2019/02/14/5522
 - https://developer.mozilla.org/ko/docs/Glossary/DOM
 - NAVER D2 – 브라우저는 어떻게 동작하는가?
-  * https://d2.naver.com/helloworld/59361
+  - https://d2.naver.com/helloworld/59361

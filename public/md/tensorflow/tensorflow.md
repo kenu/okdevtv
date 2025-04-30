@@ -4,12 +4,12 @@
 
 ## Prerequisite
 - python https://okdevtv.com/mib/python
-  * windows : 3.5.3 (not 3.6.0)
+  - windows : 3.5.3 (not 3.6.0)
 
 ## install v0.12.1
 - https://www.tensorflow.org/install
 - mac
-  * virtualenv 사용
+  - virtualenv 사용
 
 ```sh
 sudo pip install --upgrade virtualenv
@@ -18,15 +18,15 @@ source ~/tensorflow/bin/activate
 TF_BINARY_URL=https://storage.googleapis.com/tensorflow/mac/cpu/tensorflow-0.12.1-py2-none-any.whl
 pip install --upgrade $TF_BINARY_URL
 ```
-  * exit virtualenv mode
+  - exit virtualenv mode
 ```sh
 deactivate
 ```
 
 - win
-  * Python 3.5.3
-  * https://www.microsoft.com/ko-KR/download/details.aspx?id=53587
-    * Microsoft Visual C++ 2015 재배포 가능 패키지(x86) 14.0.23504 필요
+  - Python 3.5.3
+  - https://www.microsoft.com/ko-KR/download/details.aspx?id=53587
+    - Microsoft Visual C++ 2015 재배포 가능 패키지(x86) 14.0.23504 필요
 
 ```sh
 pip install --upgrade virtualenv
@@ -35,11 +35,11 @@ tensorflow\Scripts\activate
 pip install --upgrade https://storage.googleapis.com/tensorflow/windows/cpu/tensorflow-0.12.1-cp35-cp35m-win_amd64.whl
 ```
 
-  * exit virtualenv mode
+  - exit virtualenv mode
 ```
 deactivate
 ```
-  * [matplotlib install for windows](//okdevtv.com/mib/python/matplotlib)
+  - [matplotlib install for windows](//okdevtv.com/mib/python/matplotlib)
 
 
 ## install v1.0.0
@@ -114,19 +114,19 @@ for step in range(201):
 <img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/04228fc42b76b9ebcb067208e6129c3ccb735903" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -2.505ex; width:28.374ex; height:6.176ex;" alt="f(x)={\begin{cases}1&amp;{\text{if }}w\cdot x+b>0\\0&amp;{\text{otherwise}}\end{cases}}">
 
 ## softmax
-  * http://pythonkim.tistory.com/19
-  * "softmax는 데이터를 2개 이상의 그룹으로 나누기 위해 binary classification을 확장한 모델이다."
-  * "통계에서 가장 큰 값을 찾는 개념을 hardmax라고 부른다. softmax는 새로운 조건으로 가장 큰 값을 찾는 개념을 말한다. 일반적으로는 큰 숫자를 찾는 것이 hardmax에 해당하고, 숫자를 거꾸로 뒤집었을 경우에 대해 가장 큰 숫자를 찾는다면 softmax에 해당한다. 여기서는 우리가 알고 있는 큰 숫자를 찾는 것이 아니라는 뜻으로 쓰인다."
+  - http://pythonkim.tistory.com/19
+  - "softmax는 데이터를 2개 이상의 그룹으로 나누기 위해 binary classification을 확장한 모델이다."
+  - "통계에서 가장 큰 값을 찾는 개념을 hardmax라고 부른다. softmax는 새로운 조건으로 가장 큰 값을 찾는 개념을 말한다. 일반적으로는 큰 숫자를 찾는 것이 hardmax에 해당하고, 숫자를 거꾸로 뒤집었을 경우에 대해 가장 큰 숫자를 찾는다면 softmax에 해당한다. 여기서는 우리가 알고 있는 큰 숫자를 찾는 것이 아니라는 뜻으로 쓰인다."
 
 ## Cross Entropy
 - The cross-entropy measure has been used as an alternative to squared error.
 - Cross-entropy can be used as an error measure when a network's outputs can be thought of as representing independent hypotheses
-  * http://www.cse.unsw.edu.au/~billw/cs9444/crossentropy.html
+  - http://www.cse.unsw.edu.au/~billw/cs9444/crossentropy.html
 
 ## NCE loss
 - noise-contrastive estimation loss
 - 텐서플로우(TensorFlow)를 이용해 자연어를 처리하기(NLP) – Word Embedding(Word2vec)
-  * http://solarisailab.com/archives/374
+  - http://solarisailab.com/archives/374
 
 ### Rectifier Linear Unit
 - ReLU
@@ -140,16 +140,16 @@ for step in range(201):
 
 ### Convolutional Layer
 - 합성곱
-  * <img src="http://sanghyukchun.github.io/images/post/75-7.webp">
+  - <img src="http://sanghyukchun.github.io/images/post/75-7.webp">
 - CNN Architecture
-  * Convolutional Layers
-  * Sub-sample Layers
-  * <img src="http://masters.donntu.org/2012/fknt/umiarov/diss/images/image3_en.webp">
+  - Convolutional Layers
+  - Sub-sample Layers
+  - <img src="http://masters.donntu.org/2012/fknt/umiarov/diss/images/image3_en.webp">
 
 ### Pooling Layer
 - 더 dimension이 낮은 feature map을 얻기 위하여 Subsampling
 - convolution layer의 feature map을 조금 더 줄여주는 역할
-  * <img src="http://inspirehep.net/record/1252539/files/CNN.png">
+  - <img src="http://inspirehep.net/record/1252539/files/CNN.png">
 
 
 ## RNN
@@ -157,9 +157,9 @@ for step in range(201):
 - 레이어간 영향을 주는 NN
 - speech recognition, language modeling, translation, image captioning…
 - loop rnn
-  * <img src="http://colah.github.io/posts/2015-08-Understanding-LSTMs/img/RNN-rolled.png" class="img">
+  - <img src="http://colah.github.io/posts/2015-08-Understanding-LSTMs/img/RNN-rolled.png" class="img">
 - unrolled
-  * <img src="http://colah.github.io/posts/2015-08-Understanding-LSTMs/img/RNN-unrolled.png" class="img">
+  - <img src="http://colah.github.io/posts/2015-08-Understanding-LSTMs/img/RNN-unrolled.png" class="img">
 - image from: http://colah.github.io/posts/2015-08-Understanding-LSTMs/
 
 
@@ -167,7 +167,7 @@ for step in range(201):
 - Long Short Term Memory
 - Long Short Term Memory networks – usually just called “LSTMs” – are a special kind of RNN, capable of learning long-term dependencies.
 - Hochreiter & Schmidhuber (1997)
-  * http://deeplearning.cs.cmu.edu/pdfs/Hochreiter97_lstm.pdf
+  - http://deeplearning.cs.cmu.edu/pdfs/Hochreiter97_lstm.pdf
 - <img src="http://colah.github.io/posts/2015-08-Understanding-LSTMs/img/LSTM3-var-GRU.png">
 
 ## NLU
@@ -178,7 +178,7 @@ for step in range(201):
 - Conditional Random Field
 - 이웃하는 표본을 고려하여 예측
 - 활용: 자연언어 처리, HCI, 컴퓨터 비전, 생물정보학
-  * https://ko.wikipedia.org/wiki/조건부_무작위장
+  - https://ko.wikipedia.org/wiki/조건부_무작위장
 
 
 ### GRU
@@ -218,46 +218,46 @@ tensor_2d[0:2,0:2]
 
 ### Random functions
 - random_uniform() : Uniform Distribution Funtion
-  * random_uniform(shape, minval, maxval, dtype, seed, name)
-  * Uniform Distribution : 주어진 범위 내의 모든 수가 동일한 분포를 갖는 형태
+  - random_uniform(shape, minval, maxval, dtype, seed, name)
+  - Uniform Distribution : 주어진 범위 내의 모든 수가 동일한 분포를 갖는 형태
 - random_normal() : Normal Distribution Function
-  * random_normal(shape, mean, stddev, name)
+  - random_normal(shape, mean, stddev, name)
 
 ## term
 - Max: what's the maximum of a function?
 - Argmax: what's the input that gives us that maximum?
-  * from : http://www.aiqus.com/forum/questions/26495/what-is-the-difference-between-argmax-and-max
+  - from : http://www.aiqus.com/forum/questions/26495/what-is-the-difference-between-argmax-and-max
 - Epoch : learning cycle
 - Perceptron : neural network model, feedforward network
-  * single-layer perceptron
-  * multilayer perceptrons
-    * backpropagation
+  - single-layer perceptron
+  - multilayer perceptrons
+    - backpropagation
 
 *
 <img src="images/Perceptron_1.webp" />
-  * image from : http://www.saedsayad.com/artificial_neural_network_bkp.htm
+  - image from : http://www.saedsayad.com/artificial_neural_network_bkp.htm
 *
 <img src="images/mlp.webp" />
-  * image from : http://blog.refu.co/?p=931
+  - image from : http://blog.refu.co/?p=931
 - one-hot : 벡터에서 하나만 1이고 나머지는 0으로 채워진 경우 [0,0,0,1,0,0,0,0,0,0] == 3
 
 
 ## tasks
 - 선형 회귀
-  * 합격 여부 예측
+  - 합격 여부 예측
 - RNN
-  * Chatbot
+  - Chatbot
 - CNN
-  * 비슷한 이미지 찾기
+  - 비슷한 이미지 찾기
 
 
 ## 서적
 - 텐서플로 첫걸음
-  * http://www.aladin.co.kr/shop/wproduct.aspx?ItemId=89824250
+  - http://www.aladin.co.kr/shop/wproduct.aspx?ItemId=89824250
 - 텐서플로 입문
-  * http://www.aladin.co.kr/shop/wproduct.aspx?ItemId=94238233
+  - http://www.aladin.co.kr/shop/wproduct.aspx?ItemId=94238233
 - 어서와! 머신러닝은 처음이지? (R)
-  * http://www.aladin.co.kr/shop/wproduct.aspx?ItemId=99084501
+  - http://www.aladin.co.kr/shop/wproduct.aspx?ItemId=99084501
 
 ## tensorboard
 - TensorFlow 시각화 기능
@@ -277,7 +277,7 @@ tensorboard --logdir=/temp/tensorflowlogs
 - https://www.tensorflow.org/tutorials/using_gpu
 - 1) TensorFlow only supports GPUs on Linux. It may be possible to get it using a Mac one, but I haven't heard any reports of it.
   2) CUDA is only for NVidia GPUs
-  * by nicki https://www.reddit.com/r/MachineLearning/comments/4nk45n/has_anyone_used_a_mac_gpu_with_tensorflow/
+  - by nicki https://www.reddit.com/r/MachineLearning/comments/4nk45n/has_anyone_used_a_mac_gpu_with_tensorflow/
 - CUDA needed
 - device log
 ```py
@@ -329,25 +329,25 @@ print(sess.run(c))
 
 ## ref
 - 모두를 위한 머신러닝/딥러닝 강의
-  * http://hunkim.github.io/ml/
-  * https://github.com/aymericdamien/TensorFlow-Examples
+  - http://hunkim.github.io/ml/
+  - https://github.com/aymericdamien/TensorFlow-Examples
 - 시즌2 모두를 위한 딥러닝 - Deep Reinforcement Learning
-  * https://www.inflearn.com/course/reinforcement-learning/
+  - https://www.inflearn.com/course/reinforcement-learning/
 - 머신러닝_김성훈교수님 노트 by 파이쿵
-  * http://pythonkim.tistory.com/category/%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D_%EA%B9%80%EC%84%B1%ED%9B%88%EA%B5%90%EC%88%98%EB%8B%98
+  - http://pythonkim.tistory.com/category/%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D_%EA%B9%80%EC%84%B1%ED%9B%88%EA%B5%90%EC%88%98%EB%8B%98
 - Practical Deep Learning For Coders
-  * http://course.fast.ai/index.html
+  - http://course.fast.ai/index.html
 - TensorFlow Tutorials by 골빈해커
-  * https://github.com/golbin/TensorFlow-Tutorials
+  - https://github.com/golbin/TensorFlow-Tutorials
 - CodeOnWeb tensorflow
-  * https://codeonweb.com/entry/12045839-0aa9-4bad-8c7e-336b89401e10
+  - https://codeonweb.com/entry/12045839-0aa9-4bad-8c7e-336b89401e10
 - 솔라리스의 인공지능 연구실
-  * http://solarisailab.com/
+  - http://solarisailab.com/
 - 내가 찾은 Deep Learning 공부 최단경로(?)
-  * http://blog.naver.com/chesterroh/220920668374
+  - http://blog.naver.com/chesterroh/220920668374
 - https://github.com/TensorFlowKR/awesome_tensorflow_implementations
 - Char RNN : https://github.com/sherjilozair/char-rnn-tensorflow
 - Word RNN : https://github.com/hunkim/word-rnn-tensorflow
 - http://karpathy.github.io/2015/05/21/rnn-effectiveness/
 - Fundamental of Reinforcement Learning
-  * https://dnddnjs.gitbooks.io/rl/content/
+  - https://dnddnjs.gitbooks.io/rl/content/

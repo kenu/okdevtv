@@ -1,13 +1,13 @@
 # Spring Boot Validation
 - [영상 링크](https://youtu.be/b5rzOaDRdyY)
 - JSR 380: Bean Validation 2.0
-  * https://beanvalidation.org/2.0/spec/
+  - https://beanvalidation.org/2.0/spec/
 - JSR 303: Bean Validation 1.0
-  * https://beanvalidation.org/1.0/spec/
+  - https://beanvalidation.org/1.0/spec/
 
 ## Form
 - Controller
-  * `@ModelAttribute`
+  - `@ModelAttribute`
 
 ```java
 @PostMapping("/greeting")
@@ -103,5 +103,5 @@ List<@NotBlank String> preferences;
 - https://spring.io/guides/gs/handling-form-submission/
 - https://spring.io/guides/gs/validating-form-input/
 - Customize Validation Error Message
-  * https://www.baeldung.com/spring-custom-validation-message-source
-  * https://www.baeldung.com/javax-validation
+  - https://www.baeldung.com/spring-custom-validation-message-source
+  - https://www.baeldung.com/javax-validation

@@ -555,7 +555,7 @@ Other Recommendations
 
 - Don't use spaces around the ``=`` sign when used to indicate a
   keyword argument, or when used to indicate a default value for an
-  *unannotated* function parameter::
+  -unannotated* function parameter::
 
       # Correct:
       def complex(real, imag=0.0):
@@ -1128,7 +1128,7 @@ Programming Recommendations
   where catching them is almost always the wrong thing to do.
 
   Design exception hierarchies based on the distinctions that code
-  *catching* the exceptions is likely to need, rather than the locations
+  -catching* the exceptions is likely to need, rather than the locations
   where the exceptions are raised. Aim to answer the question
   "What went wrong?" programmatically, rather than only stating that
   "A problem occurred" (see :pep:`3151` for an example of this lesson being

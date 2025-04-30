@@ -1,8 +1,8 @@
 # Spring 5
 - for reactive
 - Reactive
-  * https://www.reactivemanifesto.org
-  * https://www.reactive-streams.org
+  - https://www.reactivemanifesto.org
+  - https://www.reactive-streams.org
 - Responsive(반응), Resilient(탄력), Elastic(유연), Message Driven(메시지)
 - Non-blocking io
 - Spring WebFlux

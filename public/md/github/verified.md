@@ -100,4 +100,4 @@ j7gKAP9SxmHCksD3rhA7qQUq2vNHIuwP+FRlFabNF4qUumiPDQ==
 
 ## ref
 - GitHub - 소스 커밋 서명 관리
-  * https://docs.github.com/en/authentication/managing-commit-signature-verification
+  - https://docs.github.com/en/authentication/managing-commit-signature-verification
