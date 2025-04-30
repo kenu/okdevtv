@@ -11,7 +11,7 @@
   - https://orbstack.dev/ (macOS)
 
 ## Basic keywords
-```
+```sh
 docker version
 docker ps
 docker info
@@ -31,7 +31,7 @@ docker container ls -a
 - `docker run -it -p 80:80 docker/getting-started`
 - stop
 
-```
+```sh
 ➜  ~ docker ps
 CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                         NAMES
 92d58318f84e        nginx               "nginx -g 'daemon off"   27 hours ago        Up 27 hours         0.0.0.0:80->80/tcp, 443/tcp   webserver
@@ -44,7 +44,7 @@ Error response from daemon: No such container: nginx
 
 ## 실행중인 도커 접속
 
-```
+```sh
 docker exec -it  92d58318f84e /bin/bash
 ```
 
@@ -52,7 +52,7 @@ docker exec -it  92d58318f84e /bin/bash
 - `docker pull imagename`
 
 ## 컨테이너 전체 삭제
-```
+```sh
 docker ps -aq
 docker stop $(docker ps -aq)
 docker rm $(docker ps -aq)
@@ -88,7 +88,7 @@ EXPOSE 3000
 - `curl localhost:4000`
 
 ## 업로드 이미지 삭제
-```
+```sh
 export USERNAME=myuser
 export PASSWORD=mypass
 export ORGANIZATION=myorg (if it's personal, then it's your username)
@@ -130,7 +130,7 @@ curl -SL https://github.com/docker/compose/releases/download/v2.35.1/docker-comp
 chmod +x $DOCKER_CONFIG/cli-plugins/docker-compose
 ```
 
-```
+```sh
 docker compose version
 ```
 
@@ -143,7 +143,7 @@ docker compose version
 
 - Docker 창시자 발표 https://youtu.be/Q5POuMHxW-0
 
-```
+```sh
 docker ps
 docker images
 docker images ubuntu
@@ -172,12 +172,12 @@ https://index.docker.io
 - [docker in Windows](/mib/docker/win)
 
 ## ref
-- How to remove docker images containers and volumes
-  - https://www.digitalocean.com/community/tutorials/how-to-remove-docker-images-containers-and-volumes
 - Docker in 12 minutes
   - https://www.youtube.com/watch?v=YFl2mCHdv24
 - Docker Compose in 12 minutes
   - https://www.youtube.com/watch?v=Qw9zlE3t8Ko
+- How to remove docker images containers and volumes
+  - https://www.digitalocean.com/community/tutorials/how-to-remove-docker-images-containers-and-volumes
 - Getting Started for non-technical
   - https://docs.docker.com/mac/
   - https://docs.docker.com/docker-for-windows/
@@ -186,13 +186,3 @@ https://index.docker.io
   - https://hub.docker.com/r/docker/whalesay/
 - docker for mac
   - https://pilsniak.com/how-to-install-docker-on-mac-os-using-brew/
-
-```
-brew install docker docker-compose docker-machine xhyve docker-machine-driver-xhyve
-sudo chown root:wheel /usr/local/opt/docker-machine-driver-xhyve/bin/docker-machine-driver-xhyve
-sudo chmod u+s /usr/local/opt/docker-machine-driver-xhyve/bin/docker-machine-driver-xhyve
-sudo chown root:wheel $(brew --prefix)/opt/docker-machine-driver-xhyve/bin/docker-machine-driver-xhyve\nsudo chmod u+s $(brew --prefix)/opt/docker-machine-driver-xhyve/bin/docker-machine-driver-xhyve
-docker-machine create default --driver xhyve --xhyve-experimental-nfs-share
-eval $(docker-machine env default)
-docker run hello-world
-```
