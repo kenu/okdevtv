@@ -1,3 +1,3 @@
 # Elastic Beanstalk
 
-* AWS PaaS
+- AWS PaaS

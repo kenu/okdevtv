@@ -1,13 +1,13 @@
 # Sequelize
-* https://sequelize.org/
-* Node.js ORM
+- https://sequelize.org/
+- Node.js ORM
 
 ## Install
 
 ```
 npm i sequelize
 ```
-* 해당 DB 라이브러리 추가 설치
+- 해당 DB 라이브러리 추가 설치
 
 ```
 # One of the following:
@@ -54,18 +54,18 @@ const sequelize = new Sequelize('database', 'username', 'password', {
 npm i -g sequelize-cli
 sequelize init
 ```
-* `config`, contains config file, which tells CLI how to connect with database
-* `models`, contains all models for your project
-* `migrations`, contains all migration files
-* `seeders`, contains all seed files
-* https://sequelize.org/master/manual/migrations.html
+- `config`, contains config file, which tells CLI how to connect with database
+- `models`, contains all models for your project
+- `migrations`, contains all migration files
+- `seeders`, contains all seed files
+- https://sequelize.org/master/manual/migrations.html
 
 ## Model
 ```bash
 npx sequelize-cli model:generate --name like --attributes userId:integer,articleId:integer
 npx sequelize-cli db:migrate
 ```
-* `attributes`: define attributes no spaces between fields
+- `attributes`: define attributes no spaces between fields
 
 ## Timezone
 ```
@@ -76,5 +76,5 @@ const sequelize = new Sequelize('sqlite::memory:', {
 });
 ```
 ## related
-* Reverse Model
+- Reverse Model
   * https://github.com/sequelize/sequelize-auto

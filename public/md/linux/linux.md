@@ -2,9 +2,9 @@
 
 # Linux
 
-* 1991 Linus Torvalds
-* mimic of Unix
-* for pc
+- 1991 Linus Torvalds
+- mimic of Unix
+- for pc
 
 ## Basic commands
 |basic commands	| mac	| windows |
@@ -27,11 +27,11 @@ head -n 3 file | tail -n 1
 ```
 
 ## File Encoding
-* 확인
+- 확인
   `file -bi filename`
 
 ## File opened count
-* `lsof | wc -l`
+- `lsof | wc -l`
 
 ## inode file rm (too long file name)
 
@@ -53,10 +53,10 @@ find . -type l
 ```
 
 ## Port check
-* `lsof -t -i:3000` # pid
-* `lsof -i tcp:3000` # process
+- `lsof -t -i:3000` # pid
+- `lsof -i tcp:3000` # process
 
-* 열린 포트 확인
+- 열린 포트 확인
 
 ```sh
 lsof -i -nP | grep LISTEN | awk '{print $(NF-1)" "$1}' | sort -u
@@ -64,7 +64,7 @@ lsof -i -nP | grep LISTEN | awk '{print $(NF-1)" "$1}' | sort -u
 *:8082 node
 ```
 
-* 원격 열린 포트 확인
+- 원격 열린 포트 확인
 
 ```sh
 # dest
@@ -78,7 +78,7 @@ nc 172.31.95.135 7555 < myfile.txt
 
 ## LC_CTYPE warning
 
-* /etc/environment
+- /etc/environment
 
 ```sh
 LANG=en_US.utf-8
@@ -111,14 +111,14 @@ date -d "3days ago" '+%Y-%m-%d %H' # bash
 
 ## Timezone
 
-* ~/.bash_profile
+- ~/.bash_profile
 
 ```sh
 # .bash_profile
 export TZ='Asia/Seoul';
 ```
 
-* for cron
+- for cron
 
 ```sh
 sudo cp -p /usr/share/zoneinfo/Asia/Seoul /etc/localtime
@@ -175,14 +175,14 @@ ps -ef | grep httpd
 ps x -o  "%p %r %c"
 ```
 
-* group process kill
+- group process kill
 
 ```sh
 ps -ef | grep httpd
 kill -TERM -- -22590
 ```
 
-* process id
+- process id
 
 ```sh
 pgrep -f java
@@ -209,7 +209,7 @@ rm -rf dust-v1.1.1-x86_64-unknown-linux-gnu*
 sudo dust /
 ```
 
-* https://github.com/bootandy/dust/releases
+- https://github.com/bootandy/dust/releases
 
 ```sh
 dust -h
@@ -231,27 +231,27 @@ sendmail recipient@example.com < content
 ```
 
 ### mutt
-* 파일첨부
+- 파일첨부
   * `mutt -s "subject" -i body.txt -a attachment.txt recipient@example.com`
 
 ### mail
-* `mail -s "This is the subject" kenu.heo@gmail.com <<< 'This is the message'`
+- `mail -s "This is the subject" kenu.heo@gmail.com <<< 'This is the message'`
 
 ## other topics
 
-* [dnf](/mib/linux/dnf)
-* [systemctl](/mib/linux/systemctl)
-* [cron](/mib/linux/cron)
-* [curl](/mib/linux/curl)
-* [pigz](/mib/linux/pigz) : parallel gzip
+- [dnf](/mib/linux/dnf)
+- [systemctl](/mib/linux/systemctl)
+- [cron](/mib/linux/cron)
+- [curl](/mib/linux/curl)
+- [pigz](/mib/linux/pigz) : parallel gzip
 
 ## ref
 
-* vi 에디터에서 utf8, euc-kr 전환하기
+- vi 에디터에서 utf8, euc-kr 전환하기
   * http://egloos.zum.com/indirock/v/3791689
-* Linux file descriptors
+- Linux file descriptors
   * https://www.cyberciti.biz/tips/linux-procfs-file-descriptors.html
-* Mutt
+- Mutt
   * https://www.thegeekdiary.com/linux-unix-send-mail-with-attachment-using-mutt/
-* Send mail from linux command line
+- Send mail from linux command line
   * https://www.lesstif.com/lpt/send-mail-from-linux-command-line-24445045.html

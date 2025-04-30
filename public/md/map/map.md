@@ -1,9 +1,9 @@
 # 지도 그리기
-* leaflet
-* 위도, 경도 (lat, lng)
-* [geocoding](/md/map/geocoder.html) : 주소 -> 위경도
+- leaflet
+- 위도, 경도 (lat, lng)
+- [geocoding](/md/map/geocoder.html) : 주소 -> 위경도
 
-* [sample.html](/md/map/sample.html)
+- [sample.html](/md/map/sample.html)
 
 <a href="/md/map/sample.html"><img src="/md/map/images/map.webp"></a>
 
@@ -59,5 +59,5 @@ crossorigin=""></script>
 
 
 ## ref
-* https://leafletjs.com
-* http://apis.map.daum.net/web/sample/addr2coord/
+- https://leafletjs.com
+- http://apis.map.daum.net/web/sample/addr2coord/

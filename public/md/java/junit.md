@@ -1,17 +1,17 @@
 # JUnit
-* http://junit.org
-* Test Framework
-* Function Test
-* input/output test set
-* testName() prefix
-* @Test annotation
+- http://junit.org
+- Test Framework
+- Function Test
+- input/output test set
+- testName() prefix
+- @Test annotation
 
 ## Required
-* junit.jar
+- junit.jar
   * https://mvnrepository.com/artifact/junit/junit/4.13.2
 
 ## Getting started
-* Calculator.java
+- Calculator.java
 
 ```java
 public class Calculator {
@@ -24,7 +24,7 @@ public class Calculator {
 }
 ```
 
-* CalculatorTest.java
+- CalculatorTest.java
 
 ```java
 import static org.junit.Assert.assertEquals;
@@ -39,13 +39,13 @@ public class CalculatorTest {
   }
 }
 ```
-* compile
+- compile
 
 ```
 javac -cp .:junit-4.13.2.jar CalculatorTest.java
 ```
 
-* run
+- run
 
 ```
 java -cp .:junit-4.13.2.jar:hamcrest-core-1.3.jar org.junit.runner.JUnitCore CalculatorTest
@@ -70,6 +70,6 @@ java -cp .:junit-4.13.2.jar:hamcrest-core-1.3.jar org.junit.runner.JUnitCore Cal
 </project>
 ```
 
-* `mvn site` or `mvn surefire-report:report`
-* from: https://maven.apache.org/surefire/maven-surefire-report-plugin/usage.html
+- `mvn site` or `mvn surefire-report:report`
+- from: https://maven.apache.org/surefire/maven-surefire-report-plugin/usage.html
 

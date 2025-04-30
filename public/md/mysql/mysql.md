@@ -1,10 +1,10 @@
 # MySQL
-* https://www.mysql.com
+- https://www.mysql.com
 
 ## install
 
 ### EC2 AMI2023
-* MySQL 8.0 Community Server
+- MySQL 8.0 Community Server
 ```bash
 wget https://dev.mysql.com/get/mysql80-community-release-el9-5.noarch.rpm
 sudo dnf install mysql80-community-release-el9-5.noarch.rpm
@@ -12,12 +12,12 @@ sudo dnf update
 sudo dnf install mysql-community-server
 sudo systemctl start mysqld
 ```
-* 임시 비밀번호 확인
+- 임시 비밀번호 확인
 ```
 sudo grep 'temporary password' /var/log/mysqld.log
 ```
-* `sudo mysql_secure_installation -p`
-* `mysql -u root -p`
+- `sudo mysql_secure_installation -p`
+- `mysql -u root -p`
 
 ```sql
 mysql> create user 'devuser'@'localhost' identified by 'devpass';
@@ -29,8 +29,8 @@ ERROR 1819 (HY000): Your password does not satisfy the current policy requiremen
 mysql> create user 'devuser'@'localhost' identified by 'Devpass!2';
 Query OK, 0 rows affected (0.01 sec)
 ```
-* `create user 'devuser'@'localhost' identified by 'Devpass!2';`
-* `grant all privileges on devdb.* to 'devuser'@'localhost';`
+- `create user 'devuser'@'localhost' identified by 'Devpass!2';`
+- `grant all privileges on devdb.* to 'devuser'@'localhost';`
 
 
 
@@ -141,11 +141,11 @@ spring.datasource.password=Devpass!2
 ```
 
 ### Data path
-* `/usr/local/var/mysql`
-* uninstall할 때 삭제 필요할 수도 있음.
+- `/usr/local/var/mysql`
+- uninstall할 때 삭제 필요할 수도 있음.
 
 ## Functions
-* `str_to_date`
+- `str_to_date`
 
 ```
 select str_to_date('2021-04-14T04:42:00.000Z','%Y-%m-%dT%T.%fZ');
@@ -154,5 +154,5 @@ select CONVERT_TZ(str_to_date('2021-04-06T04:42:00.000Z','%Y-%m-%dT%T.%fZ'), '+0
 ```
 
 ## related
-* [MySQL JSON](/mib/mysql/json)
-* [Installing MySQL 8 server & client on Amazon Linux 2023](https://linux.how2shout.com/installing-mysql-8-server-client-on-amazon-linux-2023/)
+- [MySQL JSON](/mib/mysql/json)
+- [Installing MySQL 8 server & client on Amazon Linux 2023](https://linux.how2shout.com/installing-mysql-8-server-client-on-amazon-linux-2023/)

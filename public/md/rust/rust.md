@@ -1,16 +1,16 @@
 # Rust
-* https://www.rust-lang.org/
-* Korean ebook:
+- https://www.rust-lang.org/
+- Korean ebook:
   * https://doc.rust-kr.org/
 
 ## install
-* https://www.rust-lang.org/tools/install
-* Windows C++ build tools
+- https://www.rust-lang.org/tools/install
+- Windows C++ build tools
   * https://visualstudio.microsoft.com/visual-cpp-build-tools/
 
 ## Basic
-* `rustc --version`
-* `main.rs`
+- `rustc --version`
+- `main.rs`
 
 ```rust
 fn main() {
@@ -19,22 +19,22 @@ fn main() {
 ```
 
 ## Build & Run
-* `rustc main.rs`
-* `./main`
+- `rustc main.rs`
+- `./main`
 
 ## cargo package manager
 ```bash
 curl https://sh.rustup.rs -sSf | sh
 ```
 
-* https://doc.rust-lang.org/cargo/getting-started/installation.html
+- https://doc.rust-lang.org/cargo/getting-started/installation.html
 
 ## cargo how to
 ```
 cargo new hello_world
 ```
 
-* `Cargo.toml`
+- `Cargo.toml`
 
 ```
 [package]
@@ -46,7 +46,7 @@ edition = "2018"
 [dependencies]
 ```
 
-* `src/main.rs`
+- `src/main.rs`
 
 ```rust
 fn main() {
@@ -54,13 +54,13 @@ fn main() {
 }
 ```
 
-* build
+- build
 
 ```
 cargo build
 ```
 
-* run
+- run
 
 ```
 ./target/debug/hello_world
@@ -95,7 +95,7 @@ fn main() {
 ```
 
 ## ref
-* https://www.rust-lang.org/learn
-* https://doc.rust-kr.org/
+- https://www.rust-lang.org/learn
+- https://doc.rust-kr.org/
 
 <img src="https://www.rust-lang.org/static/images/ferris.gif" alt="rustacean" />

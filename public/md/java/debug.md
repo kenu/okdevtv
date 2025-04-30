@@ -1,6 +1,6 @@
 # Java Debug
-* Java Debug Wire Protocol (JDWP) agent
-* `java -jar myapp.jar -Dagentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=8000`
+- Java Debug Wire Protocol (JDWP) agent
+- `java -jar myapp.jar -Dagentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=8000`
   * transport=dt_socket
   * server=y
   * suspend=n

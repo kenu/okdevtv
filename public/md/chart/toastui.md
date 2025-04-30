@@ -1,5 +1,5 @@
 # ToastUI
-* https://ui.toast.com/
+- https://ui.toast.com/
 
 ## Sample
 ```html
@@ -31,6 +31,6 @@
 </script>
 <div id="chart"></div>
 ```
-* [run sample](/md/chart/chart.html)
+- [run sample](/md/chart/chart.html)
 
 

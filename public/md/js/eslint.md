@@ -1,7 +1,7 @@
 # eslint
-* EcmaScript Lint
-* https://eslint.org/
-* Find and fix problems in your JavaScript code
+- EcmaScript Lint
+- https://eslint.org/
+- Find and fix problems in your JavaScript code
 
 ## Install
 ```
@@ -16,7 +16,7 @@ node_modules/.bin/eslint yourfile.js
 ```
 
 ## Rule
-* `.eslintrc`
+- `.eslintrc`
 
 ```js
 module.exports = {
@@ -40,7 +40,7 @@ module.exports = {
 };
 ```
 
-* `.eslintignore`
+- `.eslintignore`
 
 ```
 node_modules/

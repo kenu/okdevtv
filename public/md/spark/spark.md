@@ -1,9 +1,9 @@
 # Spark
-* https://spark.apache.org
-* RDD(Resilient Distributed Dataset)
+- https://spark.apache.org
+- RDD(Resilient Distributed Dataset)
 
 ## Getting Started
-* `bin/pyspark`
+- `bin/pyspark`
 
 ```py
 textFile = sc.textFile("README.md")

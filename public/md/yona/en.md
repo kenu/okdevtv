@@ -9,7 +9,7 @@
 ## In AWS install Yona
 
 ### Prerequisite
-* MariaDB
+- MariaDB
   * CentOS
 ```
 sudo dnf update -y
@@ -83,11 +83,11 @@ sudo vi /etc/my.cnf.d/mysql-clients.cnf
 default-character-set=utf8mb4
 ```
 
-* JDK 1.8 required
+- JDK 1.8 required
   * [install](/mib/java)
 
 ### Install Yona
-* Yona installation
+- Yona installation
 
 ```
 mkdir local && cd local
@@ -114,8 +114,8 @@ db.default.password="yonadan"
 ```
 bin/yona
 ```
-* open browser and register admin account
-* http://ipaddress:9000
+- open browser and register admin account
+- http://ipaddress:9000
 
 ## Run Yona in Background
 
@@ -124,12 +124,12 @@ nohup bin/yona &
 ```
 
 ## Errors
-* `[error] play - Specified key was too long; max key length is 767 bytes [ERROR:1071, SQLSTATE:42000]`
+- `[error] play - Specified key was too long; max key length is 767 bytes [ERROR:1071, SQLSTATE:42000]`
 If you see this, delete MariaDB and reinstall
-* `sudo dnf uninstall -y MariaDB-server MariaDB-client`
+- `sudo dnf uninstall -y MariaDB-server MariaDB-client`
 
 ## Yona in Windows
-* env variables
+- env variables
 ```
 SET YONA_HOME=c:\yona\yona-1.11.0
 SET JAVA_OPTS=-Dyona.home=%YONA_HOME% -Dconfig.file=%YONA_HOME%\conf\application.conf -Dlogger.file=%YONA_HOME%\conf\application-logger.xml
@@ -149,7 +149,7 @@ sleep 5
 ```
 
 ## ref
-* yona-1.4.1 (ko)
+- yona-1.4.1 (ko)
   * https://youtu.be/B3Q2FVXZWBM
-* gmail security
+- gmail security
   * http://okky.kr/article/343036

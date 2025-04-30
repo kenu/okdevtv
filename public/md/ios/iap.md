@@ -1,5 +1,5 @@
 # In App Purchase
-* StoreKit framework
+- StoreKit framework
 
 ## ref
-* https://developer.apple.com/in-app-purchase/
+- https://developer.apple.com/in-app-purchase/

@@ -1,9 +1,9 @@
 # nvm
-* Node.js Version Manager
-* https://github.com/nvm-sh/nvm
+- Node.js Version Manager
+- https://github.com/nvm-sh/nvm
 
 ## Install
-* https://github.com/nvm-sh/nvm#installing-and-updating
+- https://github.com/nvm-sh/nvm#installing-and-updating
 
 ```sh
 # for Windows Git Bash

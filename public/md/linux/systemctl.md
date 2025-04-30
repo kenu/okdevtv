@@ -1,20 +1,20 @@
 # systemctl
-* sudo(root) 권한 필요
-* `systemctl status <service>`
-* `systemctl start <service>`
-* `systemctl stop <service>`
-* `systemctl restart <service>`
-* `systemctl enable <service>`
+- sudo(root) 권한 필요
+- `systemctl status <service>`
+- `systemctl start <service>`
+- `systemctl stop <service>`
+- `systemctl restart <service>`
+- `systemctl enable <service>`
 
 ## Custom Service 등록
-* spring boot 예
+- spring boot 예
   * `java -jar sbapp.jar`
-* **systemd** 에 service 파일 생성
+- **systemd** 에 service 파일 생성
 ```sh
 sudo vi /etc/systemd/system/sbapp.service
 ```
 
-* `sbapp.service`
+- `sbapp.service`
 ```
 [Unit]
 Description=sbapp
@@ -56,4 +56,4 @@ sudo systemctl enable sbapp
 ```
 
 ## ref
-* https://docs.spring.io/spring-boot/how-to/deployment/installing.html#howto.deployment.installing
+- https://docs.spring.io/spring-boot/how-to/deployment/installing.html#howto.deployment.installing

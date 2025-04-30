@@ -1,6 +1,6 @@
 # Spring Security
-* authentication and access-control framework.
-* 기능
+- authentication and access-control framework.
+- 기능
   * 인증과 권한 (Authentification, Authorization)
   * 보안 기능 clickjacking, session fixation, cross site request forgery, 등
   * Servlet API 통합
@@ -49,5 +49,5 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 ```
 
 ## ref
-* https://spring.io/projects/spring-security
-* https://spring.io/guides/gs/securing-web/
+- https://spring.io/projects/spring-security
+- https://spring.io/guides/gs/securing-web/

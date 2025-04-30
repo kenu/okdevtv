@@ -1,12 +1,12 @@
 # Java
 
-* 1995 James Gosling
-* 1996 Sun Microsystems > Oracle Corporation(2010)
+- 1995 James Gosling
+- 1996 Sun Microsystems > Oracle Corporation(2010)
 
 ## JDK, JRE
-* Java Development Kit
-* Java Runtime Environment
-* JDK = JRE + javac
+- Java Development Kit
+- Java Runtime Environment
+- JDK = JRE + javac
 
 ## Version LTS
 
@@ -34,52 +34,52 @@
 | 2 LTS | December 2003|
 | 1 LTS | October 2002|
 
-* from: https://java.com/releases/
+- from: https://java.com/releases/
 
 ## Install
-* [sdkman](/mib/sdkman) recommended
-* https://learn.microsoft.com/en-us/java/openjdk/download
-* https://openjdk.org/projects/jdk
+- [sdkman](/mib/sdkman) recommended
+- https://learn.microsoft.com/en-us/java/openjdk/download
+- https://openjdk.org/projects/jdk
 
 ## 기본 용어
-* 패키지(package)
-* 클래스(class)
-* 메소드(method)
-* 명령문(statement)
+- 패키지(package)
+- 클래스(class)
+- 메소드(method)
+- 명령문(statement)
 
-* 자바의신 1권 20p
-* 들여쓰기(indent)
-* 예약어(reserved word)
+- 자바의신 1권 20p
+- 들여쓰기(indent)
+- 예약어(reserved word)
 
 ## Format
-* google style
+- google style
   * https://google.github.io/styleguide/javaguide.html
   * https://github.com/google/styleguide
   * https://raw.githubusercontent.com/google/styleguide/gh-pages/eclipse-java-google-style.xml
 
 
 ## Other topic
-* [inheritance](/mib/java/inheritance)
-* [interface](/mib/java/interface)
-* [generic](/mib/java/generic)
-* [autoboxing](/mib/java/autoboxing)
-* [annotation](/mib/java/annotation)
-* [synchronized](/mib/java/synchronized)
-* [lambda](/mib/java/lambda)
-* [future](/mib/java/future)
-* [stream](/mib/java/stream)
-* [optional](/mib/java/optional)
-* [enum](/mib/java/enum)
-* [jdbc](/mib/java/jdbc)
-* [junit](/mib/java/junit)
-* [tomcat](/mib/java/tomcat)
-* [war](/mib/java/war)
-* [deploy](/mib/java/deploy)
-* [maven](/mib/java/maven)
-* [gradle](/mib/java/gradle)
-* [ant](/mib/java/ant)
-* [lombok](/mib/java/lombok)
-* [excel](/mib/java/excel)
+- [inheritance](/mib/java/inheritance)
+- [interface](/mib/java/interface)
+- [generic](/mib/java/generic)
+- [autoboxing](/mib/java/autoboxing)
+- [annotation](/mib/java/annotation)
+- [synchronized](/mib/java/synchronized)
+- [lambda](/mib/java/lambda)
+- [future](/mib/java/future)
+- [stream](/mib/java/stream)
+- [optional](/mib/java/optional)
+- [enum](/mib/java/enum)
+- [jdbc](/mib/java/jdbc)
+- [junit](/mib/java/junit)
+- [tomcat](/mib/java/tomcat)
+- [war](/mib/java/war)
+- [deploy](/mib/java/deploy)
+- [maven](/mib/java/maven)
+- [gradle](/mib/java/gradle)
+- [ant](/mib/java/ant)
+- [lombok](/mib/java/lombok)
+- [excel](/mib/java/excel)
 
 ## related
 - [servlet](/mib/java/servlet)
@@ -95,13 +95,13 @@ public class CheckDirectory {
   }
 }
 ```
-* from: https://7942yongdae.tistory.com/121
+- from: https://7942yongdae.tistory.com/121
 
 ## 참고
-* 2시간만에 자바 시작
+- 2시간만에 자바 시작
   * http://www.slideshare.net/kenu/java-in-2-hours
   * http://bit.ly/okjava2020
-* 2시간만에 자바를 쉽게 배우고 싶어요.
+- 2시간만에 자바를 쉽게 배우고 싶어요.
   * http://www.slideshare.net/kenu/java-start01-in-2hours
-* kenu's java
+- kenu's java
   * http://j.mp/okdevtv-java

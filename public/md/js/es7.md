@@ -1,5 +1,5 @@
 # ES7
-* ECMAScript2016
+- ECMAScript2016
 
 ## JavaScript Array.prototype.includes
 ```js
@@ -19,4 +19,4 @@ z **= 2; // 25
 ```
 
 ## ref
-* https://en.wikipedia.org/wiki/ECMAScript
+- https://en.wikipedia.org/wiki/ECMAScript

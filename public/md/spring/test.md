@@ -1,7 +1,7 @@
 # Spring Boot Test
 
 ## Dependency
-* build.gradle
+- build.gradle
 
 ```
 dependencies {
@@ -12,7 +12,7 @@ dependencies {
 }
 ```
 
-* pom.xml
+- pom.xml
 
 ```xml
 <dependency>
@@ -29,10 +29,10 @@ dependencies {
 ```
 
 ## Test Code
-* `@SpringBootTest`
+- `@SpringBootTest`
 
 ## Run Test
-* `./mvnw test` or `./gradlew test`
+- `./mvnw test` or `./gradlew test`
 
 ## Smoke Test
 ```java
@@ -88,4 +88,4 @@ public class HttpRequestTest {
 ```
 
 ## ref
-* https://spring.io/guides/gs/testing-web/
+- https://spring.io/guides/gs/testing-web/

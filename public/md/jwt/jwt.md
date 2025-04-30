@@ -1,15 +1,15 @@
 # JWT
-* JSON Web Token
-* JSON Web Tokens are an open, industry standard [RFC 7519](https://tools.ietf.org/html/rfc7519) method for representing claims securely between two parties.
-* https://jwt.io
+- JSON Web Token
+- JSON Web Tokens are an open, industry standard [RFC 7519](https://tools.ietf.org/html/rfc7519) method for representing claims securely between two parties.
+- https://jwt.io
 
 ## Structure
-* Header
-* Payload
-* Signature
-* `xxxxx.yyyyy.zzzzz`
+- Header
+- Payload
+- Signature
+- `xxxxx.yyyyy.zzzzz`
 
-* Header
+- Header
   * type of the token
   * hashing algorithm
   * Base64Url encoded
@@ -21,7 +21,7 @@
 }
 ```
 
-* Payload
+- Payload
   * three types of claims: reserved, public, and private claims.
   * Reserved claims:  **iss** (issuer), **exp** (expiration time), **sub** (subject), **aud** (audience), and others.
   * Public claims: IANA JSON Web Token Registry or a collision resistant namespace
@@ -35,7 +35,7 @@
 }
 ```
 
-* Signature
+- Signature
 
 ```js
 HMACSHA256(
@@ -45,25 +45,25 @@ HMACSHA256(
 ```
 
 ## How jwt works
-* HTTP Header
+- HTTP Header
 
 ```
 Authorization: Bearer <token>
 ```
-* <img src="https://cdn.auth0.com/content/jwt/jwt-diagram.png" alt="JWT works" class="img"/>
+- <img src="https://cdn.auth0.com/content/jwt/jwt-diagram.png" alt="JWT works" class="img"/>
 
 
 ## install
-* `npm install jsonwebtoken`
+- `npm install jsonwebtoken`
   * https://github.com/auth0/node-jsonwebtoken
 
 ## Usage
-* `jwt.sign(payload, secretOrPrivateKey, [options, callback])`
+- `jwt.sign(payload, secretOrPrivateKey, [options, callback])`
 
 ## example
 
-* code from https://www.jsonwebtoken.io/
-* `npm i njwt`
+- code from https://www.jsonwebtoken.io/
+- `npm i njwt`
 
 ```js
 const uuid = require('uuid');
@@ -91,4 +91,4 @@ console.log(result);
 ```
 
 ## ref
-* https://auth0.com/signup
+- https://auth0.com/signup

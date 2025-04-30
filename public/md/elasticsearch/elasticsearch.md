@@ -1,39 +1,39 @@
 # Elasticsearch
 
-* Shay Banon
-* http://elastic.co
-* [Lucene](http://lucene.apache.org) 라이브러리 사용
-* Lucene 검색 엔진을 잘 이용하는 제품입니다.
-* 경쟁제품 Solr, Tica
-* Java 8(jdk 1.8) 이상 필요
+- Shay Banon
+- http://elastic.co
+- [Lucene](http://lucene.apache.org) 라이브러리 사용
+- Lucene 검색 엔진을 잘 이용하는 제품입니다.
+- 경쟁제품 Solr, Tica
+- Java 8(jdk 1.8) 이상 필요
 
-* [AWS에서 설치 및 실행](https://okdevtv.com/mib/elk/elk)
+- [AWS에서 설치 및 실행](https://okdevtv.com/mib/elk/elk)
 
 ## 플러그인 설치
-* 5.0부터 외부에 설치; 보안이슈로 인해 격리
-* config/elasticsearch.yml 에 다음 설정 추가 필요
+- 5.0부터 외부에 설치; 보안이슈로 인해 격리
+- config/elasticsearch.yml 에 다음 설정 추가 필요
 ```
 http.cors.enabled: true
 http.cors.allow-origin: "*"
 # "*"일 경우 모든 도메인 접속 가능하기 때문에, 보안 해제와 같음
 ```
-* head :
+- head :
   * `git clone https://github.com/mobz/elasticsearch-head.git`
   * `npm install locally -g`
   * `nohup locally -p 9100 &`
   * `http://localhost:9100/_plugin/head`
 
 ### 2.x 버전
-* `bin/plugin install {org}/{user/component}/{version}`
-* head :
+- `bin/plugin install {org}/{user/component}/{version}`
+- head :
   * `bin/plugin install mobz/elasticsearch-head`
   * http://localhost:9200/_plugin/head
-* hq :
+- hq :
   * `bin/plugin install royrusso/elasticsearch-HQ`
   * http://localhost:9200/_plugin/hq
 
 ## 데이터 구조 및 입출력
-* 데이터 구조
+- 데이터 구조
 
 | RDB | Elasticsearch |
 |----|----|
@@ -43,7 +43,7 @@ http.cors.allow-origin: "*"
 | Column | Field |
 | Schema | Mapping |
 
-* 데이터 입출력
+- 데이터 입출력
 
 | Function | Elasticsearch<br />HTTP method | SQL |
 |----|----|----|
@@ -89,7 +89,7 @@ curl -XDELETE http://localhost:9200/books/book/1
 ```
 
 ## 데이터 배치 입력(`_bulk` API)
-* data.txt
+- data.txt
 
 ```
 { "delete" : { "_index" : "books", "_type" : "book", "_id" : "1" } }
@@ -99,7 +99,7 @@ curl -XDELETE http://localhost:9200/books/book/1
 { "title" : "Elasticsearch Guide II", "author" : "Park", "pages" : 400 }
 ```
 
-* 파일 입력
+- 파일 입력
 
 ```
 curl -XPOST http://localhost:9200/_bulk?pretty --data-binary @data.txt
@@ -111,12 +111,12 @@ curl localhost:9200/_cat/indices?v
 ```
 
 ## 검색
-* query방식은 2가지
+- query방식은 2가지
   * URI방식 : REST API
   * request body방식 : http 데이터
-* index/type 검색, index 검색, multi index 검색
-* 시작하세요! 엘라스틱서치 예제
-* downloads
+- index/type 검색, index 검색, multi index 검색
+- 시작하세요! 엘라스틱서치 예제
+- downloads
   * `curl -O https://codeload.github.com/wikibook/elasticsearch/zip/master`
   * `git clone https://github.com/wikibook/elasticsearch`
 ```
@@ -127,17 +127,17 @@ curl -XPOST http://localhost:9200/_bulk --data-binary @5_2_magazines.json
 ```
 
 ## 검색 API
-* `curl localhost:9200/books/book/_search?q=keyword`
-* q 파라미터
-* index/type 단위로 검색, 또는 index로 검색 가능
-* 결과는 hits 필드에 배열로 표시
-* url 자체를 문자열처럼 '로 감싸서 조회 가능
+- `curl localhost:9200/books/book/_search?q=keyword`
+- q 파라미터
+- index/type 단위로 검색, 또는 index로 검색 가능
+- 결과는 hits 필드에 배열로 표시
+- url 자체를 문자열처럼 '로 감싸서 조회 가능
   * "took" : 검색 소요시간 밀리초 단위
-* multi tenancy
+- multi tenancy
   * `curl 'localhost:9200/books,magazines/_search?q=time&pretty'`
   * `curl 'localhost:9200/_all/_search?q=time&pretty'`
   * `curl 'localhost:9200/_search?q=time&pretty'`
-* URI 검색
+- URI 검색
   * `q`
     * 필드명:질의어
       * `curl 'localhost:9200/_search?q=title:time&pretty'`
@@ -168,7 +168,7 @@ curl -XPOST http://localhost:9200/_bulk --data-binary @5_2_magazines.json
   * `from`
     * 몇 번째부터 출력할지 지정, 기본값 0
     * `curl 'localhost:9200/_search?q=author:jules&fields=author,title&from=1&pretty'`
-* 리퀘스트 바디 검색
+- 리퀘스트 바디 검색
   * JSON 형태의 질의
 ```
 curl 'localhost:9200/books/_search?pretty' -d '
@@ -200,7 +200,7 @@ curl 'localhost:9200/books/_search?pretty' -d '
 ```
 
   * `sort`
-* https://www.elastic.co/guide/en/elasticsearch/reference/current/search-request-sort.html
+- https://www.elastic.co/guide/en/elasticsearch/reference/current/search-request-sort.html
 
   * `_source`
     * false
@@ -242,7 +242,7 @@ curl 'localhost:9200/magazines/_search?pretty' -d '
 
 ## 어그리게이션(aggregation)
 
-* index mapping
+- index mapping
 ```
 curl -XPUT http://localhost:9200/hotels/ -d '
 {
@@ -264,10 +264,10 @@ curl -XPUT http://localhost:9200/hotels/ -d '
 }'
 ```
 
-* 매핑 적용한 후에 데이터 적재
+- 매핑 적용한 후에 데이터 적재
   * `curl -XPOST localhost:9200/_bulk --data-binary @6_1_hotels.json`
 
-* 최소값
+- 최소값
 ```
 curl 'localhost:9200/hotels/_search?pretty' -d '
 {
@@ -279,7 +279,7 @@ curl 'localhost:9200/hotels/_search?pretty' -d '
 }'
 ```
 
-* 최대값
+- 최대값
 ```
 curl 'localhost:9200/hotels/_search?pretty' -d '
 {
@@ -291,7 +291,7 @@ curl 'localhost:9200/hotels/_search?pretty' -d '
 }'
 ```
 
-* 합
+- 합
 ```
 curl 'localhost:9200/hotels/_search?pretty' -d '
 {
@@ -303,7 +303,7 @@ curl 'localhost:9200/hotels/_search?pretty' -d '
 }'
 ```
 
-* 평균
+- 평균
 ```
 curl 'localhost:9200/hotels/_search?pretty' -d '
 {
@@ -315,7 +315,7 @@ curl 'localhost:9200/hotels/_search?pretty' -d '
 }'
 ```
 
-* 카운트
+- 카운트
 ```
 curl 'localhost:9200/hotels/_search?pretty' -d '
 {
@@ -327,7 +327,7 @@ curl 'localhost:9200/hotels/_search?pretty' -d '
 }'
 ```
 
-* 기본 통계 정보
+- 기본 통계 정보
 ```
 curl 'localhost:9200/hotels/_search?pretty' -d '
 {
@@ -339,7 +339,7 @@ curl 'localhost:9200/hotels/_search?pretty' -d '
 }'
 ```
 
-* 확장된 통계 정보
+- 확장된 통계 정보
 ```
 curl 'localhost:9200/hotels/_search?pretty' -d '
 {
@@ -352,7 +352,7 @@ curl 'localhost:9200/hotels/_search?pretty' -d '
 ```
 
 ### 글로벌 어그리게이션
-* 생성된 버킷에서 다시 하위 어그리게이션 적용
+- 생성된 버킷에서 다시 하위 어그리게이션 적용
 ```
 curl 'localhost:9200/hotels/_search?pretty' -d '
 {
@@ -367,7 +367,7 @@ curl 'localhost:9200/hotels/_search?pretty' -d '
 }'
 ```
 
-* 글로벌 and 하위
+- 글로벌 and 하위
 ```
 curl 'localhost:9200/hotels/_search?pretty' -d '
 {
@@ -389,7 +389,7 @@ curl 'localhost:9200/hotels/_search?pretty' -d '
 
 
 ### 필터 어그리게이션
-* 주어진 필터에 해당하는 도큐먼트를 담는 버킷 생성
+- 주어진 필터에 해당하는 도큐먼트를 담는 버킷 생성
 ```
 curl 'localhost:9200/hotels/_search?pretty' -d '
 {
@@ -409,7 +409,7 @@ curl 'localhost:9200/hotels/_search?pretty' -d '
 ```
 
 ### 누락(missing) 어그리게이션
-* 지정한 필드가 없거나 필드 값이 null인 도큐먼트를 담는 버킷 생성
+- 지정한 필드가 없거나 필드 값이 null인 도큐먼트를 담는 버킷 생성
 ```
 curl 'localhost:9200/hotels/_search?pretty' -d '
 {
@@ -427,7 +427,7 @@ curl 'localhost:9200/hotels/_search?pretty' -d '
 ```
 
 ### 텀 어그리게이션
-* 검색된 텀별로 버킷 생성
+- 검색된 텀별로 버킷 생성
 ```
 curl 'localhost:9200/hotels/_search?pretty' -d '
 {
@@ -444,7 +444,7 @@ curl 'localhost:9200/hotels/_search?pretty' -d '
 }'
 ```
 
-* 오름차순, 내림차순
+- 오름차순, 내림차순
 
 ```
 curl 'localhost:9200/hotels/_search?pretty' -d '
@@ -506,7 +506,7 @@ curl 'localhost:9200/hotels/_search?pretty' -d '
 }'
 ```
 
-* `keyed`
+- `keyed`
 ```
 curl 'localhost:9200/hotels/_search?pretty' -d '
 {
@@ -527,7 +527,7 @@ curl 'localhost:9200/hotels/_search?pretty' -d '
 }'
 ```
 
-* 날짜
+- 날짜
 ```
 curl 'localhost:9200/hotels/_search?pretty' -d '
 {
@@ -610,12 +610,12 @@ curl 'localhost:9200/hotels/_search?pretty' -d '
 ```
 
 ## 질의(QueryDSL)
-* Query
+- Query
   * 전문 검색(full text search)
   * scoring
   * 결과 캐싱 안함
   * 응답속도 느림
-* Filter
+- Filter
   * Y/N조건의 바이너리 구분
   * no scoring
   * 결과 캐싱됨
@@ -650,12 +650,12 @@ curl 'localhost:9200/books/_search?pretty' -d '
 ```
 
 ### Query
-* 형태소 분석
+- 형태소 분석
   * The Prince and the Pauper → the, prince, and, pauper
   * 모두 소문자로, 중복 삭제
   * the, prince, and, pauper 같은 토큰을 텀term 이라고 함
 
-* 소문자로 검색
+- 소문자로 검색
 ```
 curl 'localhost:9200/books/_search?pretty' -d '
 {
@@ -666,7 +666,7 @@ curl 'localhost:9200/books/_search?pretty' -d '
   }
 }'
 ```
-* terms query : 2개 이상의 term 검색
+- terms query : 2개 이상의 term 검색
 ```
 curl 'localhost:9200/books/_search?pretty' -d '
 {
@@ -678,7 +678,7 @@ curl 'localhost:9200/books/_search?pretty' -d '
 }'
 ```
 
-* 매치, 다중 매치(multi match) 쿼리
+- 매치, 다중 매치(multi match) 쿼리
   * 질의문을 형태소 분석한 뒤에 term 검색
 ```
 curl 'localhost:9200/books/_search?pretty' -d '
@@ -745,7 +745,7 @@ curl 'localhost:9200/books/_search?pretty' -d '
 }'
 ```
 
-* Bool query
+- Bool query
   * `must`, `must_not`, `should`
 ```
 curl 'localhost:9200/books/_search?pretty' -d '
@@ -767,7 +767,7 @@ curl 'localhost:9200/books/_search?pretty' -d '
 }'
 ```
 
-* String query
+- String query
 ```
 curl 'localhost:9200/books/_search?pretty' -d '
 {
@@ -792,7 +792,7 @@ curl 'localhost:9200/books/_search?pretty' -d '
 }'
 ```
 
-* prefix query
+- prefix query
 ```
 curl 'localhost:9200/books/_search?pretty' -d '
 {
@@ -804,7 +804,7 @@ curl 'localhost:9200/books/_search?pretty' -d '
 }'
 ```
 
-* range query
+- range query
 ```
 curl 'localhost:9200/books/_search?pretty' -d '
 {
@@ -831,7 +831,7 @@ curl 'localhost:9200/books/_search?pretty' -d '
 ```
 
 
-* match_all query
+- match_all query
 ```
 curl 'localhost:9200/books/_search?pretty' -d '
 {
@@ -842,7 +842,7 @@ curl 'localhost:9200/books/_search?pretty' -d '
 ```
 
 
-* fuzzy query
+- fuzzy query
   * 레벤슈타인 거리(Levenshtein distance) 알고리즘 기반
   * `tree`로 검색시 `three` 포함
 ```
@@ -857,7 +857,7 @@ curl 'localhost:9200/books/_search?pretty' -d '
 ```
 
 
-* geo
+- geo
   * geo_bounding_box
 ```
 curl 'localhost:9200/hotels/_search?pretty' -d '
@@ -905,17 +905,17 @@ curl 'localhost:9200/hotels/_search?pretty' -d '
 
 
 ## 매핑
-* 데이터의 저장, 검색에 대한 명세
-* `_mapping` api 사용
-* PUT method
-* 한번 설정된 매핑에 필드를 추가할 수 있지만, 변경, 삭제는 불가능
+- 데이터의 저장, 검색에 대한 명세
+- `_mapping` api 사용
+- PUT method
+- 한번 설정된 매핑에 필드를 추가할 수 있지만, 변경, 삭제는 불가능
 
 
 ```
 curl 'localhost:9200/books/_mapping?pretty'
 ```
 
-* mapping 추가
+- mapping 추가
 ```
 curl -XPUT 'http://localhost:9200/books/_mapping/book' -d '
 {
@@ -928,9 +928,9 @@ curl -XPUT 'http://localhost:9200/books/_mapping/book' -d '
 ```
 
 ### 내장필드
-* 도큐먼트 데이터의 스키마 구조를 정의
+- 도큐먼트 데이터의 스키마 구조를 정의
 
-* `_source`
+- `_source`
   * 원본 저장 여부 결정
 
 ```
@@ -979,7 +979,7 @@ curl -XPUT 'http://localhost:9200/books' -d '
 ```
 
 
-* `_all`
+- `_all`
 ```
 curl -XPUT 'http://localhost:9200/books' -d '
 {
@@ -1004,7 +1004,7 @@ curl -XPUT 'http://localhost:9200/books' -d '
 
 ### 데이터 타입
 
-* 문자열
+- 문자열
   * 옵션  
 
 | 이름 | 설명 | 기본값 |
@@ -1020,11 +1020,11 @@ curl -XPUT 'http://localhost:9200/books' -d '
 |ignore_above | 지정값보다 큰 크기의 문자열 색인 제외 | .
 
 
-* `curl 'localhost:9200/books/_search?q=prince&pretty'`
-* `curl 'localhost:9200/books/_search?q=category:science&pretty'`
-* `curl 'localhost:9200/books/_search?q=category:Science%20Fiction&pretty'`
+- `curl 'localhost:9200/books/_search?q=prince&pretty'`
+- `curl 'localhost:9200/books/_search?q=category:science&pretty'`
+- `curl 'localhost:9200/books/_search?q=category:Science%20Fiction&pretty'`
 
-* 숫자
+- 숫자
   * 정수: byte, short, integer, long
   * 실수: float, double
   * 자바의 자료형과 같은 범위
@@ -1065,28 +1065,28 @@ curl 'localhost:9200/test_nums/_search?pretty' -d '
 ```
 
 
-* 날짜
+- 날짜
   * 엔진 내부적으로는 long으로 저장
   * `ignore_malformed`, `format` 옵션
 
-* 불린
+- 불린
   * `true`, `false`
 
-* 바이너리
+- 바이너리
   * base64로 변환된 이미지 저장 가능
   * 옵션
     * `store`, `compress`, `compress_threshold`
 
-* 객체
+- 객체
   * object type 저장 가능
   * 색인 안 됨
 
-* 중첩
+- 중첩
   * 트리 형태가 아닌 독립 데이터로 저장
   * `user.name`
   * 색인 가능
 
-* 좌표
+- 좌표
 ```
 curl -XPUT localhost:9200/test_geos/ -d '
 {
@@ -1124,7 +1124,7 @@ curl 'http://localhost:9200/test_geos/_search?pretty' -d '
 }'
 
 ```
-* 위치 모형
+- 위치 모형
   * 선, 원, 사각형, 다각형 geo shape 타입의 필드
   * 옵션
     * precision : 1~12 표준정밀도 또는 1km 같은 길이값
@@ -1147,8 +1147,8 @@ curl -XPUT localhost:9200/test_geos/ -d '
 
 
 ### 다중필드
-* 하나의 필드 값을 서로 다른 설정의 여러 필드에 자동 반복 저장
-* title 필드를 인덱싱하고 풀검색하도록 하는 경우
+- 하나의 필드 값을 서로 다른 설정의 여러 필드에 자동 반복 저장
+- title 필드를 인덱싱하고 풀검색하도록 하는 경우
 ```
 curl -XPUT 'localhost:9200/books' -d '
 {
@@ -1177,7 +1177,7 @@ curl 'localhost:9200/books/_search?pretty' -d '
 ```
 
 
-* 토큰 수
+- 토큰 수
 ```
 curl -XPUT 'localhost:9200/books' -d '
 {
@@ -1213,7 +1213,7 @@ curl 'localhost:9200/books/_search?pretty' -d '
 
 
 ### 필드 복사
-* 다른 필드로 복사
+- 다른 필드로 복사
 ```
 curl -XPUT 'localhost:9200/books' -d '
 {
@@ -1245,7 +1245,7 @@ curl -XPUT 'localhost:9200/books' -d '
 ```
 
 ## 분석
-* 1개 이상의 토크나이저, 0개 이상의 토큰필터로 구성
+- 1개 이상의 토크나이저, 0개 이상의 토큰필터로 구성
 
 ```
 curl -XPOST 'localhost:9200/_analyze?tokenizer=whitespace&pretty' -d 'Around the World in Eighty Days'
@@ -1255,7 +1255,7 @@ curl -XPOST 'localhost:9200/_analyze?tokenizer=whitespace&filters=lowercase&pret
 curl -XPOST 'localhost:9200/_analyze?tokenizer=whitespace&filters=lowercase,stop&pretty' -d 'Around the World in Eighty Days'
 ```
 
-* books 인덱스 삭제 후 분석기 설정
+- books 인덱스 삭제 후 분석기 설정
 ```
 curl -XPUT 'localhost:9200/books' -d '
 {
@@ -1278,7 +1278,7 @@ curl -XPOST 'localhost:9200/books/_analyze?pretty' -d 'Around the World in Eight
 
 
 ### 분석기
-* standard 분석기
+- standard 분석기
 ```
 curl -XPUT 'localhost:9200/books' -d '
 {
@@ -1300,9 +1300,9 @@ curl -XPUT 'localhost:9200/books' -d '
 curl -XPOST 'localhost:9200/books/_analyze?analyzer=standard&pretty' -d 'Around the World in Eighty Days'
 ```
 
-* simple 분석기
-* whitespace 분석기
-* stop 분석기
+- simple 분석기
+- whitespace 분석기
+- stop 분석기
 
 ```
 echo 'in
@@ -1330,8 +1330,8 @@ curl -XPUT 'localhost:9200/books' -d '
 curl -XPOST 'localhost:9200/books/_analyze?analyzer=stop&pretty' -d 'Around the World in Eighty Days'
 ```
 
-* keyword 분석기
-* pattern 분석기
+- keyword 분석기
+- pattern 분석기
 ```
 curl -XPUT 'localhost:9200/books' -d '
 {
@@ -1373,7 +1373,7 @@ curl -XPUT 'localhost:9200/books' -d '
 curl -XPOST 'localhost:9200/books/_analyze?analyzer=pattern&pretty' -d 'Around the World in 80 Days'
 ```
 
-* 다국어 분석기
+- 다국어 분석기
 ```
 curl -XPUT 'localhost:9200/books' -d '
 {
@@ -1412,7 +1412,7 @@ curl -XPUT 'localhost:9200/books' -d '
 curl -XPOST 'localhost:9200/books/_analyze?analyzer=language&pretty' -d '삼국지(三國志)'
 ```
 
-* snowball 분석기
+- snowball 분석기
   * days -> day
 
 ```
@@ -1472,8 +1472,8 @@ curl -XPUT 'localhost:9200/books' -d '
 ```
 
 
-* standard 토크나이저
-* nGram 토크나이저
+- standard 토크나이저
+- nGram 토크나이저
 ```
 curl -XPUT 'localhost:9200/books' -d '
 {
@@ -1502,7 +1502,7 @@ curl -XPOST 'localhost:9200/books/_analyze?analyzer=my_analyzer&pretty' -d 'Arou
 ```
 
 
-* edgeNGram 토크나이저
+- edgeNGram 토크나이저
 ```
 curl -XPUT 'localhost:9200/books' -d '
 {
@@ -1530,13 +1530,13 @@ curl -XPUT 'localhost:9200/books' -d '
 curl -XPOST 'localhost:9200/books/_analyze?analyzer=my_analyzer&pretty' -d 'Around the World in 80 Days'
 ```
 
-* keyword 토크나이저
-* letter 토크나이저
-* lowercase 토크나이저
-* whitespace 토크나이저
-* pattern 토크나이저
-* uax_url_email 토크나이저
-* path_hierarchy 토크나이저
+- keyword 토크나이저
+- letter 토크나이저
+- lowercase 토크나이저
+- whitespace 토크나이저
+- pattern 토크나이저
+- uax_url_email 토크나이저
+- path_hierarchy 토크나이저
 ```
 curl -XPUT 'localhost:9200/books' -d '
 {
@@ -1587,7 +1587,7 @@ curl -XPUT 'localhost:9200/books' -d '
 curl -XPOST 'localhost:9200/books/_analyze?analyzer=my_analyzer&pretty' -d 'Program/Search/Elasticsearch'
 ```
 
-* classic 토크나이저
+- classic 토크나이저
 
 ### 토큰필터
 ```
@@ -1627,9 +1627,9 @@ curl -XPUT 'localhost:9200/books' -d '
 }'
 ```
 
-* standard 토큰필터
-* asciifolding 토큰필터
-* length 토큰필터
+- standard 토큰필터
+- asciifolding 토큰필터
+- length 토큰필터
 ```
 curl -XPUT 'localhost:9200/books' -d '
 {
@@ -1656,12 +1656,12 @@ curl -XPUT 'localhost:9200/books' -d '
 curl -XPOST 'localhost:9200/books/_analyze?analyzer=my_analyzer&pretty' -d 'Around the World in Eighty Days'
 ```
 
-* lowercase 토큰필터
-* uppercase 토큰필터
-* nGram 토큰필터
-* edgeNGram 토큰필터
-* porter_stem 토큰필터
-* shingle 토큰필터
+- lowercase 토큰필터
+- uppercase 토큰필터
+- nGram 토큰필터
+- edgeNGram 토큰필터
+- porter_stem 토큰필터
+- shingle 토큰필터
 ```
 curl -XPUT 'localhost:9200/books' -d '
 {
@@ -1720,8 +1720,8 @@ curl -XPOST 'localhost:9200/books/_analyze?analyzer=my_analyzer&pretty' -d 'Arou
 ```
 
 
-* stop 토큰필터
-* word_delimiter 토큰필터
+- stop 토큰필터
+- word_delimiter 토큰필터
 ```
 curl -XPUT 'localhost:9200/books' -d '
 {
@@ -1746,8 +1746,8 @@ curl -XPUT 'localhost:9200/books' -d '
 ```
 curl -XPOST 'localhost:9200/books/_analyze?analyzer=my_analyzer&pretty' -d "Father's Wi-Fi SmartPhone, SD3000-12-Delux"
 ```
-* stemmer 토큰필터
-* keyword_marker 토큰필터
+- stemmer 토큰필터
+- keyword_marker 토큰필터
 ```
 curl -XPUT 'localhost:9200/books' -d '
 {
@@ -1778,7 +1778,7 @@ curl -XPUT 'localhost:9200/books' -d '
 curl -XPOST 'localhost:9200/books/_analyze?analyzer=my_analyzer&pretty' -d 'Birds are flying, fishes are swimming, children are playing'
 ```
 
-* keyword_repeat 토큰필터
+- keyword_repeat 토큰필터
 ```
 curl -XPUT 'localhost:9200/books' -d '
 {
@@ -1805,7 +1805,7 @@ curl -XPUT 'localhost:9200/books' -d '
 curl -XPOST 'localhost:9200/books/_analyze?analyzer=my_analyzer&pretty' -d 'Birds are flying, fishes are swimming, children are playing'
 ```
 
-* unique 토큰필터
+- unique 토큰필터
 ```
 curl -XPUT 'localhost:9200/books' -d '
 {
@@ -1835,8 +1835,8 @@ curl -XPUT 'localhost:9200/books' -d '
 curl -XPOST 'localhost:9200/books/_analyze?analyzer=my_analyzer&pretty' -d 'Birds are flying, fishes are swimming, children are playing'
 ```
 
-* snowball 토큰필터
-* synonym 토큰필터
+- snowball 토큰필터
+- synonym 토큰필터
 ```
 curl -XPUT 'localhost:9200/books' -d '
 {
@@ -1898,7 +1898,7 @@ curl -XPOST 'localhost:9200/books/_analyze?analyzer=my_analyzer&pretty' -d 'The 
 
 
 
-* 합성어 토큰필터
+- 합성어 토큰필터
 
 ```
 curl -XPUT 'localhost:9200/books' -d '
@@ -1927,7 +1927,7 @@ curl -XPOST 'localhost:9200/books/_analyze?analyzer=my_analyzer&pretty' -d 'I pl
 ```
 
 
-* reverse 토큰필터
+- reverse 토큰필터
 ```
 curl -XPUT 'localhost:9200/books' -d '
 {
@@ -1948,7 +1948,7 @@ curl -XPUT 'localhost:9200/books' -d '
 curl -XPOST 'localhost:9200/books/_analyze?analyzer=my_analyzer&pretty' -d 'Around the World in Eighty Days'
 ```
 
-* truncate 토큰필터
+- truncate 토큰필터
 ```
 curl -XPUT 'localhost:9200/books' -d '
 {
@@ -1975,9 +1975,9 @@ curl -XPUT 'localhost:9200/books' -d '
 curl -XPOST 'localhost:9200/books/_analyze?analyzer=my_analyzer&pretty' -d 'Around the World in Eighty Days'
 ```
 
-* trim 토큰필터
-* limit 토큰필터
-* hunspell 토큰필터
+- trim 토큰필터
+- limit 토큰필터
+- hunspell 토큰필터
   * `open http://extensions.openoffice.org/en/project/us-english-spell-checking-dictionary`
   * `curl -O http://tenet.dl.sourceforge.net/project/aoo-extensions/1470/1/en_us.oxt`
   * `curl -O http://tenet.dl.sourceforge.net/project/aoo-extensions/5968/0/korean_spell-checker-0.5.6_ooo.oxt`
@@ -2017,7 +2017,7 @@ curl -XPUT 'localhost:9200/books' -d '
 curl -XPOST 'localhost:9200/books/_analyze?analyzer=my_analyzer&pretty' -d '동해물과 백두산이 마르고 닳도록'
 ```
 
-* cjk_bigram 토큰필터
+- cjk_bigram 토큰필터
 ```
 curl -XPUT 'localhost:9200/books' -d '
 {
@@ -2044,7 +2044,7 @@ curl -XPOST 'localhost:9200/books/_analyze?analyzer=my_analyzer&pretty' -d '삼�
 ```
 
 
-* keep_words 토큰필터
+- keep_words 토큰필터
 ```
 curl -XPUT 'localhost:9200/books' -d '
 {
@@ -2074,16 +2074,16 @@ curl -XPOST 'localhost:9200/books/_analyze?analyzer=my_analyzer&pretty' -d 'Arou
 
 
 ### 한글 형태소 분석기
-* 은전한닢
+- 은전한닢
 
-* install
+- install
 
-* url
+- url
 ```
 # elasticsearch 5.1.1
 ./bin/elasticsearch-plugin install https://oss.sonatype.org/service/local/repositories/releases/content/org/bitbucket/eunjeon/elasticsearch-analysis-seunjeon/5.1.1.1/elasticsearch-analysis-seunjeon-5.1.1.1.zip
 ```
-* file
+- file
   * 다운받은 파일 압축 풀고, plugin-descriptor.properties 파일 버전 수정 후 다시 압축해서 설치 가능
 ```
 wget https://oss.sonatype.org/service/local/repositories/releases/content/org/bitbucket/eunjeon/elasticsearch-analysis-seunjeon/5.1.1.1/elasticsearch-analysis-seunjeon-5.1.1.1.zip
@@ -2091,7 +2091,7 @@ wget https://oss.sonatype.org/service/local/repositories/releases/content/org/bi
 ```
 
 
-* old
+- old
 ```
 # elasticsearch 2.4.1 이하
 ./bin/elasticsearch-plugin install org.bitbucket.eunjeon/elasticsearch-analysis-seunjeon/2.4.0.1
@@ -2154,8 +2154,8 @@ curl -XPOST 'localhost:9200/${ES}/_analyze?analyzer=korean&pretty' -d '동해물
 
 
 ### 부분삭제
-* query 된 목록 삭제
-* `_delete-by-query`
+- query 된 목록 삭제
+- `_delete-by-query`
   * https://www.elastic.co/guide/en/elasticsearch/reference/6.7/docs-delete-by-query.html
 
 ```
@@ -2173,35 +2173,35 @@ curl -XPOST 'http://localhost:9200/twitter/tweet/_delete_by__query' -d '
 ```
 
 ## cluster
-* head plugin 설치
+- head plugin 설치
 `bin/plugin install mobz/elasticsearch-head`
 
-* `cluster.name : my-application` in config/elasticsearch.yml
-* `bin/elasticsearch` 다른 터미널로 3번 실행
-* `http://localhost:9200/_plugin/head/`
+- `cluster.name : my-application` in config/elasticsearch.yml
+- `bin/elasticsearch` 다른 터미널로 3번 실행
+- `http://localhost:9200/_plugin/head/`
 
 ## ubuntu plugin
-* ubuntu에서 플러그인 설치가 jdk SSLHandShake 이슈로 안 되는 경우
+- ubuntu에서 플러그인 설치가 jdk SSLHandShake 이슈로 안 되는 경우
 ```
 wget https://github.com/mobz/elasticsearch-head/archive/master.zip
 ```
-* http://onlinemd5.com/ 에서 로컬에 다운로드받은 파일을 올려서 sha1 생성
-* 모든 문자열을 소문자로 바꾼 뒤에 master.zip.sha1 파일 내용으로 붙여넣기
+- http://onlinemd5.com/ 에서 로컬에 다운로드받은 파일을 올려서 sha1 생성
+- 모든 문자열을 소문자로 바꾼 뒤에 master.zip.sha1 파일 내용으로 붙여넣기
 ```
 bin/plugin install file:/path/to/master.zip
 ```
 
 ## 참고
-* 시작하세요! 엘라스틱서치 by 김종민
+- 시작하세요! 엘라스틱서치 by 김종민
   * https://github.com/wikibook/elasticsearch
-* http://elastic.co
+- http://elastic.co
 
-* Elasticsearch에서 아리랑 한글 분석기 사용하기
+- Elasticsearch에서 아리랑 한글 분석기 사용하기
   * https://www.elastic.co/kr/blog/arirang-analyzer-with-elasticsearch 
 
-* 은전한닢+elasticsearch
+- 은전한닢+elasticsearch
   * https://bitbucket.org/eunjeon/seunjeon/raw/master/elasticsearch/
   * http://blog.lyuwonkyung.com/elasticsearch/
 
-* 엘라스틱서치 기초 사용법 by 박연오
+- 엘라스틱서치 기초 사용법 by 박연오
   * http://bakyeono.net/post/2016-06-03-start-elasticsearch.html

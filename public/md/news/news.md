@@ -1,18 +1,18 @@
 # News
 
 ## Weekly News Letter
-* JavaScript
+- JavaScript
   * http://javascriptweekly.com/
-* Node.js
+- Node.js
   * https://nodeweekly.com/
-* Deno
+- Deno
   * https://denoweekly.com/
 
 ## Hacker News
-* Hacker News
+- Hacker News
   * https://news.ycombinator.com/
-* Geek News
+- Geek News
   * https://news.hada.io/
-* Lobster
+- Lobster
   * https://lobste.rs/
 

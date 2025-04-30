@@ -2,9 +2,9 @@
 
 ## 볼륨 생성과 마운트하기
 
-* 참고 : http://docs.aws.amazon.com/ko_kr/AWSEC2/latest/UserGuide/ebs-using-volumes.html
+- 참고 : http://docs.aws.amazon.com/ko_kr/AWSEC2/latest/UserGuide/ebs-using-volumes.html
 
-* Actions > Attach Volume
+- Actions > Attach Volume
 
 ```
 # 볼륨 확인하기

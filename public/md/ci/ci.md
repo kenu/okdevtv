@@ -1,9 +1,9 @@
 # CI
-* Continuous Integration
+- Continuous Integration
 
 ## Jenkins
-* https://jenkins.io
+- https://jenkins.io
 
 ## ref
-* https://martinfowler.com/articles/continuousIntegration.html
-* https://github.com/features/actions
+- https://martinfowler.com/articles/continuousIntegration.html
+- https://github.com/features/actions

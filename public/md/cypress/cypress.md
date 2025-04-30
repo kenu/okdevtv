@@ -1,6 +1,6 @@
 # Cypress
-* end to end(e2e) Test Framework
-* https://cypress.io
+- end to end(e2e) Test Framework
+- https://cypress.io
 
 ## install
 

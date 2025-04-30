@@ -1,15 +1,15 @@
 # WAR
-* Web Application aRchive
-* same with JAR
+- Web Application aRchive
+- same with JAR
 
 ## Directory Structure
-* `/WEB-INF` : should be hidden from browser
-* `/WEB-INF/web.xml` : web application configuration file
-* `/` : visible from browser
+- `/WEB-INF` : should be hidden from browser
+- `/WEB-INF/web.xml` : web application configuration file
+- `/` : visible from browser
 
 ## Compress
-* move to web app home
-* `jar cvf app.war *`
+- move to web app home
+- `jar cvf app.war *`
 
 ## realted `server.xml`
 

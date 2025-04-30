@@ -1,6 +1,6 @@
 # Spring JDBC
-* `JdbcTemplate`
-* Table 19.1. Spring JDBC - who does what?
+- `JdbcTemplate`
+- Table 19.1. Spring JDBC - who does what?
 
 |Action |Spring	|You|
 |---|:---:|:---:|
@@ -16,8 +16,8 @@
 |Close the connection, statement and resultset. | X | &nbsp; |
 
 ## Transactional
-* @Transactional
-* `org.springframework.transaction.annotation.Transactional`
+- @Transactional
+- `org.springframework.transaction.annotation.Transactional`
 
 ```java
   @Transactional
@@ -33,7 +33,7 @@
 
 
 ## ref
-* https://docs.spring.io/spring-framework/docs/current/reference/html/data-access.html#jdbc
-* https://spring.io/guides/gs/relational-data-access/
-* https://spring.io/guides/gs/accessing-data-mysql/
-* https://spring.io/guides/gs/managing-transactions/
+- https://docs.spring.io/spring-framework/docs/current/reference/html/data-access.html#jdbc
+- https://spring.io/guides/gs/relational-data-access/
+- https://spring.io/guides/gs/accessing-data-mysql/
+- https://spring.io/guides/gs/managing-transactions/

@@ -75,14 +75,14 @@ public static void main(String[] args) {
 ```
 
 ## Bean Annotation
-* @Bean
-* @Component
-* @Controller
-* @RestController
-* @Service
-* @Repository
+- @Bean
+- @Component
+- @Controller
+- @RestController
+- @Service
+- @Repository
 
 ## Bean vs. Component
-* 컨트롤이 불가능한 외부 라이브러리들을 Bean으로 등록하고 싶은 경우에 사용
-* 직접 컨트롤이 가능한 Class들의 경우엔 @Component를 사용
+- 컨트롤이 불가능한 외부 라이브러리들을 Bean으로 등록하고 싶은 경우에 사용
+- 직접 컨트롤이 가능한 Class들의 경우엔 @Component를 사용
   * https://jojoldu.tistory.com/27

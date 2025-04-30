@@ -1,12 +1,12 @@
 # Jenkins Spotbugs plugin
-* Use Maven Spotbugs plugin
-* **target/sitebugsXml.xml** is generated
-* Generate report with Warning plugin
-* https://plugins.jenkins.io/warnings-ng
+- Use Maven Spotbugs plugin
+- **target/sitebugsXml.xml** is generated
+- Generate report with Warning plugin
+- https://plugins.jenkins.io/warnings-ng
 
 ## pom.xml
-* `mvn compile site`
-* target/site/sitebugs.html
+- `mvn compile site`
+- target/site/sitebugs.html
 
 ```xml
 	<reporting>
@@ -22,8 +22,8 @@
 ```
 
 ## related
-* [jenkins](/mib/jenkins)
-* [jenkins-sonarqube](/mib/jenkins/sonarqube)
+- [jenkins](/mib/jenkins)
+- [jenkins-sonarqube](/mib/jenkins/sonarqube)
 
 ## ref
 *

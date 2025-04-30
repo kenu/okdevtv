@@ -1,6 +1,6 @@
 # Spring Batch
-* Spring Boot runs `schema-@@platform@@.sql` automatically during startup.
-* `-all` is the default for all platforms.
+- Spring Boot runs `schema-@@platform@@.sql` automatically during startup.
+- `-all` is the default for all platforms.
 
 ## schema-all.sql
 
@@ -30,7 +30,7 @@ John,Doe
 ```
 
 ## Code
-* Intermediate Processor
+- Intermediate Processor
 
 ```java
 import org.springframework.batch.item.ItemProcessor;
@@ -39,7 +39,7 @@ public class PersonItemProcessor implements ItemProcessor<Person, Person> {
 }
 ```
 
-* Batch Job
+- Batch Job
 
 ```java
 @Configuration
@@ -86,7 +86,7 @@ public JdbcBatchItemWriter<Person> writer(DataSource dataSource) {
 }
 ```
 
-* Job listener
+- Job listener
    * The `JobCompletionNotificationListener` listens for when a job is BatchStatus.COMPLETED and then uses JdbcTemplate to inspect the results.
 
 ```java
@@ -118,4 +118,4 @@ public class JobCompletionNotificationListener extends JobExecutionListenerSuppo
 ```
 
 ## ref
-* https://spring.io/guides/gs/batch-processing/
+- https://spring.io/guides/gs/batch-processing/

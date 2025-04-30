@@ -1,8 +1,8 @@
 # MariaDB
-* Monty Widenius 2009/01/22
-* MySQL과 동일한 API
-* https://www.mariadb.org
-* install MariaDB
+- Monty Widenius 2009/01/22
+- MySQL과 동일한 API
+- https://www.mariadb.org
+- install MariaDB
   * mac : `brew install mariadb` or `brew install mariadb@10.6`
   * Amazon Linux 2023
 ```sh
@@ -11,7 +11,7 @@ sudo systemctl enable mariadb
 sudo systemctl start mariadb
 ```
 
-* CentOS 7.x
+- CentOS 7.x
   * `sudo vi /etc/yum.repos.d/MariaDB.repo`
 ```sh
 # MariaDB 10.10 CentOS repository list
@@ -32,7 +32,7 @@ sudo mariadb-secure-installation
 ```
 
 ## Create Database Schema And DB User
-* login
+- login
   * `mysql -uroot -p`
 
 ```sql
@@ -48,20 +48,20 @@ GRANT ALL PRIVILEGES ON devdb.* TO devuser@localhost IDENTIFIED BY 'devpass' WIT
 lower_case_table_names=1
 ```
 
-* MySQL 8+
+- MySQL 8+
 
 ```sql
 create user 'devuser'@'localhost' identified by 'devpass';
 grant all on devdb.* to 'devuser'@'localhost';
 ```
 
-* Read only account
+- Read only account
 
 ```sql
 GRANT SELECT, SHOW VIEW ON devdb.* TO devuser2@localhost IDENTIFIED BY 'devpass';
 ```
 
-* Role account
+- Role account
 
 ```sql
 GRANT TRIGGER, SELECT, SHOW VIEW ON devdb.* TO devuser2@localhost IDENTIFIED BY 'devpass';
@@ -94,7 +94,7 @@ order by 2 desc;
 ```
 
 ## MariaDB on ubuntu
-* https://downloads.mariadb.org/mariadb/repositories/#mirror=kaist
+- https://downloads.mariadb.org/mariadb/repositories/#mirror=kaist
 
 ```sh
 sudo apt-get install software-properties-common
@@ -103,10 +103,10 @@ sudo add-apt-repository 'deb [arch=amd64,i386,ppc64el] http://ftp.kaist.ac.kr/ma
 ```
 
 ## Timestamp
-* oracle `SYSDATE`
-* default `CURRENT_TIMESTAMP`
-* mariadb, mysql `NOW()`
+- oracle `SYSDATE`
+- default `CURRENT_TIMESTAMP`
+- mariadb, mysql `NOW()`
 
 ## MariaDB + node.js
-* https://github.com/felixge/node-mysql
-* https://github.com/mscdex/node-mariasql
+- https://github.com/felixge/node-mysql
+- https://github.com/mscdex/node-mariasql

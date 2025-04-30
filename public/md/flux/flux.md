@@ -9,7 +9,7 @@ var Store = Reflux.createStore({
 Store.foo(); // outputs "bar!" to console
 ```
 
-* this
+- this
 
 ```
 var MyMixin = { mixinMethod: function() { console.log(this.foo); } }
@@ -24,6 +24,6 @@ var Store = Reflux.createStore({
 
 
 ## 참고
-* reflux
+- reflux
   * https://github.com/reflux/refluxjs
   

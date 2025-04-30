@@ -9,5 +9,5 @@
 
 
 ### Legacy JavaScript files
-* Most functions are global function. Create `<script>` element and relate js file with `src` attribute and attach to `<head>` element for each.
+- Most functions are global function. Create `<script>` element and relate js file with `src` attribute and attach to `<head>` element for each.
 

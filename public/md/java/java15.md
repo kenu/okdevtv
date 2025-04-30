@@ -22,4 +22,4 @@ WHERE
 ```
 
 ## ref
-* https://www.techgeeknext.com/java/java15-features#tb
+- https://www.techgeeknext.com/java/java15-features#tb

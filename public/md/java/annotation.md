@@ -1,5 +1,5 @@
 # Annotation
-* a form of metadata, provide data about a program that is not part of the program itself
+- a form of metadata, provide data about a program that is not part of the program itself
   * **Information for the compiler** — Annotations can be used by the compiler to detect errors or suppress warnings.
   * **Compile-time and deployment-time processing** — Software tools can process annotation information to generate code, XML files, and so forth.
   * **Runtime processing** — Some annotations are available to be examined at runtime.
@@ -38,18 +38,18 @@ void myMethod() { ... }
 class MyClass { ... }
 ```
 
-* Predefined Java Annotations : Override, SuppressWarnings
+- Predefined Java Annotations : Override, SuppressWarnings
   * https://docs.oracle.com/javase/tutorial/java/annotations/predefined.html
-* Custom Annotation types : EBook, Author
+- Custom Annotation types : EBook, Author
 
-* Java SE 8 Annotations
+- Java SE 8 Annotations
 
 ```java
 @Author(name = "Jane Doe")
 @Author(name = "John Smith")
 class MyClass { ... }
 ```
-* Type Annotations
+- Type Annotations
   * Class instance creation expression:
 ```java
 new @Interned MyObject();
@@ -68,7 +68,7 @@ void monitorTemperature() throws @Critical TemperatureException { ... }
 ```
 
 ## Custom annotation
-* Annotation types are a form of _interface_
+- Annotation types are a form of _interface_
 
 ```java
 package okdevtv;
@@ -132,9 +132,9 @@ public class NameTest {
 ```
 
 ## ref
-* https://stackoverflow.com/questions/26381672/how-to-pass-value-to-a-custom-annotation
-* [스프링 부트 어노테이션 목록](https://okky.kr/article/638071)
-* http://docs.oracle.com/javase/1.5.0/docs/guide/language/annotations.html
-* https://docs.oracle.com/javase/tutorial/java/annotations/basics.html
-* https://www.mkyong.com/java/java-custom-annotations-example/
-* https://www.baeldung.com/java-method-reflection
+- https://stackoverflow.com/questions/26381672/how-to-pass-value-to-a-custom-annotation
+- [스프링 부트 어노테이션 목록](https://okky.kr/article/638071)
+- http://docs.oracle.com/javase/1.5.0/docs/guide/language/annotations.html
+- https://docs.oracle.com/javase/tutorial/java/annotations/basics.html
+- https://www.mkyong.com/java/java-custom-annotations-example/
+- https://www.baeldung.com/java-method-reflection

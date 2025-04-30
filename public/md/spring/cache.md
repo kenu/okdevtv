@@ -1,6 +1,6 @@
 # Spring Boot Cache
-* pom.xml
-* 생성 시간이 오래 걸리는 데이터 재활용
+- pom.xml
+- 생성 시간이 오래 걸리는 데이터 재활용
 
 ```
 <dependency>
@@ -10,7 +10,7 @@
 ```
 
 ## Code
-* `@EnableCaching`
+- `@EnableCaching`
 
 ```java
 @SpringBootApplication
@@ -22,7 +22,7 @@ public class CachingApplication {
 }
 ```
 
-* `@Cacheable`
+- `@Cacheable`
 
 ```java
   @Override
@@ -34,6 +34,6 @@ public class CachingApplication {
 ```
 
 ## ref
-* https://docs.spring.io/spring-framework/docs/current/reference/html/integration.html#cache
-* https://spring.io/guides/gs/caching/
-* https://www.baeldung.com/spring-cache-tutorial
+- https://docs.spring.io/spring-framework/docs/current/reference/html/integration.html#cache
+- https://spring.io/guides/gs/caching/
+- https://www.baeldung.com/spring-cache-tutorial

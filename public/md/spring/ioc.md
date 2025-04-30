@@ -1,16 +1,16 @@
 # IoC Container
-* Inversion of Control Pattern
-* Dependency Injection Pattern
-* 전략 패턴(Strategy Pattern): 바꾸기 쉬운 구조
-* `org.springframework.beans`, `org.springframework.context` 패키지
+- Inversion of Control Pattern
+- Dependency Injection Pattern
+- 전략 패턴(Strategy Pattern): 바꾸기 쉬운 구조
+- `org.springframework.beans`, `org.springframework.context` 패키지
 
 ## Mechanism
 <img src="images/container-magic.webp" class="img" alt="Spring IoC container">
-* Config metadata + POJO = executable app
+- Config metadata + POJO = executable app
 
 ## Bean Factory
-* `BeanFactory`
-* `ApplicationContext`
+- `BeanFactory`
+- `ApplicationContext`
 
 ```java
 public static void main(String[] args) {
@@ -53,4 +53,4 @@ public static void main(String[] args) {
 ```
 
 ## ref
-* https://www.javatpoint.com/ioc-container
+- https://www.javatpoint.com/ioc-container

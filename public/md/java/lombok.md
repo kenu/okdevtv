@@ -1,7 +1,7 @@
 # Lombok
-* https://projectlombok.org
-* Annotation based utils
-* @Getter, @Setter, @ToString
+- https://projectlombok.org
+- Annotation based utils
+- @Getter, @Setter, @ToString
 
 ## pom.xml
 ```
@@ -21,5 +21,5 @@
 @NotNull
 
 ## IDE install
-* IntelliJ - Plugins
-* Eclipse(STS) - run lombok.jar
+- IntelliJ - Plugins
+- Eclipse(STS) - run lombok.jar

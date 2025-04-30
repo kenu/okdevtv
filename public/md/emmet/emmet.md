@@ -1,10 +1,10 @@
 # Emmet
-* zen coding
-* use css syntax to generate html code
-* plugin type
+- zen coding
+- use css syntax to generate html code
+- plugin type
 
 ## css
-* Selector based HTML coding
+- Selector based HTML coding
 
 ## example
 ```

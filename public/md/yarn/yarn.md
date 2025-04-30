@@ -1,5 +1,5 @@
 # yarn
-* 지능적인 패키지 매니저
+- 지능적인 패키지 매니저
 
 ## 설치
 ```
@@ -8,4 +8,4 @@ npm i -g yarn
 ```
 
 ## ref
-* https://yarnpkg.com/
+- https://yarnpkg.com/

@@ -1,6 +1,6 @@
 # CSS Flexbox
-* The Flexbox Layout (Flexible Box) module 
-* [W3C Candidate Recommendation as of October 2017](https://www.w3.org/TR/css-flexbox/)
+- The Flexbox Layout (Flexible Box) module 
+- [W3C Candidate Recommendation as of October 2017](https://www.w3.org/TR/css-flexbox/)
 
 ## Basic Term
 
@@ -8,11 +8,11 @@
 
 ## Basic Concept
 
-* Container
+- Container
 
 <img src="https://css-tricks.com/wp-content/uploads/2018/10/01-container.svg" alt="container" class="img" />
 
-* Item
+- Item
 
 <img src="https://css-tricks.com/wp-content/uploads/2018/10/02-items.svg" alt="items" class="img" />
 
@@ -79,4 +79,4 @@
 ```
 
 ## ref
-* https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+- https://css-tricks.com/snippets/css/a-guide-to-flexbox/

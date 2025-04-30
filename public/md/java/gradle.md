@@ -1,14 +1,14 @@
 # Gradle
-* https://gradle.org
-* build tool
+- https://gradle.org
+- build tool
 
 ## install
-* [sdkman](/mib/sdkman)
+- [sdkman](/mib/sdkman)
 ```
 sdk install gradle
 ```
 
-* mac
+- mac
 ```
 brew install gradle
 ```
@@ -71,12 +71,12 @@ BUILD SUCCESSFUL in 4s
 ```
 
 ## Dependency scope
-* `implementation` : compile
-* `testImplementation` : test
-* `compileOnly` : provided
+- `implementation` : compile
+- `testImplementation` : test
+- `compileOnly` : provided
 
 ## Simple task
-* build.gradle
+- build.gradle
 
 ```
 task copy(type: Copy) {
@@ -85,13 +85,13 @@ task copy(type: Copy) {
 }
 ```
 
-* check tasks
+- check tasks
 
 ```
 ./gradlew tasks --all
 ```
 
-* run task
+- run task
 
 ```
 ./gradlew copy
@@ -99,12 +99,12 @@ gradle copy
 ```
 
 ## gradle daemon
-* `ps -ef | grep gradle`
-* `gradle --stop`
+- `ps -ef | grep gradle`
+- `gradle --stop`
 
 
 ## Plugin
-* build.gradle
+- build.gradle
 
 ```
 plugins {
@@ -118,20 +118,20 @@ task zip(type: Zip) {
 }
 ```
 
-* check tasks
+- check tasks
 
 ```
 ./gradlew tasks --all
 ```
 
 ## gradle wrapper
-* for those who don't have installed gradle
+- for those who don't have installed gradle
 
 ```
 gradle wrapper
 ```
 
-* output
+- output
 
 ```
 .
@@ -154,7 +154,7 @@ repositories {
 ```
 
 ## Parameter
-* `./gradlew bootRun --args ' --server.port=9090'`
+- `./gradlew bootRun --args ' --server.port=9090'`
 
 ## ref
-* https://guides.gradle.org/creating-new-gradle-builds/
+- https://guides.gradle.org/creating-new-gradle-builds/

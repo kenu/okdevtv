@@ -1,17 +1,17 @@
 # go lang
-* https://golang.org/
+- https://golang.org/
 
 
 ## Download & install
-* https://golang.org/dl/
+- https://golang.org/dl/
 
 ### for mac
-* `brew install go`
-* `go env`
+- `brew install go`
+- `go env`
 
 ## hello world
 
-* hello.go
+- hello.go
 
 ```
 package main
@@ -23,13 +23,13 @@ func main() {
 }
 ```
 
-* 실행
+- 실행
 
 ```
 go run hello.go
 ```
 
-* build
+- build
 
 ```
 go build hello.go
@@ -37,4 +37,4 @@ go build hello.go
 ```
 
 ## 참고
-* https://gistpages.com/posts/go-language-introduction
+- https://gistpages.com/posts/go-language-introduction

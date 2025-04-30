@@ -1,7 +1,7 @@
 # MongoDB
-* https://www.mongodb.com/
-* NoSQL
-* JSON data format
+- https://www.mongodb.com/
+- NoSQL
+- JSON data format
 
 ## ref
-* https://docs.mongodb.com/guides/
+- https://docs.mongodb.com/guides/

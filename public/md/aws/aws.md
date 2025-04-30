@@ -1,157 +1,157 @@
 # AWS
 
-* Amazon Web Services
+- Amazon Web Services
 
-* http://aws.amazon.com
+- http://aws.amazon.com
 
-* [prices](https://okdevtv.com/mib/aws/price)
+- [prices](https://okdevtv.com/mib/aws/price)
 ## History
-* S3 (Simple Storage Services)
-* EC2 (Elastic Cloud Compute)
-* [RDS (Relational Database Services)](/mib/aws/rds)
-* Route53
-* ECS (EC2 Container Service)
-* ...
+- S3 (Simple Storage Services)
+- EC2 (Elastic Cloud Compute)
+- [RDS (Relational Database Services)](/mib/aws/rds)
+- Route53
+- ECS (EC2 Container Service)
+- ...
 
 
 
 ### Compute
 
-* EC2
+- EC2
   * Virtual Servers in the Cloud
-* EC2 Container Service
+- EC2 Container Service
   * Run and Manage Docker Containers
-* Elastic Beanstalk
+- Elastic Beanstalk
   * Run and Manage Web Apps
-* Lambda
+- Lambda
   * Run Code in Response to Events
 
 ### Storage & Content Delivery
 
-* S3
+- S3
   * Scalable Storage in the Cloud
-* CloudFront
+- CloudFront
   * Global Content Delivery Network
-* Elastic File System
+- Elastic File System
   * Fully Managed File System for EC2
-* Glacier
+- Glacier
   * Archive Storage in the Cloud
-* Import/Export Snowball
+- Import/Export Snowball
   * Large Scale Data Transport
-* Storage Gateway
+- Storage Gateway
   * Hybrid Storage Integration
 
 ### Database
 
-* RDS
+- RDS
   * Managed Relational Database Service
-* DynamoDB
+- DynamoDB
   * Managed NoSQL Database
-* ElastiCache
+- ElastiCache
   * In-Memory Cache
-* Redshift
+- Redshift
   * Fast, Simple, Cost-Effective Data Warehousing
-* DMS
+- DMS
   * Managed Database Migration Service
 
 ### Networking
-* VPC
+- VPC
   * Isolated Cloud Resources
-* Direct Connect
+- Direct Connect
   * Dedicated Network Connection to AWS
-* Route 53
+- Route 53
   * Scalable DNS and Domain Name Registration
 
 ### Developer Tools
-* CodeCommit
+- CodeCommit
   * Store Code in Private Git Repositories
-* CodeDeploy
+- CodeDeploy
   * Automate Code Deployments
-* CodePipeline
+- CodePipeline
   * Release Software using Continuous Delivery
 
 ### Management Tools
-* CloudWatch
+- CloudWatch
   * Monitor Resources and Applications
-* CloudFormation
+- CloudFormation
   * Create and Manage Resources with Templates
-* CloudTrail
+- CloudTrail
   * Track User Activity and API Usage
-* Config
+- Config
   * Track Resource Inventory and Changes
-* OpsWorks
+- OpsWorks
   * Automate Operations with Chef
-* Service Catalog
+- Service Catalog
   * Create and Use Standardized Products
-* Trusted Advisor
+- Trusted Advisor
   * Optimize Performance and Security
 
 ### Security & Identity
-* Identity & Access Management
+- Identity & Access Management
   * Manage User Access and Encryption Keys
-* Directory Service
+- Directory Service
   * Host and Manage Active Directory
-* Inspector
+- Inspector
   * Analyze Application Security
-* WAF
+- WAF
   * Filter Malicious Web Traffic
 
 ### Analytics
-* EMR
+- EMR
   * Managed Hadoop Framework
-* Data Pipeline
+- Data Pipeline
   * Orchestration for Data-Driven Workflows
-* Elasticsearch Service
+- Elasticsearch Service
   * Run and Scale Elasticsearch Clusters
-* Kinesis
+- Kinesis
   * Work with Real-Time Streaming Data
-* Machine Learning
+- Machine Learning
   * Build Smart Applications Quickly and Easily
 
 ### Internet of Things
-* AWS IoT
+- AWS IoT
   * Connect Devices to the Cloud
 
 ### Mobile Services
-* Mobile Hub
+- Mobile Hub
   * Build, Test, and Monitor Mobile apps
-* Cognito
+- Cognito
   * User Identity and App Data Synchronization
-* Device Farm
+- Device Farm
   * Test Android, FireOS, and iOS Apps on Real Devices in the Cloud
-* Mobile Analytics
+- Mobile Analytics
   * Collect, View and Export App Analytics
-* SNS
+- SNS
   * Push Notification Service
 
 ### Application Services
-* API Gateway
+- API Gateway
   * Build, Deploy and Manage APIs
-* AppStream
+- AppStream
   * Low Latency Application Streaming
-* CloudSearch
+- CloudSearch
   * Managed Search Service
-* Elastic Transcoder
+- Elastic Transcoder
   * Easy-to-Use Scalable Media Transcoding
-* SES
+- SES
   * Email Sending and Receiving Service
-* SQS
+- SQS
   * Message Queue Service
-* SWF
+- SWF
   * Workflow Service for Coordinating Application Components
 
 ### Enterprise Applications
-* WorkSpaces
+- WorkSpaces
   * Desktops in the Cloud
-* WorkDocs
+- WorkDocs
   * Secure Enterprise Storage and Sharing Service
-* WorkMail
+- WorkMail
   * Secure Email and Calendaring Service
 
 ## related
-* [aws start](https://okdevtv.com/mib/aws/aws-start)
-* [aws ec2](https://okdevtv.com/mib/aws/ec2)
-* [aws ec2 price](https://okdevtv.com/mib/aws/price)
-* [aws storage](https://okdevtv.com/mib/aws/storage)
-* [aws cli](https://okdevtv.com/mib/aws/aws-cli)
-* http://aws.amazon.com/ko/activate/
+- [aws start](https://okdevtv.com/mib/aws/aws-start)
+- [aws ec2](https://okdevtv.com/mib/aws/ec2)
+- [aws ec2 price](https://okdevtv.com/mib/aws/price)
+- [aws storage](https://okdevtv.com/mib/aws/storage)
+- [aws cli](https://okdevtv.com/mib/aws/aws-cli)
+- http://aws.amazon.com/ko/activate/

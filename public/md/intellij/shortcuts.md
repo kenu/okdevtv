@@ -2,10 +2,10 @@
 // add please your shortcut here
 []: # Language: markdown
 []: # Path: public/md/intellij/style.md
-* 우측상단
-* 한줄만 추가해 주세요. 당신의 단축키
-* 기억 안남 천천히 추가해 주세요.
-* 편집은 제가 할게요.
+- 우측상단
+- 한줄만 추가해 주세요. 당신의 단축키
+- 기억 안남 천천히 추가해 주세요.
+- 편집은 제가 할게요.
 
 |**기능** |**IntelliJ**| **VSCode** |**Eclipse** | **VS** |
 |---|---|---|---|--|
@@ -55,9 +55,9 @@
 
 
 ## 참고
-* IntelliJ IDEA ReferenceCard pdf
+- IntelliJ IDEA ReferenceCard pdf
   * https://www.jetbrains.com/idea/docs/IntelliJIDEA_ReferenceCard.pdf
-* IntelliJ on YouTube
+- IntelliJ on YouTube
   * [JetBrainsTV](https://www.youtube.com/channel/UC4ogdcPcIAOOMJktgBMhQnQ)
-* Visual Studio 단축키
+- Visual Studio 단축키
   * https://www.facebook.com/gyuwon.yi/posts/939785252731365

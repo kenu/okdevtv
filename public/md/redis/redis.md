@@ -1,6 +1,6 @@
 # Redis
-* in-memory data structure store, used as a database, cache and message broker.
-* https://redis.io
+- in-memory data structure store, used as a database, cache and message broker.
+- https://redis.io
 
 
 ## install
@@ -18,19 +18,19 @@ make
 ```
 
 ## 실행
-* server
+- server
   * `src/redis-server`
   * port : 6379
 
-* client
+- client
   * `src/redis-cli`
 
 ## command
-* `set name kenu`
+- `set name kenu`
 
-* `get name`
+- `get name`
 
-* protected-mode 해제
+- protected-mode 해제
   * `config set protected-mode no`
 
 ```
@@ -38,7 +38,7 @@ Error ReplyError: Ready check failed: DENIED Redis is running in protected mode 
 ```
 
 ## node.js for redis
-* https://github.com/NodeRedis/node_redis
+- https://github.com/NodeRedis/node_redis
 
 ```js
 const redis = require("redis"),
@@ -72,5 +72,5 @@ docker exec -it 7c7dd57eb291 /bin/bash
 ```
 
 ## ref
-* redis on windows
+- redis on windows
   * http://hwigyeom.ntils.com/entry/Windows-%EC%97%90-Redis-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0-1

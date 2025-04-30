@@ -1,19 +1,19 @@
 # React TypeScript
 
 ## Install
-* 템플릿 프로젝트 생성
+- 템플릿 프로젝트 생성
 
 ```
 npx create-react-app my-app --template typescript
 ```
 
-* 기존 프로젝트에 추가
+- 기존 프로젝트에 추가
 
 ```
 npm install typescript @types/node @types/react @types/react-dom @types/jest
 ```
 
-* Person.tsx
+- Person.tsx
 ```ts
 import react from 'react';
 
@@ -31,4 +31,4 @@ export default Person;
 ```
 
 ## ref
-* https://create-react-app.dev/docs/adding-typescript/
+- https://create-react-app.dev/docs/adding-typescript/

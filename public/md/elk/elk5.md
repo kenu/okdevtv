@@ -1,26 +1,26 @@
 # ELK
-* Elasticsearch + Logstash + Kibana
-* Elasticsearch는 Apache의 Lucene을 바탕으로 개발한 실시간 분산 검색 엔진이며,
-* Logstash는 각종 로그를 가져와 JSON형태로 만들어 Elasticsearch로 전송하고,
-* Kibana는 Elasticsearch에 저장된 Data를 사용자에게 Dashboard 형태로 보여주는 솔루션이다.
+- Elasticsearch + Logstash + Kibana
+- Elasticsearch는 Apache의 Lucene을 바탕으로 개발한 실시간 분산 검색 엔진이며,
+- Logstash는 각종 로그를 가져와 JSON형태로 만들어 Elasticsearch로 전송하고,
+- Kibana는 Elasticsearch에 저장된 Data를 사용자에게 Dashboard 형태로 보여주는 솔루션이다.
 ![ELK Architecture](images/elk_arch.jpg)
-* http://elastic.co 사이트 오픈소스 제품
+- http://elastic.co 사이트 오픈소스 제품
 
 
 ## 장점
-* Google Analytics(GA)의 데이터로 사이트 접속 통계를 구할 경우 원하는 대로 데이터를 획득하기 어렵다.
-* 자체 서버의 모든 로그를 100% 수집할 수 있기 때문에 데이터에 대한 신뢰성이 높다.
-* 파라미터 값별로 통계를 볼 수 있기 때문에 정확한 데이터 분석이 가능하다.
-* 검색엔진(lucene)이 포함되어 있어, 빠르게 데이터를 검색할 수 있다.
-* 모두 오픈소스이며 자유롭게 사용이 가능하다.
+- Google Analytics(GA)의 데이터로 사이트 접속 통계를 구할 경우 원하는 대로 데이터를 획득하기 어렵다.
+- 자체 서버의 모든 로그를 100% 수집할 수 있기 때문에 데이터에 대한 신뢰성이 높다.
+- 파라미터 값별로 통계를 볼 수 있기 때문에 정확한 데이터 분석이 가능하다.
+- 검색엔진(lucene)이 포함되어 있어, 빠르게 데이터를 검색할 수 있다.
+- 모두 오픈소스이며 자유롭게 사용이 가능하다.
 
 
 ## 사전 준비
-* 로그수집 서버(AWS 추천)
+- 로그수집 서버(AWS 추천)
   * aws 접속 key가 있는 경우
   * 윈도우에서 git bash 추천(http://git-scm.com). putty 접속보다 쉬움
-* 리눅스 서버 CentOS 또는 Ubuntu
-* Java 1.8 이상
+- 리눅스 서버 CentOS 또는 Ubuntu
+- Java 1.8 이상
 
 ## nginx 설치(샘플용)
 ```
@@ -31,17 +31,17 @@ sudo chmod 644 /var/log/nginx
 sudo chown -R ec2-user:ec2-user /usr/share/nginx/html
 echo "<h1>Hello World</h1>" > /usr/share/nginx/html/hello.html
 ```
-* more [nginx 설치](https://okdevtv.com/mib/nginx/nginx)
+- more [nginx 설치](https://okdevtv.com/mib/nginx/nginx)
 
 ## jdk 1.8
 ```
 sudo dnf remove java-1.7.0-openjdk.x86_64 -y
 sudo dnf install java-1.8.0-openjdk-devel.x86_64 -y
 ```
-* more [install](https://okdevtv.com/mib/java)
+- more [install](https://okdevtv.com/mib/java)
 
 ## system env
-* check env
+- check env
 ```
 ulimit -a
 ```
@@ -76,19 +76,19 @@ sudo reboot
 ```
 
 ## AWS 포트 설정
-* EC2 Security Groups
-* 외부 접근 포트 추가(inbound)
+- EC2 Security Groups
+- 외부 접근 포트 추가(inbound)
   * http(80)
 
 
 ## 설치
-* Elasticsearch
-* Kibana
-* Logstash (FluentD로 대치 가능)
+- Elasticsearch
+- Kibana
+- Logstash (FluentD로 대치 가능)
 
-* 버전을 맞춰서 작업하는 것이 좋지만, 최신 버전으로 작업해도 동작함(2016/04/03 현재)
-* Elasticsearch와 Kibana는 권장 버전을 맞춰야 함
-* 설치 위치  ~/local/ 또는 /opt/ 권장
+- 버전을 맞춰서 작업하는 것이 좋지만, 최신 버전으로 작업해도 동작함(2016/04/03 현재)
+- Elasticsearch와 Kibana는 권장 버전을 맞춰야 함
+- 설치 위치  ~/local/ 또는 /opt/ 권장
 
 
 ## Elasticsearch 설치
@@ -104,7 +104,7 @@ bin/elasticsearch -d
   # 데몬(백그라운드)로 실행. 옵션 -d를 빼면 터미널 접속해 있는 동안만 실행
 ```
 
-* 실행 확인
+- 실행 확인
 ```
 curl -i http://localhost:9200/
 ```
@@ -125,7 +125,7 @@ bin/kibana
 nohup bin/kibana &
 ```
 
-* `curl localhost:5601`
+- `curl localhost:5601`
 
 
 ## Logstash 설치
@@ -138,7 +138,7 @@ ln -s logstash-5.6.4 logstash
 cd logstash
 ```
 
-* conf 파일 생성
+- conf 파일 생성
 
 ```
 mkdir logconf
@@ -165,7 +165,7 @@ output {
 }
 ```
 
-* logstash 실행
+- logstash 실행
 ```
 # test
 bin/logstash -f logconf/nginx.conf -t
@@ -176,15 +176,15 @@ nohup bin/logstash -f logconf/nginx.conf &
 ```
 
 ## Filebeat with logstash
-* (Optional)
-* logstash forwarder(deprecated) 의 경량(lightweight) 버전
-* logstash plugin 설치
+- (Optional)
+- logstash forwarder(deprecated) 의 경량(lightweight) 버전
+- logstash plugin 설치
 ```
 cd ~/local/logstash
 ./bin/logstash-plugin install logstash-input-beats
 ```
 
-* filebeat 설치
+- filebeat 설치
 
 ```
 cd ~/local
@@ -203,7 +203,7 @@ cd filebeat
 ```
 
 
-* logconf/nginx.conf 파일 변경
+- logconf/nginx.conf 파일 변경
 
 ```
 input {
@@ -218,7 +218,7 @@ input {
 ./filebeat -e -c filebeat.yml
 ```
 
-* start shell
+- start shell
 
 ```
 echo "nohup ./filebeat -e -c filebeat.yml &" > start.sh
@@ -243,7 +243,7 @@ chmod +x start.sh
 ## part 2
 
 ### Logstash
-* 필드 추가
+- 필드 추가
 ```
 field{
     mutate {
@@ -254,7 +254,7 @@ field{
 }
 ```
 
-* 분리
+- 분리
 ```
 field{
     mutate {
@@ -266,7 +266,7 @@ field{
 }
 ```
 
-* 필드 제거
+- 필드 제거
 ```
     mutate {
         remove_field => [
@@ -277,7 +277,7 @@ field{
 ```
 
 
-* 파라미터 필드 만들기
+- 파라미터 필드 만들기
 ```
 filter {
     mutate {
@@ -304,7 +304,7 @@ filter {
 }
 ```
 
-* 또는
+- 또는
 
 ```
     # params
@@ -319,7 +319,7 @@ filter {
 
 ```
 
-* 이미지 제거
+- 이미지 제거
 ```
 filter {
     if [message] =~ "^#|\.(css|js|ico|png|xml|jpg|JPG|gif|jpeg|eot|htc\?) " {
@@ -328,7 +328,7 @@ filter {
 }
 ```
 
-* 문자열 체크
+- 문자열 체크
 ```
 if [agent] =~ "Mediapartners" {
     drop {}
@@ -338,36 +338,36 @@ if [device] == "Spider" {
 }
 ```
 
-* useragent 파싱
+- useragent 파싱
 ```
     useragent {
         source => "agent"
     }
 ```
 
-* timestamp 조정(apache log)
+- timestamp 조정(apache log)
 ```
     date {
         match => [ "timestamp", "dd/MMM/yyyy:HH:mm:ss Z" ]
     }
 ```
-* https://www.elastic.co/guide/en/logstash/current/plugins-filters-date.html
+- https://www.elastic.co/guide/en/logstash/current/plugins-filters-date.html
 
-* urldecode
+- urldecode
 ```
    urldecode {
        field => "params"
    }
 ```
 
-* to integer
+- to integer
 ```
     mutate {
         convert => [ "bytes", "integer" ]
     }
 ```
 
-* 하나 이상의 로그 포맷
+- 하나 이상의 로그 포맷
 ```
 filter {
     grok {
@@ -379,7 +379,7 @@ filter {
 }
 ```
 
-* elsasticsearch index 설정
+- elsasticsearch index 설정
 ```
 output {
   elasticsearch {
@@ -391,7 +391,7 @@ output {
 }
 ```
 
-* replace
+- replace
 ```
     mutate {
         gsub => [ 'message', '\\x22', '']
@@ -402,7 +402,7 @@ output {
 ```
 
 ### geo_point
-* elasticsearch mappings
+- elasticsearch mappings
 ```
 curl -XPUT http://localhost:9200/my_index/ -d '
 {
@@ -415,7 +415,7 @@ curl -XPUT http://localhost:9200/my_index/ -d '
   }
 }'
 ```
-* logstash conf
+- logstash conf
 ```
 filter {
     csv {
@@ -433,7 +433,7 @@ filter {
     }
 }
 ```
-* sample log
+- sample log
 
 ```
 lv,region_addr,latitude,longitude,cnt
@@ -443,10 +443,10 @@ lv,region_addr,latitude,longitude,cnt
 
 
 ### Kibana
-* https://okdevtv.com/mib/elk/kibana
+- https://okdevtv.com/mib/elk/kibana
 
 ### elasticsearch
-* 데이터 지우기
+- 데이터 지우기
   * `curl -XDELETE http://localhost:9200/logstash*`
 
 
@@ -462,7 +462,7 @@ sudo dnf install httpd-tools -y
 ```
 sudo htpasswd -c /etc/nginx/htpasswd.users kibanaadmin
 ```
-* 사용자 추가
+- 사용자 추가
 ```
 sudo htpasswd /etc/nginx/htpasswd.users kenuheo
 ```
@@ -471,7 +471,7 @@ sudo htpasswd /etc/nginx/htpasswd.users kenuheo
 ```
 sudo vi /etc/nginx/nginx.conf
 ```
-* `server_name:` 아래 kibana 프록시 설정
+- `server_name:` 아래 kibana 프록시 설정
 ```
         auth_basic "Restricted Access";
         auth_basic_user_file /etc/nginx/htpasswd.users;
@@ -489,59 +489,59 @@ sudo vi /etc/nginx/nginx.conf
                 proxy_max_temp_file_size 0;
         }
 ```
-* nginx 재시작
+- nginx 재시작
   * `sudo service nginx start`
-* 5601 포트는 막고 80으로만 접속
+- 5601 포트는 막고 80으로만 접속
 
 ## Kibana with PM2
 
-* download from http://nodejs.org and install node.js
+- download from http://nodejs.org and install node.js
 ```
 npm install -g pm2
 cd ~/local/kibana
 pm2 start bin/cli
 ```
-* check kibana status with `pm2 list`
-* pm2 logs path is placed in ~/.pm2/logs
+- check kibana status with `pm2 list`
+- pm2 logs path is placed in ~/.pm2/logs
 
 
 
 ## 참고
-* Logstash grok patterns
+- Logstash grok patterns
   * https://github.com/logstash-plugins/logstash-patterns-core/blob/master/patterns/grok-patterns
 
-* ELKR (ElasticSearch + Logstash + Kibana + Redis) 를 이용한 로그분석 환경 구축하기
+- ELKR (ElasticSearch + Logstash + Kibana + Redis) 를 이용한 로그분석 환경 구축하기
   * http://brantiffy.axisj.com/archives/418
 
-* 2016 ELK 스택으로 서울시 지하철 대시보드 만들기 *추천*
+- 2016 ELK 스택으로 서울시 지하철 대시보드 만들기 *추천*
   * https://youtu.be/xPjNtd8xUZo
 
-* EMOCON 2015 F/W ELK 스택을 사용한 서울시 지하철 대시보드 만들기
+- EMOCON 2015 F/W ELK 스택을 사용한 서울시 지하철 대시보드 만들기
   * https://youtu.be/ec-XzM6_CgU
 
-* ELK 구축하기 1 – LOGSTASH
+- ELK 구축하기 1 – LOGSTASH
   * http://linux.systemv.pe.kr/elk-구축하기-1-logstash/
 
-* [Ubuntu] ELK 설치 및 테스트 하기
+- [Ubuntu] ELK 설치 및 테스트 하기
   * http://digndig.kr/ubuntu/449/
 
-* Splunk 대체 Solution으로서의 ELK Stack
+- Splunk 대체 Solution으로서의 ELK Stack
   * http://blog.embian.com/18
 
-* How To Install Elasticsearch, Logstash, and Kibana 4 on Ubuntu 14.04
+- How To Install Elasticsearch, Logstash, and Kibana 4 on Ubuntu 14.04
   * https://www.digitalocean.com/community/tutorials/how-to-install-elasticsearch-logstash-and-kibana-4-on-ubuntu-14-04
 
-* ELK 프로그래밍 방송 영상
+- ELK 프로그래밍 방송 영상
   * http://bit.ly/okdevtv-elk
 
-* Logstash Configuration
+- Logstash Configuration
   * https://www.elastic.co/guide/en/logstash/current/event-dependent-configuration.html
 
-* Elasticsearch(Lucene) Query Syntax
+- Elasticsearch(Lucene) Query Syntax
   * https://lucene.apache.org/core/2_9_4/queryparsersyntax.html
 
-* ELK Kibana 사용법
+- ELK Kibana 사용법
   * https://www.dropbox.com/s/xjwyta14b5nw7j8/Kibana-basic.pdf?dl=0
 
-* okdevtv.conf
+- okdevtv.conf
   * https://okdevtv.com/md/elk/okdevtv.conf

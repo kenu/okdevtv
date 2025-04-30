@@ -1,13 +1,13 @@
 # kafka
-* https://kafka.apache.org
-* distributed streaming platform
+- https://kafka.apache.org
+- distributed streaming platform
 
 ## download
-* http://kafka.apache.org/downloads
+- http://kafka.apache.org/downloads
 
 ## quickstart
-* http://kafka.apache.org/quickstart
-* step
+- http://kafka.apache.org/quickstart
+- step
   1. Download
   2. Start the server
     * zookeeper

@@ -7,7 +7,7 @@ d2 = datetime.today() - timedelta(seconds=60)
 print(date, d2)
 ```
 
-* timestamp
+- timestamp
 ```py
 date.strftime("%s")
 ```

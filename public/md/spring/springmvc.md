@@ -1,5 +1,5 @@
 # Spring Web MVC
-* https://docs.spring.io/spring/docs/5.0.0.RELEASE/spring-framework-reference/web.html#mvc
+- https://docs.spring.io/spring/docs/5.0.0.RELEASE/spring-framework-reference/web.html#mvc
 
 
 1. Spring Web MVC    

@@ -1,10 +1,10 @@
 # Oracle Database
 
-* oracle 11g Oracle Database Express Edition (XE) Release 11.2.0.2.0 (11gR2).
+- oracle 11g Oracle Database Express Edition (XE) Release 11.2.0.2.0 (11gR2).
   * https://www.oracle.com/database/technologies/xe-prior-release-downloads.html
   * https://bit.ly/3CUi8Dk
   * Windows, Linux only
-* [MacOS] M1 맥북 도커로 ORACLE DB 실행하기
+- [MacOS] M1 맥북 도커로 ORACLE DB 실행하기
   * https://shanepark.tistory.com/400
 
 ## Tablespace 만들기
@@ -25,7 +25,7 @@ DROP USER devuser CASCADE;
 ```
 
 ## XDB 비활성화
-* 8080 포트 비활성화 Oracle HTTP Server Stop
+- 8080 포트 비활성화 Oracle HTTP Server Stop
 
 ```sql
 C:\Users\Administrator>sqlplus "/as sysdba"

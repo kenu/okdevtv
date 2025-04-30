@@ -1,7 +1,7 @@
 # Node + MariaDB
 
 ## MariaDB
-* MacOS
+- MacOS
 ```
 sudo chown -R $(whoami) /usr/local
 ```
@@ -36,7 +36,7 @@ CREATE TABLE user (
 
 ## Node + MariaDB test
 
-* Connection
+- Connection
 
 ```js
 const mysql      = require('mysql');
@@ -58,7 +58,7 @@ connection.query('SELECT now() AS time', function(err, rows, fields) {
 connection.end();
 ```
 
-* Create (insert)
+- Create (insert)
 
 ```js
 connection.connect();
@@ -71,7 +71,7 @@ connection.end();
 
 console.log(query.sql);
 ```
-* Retrieve (select)
+- Retrieve (select)
 
 ```js
 connection.connect();
@@ -85,7 +85,7 @@ connection.query('SELECT * FROM user', function(err, rows, fields) {
 connection.end();
 ```
 
-* Update
+- Update
 
 ```js
 connection.connect();
@@ -98,7 +98,7 @@ const query = connection.query(
 connection.end();
 ```
 
-* Delete
+- Delete
 
 ```js
 const query = connection.query(
@@ -110,6 +110,6 @@ connection.end();
 ```
 
 ## ref
-* node-mysql
+- node-mysql
   * https://github.com/mysqljs/mysql
-* https://mariadb.org
+- https://mariadb.org

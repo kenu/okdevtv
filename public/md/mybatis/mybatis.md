@@ -21,7 +21,7 @@ public interface CityMapper {
 
 }
 ```
-* https://github.com/mybatis/spring-boot-starter/wiki/Quick-Start
+- https://github.com/mybatis/spring-boot-starter/wiki/Quick-Start
 
 ## MyBatis with Spring Boot
 ```
@@ -34,7 +34,7 @@ curl -s https://start.spring.io/starter.tgz\
   | tar -xzvf -
 ```
 ## Annotation
-* CRUD
+- CRUD
 
 ```java
 @Select
@@ -44,7 +44,7 @@ curl -s https://start.spring.io/starter.tgz\
 ```
 
 ## xml
-* CRUD
+- CRUD
 
 ```xml
 <select />
@@ -54,6 +54,6 @@ curl -s https://start.spring.io/starter.tgz\
 ```
 
 ## ref
-* https://github.com/mybatis/spring-boot-starter
-* jpetstore
+- https://github.com/mybatis/spring-boot-starter
+- jpetstore
   - https://github.com/mybatis/jpetstore-6

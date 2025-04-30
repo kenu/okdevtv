@@ -81,4 +81,4 @@ nohup jupyter notebook &
 jupyter notebook list
 deactivate
 ```
-* ref : https://gist.github.com/xuelangZF/570caf66cd1f204f98905e35336c9fc0
+- ref : https://gist.github.com/xuelangZF/570caf66cd1f204f98905e35336c9fc0

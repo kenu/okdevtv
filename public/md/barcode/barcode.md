@@ -1,6 +1,6 @@
 # Barcode
 
-* https://github.com/lindell/JsBarcode
+- https://github.com/lindell/JsBarcode
 
 ```javascript
 <!DOCTYPE html>
@@ -55,4 +55,4 @@
 </html>
 ```
 
-* sample : [/md/barcode/barcode.html](/md/barcode/barcode.html);
+- sample : [/md/barcode/barcode.html](/md/barcode/barcode.html);

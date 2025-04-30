@@ -1,8 +1,8 @@
 # Jenkins SonarQube
-* 영상: https://www.youtube.com/watch?v=tJqyrX6tZXs
+- 영상: https://www.youtube.com/watch?v=tJqyrX6tZXs
 
 ## Global Settings for maven
-* `~/.m2/settings.xml`
+- `~/.m2/settings.xml`
 
 ```xml
 <settings>
@@ -26,13 +26,13 @@
 </settings>
 ```
 
-* `mvn compile sonar:sonar`
+- `mvn compile sonar:sonar`
 
 ## related
-* [jenkins](/mib/jenkins)
+- [jenkins](/mib/jenkins)
 
 ## ref
-* Jenkins extension SonarQube
+- Jenkins extension SonarQube
   * https://docs.sonarsource.com/sonarqube/latest/analyzing-source-code/scanners/jenkins-extension-sonarqube/
-* https://docs.sonarsource.com/sonarqube/latest/analyzing-source-code/scanners/sonarscanner-for-maven/
+- https://docs.sonarsource.com/sonarqube/latest/analyzing-source-code/scanners/sonarscanner-for-maven/
 

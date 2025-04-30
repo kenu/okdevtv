@@ -1,28 +1,28 @@
 # Spring 5
-* for reactive
-* Reactive
+- for reactive
+- Reactive
   * https://www.reactivemanifesto.org
   * https://www.reactive-streams.org
-* Responsive(반응), Resilient(탄력), Elastic(유연), Message Driven(메시지)
-* Non-blocking io
-* Spring WebFlux
+- Responsive(반응), Resilient(탄력), Elastic(유연), Message Driven(메시지)
+- Non-blocking io
+- Spring WebFlux
 
-* <img src="images/diagram-reactive.webp" alt="reactive" class="img"/>
+- <img src="images/diagram-reactive.webp" alt="reactive" class="img"/>
 
 ## JavaEE 지원
-* Servlet API ([JSR 340](https://jcp.org/en/jsr/detail?id=340))
-* WebSocket API ([JSR 356](https://jcp.org/en/jsr/detail?id=356))
-* Concurrency Utilities ([JSR 236](https://jcp.org/en/jsr/detail?id=236))
-* JSON Binding API ([JSR 367](https://jcp.org/en/jsr/detail?id=367))
-* Bean Validation ([JSR 303](https://jcp.org/en/jsr/detail?id=303))
-* JPA ([JSR 338](https://jcp.org/en/jsr/detail?id=338))
-* JMS ([JSR 914](https://jcp.org/en/jsr/detail?id=914))
-* JTA/JCA setups for transaction coordination, if necessary.
-* Dependency Injection ([JSR 330](https://jcp.org/en/jsr/detail?id=330))
-* Common Annotations ([JSR 250](https://jcp.org/en/jsr/detail?id=250))
+- Servlet API ([JSR 340](https://jcp.org/en/jsr/detail?id=340))
+- WebSocket API ([JSR 356](https://jcp.org/en/jsr/detail?id=356))
+- Concurrency Utilities ([JSR 236](https://jcp.org/en/jsr/detail?id=236))
+- JSON Binding API ([JSR 367](https://jcp.org/en/jsr/detail?id=367))
+- Bean Validation ([JSR 303](https://jcp.org/en/jsr/detail?id=303))
+- JPA ([JSR 338](https://jcp.org/en/jsr/detail?id=338))
+- JMS ([JSR 914](https://jcp.org/en/jsr/detail?id=914))
+- JTA/JCA setups for transaction coordination, if necessary.
+- Dependency Injection ([JSR 330](https://jcp.org/en/jsr/detail?id=330))
+- Common Annotations ([JSR 250](https://jcp.org/en/jsr/detail?id=250))
 
 ## Core Technologies
-* https://docs.spring.io/spring/docs/5.0.0.RELEASE/spring-framework-reference/core.html#spring-core
+- https://docs.spring.io/spring/docs/5.0.0.RELEASE/spring-framework-reference/core.html#spring-core
 
 ### The IoC container
 ```

@@ -1,12 +1,12 @@
 # API
-* Application Programming Interface
-* Internal API
-* External API: Open API
+- Application Programming Interface
+- Internal API
+- External API: Open API
   * use [curl](https://okdevtv.com/mib/linux/curl)
-* almost JSON format
+- almost JSON format
 
 ## Vendors
-* DAUM
+- DAUM
   * http://developers.daum.net/console/
-* Google
+- Google
   * https://developers.google.com/

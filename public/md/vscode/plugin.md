@@ -1,21 +1,21 @@
 # VSCode plug in
 
 ## First Extension
-* https://code.visualstudio.com/api/get-started/your-first-extension
+- https://code.visualstudio.com/api/get-started/your-first-extension
 
 ## Requirement
-* Node.js
-* Git
+- Node.js
+- Git
 
 ## install generator
-* Yeoman, VS Code Extension Generator
+- Yeoman, VS Code Extension Generator
 
 ```
 npm install -g yo generator-code
 ```
 
 ## Generate scaffolds
-* TypeScript or JavaScript
+- TypeScript or JavaScript
 
 ```
 yo code
@@ -27,8 +27,8 @@ code ./helloworld
 ```
 
 ## Run
-* `F5`
-* Command Palette `⇧⌘P`
+- `F5`
+- Command Palette `⇧⌘P`
 
 ## Anatomy
 1. `onCommand` Activation Event: `onCommand:extension.helloWorld`
@@ -50,10 +50,10 @@ code ./helloworld
 ```
 
 ## Extension Manifest `package.json`
-* `<publisher>.<name>` as a unique ID for the extension.
-* `main`: The extension entry point.
-* `activationEvents` and `contributes`
-* `engines.vscode` minimum version of VS Code API
+- `<publisher>.<name>` as a unique ID for the extension.
+- `main`: The extension entry point.
+- `activationEvents` and `contributes`
+- `engines.vscode` minimum version of VS Code API
 
 ```json
 {
@@ -92,7 +92,7 @@ code ./helloworld
 ```
 
 ## Extension Entry File
-* `activate()` and `deactivate()`
+- `activate()` and `deactivate()`
 
 ```ts
 // 'vscode' 모듈은 VS Code extensibility API를 포함
@@ -124,5 +124,5 @@ export function deactivate() {}
 ```
 
 ## ref
-* https://code.visualstudio.com/api/get-started/wrapping-up
+- https://code.visualstudio.com/api/get-started/wrapping-up
 

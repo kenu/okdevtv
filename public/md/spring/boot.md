@@ -1,15 +1,15 @@
 # Spring Boot
-* https://github.com/spring-projects/spring-boot
+- https://github.com/spring-projects/spring-boot
 
 ## Goals
-* 매우 빠른 스프링 개발 가능
-* 기본도 충실하지만, 요구사항 변화에 빨리 대응
-* 다양한 비기능 특징 제공(임베디드 서버, 보안, 메트릭, 헬스 체크, 외부 설정)
+- 매우 빠른 스프링 개발 가능
+- 기본도 충실하지만, 요구사항 변화에 빨리 대응
+- 다양한 비기능 특징 제공(임베디드 서버, 보안, 메트릭, 헬스 체크, 외부 설정)
 
 ## Simple Example
-* https://start.spring.io
-* spring boot 기본 앱 생성
-* Example.java
+- https://start.spring.io
+- spring boot 기본 앱 생성
+- Example.java
 
 ```java
 package com.example.demo;
@@ -35,7 +35,7 @@ public class DemoApplication {
 }
 ```
 
-* pom.xml
+- pom.xml
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -95,9 +95,9 @@ public class DemoApplication {
 ```
 
 ## Executable JAR,WAR
-* 리눅스에서 단독 실행 가능한 `*.jar`, `*.war`
-* 윈도우는 `java -jar` 필요
-* `pom.xml`
+- 리눅스에서 단독 실행 가능한 `*.jar`, `*.war`
+- 윈도우는 `java -jar` 필요
+- `pom.xml`
 ```xml
 <plugin>
   <groupId>org.springframework.boot</groupId>
@@ -109,36 +109,36 @@ public class DemoApplication {
 </plugin>
 ```
 
-* 실행
+- 실행
 ```
 ./spring-boot-jsp.jar
 ```
 
 ## Spring Boot as a Service
-* Executable JAR 필요
-* 심볼릭 링크 이용
-* `sudo service myapp start`, `stop`, `restart` 가능
+- Executable JAR 필요
+- 심볼릭 링크 이용
+- `sudo service myapp start`, `stop`, `restart` 가능
 ```
 chmod 755 /path/to/myspringboot.jar
 sudo ln -s /path/to/myspringboot.jar /etc/init.d/myapp
 ```
-* run
+- run
 ```
 sudo service myapp start
 curl localhost:8080
 ```
-* stop
+- stop
 ```
 sudo service myapp stop
 sudo rm /etc/init.d/myapp
 ```
 
-* ref : https://stackoverflow.com/questions/21503883/spring-boot-application-as-a-service
+- ref : https://stackoverflow.com/questions/21503883/spring-boot-application-as-a-service
 
 ## Migration to Spring Boot
-* http://www.baeldung.com/spring-boot-migration
+- http://www.baeldung.com/spring-boot-migration
 
-* pom.xml
+- pom.xml
 
 ```
 <parent>
@@ -149,4 +149,4 @@ sudo rm /etc/init.d/myapp
 ```
 
 ## related
-* [Spring Boot 2](/mib/spring/boot2)
+- [Spring Boot 2](/mib/spring/boot2)

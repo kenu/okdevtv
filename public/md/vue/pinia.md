@@ -1,6 +1,6 @@
 # Pinia
-* State management library for Vue.js applications
-* https://pinia.vuejs.org/
+- State management library for Vue.js applications
+- https://pinia.vuejs.org/
 
 ## Install
 ```

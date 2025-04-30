@@ -9,17 +9,17 @@ cd metricbeat
 ```
 
 ## run
-* change metricbeat.yml permission
+- change metricbeat.yml permission
 ```
 sudo chown root metricbeat.yml
 ```
 
-* for linux
+- for linux
 ```
 sudo ./metricbeat -e -c metricbeat.yml
 ```
 
-* for mac
+- for mac
 ```
 sudo ./metricbeat -e -c metricbeat.yml -d "publish"
 ```
@@ -43,6 +43,6 @@ metricbeat.modules:
 ```
 
 ## ref
-* https://www.elastic.co/guide/en/beats/metricbeat/current/metricbeat-getting-started.html
-* Apache httpd
-* https://www.elastic.co/guide/en/beats/metricbeat/current/metricbeat-module-apache.html
+- https://www.elastic.co/guide/en/beats/metricbeat/current/metricbeat-getting-started.html
+- Apache httpd
+- https://www.elastic.co/guide/en/beats/metricbeat/current/metricbeat-module-apache.html

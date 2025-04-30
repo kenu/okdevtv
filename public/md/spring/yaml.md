@@ -1,14 +1,14 @@
 # YAML
-* Yaml Ain't Markup Language
-* 사람이 쉽게 읽을 수 있는 데이터 직렬화 양식
-* 모든 데이터를 리스트, 해시, 스칼라 데이터의 조합으로 적절히 표현
-* 쉬운 문법, 가독성 양호
-* 들여쓰기로 계층 표현 가능하기 때문에 xml과 유사
+- Yaml Ain't Markup Language
+- 사람이 쉽게 읽을 수 있는 데이터 직렬화 양식
+- 모든 데이터를 리스트, 해시, 스칼라 데이터의 조합으로 적절히 표현
+- 쉬운 문법, 가독성 양호
+- 들여쓰기로 계층 표현 가능하기 때문에 xml과 유사
 
 ## YAML vs. Properties
 ### 가독성
-* 계층구조로 가독성이 좋다.
-* 들여쓰기, 띄어쓰기로 구분
+- 계층구조로 가독성이 좋다.
+- 들여쓰기, 띄어쓰기로 구분
 
 ```
 spring.datasource.driverClassName=net.sf.log4jdbc.sql.jdbcapi.DriverSpy
@@ -30,8 +30,8 @@ spring:
 ```
 
 ### 리스트
-* 여러 줄에 쓸 때는 하이픈(`-`)으로 시작하는 한 줄에 하나의 요소 표시
-* 한 줄에 모아 쓸 때는 대괄호와 쉼표로 표시
+- 여러 줄에 쓸 때는 하이픈(`-`)으로 시작하는 한 줄에 하나의 요소 표시
+- 한 줄에 모아 쓸 때는 대괄호와 쉼표로 표시
 
 ```
 my.servers[0]=dev.example.com
@@ -51,7 +51,7 @@ my:
 ```
 
 ### 주석
-* `#`으로 시작해서 줄 끝까지 적용
+- `#`으로 시작해서 줄 끝까지 적용
 
 ```yaml
 # comment
@@ -62,10 +62,10 @@ my:
 ```
 
 ### 스프링 Profile 적용
-* 한 파일 내에서 여러 환경 표시 가능
+- 한 파일 내에서 여러 환경 표시 가능
   * nested document
-* applicaton.yml 파일 하나로 여러가지 yml 생성한 것과 같이 처리 가능
-* properties는 개별 파일 필요
+- applicaton.yml 파일 하나로 여러가지 yml 생성한 것과 같이 처리 가능
+- properties는 개별 파일 필요
   * application-{profile}.properties
   * application-local.properties
   * application-dev.properties
@@ -111,7 +111,7 @@ logging:
 ```
 
 ## Group
-* group으로 여러 파일 동시에 로딩 가능
+- group으로 여러 파일 동시에 로딩 가능
 
 ```yaml
 spring:
@@ -122,14 +122,14 @@ spring:
 ```
 
 ## 주의
-* @PropertySource 어노테이션으로 프로퍼티 값을 불러 올 수 없다.
-* 해당 어노테이션을 사용 하려면 프로퍼티 파일을 사용 필요
-* `.properties`나 `.yml` 파일은 kebab-case 표기를 권장
+- @PropertySource 어노테이션으로 프로퍼티 값을 불러 올 수 없다.
+- 해당 어노테이션을 사용 하려면 프로퍼티 파일을 사용 필요
+- `.properties`나 `.yml` 파일은 kebab-case 표기를 권장
 
 ```
 acme.my-project.person.first-name
 ```
 
 ## ref
-* https://docs.spring.io/spring-boot/docs/current/reference/html/spring-boot-features.html#boot-features-external-config-yaml
-* https://goddaehee.tistory.com/213
+- https://docs.spring.io/spring-boot/docs/current/reference/html/spring-boot-features.html#boot-features-external-config-yaml
+- https://goddaehee.tistory.com/213

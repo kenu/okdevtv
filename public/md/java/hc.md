@@ -1,5 +1,5 @@
 # Apache HttpClient
-* https://hc.apache.org
+- https://hc.apache.org
 
 ```java
   CloseableHttpClient httpclient = HttpClients.createDefault();

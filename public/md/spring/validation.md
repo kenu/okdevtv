@@ -1,12 +1,12 @@
 # Spring Boot Validation
-* [영상 링크](https://youtu.be/b5rzOaDRdyY)
-* JSR 380: Bean Validation 2.0
+- [영상 링크](https://youtu.be/b5rzOaDRdyY)
+- JSR 380: Bean Validation 2.0
   * https://beanvalidation.org/2.0/spec/
-* JSR 303: Bean Validation 1.0
+- JSR 303: Bean Validation 1.0
   * https://beanvalidation.org/1.0/spec/
 
 ## Form
-* Controller
+- Controller
   * `@ModelAttribute`
 
 ```java
@@ -81,27 +81,27 @@ public String checkPersonInfo(@Valid PersonForm personForm, BindingResult bindin
 ```
 
 ## Validation Annotations JSR380
-* `@NotNull`
-* `@AssertTrue`
-* `@Size`
-* `@Min`
-* `@Max`
-* `@Email`
-* `@NotEmpty`: not null, not empty of String, Collection, Map or Array values
-* `@NotBlank`: not null or no whitespace
-* `@Positive`, `@PositiveOrZero`
-* `@Negative`, `@NegativeOrZero`
-* `@Past`, `@PastOrPresent`: date value
-* `@Future`, `@FutureOrPresent`
+- `@NotNull`
+- `@AssertTrue`
+- `@Size`
+- `@Min`
+- `@Max`
+- `@Email`
+- `@NotEmpty`: not null, not empty of String, Collection, Map or Array values
+- `@NotBlank`: not null or no whitespace
+- `@Positive`, `@PositiveOrZero`
+- `@Negative`, `@NegativeOrZero`
+- `@Past`, `@PastOrPresent`: date value
+- `@Future`, `@FutureOrPresent`
 
 ```java
 List<@NotBlank String> preferences;
 ```
 
 ## ref
-* https://www.baeldung.com/javax-validation
-* https://spring.io/guides/gs/handling-form-submission/
-* https://spring.io/guides/gs/validating-form-input/
-* Customize Validation Error Message
+- https://www.baeldung.com/javax-validation
+- https://spring.io/guides/gs/handling-form-submission/
+- https://spring.io/guides/gs/validating-form-input/
+- Customize Validation Error Message
   * https://www.baeldung.com/spring-custom-validation-message-source
   * https://www.baeldung.com/javax-validation

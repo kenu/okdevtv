@@ -1,16 +1,16 @@
 # Ansible
-* IT automation system
-* https://github.com/ansible/ansible
-* Configuration
-* Deployment
-* Cloud provisioning
-* Task execution, network automation, multi-node orchestration
+- IT automation system
+- https://github.com/ansible/ansible
+- Configuration
+- Deployment
+- Cloud provisioning
+- Task execution, network automation, multi-node orchestration
 
 ## Install
 
 ### Prerequisites
-* https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html#prerequisites
-* Control node: Python 3.5+
+- https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html#prerequisites
+- Control node: Python 3.5+
 
 ### Install
 ```

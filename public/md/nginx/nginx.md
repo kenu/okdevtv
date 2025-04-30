@@ -1,14 +1,14 @@
 # nginx
-* http://nginx.org/
-* 아파치 httpd 서버의 뚱뚱함 때문에 만들어진 경량 웹서버
-* 이벤트 루프를 이용해 성능 탁월함
+- http://nginx.org/
+- 아파치 httpd 서버의 뚱뚱함 때문에 만들어진 경량 웹서버
+- 이벤트 루프를 이용해 성능 탁월함
   * <img src="images/nginx-apache-memory.webp" alt="nginx-apache-memory">
   * from: https://blog.webfaction.com/2008/12/a-little-holiday-present-10000-reqssec-with-nginx-2/
-* 설정이 간편함
-* [영상: Nginx 정말 가벼운 웹서버](https://youtu.be/u-leHy-l2a8)
+- 설정이 간편함
+- [영상: Nginx 정말 가벼운 웹서버](https://youtu.be/u-leHy-l2a8)
 
 ## nginx 설치
-* aws EC2 기준
+- aws EC2 기준
 
 ```sh
 sudo dnf install nginx -y
@@ -17,7 +17,7 @@ sudo amazon-linux-extras install nginx1
 sudo systemctl start nginx
 ```
 
-* 기본 설정
+- 기본 설정
 
 ```sh
 curl -i http://localhost
@@ -26,8 +26,8 @@ sudo chown -R ec2-user:ec2-user /usr/share/nginx/html
 echo "<h1>Hello World</h1>" > /usr/share/nginx/html/hello.html
 ```
 
-* http://아이피/
-* http://아이피/hello.html
+- http://아이피/
+- http://아이피/hello.html
 
 ## 자동 시작
 ```sh
@@ -35,11 +35,11 @@ sudo systemctl enable nginx.service
 ```
 
 ## 설정
-* `cd /etc/nginx/ && vim nginx.conf` 기본 설정 파일
-* conf.d/ 폴더에 도메인별로 설정 파일 분리 가능
+- `cd /etc/nginx/ && vim nginx.conf` 기본 설정 파일
+- conf.d/ 폴더에 도메인별로 설정 파일 분리 가능
 
 ### Reverse Proxy
-* "서버단에 다수의 웹서버를 두고, 매번 요청이 발생할 때마다 어떤 서버에게 이 요청을 처리하도록 지시할지 결정하는 역할을 수행한다."
+- "서버단에 다수의 웹서버를 두고, 매번 요청이 발생할 때마다 어떤 서버에게 이 요청을 처리하도록 지시할지 결정하는 역할을 수행한다."
   * from: [IT 방랑기] https://jcdgods.tistory.com/322
 
 ```nginx
@@ -85,7 +85,7 @@ client_max_body_size 200M;
 
 ### nginx for ec2-user
 
-* `/etc/nginx/nginx.conf`
+- `/etc/nginx/nginx.conf`
 ```nginx
 user ec2-user;
 ```
@@ -103,7 +103,7 @@ server {
         return 307 https://$host$request_uri;
     }
 ```
-* https://aws.amazon.com/ko/premiumsupport/knowledge-center/redirect-http-https-elb/
+- https://aws.amazon.com/ko/premiumsupport/knowledge-center/redirect-http-https-elb/
 
 ### http to https without `www.`
 
@@ -118,12 +118,12 @@ server {
     server_name okdevtest.net;
 ```
 
-* from: https://stackoverflow.com/a/7958540/510222 , https://rsec.kr/?p=182
+- from: https://stackoverflow.com/a/7958540/510222 , https://rsec.kr/?p=182
 
 ## 관련
-* nginx detailed https://okdevtv.com/mib/nginx/nginx-detail
-* letsencrypt https://okdevtv.com/mib/letsencrypt
+- nginx detailed https://okdevtv.com/mib/nginx/nginx-detail
+- letsencrypt https://okdevtv.com/mib/letsencrypt
 
 ## 참고
-* https://nginx.org/
-* https://dassur.ma/things/h2setup/
+- https://nginx.org/
+- https://dassur.ma/things/h2setup/

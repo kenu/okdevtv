@@ -1,16 +1,16 @@
 # Spring Security
 
-* 인증(Authentification)과 권한(Authorization)을 다루는 프레임워크
-* 프로그램 로직보다 설정으로 페이지나 리소스 접근 제어
+- 인증(Authentification)과 권한(Authorization)을 다루는 프레임워크
+- 프로그램 로직보다 설정으로 페이지나 리소스 접근 제어
 
 ## 필요조건
-* Spring Framework 3.2
-* Spring Security 3.2
-* Maven
+- Spring Framework 3.2
+- Spring Security 3.2
+- Maven
 
 ## 간단 테스트
-* 소스 다운로드 <a href="springsecurity.zip">springsecurity.zip</a>
-* pom.xml
+- 소스 다운로드 <a href="springsecurity.zip">springsecurity.zip</a>
+- pom.xml
 ```xml
 		<dependency>
 			<groupId>org.springframework.security</groupId>
@@ -24,7 +24,7 @@
 			<version>${spring.security.version}</version>
 		</dependency>
 ```
-* root-context.xml
+- root-context.xml
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <beans:beans xmlns="http://www.springframework.org/schema/security"
@@ -49,7 +49,7 @@
 
 </beans:beans>
 ```
-* servlet-context.xml
+- servlet-context.xml
 ```xml
 <beans:beans xmlns="http://www.springframework.org/schema/mvc"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -61,7 +61,7 @@
 
 ```
 
-* web.xml
+- web.xml
 ```xml
 	<!-- Spring Security -->
 	<filter>
@@ -75,18 +75,18 @@
 		<url-pattern>/*</url-pattern>
 	</filter-mapping>
 ```
-* HomeController.java
+- HomeController.java
 ```
 
 ```
-* admin.jsp
+- admin.jsp
 ```
 ```
 
 
 ## ref
-* JavaSchool Spring Security
+- JavaSchool Spring Security
   * http://java-school.net/spring/spring-security.php
-* MKyoung Spring Security
+- MKyoung Spring Security
   * http://www.mkyong.com/tutorials/spring-security-tutorials/
 

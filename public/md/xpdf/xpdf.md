@@ -1,11 +1,11 @@
 # xpdf
 
 ## install
-* `brew cask install xquartz`
-* `brew install poppler`
+- `brew cask install xquartz`
+- `brew install poppler`
 
 ## usage
-* `pdftoppm -jpeg pdffile.pdf`
+- `pdftoppm -jpeg pdffile.pdf`
 
 ```
 pdftoppm version 0.53.0
@@ -50,6 +50,6 @@ Usage: pdftoppm [options] [PDF-file [PPM-file-prefix]]
 ```
 
 ## ref
-* https://poppler.freedesktop.org/
-* http://www.foolabs.com/xpdf/download.html
+- https://poppler.freedesktop.org/
+- http://www.foolabs.com/xpdf/download.html
 

@@ -1,7 +1,7 @@
 # HTTPd a.k.a Apache Web Server
-* https://httpd.apache.org
+- https://httpd.apache.org
 
-* 2.2.29 + php-5.2.17
+- 2.2.29 + php-5.2.17
 
 ```
 wget http://archive.apache.org/dist/httpd/httpd-2.2.29.tar.gz
@@ -41,4 +41,4 @@ cd /usr/local/apache/htdocs/
 ```
 
 ## ref
-* https://dan.drydog.com/apache2php.html
+- https://dan.drydog.com/apache2php.html

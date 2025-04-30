@@ -1,12 +1,12 @@
 # aws cli
-* https://aws.amazon.com/ko/cli/
-* AWS Command Line Interface
-* EC2, S3 등을 명령어로 제어
+- https://aws.amazon.com/ko/cli/
+- AWS Command Line Interface
+- EC2, S3 등을 명령어로 제어
 
 ## 절차
-* IAM에서 계정 생성
+- IAM에서 계정 생성
   * https://console.aws.amazon.com/iam/home
-* credentials 등록 후 사용
+- credentials 등록 후 사용
 
 ## 설치
 *
@@ -70,11 +70,11 @@ aws ec2 run-instances --image-id ami-0db78afd3d150fc18 --security-group-ids okde
 ```
 
 ## 참고:
-* Deploying a Development Environment in Amazon EC2 Using the AWS Command Line Interface
+- Deploying a Development Environment in Amazon EC2 Using the AWS Command Line Interface
   * http://docs.aws.amazon.com/cli/latest/userguide/tutorial-ec2-ubuntu.html
-* Finding a Linux AMI
+- Finding a Linux AMI
   * http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/finding-an-ami.html
-* AWS Command Line Interface
+- AWS Command Line Interface
   * https://aws.amazon.com/ko/cli/
-* S3 Reference
+- S3 Reference
   * http://docs.aws.amazon.com/cli/latest/reference/s3/

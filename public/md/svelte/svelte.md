@@ -1,5 +1,5 @@
 # Svelte
-* [Svelte](https://svelte.dev/)
+- [Svelte](https://svelte.dev/)
 
 ```sh
 npm create vite svelte-vite -- --template svelte

@@ -1,6 +1,6 @@
 # day.js
-* https://github.com/iamkun/dayjs
-* better than `moment.js`
+- https://github.com/iamkun/dayjs
+- better than `moment.js`
 
 ## install
 ```

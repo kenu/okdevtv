@@ -58,5 +58,5 @@ Chapter 12, Miscellaneous Functions
   * contrast PHP and Node.js
 
 ## Node.js for Java Developer
-* enide plugin
-* https://strongloop.com/strongblog/node-js-java-getting-started/
+- enide plugin
+- https://strongloop.com/strongblog/node-js-java-getting-started/

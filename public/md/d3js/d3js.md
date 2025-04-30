@@ -1,15 +1,15 @@
 # D3 js
-* https://d3js.org
-* Data-Driven Documents
+- https://d3js.org
+- Data-Driven Documents
 
-* script
+- script
 ```
 <script src="https://d3js.org/d3.v4.min.js"></script>
 ```
 
 
 ## Selections
-* example
+- example
   * legacy
 ```
 var paragraphs = document.getElementsByTagName("p");
@@ -54,7 +54,7 @@ d3.selectAll("p")
 ## Transitions
 
 ## ref
-* 한국 지도
+- 한국 지도
   * http://codefactory.kr/demos/D3/korean-map/
   
 

@@ -1,6 +1,6 @@
 # nginx errors
 
-* 413 Request Entity Too Large
+- 413 Request Entity Too Large
   * msg
 ```
 error: RPC failed; HTTP 413 curl 22 The requested URL returned error: 413 Request Entity Too Large

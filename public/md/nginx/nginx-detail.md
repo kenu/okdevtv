@@ -2,9 +2,9 @@
 
 ## nginx in each os
 
-* CentOS는 `yum install nginx` 전에 `yum install epel-release` 필요
-* CentOS 6.x에서 epel-release는 1.0.x 버전의 구형 nginx 설치됨
-* CentOS 7.x에서 service는 systemctl로 바뀜
+- CentOS는 `yum install nginx` 전에 `yum install epel-release` 필요
+- CentOS 6.x에서 epel-release는 1.0.x 버전의 구형 nginx 설치됨
+- CentOS 7.x에서 service는 systemctl로 바뀜
 
 ```sh
 ### CentOS 7.x
@@ -77,7 +77,7 @@ sudo htpasswd /etc/nginx/htpasswd.users kenuheo
 sudo vi /etc/nginx/nginx.conf
 ```
 
-* `/server_name` 으로 검색해서 아래와 같이 수정
+- `/server_name` 으로 검색해서 아래와 같이 수정
 
 ```
     server {
@@ -121,13 +121,13 @@ sudo service nginx restart
 
 
 ### proxy 안되는 경우
-* /var/log/nginx/error.log 파일 확인
+- /var/log/nginx/error.log 파일 확인
 
 ```
 2017/03/31 06:03:21 [crit] 1915#0: *8 connect() to 127.0.0.1:3000 failed (13: Permission denied) while connecting to upstream, client: 223.38.60.90, server: _, request: "GET /poweredby.png HTTP/1.1", upstream: "http://127.0.0.1:3000/poweredby.png", host: "104.197.6.69", referrer: "http://104.197.6.69/"
 ```
   * from: http://stackoverflow.com/questions/23948527/13-permission-denied-while-connecting-to-upstreamnginx
-* 해결 방법
+- 해결 방법
 
 ```
 sudo setsebool -P httpd_can_network_connect 1
@@ -136,13 +136,13 @@ sudo service nginx restart
 
 
 ## centos6.* 경우
-* epel의 nginx 버전이 `1.0.*`로 낮음
-* ssl_stapling 옵션 지원 안됨.
+- epel의 nginx 버전이 `1.0.*`로 낮음
+- ssl_stapling 옵션 지원 안됨.
 
 ```
 nginx           x86_64           1.0.15-12.el6           @epel           1.1 M
 ```
-* nginx repo 지정 후 설치
+- nginx repo 지정 후 설치
 
 ```
 vi /etc/yum.repos.d/nginx.repo
@@ -172,7 +172,7 @@ proxy_set_header Connection "upgrade"; # ws
 ```
 
 ## CentOS on GCP
-* [err]
+- [err]
 `connect() to 127.0.0.1:5601 failed (13: Permission denied) while connecting to upstream, client`
 
 ```
@@ -182,10 +182,10 @@ proxy_set_header Connection "upgrade"; # ws
 ```
 
 ## 관련
-* nginx basic https://okdevtv.com/mib/nginx
-* letsencrypt https://okdevtv.com/mib/letsencrypt
-* elk https://okdevtv.com/mib/elk
+- nginx basic https://okdevtv.com/mib/nginx
+- letsencrypt https://okdevtv.com/mib/letsencrypt
+- elk https://okdevtv.com/mib/elk
 
 ## 참고
-* http://nginx.org/
-* https://www.digitalocean.com/community/tutorials/how-to-install-elasticsearch-logstash-and-kibana-elk-stack-on-ubuntu-14-04
+- http://nginx.org/
+- https://www.digitalocean.com/community/tutorials/how-to-install-elasticsearch-logstash-and-kibana-elk-stack-on-ubuntu-14-04

@@ -1,5 +1,5 @@
 # JDBC
-* Java Database Connectivity
+- Java Database Connectivity
 
 ## Basic Process
 1. get JAR file for each DB

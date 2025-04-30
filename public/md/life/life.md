@@ -1,4 +1,4 @@
 # Life
 
-* without liquor
-* without money
+- without liquor
+- without money

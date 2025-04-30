@@ -1,5 +1,5 @@
 # Theano
-* Python library for mathematical expressions.
+- Python library for mathematical expressions.
 
 ## Installation
 ```
@@ -7,8 +7,8 @@ pip install Theano
 ```
 
 ## Prerequisite
-* numpy
-* Adding two Scalars
+- numpy
+- Adding two Scalars
 
 ```py
 import numpy
@@ -52,7 +52,7 @@ numpy.allclose(z.eval({x : 16.3, y : 12.1}), 28.4)
 True
 ```
 
-* Adding two Matrices
+- Adding two Matrices
 
 ```py
 x = T.dmatrix('x')
@@ -63,7 +63,7 @@ f([[1, 2], [3, 4]], [[10, 20], [30, 40]])
 array([[ 11.,  22.],
        [ 33.,  44.]])
 ```
-* more
+- more
   * http://deeplearning.net/software/theano/tutorial/examples.html
 
 
@@ -74,7 +74,7 @@ import theano.tensor as T
 ```
 
 ### Derivatives in Theano
-* Computing Gradients
+- Computing Gradients
   * http://deeplearning.net/software/theano/tutorial/gradients.html#computing-gradients
 
 ```py
@@ -111,7 +111,7 @@ array([[ 0.25      ,  0.19661193],
        [ 0.19661193,  0.10499359]])
 ```
 
-* Computing the Jacobian
+- Computing the Jacobian
   * http://deeplearning.net/software/theano/tutorial/gradients.html#computing-the-jacobian
 
 ```py
@@ -127,7 +127,7 @@ array([[ 8.,  0.],
 ```
 
 
-* Computing the Hessian
+- Computing the Hessian
   * http://deeplearning.net/software/theano/tutorial/gradients.html#computing-the-hessian
 
 ```py
@@ -143,6 +143,6 @@ array([[ 2.,  0.],
 ```
 
 ## 참고
-* Theano basic tutorial
+- Theano basic tutorial
   * http://deeplearning.net/software/theano/tutorial/
-* http://deeplearning.net/tutorial/
+- http://deeplearning.net/tutorial/

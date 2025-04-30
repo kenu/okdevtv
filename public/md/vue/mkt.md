@@ -1,3 +1,3 @@
 # Vue.js marketing modules
-* GA
+- GA
   * https://www.npmjs.com/package/vue-ga

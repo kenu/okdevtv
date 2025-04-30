@@ -1,16 +1,16 @@
 # PHP
-* A popular general-purpose scripting language
-* https://www.php.net/
+- A popular general-purpose scripting language
+- https://www.php.net/
 
 ## Installation
-* EC2
+- EC2
 
 ```sh
 sudo dnf install php php-fpm php-zip nginx -y
 sudo systemctl start php-fpm
 ```
 
-* composer
+- composer
   * php package manager
 
 ```sh
@@ -19,7 +19,7 @@ sudo mv composer.phar /usr/local/bin/composer
 composer -v
 ```
 
-* nginx
+- nginx
 
 ```sh
 sudo mkdir /etc/nginx/sites-available
@@ -50,5 +50,5 @@ curl localhost/info.php
 ```
 
 ## related
-* [nginx-php](/mib/php/nginx-php)
-* [win-php](/mib/php/win-php)
+- [nginx-php](/mib/php/nginx-php)
+- [win-php](/mib/php/win-php)

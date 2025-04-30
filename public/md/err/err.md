@@ -2,7 +2,7 @@
 
 ## gyp verb could not find "python"
 
-* log
+- log
 
 ```
 gyp verb could not find "python". checking python launcher
@@ -10,23 +10,23 @@ gyp verb could not find "python". guessing location
 gyp verb ensuring that file exists: C:\Python27\python.exe
 ```
 
-* solv 1
+- solv 1
 
   * delete node_modules folder
   * running `npm install --global windows-build-tools`
   * reinstalling node modules or node-sass with `npm install`
   * **`node-sass` should check the node version** [more](https://github.com/sass/node-sass/releases)
 
-* solv 2
+- solv 2
   * download and install Python2.7
   * https://www.python.org/downloads/release/python-2717/
 
-* ref
+- ref
   * https://stackoverflow.com/a/53009640
 
 ## unable to verify the first certificate
 
-* log
+- log
 
 ```
 Error: unable to verify the first certificate
@@ -38,7 +38,7 @@ Downloading Python failed. Error: Error: unable to verify the first certificate
   code: 'UNABLE_TO_VERIFY_LEAF_SIGNATURE'
 ```
 
-* solv
+- solv
 
 ```
 npm config set strict-ssl false
@@ -47,12 +47,12 @@ npm config set strict-ssl false
 npm config set strict-ssl true
 ```
 
-* ref
+- ref
   * https://stackoverflow.com/a/21385322/510222
 
 ## SCRIPT1046: strict 모드에서는 속성을 여러 번 정의할 수 없습니다.
 
-* log
+- log
 
 ```
 SCRIPT1046: strict 모드에서는 속성을 여러 번 정의할 수 없습니다.
@@ -66,7 +66,7 @@ app.js (661,1)
                     },
 ```
 
-* solv
+- solv
 
 ```
 # before
@@ -84,7 +84,7 @@ v-model="checkedIdx">
 
 ## SCRIPT1003: ':'가 필요합니다.
 
-* log
+- log
 
 ```
 SCRIPT1003: ':'가 필요합니다.
@@ -101,7 +101,7 @@ chunk-vendors.js (506,1)
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var resize_detector__WEBPACK_IMPORTED_MODULE_0__ =
 ```
 
-* solv
+- solv
 
 ```
 # vue.config.js
@@ -112,10 +112,10 @@ module.exports = {
   ],
 ```
 
-* log
-* `Could not initialize class org.apache.maven.plugin.war.util.WebappStructureSerializer	pom.xml	/org.springframework.samples.jpetstore	line 1	Maven Configuration Problem`
+- log
+- `Could not initialize class org.apache.maven.plugin.war.util.WebappStructureSerializer	pom.xml	/org.springframework.samples.jpetstore	line 1	Maven Configuration Problem`
 
-* solv
+- solv
 
 ```xml
 <plugin>
@@ -124,15 +124,15 @@ module.exports = {
     <version>3.3.1</version>
 </plugin>
 ```
-* https://stackoverflow.com/a/68598931/510222
+- https://stackoverflow.com/a/68598931/510222
 
-* log
-* `cvc-id.3: A field of identity constraint 'web-app-servlet-name-uniqueness' matched element 'web-app', but this element does not have a simple type.	web.xml`
+- log
+- `cvc-id.3: A field of identity constraint 'web-app-servlet-name-uniqueness' matched element 'web-app', but this element does not have a simple type.	web.xml`
 
-* solv
+- solv
 
 ```
 xsi:schemaLocation="http://Java.sun.com/xml/ns/javaee
 ```
-* web-app 태그의 sci:schemaLocation 의 java를 Java 대문자로 변경하면 해결
-* https://heekng.tistory.com/95
+- web-app 태그의 sci:schemaLocation 의 java를 Java 대문자로 변경하면 해결
+- https://heekng.tistory.com/95

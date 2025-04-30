@@ -1,15 +1,15 @@
 # React.js Axios
-* React.js에서 axios 라이브러리 사용법을 Spring Boot 코드와 함께 설명
-* React.js의 기본 API
+- React.js에서 axios 라이브러리 사용법을 Spring Boot 코드와 함께 설명
+- React.js의 기본 API
   * axios.get()
   * axios.post()
   * axios.put()
   * axios.delete()
-* 각 함수의 사용법은 이후 백엔드 코드와 함께 기술된다.
+- 각 함수의 사용법은 이후 백엔드 코드와 함께 기술된다.
 
 ## Requirements
-* node.js 20.*
-* openjdk 17.*, maven 3.8+
+- node.js 20.*
+- openjdk 17.*, maven 3.8+
 
 ## 프로젝트 세팅
 

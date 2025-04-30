@@ -1,11 +1,11 @@
 # Java Interface
-* 메소드 시그니처와 상수만 정의
-* 설계도(Specification)와 같은 역할
-* 다양한 방법으로 구현(implementation) 가능
-* 공통의 타입 역할
+- 메소드 시그니처와 상수만 정의
+- 설계도(Specification)와 같은 역할
+- 다양한 방법으로 구현(implementation) 가능
+- 공통의 타입 역할
 
 ## example
-* Car.java
+- Car.java
 
 ```java
 public interface Car {
@@ -14,7 +14,7 @@ public interface Car {
 }
 ```
 
-* Avante.java
+- Avante.java
 
 ```java
 public class Avante implements Car {
@@ -34,7 +34,7 @@ public class Avante implements Car {
 }
 ```
 
-* Matiz.java
+- Matiz.java
 
 ```java
 public class Matiz implements Car {
@@ -55,7 +55,7 @@ public class Matiz implements Car {
 ```
 
 
-* Drive.java
+- Drive.java
 
 ```java
 public class Drive {

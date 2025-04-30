@@ -1,10 +1,10 @@
 # PEP: 8
 ## Title: Style Guide for Python Code
-* from: https://peps.python.org/pep-0008/
-* Author: Guido van Rossum <guido@python.org>,
+- from: https://peps.python.org/pep-0008/
+- Author: Guido van Rossum <guido@python.org>,
         Barry Warsaw <barry@python.org>,
         Nick Coghlan <ncoghlan@gmail.com>
-* Created: 05-Jul-2001
+- Created: 05-Jul-2001
 
 
 Introduction

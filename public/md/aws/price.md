@@ -1,7 +1,7 @@
 # AWS prices
-* https://aws.amazon.com/ko/ec2/pricing/
+- https://aws.amazon.com/ko/ec2/pricing/
 
-* seoul
+- seoul
 
 ```
 t2.micro       1    변수      1    EBS 전용    $0.016 시간당
@@ -12,7 +12,7 @@ c4.4xlarge    16     62     30    EBS 전용    $0.907 시간당
 c4.8xlarge    36    132     60    EBS 전용    $1.815 시간당
 ```
 
-* virginia
+- virginia
 
 ```
 m4.10xlarge   40    124.5  160    EBS 전용    $2.155 시간당
@@ -25,7 +25,7 @@ g2.2xlarge     8     26     15     60 SSD     $0.65 시간당
 g2.8xlarge    32    104     60   2x120 SSD     $2.6 시간당
 ```
 
-* oregon
+- oregon
 
 ```
 m4.10xlarge    40    124.5  160    EBS 전용   $2.155 시간당

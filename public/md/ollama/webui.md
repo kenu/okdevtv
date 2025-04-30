@@ -1,8 +1,8 @@
 # open-webui
-* https://github.com/open-webui/open-webui
+- https://github.com/open-webui/open-webui
 
 ## requirement
-* [OLLAMA](/mib/ollama)
+- [OLLAMA](/mib/ollama)
 
 ## build and run
 
@@ -17,7 +17,7 @@ pip install -r requirements.txt
 bash start.sh
 ```
 
-* http://localhost:8080
+- http://localhost:8080
 
 ## Docker
 

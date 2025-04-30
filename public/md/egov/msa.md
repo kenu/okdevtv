@@ -1,13 +1,13 @@
 # eGovFrame MSA tutorial
-* https://github.com/eGovFramework/egovframe-msa-edu
+- https://github.com/eGovFramework/egovframe-msa-edu
 
 ## Skill Set
-* Spring Boot
-* Docker
-* MySQL
-* Redis
-* Zipkin
-* Next.JS
+- Spring Boot
+- Docker
+- MySQL
+- Redis
+- Zipkin
+- Next.JS
 
 ## MSA on EC2
 - starting order
@@ -38,9 +38,9 @@ git clone https://github.com/zsh-users/zsh-autosuggestions.git
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
 ```
 
-* vi ~/.zshrc
-* /(gi
-* dd
+- vi ~/.zshrc
+- /(gi
+- dd
 
 ```
 plugins=(
@@ -78,7 +78,7 @@ chmod +x $DOCKER_CONFIG/cli-plugins/docker-compose
 docker compose version
 ```
 
-* `sudo reboot`
+- `sudo reboot`
 
 ### msa sample
 
@@ -115,16 +115,16 @@ docker run -d -e TZ=Asia/Seoul -p 5672:5672 -p 15672:15672 rabbitmq:management
 docker run -d -e TZ=Asia/Seoul -p 9411:9411 openzipkin/zipkin
 ```
 
-* aws 보안 그룹 15672 추가
+- aws 보안 그룹 15672 추가
   * http://ipaddress:15672
 
-* aws 보안 그룹 9411 추가
+- aws 보안 그룹 9411 추가
   * http://ipaddress:9411
 
 
 
-* `cd ~/workspace.edu/egovframe-msa-edu/backend/config`
-* `vi ./src/main/resources/application.yml`
+- `cd ~/workspace.edu/egovframe-msa-edu/backend/config`
+- `vi ./src/main/resources/application.yml`
 
 ```yaml
       server:

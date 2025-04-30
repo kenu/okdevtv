@@ -1,15 +1,15 @@
 # SonarQube
-* 코드 품질 검사 도구
-* Continuous code quality
-* https://www.sonarqube.org/
+- 코드 품질 검사 도구
+- Continuous code quality
+- https://www.sonarqube.org/
 
 ## Features
-* Code smells
-* Bugs
-* Vulnerabilities
+- Code smells
+- Bugs
+- Vulnerabilities
 
 ## SonarQube
-* free
+- free
   * JavaScript/TypeScript
   * Java
   * Python
@@ -17,26 +17,26 @@
   * C#
   * Web
   * XML
-* Cost (Community Alternative)
+- Cost (Community Alternative)
   * COBOL, C/C++, PL/SQL, PL/I, ABAP, VB.NET, VB6, RPG, Flex, Objective-C, Swift
 
 ## SonarQube Scanner
-* Download http://docs.sonarqube.org/display/SCAN/Analyzing+with+SonarQube+Scanner
-* add sonar-scanner/bin directory to $PATH
-* check `sonar-scanner` cmd
-* npm
+- Download http://docs.sonarqube.org/display/SCAN/Analyzing+with+SonarQube+Scanner
+- add sonar-scanner/bin directory to $PATH
+- check `sonar-scanner` cmd
+- npm
 ```
 npm i -g sonar-scanner
 ```
 
 ## Generate User Token
-* http://localhost:9000/account/security/
-* use it in `sonar.login`
-* https://docs.sonarqube.org/latest/user-guide/user-token/
+- http://localhost:9000/account/security/
+- use it in `sonar.login`
+- https://docs.sonarqube.org/latest/user-guide/user-token/
 
 ## JavaScript/TypeScript
-* SonarJS plugin (default installed)
-* In project root directory, `sonar-project.properties`
+- SonarJS plugin (default installed)
+- In project root directory, `sonar-project.properties`
 
 ```
 # must be unique in a given SonarQube instance
@@ -57,11 +57,11 @@ sonar.login=${SONAR_TOKEN}
 # jest --coverage report
 # sonar.javascript.lcov.reportPaths=./coverage/lcov.info
 ```
-* run `sonar-scanner` in project root
+- run `sonar-scanner` in project root
 
 ## Java
-* In project root directory, `sonar-project.properties`
-* or maven pom.xml
+- In project root directory, `sonar-project.properties`
+- or maven pom.xml
 
 ```
 sonar.projectKey=swlabs:helper
@@ -75,7 +75,7 @@ sonar.login=${SONAR_TOKEN}
 ```
 
 ## Python
-* In project root directory, `sonar-project.properties`
+- In project root directory, `sonar-project.properties`
 
 ```
 sonar.projectKey=swlabs:django
@@ -86,8 +86,8 @@ sonar.login=${SONAR_TOKEN}
 ```
 
 ## CPP
-* Community Plugin sonar-cxx-plugin
-* https://github.com/SonarOpenCommunity/sonar-cxx
+- Community Plugin sonar-cxx-plugin
+- https://github.com/SonarOpenCommunity/sonar-cxx
 
 ```
 # must be unique in a given instance
@@ -111,7 +111,7 @@ sonar.exclusions=src/jsp/**,contrib/**
 ```
 
 ## android sonar
-* `app/build.gradle`
+- `app/build.gradle`
 
 ```
 apply plugin: "sonar-runner"
@@ -133,9 +133,9 @@ sonarRunner {
     }
 }
 ```
-* `./gradlew sonarRunner`
-* `open http://localhost:9000`
+- `./gradlew sonarRunner`
+- `open http://localhost:9000`
 
 ## ref
-* http://galmaegi74.tistory.com/9
-* https://docs.sonarsource.com/sonarqube/latest/analyzing-source-code/test-coverage/overview/
+- http://galmaegi74.tistory.com/9
+- https://docs.sonarsource.com/sonarqube/latest/analyzing-source-code/test-coverage/overview/

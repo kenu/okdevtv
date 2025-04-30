@@ -1,5 +1,5 @@
 # jupyter
-* `pip install jupyter`
+- `pip install jupyter`
 
 ## run
 ```
@@ -62,4 +62,4 @@ def query(sql, params):
 ```
 
 ## ref
-* https://www.dataquest.io/blog/jupyter-notebook-tips-tricks-shortcuts/
+- https://www.dataquest.io/blog/jupyter-notebook-tips-tricks-shortcuts/

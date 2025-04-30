@@ -1,5 +1,5 @@
 # Ballerina language
-* https://ballerina.io
+- https://ballerina.io
 
 ```bal
 public function main() returns error? {

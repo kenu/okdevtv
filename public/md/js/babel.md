@@ -1,13 +1,13 @@
 # Babel
-* JavaScript Compiler
-* https://babeljs.io
-* ES2015 and beyond
-* JSX and React
-* Type Annotations (Flow and TypeScript)
-* Pluggable
-* Debuggable
-* Spec Compliant
-* Compact
+- JavaScript Compiler
+- https://babeljs.io
+- ES2015 and beyond
+- JSX and React
+- Type Annotations (Flow and TypeScript)
+- Pluggable
+- Debuggable
+- Spec Compliant
+- Compact
 
 ```js
 // Babel Input: ES2015 arrow function
@@ -27,7 +27,7 @@ npm install --save-dev @babel/core @babel/cli @babel/preset-env
 npm install @babel/polyfill
 ```
 
-* `babel.config.js`
+- `babel.config.js`
 
 ```js
 const presets = [
@@ -56,10 +56,10 @@ module.exports = { presets };
 
 ## babel-jest
 
-* jest command
+- jest command
   * `npm i -g jest`
 
-* package.json
+- package.json
   * `npm i -D @babel/cli @babel/core @babel/preset-env babel-jest`
 
 ```json
@@ -71,7 +71,7 @@ module.exports = { presets };
   }
 ```
 
-* babel.config.js
+- babel.config.js
 
 ```js
 module.exports = {

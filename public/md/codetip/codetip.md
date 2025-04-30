@@ -1,6 +1,6 @@
 # Code Tips
 
-* JS sleep
+- JS sleep
 
 ```js
 function sleep(timeMillis, callback) {
@@ -10,7 +10,7 @@ function sleep(timeMillis, callback) {
 }
 ```
 
-* List of global custom functions
+- List of global custom functions
 
 ```js
 function QQQ() {
@@ -24,4 +24,4 @@ var list = Object.keys(window).filter(function (x) {
 });
 console.log(list);
 ```
-* ref: https://stackoverflow.com/questions/493833/list-of-global-user-defined-functions-in-javascript
+- ref: https://stackoverflow.com/questions/493833/list-of-global-user-defined-functions-in-javascript

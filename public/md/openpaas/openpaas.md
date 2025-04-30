@@ -1,5 +1,5 @@
 # Open PaaS
-* PaaS Builder
+- PaaS Builder
 
 
 ```
@@ -22,4 +22,4 @@ spring.datasource.schema=/home/ubuntu/OPENPAAS-IEDA-WEB/src/main/resources/schem
 spring.datasource.data=/home/ubuntu/OPENPAAS-IEDA-WEB/src/main/resources/data.sql
 
 
-* https://github.com/OpenPaaSRnD/Documents
+- https://github.com/OpenPaaSRnD/Documents

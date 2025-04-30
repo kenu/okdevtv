@@ -1,6 +1,6 @@
 # tensorflow ubuntu gpu
-* on aws ubuntu g2.2xlarge
-* k520, 8.0.44_367
+- on aws ubuntu g2.2xlarge
+- k520, 8.0.44_367
 
 ## VGA 확인
 ```sh
@@ -52,7 +52,7 @@ sudo ./cuda-linux64-rel-8.0.44-21122537.run
 sudo ./cuda-samples-linux-8.0.44-21122537.run
 ```
 
-* vi ~/.profile
+- vi ~/.profile
 ```sh
 export CUDA_HOME=/usr/local/cuda-8.0
 export PATH=/usr/local/cuda/bin:$PATH
@@ -64,8 +64,8 @@ source ~/.profile
 nvcc --version
 ```
 
-* https://developer.nvidia.com/rdp/cudnn-download
-* Download cuDNN v5 (May 27, 2016), for CUDA 8.0
+- https://developer.nvidia.com/rdp/cudnn-download
+- Download cuDNN v5 (May 27, 2016), for CUDA 8.0
 ```sh
 tar xvfz cudnn-8.0-linux-x64-v6.0.tgz
 cd cuda
@@ -108,7 +108,7 @@ sess = tf.Session(config=tf.ConfigProto(log_device_placement=True))
 print(sess.run(c))
 ```
 
-* output
+- output
 ```
 Device mapping:
 /job:localhost/replica:0/task:0/gpu:0 -> device: 0, name: Tesla K40c, pci bus
@@ -123,7 +123,7 @@ MatMul: /job:localhost/replica:0/task:0/gpu:0
 
 
 ## ref
-* http://www.pyimagesearch.com/2016/07/04/how-to-install-cuda-toolkit-and-cudnn-for-deep-learning/
-* http://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#axzz4dfIE2Rxb
-* AWS의 GPU를 이용한 TensorFlow
+- http://www.pyimagesearch.com/2016/07/04/how-to-install-cuda-toolkit-and-cudnn-for-deep-learning/
+- http://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#axzz4dfIE2Rxb
+- AWS의 GPU를 이용한 TensorFlow
   * http://goodtogreate.tistory.com/entry/AWS%EC%9D%98-GPU%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-TensorFlow

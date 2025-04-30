@@ -1,13 +1,13 @@
 # HTML
 
-* 1989 Tim Berners-Lee
+- 1989 Tim Berners-Lee
 
 ## 시작하기
-* 브라우저에서 보이는 태그 기반의 언어
-* 콘텐츠는 태그 사이에 위치
-* 웹 애플리케이션을 위한 HTML5 표준 2014 Q4 완성
-* 스타일은 CSS, 액션은 JavaScript에게 위임
-* 레이아웃은 CSS로 http://csszengarden.com
+- 브라우저에서 보이는 태그 기반의 언어
+- 콘텐츠는 태그 사이에 위치
+- 웹 애플리케이션을 위한 HTML5 표준 2014 Q4 완성
+- 스타일은 CSS, 액션은 JavaScript에게 위임
+- 레이아웃은 CSS로 http://csszengarden.com
 
 ## 페이지 소스 기본 구조
 ```html
@@ -27,27 +27,27 @@ title, meta, link, script
 `<태그 속성="값">콘텐츠</태그>`
 
 ### 태그의 종류
-* 헤드
+- 헤드
   * doctype, html, head, title, base, link, meta, style, script, noscript
-* 섹션
+- 섹션
   * body, article, nav, aside, section, header, footer, h1-h6, main, address,
-* 그루핑
+- 그루핑
   * p, hr, pre, blockquote, ol, ul, li, dl, dt, dd, figure, figcaption, div
-* 테이블
+- 테이블
   * table, caption, thead, tbody, tfoot, tr, th, td, col, colgroup
-* 폼
+- 폼
   * form, fieldset, legend, label, input, button, select, datalist, optgroup, option, textarea
-* 폼2
+- 폼2
   * keygen, output, progress, meter
-* 인터랙티브
+- 인터랙티브
   * details, summary, command, menu
-* 편집
+- 편집
   * del, ins
-* 임베디드
+- 임베디드
   * img, iframe, embed, object, param, video, audio, source, canvas, track, map, area
-* 텍스트-레벨
+- 텍스트-레벨
   * a, em, strong, i, b, u, s, small, abbr, q, cite, dfn, sub, sup
-* 텍스트-레벨2
+- 텍스트-레벨2
   * time, code, kbd, samp, var, mark, bdi, bdo, ruby, rt, rp, span, br, wbr
 
 ## 기본 HTML
@@ -64,12 +64,12 @@ title, meta, link, script
 ```
 
 ## 참고
-* HTML5 템플릿
+- HTML5 템플릿
   * https://html5up.net
   * [list](/mib/html/html5upnet)
-* A history of HTML
+- A history of HTML
   * http://www.w3.org/People/Raggett/book4/ch02.html
-* w3schools
+- w3schools
   * http://www.w3schools.com/html/
-* HTML5 Doctor
+- HTML5 Doctor
   * http://html5doctor.com/

@@ -1,6 +1,6 @@
 # Google Auth
 
-* https://developers.google.com/identity/protocols/OAuth2
+- https://developers.google.com/identity/protocols/OAuth2
 
 
 ## procedure
@@ -15,5 +15,5 @@ image from: https://developers.google.com/identity/protocols/OAuth2InstalledApp
 
 
 ## 참고
-* Login with Google using PHP
-* https://www.sanwebe.com/2012/11/login-with-google-api-php
+- Login with Google using PHP
+- https://www.sanwebe.com/2012/11/login-with-google-api-php

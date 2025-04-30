@@ -1,7 +1,7 @@
 # OBS Open Broadcasting System
   * 맥에서 아프리카 방송하기
 
-* http://bit.ly/macfreeca
+- http://bit.ly/macfreeca
 
 ## Afreeca 설정
 <img src="images/obs01.webp" alt="" class="img">

@@ -9,7 +9,7 @@
 ## In AWS install Yona
 
 ### Prerequisite
-* MariaDB 설치
+- MariaDB 설치
 
 ```sh
 sudo dnf install mariadb105-server -y
@@ -33,14 +33,14 @@ create database yona DEFAULT CHARACTER SET utf8mb4 DEFAULT COLLATE utf8mb4_bin;
 GRANT ALL PRIVILEGES ON yona.* TO yona@localhost IDENTIFIED BY 'yonadan';
 ```
 
-* JDK 11 설치
+- JDK 11 설치
   * [install](/mib/java)
   * jna issue at aach64(Arm)
     * https://github.com/java-native-access/jna
     * wget https://repo1.maven.org/maven2/net/java/dev/jna/jna/5.14.0/jna-5.14.0.jar
 
 ### Install Yona
-* Yona 설치
+- Yona 설치
 
 ```sh
 mkdir local && cd local
@@ -67,8 +67,8 @@ db.default.password="yonadan"
 ```
 bin/yona
 ```
-* open browser and register admin account
-* http://ipaddress:9000
+- open browser and register admin account
+- http://ipaddress:9000
 
 ## Run Yona in Background
 
@@ -77,16 +77,16 @@ nohup bin/yona &
 ```
 
 ## DB Migration
-* `play_evolutions` 제외
+- `play_evolutions` 제외
 
 ## Err 발생시
-* `[error] play - Specified key was too long; max key length is 767 bytes [ERROR:1071, SQLSTATE:42000]`
+- `[error] play - Specified key was too long; max key length is 767 bytes [ERROR:1071, SQLSTATE:42000]`
 에러메시지를 만나면, MariaDB 삭제했다가 다시 설치
-* `sudo dnf uninstall -y MariaDB-server`
+- `sudo dnf uninstall -y MariaDB-server`
 
 
 ## Yona in Windows
-* 환경변수
+- 환경변수
 
 ```
 SET YONA_HOME=c:\yona\yona-1.16.0
@@ -106,7 +106,7 @@ sleep 5
 ```
 
 ## 참고
-* yona-1.16.0 설치 영상
+- yona-1.16.0 설치 영상
   * https://youtu.be/70N4yB5Tiys
-* yona-1.4.1 설치 영상
+- yona-1.4.1 설치 영상
   * https://youtu.be/B3Q2FVXZWBM

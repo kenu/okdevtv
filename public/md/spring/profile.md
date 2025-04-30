@@ -1,6 +1,6 @@
 # Spring Profiles
-* 환경에 맞게 설정을 가져오기
-* 여러가지 방식으로 설정
+- 환경에 맞게 설정을 가져오기
+- 여러가지 방식으로 설정
   * Bean @Profile
   * jvm properties
   * web.xml
@@ -28,7 +28,7 @@ public class DevDatasourceConfig
 </beans>
 ```
 
-* `WebApplicationInitializer`
+- `WebApplicationInitializer`
 
 ```java
 @Configuration
@@ -41,7 +41,7 @@ public class MyWebApplicationInitializer implements WebApplicationInitializer {
 }
 ```
 
-* `ConfigurableEnvironment`
+- `ConfigurableEnvironment`
 
 ```java
 @Autowired
@@ -50,26 +50,26 @@ private ConfigurableEnvironment env;
 env.setActiveProfiles("someProfile");
 ```
 
-* JVM System Parameter
+- JVM System Parameter
 
 ```
 -Dspring.profiles.active=dev
 ```
 
-* linux
+- linux
 
 ```
 export spring_profiles_active=dev
 ```
 
-* Test
+- Test
 
 ```java
 @ActiveProfiles("dev")
 ```
 
 ## related
-* [환경변수](/mib/env)
+- [환경변수](/mib/env)
 
 ## ref
-* https://www.baeldung.com/spring-profiles
+- https://www.baeldung.com/spring-profiles

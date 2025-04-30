@@ -1,14 +1,14 @@
 # ANT
-* https://ant.apache.org
-* build tool for tomcat build at first
-* OS independent
+- https://ant.apache.org
+- build tool for tomcat build at first
+- OS independent
 
 ## Download
-* unpack and set PATH env
+- unpack and set PATH env
 
 
 ## build.xml
-* structure
+- structure
 ```xml
 <project>
   <property />
@@ -31,4 +31,4 @@ ant targetname
 ```
 
 ## Task Manual
-* http://ant.apache.org/manual/index.html
+- http://ant.apache.org/manual/index.html

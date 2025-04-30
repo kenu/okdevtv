@@ -5,22 +5,22 @@
 
 
 2. fluentd 설치
-* requirement
+- requirement
   * ruby
   * make
   
 ### ruby 설치
-* `sudo apt-get install ruby-dev`
+- `sudo apt-get install ruby-dev`
 
 ### make 설치
-* `sudo apt-get install build-essential`
+- `sudo apt-get install build-essential`
 
 ### libcurl 설치
-* `sudo apt-get install libcurl4-openssl-dev`
+- `sudo apt-get install libcurl4-openssl-dev`
 
 
 ### flentd 설치
-* https://github.com/fluent/fluentd/#quick-start
+- https://github.com/fluent/fluentd/#quick-start
 ```
 gem install fluentd
 fluentd -s conf
@@ -32,20 +32,20 @@ echo '{"json":"message"}' | fluent-cat debug.test
 
 4. fluentd 설정 변경
 
-* 설정파일 폴더 생성
+- 설정파일 폴더 생성
 ```
 sudo mkdir /etc/fluentd
 mkdir -p ~/workspace/setting/fluentd/
 ```
 
-* fluentd 결과 로그 폴더 생성
+- fluentd 결과 로그 폴더 생성
 ```
 mkdir -p ~/log/fluentd/failed
 mkdir -p ~/log/fluentd/failed2
 ```
 
 ### fluentd 플러그인 설치
-* `gem list --local`
+- `gem list --local`
 
 #### before
 ```

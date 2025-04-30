@@ -1,10 +1,10 @@
 # JPA
-* Java Persistence API
-* ORM의 자바 표준 규격; Object Relation Mapping
-* Bridge between object models(Java) and relational models(database)
-* Relational: table 구조, Object: graph 구조
-* JSR 220, JSR 317, JSR 338
-* JPA Provider
+- Java Persistence API
+- ORM의 자바 표준 규격; Object Relation Mapping
+- Bridge between object models(Java) and relational models(database)
+- Relational: table 구조, Object: graph 구조
+- JSR 220, JSR 317, JSR 338
+- JPA Provider
   * Hibernate, Eclipselink, Toplink, Spring Data JPA, etc.
 
 <img src="images/object_relational_mapping.webp" class="img" alt="ORM">
@@ -19,13 +19,13 @@
 ## Class Level Architecture
 <img src="images/jpa_class_relationships.webp" class="img" alt="JPA Class Relationships">
 
-* javax.persistence.*
-* `Entity`: 데이터를 저장하기 위한 객체
-* `Persistence`: EntityManagerFactory 인스턴스를 제공하는 클래스
-* `Query`: 질의에 대한 관계형 객체를 가져오는 JPA 벤더에서 제공하는 구현체
-* `EntityTransaction`: EntityManager와 1:1의 관계
-* `EntityManager`: 객체의 퍼시스턴스 작업을 수행
-* `EntityManagerFactory`: EntityManager 생성
+- javax.persistence.*
+- `Entity`: 데이터를 저장하기 위한 객체
+- `Persistence`: EntityManagerFactory 인스턴스를 제공하는 클래스
+- `Query`: 질의에 대한 관계형 객체를 가져오는 JPA 벤더에서 제공하는 구현체
+- `EntityTransaction`: EntityManager와 1:1의 관계
+- `EntityManager`: 객체의 퍼시스턴스 작업을 수행
+- `EntityManagerFactory`: EntityManager 생성
 
 ## Annotation
 | Annotation | 기술 |
@@ -50,13 +50,13 @@
 | @OneToOne | 조인 테이블 간의 일 대 일 관계를 정의합니다. |
 | @NamedQueries | 명명된 쿼리 목록을 지정합니다. |
 | @NamedQuery | 정적 이름을 사용하여 쿼리를 지정합니다. |
-* https://www.tutorialspoint.com/jpa/jpa_quick_guide.htm
+- https://www.tutorialspoint.com/jpa/jpa_quick_guide.htm
 
 ## Entity
-* `@ManyToOne` Relation
-* `@OneToMany` Relation
-* `@OneToOne` Relation
-* `@ManyToMany` Relation
+- `@ManyToOne` Relation
+- `@OneToMany` Relation
+- `@OneToOne` Relation
+- `@ManyToMany` Relation
 
 ```java
 import javax.persistence.Entity;
@@ -110,6 +110,6 @@ public CommandLineRunner demo() {
 
 
 ## ref
-* https://www.tutorialspoint.com/jpa/jpa_introduction.htm
-* https://spring.io/guides/gs/accessing-data-jpa/
-* https://spring.io/guides/gs/accessing-data-rest/
+- https://www.tutorialspoint.com/jpa/jpa_introduction.htm
+- https://spring.io/guides/gs/accessing-data-jpa/
+- https://spring.io/guides/gs/accessing-data-rest/

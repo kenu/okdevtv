@@ -1,15 +1,15 @@
 # Spring Native
-* spring-boot 2.4.3+
-* GraalVM
+- spring-boot 2.4.3+
+- GraalVM
 
 ## Prerequisites
-* https://www.graalvm.org/reference-manual/native-image/#prerequisites
+- https://www.graalvm.org/reference-manual/native-image/#prerequisites
 
 ```
 sudo dnf install gcc glibc-devel zlib-devel
 ```
 
-* https://sdkman.io/install
+- https://sdkman.io/install
 
 ```
 curl -s "https://get.sdkman.io" | bash
@@ -37,6 +37,6 @@ target/com.example.restservice.restserviceapplication
 ```
 
 ## ref
-* https://docs.spring.io/spring-native/docs/current/reference/htmlsingle/
-* https://github.com/spring-projects-experimental/spring-native
-* https://www.graalvm.org/reference-manual/native-image/
+- https://docs.spring.io/spring-native/docs/current/reference/htmlsingle/
+- https://github.com/spring-projects-experimental/spring-native
+- https://www.graalvm.org/reference-manual/native-image/

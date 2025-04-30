@@ -1,5 +1,5 @@
 # Generic Types
-* A generic type is a generic class or interface that is parameterized over types.
+- A generic type is a generic class or interface that is parameterized over types.
 
 ## Generic example
 
@@ -60,10 +60,10 @@ Foo newFoo = my.doSomething(foo);
 Foo newFoo = (Foo) my.doSomething(foo); // Object typecasting
 ```
 
-* Two pros:
+- Two pros:
   * no need of casting (the compiler hides this from you)
   * compile time safety that works.
-* https://stackoverflow.com/a/5207140/510222
+- https://stackoverflow.com/a/5207140/510222
 
 ## ref
   * https://docs.oracle.com/javase/tutorial/java/generics/types.html

@@ -1,5 +1,5 @@
 # Node Schedule
-* https://www.npmjs.com/package/node-schedule
+- https://www.npmjs.com/package/node-schedule
 
 ## Example
 ```js

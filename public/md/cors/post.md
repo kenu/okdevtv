@@ -1,18 +1,18 @@
 # CORS window.postMessage
 
-* The window.postMessage() method safely enables cross-origin communication between Window objects;
-* e.g., between a page and a pop-up that it spawned, or between a page and an iframe embedded within it.
+- The window.postMessage() method safely enables cross-origin communication between Window objects;
+- e.g., between a page and a pop-up that it spawned, or between a page and an iframe embedded within it.
 
 ## sample
 
-* parent
+- parent
 
 ```js
 var frame = document.getElementById('ac');
 frame.contentWindow.postMessage({ call: 'sendValue', value: 'value'}, /*frame domain url or '*'*/);
 ```
 
-* child
+- child
 
 ```js
 window.addEventListener('message', function(event) {
@@ -26,5 +26,5 @@ window.addEventListener('message', function(event) {
 ```
 
 ## ref
-* https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage
-* https://githiub.com/kenu/ajaxcookie
+- https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage
+- https://githiub.com/kenu/ajaxcookie

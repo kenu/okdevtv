@@ -1,17 +1,17 @@
 # GitHub
-* Repository service using git
-* https://github.com
-* Fork
-* Pull Request
-* Private repo possible
-* CI: Actions
+- Repository service using git
+- https://github.com
+- Fork
+- Pull Request
+- Private repo possible
+- CI: Actions
 
 ## GitHub commit emoji
 <img src="images/gitmoji.webp" alt="gitmoji" class="img">
 
-* from: https://gist.github.com/parmentf/035de27d6ed1dce0b36a
-* related: https://gitmoji.dev
+- from: https://gist.github.com/parmentf/035de27d6ed1dce0b36a
+- related: https://gitmoji.dev
 
 ## related
-* [GitHub Actions](/mib/github/actions)
-* [GitHub Verified](/mib/github/verified)
+- [GitHub Actions](/mib/github/actions)
+- [GitHub Verified](/mib/github/verified)

@@ -1,6 +1,6 @@
 # Open Graph
-* 미리보기 콘텐츠
-* https://ogp.me/
+- 미리보기 콘텐츠
+- https://ogp.me/
 
 ```html
   <meta property="og:type" content="article">

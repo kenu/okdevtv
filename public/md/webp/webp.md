@@ -1,18 +1,18 @@
 # WebP
-* Optimized picture format by google
-* https://developers.google.com/speed/webp/
+- Optimized picture format by google
+- https://developers.google.com/speed/webp/
 
 ## install
-* `brew install webp`
+- `brew install webp`
 
 ## Usage
-* basic
+- basic
 ```sh
 cwebp filename.png -o filename.webp
 cwebp -q 80 filename.png -o filename.webp
 ```
 
-* resize
+- resize
 ```sh
 cwebp -q 80 -resize 440 276 filename.png -o filename.webp
 ```
@@ -33,9 +33,9 @@ brew cask install webpquicklook
 ```
 
 ## limit
-* only in Chrome and Android, not Safari, Firefox and IE
+- only in Chrome and Android, not Safari, Firefox and IE
 <img src="images/caniuse.webp" alt="webp limited" class="img"/>
-* check : http://caniuse.com/#feat=webp
+- check : http://caniuse.com/#feat=webp
 
 ## change.sh
 
@@ -60,5 +60,5 @@ done
 ```
 
 ## ref
-* https://developers.google.com/speed/webp/docs/cwebp
-* https://apps.microsoft.com/detail/9pg2dk419drg
+- https://developers.google.com/speed/webp/docs/cwebp
+- https://apps.microsoft.com/detail/9pg2dk419drg

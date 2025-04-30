@@ -35,4 +35,4 @@
 ```
 
 ## ref
-* https://spring.io/guides/gs/uploading-files/
+- https://spring.io/guides/gs/uploading-files/

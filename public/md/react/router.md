@@ -1,5 +1,5 @@
 # React Router
-* `react-router-dom`
+- `react-router-dom`
 
 ```html
 <BrowserRouter>
@@ -25,5 +25,5 @@
 ```
 
 ## ref
-* React Router v6
+- React Router v6
   * https://reactrouter.com/docs/en/v6/getting-started/overview

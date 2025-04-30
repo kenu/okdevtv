@@ -1,14 +1,14 @@
 # Elastic Kubernetes Service
 
 ## Requirements
-* awscli
+- awscli
   * https://docs.aws.amazon.com/ko_kr/cli/latest/userguide/cli-chap-install.html
-* kubectl
+- kubectl
   * https://kubernetes.io/docs/tasks/tools/install-kubectl/
-* IAM AdministratorAccess Permission
+- IAM AdministratorAccess Permission
 
 ## eksctl
-* https://docs.aws.amazon.com/ko_kr/eks/latest/userguide/getting-started-eksctl.html
+- https://docs.aws.amazon.com/ko_kr/eks/latest/userguide/getting-started-eksctl.html
 
 ### mac
 ```
@@ -77,14 +77,14 @@ redis-master   ClusterIP      10.100.236.142   <none>                           
 redis-slave    ClusterIP      10.100.55.192    <none>                                                                         6379/TCP         66s     app=redis,role=slave
 ```
 
-* https://raw.githubusercontent.com/kubernetes/examples/master/guestbook-go/redis-master-controller.json
-* https://raw.githubusercontent.com/kubernetes/examples/master/guestbook-go/redis-master-service.json
+- https://raw.githubusercontent.com/kubernetes/examples/master/guestbook-go/redis-master-controller.json
+- https://raw.githubusercontent.com/kubernetes/examples/master/guestbook-go/redis-master-service.json
 
-* https://raw.githubusercontent.com/kubernetes/examples/master/guestbook-go/redis-slave-controller.json
-* https://raw.githubusercontent.com/kubernetes/examples/master/guestbook-go/redis-slave-service.json
+- https://raw.githubusercontent.com/kubernetes/examples/master/guestbook-go/redis-slave-controller.json
+- https://raw.githubusercontent.com/kubernetes/examples/master/guestbook-go/redis-slave-service.json
 
-* https://raw.githubusercontent.com/kubernetes/examples/master/guestbook-go/guestbook-controller.json
-* https://raw.githubusercontent.com/kubernetes/examples/master/guestbook-go/guestbook-service.json
+- https://raw.githubusercontent.com/kubernetes/examples/master/guestbook-go/guestbook-controller.json
+- https://raw.githubusercontent.com/kubernetes/examples/master/guestbook-go/guestbook-service.json
 
 ```
 open http://a968acdc1ada211e9965e0a440f6d044-1573675550.ap-northeast-2.elb.amazonaws.com:3000
@@ -131,5 +131,5 @@ eksctl delete cluster --name okdevtv
 ```
 
 ## ref
-* eksctl
+- eksctl
   * https://docs.aws.amazon.com/ko_kr/eks/latest/userguide/getting-started-eksctl.html

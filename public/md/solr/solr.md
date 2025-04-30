@@ -6,10 +6,10 @@
   - real-time indexing
 
 ## Install
-* https://solr.apache.org/downloads.html
+- https://solr.apache.org/downloads.html
 
 ## Config
-* https://solr.apache.org/guide/
+- https://solr.apache.org/guide/
 
 ## Start
 ```sh

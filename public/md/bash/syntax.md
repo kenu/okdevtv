@@ -11,5 +11,5 @@ then
   pwd
 fi
 ```
-* https://ryanstutorials.net/bash-scripting-tutorial/bash-if-statements.php
+- https://ryanstutorials.net/bash-scripting-tutorial/bash-if-statements.php
 

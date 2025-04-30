@@ -47,45 +47,45 @@ JSON 데이터 처리
 
 
 #1 안드로이드 스튜디오 시작하기 (5/16 토)
-* https://okdevtv.com/android.html
+- https://okdevtv.com/android.html
 
 #2 모바일 서비스 기획서와 안드로이드 개발 (5/23 토)
 
 ### 목업(Mock Up) 도구
-* http://balsamiq.com
-* http://draw.io
-* http://ovenapp.io
+- http://balsamiq.com
+- http://draw.io
+- http://ovenapp.io
 
 참고: 
-* 어떻게 서비스 기획이 1주(5일)만에 이루어지는가|작성자 노노니
+- 어떻게 서비스 기획이 1주(5일)만에 이루어지는가|작성자 노노니
   * http://blog.naver.com/durandot/220348523459
 
 
 ### 페이지 플로우
-* 페이지 이동 흐름
-* 버튼과 화면 연결
+- 페이지 이동 흐름
+- 버튼과 화면 연결
 
 ### 사이트 인벤토리
-* 페이지 목록 리스트
+- 페이지 목록 리스트
 
 ## User Interface
-* http://developer.android.com/guide/topics/ui/index.html
+- http://developer.android.com/guide/topics/ui/index.html
 
 ### Layout
-* XML
-* load XML Resource
-* Attribute
+- XML
+- load XML Resource
+- Attribute
   * ID
   * Layout Parameters
     * wrap_content
     * match_parent
-* Layout Position
-* Size, Padding and Margins
-* Common Layouts
+- Layout Position
+- Size, Padding and Margins
+- Common Layouts
   * Linear Layout
   * Relative Layout
   * Web View
-* Layouts with an Adapter
+- Layouts with an Adapter
   * List View
   * Grid View
   * Filling an adapter view with data
@@ -93,15 +93,15 @@ JSON 데이터 처리
 
 
 ## 참고
-* Android UI Design Trends by **Antonio Leiva Gordillo**
+- Android UI Design Trends by **Antonio Leiva Gordillo**
   * http://www.slideshare.net/AntonioLeivaGordillo/android-ui-design-trends
-* Mobile UX Design Essential by **동준상**
+- Mobile UX Design Essential by **동준상**
   * http://www.slideshare.net/JonathanDong/mobile-ux-design-essential
-* 안드로이드 디자인 가이드 번역
+- 안드로이드 디자인 가이드 번역
   * http://klutzy.nanabi.org/android-design-ko
-* Material Design
+- Material Design
   * http://www.google.com/design/spec/material-design/introduction.html
-* Vogella Android Tutorials
+- Vogella Android Tutorials
   * http://www.vogella.com/tutorials/android.html
-* Android Material Design Example from 5.0 by **Android Hive**
+- Android Material Design Example from 5.0 by **Android Hive**
   * http://www.androidhive.info/2015/04/android-getting-started-with-material-design/

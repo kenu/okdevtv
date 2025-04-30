@@ -1,15 +1,15 @@
 # Jenkins + Docker + AWS EC2
-* 🪄 배포 자동화 [영상](https://youtube.com/playlist?list=PLDMPhWe3Cfpbgb2AepypBzWuuKy7-tw6q)
-* Create EC2 instance 4G RAM
-* Install Jenkins with openjdk, docker, git
-* Create private and public keys between servers
-* Create two EC2 instances 1G RAM
-* Install docker and run daemon for each
-* Install `Publish over SSH` plugin
-* Register app1, app2 in jenkins global setting
-* Create jenkins item
-* Run
-* Update code and deploy
+- 🪄 배포 자동화 [영상](https://youtube.com/playlist?list=PLDMPhWe3Cfpbgb2AepypBzWuuKy7-tw6q)
+- Create EC2 instance 4G RAM
+- Install Jenkins with openjdk, docker, git
+- Create private and public keys between servers
+- Create two EC2 instances 1G RAM
+- Install docker and run daemon for each
+- Install `Publish over SSH` plugin
+- Register app1, app2 in jenkins global setting
+- Create jenkins item
+- Run
+- Update code and deploy
 
 <img src="images/jenkins-docker.webp" alt="jenkins docker" />
 

@@ -1,11 +1,11 @@
 # VSCode Snippet
-* 자주 쓰는 코드 조각
+- 자주 쓰는 코드 조각
 
 ## 등록
-* `Preferences: Configure User Snippets`
-* `New Global Snippets file...`
-* Snippet File 이름 입력
-* 템플릿 샘플 복사
+- `Preferences: Configure User Snippets`
+- `New Global Snippets file...`
+- Snippet File 이름 입력
+- 템플릿 샘플 복사
 
 ```json
   "Print to console": {
@@ -19,7 +19,7 @@
   }
 ```
 
-* 주석 번역
+- 주석 번역
 ```
 여기에 전역 스니펫을 배치합니다. 각 스니펫은 스니펫 이름으로 정의되며
 scope(범위), prefix(접두사), body(본문) 및 description(설명)이 필요합니다.

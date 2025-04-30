@@ -1,6 +1,6 @@
 # java enum
 
-* [java enum](https://limkydev.tistory.com/66)
+- [java enum](https://limkydev.tistory.com/66)
 
 ## Example
 

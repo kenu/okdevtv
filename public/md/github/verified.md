@@ -1,8 +1,8 @@
 ## GitHub `Verified`
-* GPG 또는 S/MIME을 사용하여 로컬에서 작업에 서명(Verified) 가능
-* 서명을 확인하여 다른 사람들이 당신의 커밋이 신뢰할 수 있는 소스 표시
-* gpg 키 생성
-* GitHub 이메일 사용
+- GPG 또는 S/MIME을 사용하여 로컬에서 작업에 서명(Verified) 가능
+- 서명을 확인하여 다른 사람들이 당신의 커밋이 신뢰할 수 있는 소스 표시
+- gpg 키 생성
+- GitHub 이메일 사용
 
 ```sh
 gpg --list-secret-keys --keyid-format=long
@@ -79,7 +79,7 @@ uid                 [ultimate] kenu (okdevtv) <kenu.123@gmail.com>
 ssb   cv25519/85F2A9345731288F 2022-07-11 [E]
 ```
 
-* 퍼블릭 키 생성
+- 퍼블릭 키 생성
 
 ```
 ➜  ~ gpg --armor --export `803A32OKDEVTV355`
@@ -95,9 +95,9 @@ j7gKAP9SxmHCksD3rhA7qQUq2vNHIuwP+FRlFabNF4qUumiPDQ==
 ➜  ~
 ```
 
-* 퍼블릭 키를 GitHub Settings → SSH and GPG keys 에 등록
-* https://github.com/settings/keys
+- 퍼블릭 키를 GitHub Settings → SSH and GPG keys 에 등록
+- https://github.com/settings/keys
 
 ## ref
-* GitHub - 소스 커밋 서명 관리
+- GitHub - 소스 커밋 서명 관리
   * https://docs.github.com/en/authentication/managing-commit-signature-verification

@@ -1,7 +1,7 @@
 # VSCode Debugging
 
 ## Node.js
-* `.vscode/launch.json`
+- `.vscode/launch.json`
 
 ```json
 {

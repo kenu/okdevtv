@@ -1,14 +1,14 @@
-* PaaS-TA 개발 가이드
+- PaaS-TA 개발 가이드
 https://paas-ta.kr/download/guide_develop
 
-* Elastic Beanstalk
+- Elastic Beanstalk
 https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/concepts.platforms.html
 
-* AppEngine
+- AppEngine
 https://cloud.google.com/appengine/docs/
 
-* AppService
+- AppService
 https://docs.microsoft.com/en-us/azure/
 
-* Heroku
+- Heroku
 https://www.heroku.com/languages 

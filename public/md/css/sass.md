@@ -1,6 +1,6 @@
 # Sass: Syntactically Awesome Style Sheets
 
-* https://sass-lang.com/
+- https://sass-lang.com/
 
  
 

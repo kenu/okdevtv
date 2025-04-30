@@ -1,7 +1,7 @@
 # AWS Lambda
-* Function hosting service
+- Function hosting service
 
-* Configure function
+- Configure function
   * languages : Java 8, NodeJS, Node.js 4.3, Python 2.7
 
 ```
@@ -11,14 +11,14 @@ def lambda_handler(event, context):
 ```
 
 ## How to
-* Name, Description, Runtime
-* Input Code or upload .ZIP
-* Handler : lambda_function.lambda_handler
-* Role
-* Memory 128MB+
-* Timeout 3sec+
-* VPC
+- Name, Description, Runtime
+- Input Code or upload .ZIP
+- Handler : lambda_function.lambda_handler
+- Role
+- Memory 128MB+
+- Timeout 3sec+
+- VPC
 
 ## Trigger
-* API Gateway -> Lambda
+- API Gateway -> Lambda
 

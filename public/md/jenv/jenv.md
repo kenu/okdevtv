@@ -1,17 +1,17 @@
 # jenv
-* https://www.jenv.be/
-* Java environment manager
+- https://www.jenv.be/
+- Java environment manager
 
-* `brew install jenv`
-* `git clone https://github.com/gcuisinier/jenv.git ~/.jenv`
-* `echo 'export PATH="$HOME/.jenv/bin:$PATH"' >> ~/.zshrc`
+- `brew install jenv`
+- `git clone https://github.com/gcuisinier/jenv.git ~/.jenv`
+- `echo 'export PATH="$HOME/.jenv/bin:$PATH"' >> ~/.zshrc`
 
-* `jenv install go`
+- `jenv install go`
 
-* `jenv list java`
+- `jenv list java`
 
 ## set jdk
-* for redistribution issue download and install from OpenJDK https://github.com/ojdkbuild/ojdkbuild
+- for redistribution issue download and install from OpenJDK https://github.com/ojdkbuild/ojdkbuild
 
 ```
 mkdir -p $HOME/.jenv/candidates/java
@@ -33,4 +33,4 @@ jenv default java 1.8.0_144
 
 
 ## ref
-* http://www.jenv.be/ Another jenv
+- http://www.jenv.be/ Another jenv

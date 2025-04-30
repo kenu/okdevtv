@@ -1,12 +1,12 @@
 # php
 
 ## php for windows
-* https://nginx.org
-* http://windows.php.net
+- https://nginx.org
+- http://windows.php.net
   * x86 Non Thread Safe
 
 ### config
-* conf/nginx.conf
+- conf/nginx.conf
 ```
 location / {
     root   html;
@@ -14,7 +14,7 @@ location / {
 }
 ```
 
-* Uncomment and change to nginx home path
+- Uncomment and change to nginx home path
 ```
 # pass the PHP scripts to FastCGI server listening on 127.0.0.1:9000
 #
@@ -44,7 +44,7 @@ tasklist /fi "imagename eq nginx.exe"
 ```
 
 
-* stop
+- stop
 ```
 nginx -s stop
 ```
@@ -54,12 +54,12 @@ nginx -s stop
 
 ## Reserved Keywords
 
-* Read Environment Variables
+- Read Environment Variables
 ```
 $_ENV["USER"]
 ```
 
-* Web root path
+- Web root path
 ```
 $_SERVER['DOCUMENT_ROOT']
 ```
@@ -68,9 +68,9 @@ $_SERVER['DOCUMENT_ROOT']
 
 
 ## ref
-* nginx-php
+- nginx-php
   * [/mib/php/nginx-php](/mib/php/nginx-php)
-* 윈도우(Windows) nginx와 php 연동하기
+- 윈도우(Windows) nginx와 php 연동하기
   * http://homaki.tistory.com/
-* nginx for Windows
+- nginx for Windows
   * http://nginx.org/en/docs/windows.html

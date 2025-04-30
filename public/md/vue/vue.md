@@ -1,7 +1,7 @@
 # Vue.js
-* https://vuejs.org/
-* https://kr.vuejs.org/v2/guide/
-* The Progressive JavaScript Framework
+- https://vuejs.org/
+- https://kr.vuejs.org/v2/guide/
+- The Progressive JavaScript Framework
 
 ```html
 <script src="https://cdn.jsdelivr.net/npm/vue"></script>
@@ -148,9 +148,9 @@ const app7 = new Vue({
 ```
 
 ## 디렉티브(Directive)
-* 라이브러리가 DOM 엘리먼트에 무엇인가를 하도록 지시하는 특별한 토큰
-* `v-if`, `v-for`, `v-show`, `v-model` 등
-* 문법
+- 라이브러리가 DOM 엘리먼트에 무엇인가를 하도록 지시하는 특별한 토큰
+- `v-if`, `v-for`, `v-show`, `v-model` 등
+- 문법
 
 ```js
 <element
@@ -159,14 +159,14 @@ const app7 = new Vue({
 ```
 
 ## ref
-* [Vue 3](/mib/vue/vue3)
-* [Vue Router](/mib/vue/router)
-* [Vue GA](/mib/vue/mkt)
-* [Vue Performance](/mib/vue/perf)
-* [Pinia](/mib/vue/pinia)
-* [Vuex](/mib/vue/vuex)
-* [NuxtJS](/mib/nuxt)
+- [Vue 3](/mib/vue/vue3)
+- [Vue Router](/mib/vue/router)
+- [Vue GA](/mib/vue/mkt)
+- [Vue Performance](/mib/vue/perf)
+- [Pinia](/mib/vue/pinia)
+- [Vuex](/mib/vue/vuex)
+- [NuxtJS](/mib/nuxt)
 
 ## example
-* 01: https://okdevtv.com/md/vue/examples/vue01.html
+- 01: https://okdevtv.com/md/vue/examples/vue01.html
 

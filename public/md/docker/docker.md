@@ -1,12 +1,12 @@
 # Docker
 
-* http://docker.com
-* Build, Ship, Run
-* 개발자와 시스템어드민을 위한 분산 애플리케이션용 오픈 플랫폼
+- http://docker.com
+- Build, Ship, Run
+- 개발자와 시스템어드민을 위한 분산 애플리케이션용 오픈 플랫폼
 
 ## Install
-* https://hub.docker.com/ id 생성
-* Docker 설치
+- https://hub.docker.com/ id 생성
+- Docker 설치
   * https://www.docker.com/products/docker-desktop/
   * https://orbstack.dev/ (macOS)
 
@@ -20,16 +20,16 @@ docker container ls
 docker container ls -a
 ```
 
-* `docker run hello-world`
+- `docker run hello-world`
   * docker : 시스템에 있는 docker 사용
   * run : 서브명령, 컨테이너 실행
   * hello-world : 컨테이너에 실을 이미지 이름
-* 컨테이너는 아무것도 꾸미지 않은 버전의 리눅스 운영체제
-* 고래가라사대
+- 컨테이너는 아무것도 꾸미지 않은 버전의 리눅스 운영체제
+- 고래가라사대
   * docker hub 이미지 정보
     * 포함한 소프트웨어 종류와 사용법
-* `docker run -it -p 80:80 docker/getting-started`
-* stop
+- `docker run -it -p 80:80 docker/getting-started`
+- stop
 
 ```
 ➜  ~ docker ps
@@ -49,7 +49,7 @@ docker exec -it  92d58318f84e /bin/bash
 ```
 
 ## 이미지 불러오기
-* `docker pull imagename`
+- `docker pull imagename`
 
 ## 컨테이너 전체 삭제
 ```
@@ -59,10 +59,10 @@ docker rm $(docker ps -aq)
 ```
 
 ## 이미지 만들기
-* https://docs.docker.com/get-started/workshop/02_our_app/
-* `git clone https://github.com/docker/getting-started-app.git`
-* `cd getting-started-app`
-* create `Dockerfile`
+- https://docs.docker.com/get-started/workshop/02_our_app/
+- `git clone https://github.com/docker/getting-started-app.git`
+- `cd getting-started-app`
+- create `Dockerfile`
 
 ```dockerfile
 # syntax=docker/dockerfile:1
@@ -75,17 +75,17 @@ CMD ["node", "src/index.js"]
 EXPOSE 3000
 ```
 
-* `docker build -t getting-started .`
-* `docker run -p 4000:80 getting-started`
-* `curl localhost:4000`
-* `docker tag getting-started kenu/get-started:part2`
+- `docker build -t getting-started .`
+- `docker run -p 4000:80 getting-started`
+- `curl localhost:4000`
+- `docker tag getting-started kenu/get-started:part2`
 
 ## 이미지 업로드
-* `docker push kenu/get-started:part2`
+- `docker push kenu/get-started:part2`
 
 ## 원격 이미지 로컬에서 실행
-* `docker run -p 4000:80 kenu/get-started:part2`
-* `curl localhost:4000`
+- `docker run -p 4000:80 kenu/get-started:part2`
+- `curl localhost:4000`
 
 ## 업로드 이미지 삭제
 ```
@@ -99,10 +99,10 @@ curl -u $USERNAME:$PASSWORD -X "DELETE" https://cloud.docker.com/v2/repositories
 ```
 
 ## 네트워크
-* https://docs.docker.com/engine/tutorials/networkingcontainers/
+- https://docs.docker.com/engine/tutorials/networkingcontainers/
 
 ## AWS EC2
-* docker 설치
+- docker 설치
 
 ```
 sudo dnf update -y
@@ -115,7 +115,7 @@ sudo reboot
 docker ps
 ```
 
-* docker-compose 설치
+- docker-compose 설치
   * https://docs.docker.com/compose/install/
 
 ```sh
@@ -123,8 +123,8 @@ DOCKER_CONFIG=${DOCKER_CONFIG:-$HOME/.docker}
 mkdir -p $DOCKER_CONFIG/cli-plugins
 ```
 
+- https://github.com/docker/compose/releases/ # new version
 ```sh
-# https://github.com/docker/compose/releases/
 curl -SL https://github.com/docker/compose/releases/download/v2.35.1/docker-compose-linux-x86_64 -o $DOCKER_CONFIG/cli-plugins/docker-compose
 curl -SL https://github.com/docker/compose/releases/download/v2.35.1/docker-compose-linux-aarch64 -o $DOCKER_CONFIG/cli-plugins/docker-compose
 chmod +x $DOCKER_CONFIG/cli-plugins/docker-compose
@@ -135,13 +135,13 @@ docker compose version
 ```
 
 ## Cases
-* copy file
+- copy file
   * `docker cp d362659da5fc:/opt/app/app.log .`
     * d362659da5fc: container id
 
 ## 참고
 
-* Docker 창시자 발표 https://youtu.be/Q5POuMHxW-0
+- Docker 창시자 발표 https://youtu.be/Q5POuMHxW-0
 
 ```
 docker ps
@@ -167,24 +167,24 @@ https://index.docker.io
 ```
 
 ## related
-* [docker compose](/mib/docker/compose)
-* [docker mysql](/mib/docker/mysql)
-* [docker in Windows](/mib/docker/win)
+- [docker compose](/mib/docker/compose)
+- [docker mysql](/mib/docker/mysql)
+- [docker in Windows](/mib/docker/win)
 
 ## ref
-* How to remove docker images containers and volumes
+- How to remove docker images containers and volumes
   * https://www.digitalocean.com/community/tutorials/how-to-remove-docker-images-containers-and-volumes
-* Docker in 12 minutes
+- Docker in 12 minutes
   * https://www.youtube.com/watch?v=YFl2mCHdv24
-* Docker Compose in 12 minutes
+- Docker Compose in 12 minutes
   * https://www.youtube.com/watch?v=Qw9zlE3t8Ko
-* Getting Started for non-technical
+- Getting Started for non-technical
   * https://docs.docker.com/mac/
   * https://docs.docker.com/docker-for-windows/
-* https://docs.docker.com/mac/step_three/
-* docker/whalesay
+- https://docs.docker.com/mac/step_three/
+- docker/whalesay
   * https://hub.docker.com/r/docker/whalesay/
-* docker for mac
+- docker for mac
   * https://pilsniak.com/how-to-install-docker-on-mac-os-using-brew/
 
 ```

@@ -70,5 +70,5 @@ JVM용 `Reactive Streams`에 대해 더 자세히 배우고 싶다면 <a href="h
 
 
 ## 역자 참고
-* non-blocking back pressure
+- non-blocking back pressure
   * https://www.slideshare.net/johanandren/asynchronous-stream-processing-with-akka-streams

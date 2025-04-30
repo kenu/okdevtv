@@ -1,7 +1,7 @@
 # Spring Boot CLI
-* Command line tool
-* Spring prototype 생성
-* for Groovy script
+- Command line tool
+- Spring prototype 생성
+- for Groovy script
 
 ## install
 ```
@@ -34,4 +34,4 @@ spring init --build=gradle --java-version=1.8 --dependencies=websocket --packagi
 ```
 
 ## ref
-* https://docs.spring.io/spring-boot/docs/current/reference/html/spring-boot-cli.html
+- https://docs.spring.io/spring-boot/docs/current/reference/html/spring-boot-cli.html

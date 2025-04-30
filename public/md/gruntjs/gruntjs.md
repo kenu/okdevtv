@@ -1,18 +1,18 @@
 # GruntJS 빌드 도구
-* http://gruntjs.com/
-* JavaScript 태스크 러너
-* 자동화 도구
+- http://gruntjs.com/
+- JavaScript 태스크 러너
+- 자동화 도구
 
 ## 요구사항
-* npm
-* node.js
+- npm
+- node.js
 
 ## 설치
 ```
 npm install -g grunt-cli
 ```
 
-* 아래 package.json 예제 파일로 시작
+- 아래 package.json 예제 파일로 시작
 ```
 {
   "name": "my-project-name",
@@ -26,7 +26,7 @@ npm install -g grunt-cli
 }
 ```
 
-* grunt dependencies 저장
+- grunt dependencies 저장
 ```
 npm install grunt --save-dev
 ```
@@ -36,7 +36,7 @@ npm install grunt-contrib-jshint --save-dev
 ```
 
 
-* Gruntfile
+- Gruntfile
 ```
 module.exports = function(grunt) {
 
@@ -65,16 +65,16 @@ module.exports = function(grunt) {
 
 
 ## 빌드 파일 구조
-* The "wrapper" function
-* Project and task configuration
-* Loading Grunt plugins and tasks
-* Custom tasks
+- The "wrapper" function
+- Project and task configuration
+- Loading Grunt plugins and tasks
+- Custom tasks
 
 
 ## ref
 
-* http://nodeqa.com/nodejs_ref/66
-* https://github.com/octoberskyjs/home
-* http://jstherightway.org/
-* http://www.dofactory.com/javascript-memento-pattern.aspx
+- http://nodeqa.com/nodejs_ref/66
+- https://github.com/octoberskyjs/home
+- http://jstherightway.org/
+- http://www.dofactory.com/javascript-memento-pattern.aspx
 

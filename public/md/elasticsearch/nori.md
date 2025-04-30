@@ -1,6 +1,6 @@
 # Nori 
-* Lucene 한글형태소 분석기
-* [mecab-ko-dic dictionary](https://bitbucket.org/eunjeon/mecab-ko-dic)
+- Lucene 한글형태소 분석기
+- [mecab-ko-dic dictionary](https://bitbucket.org/eunjeon/mecab-ko-dic)
 
 ## install plugin
 
@@ -14,7 +14,7 @@ sudo bin/elasticsearch-plugin remove analysis-nori
 
 ## custom dictionary
 
-* config/userdict_ko.txt
+- config/userdict_ko.txt
 
 ```
 c++      
@@ -23,7 +23,7 @@ C샤프
 세종시 세종 시
 ```
 
-* set tokenizer
+- set tokenizer
 
 ```
 curl -X PUT "localhost:9200/nori_sample" -H 'Content-Type: application/json' -d'
@@ -60,7 +60,7 @@ curl -X GET "localhost:9200/nori_sample/_analyze" -H 'Content-Type: application/
 '
 ```
 
-* 숫자 제외
+- 숫자 제외
 
 ```
 curl -X DELETE "localhost:9200/nori_sample"
@@ -104,6 +104,6 @@ curl -X GET "localhost:9200/nori_sample/_analyze" -H 'Content-Type: application/
 
 
 ## ref
-* https://www.elastic.co/guide/en/elasticsearch/plugins/current/analysis-nori.html
-* https://bitbucket.org/eunjeon/mecab-ko-dic
+- https://www.elastic.co/guide/en/elasticsearch/plugins/current/analysis-nori.html
+- https://bitbucket.org/eunjeon/mecab-ko-dic
 

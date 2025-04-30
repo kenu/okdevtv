@@ -77,7 +77,7 @@ import macrosPlugin from "vite-plugin-babel-macros";
 ```
 
 16. outDir to build
-* vite.config.ts
+- vite.config.ts
 
 ```json
   build: {

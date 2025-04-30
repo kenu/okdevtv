@@ -1,6 +1,6 @@
 # gulp
-* http://gulpjs.com/
-* automating painful or time-consuming tasks in your development workflow
+- http://gulpjs.com/
+- automating painful or time-consuming tasks in your development workflow
 
 
 ## install
@@ -18,4 +18,4 @@ gulp.task('default', function() {
   // place code for your default task here
 });
 ```
-* https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md
+- https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md

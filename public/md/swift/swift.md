@@ -1,16 +1,16 @@
 # Swift
-* https://swift.org/
-* Chris Lattner, public 2010, 14 years before
-* version 3.1 2017/07/09
-* Xcode 8.3
+- https://swift.org/
+- Chris Lattner, public 2010, 14 years before
+- version 3.1 2017/07/09
+- Xcode 8.3
 
 ## version
-* `swift --version`
+- `swift --version`
 
 ## Package
-* `mkdir Hello`
-* `cd Hello`
-* `swift package init` or `swift package init --type executable`
+- `mkdir Hello`
+- `cd Hello`
+- `swift package init` or `swift package init --type executable`
 ```
 Creating library package: Hello
 Creating Package.swift
@@ -22,19 +22,19 @@ Creating Tests/LinuxMain.swift
 Creating Tests/HelloTests/
 Creating Tests/HelloTests/HelloTests.swift
 ```
-* `swift build`
-* `./build/debug/Hello` (if executable)
-* `swift test`
+- `swift build`
+- `./build/debug/Hello` (if executable)
+- `swift test`
 
 ## Syntax Features
-* Range Operators
+- Range Operators
   * `1...5` : 1, 2, 3, 4, 5
   * `1..<5` : 1, 2, 3, 4
 
-* Arrays
+- Arrays
   * `var someInts = [Int](repeating: 0, count: 3)`
 
-* loop index
+- loop index
   * enumerate()
 
 ```swift
@@ -49,7 +49,7 @@ for (index, item) in someStrs.enumerated() {
 }
 ```
 
-* Dictionary
+- Dictionary
 
 ```swift
 var someDict:[Int:String] = [1:"One", 2:"Two", 3:"Three"]
@@ -63,7 +63,7 @@ for (idx, value) in someDict.enumerated() {
 }
 ```
 
-* External Parameter Name
+- External Parameter Name
 
 ```swift
 func pow(firstArg a: Int, secondArg b: Int) -> Int {
@@ -77,7 +77,7 @@ func pow(firstArg a: Int, secondArg b: Int) -> Int {
 pow(firstArg:5, secondArg:3)
 ```
 
-* Variadic Parameters
+- Variadic Parameters
 
 ```swift
 func vari<N>(members: N...) {
@@ -89,7 +89,7 @@ vari(members: 4,3,5)
 vari(members: "a", "bb")
 ```
 
-* inout Parameters
+- inout Parameters
 
 ```swift
 func swap(a1: inout Int, b1: inout Int) {
@@ -103,7 +103,7 @@ swap(a1: &no, b1: &co)
 print("Swapped values are \(no), \(co)")
 ```
 
-* Function Types
+- Function Types
 
 ```swift
 func sum(a: Int, b: Int) -> Int {
@@ -118,7 +118,7 @@ func another(addition: (Int, Int) -> Int, a: Int, b: Int) {
 another(addition: sum, a: 10, b: 20)
 ```
 
-* Nested function
+- Nested function
 
 ```swift
 func calcDecrement(forDecrement total: Int) -> () -> Int {
@@ -133,7 +133,7 @@ let decrem = calcDecrement(forDecrement: 30)
 print(decrem())
 ```
 
-* Closures
+- Closures
 
 ```swift
 let studname = { print("Welcome to Swift Closures") }
@@ -147,11 +147,11 @@ print(result)
 ```
 
 ## ref
-* facebook login
+- facebook login
   * https://okdevtv.com/mib/swift/fblogin-ios
-* socket.io with swift
+- socket.io with swift
   * https://github.com/nuclearace/socket.io-client-swift-spm-example
-* socket.io iOS chat(Deprecated)
+- socket.io iOS chat(Deprecated)
   * https://www.appcoda.com/socket-io-chat-app/
-* swift Tutorialspoint
+- swift Tutorialspoint
   * https://www.tutorialspoint.com/swift/ (warning swift 1.2)

@@ -8,11 +8,11 @@ and have 2 and 7 different commits each, respectively.
   (use "git pull" to merge the remote branch into yours)
 ```
 
-* Status
+- Status
 <img src="images/branch-diverged.webp" alt="branch diverged" class="img">
 
 
-* Solve
+- Solve
 
 ```
 # folder backup
@@ -41,7 +41,7 @@ git push origin master
 gitk
 ```
 
-* 결과
+- 결과
 
 <img src="images/branch-merged.webp" alt="branch merged" class="img">
 
@@ -64,44 +64,44 @@ git checkout -- server.js
 ```
 
 ## git diff
-* 이전 파일과 비교
+- 이전 파일과 비교
 ```
 git diff HEAD^ HEAD
 ```
 
-* 브랜치 파일 비교
+- 브랜치 파일 비교
 ```
 git diff develop master path/to/file
 ```
 
-* As of Git 1.8.5, @ is an alias for HEAD, so you can use:
+- As of Git 1.8.5, @ is an alias for HEAD, so you can use:
 ```
 git diff @~..@
 ```
 
-* The following will also work:
+- The following will also work:
 ```
 git show
 ```
 
-* If you want to know the diff between head and any commit you can use:
+- If you want to know the diff between head and any commit you can use:
 ```
 git diff commit_id HEAD
 ```
 
-* And this will launch your visual diff tool (if configured):
+- And this will launch your visual diff tool (if configured):
 ```
 git difftool HEAD^ HEAD
 ```
-* from https://stackoverflow.com/questions/9903541/finding-diff-between-current-and-last-versions
+- from https://stackoverflow.com/questions/9903541/finding-diff-between-current-and-last-versions
 
 ## git log
-* 최근 2일간 계정에 대한 변경 이력
+- 최근 2일간 계정에 대한 변경 이력
 ```
 git log --pretty=format:"%h - %an, %ar : %s" --author kenu.heo --since=2.days
 ```
 
-* commit별 변경 파일 목록
+- commit별 변경 파일 목록
 ```
 git log --name-only -1 f002a898
 ```
@@ -111,17 +111,17 @@ git log --name-only -1 f002a898
 git remote prune origin
 git fetch -p
 ```
-* https://railsware.com/blog/git-housekeeping-tutorial-clean-up-outdated-branches-in-local-and-remote-repositories/
+- https://railsware.com/blog/git-housekeeping-tutorial-clean-up-outdated-branches-in-local-and-remote-repositories/
 
 ## errors
-* The remote end hung up unexpectedly
+- The remote end hung up unexpectedly
 ```
 fatal: The remote end hung up unexpectedly
 fatal: early EOF
 fatal: index-pack failed
 ```
 
-* Solve
+- Solve
 
 ```
 git config http.postBuffer 724288000
@@ -136,11 +136,11 @@ cd okdevtv
 git fetch --unshallow
 git pull --all
 ```
-* from: https://stackoverflow.com/a/22317479/510222
+- from: https://stackoverflow.com/a/22317479/510222
 
 ## git pull push timeout
 
-* `ssh -T -p 443 git@ssh.github.com`
+- `ssh -T -p 443 git@ssh.github.com`
 
 ```
 # ~/.ssh/config
@@ -149,4 +149,4 @@ Host github.com
     Port 443
 ```
 
-* https://bengsfort.github.io/articles/fixing-git-push-pull-timeout/
+- https://bengsfort.github.io/articles/fixing-git-push-pull-timeout/

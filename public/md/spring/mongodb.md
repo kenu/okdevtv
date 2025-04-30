@@ -73,5 +73,5 @@ public class AccessingDataMongodbApplication implements CommandLineRunner {
 ```
 
 ## ref
-* https://spring.io/guides/gs/accessing-data-mongodb/
-* https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/
+- https://spring.io/guides/gs/accessing-data-mongodb/
+- https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/

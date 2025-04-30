@@ -1,5 +1,5 @@
 # Async
-* http://caolan.github.io/async/
+- http://caolan.github.io/async/
 
 ## waterfall
 ```js

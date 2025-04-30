@@ -41,11 +41,11 @@
 - node send.js
 
 ## App Password
-* https://myaccount.google.com/apppasswords
+- https://myaccount.google.com/apppasswords
   * 2 단계 인증 > 앱 비밀번호
   * `**** xzka **** gmpr`
 
 ## ref
-* example
+- example
   * https://github.com/kenu/okdevtv-examples/tree/main/node/email
 

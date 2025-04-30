@@ -1,10 +1,10 @@
 # Mobx
-* https://mobx.js.org/
-* Simple, scalable state management.
+- https://mobx.js.org/
+- Simple, scalable state management.
 
 ## 설치
-* `npm install mobx`
-* `npm install mobx-react`
+- `npm install mobx`
+- `npm install mobx-react`
 
 ## Quick example
 ```js

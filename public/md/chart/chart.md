@@ -1,3 +1,3 @@
 # Chart
 
-*  [ToastUI](/mib/chart/toastui)
+-  [ToastUI](/mib/chart/toastui)

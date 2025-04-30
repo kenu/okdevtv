@@ -1,9 +1,9 @@
 # axios
 
-* https://github.com/axios/axios
-* Make XMLHttpRequests from the browser
-* Make http requests from node.js
-* Supports the Promise API
+- https://github.com/axios/axios
+- Make XMLHttpRequests from the browser
+- Make http requests from node.js
+- Supports the Promise API
 
 ## install
 

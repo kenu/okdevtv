@@ -1,10 +1,10 @@
 # Spring Boot CLI
-* `sdk install springboot`
-* `spring --version`
-* `sdk ls springboot`
+- `sdk install springboot`
+- `spring --version`
+- `sdk ls springboot`
 
 ## Simple Start
-* app.groovy
+- app.groovy
 
 ```groovy
 @RestController
@@ -17,7 +17,7 @@ class ThisWillActuallyRun {
 
 }
 ```
-* run
+- run
 ```
 spring run app.groovy
 ```

@@ -1,6 +1,6 @@
 # Nest.js
 
-* https://nestjs.com/
+- https://nestjs.com/
 
 ## Getting Started
 

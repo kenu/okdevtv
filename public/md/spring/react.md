@@ -1,21 +1,21 @@
 # Spring Boot + React.js
-* Tutorial https://spring.io/guides/tutorials/react-and-spring-data-rest/
-* Spring Data REST
-* React.js
-* Single Page Application
+- Tutorial https://spring.io/guides/tutorials/react-and-spring-data-rest/
+- Spring Data REST
+- React.js
+- Single Page Application
 
 ## Overview
-* Repo: https://github.com/spring-guides/tut-react-and-spring-data-rest
-* Java8, Maven
-* Spring Boot Dependencies
+- Repo: https://github.com/spring-guides/tut-react-and-spring-data-rest
+- Java8, Maven
+- Spring Boot Dependencies
   * Rest Repositories
   * Thymeleaf
   * JPA
   * H2
-* React.js, ES6
+- React.js, ES6
   * https://ko.react.dev/
   * http://es6-features.org/
-* Part 1~5
+- Part 1~5
   * Part 1: 기본 세팅
   * Part 2: Hypermedia 제어
   * Part 3: 조건부 연산
@@ -23,32 +23,32 @@
   * Part 5: UI 및 API 보안
 
 ## YouTube
-* https://youtu.be/LAxaEBELods
-* https://youtu.be/5b2Vn4kb22U
-* https://youtu.be/fpJqx3j9p98
-* https://youtu.be/hMUJzrxvl8g
-* https://youtu.be/KrUbBiUgBvc
+- https://youtu.be/LAxaEBELods
+- https://youtu.be/5b2Vn4kb22U
+- https://youtu.be/fpJqx3j9p98
+- https://youtu.be/hMUJzrxvl8g
+- https://youtu.be/KrUbBiUgBvc
 
 ## Part 1
-* `basic`: https://github.com/spring-guides/tut-react-and-spring-data-rest/tree/master/basic
-* Spring Boot 프로젝트 만들기
+- `basic`: https://github.com/spring-guides/tut-react-and-spring-data-rest/tree/master/basic
+- Spring Boot 프로젝트 만들기
   * HAL: Hypermedia Application Language
   * Rest Repositories HAL Explorer
   * `spring.data.rest.base-path=/api`
-* frontend-maven-plugin 메이븐 플러그인
+- frontend-maven-plugin 메이븐 플러그인
   * frontend-gradle-plugin 그래들 플러그인
   * node.js 빌드 지원
   * 운영으로는 비추천
   * https://github.com/eirslett/frontend-maven-plugin#what-is-this-plugin-meant-to-do
 
 ### React.js
-* `react.js`: UI 개발 자바스크립트 라이브러리
-* `rest.js`: REST call
-* `webpack`: compile JS to bundle
-* `babel`: ES6 -> ES5 for browser
+- `react.js`: UI 개발 자바스크립트 라이브러리
+- `rest.js`: REST call
+- `webpack`: compile JS to bundle
+- `babel`: ES6 -> ES5 for browser
 
 ### project package
-* `package.json`: dependency for react.js project
+- `package.json`: dependency for react.js project
 
 ```json
 {
@@ -91,7 +91,7 @@
 }
 ```
 
-* `webpack.config.js`: build tool for js
+- `webpack.config.js`: build tool for js
 
 ```json
 const path = require('path');
@@ -189,13 +189,13 @@ ReactDOM.render(
 ```
 
 ## Part 2
-* `hypermedia`: https://github.com/spring-guides/tut-react-and-spring-data-rest/tree/master/hypermedia
-* If the engine of application state (and hence the API) is not being driven by hypertext, then it cannot be RESTful and cannot be a REST API. - Roy Fielding
-* A key feature of REST is to include links to relevant resources. For example, if you were looking at an order, a RESTful API would include a link to the related customer, links to the catalog of items, and perhaps a link to the store from which the order was placed. In this section, you will introduce paging and see how to also use navigational paging links.
-* `application/hal+json`, Spring Data REST’s default media type
+- `hypermedia`: https://github.com/spring-guides/tut-react-and-spring-data-rest/tree/master/hypermedia
+- If the engine of application state (and hence the API) is not being driven by hypertext, then it cannot be RESTful and cannot be a REST API. - Roy Fielding
+- A key feature of REST is to include links to relevant resources. For example, if you were looking at an order, a RESTful API would include a link to the related customer, links to the catalog of items, and perhaps a link to the store from which the order was placed. In this section, you will introduce paging and see how to also use navigational paging links.
+- `application/hal+json`, Spring Data REST’s default media type
 
 ### diff
-* <img src="images/react/part2-diff.webp" alt="part2 diff" class="img"/>
+- <img src="images/react/part2-diff.webp" alt="part2 diff" class="img"/>
 
 ### Paging
 ```java
@@ -250,9 +250,9 @@ $ curl "localhost:8080/api/employees?size=2"
 }
 ```
 
-* default size: 20
-* `first`, `next`, `last`
-* `next` data
+- default size: 20
+- `first`, `next`, `last`
+- `next` data
 
 ```
 $ curl "http://localhost:8080/api/employees?page=1&size=2"
@@ -277,7 +277,7 @@ $ curl "http://localhost:8080/api/employees?page=1&size=2"
 ...
 ```
 
-* `curl http://localhost:8080/api/profile/employees -H "Accept:application/schema+json"`
+- `curl http://localhost:8080/api/profile/employees -H "Accept:application/schema+json"`
 
 ```
 {
@@ -345,7 +345,7 @@ onDelete(employee) {
 ```js
 <input ref="pageSize" defaultValue={this.props.pageSize} onInput={this.handleInput}/>
 ```
-* `ref="pageSize"`, `this.refs.pageSize`
+- `ref="pageSize"`, `this.refs.pageSize`
 
 ```js
 handleInput(e) {
@@ -369,15 +369,15 @@ updatePageSize(pageSize) {
 ```
 
 ## Part 3
-* `conditional`: https://github.com/spring-guides/tut-react-and-spring-data-rest/tree/master/conditional
-* Record Version, when inserting and updating
+- `conditional`: https://github.com/spring-guides/tut-react-and-spring-data-rest/tree/master/conditional
+- Record Version, when inserting and updating
   * `javax.persistence.Version`
-* Spring Data REST feature:
+- Spring Data REST feature:
   * 리소스 버전
   * 프론트엔드 ETag
 
 ### diff
-* <img src="images/react/part3-diff.webp" alt="part3 diff" class="img"/>
+- <img src="images/react/part3-diff.webp" alt="part3 diff" class="img"/>
 
 ### Version
 ```java
@@ -405,11 +405,11 @@ onUpdate(employee, updatedEmployee) {
 	});
 }
 ```
-* `If-Match` header
+- `If-Match` header
 
 ## Part 4
-* `events`: https://github.com/spring-guides/tut-react-and-spring-data-rest/tree/master/events
-* Spring WebSocket
+- `events`: https://github.com/spring-guides/tut-react-and-spring-data-rest/tree/master/events
+- Spring WebSocket
 
 ```xml
 <dependency>
@@ -419,7 +419,7 @@ onUpdate(employee, updatedEmployee) {
 ```
 
 ### diff
-* <img src="images/react/part4-diff.webp" alt="part4 diff" class="img"/>
+- <img src="images/react/part4-diff.webp" alt="part4 diff" class="img"/>
 
 ```java
 @Component
@@ -492,9 +492,9 @@ public class EventHandler {
 
 }
 ```
-* `@RepositoryEventHandler(Employee.class)` 이벤트 기본 설정
-* `SimpMessagingTemplate`, `EntityLinks` Autowired
-* `@HandleXYZ`
+- `@RepositoryEventHandler(Employee.class)` 이벤트 기본 설정
+- `SimpMessagingTemplate`, `EntityLinks` Autowired
+- `@HandleXYZ`
 
 ### JavaScript WebSocket
 ```js
@@ -502,8 +502,8 @@ const stompClient = require('./websocket-listener')
 ```
 
 ## Part 5
-* `security`: https://github.com/spring-guides/tut-react-and-spring-data-rest/tree/master/security
-* Spring Security
+- `security`: https://github.com/spring-guides/tut-react-and-spring-data-rest/tree/master/security
+- Spring Security
 
 ```xml
 <dependency>
@@ -517,7 +517,7 @@ const stompClient = require('./websocket-listener')
 ```
 
 ### diff
-* <img src="images/react/part5-diff.webp" alt="part5 diff" class="img"/>
+- <img src="images/react/part5-diff.webp" alt="part5 diff" class="img"/>
 
 ```java
 @Entity
@@ -663,4 +663,4 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 ```
 
 ## ref
-* https://spring.io/guides/tutorials/react-and-spring-data-rest/
+- https://spring.io/guides/tutorials/react-and-spring-data-rest/

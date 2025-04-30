@@ -9,7 +9,7 @@
 6. install docker and start docker daemon
 7. run docker image
 
-* Dockerfile
+- Dockerfile
 
 ```
 FROM openjdk:11-jre-slim-buster
@@ -51,4 +51,4 @@ docker run -d -p 8080:8080 kenu/sb-demo
 ```
 
 ## ref
-* https://spring.io/guides/gs/spring-boot-docker/
+- https://spring.io/guides/gs/spring-boot-docker/

@@ -1,16 +1,16 @@
 # iOS SWift Facebook Login
 
 ## Prerequisite
-* brew
-* Cocoapod
-* FacebookSDK
+- brew
+- Cocoapod
+- FacebookSDK
 
 
 ## Facebook app
-* https://developers.facebook.com
+- https://developers.facebook.com
 
 
-* `pod init`
+- `pod init`
 
 ```
 pod 'FacebookCore'
@@ -20,7 +20,7 @@ pod 'FacebookShare'
 from: https://developers.facebook.com/docs/swift/getting-started
 
 
-* AppDelegate.swift
+- AppDelegate.swift
 
 ```
 func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {

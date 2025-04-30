@@ -1,6 +1,6 @@
 # React.js
-* A JavaScript library for building user interfaces
-* https://ko.reactjs.org
+- A JavaScript library for building user interfaces
+- https://ko.reactjs.org
 
 ```
 var HelloMessage = React.createClass({
@@ -36,11 +36,11 @@ ReactDOM.render(<HelloMessage name="John" />, mountNode);
   </body>
 </html>
 ```
-* [run react01.html](/md/react/react01.html)
+- [run react01.html](/md/react/react01.html)
 
 ## React 프로젝트 생성
-* CRA: Create React App
-* https://ko.reactjs.org/docs/create-a-new-react-app.html
+- CRA: Create React App
+- https://ko.reactjs.org/docs/create-a-new-react-app.html
 
 ```
 npm create vite my-app -- --template react
@@ -50,15 +50,15 @@ npm run dev
 ```
 
 ## 새로운 페이지 추가
-* React Router
-* https://reactrouter.com/web/guides/quick-start
+- React Router
+- https://reactrouter.com/web/guides/quick-start
 
 ```
 npm install react-router-dom --save
 ```
 
 ## 데이터 바인딩
-* https://ko.reactjs.org/docs/introducing-jsx.html#embedding-expressions-in-jsx
+- https://ko.reactjs.org/docs/introducing-jsx.html#embedding-expressions-in-jsx
 
 ### 변수
 ```jsx
@@ -97,16 +97,16 @@ ReactDOM.render(
 ## 컴포넌트 만들기
 
 ### 컴포넌트 추출하기
-* https://ko.reactjs.org/docs/components-and-props.html#extracting-components
+- https://ko.reactjs.org/docs/components-and-props.html#extracting-components
 
 ### 컴포넌트 간 데이터 전달하기
-* `props`
+- `props`
 ## state
-* https://ko.reactjs.org/docs/state-and-lifecycle.html
+- https://ko.reactjs.org/docs/state-and-lifecycle.html
 
 ## 데이터 가져오기
-* https://reactjs.org/docs/faq-ajax.html
-* https://www.freecodecamp.org/news/fetch-data-react/
+- https://reactjs.org/docs/faq-ajax.html
+- https://www.freecodecamp.org/news/fetch-data-react/
 
 ```js
 import React, { useState, useEffect } from 'react';
@@ -147,18 +147,18 @@ export default function App() {
 
 
 ## render lifecycle
-* LIFECYCLE METHODS
+- LIFECYCLE METHODS
   * `componentWillMount` – 한 번 실행, 렌더링 전 클라이언트, 서버 양쪽에서
   * `componentDidMount` – 한 번 실행, 렌더링 후, 클라이언트에서만
   * `shouldComponentUpdate` – 리턴 값이 컴포넌트 업데이트 결정
   * `componentWillUnmount` – 컴포넌트 언마운트 이전에 실행
 
-* SPECS
+- SPECS
   * `getInitialState` – state용 리턴 값의 초기 값
   * `getDefaultProps` – props가 없을 경우 props 기본값 설정
   * `mixins` – 객체 배열, 현재 컴포넌트 기능 확장에 사용됨
 
-* stateful
+- stateful
 
 ```
 var Timer = React.createClass({
@@ -185,16 +185,16 @@ ReactDOM.render(<Timer />, mountNode);
 ```
 
 ## React Developer Tools
-* https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi
+- https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi
 
 ## related
-* [router](/mib/react/router)
-* [mobx](/mib/react/mobx)
-* [redux](/mib/react/redux)
+- [router](/mib/react/router)
+- [mobx](/mib/react/mobx)
+- [redux](/mib/react/redux)
 
 ## 참고
-* inflearn react 강좌
+- inflearn react 강좌
   * https://www.inflearn.com/course/react-%EA%B0%95%EC%A2%8C-velopert/
-* https://scotch.io/tutorials/learning-react-getting-started-and-concepts
-* webpack
+- https://scotch.io/tutorials/learning-react-getting-started-and-concepts
+- webpack
   * https://okdevtv.com/mib/webpack

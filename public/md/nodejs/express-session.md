@@ -1,5 +1,5 @@
 # express-session.md
-* https://github.com/expressjs/session#readme
+- https://github.com/expressjs/session#readme
 
 ## install
 
@@ -46,4 +46,4 @@ app.get('/', function(req, res, next) {
 ```
 
 ## related
-* [express error handling](/mib/nodejs/error)
+- [express error handling](/mib/nodejs/error)

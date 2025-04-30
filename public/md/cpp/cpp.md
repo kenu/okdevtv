@@ -6,41 +6,41 @@ Here you have instructions on how to compile and run console programs using diff
 
 
 ## Basics of C++
-* Structure of a program
-* Variables and types
-* Constants
-* Operators
-* Basic Input/Output
+- Structure of a program
+- Variables and types
+- Constants
+- Operators
+- Basic Input/Output
 
 ## Program structure
-* Control Structures
-* Functions
-* Overloads and templates
-* Name visibility
+- Control Structures
+- Functions
+- Overloads and templates
+- Name visibility
 
 ## Compound data types
-* Arrays
-* Character sequences
-* Pointers
-* Dynamic Memory
-* Data structures
-* Other data types
+- Arrays
+- Character sequences
+- Pointers
+- Dynamic Memory
+- Data structures
+- Other data types
 
 ## Classes
-* Classes (I)
-* Classes (II)
-* Special members
-* Friendship and inheritance
-* Polymorphism
+- Classes (I)
+- Classes (II)
+- Special members
+- Friendship and inheritance
+- Polymorphism
 
 ## Other language features
-* Type conversions
-* Exceptions
-* Preprocessor directives
+- Type conversions
+- Exceptions
+- Preprocessor directives
 
 ## C++ Standard Library
-* Input/Output with files
+- Input/Output with files
 
 ## related
-* [Unit Test](/mib/cpp/test)
-* [Build Error](/mib/cpp/err)
+- [Unit Test](/mib/cpp/test)
+- [Build Error](/mib/cpp/err)

@@ -1,6 +1,6 @@
 # KNEX
-* Knex.js is a "batteries included" SQL query builder for Postgres, MSSQL, MySQL, MariaDB, SQLite3, Oracle, and Amazon Redshift designed to be flexible, portable, and fun to use.
-* https://knexjs.org/
+- Knex.js is a "batteries included" SQL query builder for Postgres, MSSQL, MySQL, MariaDB, SQLite3, Oracle, and Amazon Redshift designed to be flexible, portable, and fun to use.
+- https://knexjs.org/
 
 ## install
 
@@ -24,7 +24,7 @@ const knex = require('knex')({
 
 ## Knex Query Builder
 
-* The heart of the library, the knex query builder is the interface used for building and executing standard SQL queries, such as `select`, `insert`, `update`, `delete`.
+- The heart of the library, the knex query builder is the interface used for building and executing standard SQL queries, such as `select`, `insert`, `update`, `delete`.
 
 1. Identifier Syntax
 2. Where Clauses

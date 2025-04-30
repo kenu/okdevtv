@@ -1,6 +1,6 @@
 # Vuex
-* https://vuex.vuejs.org/
-* state management pattern + library for Vue.js applications
+- https://vuex.vuejs.org/
+- state management pattern + library for Vue.js applications
 
 ## Install
 ```
@@ -8,11 +8,11 @@ npm install vuex@next --save
 ```
 
 ## Concept
-* state: Shared data itself
-* getters: Read gateway of state
-* actions: Asynchronous changing data
-* mutations: Synchronous changing data
-* modules: Fractally Scaled out group of states
+- state: Shared data itself
+- getters: Read gateway of state
+- actions: Asynchronous changing data
+- mutations: Synchronous changing data
+- modules: Fractally Scaled out group of states
 
 ## Simple Example
 ```js

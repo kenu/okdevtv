@@ -1,13 +1,13 @@
 # Vue Swiper
-* vue-awesome-swiper
+- vue-awesome-swiper
   * https://github.com/surmon-china/vue-awesome-swiper
-* Swiperjs 의존성
+- Swiperjs 의존성
 
 ## npm install
 ```
 npm i swiper@5 vue-awesome-swiper
 ```
-* swiper@6 에서 많이 변경됨 #주의필요
+- swiper@6 에서 많이 변경됨 #주의필요
 
 ```
 <template>

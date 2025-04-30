@@ -9,5 +9,5 @@ app.use(function(err, req, res, next) {
 ```
 
 ## ref
-* https://poiemaweb.com/express-error-handling
-* http://khaidoan.wikidot.com/expressjs-error-handling
+- https://poiemaweb.com/express-error-handling
+- http://khaidoan.wikidot.com/expressjs-error-handling

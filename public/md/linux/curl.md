@@ -1,11 +1,11 @@
 # curl
-* https://curl.haxx.se/
-* call url
-* RESTful API 작업에 유용
-* Windows에서는 git bash( https://git-scm.com )로 이용 가능
+- https://curl.haxx.se/
+- call url
+- RESTful API 작업에 유용
+- Windows에서는 git bash( https://git-scm.com )로 이용 가능
 
 ## method 지정
-* GET, POST, PUT, DELETE
+- GET, POST, PUT, DELETE
 
 ```
 curl -XGET https://okdevtv.com
@@ -24,7 +24,7 @@ curl -F "userid=kenu" -F "file=/home/kenu/data/hello.txt" http://uploadlink
 ```
 
 ## 헤더 설정
-* `-H` or `--header`
+- `-H` or `--header`
 
 ```
 curl --header 'headername: value' https://okdevtv.com

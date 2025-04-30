@@ -1,6 +1,6 @@
 # Java File Upload
-* `multipart/form-data`
-* from html
+- `multipart/form-data`
+- from html
 
 ```
 <!DOCTYPE html>
@@ -22,7 +22,7 @@
 </html>
 ```
 
-* to java servlet
+- to java servlet
 ```java
 @WebServlet(name = "FileUploadServlet", urlPatterns = {"/upload"})
 @MultipartConfig
@@ -95,9 +95,9 @@ public class FileUploadServlet extends HttpServlet {
 ```
 
 ## Issue
-* same file name overwrite issue
+- same file name overwrite issue
   * change name and store original name to somewhere
   * add postfix such as count number, timestamp
 
 ## ref
-* http://docs.oracle.com/javaee/6/tutorial/doc/glraq.html
+- http://docs.oracle.com/javaee/6/tutorial/doc/glraq.html

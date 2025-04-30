@@ -1,30 +1,30 @@
 # URI Mapping
 
 ## Request
-* `@RequestMapping`
+- `@RequestMapping`
   * 메소드(클래스) 경로 매핑
-* `@PathVariable`
+- `@PathVariable`
   * URI에 포함된 데이터 전달
-* `@RequestParam`
+- `@RequestParam`
   * 쿼리스트링 파라미터를 자동 할당
-* `@RequestBody`
+- `@RequestBody`
   * 요청 바디 전체
-* `@RequestHeader`
+- `@RequestHeader`
   * 헤더 정보
 
 ## 단축 어노테이션
-* `@GetMapping`
-* `@PostMapping`
-* `@PutMapping`
-* `@DeleteMapping`
-* `@PatchMapping`
+- `@GetMapping`
+- `@PostMapping`
+- `@PutMapping`
+- `@DeleteMapping`
+- `@PatchMapping`
 
 ## Response
-* `@ResponseStatus`
+- `@ResponseStatus`
   * HTTP 상태코드
   * 기본값은 `200 OK`
-* `@ResponseBody`
+- `@ResponseBody`
   * 메소드에 @ResponseBody를 붙이면 반환값으로 직접 응답 내용을 반환
 
 ## ref
-* https://araikuma.tistory.com/14
+- https://araikuma.tistory.com/14

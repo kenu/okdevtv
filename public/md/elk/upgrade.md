@@ -1,7 +1,7 @@
 # Elastic Stack Update
-* Downloads and unpack
-* Kill old version processes
-* Change symbolic links to new versions
+- Downloads and unpack
+- Kill old version processes
+- Change symbolic links to new versions
 
 
 ## Downloads and unpack
@@ -20,7 +20,7 @@ wget https://artifacts.elastic.co/downloads/logstash/logstash-7.0.0.tar.gz
 tar xvfz logstash-7.0.0.tar.gz
 ```
 
-* Kill old version processes
+- Kill old version processes
 
 ```bash
 ps -ef | grep elastic
@@ -58,7 +58,7 @@ diff ../elasticsearch-6.4.2/config/elasticsearch.yml config/elasticsearch.yml
 vi config/elasticsearch.yml 
 ```
 
-* `config/elasticsearch.yml`
+- `config/elasticsearch.yml`
 
 ```
 http.cors.enabled: true

@@ -1,8 +1,8 @@
 # Lambda expression
-* Since Java SE 8
-* clear and concise way to represent **one method interface** using an expression
-* easier to iterate through, filter, and extract data from a Collection
-* new concurrency features improve performance in multicore environments
+- Since Java SE 8
+- clear and concise way to represent **one method interface** using an expression
+- easier to iterate through, filter, and extract data from a Collection
+- new concurrency features improve performance in multicore environments
 
 ## Format
 ```
@@ -34,6 +34,6 @@ public class RunnableTest {
 ```
 
 ## ref
-* http://www.oracle.com/webfolder/technetwork/tutorials/obe/java/Lambda-QuickStart/index.html
-* Lambda calculus
+- http://www.oracle.com/webfolder/technetwork/tutorials/obe/java/Lambda-QuickStart/index.html
+- Lambda calculus
   * https://en.wikipedia.org/wiki/Lambda_calculus

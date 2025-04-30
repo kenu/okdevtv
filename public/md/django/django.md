@@ -1,11 +1,11 @@
 # Django
-* python의 웹프레임워크
-* https://www.djangoproject.com/
-* 경쟁 제품 : [flask](http://flask.pocoo.org/)
+- python의 웹프레임워크
+- https://www.djangoproject.com/
+- 경쟁 제품 : [flask](http://flask.pocoo.org/)
 
 ## 요구사항
-* [python](/mib/python)
-* pip
+- [python](/mib/python)
+- pip
 
 ## virtualenv 환경
 ```
@@ -23,7 +23,7 @@ sudo pip install django
 
 django-admin startproject mysite
 ```
-* set django version
+- set django version
 
 ```
 pip install django==1.8
@@ -35,7 +35,7 @@ pip install django==1.8
 django-admin startproject mysite .
 ```
 
-* settings.py
+- settings.py
 
 ```
 # TIME_ZONE = 'UTC'
@@ -44,13 +44,13 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 ```
 
-* migrate to database
+- migrate to database
 
 ```
 python manage.py migrate
 ```
 
-* run django server
+- run django server
 
 ```
 python manage.py runserver
@@ -61,7 +61,7 @@ python manage.py runserver
 ```
 python manage.py startapp blog
 ```
-* append app into settings.py
+- append app into settings.py
 
 ```
     INSTALLED_APPS = (
@@ -77,7 +77,7 @@ python manage.py startapp blog
 
 ## define model
 
-* `blog/models.py`
+- `blog/models.py`
 
 ```
     from django.db import models
@@ -99,7 +99,7 @@ python manage.py startapp blog
         def __str__(self):
             return self.title
 ```
-* sync table database
+- sync table database
 
 ```
 python manage.py makemigrations blog
@@ -107,7 +107,7 @@ python manage.py migrate blog
 ```
 
 ## django admin
-* `blog/admin.py`
+- `blog/admin.py`
 
 ```
 from django.contrib import admin
@@ -116,19 +116,19 @@ from .models import Post
 admin.site.register(Post)
 ```
 
-* create super user
+- create super user
 
 ```
 python manage.py createsuperuser
 ```
 
 ## Version Control with git(optional)
-* https://okdevtv.com/mib/git-step
+- https://okdevtv.com/mib/git-step
 
 ## 참고
-* django 
+- django 
   * https://www.djangoproject.com/
-* django girls tutorial
+- django girls tutorial
   * https://tutorial.djangogirls.org/ko/
-* django unittest
+- django unittest
   * https://docs.djangoproject.com/ja/1.9/topics/testing/overview/

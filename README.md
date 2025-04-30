@@ -1,7 +1,7 @@
 # OKdevTV source
 
-* https://okdevtv.com
-* https://youtube.com/kenuheo
+- https://okdevtv.com
+- https://youtube.com/kenuheo
 
 ## Build and Run
 ```
@@ -13,11 +13,11 @@ npm run serve
 ```
 
 ## Config
-* aws configure
+- aws configure
 ```
 aws configure
 ```
-* .env
+- .env
 ```
 DB_USER=devuser
 DB_PASS=devpass
@@ -41,4 +41,4 @@ REFRESH_TOKEN=
 ## Deploy
 
 ## License
-* MIT
+- MIT

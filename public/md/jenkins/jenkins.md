@@ -1,21 +1,21 @@
 # Jenkins
-* Kohsuke Kawaguchi
-* https://jenkins.io
-* 2005 Hudson → 2011 Jenkins
-* Continous Integration Tool
-* 영상: https://www.youtube.com/watch?v=CSlCkCHHLCo
+- Kohsuke Kawaguchi
+- https://jenkins.io
+- 2005 Hudson → 2011 Jenkins
+- Continous Integration Tool
+- 영상: https://www.youtube.com/watch?v=CSlCkCHHLCo
 
 ## Requirements
-* java 11+
+- java 11+
 
 ## Install and Run
-* mac
+- mac
 ```
 brew install jenkins
 jenkins
 ```
 
-* others
+- others
   * download `jenkins.war`
   * run
 
@@ -27,18 +27,18 @@ fc-cache --force
 wget https://ftp.yz.yamagata-u.ac.jp/pub/misc/jenkins/war-stable/2.414.3/jenkins.war
 java -jar jenkins.war --httpPort=9090
 ```
-* token for first login
+- token for first login
   * `cat ~/.jenkins/secrets/initialAdminPassword`
 
 
 ## Headless java
-* solution
+- solution
 ```
 sudo dnf install fontconfig -y
 fc-cache --force
 ```
 
-* EC2 java case
+- EC2 java case
 
 ```
 Caused: hudson.util.AWTProblem
@@ -46,16 +46,16 @@ Caused: hudson.util.AWTProblem
     at org.eclipse.jetty.server.handler.ContextHandler.callContextInitialized(ContextHandler.java:1067)
 ```
 
-* headless
+- headless
   * https://unix.stackexchange.com/a/729802
 
 ## Configure admin
-* copy code and paste it
+- copy code and paste it
 
 ## related
-* [jenkins-docker](/mib/jenkins/docker)
-* [jenkins-sonarqube](/mib/jenkins/sonarqube)
-* [jenkins-spotbugs](/mib/jenkins/spotbugs)
+- [jenkins-docker](/mib/jenkins/docker)
+- [jenkins-sonarqube](/mib/jenkins/sonarqube)
+- [jenkins-spotbugs](/mib/jenkins/spotbugs)
 
 ## ref
-* http://okjsp.tistory.com/tag/hudson
+- http://okjsp.tistory.com/tag/hudson

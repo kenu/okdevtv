@@ -1,5 +1,5 @@
 # Vue Router
-* https://router.vuejs.org
+- https://router.vuejs.org
 
 ## 설치
 
@@ -33,11 +33,11 @@ npm install vue-router
 ```
 
 ## mode
-* hash : `okdevtv.com/#/uri`
-* history : `okdevtv.com/uri`
+- hash : `okdevtv.com/#/uri`
+- history : `okdevtv.com/uri`
   * nginx 등의 웹서버 설정 필요함
   * history.popState 지원
-* https://router.vuejs.org/guide/essentials/history-mode.html
+- https://router.vuejs.org/guide/essentials/history-mode.html
 
 ```js
 const router = new VueRouter({
@@ -47,4 +47,4 @@ const router = new VueRouter({
 ```
 
 ## 예제
-* [Vue Router](/md/vue/examples/vuerouter.html)
+- [Vue Router](/md/vue/examples/vuerouter.html)

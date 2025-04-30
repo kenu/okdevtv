@@ -1,5 +1,5 @@
 # Ollama
-* https://ollama.com
+- https://ollama.com
 
 ## Install ec2 env
 [ec2 basic install](/mib/aws/basic)
@@ -103,4 +103,4 @@ open-webui serve
 - 8080 port
 
 ## related
-* [open-webui](/mib/ollama/webui)
+- [open-webui](/mib/ollama/webui)

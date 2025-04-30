@@ -1,17 +1,17 @@
 # Kubernetes
-* Deploy a containerized application on a cluster
-* Scale the deployment
-* Update the containerized application with a new software version
-* Debug the containerized application
+- Deploy a containerized application on a cluster
+- Scale the deployment
+- Update the containerized application with a new software version
+- Debug the containerized application
 
 ## Tutorial
 
 ### Minikube
-* `minikube version`
-* `minikube start`
-* `kubectl version`
-* `kubectl cluster-info`
-* `kubectl get nodes`
+- `minikube version`
+- `minikube start`
+- `kubectl version`
+- `kubectl cluster-info`
+- `kubectl get nodes`
 
 ### kubernates run
 ```
@@ -23,21 +23,21 @@ kubernetes-bootcamp   1/1     1            1           73s
 ```
 
 ### kubectl proxy
-* `kubectl proxy`
-* `curl http://localhost:8001/version`
+- `kubectl proxy`
+- `curl http://localhost:8001/version`
 
-* `kubectl get` - list resources
-* `kubectl describe` - show detailed information about a resource
-* `kubectl logs` - print the logs from a container in a pod
-* `kubectl exec` - execute a command on a container in a pod
+- `kubectl get` - list resources
+- `kubectl describe` - show detailed information about a resource
+- `kubectl logs` - print the logs from a container in a pod
+- `kubectl exec` - execute a command on a container in a pod
 
 ## Install on MacOS
-* `brew install kubernetes-cli`
-* `brew cask install minikube`
+- `brew install kubernetes-cli`
+- `brew cask install minikube`
   * [VirtualBox](https://www.virtualbox.org) 필요
-* Other platform : https://kubernetes.io/docs/tasks/tools/
+- Other platform : https://kubernetes.io/docs/tasks/tools/
 
 ## ref
-* https://kubernetes.io/docs/tutorials/kubernetes-basics/
-* https://spring.io/guides/gs/spring-boot-kubernetes
-* https://spring.io/guides/topicals/spring-on-kubernetes
+- https://kubernetes.io/docs/tutorials/kubernetes-basics/
+- https://spring.io/guides/gs/spring-boot-kubernetes
+- https://spring.io/guides/topicals/spring-on-kubernetes

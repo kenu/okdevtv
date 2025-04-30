@@ -1,5 +1,5 @@
 # webpack
-* https://webpack.github.io
+- https://webpack.github.io
 
 ## install
 ```sh
@@ -9,8 +9,8 @@ npm install --save-dev webpack
 ```
 
 ## Directory Structure
-* `app/*.js`
-* `public/index.html`
+- `app/*.js`
+- `public/index.html`
 
 ## `index.html`
 ```html
@@ -18,12 +18,12 @@ npm install --save-dev webpack
 ```
 
 ## Build
-* command line
+- command line
 ```sh
 webpack app/main.js public/bundle.js
 ```
 
-* `webpack.config.js`
+- `webpack.config.js`
 ```js
 module.exports = {
 	entry: __dirname + "/app/main.js",

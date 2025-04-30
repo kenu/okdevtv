@@ -1,21 +1,21 @@
 # ngrok
-* https://ngrok.com/
-* Public URLs for localhost.
+- https://ngrok.com/
+- Public URLs for localhost.
 
 ## install
-* node
+- node
 
 ```
 npm i -g ngrok
 ```
 
-* download
+- download
   * https://ngrok.com/download
 
 ## 사용
-* 로컬 서버 구동 후 ngrok 실행
+- 로컬 서버 구동 후 ngrok 실행
 
 ```
 ngrok http 8080
 ```
-* <img src="images/ngrok.webp" alt="ngrok">
+- <img src="images/ngrok.webp" alt="ngrok">

@@ -1,8 +1,8 @@
 # ReactiveX
 
-* http://reactivex.io
-* An API for asynchronous programming with observable streams
-* ReactiveX is a combination of the best ideas from
+- http://reactivex.io
+- An API for asynchronous programming with observable streams
+- ReactiveX is a combination of the best ideas from
 the Observer pattern, the Iterator pattern, and functional programming
 
 ## 설치
