@@ -167,6 +167,7 @@ https://index.docker.io
 ```
 
 ## related
+- [docker 실습](/mib/docker/docker-exec)
 - [docker compose](/mib/docker/compose)
 - [docker mysql](/mib/docker/mysql)
 - [docker in Windows](/mib/docker/win)

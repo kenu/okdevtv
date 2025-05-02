@@ -10,7 +10,7 @@
 - Variables and moving a composition between environments
 
 ## `docker-compose.yml`
-```
+```yaml
 services:
   web:
     build: .
@@ -20,7 +20,7 @@ services:
     image: "redis:alpine"
 ```
 
-```
+```yaml
 services:
   web:
     build: .
