@@ -172,6 +172,9 @@ API Gateway는 API 서버 앞단에서 모든 API 서버들의 엔드포인트�
 <img src="https://martinfowler.com/bliki/images/microservice-verdict/path.png" class="img" alt="2 patterns">
 - from: https://martinfowler.com/bliki/MonolithFirst.html
 
+## Modular Monolith
+- [Modular Monolith](./modular.md)
+
 ## 참고 자료
 - [microservices.io](https://microservices.io/)
 - [Martin Fowler - MonolithFirst](https://martinfowler.com/bliki/MonolithFirst.html)
@@ -179,3 +182,4 @@ API Gateway는 API 서버 앞단에서 모든 API 서버들의 엔드포인트�
 - [삼성 SDS Insight](https://www.samsungsds.com/kr/insights/1239180_4627.html)
 - [LG CNS Blog](https://www.lgcns.com/blog/cns-tech/36171/)
 - [Red Hat - 마이크로 서비스란?](https://www.redhat.com/ko/topics/microservices/what-are-microservices)
+- [What Is a Modular Monolith?](https://velog.io/@gravitycage/What-Is-a-Modular-Monolith)
