@@ -1,4 +1,4 @@
-# Yona
+# ~~Yona~~ `@Deprecated` # use gitlab or github
 - 21세기 SW 협업 개발 환경
 - http://yona.io
 - GitHub의 설치형 + 프로젝트별 게시판

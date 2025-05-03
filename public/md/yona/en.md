@@ -1,4 +1,4 @@
-# Yona
+1,5: # ~~Yona~~ `@Deprecated` # use gitlab or github
 - SW project collaboration management tool
 - http://yona.io
 - GitHub-like interface + wiki-type bbs

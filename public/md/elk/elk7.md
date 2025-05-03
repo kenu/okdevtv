@@ -36,9 +36,6 @@ curl -L https://okdevtv.com/md/elk/elastic-setup.sh | sh
 wget https://okdevtv.com/md/elk/filebeat.yml.sample
 ```
 
-### kibana sample
-- https://yona.okdevtv.com/study/okdevtv/issue/29
-
 
 ====
 
