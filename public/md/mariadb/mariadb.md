@@ -11,23 +11,7 @@ sudo systemctl enable mariadb
 sudo systemctl start mariadb
 ```
 
-- CentOS 7.x
-  - `sudo vi /etc/yum.repos.d/MariaDB.repo`
 ```sh
-# MariaDB 10.10 CentOS repository list
-# http://mariadb.org/mariadb/repositories/
-[mariadb]
-name = MariaDB
-baseurl = http://yum.mariadb.org/10.10/centos7-amd64
-gpgkey=https://yum.mariadb.org/RPM-GPG-KEY-MariaDB
-gpgcheck=1
-```
-  - CentOS 6.x는 `baseurl = http://yum.mariadb.org/10.8/centos6-amd64`
-
-
-```sh
-sudo dnf install MariaDB-server
-sudo systemctl start mariadb
 sudo mariadb-secure-installation
 ```
 
