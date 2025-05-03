@@ -48,6 +48,11 @@ xcode-select --install
 - Option + R boot, terminal
 - `csrutil disable --without debug`
 
+## Utilities
+- [RunCat](https://kyome.io/runcat/index.html?lang=en)
+- [Rectangle](https://rectangleapp.com/)
+- [Battery](https://github.com/actuallymentor/battery#readme)
+
 ## ref
 - [mac php](/mib/mac/php)
 
