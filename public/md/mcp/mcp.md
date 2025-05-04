@@ -216,5 +216,6 @@ MCP를 구현할 때 고려해야 할 주요 보안 사항:
 - [Anthropic MCP 공식 문서](https://www.anthropic.com/news/claude-3-model-context-protocol)
 - [Claude MCP 공식 문서](https://www.claudemcp.com/docs/quickstart)
 - [MCP GitHub 레포지토리](https://github.com/anthropics/anthropic-cookbook/tree/main/mcp)
-- [MCP 개발자 커뮤니티](https://discord.gg/anthropic)
+- [Anthropic 개발자 커뮤니티](https://discord.com/invite/zkrBaqytPW)
 - [Glama.ai MCP 서버 목록](https://glama.ai/mcp/servers)
+- [Awesome MCP Servers](https://github.com/punkpeye/awesome-mcp-servers)
