@@ -116,6 +116,31 @@ weather = client.call_tool("weather", "getTemperature", ["서울"])
 print(weather)  # 출력: 서울의 현재 온도는 22°C입니다.
 ```
 
+## MCP 다이어그램 예시
+
+```mermaid
+graph TD
+    A[Claude Desktop] <--> |MCP Protocol: Query and Result| B[SQLite MCP Server]
+    B <--> |Local Access: SQL Operation| C[SQLite Database ~/test.db]
+    
+    style A fill:#e6e6ff,stroke:#9999ff
+    style B fill:#e6e6ff,stroke:#9999ff
+    style C fill:#e6f0ff,stroke:#99c2ff,stroke-width:2px
+    
+    subgraph Your Computer
+    A
+    B
+    C
+    end
+```
+
+## 주요 특징
+
+- **표준화된 통신**: AI 모델과 외부 서비스 간의 통신 방식을 표준화
+- **도구 확장성**: 새로운 도구와 기능을 쉽게 AI 시스템에 통합 가능
+- **컨텍스트 관리**: 대화 컨텍스트를 효율적으로 관리하여 AI의 이해도 향상
+- **멀티모달 지원**: 텍스트뿐만 아니라 이미지, 오디오 등 다양한 형태의 데이터 처리 지원
+
 ## MCP와 Claude, GPT 통합
 
 최신 AI 모델들은 MCP를 통해 외부 도구와 통합:
@@ -189,6 +214,7 @@ MCP를 구현할 때 고려해야 할 주요 보안 사항:
 ## 참고 자료
 
 - [Anthropic MCP 공식 문서](https://www.anthropic.com/news/claude-3-model-context-protocol)
+- [Claude MCP 공식 문서](https://www.claudemcp.com/docs/quickstart)
 - [MCP GitHub 레포지토리](https://github.com/anthropics/anthropic-cookbook/tree/main/mcp)
 - [MCP 개발자 커뮤니티](https://discord.gg/anthropic)
 - [Glama.ai MCP 서버 목록](https://glama.ai/mcp/servers)
