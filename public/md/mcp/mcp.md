@@ -1,11 +1,11 @@
 # MCP
 
-- Model Context Protocol
-- Anthropic에서 제시한 규약
-
 ## 개요
 
-Model Context Protocol(MCP)은 AI 모델과 외부 도구, 데이터 소스 간의 통신을 표준화하는 프로토콜입니다. 2023년 Anthropic에서 처음 제안했으며, AI 시스템이 외부 세계와 효과적으로 상호작용할 수 있도록 설계되었습니다.
+- Model Context Protocol(MCP)
+- AI 모델과 외부 도구, 데이터 소스 간의 통신을 표준화하는 프로토콜
+- 2023년 Anthropic에서 처음 제안
+- AI 시스템이 외부 세계와 효과적으로 상호작용할 수 있도록 설계
 
 ## 주요 특징
 
@@ -16,7 +16,7 @@ Model Context Protocol(MCP)은 AI 모델과 외부 도구, 데이터 소스 간�
 
 ## 작동 방식
 
-MCP는 다음과 같은 주요 구성 요소로 이루어져 있습니다:
+MCP 주요 구성 요소:
 
 1. **MCP 서버**: 외부 도구와 서비스를 호스팅하고 관리하는 서버
 2. **MCP 클라이언트**: AI 모델이 MCP 서버와 통신하기 위한 인터페이스
@@ -118,10 +118,10 @@ print(weather)  # 출력: 서울의 현재 온도는 22°C입니다.
 
 ## MCP와 Claude, GPT 통합
 
-최신 AI 모델들은 MCP를 통해 외부 도구와 통합될 수 있습니다:
+최신 AI 모델들은 MCP를 통해 외부 도구와 통합:
 
-- **Claude (Anthropic)**: Claude는 MCP를 기본적으로 지원하며, 개발자는 Claude API를 통해 MCP 서버와 연결할 수 있습니다.
-- **GPT (OpenAI)**: OpenAI의 GPT 모델은 Function Calling 기능을 통해 MCP와 유사한 기능을 제공합니다.
+- **Claude (Anthropic)**: Claude는 MCP를 기본적으로 지원하며, Claude API를 통해 MCP 서버와 연결
+- **GPT (OpenAI)**: OpenAI의 GPT 모델은 Function Calling 기능을 통해 MCP와 유사한 기능 제공
 
 ## 보안 고려사항
 
@@ -133,8 +133,6 @@ MCP를 구현할 때 고려해야 할 주요 보안 사항:
 - **속도 제한**: 과도한 API 호출 방지를 위한 속도 제한 구현
 
 ## MCP 서버 목록
-
-다음은 [glama.ai](https://glama.ai/mcp/servers)에서 제공하는 주요 MCP 서버 목록입니다:
 
 ### 브라우저 및 웹 자동화
 - **[Puppeteer MCP 서버](https://github.com/puppeteer/puppeteer)**: 웹 브라우저 자동화 및 스크래핑 기능 제공
