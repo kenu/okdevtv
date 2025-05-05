@@ -191,15 +191,6 @@ MCP를 구현할 때 고려해야 할 주요 보안 사항:
 - **[YingDao RPA MCP Server](https://github.com/ying-dao/yingdao_mcp_server)**: 로봇 프로세스 자동화
 - **[UseGrant MCP Server](https://github.com/usegranthq/mcp-server)**: 권한 관리 자동화
 
-### 보안 및 인프라
-- **[Infisical MCP Server](https://github.com/Infisical/infisical-mcp-server)**: 시크릿 및 환경 변수 관리
-- **[Binalyze AIR MCP Server](https://github.com/binalyze/air-mcp)**: 디지털 포렌식 및 보안
-
-### 게임 및 그래픽
-- **[PlayCanvas Editor MCP Server](https://github.com/playcanvas/editor-mcp-server)**: 3D 웹 게임 개발
-- **[Needle MCP Server](https://github.com/needle-ai/needle-mcp)**: 3D 콘텐츠 생성
-- **[Magic UI MCP Server](https://github.com/magicuidesign/mcp)**: UI 디자인 자동화
-
 ### 금융 및 결제
 - **[Square MCP Server](https://github.com/square/square-mcp-server)**: 결제 처리 및 고객 관리
 - **[Paddle MCP Server](https://github.com/PaddleHQ/paddle-mcp-server)**: 구독 및 결제 관리
@@ -213,9 +204,9 @@ MCP를 구현할 때 고려해야 할 주요 보안 사항:
 
 ## 참고 자료
 
-- [Anthropic MCP 공식 문서](https://www.anthropic.com/news/claude-3-model-context-protocol)
-- [Claude MCP 공식 문서](https://www.claudemcp.com/docs/quickstart)
-- [MCP GitHub 레포지토리](https://github.com/anthropics/anthropic-cookbook/tree/main/mcp)
+- [Anthropic MCP 공식 문서](https://www.anthropic.com/news/model-context-protocol)
+- [Claude MCP Quickstart](https://www.claudemcp.com/docs/quickstart)
+- [MCP GitHub 레포지토리](https://github.com/anthropics/github-mcp-server)
 - [Anthropic 개발자 커뮤니티](https://discord.com/invite/zkrBaqytPW)
 - [Glama.ai MCP 서버 목록](https://glama.ai/mcp/servers)
 - [Awesome MCP Servers](https://github.com/punkpeye/awesome-mcp-servers)
