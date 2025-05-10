@@ -1,0 +1,49 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: okdevtv-app
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env
+    environment:
+      - NODE_ENV=production
+    volumes:
+      - ./logs:/usr/src/app/logs
+    healthcheck:
+      test: ["CMD", "node", "-e", "require('http').get('http://localhost:3000/', (r) => r.statusCode === 200 ? process.exit(0) : process.exit(1))"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 5s
+    networks:
+      - okdevtv-network
+
+  # Uncomment if you need a database service
+  # db:
+  #   image: mariadb:latest
+  #   container_name: okdevtv-db
+  #   restart: unless-stopped
+  #   environment:
+  #     - MYSQL_ROOT_PASSWORD=rootpassword
+  #     - MYSQL_DATABASE=${DB_NAME}
+  #     - MYSQL_USER=${DB_USER}
+  #     - MYSQL_PASSWORD=${DB_PASS}
+  #   volumes:
+  #     - db-data:/var/lib/mysql
+  #     - ./db/init:/docker-entrypoint-initdb.d
+  #   networks:
+  #     - okdevtv-network
+
+networks:
+  okdevtv-network:
+    driver: bridge
+
+# Uncomment if using database
+# volumes:
+#   db-data:

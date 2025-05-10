@@ -2,6 +2,11 @@ const express = require('express')
 const router = express.Router()
 const okdevtv = require('../services/okdevtv-list')
 
+// Health check endpoint for Docker
+router.get('/health', function (req, res) {
+  res.status(200).json({ status: 'ok' })
+})
+
 router.get('/', function (req, res) {
   res.render('index', { user: req.session.user })
 })

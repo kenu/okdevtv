@@ -1,19 +1,46 @@
-# guide from: https://nodejs.org/ko/docs/guides/nodejs-docker-webapp/
-FROM node:20
-# 앱 디렉터리 생성
+# Stage 1: Build stage
+FROM node:20-alpine AS build
+
+# Set working directory
 WORKDIR /usr/src/app
 
-# 앱 의존성 설치
+# Copy package files
 COPY package.json ./
 
-RUN npm i -g pnpm
-RUN pnpm i
-# 프로덕션을 위한 코드를 빌드하는 경우
-# RUN npm ci --only=production
+# Install pnpm and dependencies
+RUN npm i -g pnpm && \
+    pnpm i --prod --frozen-lockfile
 
-# 앱 소스 추가
+# Stage 2: Production stage
+FROM node:20-alpine
+
+# Create non-root user
+RUN addgroup -g 1001 -S nodejs && \
+    adduser -S nodeuser -u 1001 -G nodejs
+
+# Set working directory
+WORKDIR /usr/src/app
+
+# Copy from build stage
+COPY --from=build /usr/src/app/node_modules ./node_modules
 COPY . .
 
-EXPOSE 3000
-CMD [ "node", "bin/www" ]
+# Set ownership to non-root user
+RUN chown -R nodeuser:nodejs /usr/src/app
 
+# Use non-root user
+USER nodeuser
+
+# Healthcheck
+HEALTHCHECK --interval=30s --timeout=30s --start-period=5s --retries=3 \
+  CMD node -e "try { require('http').get('http://localhost:3000/health', (r) => r.statusCode === 200 ? process.exit(0) : process.exit(1)); } catch (e) { process.exit(1); }"
+
+# Set environment variables
+ENV NODE_ENV=production
+ENV PORT=3000
+
+# Expose port
+EXPOSE 3000
+
+# Start the app
+CMD ["node", "bin/www"]
