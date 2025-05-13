@@ -1,5 +1,5 @@
 # Stage 1: Build stage
-FROM node:20-alpine AS build
+FROM node:22-alpine AS build
 
 # Set working directory
 WORKDIR /usr/src/app
@@ -12,7 +12,7 @@ RUN npm i -g pnpm && \
     pnpm i --prod --frozen-lockfile
 
 # Stage 2: Production stage
-FROM node:20-alpine
+FROM node:22-alpine
 
 # Create non-root user
 RUN addgroup -g 1001 -S nodejs && \

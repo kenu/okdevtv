@@ -6,10 +6,10 @@
 
 ## Examples
 ### Node.js
-- https://github.com/passport/express-4.x-facebook-example
-- https://github.com/kenu/express-4.x-google-example
-- https://github.com/kenu/express-4.x-github-example
-- https://github.com/kenu/express-4.x-naver-example
+- https://github.com/passport/express-4.x-facebook-example (Note: For Express 5.x, you may need to adapt these examples)
+- https://github.com/kenu/express-4.x-google-example (Note: For Express 5.x, you may need to adapt these examples)
+- https://github.com/kenu/express-4.x-github-example (Note: For Express 5.x, you may need to adapt these examples)
+- https://github.com/kenu/express-4.x-naver-example (Note: For Express 5.x, you may need to adapt these examples)
 
 ### Spring Boot
 - https://github.com/innovationacademy-kr/42oauth

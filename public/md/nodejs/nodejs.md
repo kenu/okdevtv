@@ -31,7 +31,7 @@ that run across distributed devices.
 ### 장점
 - 쉬운 시작
 - 안정적인 서비스 w/ pm2
-- 모듈 2,663,939 total packages(2024/01/27); https://modulecounts.com
+- 모듈 2,900,000+ total packages(2024/05/28); https://modulecounts.com
 - 성능 개선
   - [linkedin 사례](http://highscalability.com/blog/2012/10/4/linkedin-moved-from-rails-to-node-27-servers-cut-and-up-to-2.html)
     - 서버 감축 Ruby + Mongrel 30대 -> node.js 3대
@@ -129,8 +129,8 @@ from [blog.udemy.com/learn-node-js/](https://lh4.googleusercontent.com/pwtI1uBbT
   "version": "0.0.1",
   "description": "my first socket.io app",
   "dependencies": {
-    "express": "^4.14.0",
-    "socket.io": "^4.1.2"
+    "express": "^5.1.0",
+    "socket.io": "^4.7.2"
   }
 }
 ```
@@ -248,8 +248,8 @@ server.listen(port, hostname, () => {
   - create `exp.js` file
 
 ```js
-var express = require('express')
-var app = express()
+const express = require('express')
+const app = express()
 
 app.get('/', function (req, res) {
   res.send('Hello World!')
@@ -281,7 +281,7 @@ app.listen(3000, function () {
 #### get
 
 ```js
-app.get('/', function (req, res) {
+app.get('/', (req, res) => {
     res.send('Hello World!')
 })
 ```
@@ -292,7 +292,7 @@ app.get('/', function (req, res) {
 #### post
 
 ```js
-app.post('/', function (req, res) {
+app.post('/', (req, res) => {
     res.send('Got a POST request')
 })
 ```
@@ -301,7 +301,7 @@ app.post('/', function (req, res) {
 #### put
 
 ```js
-app.put('/user', function (req, res) {
+app.put('/user', (req, res) => {
     res.send('Got a PUT request at /user')
 })
 ```
@@ -310,7 +310,7 @@ app.put('/user', function (req, res) {
 #### delete
 
 ```js
-app.delete('/user', function (req, res) {
+app.delete('/user', (req, res) => {
     res.send('Got a DELETE request at /user')
 })
 ```
@@ -328,7 +328,7 @@ notify, subscribe, unsubscribe, patch, search, connect.
 - all
 
 ```js
-app.all('/secret', function (req, res, next) {
+app.all('/secret', (req, res, next) => {
   console.log('Accessing the secret section ...')
   next() // pass control to the next handler
 })
@@ -343,7 +343,7 @@ req.params: { "userId": "34", "bookId": "8989" }
 ```
 
 ```
-app.get('/users/:userId/books/:bookId', function (req, res) {
+app.get('/users/:userId/books/:bookId', (req, res) => {
   res.send(req.params)
 })
 ```

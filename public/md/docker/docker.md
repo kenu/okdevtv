@@ -67,7 +67,7 @@ docker rm $(docker ps -aq)
 ```dockerfile
 # syntax=docker/dockerfile:1
 
-FROM node:18-alpine
+FROM node:22-alpine
 WORKDIR /app
 COPY . .
 RUN yarn install --production

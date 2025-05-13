@@ -1,27 +1,54 @@
 # TypeScript
-- https://www.typescriptlang.org/index.html
+- https://www.typescriptlang.org/
+- Current version: 5.x
+- Superset of JavaScript that adds static types
 
-## example
+## Example
 - `greeter.ts`
 
 ```typescript
-function greeter(person: string) {
-  return "Hello, " + person;
+// Modern TypeScript example with type annotations
+function greeter(person: string): string {
+  return `Hello, ${person}`;  // Template string
 }
 
-let user = "Kenu";
+// Type inference (TypeScript knows 'user' is a string)
+const user = "Kenu";
 
 console.log(greeter(user));
 ```
 
-## install, compile and run
-- `npm install -g typescript`
-- `tsc greeter.ts`
-- `node greeter.js`
+## Install, Compile and Run
+- `npm install -g typescript` (installs the latest version globally)
+- `tsc greeter.ts` (compiles TypeScript to JavaScript)
+- `node greeter.js` (runs the compiled JavaScript)
 
-## ts-node
-- `npm i -g ts-node`
-- `ts-node  greeter.js`
+## Quick Execution with ts-node
+- `npm i -g ts-node` (installs ts-node globally)
+- `ts-node greeter.ts` (compiles and runs TypeScript in one step)
+
+## Project Setup (Recommended)
+```bash
+# Initialize a TypeScript project
+npm init -y
+npm install typescript --save-dev
+npx tsc --init # Creates tsconfig.json
+```
+
+### tsconfig.json (Basic Configuration)
+```json
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
+  }
+}
+```
 
 ## TypeScript Type 계층도
 <img src="images/typescript.mmd.webp">
@@ -29,13 +56,13 @@ console.log(greeter(user));
 
 ## Object Oriented Programming
 - 객체 지향 프로그래밍
-- SOLID
+- SOLID Principles in TypeScript
   - SRP (단일책임의 원칙: Single Responsibility Principle)
   - OCP (개방폐쇄의 원칙: Open Close Principle)
   - LSP (리스코브 치환의 원칙: The Liskov Substitution Principle)
   - ISP (인터페이스 분리의 원칙: Interface Segregation Principle)
   - DIP (의존성역전의 원칙: Dependency Inversion Principle)
-- ref: http://www.nextree.co.kr/p6960/
+- See: https://www.digitalocean.com/community/conceptual-articles/s-o-l-i-d-the-first-five-principles-of-object-oriented-design
 
 - 풀어서 얘기하자면(#그래도 #어려움)
   - 어떤 변화에 의해 클래스를 변경해야 하는 이유는 오직 하나뿐이어야 함
@@ -64,24 +91,30 @@ console.log(greeter(user));
 
 ## TypeScript Class
 - 전통적인 JavaScript는 재사용 가능한 컴포넌트를 만들기 위해 함수와 프로토타입 기반의 상속을 사용
+- TypeScript는 클래스, 인터페이스 및 모듈과 같은 객체 지향 개념을 제공
 
-### 예제
+### 클래스 예제 (Modern TypeScript)
 
 ```ts
 class Greeter {
-  greeting: string;
+  // Modern property declaration with access modifier
+  private readonly greeting: string;
+  
   constructor(message: string) {
     this.greeting = message;
   }
-  greet() {
-    return "Hello, " + this.greeting;
+  
+  // Method with return type annotation
+  greet(): string {
+    return `Hello, ${this.greeting}`;
   }
 }
 
-let greeter = new Greeter("world");
-console.log(greeter);
+// Use const for object references that won't be reassigned
+const greeter = new Greeter("world");
+console.log(greeter.greet());
 ```
-- code from : https://typescript-kr.github.io/pages/Classes.html
+- Official docs: https://www.typescriptlang.org/docs/handbook/2/classes.html
 
 ## 상속 (Inheritance)
 - 기존 클래스 확장
@@ -132,19 +165,22 @@ class Octopus {
 ## 접근자 (Accessors)
 
 - getter/setter
+- TypeScript 4.3+ 지원 getter/setter의 다른 타입 지원
 
 ```ts
-let passcode = "secret passcode";
+// Modern implementation with class field initialization
+const passcode = "secret passcode";
 
 class Employee {
-  private _fullName: string;
+  // Initialized with undefined
+  private _fullName: string = '';
 
   get fullName(): string {
     return this._fullName;
   }
 
   set fullName(newName: string) {
-    if (passcode && passcode == "secret passcode") {
+    if (passcode === "secret passcode") {
       this._fullName = newName;
     }
     else {
@@ -153,7 +189,7 @@ class Employee {
   }
 }
 
-let employee = new Employee();
+const employee = new Employee();
 employee.fullName = "Bob Smith";
 if (employee.fullName) {
     console.log(employee.fullName);
@@ -185,8 +221,69 @@ class Grid {
 - 인스턴스 타입이 아닌 "`Greeter` 클래스 자체의 타입을 제공"
   - 생성자 함수의 타입인 "`Greeter`라는 Symbol 타입을 제공"
 
+## Modern TypeScript Features
+
+### Type Aliases and Interfaces
+```ts
+// Type Alias
+type Point = {
+  x: number;
+  y: number;
+};
+
+// Interface
+interface User {
+  id: number;
+  name: string;
+}
+
+// Extending interfaces
+interface Employee extends User {
+  department: string;
+}
+```
+
+### Union and Intersection Types
+```ts
+// Union type (either string or number)
+function printId(id: string | number) {
+  console.log(`ID: ${id}`);
+}
+
+// Intersection type (both types)
+type Employee = Person & { employeeId: number };
+```
+
+### Nullish Coalescing and Optional Chaining
+```ts
+// Nullish coalescing (??)
+const userName = response.user?.name ?? "Anonymous";
+
+// Optional chaining (?.)
+const street = user?.address?.street;
+```
+
+### Utility Types
+```ts
+// Partial - Makes all properties optional
+type PartialUser = Partial<User>;
+
+// Pick - selects a subset of properties
+type UserName = Pick<User, 'name'>;
+
+// Omit - removes properties
+type UserWithoutId = Omit<User, 'id'>;
+
+// Record - creates a type with specified properties
+type UserRoles = Record<string, User>;
+```
+
 ## ref
-- in 5 minutes
-  - https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html
+- Official Documentation
+  - https://www.typescriptlang.org/docs/
+- TypeScript Handbook
+  - https://www.typescriptlang.org/docs/handbook/intro.html
 - TypeScript Deep Dive
-  - https://basarat.gitbooks.io/typescript/content/
+  - https://basarat.gitbook.io/typescript/
+- TypeScript Playground
+  - https://www.typescriptlang.org/play

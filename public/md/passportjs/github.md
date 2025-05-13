@@ -12,7 +12,7 @@
 - Client Secret
 
 ## Passport Example
-- https://github.com/kenu/express-4.x-github-example
+- https://github.com/kenu/express-4.x-github-example (Note: For Express 5.x, you may need to adapt this example)
 
 ## ref
 - Manage GitHub Apps

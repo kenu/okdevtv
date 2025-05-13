@@ -1,7 +1,8 @@
 # Docker compose
 - Compose is a tool for defining and running multi-container Docker applications.
-- With Compose, you use a YAML file to configure your application’s services.
+- With Compose, you use a YAML file to configure your application's services.
 - Then, with **a single command**, you create and start all the services from your configuration.
+- Latest version is Docker Compose V2, which is integrated directly into Docker.
 
 ## Features
 - Multiple isolated environments on a single host
@@ -9,15 +10,18 @@
 - Only recreate containers that have changed
 - Variables and moving a composition between environments
 
-## `docker-compose.yml`
+## `compose.yaml` or `docker-compose.yml`
 ```yaml
+# Modern Docker Compose file (V2)
 services:
   web:
     build: .
     ports:
       - "5000:5000"
+    restart: unless-stopped
   redis:
     image: "redis:alpine"
+    restart: unless-stopped
 ```
 
 ```yaml
@@ -29,9 +33,17 @@ services:
     volumes:
       - .:/code
     environment:
-      FLASK_ENV: development
+      FLASK_DEBUG: 1
+      # FLASK_ENV is deprecated in newer Flask versions
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
   redis:
     image: "redis:alpine"
+    volumes:
+      - redis-data:/data
 ```
 
 - 현재 디렉토리(.)를 도커 /code 에 마운트하고, 다시 빌드 하지 않고 개발 가능
@@ -44,10 +56,11 @@ services:
 - 목적: 개발 환경에서 복잡한 애플리케이션을 빠르게 설정하고 실행하기 위한 목적으로 설계
 
 ### 2. Docker Compose 파일 구조
-- version: Docker Compose 파일의 버전을 지정
 - services: 애플리케이션의 각 서비스(컨테이너)를 정의
 - networks: 사용되는 네트워크를 정의
 - volumes: 데이터 볼륨을 정의
+- secrets: 민감한 데이터를 안전하게 관리
+- configs: 설정 파일을 관리
 
 ```yaml
 services:
@@ -84,13 +97,21 @@ networks:
 volumes:
   myvolume:
     driver: local
+  redis-data:
+    driver: local
+
+# Named volumes should be defined at the root level
 ```
 
 ### 6. Docker Compose 명령어
-- docker-compose up: 정의된 서비스를 시작
-- docker-compose down: 모든 서비스를 중지하고 제거
-- docker-compose ps: 현재 실행 중인 서비스 상태를 확인
-- docker-compose logs: 서비스 로그를 확인
+- docker compose up: 정의된 서비스를 시작 (V2 문법)
+  - docker-compose up (레거시 방식)
+- docker compose down: 모든 서비스를 중지하고 제거
+  - docker-compose down (레거시 방식)
+- docker compose ps: 현재 실행 중인 서비스 상태를 확인
+- docker compose logs: 서비스 로그를 확인
+- docker compose build: 서비스 이미지를 다시 빌드
+- docker compose restart: 서비스를 재시작
 
 ### 7. 예제 프로젝트
 - 웹 애플리케이션 및 데이터베이스: 웹 서버와 데이터베이스 서비스를 포함하는 간단한 예제를 통해 Docker Compose의 사용법을 실습
@@ -107,3 +128,5 @@ Docker Compose와 Kubernetes 비교: 두 도구의 차이점과 각각의 장단
 ## ref
 - https://docs.docker.com/compose/
 - https://docs.docker.com/compose/gettingstarted/
+- https://docs.docker.com/compose/compose-v2/
+- https://docs.docker.com/compose/compose-file/

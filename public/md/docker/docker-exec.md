@@ -12,7 +12,7 @@
 
 ```
 # react
-FROM node:18.8-alpine
+FROM node:22-alpine
 
 ENV APP_HOME=/usr/app/
 RUN mkdir -p ${APP_HOME}

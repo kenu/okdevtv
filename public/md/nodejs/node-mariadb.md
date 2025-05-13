@@ -39,77 +39,127 @@ CREATE TABLE user (
 - Connection
 
 ```js
-const mysql      = require('mysql');
-const connection = mysql.createConnection({
-  host     : 'localhost',
-  user     : 'devuser',
-  password : 'okpassokpass',
-  database : 'okdevdb'
+// Using mariadb client instead of mysql
+const mariadb = require('mariadb');
+const pool = mariadb.createPool({
+  host: 'localhost',
+  user: 'devuser',
+  password: 'okpassokpass',
+  database: 'okdevdb',
+  connectionLimit: 5
 });
 
-connection.connect();
+// Async/await example
+async function testConnection() {
+  let conn;
+  try {
+    conn = await pool.getConnection();
+    const rows = await conn.query('SELECT now() AS time');
+    console.log('The time is: ', rows[0].time);
+  } catch (err) {
+    console.error('Database error:', err);
+  } finally {
+    if (conn) conn.release(); // Release connection back to the pool
+  }
+}
 
-connection.query('SELECT now() AS time', function(err, rows, fields) {
-  if (err) throw err;
-
-  console.log('The time is: ', rows[0].time);
-});
-
-connection.end();
+testConnection();
 ```
 
 - Create (insert)
 
 ```js
-connection.connect();
+async function insertUser() {
+  let conn;
+  try {
+    conn = await pool.getConnection();
+    const post = {
+      name: 'kenu',
+      email: 'kenu.heo@gmail.com',
+      passwd: 'okpassokpass'
+    };
+    const result = await conn.query('INSERT INTO user SET ?', post);
+    console.log('Insert result:', result);
+    return result;
+  } catch (err) {
+    console.error('Insert error:', err);
+  } finally {
+    if (conn) conn.release();
+  }
+}
 
-const post  = {name : 'kenu', email: 'kenu.heo@gmail.com', passwd: 'okpassokpass'};
-const query = connection.query('INSERT INTO user SET ?', post, function(err, result) {
-  console.log(result);
-});
-connection.end();
-
-console.log(query.sql);
+// insertUser();
 ```
 - Retrieve (select)
 
 ```js
-connection.connect();
+async function getUsers() {
+  let conn;
+  try {
+    conn = await pool.getConnection();
+    const rows = await conn.query('SELECT * FROM user');
+    console.log('The user is: ', rows[0]);
+    return rows;
+  } catch (err) {
+    console.error('Select error:', err);
+  } finally {
+    if (conn) conn.release();
+  }
+}
 
-connection.query('SELECT * FROM user', function(err, rows, fields) {
-  if (err) throw err;
-
-  console.log('The user is: ', rows[0]);
-});
-
-connection.end();
+// getUsers();
 ```
 
 - Update
 
 ```js
-connection.connect();
+async function updateUser(id, name) {
+  let conn;
+  try {
+    conn = await pool.getConnection();
+    const result = await conn.query(
+      'UPDATE user SET name = ? WHERE id = ?',
+      [name, id]
+    );
+    console.log('Update result:', result);
+    return result;
+  } catch (err) {
+    console.error('Update error:', err);
+  } finally {
+    if (conn) conn.release();
+  }
+}
 
-const query = connection.query(
-  'UPDATE user SET name = ? WHERE id = ?',
-  ['kenu.heo', 1 ], function(err, result) {
-  console.log(result);
-});
-connection.end();
+// updateUser(1, 'kenu.heo');
 ```
 
 - Delete
 
 ```js
-const query = connection.query(
-  'DELETE FROM user WHERE id = ?',
-  [ 1 ], function(err, result) {
-  console.log(result);
-});
-connection.end();
+async function deleteUser(id) {
+  let conn;
+  try {
+    conn = await pool.getConnection();
+    const result = await conn.query(
+      'DELETE FROM user WHERE id = ?',
+      [id]
+    );
+    console.log('Delete result:', result);
+    return result;
+  } catch (err) {
+    console.error('Delete error:', err);
+  } finally {
+    if (conn) conn.release();
+  }
+}
+
+// deleteUser(1);
 ```
 
 ## ref
-- node-mysql
+- mariadb client for Node.js
+  - https://github.com/mariadb-corporation/mariadb-connector-nodejs
+- node-mysql (legacy)
   - https://github.com/mysqljs/mysql
 - https://mariadb.org
+- Installation (npm): `npm install mariadb --save`

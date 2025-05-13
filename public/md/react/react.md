@@ -1,15 +1,16 @@
 # React.js
 - A JavaScript library for building user interfaces
-- https://ko.reactjs.org
+- https://react.dev
 
-```
-var HelloMessage = React.createClass({
-  render: function() {
-    return <div>Hello {this.props.name}</div>;
-  }
-});
+```jsx
+// Modern functional component with hooks
+function HelloMessage({ name }) {
+  return <div>Hello {name}</div>;
+}
 
-ReactDOM.render(<HelloMessage name="John" />, mountNode);
+// React 18 syntax
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<HelloMessage name="John" />);
 ```
 
 ## Sample
@@ -19,19 +20,16 @@ ReactDOM.render(<HelloMessage name="John" />, mountNode);
   <head>
     <meta charset="UTF-8" />
     <title>Hello World</title>
-    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
-    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
-    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@7.23.8/babel.min.js"></script>
   </head>
   <body>
     <div id="root"></div>
     <script type="text/babel">
-
-      ReactDOM.render(
-        <h1>Hello, world!</h1>,
-        document.getElementById('root')
-      );
-
+      // React 18 syntax
+      const root = ReactDOM.createRoot(document.getElementById('root'));
+      root.render(<h1>Hello, world!</h1>);
     </script>
   </body>
 </html>
@@ -39,26 +37,53 @@ ReactDOM.render(<HelloMessage name="John" />, mountNode);
 - [run react01.html](/md/react/react01.html)
 
 ## React 프로젝트 생성
-- CRA: Create React App
-- https://ko.reactjs.org/docs/create-a-new-react-app.html
+- Modern Frameworks:
+  - [Next.js](https://nextjs.org/) (recommended for most use cases)
+  - [Vite](https://vitejs.dev/) (lightweight build tool)
+  - [Remix](https://remix.run/)
+  - [Gatsby](https://www.gatsbyjs.com/)
+- https://react.dev/learn/start-a-new-react-project
 
-```
-npm create vite my-app -- --template react
+```bash
+# Next.js (recommended by React team)
+npx create-next-app@latest my-app
+cd my-app
+npm run dev
+
+# OR Vite (faster development server)
+npm create vite@latest my-app -- --template react
 cd my-app
 npm install
 npm run dev
 ```
 
 ## 새로운 페이지 추가
-- React Router
-- https://reactrouter.com/web/guides/quick-start
+- React Router v6
+- https://reactrouter.com/en/main/start/tutorial
 
-```
+```bash
 npm install react-router-dom --save
 ```
 
+```jsx
+// Example using React Router v6
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+    </BrowserRouter>
+  );
+}
+```
+
 ## 데이터 바인딩
-- https://ko.reactjs.org/docs/introducing-jsx.html#embedding-expressions-in-jsx
+- https://react.dev/learn/javascript-in-jsx-with-curly-braces
 
 ### 변수
 ```jsx
@@ -97,46 +122,83 @@ ReactDOM.render(
 ## 컴포넌트 만들기
 
 ### 컴포넌트 추출하기
-- https://ko.reactjs.org/docs/components-and-props.html#extracting-components
+- https://react.dev/learn/extracting-components
 
 ### 컴포넌트 간 데이터 전달하기
 - `props`
+- Context API
+- State management libraries (Redux, Zustand, Jotai, etc.)
+
 ## state
-- https://ko.reactjs.org/docs/state-and-lifecycle.html
+- Using hooks: https://react.dev/learn/state-a-components-memory
+- useState: https://react.dev/reference/react/useState
+- useReducer: https://react.dev/reference/react/useReducer
 
 ## 데이터 가져오기
-- https://reactjs.org/docs/faq-ajax.html
-- https://www.freecodecamp.org/news/fetch-data-react/
+- Modern data fetching with React Query, SWR, or Apollo Client
+- https://react.dev/learn/synchronizing-with-effects
+- https://tanstack.com/query/latest
 
-```js
+### Using async/await with useEffect
+```jsx
 import React, { useState, useEffect } from 'react';
+
 export default function App() {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  
   useEffect(() => {
-    fetch('/data.json')
-      .then((response) => {
-        if (response.ok) {
-          return response.json();
+    async function fetchData() {
+      try {
+        const response = await fetch('/data.json');
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
         }
-        throw response;
-      })
-      .then((data) => {
-        setData(data);
-      })
-      .catch((error) => {
-        console.error('Error fetching data: ', error);
+        const result = await response.json();
+        setData(result);
+      } catch (error) {
+        console.error('Error fetching data:', error);
         setError(error);
-      })
-      .finally((data) => {
-        console.log('data', data);
+      } finally {
         setLoading(false);
-      });
+      }
+    }
+    
+    fetchData();
   }, []);
-  console.log(loading, error, data);
-  if (loading) return 'Loading...';
-  if (error) return 'Error!';
+  
+  if (loading) return <div>Loading...</div>;
+  if (error) return <div>Error: {error.message}</div>;
+  
+  return (
+    <>
+      <pre>{JSON.stringify(data, null, 2)}</pre>
+    </>
+  );
+}
+```
+
+### Using React Query (recommended for production)
+```jsx
+import { useQuery } from '@tanstack/react-query';
+
+function fetchData() {
+  return fetch('/data.json').then(res => {
+    if (!res.ok) throw new Error('Network error');
+    return res.json();
+  });
+}
+
+export default function App() {
+  const { data, isLoading, error } = useQuery({
+    queryKey: ['myData'],
+    queryFn: fetchData,
+  });
+  
+  if (isLoading) return <div>Loading...</div>;
+  if (error) return <div>Error: {error.message}</div>;
+  
   return (
     <>
       <pre>{JSON.stringify(data, null, 2)}</pre>
@@ -146,46 +208,79 @@ export default function App() {
 ```
 
 
-## render lifecycle
-- LIFECYCLE METHODS
-  - `componentWillMount` – 한 번 실행, 렌더링 전 클라이언트, 서버 양쪽에서
-  - `componentDidMount` – 한 번 실행, 렌더링 후, 클라이언트에서만
-  - `shouldComponentUpdate` – 리턴 값이 컴포넌트 업데이트 결정
-  - `componentWillUnmount` – 컴포넌트 언마운트 이전에 실행
+## Hooks and Function Components (Modern React)
+- React now recommends function components with hooks over class components
+- Key Hooks:
+  - `useState` - Manages state in function components
+  - `useEffect` - Handles side effects (replaces lifecycle methods)
+  - `useContext` - Accesses context values
+  - `useRef` - References DOM elements or persists values
+  - `useMemo` - Memoizes expensive calculations
+  - `useCallback` - Memoizes functions
+  - `useReducer` - Complex state management
+  
+- Equivalent lifecycle methods as hooks:
+  - `componentDidMount` → `useEffect(() => {}, [])`
+  - `componentDidUpdate` → `useEffect(() => {})`
+  - `componentWillUnmount` → `useEffect(() => { return () => {} }, [])`
 
-- SPECS
-  - `getInitialState` – state용 리턴 값의 초기 값
-  - `getDefaultProps` – props가 없을 경우 props 기본값 설정
-  - `mixins` – 객체 배열, 현재 컴포넌트 기능 확장에 사용됨
+### Timer Example with Hooks
+```jsx
+import React, { useState, useEffect } from 'react';
 
-- stateful
+function Timer() {
+  const [secondsElapsed, setSecondsElapsed] = useState(0);
+  
+  useEffect(() => {
+    // Like componentDidMount
+    const interval = setInterval(() => {
+      setSecondsElapsed(seconds => seconds + 1);
+    }, 1000);
+    
+    // Like componentWillUnmount
+    return () => {
+      clearInterval(interval);
+    };
+  }, []); // Empty dependency array means run only once at mount
+  
+  return (
+    <div>Seconds Elapsed: {secondsElapsed}</div>
+  );
+}
 
-```
-var Timer = React.createClass({
-  getInitialState: function() {
-    return {secondsElapsed: 0};
-  },
-  tick: function() {
-    this.setState({secondsElapsed: this.state.secondsElapsed + 1});
-  },
-  componentDidMount: function() {
-    this.interval = setInterval(this.tick, 1000);
-  },
-  componentWillUnmount: function() {
-    clearInterval(this.interval);
-  },
-  render: function() {
-    return (
-      <div>Seconds Elapsed: {this.state.secondsElapsed}</div>
-    );
-  }
-});
-
-ReactDOM.render(<Timer />, mountNode);
+// React 18 rendering
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<Timer />);
 ```
 
 ## React Developer Tools
-- https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi
+- Chrome: https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi
+- Firefox: https://addons.mozilla.org/en-US/firefox/addon/react-devtools/
+- Edge: https://microsoftedge.microsoft.com/addons/detail/react-developer-tools/gpphkfbcpidddadnkolkpfckpihlkkil
+
+## Performance Optimization
+- `React.memo` - Prevents unnecessary re-renders of functional components
+- `useMemo` - Memoizes expensive calculations
+- `useCallback` - Memoizes functions to prevent unnecessary re-renders
+- `React.lazy` and `Suspense` - For code splitting and lazy loading components
+
+```jsx
+// Code splitting example
+import React, { Suspense, lazy } from 'react';
+
+// Lazy load the component
+const HeavyComponent = lazy(() => import('./HeavyComponent'));
+
+function App() {
+  return (
+    <div>
+      <Suspense fallback={<div>Loading...</div>}>
+        <HeavyComponent />
+      </Suspense>
+    </div>
+  );
+}
+```
 
 ## related
 - [router](/mib/react/router)
@@ -193,8 +288,14 @@ ReactDOM.render(<Timer />, mountNode);
 - [redux](/mib/react/redux)
 
 ## 참고
-- inflearn react 강좌
-  - https://www.inflearn.com/course/react-%EA%B0%95%EC%A2%8C-velopert/
-- https://scotch.io/tutorials/learning-react-getting-started-and-concepts
-- webpack
+- React Official Documentation
+  - https://react.dev/learn
+- Next.js Documentation
+  - https://nextjs.org/docs
+- Modern React Tutorials
+  - https://beta.reactjs.org/learn
+- Kent C. Dodds - Epic React
+  - https://epicreact.dev/
+- Webpack & Bundlers
   - https://okdevtv.com/mib/webpack
+  - https://vitejs.dev/guide/

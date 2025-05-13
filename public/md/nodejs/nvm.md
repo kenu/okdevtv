@@ -19,13 +19,13 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
 ## install node
 
 ```sh
-nvm install 20
+nvm install 22
 ```
 
 ## set default version
 
 ```sh
-nvm alias default 20
+nvm alias default 22
 ```
 
 ## list lts versions
