@@ -2,8 +2,8 @@
 
 ## branch diverged
 ```
-On branch master
-Your branch and 'origin/master' have diverged,
+On branch main
+Your branch and 'origin/main' have diverged,
 and have 2 and 7 different commits each, respectively.
   (use "git pull" to merge the remote branch into yours)
 ```
@@ -24,20 +24,20 @@ and have 2 and 7 different commits each, respectively.
 
 gitk
 git status
-git pull origin master
+git pull origin main
 git commit -m "tmp"
 git commit -am "tmp"
-git pull origin master
+git pull origin main
 git add .
 git status
 git commit -m "tmp2"
-git pull origin master
+git pull origin main
 atom .
 git status
 git add .
 git commit -m "tmp3"
 git status
-git push origin master
+git push origin main
 gitk
 ```
 
@@ -71,7 +71,7 @@ git diff HEAD^ HEAD
 
 - 브랜치 파일 비교
 ```
-git diff develop master path/to/file
+git diff develop main path/to/file
 ```
 
 - As of Git 1.8.5, @ is an alias for HEAD, so you can use:

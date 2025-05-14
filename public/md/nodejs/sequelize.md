@@ -58,7 +58,7 @@ sequelize init
 - `models`, contains all models for your project
 - `migrations`, contains all migration files
 - `seeders`, contains all seed files
-- https://sequelize.org/master/manual/migrations.html
+- https://sequelize.org/docs/v6/other-topics/migrations/
 
 ## Model
 ```bash

@@ -34,7 +34,7 @@ npm i -g jest
 - `*.test.js`, `*.spec.js`
 
 ## example code
-- https://github.com/kenu/okdevtv-examples/tree/master/jest
+- https://github.com/kenu/okdevtv-examples/tree/main/jest
 
 ## ref
 - https://jestjs.io/

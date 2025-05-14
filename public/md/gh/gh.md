@@ -12,3 +12,9 @@ gh auth login
 gh extension install github/gh-copilot
 gh copilot explain "sudo apt-get"
 ```
+
+## GitHub browse
+- `gh browse`
+
+## ref
+- https://cli.github.com/manual/
