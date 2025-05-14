@@ -16,6 +16,26 @@ powershell -c "irm https://astral.sh/uv/install.ps1 | iex"
 brew install uv
 ```
 
+## Quick Start
+```sh
+uv init example -p 3.10
+cd example
+uv venv .venv
+
+# 가상환경 활성화 (macOS, Linux, WSL)
+source .venv/bin/activate
+# Windows
+.venv\Scripts\activate
+
+# VSCode로 열기
+code .
+uv add requests
+# pyproject.toml 파일 확인
+
+# 가상환경 비활성화
+deactivate
+```
+
 ## 기본 사용법
 1. 가상환경 만들기
   - `uv venv .venv` (현재 디렉토리에 .venv 이름으로 가상환경 생성)
