@@ -51,31 +51,14 @@ plugins=(
 ```
 
 ```sh
-# node
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
-. ~/.zshrc
-nvm i 14
-```
-
-```sh
 sudo usermod -a -G docker ec2-user
 
 DOCKER_CONFIG=${DOCKER_CONFIG:-$HOME/.docker}
 mkdir -p $DOCKER_CONFIG/cli-plugins
-```
-
-
-```sh
 curl -SL https://github.com/docker/compose/releases/download/v2.35.1/docker-compose-linux-x86_64 -o $DOCKER_CONFIG/cli-plugins/docker-compose
 chmod +x $DOCKER_CONFIG/cli-plugins/docker-compose
 docker compose version
 
-```
-```sh
-# ARM
-curl -SL https://github.com/docker/compose/releases/download/v2.35.1/docker-compose-linux-aarch64 -o $DOCKER_CONFIG/cli-plugins/docker-compose
-chmod +x $DOCKER_CONFIG/cli-plugins/docker-compose
-docker compose version
 ```
 
 - `sudo reboot`
@@ -187,6 +170,13 @@ nohup java -jar build/libs/reserve-request-service-1.0.0.jar&
 
 ```
 - http://ipaddress:8000/swagger-ui.html
+
+```sh
+# node
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
+. ~/.zshrc
+nvm i 14
+```
 
 ```sh
 cd ../../frontend/admin
