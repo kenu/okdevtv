@@ -38,8 +38,8 @@ frontend http_front
     bind *:80
     
     # Domain-based routing
-    acl host_express hdr(host) -i ex.firstzone.net
-    acl host_python hdr(host) -i py.firstzone.net
+    acl host_express hdr(host) -i ex.okdevtv.com
+    acl host_python hdr(host) -i py.okdevtv.com
     
     use_backend express_backend if host_express
     use_backend python_backend if host_python
