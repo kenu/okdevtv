@@ -2,6 +2,22 @@
 - high available proxy
 - load balancer
 
+## Structure
+
+```sh
+global
+  # process-level settings go here
+
+defaults
+  # default settings go here
+
+frontend listener
+  # a frontend that accepts requests from clients
+
+backend webservers
+  # servers that fulfill the requests
+```
+
 ## Install
 
 ```bash
@@ -58,3 +74,4 @@ backend python_backend
 
 ## ref
 - https://www.haproxy.org/
+- https://www.haproxy.com/documentation/haproxy-configuration-tutorials/
