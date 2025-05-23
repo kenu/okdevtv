@@ -9,14 +9,14 @@
 - https://developer.nvidia.com/cuda-toolkit-archive
 - CUDA and NVidia GPU Driver
 ```sh
-wget https://developer.download.nvidia.com/compute/cuda/12.6.2/local_installers/cuda-repo-amzn2023-12-6-local-12.6.2_560.35.03-1.x86_64.rpm
-sudo rpm -i cuda-repo-amzn2023-12-6-local-12.6.2_560.35.03-1.x86_64.rpm
+wget https://developer.download.nvidia.com/compute/cuda/12.9.0/local_installers/cuda-repo-amzn2023-12-9-local-12.9.0_575.51.03-1.x86_64.rpm
+sudo rpm -i cuda-repo-amzn2023-12-9-local-12.9.0_575.51.03-1.x86_64.rpm
 sudo dnf clean all
-sudo dnf -y install cuda-toolkit-12-6
+sudo dnf -y install cuda-toolkit-12-9
 ```
 
 ```sh
-echo "export PATH=/usr/local/cuda-12.6/bin:$PATH" >> ~/.zshrc
+echo "export PATH=/usr/local/cuda-12.9/bin:$PATH" >> ~/.zshrc
 . ~/.zshrc
 nvcc -V
 ```
@@ -45,15 +45,15 @@ exit
 ```
 
 ```sh
-ollama pull llama3.2
+ollama pull llama3.3
 ```
 
 ```sh
-ollama pull gemma2
+ollama pull gemma3
 ```
 
 ```sh
-ollama pull phi3.5
+ollama pull phi4
 ```
 
 ## Ollama Network Open
@@ -79,20 +79,18 @@ sudo systemctl start ollama
 sudo lsof -i :11434
 ```
 
-## Install conda
+## Install uv
 ```sh
-mkdir -p ~/miniconda3
-wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda3/miniconda.sh
-bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
-rm -rf ~/miniconda3/miniconda.sh
-~/miniconda3/bin/conda init zsh
-. ~/.zshrc
-conda install python=3.11.9 -y
+curl -sSf https://astral.sh/uv/install.sh | sh
+uv init example -p 3.11
+cd example
+uv venv
+source .venv/bin/activate
 ```
 
 ## Install open-webui
 ```sh
-pip install open-webui
+uv pip install open-webui
 ```
 
 ## run open-webui

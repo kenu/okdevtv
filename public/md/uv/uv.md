@@ -20,7 +20,7 @@ brew install uv
 ```sh
 uv init example -p 3.10
 cd example
-uv venv .venv
+uv venv
 
 # 가상환경 활성화 (macOS, Linux, WSL)
 source .venv/bin/activate
