@@ -1,44 +1,81 @@
 # 대규모 언어 모델 (Large Language Model)
 
----
-Gemma 2는 오픈 웨이트 대규모 언어 모델로, 모델의 가중치가 공개적으로 사용 가능합니다. 이를 통해 특정 작업이나 도메인에 맞게 모델을 파인튜닝하기가 더 쉬워집니다.
+## LLM 실습을 위한 기본 정보
 
-다음은 Gemma 2를 파인튜닝하는 방법에 대한 일반적인 개요입니다:
+- LLM의 기본 개념, 아키텍처, 실습 환경, 필수 도구, 실습 예제, 그리고 실제 활용 사례에 대한 이해가 필요
 
-**1. 요구사항 이해하기:**
+## LLM의 개념과 구조
 
-- **하드웨어:** 대규모 언어 모델의 파인튜닝에는 상당한 컴퓨팅 리소스가 필요합니다. 강력한 GPU(이상적으로는 여러 개의 GPU)와 충분한 RAM이 필요할 것입니다. Google Colab, AWS, Paperspace와 같은 클라우드 컴퓨팅 플랫폼이 도움이 될 수 있습니다.
-- **소프트웨어:** Python과 다음과 같은 여러 라이브러리가 필요합니다:
-    - **Transformers:** Hugging Face의 Transformers 라이브러리는 Gemma 2와 같은 사전 학습된 모델을 쉽게 사용할 수 있는 도구를 제공합니다.
-    - **PyTorch:** Gemma 2가 사용하는 딥러닝 프레임워크입니다.
-    - **Datasets:** 파인튜닝하고자 하는 작업과 관련된 데이터셋이 필요합니다.
+- LLM은 대규모 데이터셋으로 학습된 자연어 처리(NLP) AI 모델로, 텍스트 생성, 요약, 번역, 질의응답 등 다양한 작업을 수행 가능
+- 대표적인 아키텍처는 트랜스포머(Transformer)이며, BERT, GPT, T5 등이 널리 사용
+- LLM은 입력(프롬프트)에 따라 적합한 출력을 생성하며, 프롬프트 엔지니어링이 모델 활용의 핵심
 
-**2. 데이터셋 준비하기:**
+## 실습을 위한 선수 지식
 
-- **형식:** 데이터셋을 Transformers 라이브러리와 호환되는 형식으로 변환합니다. 일반적으로 입력-출력 쌍이 있는 텍스트 파일을 사용합니다.
-- **전처리:** 데이터를 정제하고 전처리합니다. 다음과 같은 작업이 포함됩니다:
-    - 토큰화: 텍스트를 더 작은 단위(단어 또는 하위 단어)로 나누기
-    - 인코딩: 토큰을 모델이 이해할 수 있는 숫자 표현으로 변환
-    - 패딩: 모든 입력 시퀀스의 길이를 동일하게 맞추기
+- 기본적인 파이썬 프로그래밍 능력
+- 넘파이, 판다스 등 데이터 처리 라이브러리 활용 경험
+- 기초 수학(선형대수, 통계, 미적분)과 머신러닝/딥러닝 기본 개념이 있으면 실습이 더 수월
 
-**3. 파인튜닝 과정:**
+## 실습 환경 및 도구
 
-- **Gemma 2 모델 로드하기:** Transformers 라이브러리를 사용하여 사전 학습된 Gemma 2 가중치를 로드합니다.
-- **학습 설정하기:**
-    - **하이퍼파라미터:** 학습률, 배치 크기, 에포크 수, 옵티마이저와 같은 매개변수를 설정합니다. 이는 학습 과정에 영향을 미칩니다.
-    - **손실 함수:** 모델의 예측과 실제 레이블 간의 차이를 측정하는 손실 함수를 선택합니다.
-- **모델 학습하기:** 준비된 데이터셋을 모델에 공급하고 손실 함수를 최소화하도록 가중치를 반복적으로 조정합니다.
-- **성능 평가하기:** 과적합을 방지하고 진행 상황을 모니터링하기 위해 별도의 검증 세트에서 모델의 성능을 정기적으로 평가합니다.
+- **코딩 환경**: 구글 코랩(Google Colab), Jupyter Notebook, 로컬 환경(Anaconda 등)
+- **프레임워크**: 파이토치(PyTorch), 텐서플로(TensorFlow)
+- **오픈소스 라이브러리**: Hugging Face Transformers, LangChain, llamaIndex 등
+- **API 활용**: OpenAI, Hugging Face 등에서 제공하는 LLM API
+- **데이터 및 토큰**: 실습을 위해 Hugging Face, OpenAI API 토큰이 필요할 수 있음
 
-**4. 저장 및 배포:**
+## 실습의 주요 단계
 
-- **파인튜닝된 모델 저장하기:** 성능에 만족하면 업데이트된 모델 가중치를 저장합니다.
-- **배포하기:** 파인튜닝된 Gemma 2 모델을 원하는 애플리케이션에 배포합니다. 웹 서비스, 모바일 앱 또는 다른 시스템에 통합할 수 있습니다.
+1. **프롬프트 엔지니어링**
+   - LLM에 명확한 지시를 내리는 프롬프트 작성법 연습
+   - 다양한 프롬프트 유형, 구성 요소, 매개변수 실습
 
-**참고 자료:**
+2. **기본 모델 활용**
+   - 사전 학습된 LLM을 불러와 텍스트 생성, 요약, 번역 등 기본 태스크 실습
+   - API 또는 라이브러리로 간단한 챗봇 구축
 
-- **Hugging Face Transformers:** [https://huggingface.co/docs/transformers/index](https://huggingface.co/docs/transformers/index)
-- **Gemma 2 Model Card:** [https://huggingface.co/facebook/gemma-2-base](https://huggingface.co/facebook/gemma-2-base)
-- **OpenAI의 파인튜닝 가이드:** [https://platform.openai.com/docs/guides/fine-tuning](https://platform.openai.com/docs/guides/fine-tuning)
+3. **RAG(검색 증강 생성) 실습**
+   - 문서 검색과 LLM을 결합해 질문에 답변하는 RAG 파이프라인 구현
+   - llamaIndex, LangChain 등으로 벡터DB 구축, 인덱싱, 검색, 프롬프트 결합 실습
 
-대규모 언어 모델의 파인튜닝은 기술적 전문 지식과 리소스가 필요한 복잡한 과정임을 기억하세요.
+4. **모델 미세조정(Fine-tuning)**
+   - 자신만의 데이터셋으로 LLM을 추가 학습(파인튜닝)
+   - QLoRA, LoRA 등 경량화 및 효율적 미세조정 기법 활용
+
+5. **애플리케이션 개발**
+   - LLM을 활용한 챗봇, 문서 요약, 질의응답 등 실제 서비스 개발 실습
+
+## 실습 예제 및 참고 자료
+
+- 프롬프트 실습, 연속 대화, 출력 제어 등 기본 예제
+- LangChain, llamaIndex를 활용한 RAG 구현 및 실습
+- 오픈소스 LLM(예: LLaMA, GPT 계열) 활용 및 파인튜닝 실습
+- 실전 애플리케이션 개발: 검색 증강, 데이터 검증, 로깅 등
+
+## 실습 시 유의사항
+
+- LLM 모델은 연산량이 많으므로, 로컬 환경에서는 경량화 모델 또는 클라우드/코랩 환경을 추천
+- API 사용 시 토큰 비용 및 사용량에 주의.
+- 데이터 보안 및 개인정보 보호 준수.
+
+## 정리
+
+- LLM 실습은 프롬프트 엔지니어링, 기본 모델 활용, RAG, 미세조정, 애플리케이션 개발 등 단계별로 진행
+- 파이썬, 딥러닝 프레임워크, 오픈소스 라이브러리, API 활용법을 익히고, 실습 환경(코랩 등)을 준비하면 누구나 시작 가능
+
+## ref
+- [1] https://hellollama.net/llm-초급강좌-llm-의-기본-구조와-모델/
+- [2] https://velog.io/@dlgkdis801/Day-01.-랭체인-기초
+- [3] https://www.youtube.com/watch?v=PxoAO9IXJco
+- [4] https://m.boostcourse.org/ai102/lecture/1546882
+- [5] https://github.com/onlybooks/llm/blob/main/README.md
+- [6] https://blog.naver.com/gilbutzigy/223633213311
+- [7] https://day-to-day.tistory.com/76
+- [8] https://developers.hyundaimotorgroup.com/blog/571
+- [9] https://www.inflearn.com/course/llm101-나만의-대화형-채팅데모
+- [10] https://marcus-story.tistory.com/32
+- [11] https://blog.sionic.ai/finetuning_llama
+- [12] https://www.samsungsds.com/kr/insights/how-to-run-a-local-llm.html
+- [13] https://hellollama.net/llm-초급강좌-6-langchain-을-이용한-rag-실습/
+- [14] https://blog.kbanknow.com/82
+- [15] https://m.ypbooks.co.kr/books/202407162848637484
