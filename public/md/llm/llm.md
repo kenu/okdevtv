@@ -138,6 +138,7 @@ result = pipe(
 )
 
 print(result[0]['generated_text'])
+```
 
 ## 실습의 주요 단계
 
