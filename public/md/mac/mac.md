@@ -1,5 +1,20 @@
 # 맥 개발 세팅
 
+## Set to Backtick(\`) from 원(₩)
+```
+mkdir -p ~/Library/KeyBindings
+vi ~/Library/KeyBindings/DefaultkeyBinding.dict
+```
+
+```
+{
+    "₩" = ("insertText:", "`");
+}
+```
+
+- restart application
+
+
 - 맥 brew 설치법
 
 ## brew 설치법
@@ -18,21 +33,6 @@
   - https://docs.brew.sh/
 - 트러블슈팅
   - First, please run `brew update` and `brew doctor`
-
-
-## Roll back to Back Tick(\`) from (₩)
-```
-mkdir -p ~/Library/KeyBindings
-vi ~/Library/KeyBindings/DefaultkeyBinding.dict
-```
-
-```
-{
-    "₩" = ("insertText:", "`");
-}
-```
-
-  - restart application
 
 ## Xcode command
 ```
