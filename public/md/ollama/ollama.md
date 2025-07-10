@@ -81,7 +81,7 @@ sudo lsof -i :11434
 
 ## Install uv
 ```sh
-curl -sSf https://astral.sh/uv/install.sh | sh
+curl -LsSf https://astral.sh/uv/install.sh | sh
 uv init example -p 3.11
 cd example
 uv venv
