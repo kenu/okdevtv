@@ -1,7 +1,7 @@
 # Zed Attack Proxy(ZAP)
 - 웹 애플리케이션 취약점 찾는 통합 테스팅 도구
 - 오픈 소스 by [OWASP](https://www.owasp.org)
-- https://owasp.org/www-project-zap/
+- https://www.zaproxy.org/
 - Windows, Linux, macOS 프로그램
 - Download : https://www.zaproxy.org/download/
 
@@ -101,4 +101,4 @@
 
 ## 관련 링크
 - Zed Attack Proxy 홈페이지
-  - https://owasp.org/www-project-zap/
+  - https://www.zaproxy.org/
