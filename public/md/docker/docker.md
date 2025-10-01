@@ -104,14 +104,16 @@ curl -u $USERNAME:$PASSWORD -X "DELETE" https://cloud.docker.com/v2/repositories
 ## AWS EC2
 - docker 설치
 
-```
+```sh
 sudo dnf update -y
 sudo dnf install docker -y
 sudo systemctl start docker
-sudo usermod -a -G docker ec2-user
 # for ec2-user permission
+sudo usermod -a -G docker ec2-user
 sudo reboot
+```
 
+```sh
 docker ps
 ```
 
