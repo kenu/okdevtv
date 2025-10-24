@@ -196,7 +196,7 @@ gradlew.bat build  # Windows
 ```groovy
 repositories {
     mavenCentral()
-    
+
     maven {
         url 'https://repo.mycompany.com/maven2'
         credentials {
@@ -204,7 +204,7 @@ repositories {
             password = 'password'
         }
     }
-    
+
     // JCenter는 더 이상 권장되지 않음
     // jcenter()
 }
@@ -231,7 +231,7 @@ allprojects {
 
 subprojects {
     apply plugin: 'java'
-    
+
     dependencies {
         testImplementation 'org.junit.jupiter:junit-jupiter:5.9.2'
     }
@@ -273,5 +273,4 @@ Maven에서 Gradle로 전환을 고려한다면:
 
 ## 참고 자료
 - [Gradle 공식 가이드](https://docs.gradle.org/current/userguide/userguide.html)
-- [Spring Boot with Gradle](https://spring.io/guides/gs/gradle/)
 - [Gradle 빌드 성능 최적화](https://docs.gradle.org/current/userguide/performance.html)
