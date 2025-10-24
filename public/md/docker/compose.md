@@ -87,10 +87,10 @@ volumes:
 ```
 
 ### 6. Docker Compose 명령어
-- docker-compose up: 정의된 서비스를 시작
-- docker-compose down: 모든 서비스를 중지하고 제거
-- docker-compose ps: 현재 실행 중인 서비스 상태를 확인
-- docker-compose logs: 서비스 로그를 확인
+- docker compose up: 정의된 서비스를 시작
+- docker compose down: 모든 서비스를 중지하고 제거
+- docker compose ps: 현재 실행 중인 서비스 상태를 확인
+- docker compose logs: 서비스 로그를 확인
 
 ### 7. 예제 프로젝트
 - 웹 애플리케이션 및 데이터베이스: 웹 서버와 데이터베이스 서비스를 포함하는 간단한 예제를 통해 Docker Compose의 사용법을 실습

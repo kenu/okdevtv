@@ -28,13 +28,13 @@ sudo curl -L https://github.com/docker/compose/releases/download/v2.40.0/docker-
 sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
 # re login
-docker-compose --version
+docker compose --version
 ```
 
 ## 프로젝트 빌드, 서버 시작 (postgresql, redis, cvat server, cvat ui)
 
 ```
-docker-compose up -d
+docker compose up -d
 docker ps
 ```
 
@@ -63,18 +63,18 @@ services:
 ## 재시작
 
 ```
-docker-compose down
-docker-compose up -d --force-recreate
+docker compose down
+docker compose up -d --force-recreate
 ```
 
 ## UI change
 
 ```
-docker-compose down
+docker compose down
 docker images
 docker rmi 1510c84d373c 555c5ebf5f85
 git pull kenu develop && docker build -f Dockerfile.ui -t openvino/cvat_ui .
-docker-compose up -d --force-recreate
+docker compose up -d --force-recreate
 ```
 
 ## ref
