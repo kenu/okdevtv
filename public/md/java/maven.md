@@ -93,6 +93,11 @@ mvn archetype:generate -DgroupId=com.okdevtv.java -DartifactId=okdevtv -Darchety
 - `~/.m2/repository` 기본 위치
 - 라이브러리 정보는 http://mvnrepository.com 에서 검색 가능
 
+## manual install
+```sh
+mvn install:install-file -Dfile=<path_to_your_jar> -DgroupId=<your_group_id> -DartifactId=<your_artifact_id> -Dversion=<your_version> -Dpackaging=<your_packaging_type>
+```
+
 ## build file name
 ```
   <build>
