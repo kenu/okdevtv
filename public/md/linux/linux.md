@@ -239,6 +239,8 @@ sendmail recipient@example.com < content
 
 ## other topics
 
+- [alias](/mib/linux/alias)
+- [vim](/mib/linux/vim
 - [dnf](/mib/linux/dnf)
 - [systemctl](/mib/linux/systemctl)
 - [cron](/mib/linux/cron)
