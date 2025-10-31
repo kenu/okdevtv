@@ -76,6 +76,7 @@
 - [jdbc](/mib/java/jdbc)
 - [junit](/mib/java/junit)
 - [tomcat](/mib/java/tomcat)
+- [jar](/mib/java/jar)
 - [war](/mib/java/war)
 - [deploy](/mib/java/deploy)
 - [maven](/mib/java/maven)
