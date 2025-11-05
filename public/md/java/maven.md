@@ -111,7 +111,7 @@ mvn install:install-file -Dfile=<path_to_your_jar> -DgroupId=<your_group_id> -Da
 
 ## related
 - [gradle](/mib/gradle)
-- [maven deep dive](/mib/maven2)
+- [maven deep dive](/mib/java/maven2)
 
 ## ref
 - 5분 메이븐
