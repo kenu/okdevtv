@@ -131,6 +131,10 @@
 - 여러 모듈에서 공유한다면 parent POM의 `<dependencyManagement>`에 동일 버전 선언 후 하위 모듈에서 버전 생략
 - Spring Boot를 사용한다면 `spring-boot-starter-web`이 관리하는 Tomcat 버전을 우선 따르고, 커스터마이징은 `spring-boot-dependencies` BOM을 override하지 않는 선에서 `<properties>` 조정
 
+## Offline 빌드
+- 폐쇄망 등에서 로컬의 저장소에서 의존성만으로 빌드
+- `mvn clean install -o`
+
 ## Jetty Embed 대안
 
 - Non-Blocking I/O 및 경량 서버가 필요하다면 Jetty Embed 선택
