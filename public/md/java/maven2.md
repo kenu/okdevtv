@@ -134,6 +134,7 @@
 ## Offline 빌드
 - 폐쇄망 등에서 로컬의 저장소에서 의존성만으로 빌드
 - `mvn clean install -o`
+- 또는, `~/.m2/settings.xml`에 `<offline>true</offline>` 설정
 
 ## Jetty Embed 대안
 
