@@ -84,6 +84,7 @@
 - [ant](/mib/java/ant)
 - [lombok](/mib/java/lombok)
 - [excel](/mib/java/excel)
+- [decompiler](/mib/decompile)
 
 ## related
 - [servlet](/mib/java/servlet)
