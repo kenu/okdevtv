@@ -110,9 +110,10 @@ mvn install:install-file -Dfile=<path_to_your_jar> -DgroupId=<your_group_id> -Da
 - `gradle init`
 
 ## related
-- [gradle](/mib/gradle)
+- [gradle](/mib/java/gradle)
 - [maven deep dive](/mib/java/maven2)
 - [maven etc](/mib/java/maven3)
+- [maven sts](/mib/java/maven-sts)
 
 ## ref
 - 5분 메이븐
