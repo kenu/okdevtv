@@ -8,7 +8,11 @@
   "private": true,
   "scripts": {
     "dev": "nodemon ./bin/www",
-    "test": "jest tests -o --watch",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "test:unit": "jest tests/unit",
+    "test:integration": "jest tests/integration",
     "format": "prettier --write ."
   },
   "pnpm": {
@@ -59,6 +63,7 @@
     "frameguard": "^4.0.0",
     "jest": "^29.7.0",
     "nodemon": "^3.1.10",
-    "prettier": "^3.6.2"
+    "prettier": "^3.6.2",
+    "supertest": "^7.1.4"
   }
 }
