@@ -15,7 +15,23 @@ Sentry.init({
 })
 let helmet = require('helmet')
 const app = express()
-app.use(helmet.hidePoweredBy())
+
+// Comprehensive security headers
+app.use(helmet({
+  contentSecurityPolicy: {
+    directives: {
+      defaultSrc: ["'self'"],
+      styleSrc: ["'self'", "'unsafe-inline'"],
+      scriptSrc: ["'self'"],
+      imgSrc: ["'self'", "data:", "https:"],
+    },
+  },
+  hsts: {
+    maxAge: 31536000, // 1 year
+    includeSubDomains: true,
+    preload: true,
+  },
+}))
 
 const cors = require('cors')
 let corsOptions = {
@@ -39,10 +55,15 @@ app.use(frameguard({ action: 'sameorigin' }))
 app.use(express.static(path.join(__dirname, 'public')))
 
 const sess = {
-  secret: 'okdevtv cat',
-  resave: true,
-  saveUninitialized: true,
-  cookie: {},
+  secret: process.env.SESSION_SECRET || 'fallback-secret-key',
+  resave: false,
+  saveUninitialized: false,
+  cookie: {
+    secure: process.env.NODE_ENV === 'production',
+    httpOnly: true,
+    maxAge: 24 * 60 * 60 * 1000, // 24 hours
+  },
+  name: 'sessionId',
 }
 app.use(session(sess))
 app.use(passport.initialize())

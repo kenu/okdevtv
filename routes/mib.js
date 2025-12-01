@@ -1,7 +1,13 @@
 const express = require('express')
 const router = express.Router()
 const { marked } = require('marked')
+const { JSDOM } = require('jsdom')
+const createDOMPurify = require('dompurify')
 const fs = require('fs')
+
+// Initialize DOMPurify
+const window = new JSDOM('').window
+const DOMPurify = createDOMPurify(window)
 router.all('*', function (req, res) {
   console.log('\n\n\n\n\n', req.session.user)
 
@@ -16,7 +22,9 @@ router.all('*', function (req, res) {
       if (err) {
         throw err
       }
-      const html = setBody(marked(data.toString()), path)
+      const rawHtml = marked(data.toString())
+      const sanitizedHtml = DOMPurify.sanitize(rawHtml)
+      const html = setBody(sanitizedHtml, path)
       res.send(html)
     })
   } else {

@@ -25,7 +25,6 @@ try {
         callbackURL: '/login/github/return',
       },
       function (accessToken, _refreshToken, profile, cb) {
-        console.log('accessToken', accessToken)
         return cb(null, profile)
       }
     )
@@ -38,10 +37,15 @@ router.use(cookieParser())
 router.use(bodyParser.urlencoded({ extended: false }))
 router.use(
   session({
-    secret: 'keyboard cat',
-    key: 'sid',
-    resave: true,
-    saveUninitialized: true,
+    secret: process.env.SESSION_SECRET || 'fallback-secret-key',
+    key: 'sessionId',
+    resave: false,
+    saveUninitialized: false,
+    cookie: {
+      secure: process.env.NODE_ENV === 'production',
+      httpOnly: true,
+      maxAge: 24 * 60 * 60 * 1000, // 24 hours
+    },
   })
 )
 router.use(passport.initialize())
