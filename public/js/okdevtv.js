@@ -18,6 +18,11 @@ $(function () {
     console.log(data)
     $('#words').text(data.content)
   })
+
+  initTheme()
+  $('#theme-toggle').on('click', function () {
+    toggleTheme()
+  })
 })
 
 function sendMessage() {
@@ -96,5 +101,47 @@ if (!String.linkify) {
     return this.replace(urlPattern, '<a href="$&">$&</a>')
       .replace(pseudoUrlPattern, '$1<a href="http://$2">$2</a>')
       .replace(emailAddressPattern, '<a href="mailto:$&">$&</a>')
+  }
+}
+
+function initTheme() {
+  try {
+    const saved = localStorage.getItem('okdevtv-theme')
+    let theme = saved
+    if (!theme) {
+      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        theme = 'dark'
+      } else {
+        theme = 'light'
+      }
+    }
+    applyTheme(theme)
+  } catch (e) {
+    applyTheme('light')
+  }
+}
+
+function toggleTheme() {
+  const isDark = document.body.classList.contains('dark')
+  const next = isDark ? 'light' : 'dark'
+  applyTheme(next)
+  try {
+    localStorage.setItem('okdevtv-theme', next)
+  } catch (e) {}
+}
+
+function applyTheme(theme) {
+  if (theme === 'dark') {
+    document.body.classList.add('dark')
+    const btn = document.getElementById('theme-toggle')
+    if (btn) {
+      btn.textContent = 'Light'
+    }
+  } else {
+    document.body.classList.remove('dark')
+    const btn = document.getElementById('theme-toggle')
+    if (btn) {
+      btn.textContent = 'Dark'
+    }
   }
 }
