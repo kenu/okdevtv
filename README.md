@@ -7,9 +7,19 @@
 ```
 git clone https://github.com/kenu/okdevtv
 cd okdevtv
-npm i -g pm2
-npm i
-npm run serve
+
+# Install
+npm install
+
+# Development (auto-reloads)
+npm run dev
+
+# Production
+npm start
+
+# Optional: Run with pm2
+# npm i -g pm2
+# pm2 start ./bin/www --name okdevtv
 ```
 
 ## Config

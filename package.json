@@ -4,10 +4,12 @@
   "main": "bin/www",
   "keywords": [],
   "author": "kenu",
-  "license": "BSD",
+  "license": "MIT",
   "private": true,
   "scripts": {
     "dev": "nodemon ./bin/www",
+    "start": "node ./bin/www",
+    "serve": "npm run start",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
