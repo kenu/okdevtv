@@ -53,6 +53,13 @@ header {
 
 #logo {
   width: 8.8rem;
+  transition: filter 0.3s ease;
+}
+
+/* 다크 모드에서 로고에 밝기와 대비 조정 */
+body.dark #logo {
+  filter: brightness(0) invert(1);
+  /* 흰색으로 변환 */
 }
 
 nav ul {
