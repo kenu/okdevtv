@@ -21,7 +21,7 @@ describe('API Integration Tests', () => {
       const response = await request(app)
         .get('/health')
         .expect(200);
-      
+
       expect(response.body.status).toBe('ok');
       expect(response.body.timestamp).toBeDefined();
     });
@@ -30,12 +30,12 @@ describe('API Integration Tests', () => {
   describe('POST /api/test', () => {
     it('should process message correctly', async () => {
       const testMessage = 'Hello World';
-      
+
       const response = await request(app)
         .post('/api/test')
         .send({ message: testMessage })
         .expect(200);
-      
+
       expect(response.body.received).toBe(testMessage);
       expect(response.body.processed).toBe(true);
     });
@@ -45,7 +45,7 @@ describe('API Integration Tests', () => {
         .post('/api/test')
         .send({})
         .expect(200);
-      
+
       expect(response.body.received).toBeUndefined();
       expect(response.body.processed).toBe(true);
     });

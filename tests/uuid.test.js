@@ -12,7 +12,7 @@ describe('UUID Utils', () => {
   it('should generate unique uuids', () => {
     const uuid1 = uuidv4();
     const uuid2 = uuidv4();
-    
+
     expect(uuid1).not.toBe(uuid2);
   });
 
@@ -21,7 +21,7 @@ describe('UUID Utils', () => {
     for (let i = 0; i < 100; i++) {
       uuids.add(uuidv4());
     }
-    
+
     expect(uuids.size).toBe(100);
   });
 });

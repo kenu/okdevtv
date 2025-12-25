@@ -23,11 +23,11 @@ describe('Database Access', () => {
   it('should handle database queries successfully', async () => {
     const mockResults = [{ now: '2023-01-01 12:00:00' }];
     mockSequelize.query.mockResolvedValue([mockResults, {}]);
-    
+
     const [results] = await mockSequelize.query('SELECT NOW()', {
       type: mockSequelize.QueryTypes.SELECT,
     });
-    
+
     expect(results).toEqual(mockResults);
     expect(mockSequelize.query).toHaveBeenCalledWith('SELECT NOW()', {
       type: mockSequelize.QueryTypes.SELECT,
@@ -37,15 +37,15 @@ describe('Database Access', () => {
   it('should handle database connection errors gracefully', async () => {
     const errorMessage = 'Connection refused';
     mockSequelize.query.mockRejectedValue(new Error(errorMessage));
-    
+
     await expect(mockSequelize.query('SELECT NOW()')).rejects.toThrow(errorMessage);
   });
 
   it('should handle sync operations', async () => {
     mockSequelize.sync.mockResolvedValue(undefined);
-    
+
     await mockSequelize.sync();
-    
+
     expect(mockSequelize.sync).toHaveBeenCalled();
   });
 });

@@ -10,17 +10,75 @@
 |python file 실행	|`python sample.py`, `py sample.py`|
 |python 버전 확인	|`python -V`, `py -V`|
 
-## pip
+## pip(legacy)
 - `curl -O https://bootstrap.pypa.io/get-pip.py`
 - `sudo python get-pip.py`
 
-### commands
+### pip commands
 - `pip --help`
 - `pip list`
 - `pip install virtualenv`
 - `pip uninstall virtualenv`
 
-## virtualenv
+## uv
+- https://github.com/astral-sh/uv
+- An extremely fast Python package installer and resolver, written in Rust
+- 10-100x faster than pip
+- Drop-in replacement for pip, pip-tools, and virtualenv
+
+### install
+```bash
+# macOS and Linux
+curl -LsSf https://astral.sh/uv/install.sh | sh
+
+# Windows
+powershell -c "irm https://astral.sh/uv/install.ps1 | iex"
+
+# With pip
+pip install uv
+
+# With brew (macOS)
+brew install uv
+```
+
+### uv commands
+```bash
+# Install packages
+uv pip install requests
+uv pip install -r requirements.txt
+
+# Create virtual environment
+uv venv
+uv venv venv  # with custom name
+
+# Activate virtual environment
+source .venv/bin/activate  # macOS/Linux
+.venv\Scripts\activate     # Windows
+
+# Install packages in virtual environment
+uv pip install pandas numpy
+
+# Freeze dependencies
+uv pip freeze > requirements.txt
+
+# Uninstall packages
+uv pip uninstall requests
+
+# List installed packages
+uv pip list
+
+# Sync dependencies (like pip-sync)
+uv pip sync requirements.txt
+```
+
+### uv features
+- **Speed**: 10-100x faster than pip
+- **Disk space**: Global cache to avoid re-downloading packages
+- **Reliability**: Written in Rust for memory safety
+- **Compatibility**: Drop-in replacement for pip commands
+- **Resolution**: Advanced dependency resolver
+
+## virtualenv (legacy)
 - closed env
 - `virtualenv venv`
 - `source venv/bin/activate`

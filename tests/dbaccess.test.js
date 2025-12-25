@@ -6,7 +6,7 @@ jest.mock('../lib/db', () => {
       SELECT: 'SELECT'
     }
   };
-  
+
   return {
     sequelize: mockSequelize
   };
@@ -27,7 +27,7 @@ describe('Database Access', () => {
     const [results] = await sequelize.query('SELECT NOW()', {
       type: sequelize.QueryTypes.SELECT,
     });
-    
+
     console.log(results);
     expect(results[0]).not.toBe(null);
     expect(sequelize.query).toHaveBeenCalledWith('SELECT NOW()', {
