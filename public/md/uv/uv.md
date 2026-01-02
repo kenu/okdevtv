@@ -10,7 +10,7 @@
 curl -sSf https://astral.sh/uv/install.sh | sh
 
 # Windows에 설치 (PowerShell)
-powershell -c "irm https://astral.sh/uv/install.ps1 | iex"
+powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
 
 # Homebrew를 통한 설치
 brew install uv
@@ -18,7 +18,7 @@ brew install uv
 
 ## Quick Start
 ```sh
-uv init example -p 3.10
+uv init example -p 3.12
 cd example
 uv venv
 
