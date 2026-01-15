@@ -8,14 +8,12 @@ const fs = require('fs')
 // Initialize DOMPurify
 const window = new JSDOM('').window
 const DOMPurify = createDOMPurify(window)
-router.all('/*splat', function (req, res) {
-  console.log('\n\n\n\n\n', req.session.user)
-
-  const path = req.baseUrl.split('/')
-  if (path.length < 4) {
-    path.push(path[2])
+router.all('{/*splat}', function (req, res) { 
+  const path = req.params.splat
+  if (path.length < 2) {
+    path.push(path[0])
   }
-  const mdPath = path.slice(2).join('/')
+  const mdPath = path.join('/')
   const filePath = './public/md/' + mdPath + '.md'
   if (fs.existsSync(filePath)) {
     fs.readFile(filePath, function (err, data) {

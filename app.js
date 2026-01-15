@@ -93,7 +93,7 @@ app.use('/user', require('./routes/user'))
 app.use('/users', require('./routes/users'))
 app.use('/hq', require('./routes/hq'))
 app.use('/login', require('./routes/login'))
-app.use('/mib/*splat', require('./routes/mib'))
+app.use('/mib', require('./routes/mib'))
 
 // catch 404 and forward to error handler
 app.use(function (_req, res) {
