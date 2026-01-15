@@ -8,7 +8,7 @@ const fs = require('fs')
 // Initialize DOMPurify
 const window = new JSDOM('').window
 const DOMPurify = createDOMPurify(window)
-router.all('*', function (req, res) {
+router.all('*path', function (req, res) {
   console.log('\n\n\n\n\n', req.session.user)
 
   const path = req.baseUrl.split('/')
