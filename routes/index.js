@@ -49,17 +49,10 @@ router.get('/645', function (req, res) {
     ArrayUtils.shuffle(list)
     return list.slice(0, count)
   }
-  const header = `<meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <body style="text-align: center;">
-  <h1>로또 번호 뽑기</h1>`
   const lotto = getRandomList(45, 6)
     .sort((a, b) => a - b)
     .join(', ')
-  const reloadButton =
-    '<hr/><button onclick="javascript:location.href=/645">다시 뽑기</button>'
-  res.header('Content-Type', 'text/html')
-  const html = `${header} <h1> ${lotto} </h1> ${reloadButton}`
-  res.end(html)
+  res.render('645', { lotto })
 })
 
 const ArrayUtils = {
