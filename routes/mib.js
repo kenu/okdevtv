@@ -32,13 +32,24 @@ router.all('{/*splat}', function (req, res) {
   }
 })
 
+function extractDescription(html) {
+  const match = html.match(/<p>(.*?)<\/p>/s)
+  if (match) {
+    const text = match[1].replace(/<[^>]*>/g, '').trim()
+    return text.length > 150 ? text.substring(0, 150) + '...' : text
+  }
+  return 'OKdevTV - 개발자를 위한 기술 문서'
+}
+
 function setBody(data, path) {
   const folder = '/md/' + path[2] + '/'
   const html = data.replace(/img src="images/g, 'img src="' + folder + 'images')
+  const description = extractDescription(html)
   const template = fs.readFileSync(__dirname + '/template-mib.html').toString()
   const htmlTag = template
     .replace(/__path3__/g, path[1])
     .replace(/__uri__/g, path.join('/'))
+    .replace(/__description__/g, description)
     .replace(/__html__/, html)
   return htmlTag
 }
