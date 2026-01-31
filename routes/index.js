@@ -56,7 +56,7 @@ router.get('/645', function (req, res) {
     .sort((a, b) => a - b)
     .join(', ')
   const reloadButton =
-    '<hr/><button onclick="location.href=/645">다시 뽑기</button>'
+    '<hr/><button onclick="javascript:location.href=/645">다시 뽑기</button>'
   res.header('Content-Type', 'text/html')
   const html = `${header} <h1> ${lotto} </h1> ${reloadButton}`
   res.end(html)
