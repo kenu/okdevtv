@@ -37,7 +37,7 @@ function setBody(data, path) {
   const html = data.replace(/img src="images/g, 'img src="' + folder + 'images')
   const template = fs.readFileSync(__dirname + '/template-mib.html').toString()
   const htmlTag = template
-    .replace(/__path3__/g, path[3])
+    .replace(/__path3__/g, path[1])
     .replace(/__uri__/g, path.join('/'))
     .replace(/__html__/, html)
   return htmlTag
