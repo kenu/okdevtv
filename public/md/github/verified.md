@@ -64,16 +64,16 @@ wZzD5eRLL1d4wP4DAQ==
 .....
 -----END PGP PUBLIC KEY BLOCK-----
 
+```
+
 ### 3단계: GitHub에 키 등록
 1. GitHub 접속 후 **Settings > SSH and GPG keys**로 이동합니다.
   - https://github.com/settings/keys
 2. **New GPG key** 버튼을 클릭합니다.
 
 - `git config --global user.signingkey 6E4xxxxxxxF74E3`
-
 - `git config --global commit.gpgsign true`
 
-```
 
 
 ## ref
