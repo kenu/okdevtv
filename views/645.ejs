@@ -1,20 +1,76 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>로또 번호 뽑기</title>
+  <title>로또 번호 번개 추출기 ⚡</title>
   <link rel="stylesheet" href="/css/645.css">
 </head>
+
 <body>
-  <header>
-    <a href="/" class="home-link">🏠 Home</a>
-  </header>
-  <h1>로또 번호 뽑기</h1>
-  <div class="lotto-numbers">
-    <%= lotto %>
+  <div class="container">
+    <header>
+      <a href="/" class="home-link">🏠 홈으로</a>
+    </header>
+
+    <h1>로또 번호 번개 추출기 ⚡</h1>
+
+    <div class="section-card">
+      <h2 class="section-title">이번 주 추천 번호</h2>
+      <div class="balls-container">
+        <% const lottoNumbers=lotto.split(',').map(n=> parseInt(n.trim(), 10));
+          lottoNumbers.forEach(num => {
+          let ballClass = '';
+          if (num <= 10) ballClass='ball-yellow' ; else if (num <=20) ballClass='ball-blue' ; else if (num <=30)
+            ballClass='ball-red' ; else if (num <=40) ballClass='ball-gray' ; else ballClass='ball-green' ; %>
+            <div class="ball <%= ballClass %>">
+              <%= num %>
+            </div>
+            <% }); %>
+      </div>
+      <div class="action-container">
+        <a href="/645" class="retry-link">⚡ 다시 번개 추출</a>
+      </div>
+    </div>
+
+    <% if (latestLotto) { const latestNumbers=[ latestLotto.tm1WnNo, latestLotto.tm2WnNo, latestLotto.tm3WnNo,
+      latestLotto.tm4WnNo, latestLotto.tm5WnNo, latestLotto.tm6WnNo ]; const latestBonus=latestLotto.bnsWnNo; const
+      episode=latestLotto.ltEpsd; const dateStr=latestLotto.ltRflYmd || '' ; let drawDate=dateStr; if
+      (dateStr.length===8) { drawDate=`${dateStr.substring(0, 4)}-${dateStr.substring(4, 6)}-${dateStr.substring(6,
+      8)}`; } %>
+      <div class="section-card latest-draw">
+        <h2 class="section-title">동행복권 최근 당첨 번호</h2>
+        <p class="draw-info"><strong>
+            <%= episode %>회
+          </strong> (추첨일: <%= drawDate %>)</p>
+        <div class="balls-container">
+          <% latestNumbers.forEach(num=> {
+            let ballClass = '';
+            if (num <= 10) ballClass='ball-yellow' ; else if (num <=20) ballClass='ball-blue' ; else if (num <=30)
+              ballClass='ball-red' ; else if (num <=40) ballClass='ball-gray' ; else ballClass='ball-green' ; %>
+              <div class="ball <%= ballClass %>">
+                <%= num %>
+              </div>
+              <% }); %>
+                <div class="bonus-plus">+</div>
+                <% let bonusBallClass='' ; if (latestBonus <=10) bonusBallClass='ball-yellow' ; else if (latestBonus
+                  <=20) bonusBallClass='ball-blue' ; else if (latestBonus <=30) bonusBallClass='ball-red' ; else if
+                  (latestBonus <=40) bonusBallClass='ball-gray' ; else bonusBallClass='ball-green' ; %>
+                  <div class="ball <%= bonusBallClass %>">
+                    <%= latestBonus %>
+                  </div>
+        </div>
+        <p class="bonus-label">보너스</p>
+      </div>
+      <% } %>
+
+        <div class="footer-links">
+          <a href="https://www.dhlottery.co.kr/lt645/intro" target="_blank" class="api-link">
+            🔗 동행복권
+          </a>
+        </div>
   </div>
-  <hr/>
-  <a href="/645" class="retry-link">다시 뽑기</a>
 </body>
+
 </html>

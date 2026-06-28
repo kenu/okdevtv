@@ -1,6 +1,7 @@
 const express = require('express')
 const router = express.Router()
 const okdevtv = require('../services/okdevtv-list')
+const axios = require('axios')
 
 // Health check endpoint for Docker
 router.get('/health', function (req, res) {
@@ -40,7 +41,7 @@ router.get('/f/:url', function (req, res) {
   res.redirect(url)
 })
 
-router.get('/645', function (req, res) {
+router.get('/645', async function (req, res) {
   function getRandomList(max, count) {
     const list = []
     for (let i = 0; i < max; i++) {
@@ -52,7 +53,26 @@ router.get('/645', function (req, res) {
   const lotto = getRandomList(45, 6)
     .sort((a, b) => a - b)
     .join(', ')
-  res.render('645', { lotto })
+
+  let latestLotto = null
+  try {
+    const response = await axios.get(
+      'https://www.dhlottery.co.kr/lt645/selectPstLt645Info.do?_=' + Date.now(),
+      {
+        timeout: 3000,
+        headers: {
+          'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+        }
+      }
+    )
+    if (response.data && response.data.data && response.data.data.list && response.data.data.list.length > 0) {
+      latestLotto = response.data.data.list[0]
+    }
+  } catch (error) {
+    console.error('Failed to fetch latest lotto numbers:', error.message)
+  }
+
+  res.render('645', { lotto, latestLotto })
 })
 
 const ArrayUtils = {
