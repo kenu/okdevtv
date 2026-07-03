@@ -239,6 +239,7 @@ sendmail recipient@example.com < content
 
 ## other topics
 
+- [user](/mib/linux/user)
 - [swapfile](/mib/linux/swap)
 - [alias](/mib/linux/alias)
 - [vim](/mib/linux/vim
