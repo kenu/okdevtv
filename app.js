@@ -9,6 +9,10 @@ const frameguard = require('frameguard')
 const passport = require('passport')
 const Sentry = require('@sentry/node')
 require('dotenv').config()
+
+// Initialize database
+const db = require('./models')
+
 Sentry.init({
   dsn: process.env.SENTRY_URL,
   tracesSampleRate: 1.0,
@@ -94,6 +98,7 @@ app.use('/users', require('./routes/users'))
 app.use('/hq', require('./routes/hq'))
 app.use('/login', require('./routes/login'))
 app.use('/mib', require('./routes/mib'))
+app.use('/video', require('./routes/video'))
 
 // catch 404 and forward to error handler
 app.use(function (_req, res) {
