@@ -85,6 +85,7 @@
 - [lombok](/mib/java/lombok)
 - [excel](/mib/java/excel)
 - [decompiler](/mib/decompile)
+- [logback](/mib/java/logback)
 
 ## related
 - [servlet](/mib/java/servlet)
